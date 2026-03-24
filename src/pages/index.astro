@@ -30,7 +30,7 @@ const organizationSchema = {
     '@type': 'ImageObject',
     url: `${siteUrl}/favicon.svg`,
   },
-  description: 'Guias de compra y comparativas de productos de home office y ergonomia para teletrabajadores',
+  description: 'Guías de compra y comparativas de productos de home office y ergonomía para teletrabajadores',
   contactPoint: {
     '@type': 'ContactPoint',
     email: 'contacto@tuespaciodetrabajo.com',
@@ -48,7 +48,7 @@ const organizationSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Ultimos analisis de productos de home office',
+  name: 'Últimos análisis de productos de home office',
   numberOfItems: recientes.length,
   itemListElement: recientes.map((a, i) => ({
     '@type': 'ListItem',
@@ -67,7 +67,7 @@ const seasonalMap: SeasonalConfig[] = [];
 
 // Jan-Feb: New year resolutions + back to remote work
 if (month >= 1 && month <= 2) {
-  seasonalMap.push({ tags: ['propositos', 'renovar', 'setup'], titulo: 'Propositos: renueva tu espacio', icono: '🎯', color: '#2563eb' });
+  seasonalMap.push({ tags: ['propositos', 'renovar', 'setup'], titulo: 'Propósitos: renueva tu espacio', icono: '🎯', color: '#2563eb' });
   seasonalMap.push({ tags: ['teletrabajo', 'home office', 'vuelta'], titulo: 'Vuelta al trabajo remoto', icono: '💻', color: '#047857' });
 }
 // Mar-May: Spring refresh
@@ -104,50 +104,50 @@ const categorias = [
     slug: 'sillas',
     nombre: 'Sillas',
     icono: '🪑',
-    descripcion: 'Sillas ergonomicas, gaming, de oficina y economicas',
+    descripcion: 'Sillas ergonómicas, gaming, de oficina y económicas',
     count: articulos.filter(a => a.data.categoria === 'sillas').length,
   },
   {
     slug: 'escritorios',
     nombre: 'Escritorios',
     icono: '🖥️',
-    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequenos',
+    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequeños',
     count: articulos.filter(a => a.data.categoria === 'escritorios').length,
   },
   {
     slug: 'accesorios',
     nombre: 'Accesorios',
     icono: '⌨️',
-    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y mas',
+    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y más',
     count: articulos.filter(a => a.data.categoria === 'accesorios').length,
   },
   {
     slug: 'ambiente',
     nombre: 'Ambiente',
     icono: '💡',
-    descripcion: 'Iluminacion, organizacion de cables, control de ruido y decoracion',
+    descripcion: 'Iluminación, organización de cables, control de ruido y decoración',
     count: articulos.filter(a => a.data.categoria === 'ambiente').length,
   },
   {
     slug: 'audio-video',
     nombre: 'Audio y Video',
     icono: '🎧',
-    descripcion: 'Auriculares, microfonos, webcams y monitores para videollamadas',
+    descripcion: 'Auriculares, micrófonos, webcams y monitores para videollamadas',
     count: articulos.filter(a => a.data.categoria === 'audio-video').length,
   },
   {
     slug: 'guias',
     nombre: 'Guias',
     icono: '📖',
-    descripcion: 'Consejos de ergonomia, productividad y organizacion del home office',
+    descripcion: 'Consejos de ergonomía, productividad y organización del home office',
     count: articulos.filter(a => a.data.tipo === 'informativo').length,
   },
 ];
 ---
 
 <Base
-  title="Tu Espacio de Trabajo · Guias y comparativas de home office"
-  description="Analisis honestos y comparativas de sillas ergonomicas, escritorios, accesorios y equipamiento para tu home office. Todo lo que necesitas para teletrabajar mejor."
+  title="Tu Espacio de Trabajo · Guías y comparativas de home office"
+  description="Análisis honestos y comparativas de sillas ergonómicas, escritorios, accesorios y equipamiento para tu home office. Todo lo que necesitas para teletrabajar mejor."
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
@@ -159,7 +159,7 @@ const categorias = [
         <span>sin perder tiempo buscando</span>
       </h1>
       <p class="hero-subtitle">
-        Analizamos sillas, escritorios y accesorios en Amazon para que tu solo tengas que elegir.
+        Analizamos sillas, escritorios y accesorios en Amazon para que tú solo tengas que elegir.
       </p>
       <div class="hero-stats">
         <div class="hero-stat">
@@ -171,13 +171,13 @@ const categorias = [
           <span>comparativas</span>
         </div>
         <div class="hero-stat">
-          <strong>Solo</strong>
-          <span>Amazon</span>
+          <strong>100%</strong>
+          <span>independiente</span>
         </div>
       </div>
       <div class="hero-cta">
         <a href="/sillas/" class="hero-cta-btn hero-cta-primary">
-          🪑 Sillas ergonomicas
+          🪑 Sillas ergonómicas
         </a>
         <a href="/escritorios/" class="hero-cta-btn hero-cta-secondary">
           🖥️ Escritorios
@@ -215,7 +215,7 @@ const categorias = [
   <!-- Categorias -->
   <section class="section" style="background: var(--color-bg-muted); border-bottom: 1px solid var(--color-border);">
     <div class="container">
-      <h2 class="section-title">Explora por categoria</h2>
+      <h2 class="section-title">Explora por categoría</h2>
       <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
       <div class="categories-grid reveal-group">
         {categorias.map(cat => (
@@ -226,7 +226,7 @@ const categorias = [
               <p>{cat.descripcion}</p>
               {cat.count > 0 && (
                 <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
-                  {cat.count} {cat.count === 1 ? 'articulo' : 'articulos'}
+                  {cat.count} {cat.count === 1 ? 'artículo' : 'artículos'}
                 </p>
               )}
             </div>
@@ -240,8 +240,8 @@ const categorias = [
   {destacados.length > 0 && (
     <section class="section">
       <div class="container">
-        <h2 class="section-title reveal">Guias destacadas</h2>
-        <p class="section-subtitle reveal">Nuestros analisis mas completos y populares</p>
+        <h2 class="section-title reveal">Guías destacadas</h2>
+        <p class="section-subtitle reveal">Nuestros análisis más completos y populares</p>
         <div class="articles-grid reveal-group">
           {destacados.map(articulo => (
             <ArticleCard articulo={articulo} />
@@ -255,8 +255,8 @@ const categorias = [
   {recientes.length > 0 && (
     <section class="section">
       <div class="container">
-        <h2 class="section-title reveal">Ultimos analisis</h2>
-        <p class="section-subtitle reveal">Los articulos mas recientes del blog</p>
+        <h2 class="section-title reveal">Últimos análisis</h2>
+        <p class="section-subtitle reveal">Los artículos más recientes del blog</p>
         <div class="articles-grid reveal-group">
           {recientes.map(articulo => (
             <ArticleCard articulo={articulo} />
@@ -273,8 +273,8 @@ const categorias = [
         <div class="trust-card">
           <span class="trust-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
           <div>
-            <strong>Analisis independientes</strong>
-            <p>Probamos y comparamos productos reales. Sin resenas patrocinadas.</p>
+            <strong>Análisis independientes</strong>
+            <p>Probamos y comparamos productos reales. Sin reseñas patrocinadas.</p>
           </div>
         </div>
         <div class="trust-card">
@@ -300,8 +300,8 @@ const categorias = [
     <div class="container text-center">
       <h2 class="newsletter-section-title reveal">Checklist gratis: monta tu home office ideal</h2>
       <p class="newsletter-section-desc">
-        Descarga nuestra guia con el equipamiento imprescindible para montar un home office ergonomico y productivo.
-        Ademas, recibiras nuestras mejores comparativas y alertas de bajadas de precio.
+        Descarga nuestra guía con el equipamiento imprescindible para montar un home office ergonómico y productivo.
+        Además, recibirás nuestras mejores comparativas y alertas de bajadas de precio.
       </p>
       <form
         action="/api/subscribe"
@@ -317,7 +317,7 @@ const categorias = [
           aria-label="Tu email"
           class="newsletter-input"
         />
-        <button type="submit" class="newsletter-btn">Quiero la guia</button>
+        <button type="submit" class="newsletter-btn">Quiero la guía</button>
       </form>
       <p class="newsletter-section-privacy" id="newsletter-msg-hero">
         Gratis y sin spam. Puedes darte de baja cuando quieras.

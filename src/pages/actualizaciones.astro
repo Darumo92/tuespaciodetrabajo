@@ -21,7 +21,7 @@ const breadcrumbSchema = {
 
 <Base
   title="Actualizaciones recientes | Tu Espacio de Trabajo"
-  description="Articulos actualizados recientemente en Tu Espacio de Trabajo. Guias y comparativas revisadas con precios e informacion al dia."
+  description="Artículos actualizados recientemente en Tu Espacio de Trabajo. Guías y comparativas revisadas con precios e información al día."
 >
   <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
@@ -30,7 +30,7 @@ const breadcrumbSchema = {
     <div class="container">
       <div class="category-icon-large" aria-hidden="true">🔄</div>
       <h1>Actualizaciones recientes</h1>
-      <p>{actualizados.length} articulos revisados y actualizados</p>
+      <p>{actualizados.length} artículos revisados y actualizados</p>
     </div>
   </div>
 
@@ -50,8 +50,8 @@ const breadcrumbSchema = {
     ) : (
       <div class="text-center" style="padding: 4rem 0;">
         <p style="font-size: 3rem; margin-bottom: 1rem;">🔄</p>
-        <h2 style="margin-bottom: 0.5rem;">Sin actualizaciones aun</h2>
-        <p class="text-muted">Los articulos actualizados apareceran aqui.</p>
+        <h2 style="margin-bottom: 0.5rem;">Sin actualizaciones aún</h2>
+        <p class="text-muted">Los artículos actualizados aparecerán aquí.</p>
         <a href="/" class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">
           ← Volver al inicio
         </a>

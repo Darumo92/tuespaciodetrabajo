@@ -24,33 +24,33 @@ const categoriasInfo: Record<string, {
 }> = {
   sillas: {
     nombre: 'Sillas',
-    descripcion: 'Sillas ergonomicas, gaming, de oficina y economicas',
+    descripcion: 'Sillas ergonómicas, gaming, de oficina y económicas',
     icono: '🪑',
-    intro: 'Una buena silla es la inversion mas importante para tu home office. Pasas 8 o mas horas al dia sentado, y una silla inadecuada puede provocar dolor de espalda, cuello y hombros a largo plazo. En esta seccion analizamos sillas ergonomicas, gaming, de oficina y opciones economicas, comparando prestaciones, comodidad y precio en Amazon.',
+    intro: 'Una buena silla es la inversión más importante para tu home office. Pasas 8 o más horas al día sentado, y una silla inadecuada puede provocar dolor de espalda, cuello y hombros a largo plazo. En esta sección analizamos sillas ergonómicas, gaming, de oficina y opciones económicas, comparando prestaciones, comodidad y precio en Amazon.',
   },
   escritorios: {
     nombre: 'Escritorios',
-    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequenos',
+    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequeños',
     icono: '🖥️',
-    intro: 'El escritorio define tu espacio de trabajo. Ya busques un standing desk para alternar entre sentado y de pie, un escritorio amplio para dos monitores o una opcion compacta para un piso pequeno, aqui encontraras comparativas detalladas con precios actualizados en Amazon.',
+    intro: 'El escritorio define tu espacio de trabajo. Ya busques un standing desk para alternar entre sentado y de pie, un escritorio amplio para dos monitores o una opción compacta para un piso pequeño, aquí encontrarás comparativas detalladas con precios actualizados en Amazon.',
   },
   accesorios: {
     nombre: 'Accesorios',
-    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y mas',
+    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y más',
     icono: '⌨️',
-    intro: 'Los accesorios marcan la diferencia entre un setup funcional y uno realmente comodo y productivo. Un buen teclado ergonomico, un raton vertical, un soporte de monitor a la altura correcta o un reposamuñecas pueden prevenir lesiones y mejorar tu jornada laboral. Analizamos los mejores accesorios para home office disponibles en Amazon.',
+    intro: 'Los accesorios marcan la diferencia entre un setup funcional y uno realmente cómodo y productivo. Un buen teclado ergonómico, un ratón vertical, un soporte de monitor a la altura correcta o un reposamuñecas pueden prevenir lesiones y mejorar tu jornada laboral. Analizamos los mejores accesorios para home office disponibles en Amazon.',
   },
   ambiente: {
     nombre: 'Ambiente',
-    descripcion: 'Iluminacion, organizacion de cables, control de ruido y decoracion',
+    descripcion: 'Iluminación, organización de cables, control de ruido y decoración',
     icono: '💡',
-    intro: 'El ambiente de tu espacio de trabajo influye directamente en tu concentracion, productividad y bienestar. Una buena iluminacion reduce la fatiga visual, los cables organizados dan sensacion de orden, y un espacio bien decorado motiva. Comparamos productos de iluminacion, gestion de cables, insonorizacion y decoracion funcional.',
+    intro: 'El ambiente de tu espacio de trabajo influye directamente en tu concentración, productividad y bienestar. Una buena iluminación reduce la fatiga visual, los cables organizados dan sensación de orden, y un espacio bien decorado motiva. Comparamos productos de iluminación, gestión de cables, insonorización y decoración funcional.',
   },
   'audio-video': {
     nombre: 'Audio y Video',
-    descripcion: 'Auriculares, microfonos, webcams y monitores para videollamadas',
+    descripcion: 'Auriculares, micrófonos, webcams y monitores para videollamadas',
     icono: '🎧',
-    intro: 'Las videollamadas son parte del dia a dia del teletrabajo. Unos buenos auriculares con cancelacion de ruido, un microfono claro y una webcam de calidad marcan la diferencia en tus reuniones. Analizamos el mejor equipamiento de audio y video para teletrabajadores en Amazon.',
+    intro: 'Las videollamadas son parte del día a día del teletrabajo. Unos buenos auriculares con cancelación de ruido, un micrófono claro y una webcam de calidad marcan la diferencia en tus reuniones. Analizamos el mejor equipamiento de audio y video para teletrabajadores en Amazon.',
   },
 };
 
@@ -124,7 +124,7 @@ const breadcrumbSchema = {
           <div style="margin-bottom: 3rem;">
             <h2 class="subcat-heading">
               <span class="subcat-heading-icon" aria-hidden="true">⭐</span>
-              Guias destacadas
+              Guías destacadas
             </h2>
             <div class="articles-grid">
               {destacados.map(articulo => (
@@ -144,8 +144,8 @@ const breadcrumbSchema = {
     ) : (
       <div class="text-center" style="padding: 4rem 0;">
         <p style="font-size: 3rem; margin-bottom: 1rem;">{info.icono}</p>
-        <h2 style="margin-bottom: 0.5rem;">Proximamente</h2>
-        <p class="text-muted">Estamos preparando los primeros articulos de esta categoria.</p>
+        <h2 style="margin-bottom: 0.5rem;">Próximamente</h2>
+        <p class="text-muted">Estamos preparando los primeros artículos de esta categoría.</p>
         <a href="/" class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">
           ← Volver al inicio
         </a>

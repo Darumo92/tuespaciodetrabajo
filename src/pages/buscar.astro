@@ -13,28 +13,28 @@ const breadcrumbSchema = {
 ---
 
 <Base
-  title="Buscador de articulos | Tu Espacio de Trabajo"
-  description="Busca entre todas nuestras guias y comparativas de productos de home office. Encuentra analisis de sillas, escritorios, accesorios y mas."
+  title="Buscador de artículos | Tu Espacio de Trabajo"
+  description="Busca entre todas nuestras guías y comparativas de productos de home office. Encuentra análisis de sillas, escritorios, accesorios y más."
   canonical="https://tuespaciodetrabajo.com/buscar/"
 >
   <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="container section">
     <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">
-      Buscar articulos
+      Buscar artículos
     </h1>
     <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
-      Encuentra guias y comparativas sobre productos para tu home office
+      Encuentra guías y comparativas sobre productos para tu home office
     </p>
 
     <div class="search-box">
-      <label for="search-input" class="sr-only">Buscar articulos</label>
+      <label for="search-input" class="sr-only">Buscar artículos</label>
       <div style="position: relative;">
         <span class="search-icon" aria-hidden="true">🔍</span>
         <input
           type="search"
           id="search-input"
-          placeholder="Que estas buscando? Ej: silla ergonomica, standing desk..."
+          placeholder="¿Qué estás buscando? Ej: silla ergonómica, standing desk..."
           autocomplete="off"
           spellcheck="false"
         />
@@ -44,11 +44,11 @@ const breadcrumbSchema = {
 
     <div id="results-container">
       <div id="loading-state" class="search-state">
-        <p class="text-muted">Cargando indice de articulos...</p>
+        <p class="text-muted">Cargando índice de artículos...</p>
       </div>
       <div id="empty-state" class="search-state" style="display:none;">
         <p style="font-size: 3rem; margin-bottom: 0.75rem;">🖥️</p>
-        <p class="text-muted">Escribe algo para buscar entre los articulos</p>
+        <p class="text-muted">Escribe algo para buscar entre los artículos</p>
       </div>
       <div id="no-results-state" class="search-state" style="display:none;">
         <p style="font-size: 3rem; margin-bottom: 0.75rem;">🔍</p>
@@ -195,7 +195,7 @@ const breadcrumbSchema = {
       ? `/guias/${encodeURI(article.slug)}/`
       : `/${encodeURI(article.categoria)}/${encodeURI(article.slug)}/`;
     const catNombre = article.tipo === 'informativo'
-      ? 'Guias'
+      ? 'Guías'
       : (CATEGORIA_NOMBRES[article.categoria] || escapeHtml(article.categoria));
     const normQ = normalize(query);
 
@@ -225,7 +225,7 @@ const breadcrumbSchema = {
           <a href="${url}"><h3 class="article-card-title">${tituloHtml}</h3></a>
           <p class="article-card-excerpt">${bodyHtml}</p>
           <div class="article-card-meta">
-            <a href="${url}" class="article-card-link">Leer mas →</a>
+            <a href="${url}" class="article-card-link">Leer más →</a>
           </div>
         </div>
       </article>
@@ -287,7 +287,7 @@ const breadcrumbSchema = {
       if (input.value.trim()) search(input.value);
     })
     .catch(() => {
-      loadingState.innerHTML = '<p style="color:var(--color-primary);">Error cargando el indice. Recarga la pagina.</p>';
+      loadingState.innerHTML = '<p style="color:var(--color-primary);">Error cargando el índice. Recarga la página.</p>';
     });
 
   let debounceTimer: ReturnType<typeof setTimeout>;

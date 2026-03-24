@@ -128,7 +128,7 @@ function starData(val: number) {
     <button class="comp-sort-btn comp-sort-btn--active" data-sort="default">Recomendado</button>
     <button class="comp-sort-btn" data-sort="price-asc">Precio ↑</button>
     <button class="comp-sort-btn" data-sort="price-desc">Precio ↓</button>
-    <button class="comp-sort-btn" data-sort="rating">Valoracion</button>
+    <button class="comp-sort-btn" data-sort="rating">Valoración</button>
   </div>
 )}
 
@@ -138,7 +138,7 @@ function starData(val: number) {
     const amazonUrl = p.enlaceAmazon ? amazonHref(p.enlaceAmazon) : null;
     return (
       <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={p.precio} data-price-num={parseFloat((p.precio.match(/(\d+[.,]?\d*)/) || ['0','0'])[1].replace(',', '.'))} data-rating={p.valoracion} data-original-index={i}>
-        {i === 0 && <span class="comp-badge">🏆 Mejor opcion</span>}
+        {i === 0 && <span class="comp-badge">🏆 Mejor opción</span>}
 
         <div class="comp-header">
           {p.imagen && (

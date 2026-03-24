@@ -223,7 +223,7 @@ const breadcrumbSchema = {
     <aside class="trust-bar">
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Analisis independiente
+        Análisis independiente
       </div>
       <div class="trust-item">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2v4"/><path d="m16.24 7.76-2.83 2.83"/><path d="M18 12h4"/><path d="m16.24 16.24-2.83-2.83"/><path d="M12 18v4"/><path d="m7.76 16.24 2.83-2.83"/><path d="M2 12h4"/><path d="m7.76 7.76 2.83 2.83"/></svg>
@@ -239,15 +239,15 @@ const breadcrumbSchema = {
       <div class="affiliate-disclaimer" role="note">
         <span aria-hidden="true">i</span>
         <span>
-          Este articulo contiene enlaces de afiliados. Si compras a traves de
-          ellos podemos recibir una pequena comision <strong>sin coste adicional
+          Este artículo contiene enlaces de afiliados. Si compras a través de
+          ellos podemos recibir una pequeña comisión <strong>sin coste adicional
           para ti</strong>.
         </span>
       </div>
     )}
 
     <nav class="toc" id="toc" aria-label="Tabla de contenidos" style="display:none;">
-      <p class="toc-title">En este articulo</p>
+      <p class="toc-title">En este artículo</p>
       <ol class="toc-list" id="toc-list"></ol>
     </nav>
 
@@ -292,8 +292,8 @@ const breadcrumbSchema = {
     )}
 
     <div class="article-newsletter">
-      <p class="article-newsletter-title">Te avisamos cuando actualicemos esta guia</p>
-      <p class="article-newsletter-desc">Actualizamos precios y productos regularmente. Suscribete y te avisaremos de los cambios en esta guia y otras similares.</p>
+      <p class="article-newsletter-title">Te avisamos cuando actualicemos esta guía</p>
+      <p class="article-newsletter-desc">Actualizamos precios y productos regularmente. Suscríbete y te avisaremos de los cambios en esta guía y otras similares.</p>
       <form
         action="/api/subscribe"
         method="post"
@@ -315,7 +315,7 @@ const breadcrumbSchema = {
     {related.length > 0 && (
       <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--color-border);">
         <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;">
-          Articulos relacionados
+          Artículos relacionados
         </h2>
         <div class="articles-grid reveal-group">
           {related.map(a => (
@@ -324,7 +324,7 @@ const breadcrumbSchema = {
         </div>
         <div style="text-align: center; margin-top: 1.5rem;">
           <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button" style="display: inline-flex; font-size: 0.9rem; padding: 0.65rem 1.5rem;">
-            {catInfo.icono} Ver mas en {catInfo.nombre} →
+            {catInfo.icono} Ver más en {catInfo.nombre} →
           </a>
         </div>
       </section>
