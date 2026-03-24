@@ -19,6 +19,14 @@ const totalProductos = comparativas.reduce((sum, a) => {
   return sum + (matches ? matches.length : 0);
 }, 0);
 
+// Avoid showing duplicate sections: if all recientes are already in destacados, skip recientes
+const destacadoSlugs = new Set(destacados.map(a => a.slug));
+const recientesSinDuplicar = recientes.filter(a => !destacadoSlugs.has(a.slug));
+const mostrarRecientes = recientesSinDuplicar.length > 0;
+
+// Only show stats when numbers are meaningful
+const mostrarStats = totalProductos >= 10 && comparativas.length >= 3;
+
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
 const organizationSchema = {
@@ -161,27 +169,28 @@ const categorias = [
       <p class="hero-subtitle">
         Analizamos sillas, escritorios y accesorios en Amazon para que tú solo tengas que elegir.
       </p>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <strong>{totalProductos}+</strong>
-          <span>productos</span>
+      {mostrarStats && (
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>{totalProductos}+</strong>
+            <span>productos</span>
+          </div>
+          <div class="hero-stat">
+            <strong>{comparativas.length}</strong>
+            <span>comparativas</span>
+          </div>
+          <div class="hero-stat">
+            <strong>100%</strong>
+            <span>independiente</span>
+          </div>
         </div>
-        <div class="hero-stat">
-          <strong>{comparativas.length}</strong>
-          <span>comparativas</span>
-        </div>
-        <div class="hero-stat">
-          <strong>100%</strong>
-          <span>independiente</span>
-        </div>
-      </div>
+      )}
       <div class="hero-cta">
-        <a href="/sillas/" class="hero-cta-btn hero-cta-primary">
-          🪑 Sillas ergonómicas
-        </a>
-        <a href="/escritorios/" class="hero-cta-btn hero-cta-secondary">
-          🖥️ Escritorios
-        </a>
+        {categorias.map(cat => (
+          <a href={`/${cat.slug}/`} class="hero-cat-pill">
+            <span aria-hidden="true">{cat.icono}</span> {cat.nombre}
+          </a>
+        ))}
       </div>
       <p class="hero-meta">
         Precios actualizados en {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })} · Comparados en Amazon.es
@@ -212,61 +221,7 @@ const categorias = [
     </section>
   )}
 
-  <!-- Categorias -->
-  <section class="section" style="background: var(--color-bg-muted); border-bottom: 1px solid var(--color-border);">
-    <div class="container">
-      <h2 class="section-title">Explora por categoría</h2>
-      <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
-      <div class="categories-grid reveal-group">
-        {categorias.map(cat => (
-          <a href={`/${cat.slug}/`} class="category-card">
-            <span class="category-icon" aria-hidden="true">{cat.icono}</span>
-            <div class="category-info">
-              <h3>{cat.nombre}</h3>
-              <p>{cat.descripcion}</p>
-              {cat.count > 0 && (
-                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
-                  {cat.count} {cat.count === 1 ? 'artículo' : 'artículos'}
-                </p>
-              )}
-            </div>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Guias destacadas -->
-  {destacados.length > 0 && (
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Guías destacadas</h2>
-        <p class="section-subtitle reveal">Nuestros análisis más completos y populares</p>
-        <div class="articles-grid reveal-group">
-          {destacados.map(articulo => (
-            <ArticleCard articulo={articulo} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Articulos recientes -->
-  {recientes.length > 0 && (
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Últimos análisis</h2>
-        <p class="section-subtitle reveal">Los artículos más recientes del blog</p>
-        <div class="articles-grid reveal-group">
-          {recientes.map(articulo => (
-            <ArticleCard articulo={articulo} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Trust / Social proof -->
+  <!-- Trust / Social proof — above the fold for E-E-A-T -->
   <section class="trust-section">
     <div class="container">
       <div class="trust-grid reveal-group">
@@ -294,6 +249,64 @@ const categorias = [
       </div>
     </div>
   </section>
+
+  <!-- Categorias -->
+  <section class="section" style="background: var(--color-bg-muted); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <h2 class="section-title">Explora por categoría</h2>
+      <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
+      <div class="categories-grid reveal-group">
+        {categorias.map(cat => (
+          <a href={`/${cat.slug}/`} class="category-card">
+            <span class="category-icon" aria-hidden="true">{cat.icono}</span>
+            <div class="category-info">
+              <h3>{cat.nombre}</h3>
+              <p>{cat.descripcion}</p>
+              {cat.count > 0 ? (
+                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
+                  {cat.count} {cat.count === 1 ? 'artículo' : 'artículos'}
+                </p>
+              ) : (
+                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-light); font-weight: 500;">
+                  Próximamente
+                </p>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Destacados -->
+  {destacados.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Destacados</h2>
+        <p class="section-subtitle reveal">Nuestros análisis más completos y populares</p>
+        <div class="articles-grid reveal-group">
+          {destacados.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Articulos recientes (only if they add new content beyond destacados) -->
+  {mostrarRecientes && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Últimos análisis</h2>
+        <p class="section-subtitle reveal">Los artículos más recientes del blog</p>
+        <div class="articles-grid reveal-group">
+          {recientesSinDuplicar.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Newsletter (home: lead magnet) -->
   <section class="section newsletter-section">
