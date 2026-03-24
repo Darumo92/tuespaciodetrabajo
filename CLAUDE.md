@@ -79,6 +79,15 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por articulo, variable
 - Nunca incluir `?tag=tuespaciodet-21` en las URLs de los articulos MDX — los componentes lo anaden solos
 - Usar URLs directas `/dp/ASIN` (no URLs de busqueda `/s?k=`)
 
+## Imagenes de articulos
+
+- Script de descarga desde Pexels API: `node scripts/pexels-download.mjs "<query>" <slug> [--list] [--index=N] [--orientation=landscape|portrait|square]`
+- Script batch: `node scripts/pexels-batch-download.mjs`
+- Optimizador: `node scripts/optimize-images.mjs`
+- Requiere `PEXELS_API_KEY` en `.env`
+- Uso con `--list` para previsualizar resultados antes de descargar
+- Guarda en `public/images/articulos/<slug>.webp` (WebP, quality 80)
+
 ## CSP y seguridad
 
 - El `build` command ejecuta `astro build && node scripts/update-csp-hashes.mjs`

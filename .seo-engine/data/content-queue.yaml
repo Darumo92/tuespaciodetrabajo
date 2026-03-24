@@ -9,3 +9,12 @@ queue:
     status: human-review
     date_created: 2026-03-24
     notes: "Artículo personal del autor sobre su setup. Primer artículo del sitio."
+
+  - slug: mejor-silla-ergonomica-calidad-precio
+    title: "Mejor silla ergonómica calidad-precio 2026"
+    type: comparativa
+    category: sillas
+    priority: high
+    status: approved
+    date_created: 2026-03-24
+    notes: "Comparativa de 6 sillas ergonómicas (130-320 EUR) disponibles en Amazon.es. Ángulo: experiencia real de teletrabajador, no medio generalista."
