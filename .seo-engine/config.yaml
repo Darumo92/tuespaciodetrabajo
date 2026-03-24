@@ -21,11 +21,10 @@ author:
   setup:
     silla: "Autonomous ErgoChair Pro"
     escritorio: "FlexiSpot E7 con tablero de bambú 140x70"
-    monitor: "Dell U2723QE 27\" 4K USB-C"
+    monitor: "BenQ PD2705U 27\" 4K USB-C"
     teclado: "Logitech Ergo K860"
     raton: "Logitech MX Vertical"
     auriculares: "Sony WH-1000XM5"
-    webcam: "Logitech Brio 4K"
     iluminacion: "BenQ ScreenBar Halo"
   quirks:
     - "Probé 5 sillas diferentes antes de encontrar la que me quitó el dolor lumbar"

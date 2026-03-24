@@ -1,2 +1,20 @@
 # Blog <-> keyword <-> feature mapping
-articles: []
+articles:
+  - slug: mi-setup-home-office-2026
+    title: "Mi setup de home office 2026: qué uso y por qué"
+    path: src/content/articulos/mi-setup-home-office-2026.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "setup home office"
+    secondary_keywords:
+      - mi escritorio teletrabajo
+      - espacio de trabajo en casa
+      - ergonomía teletrabajo
+    cluster: null
+    status: human-review
+    date: 2026-03-24
+    has_eeat_signals: true
+    internal_links_to:
+      - sillas (categoría)
+      - escritorios (categoría)
+    internal_links_from: []

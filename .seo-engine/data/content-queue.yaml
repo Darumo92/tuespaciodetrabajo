@@ -1,3 +1,11 @@
 # Prioritized content ideas
 # Status: planned | in-progress | published | rejected
-queue: []
+queue:
+  - slug: mi-setup-home-office-2026
+    title: "Mi setup de home office 2026: qué uso y por qué"
+    type: informativo
+    category: guias
+    priority: high
+    status: human-review
+    date_created: 2026-03-24
+    notes: "Artículo personal del autor sobre su setup. Primer artículo del sitio."
