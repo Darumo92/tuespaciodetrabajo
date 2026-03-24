@@ -292,27 +292,6 @@ const breadcrumbSchema = {
       </section>
     )}
 
-    <div class="article-newsletter">
-      <p class="article-newsletter-title">Te avisamos cuando actualicemos esta guía</p>
-      <p class="article-newsletter-desc">Actualizamos precios y productos regularmente. Suscríbete y te avisaremos de los cambios en esta guía y otras similares.</p>
-      <form
-        action="/api/subscribe"
-        method="post"
-        class="newsletter-form article-newsletter-form"
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="tu@email.com"
-          required
-          aria-label="Tu email"
-          class="article-newsletter-input"
-        />
-        <button type="submit" class="newsletter-btn">Suscribirme</button>
-      </form>
-      <p id="newsletter-msg-article" style="font-size: 0.8rem; margin-top: 0.5rem;"></p>
-    </div>
-
     {related.length > 0 && (
       <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--color-border);">
         <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;">
@@ -594,54 +573,6 @@ const breadcrumbSchema = {
     .article-updated {
       color: var(--color-secondary);
       font-weight: 600;
-    }
-
-    .article-newsletter {
-      margin-top: 2.5rem;
-      padding: 1.5rem;
-      background: var(--color-bg-muted);
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
-      text-align: center;
-    }
-    .article-newsletter-title {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-    }
-    .article-newsletter-desc {
-      font-size: 0.85rem;
-      color: var(--color-text-muted);
-      margin-bottom: 1rem;
-    }
-    .article-newsletter-form {
-      max-width: 420px;
-      margin: 0 auto;
-      display: flex;
-      gap: 0.5rem;
-    }
-    .article-newsletter-input {
-      flex: 1;
-      padding: 0.6rem 0.875rem;
-      border-radius: 100px;
-      border: 1px solid var(--color-border);
-      background: var(--color-bg-card);
-      color: var(--color-text);
-      font-size: 0.85rem;
-      font-family: var(--font-sans);
-      outline: none;
-      transition: border-color var(--transition);
-    }
-    .article-newsletter-input:focus {
-      border-color: var(--color-primary);
-    }
-    .article-newsletter-input::placeholder {
-      color: var(--color-text-light);
-    }
-    @media (max-width: 480px) {
-      .article-newsletter-form {
-        flex-direction: column;
-      }
     }
 
     /* Sticky CTA bar (mobile only) */

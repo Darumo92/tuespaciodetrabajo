@@ -60,30 +60,6 @@ const year = new Date().getFullYear();
       </div>
     </div>
 
-    <div class="footer-newsletter">
-      <p class="footer-heading">📬 Newsletter</p>
-      <p style="font-size: 0.85rem; color: #a0a0b8; margin-bottom: 0.75rem;">
-        Ofertas, nuevos artículos y los mejores consejos para tu espacio de trabajo. Una vez por semana, directo a tu bandeja.
-      </p>
-      <form
-        action="/api/subscribe"
-        method="post"
-        class="newsletter-form"
-        id="newsletter-form-footer"
-      >
-        <input
-          type="email"
-          name="email"
-          placeholder="tu@email.com"
-          required
-          aria-label="Tu email"
-          class="newsletter-input"
-        />
-        <button type="submit" class="newsletter-btn">Suscribirme</button>
-      </form>
-      <p id="newsletter-msg-footer" style="font-size: 0.8rem; color: #a0a0b8; margin-top: 0.5rem;"></p>
-    </div>
-
     <div class="footer-affiliate-notice">
       ⚠️ <strong>Aviso de afiliados:</strong> tuespaciodetrabajo.com participa en el
       Programa de Afiliados de Amazon EU. Cuando
@@ -97,50 +73,3 @@ const year = new Date().getFullYear();
   </div>
 </footer>
 
-<script>
-  document.querySelectorAll('form[action="/api/subscribe"]').forEach(form => {
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const formEl = e.target as HTMLFormElement;
-      const email = (formEl.querySelector('input[name="email"]') as HTMLInputElement).value;
-      const btn = formEl.querySelector('button') as HTMLButtonElement;
-      const msgEl = formEl.nextElementSibling as HTMLElement;
-
-      btn.textContent = 'Enviando...';
-      btn.disabled = true;
-
-      try {
-        const res = await fetch('/api/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email }),
-        });
-
-        const data = await res.json();
-
-        if (data.success) {
-          formEl.style.display = 'none';
-          if (msgEl) {
-            msgEl.textContent = '¡Suscrito! Revisa tu email para confirmar.';
-            msgEl.style.color = '#22c55e';
-            msgEl.style.fontWeight = '600';
-          }
-        } else {
-          if (msgEl) {
-            msgEl.textContent = data.error || 'Hubo un error. Inténtalo de nuevo.';
-            msgEl.style.color = '#ef4444';
-          }
-          btn.textContent = 'Suscribirme';
-          btn.disabled = false;
-        }
-      } catch {
-        if (msgEl) {
-          msgEl.textContent = 'Error de conexión. Inténtalo de nuevo.';
-          msgEl.style.color = '#ef4444';
-        }
-        btn.textContent = 'Suscribirme';
-        btn.disabled = false;
-      }
-    });
-  });
-</script>
