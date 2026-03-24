@@ -1,0 +1,469 @@
+---
+import StoreIcon from './StoreIcon.astro';
+
+interface Producto {
+  nombre: string;
+  precio: string;
+  valoracion: number;
+  puntosFuertes: string;
+  imagen?: string;
+  enlaceAmazon?: string;
+  marca?: string;
+}
+
+const AMAZON_TAG = 'tuespaciodet-21';
+
+function amazonHref(url: string): string {
+  if (url.includes('tag=')) return url;
+  return `${url}${url.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`;
+}
+
+interface Props {
+  productos: Producto[];
+  titulo?: string;
+}
+
+const { productos, titulo } = Astro.props;
+
+const FALLBACK_IMAGE = '/og-default.jpg';
+const PRICE_VALID_UNTIL = `${new Date().getFullYear() + 1}-12-31`;
+
+function precioNumerico(precio: string): string | null {
+  const match = precio.match(/(\d+[.,]?\d*)/);
+  return match ? match[1].replace(',', '.') : null;
+}
+
+const productSchemas = productos.map(p => {
+  const price = precioNumerico(p.precio);
+  return {
+    '@type': 'Product',
+    name: p.nombre,
+    image: p.imagen || FALLBACK_IMAGE,
+    description: p.puntosFuertes,
+    brand: {
+      '@type': 'Brand',
+      name: p.marca || p.nombre.split(' ')[0],
+    },
+    review: {
+      '@type': 'Review',
+      author: {
+        '@type': 'Organization',
+        name: 'Tu Espacio de Trabajo',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: p.valoracion,
+        bestRating: 5,
+      },
+    },
+    ...(price && {
+      offers: {
+        '@type': 'Offer',
+        priceCurrency: 'EUR',
+        price,
+        priceValidUntil: PRICE_VALID_UNTIL,
+        availability: 'https://schema.org/InStock',
+        ...(p.enlaceAmazon && { url: amazonHref(p.enlaceAmazon) }),
+        hasMerchantReturnPolicy: {
+          '@type': 'MerchantReturnPolicy',
+          applicableCountry: 'ES',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+          merchantReturnDays: 30,
+          returnMethod: 'https://schema.org/ReturnByMail',
+          returnFees: 'https://schema.org/FreeReturn',
+        },
+        shippingDetails: {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: 0,
+            currency: 'EUR',
+          },
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'ES',
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 1,
+              maxValue: 3,
+              unitCode: 'd',
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 1,
+              maxValue: 5,
+              unitCode: 'd',
+            },
+          },
+        },
+      },
+    }),
+  };
+});
+
+function starData(val: number) {
+  const full = Math.floor(val);
+  const decimal = val - full;
+  const half = decimal >= 0.3 && decimal <= 0.7;
+  const empty = 5 - full - (half ? 1 : 0);
+  return { full, half, empty: Math.max(0, empty) };
+}
+---
+
+{productSchemas.map(s => (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    ...s,
+  })} />
+))}
+
+{titulo && <h3 class="comp-titulo">{titulo}</h3>}
+
+{productos.length > 2 && (
+  <div class="comp-sort">
+    <span class="comp-sort-label">Ordenar por:</span>
+    <button class="comp-sort-btn comp-sort-btn--active" data-sort="default">Recomendado</button>
+    <button class="comp-sort-btn" data-sort="price-asc">Precio ↑</button>
+    <button class="comp-sort-btn" data-sort="price-desc">Precio ↓</button>
+    <button class="comp-sort-btn" data-sort="rating">Valoracion</button>
+  </div>
+)}
+
+<div class="comp-grid">
+  {productos.map((p, i) => {
+    const stars = starData(p.valoracion);
+    const amazonUrl = p.enlaceAmazon ? amazonHref(p.enlaceAmazon) : null;
+    return (
+      <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={p.precio} data-price-num={parseFloat((p.precio.match(/(\d+[.,]?\d*)/) || ['0','0'])[1].replace(',', '.'))} data-rating={p.valoracion} data-original-index={i}>
+        {i === 0 && <span class="comp-badge">🏆 Mejor opcion</span>}
+
+        <div class="comp-header">
+          {p.imagen && (
+            <div class="comp-img-wrap">
+              <img src={p.imagen} alt={p.nombre} width="140" height="140" class="comp-img" loading="lazy" decoding="async" sizes="(max-width: 480px) 140px, 120px" />
+            </div>
+          )}
+          <div class="comp-header-info">
+            <h4 class="comp-name">{p.nombre}</h4>
+            <div class="comp-meta">
+              <div class="comp-stars" aria-label={`${p.valoracion} de 5 estrellas`}>
+                {Array.from({ length: stars.full }).map(() => (
+                  <svg class="comp-star comp-star--full" viewBox="0 0 20 20" width="16" height="16"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z" /></svg>
+                ))}
+                {stars.half && (
+                  <svg class="comp-star comp-star--half" viewBox="0 0 20 20" width="16" height="16">
+                    <defs><clipPath id={`half-${i}`}><rect x="0" y="0" width="10" height="20" /></clipPath></defs>
+                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z" class="comp-star-empty-bg" />
+                    <path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z" clip-path={`url(#half-${i})`} class="comp-star-full-bg" />
+                  </svg>
+                )}
+                {Array.from({ length: stars.empty }).map(() => (
+                  <svg class="comp-star comp-star--empty" viewBox="0 0 20 20" width="16" height="16"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z" /></svg>
+                ))}
+                <span class="comp-rating-num">{p.valoracion}</span>
+              </div>
+              <span class="comp-price">{p.precio}</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="comp-desc">{p.puntosFuertes}</p>
+
+        {amazonUrl && (
+          <div class="comp-stores">
+            <a
+              href={amazonUrl}
+              class="affiliate-button amazon"
+              target="_blank"
+              rel="nofollow noopener noreferrer sponsored"
+            >
+              <StoreIcon tienda="amazon" size={15} />
+              Amazon — {p.precio}
+            </a>
+          </div>
+        )}
+      </div>
+    );
+  })}
+</div>
+
+<style>
+/* Sort controls */
+.comp-sort {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.comp-sort-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-right: 0.25rem;
+}
+
+.comp-sort-btn {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.comp-sort-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.comp-sort-btn--active,
+.comp-sort-btn--active:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+}
+
+.comp-titulo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.comp-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.comp-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+}
+
+.comp-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.comp-card--top {
+  border: 2px solid var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-card));
+}
+
+.comp-card--top:hover {
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--color-primary) 15%, transparent);
+}
+
+.comp-badge {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.8rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+/* --- Header: image + name/rating/price --- */
+.comp-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.comp-img-wrap {
+  flex-shrink: 0;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.comp-header-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.comp-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 0.6rem;
+  line-height: 1.3;
+}
+
+.comp-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Star rating */
+.comp-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.comp-star {
+  flex-shrink: 0;
+}
+
+.comp-star--full path {
+  fill: var(--color-secondary);
+}
+
+.comp-star--empty path {
+  fill: var(--color-border);
+}
+
+.comp-star-empty-bg {
+  fill: var(--color-border);
+}
+
+.comp-star-full-bg {
+  fill: var(--color-secondary);
+}
+
+.comp-rating-num {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  margin-left: 0.35rem;
+}
+
+.comp-price {
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+/* --- Description --- */
+.comp-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 1rem 0 0;
+  padding-top: 0.875rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Store buttons --- */
+.comp-stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.comp-stores .affiliate-button {
+  font-size: 0.85rem;
+  padding: 0.6rem 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .comp-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .comp-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .comp-img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .comp-meta {
+    justify-content: center;
+  }
+
+  .comp-desc {
+    text-align: left;
+  }
+
+  .comp-stores {
+    flex-direction: column;
+  }
+
+  .comp-stores .affiliate-button {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.6rem 1.1rem;
+  }
+}
+</style>
+
+<script>
+  document.querySelectorAll('.comp-sort').forEach(sortBar => {
+    const grid = sortBar.nextElementSibling as HTMLElement;
+    if (!grid || !grid.classList.contains('comp-grid')) return;
+
+    const cards = Array.from(grid.querySelectorAll('.comp-card')) as HTMLElement[];
+    const btns = sortBar.querySelectorAll('.comp-sort-btn');
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('comp-sort-btn--active'));
+        btn.classList.add('comp-sort-btn--active');
+
+        const sortType = (btn as HTMLElement).dataset.sort;
+        const sorted = [...cards];
+
+        if (sortType === 'price-asc') {
+          sorted.sort((a, b) => parseFloat(a.dataset.priceNum || '0') - parseFloat(b.dataset.priceNum || '0'));
+        } else if (sortType === 'price-desc') {
+          sorted.sort((a, b) => parseFloat(b.dataset.priceNum || '0') - parseFloat(a.dataset.priceNum || '0'));
+        } else if (sortType === 'rating') {
+          sorted.sort((a, b) => parseFloat(b.dataset.rating || '0') - parseFloat(a.dataset.rating || '0'));
+        } else {
+          sorted.sort((a, b) => parseInt(a.dataset.originalIndex || '0') - parseInt(b.dataset.originalIndex || '0'));
+        }
+
+        // Remove top styling from all, add to first in sorted view
+        sorted.forEach((card, i) => {
+          card.classList.remove('comp-card--top');
+          const badge = card.querySelector('.comp-badge');
+          if (badge) (badge as HTMLElement).style.display = i === 0 ? '' : 'none';
+          if (i === 0) card.classList.add('comp-card--top');
+          grid.appendChild(card);
+        });
+      });
+    });
+  });
+</script>

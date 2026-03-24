@@ -1,0 +1,300 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Buscar' },
+  ],
+};
+---
+
+<Base
+  title="Buscador de articulos | Tu Espacio de Trabajo"
+  description="Busca entre todas nuestras guias y comparativas de productos de home office. Encuentra analisis de sillas, escritorios, accesorios y mas."
+  canonical="https://tuespaciodetrabajo.com/buscar/"
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <div class="container section">
+    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">
+      Buscar articulos
+    </h1>
+    <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+      Encuentra guias y comparativas sobre productos para tu home office
+    </p>
+
+    <div class="search-box">
+      <label for="search-input" class="sr-only">Buscar articulos</label>
+      <div style="position: relative;">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Que estas buscando? Ej: silla ergonomica, standing desk..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+      <div id="search-meta" class="search-meta" style="display:none;"></div>
+    </div>
+
+    <div id="results-container">
+      <div id="loading-state" class="search-state">
+        <p class="text-muted">Cargando indice de articulos...</p>
+      </div>
+      <div id="empty-state" class="search-state" style="display:none;">
+        <p style="font-size: 3rem; margin-bottom: 0.75rem;">🖥️</p>
+        <p class="text-muted">Escribe algo para buscar entre los articulos</p>
+      </div>
+      <div id="no-results-state" class="search-state" style="display:none;">
+        <p style="font-size: 3rem; margin-bottom: 0.75rem;">🔍</p>
+        <h2 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Sin resultados</h2>
+        <p class="text-muted">Prueba con otras palabras clave o explora por categoria:</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
+          <a href="/sillas/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🪑 Sillas</a>
+          <a href="/escritorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🖥️ Escritorios</a>
+          <a href="/accesorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">⌨️ Accesorios</a>
+          <a href="/ambiente/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">💡 Ambiente</a>
+          <a href="/audio-video/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🎧 Audio y Video</a>
+        </div>
+      </div>
+      <div id="results-grid" class="articles-grid" style="display:none;" role="region" aria-live="polite" aria-label="Resultados de busqueda"></div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .search-box {
+    margin-bottom: 2.5rem;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 0.875rem 1rem 0.875rem 3rem;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-card);
+    color: var(--color-text);
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+
+  #search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 12%, transparent);
+  }
+
+  .search-meta {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .search-state {
+    text-align: center;
+    padding: 4rem 1rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+
+<script>
+  const CATEGORIA_NOMBRES: Record<string, string> = {
+    sillas: 'Sillas',
+    escritorios: 'Escritorios',
+    accesorios: 'Accesorios',
+    ambiente: 'Ambiente',
+    'audio-video': 'Audio y Video',
+  };
+
+  interface Article {
+    titulo: string;
+    descripcion: string;
+    slug: string;
+    categoria: string;
+    tipo: string;
+    imagen: string | null;
+    tags: string[];
+    contenido: string;
+  }
+
+  let allArticles: Article[] = [];
+
+  const input = document.getElementById('search-input') as HTMLInputElement;
+  const meta = document.getElementById('search-meta')!;
+  const loadingState = document.getElementById('loading-state')!;
+  const emptyState = document.getElementById('empty-state')!;
+  const noResultsState = document.getElementById('no-results-state')!;
+  const resultsGrid = document.getElementById('results-grid')!;
+
+  function normalize(str: string): string {
+    return str
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function escapeHtml(str: string): string {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function highlight(text: string, query: string): string {
+    if (!query) return escapeHtml(text);
+    const normText = normalize(text);
+    const normQuery = normalize(query);
+    const idx = normText.indexOf(normQuery);
+    if (idx === -1) return escapeHtml(text);
+    return (
+      escapeHtml(text.slice(0, idx)) +
+      '<mark>' +
+      escapeHtml(text.slice(idx, idx + query.length)) +
+      '</mark>' +
+      escapeHtml(text.slice(idx + query.length))
+    );
+  }
+
+  function getExcerpt(contenido: string, query: string, maxLen = 150): string {
+    const norm = normalize(contenido);
+    const normQ = normalize(query);
+    const idx = norm.indexOf(normQ);
+    if (idx === -1) return contenido.slice(0, maxLen) + '...';
+    const start = Math.max(0, idx - 60);
+    const end = Math.min(contenido.length, idx + query.length + 90);
+    const prefix = start > 0 ? '...' : '';
+    const suffix = end < contenido.length ? '...' : '';
+    return highlight(prefix + contenido.slice(start, end) + suffix, query);
+  }
+
+  function renderCard(article: Article, query: string): string {
+    const url = article.tipo === 'informativo'
+      ? `/guias/${encodeURI(article.slug)}/`
+      : `/${encodeURI(article.categoria)}/${encodeURI(article.slug)}/`;
+    const catNombre = article.tipo === 'informativo'
+      ? 'Guias'
+      : (CATEGORIA_NOMBRES[article.categoria] || escapeHtml(article.categoria));
+    const normQ = normalize(query);
+
+    const inTitle = normalize(article.titulo).includes(normQ);
+    const inDesc = normalize(article.descripcion).includes(normQ);
+    const inTags = article.tags.some(t => normalize(t).includes(normQ));
+    const showExcerpt = !inTitle && !inDesc && !inTags && article.contenido;
+
+    const tituloHtml = highlight(article.titulo, query);
+    const bodyHtml = showExcerpt
+      ? getExcerpt(article.contenido, query)
+      : highlight(article.descripcion, query);
+
+    const imgHtml = article.imagen
+      ? `<a href="${url}" class="article-card-image" aria-hidden="true" tabindex="-1">
+           <img src="${escapeHtml(article.imagen)}" alt="" loading="lazy" />
+         </a>`
+      : '';
+
+    return `
+      <article class="article-card">
+        ${imgHtml}
+        <div class="article-card-body">
+          <div class="article-card-badges">
+            <span class="article-card-category badge badge-${article.tipo === 'informativo' ? 'guias' : article.categoria}">${catNombre}</span>
+          </div>
+          <a href="${url}"><h3 class="article-card-title">${tituloHtml}</h3></a>
+          <p class="article-card-excerpt">${bodyHtml}</p>
+          <div class="article-card-meta">
+            <a href="${url}" class="article-card-link">Leer mas →</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function search(query: string) {
+    const q = query.trim();
+
+    if (!q) {
+      loadingState.style.display = 'none';
+      emptyState.style.display = '';
+      noResultsState.style.display = 'none';
+      resultsGrid.style.display = 'none';
+      meta.style.display = 'none';
+      return;
+    }
+
+    const normQ = normalize(q);
+    const results = allArticles.filter(a =>
+      normalize(a.titulo).includes(normQ) ||
+      normalize(a.descripcion).includes(normQ) ||
+      normalize(a.contenido).includes(normQ) ||
+      a.tags.some(t => normalize(t).includes(normQ))
+    );
+
+    // Title matches first
+    results.sort((a, b) => {
+      const aT = normalize(a.titulo).includes(normQ) ? 0 : 1;
+      const bT = normalize(b.titulo).includes(normQ) ? 0 : 1;
+      return aT - bT;
+    });
+
+    loadingState.style.display = 'none';
+    emptyState.style.display = 'none';
+
+    if (results.length === 0) {
+      noResultsState.style.display = '';
+      resultsGrid.style.display = 'none';
+      meta.style.display = 'none';
+    } else {
+      noResultsState.style.display = 'none';
+      resultsGrid.innerHTML = results.map(a => renderCard(a, q)).join('');
+      resultsGrid.style.display = '';
+      meta.textContent = `${results.length} ${results.length === 1 ? 'resultado' : 'resultados'} para "${q}"`;
+      meta.style.display = '';
+    }
+  }
+
+  const urlQuery = new URLSearchParams(window.location.search).get('q');
+  if (urlQuery) input.value = urlQuery;
+
+  fetch('/buscar.json')
+    .then(r => r.json())
+    .then((data: Article[]) => {
+      allArticles = data;
+      loadingState.style.display = 'none';
+      emptyState.style.display = '';
+      if (input.value.trim()) search(input.value);
+    })
+    .catch(() => {
+      loadingState.innerHTML = '<p style="color:var(--color-primary);">Error cargando el indice. Recarga la pagina.</p>';
+    });
+
+  let debounceTimer: ReturnType<typeof setTimeout>;
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => search(input.value), 200);
+  });
+
+  input.focus();
+</script>

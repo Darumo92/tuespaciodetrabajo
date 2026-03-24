@@ -1,0 +1,327 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = await getCollection('articulos');
+
+const destacados = articulos
+  .filter(a => a.data.destacado)
+  .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
+
+const recientes = articulos
+  .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime())
+  .slice(0, 4);
+
+const comparativas = articulos.filter(a => a.data.tipo !== 'informativo');
+const totalProductos = comparativas.reduce((sum, a) => {
+  const matches = a.body?.match(/nombre:\s*"/g);
+  return sum + (matches ? matches.length : 0);
+}, 0);
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Tu Espacio de Trabajo',
+  url: siteUrl,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/favicon.svg`,
+  },
+  description: 'Guias de compra y comparativas de productos de home office y ergonomia para teletrabajadores',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'contacto@tuespaciodetrabajo.com',
+    contactType: 'customer service',
+    availableLanguage: 'es',
+  },
+  foundingDate: '2026',
+  areaServed: {
+    '@type': 'Country',
+    name: 'ES',
+  },
+  availableLanguage: 'es',
+};
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ultimos analisis de productos de home office',
+  numberOfItems: recientes.length,
+  itemListElement: recientes.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `${siteUrl}/${a.data.tipo === 'informativo' ? 'guias' : a.data.categoria}/${a.slug}`,
+    name: a.data.titulo,
+  })),
+};
+
+// Seasonal content for home office
+const now = new Date();
+const month = now.getMonth() + 1; // 1-12
+
+type SeasonalConfig = { tags: string[]; titulo: string; icono: string; color: string };
+const seasonalMap: SeasonalConfig[] = [];
+
+// Jan-Feb: New year resolutions + back to remote work
+if (month >= 1 && month <= 2) {
+  seasonalMap.push({ tags: ['propositos', 'renovar', 'setup'], titulo: 'Propositos: renueva tu espacio', icono: '🎯', color: '#2563eb' });
+  seasonalMap.push({ tags: ['teletrabajo', 'home office', 'vuelta'], titulo: 'Vuelta al trabajo remoto', icono: '💻', color: '#047857' });
+}
+// Mar-May: Spring refresh
+if (month >= 3 && month <= 5) {
+  seasonalMap.push({ tags: ['renovar', 'setup', 'primavera', 'organizacion'], titulo: 'Primavera: hora de renovar tu setup', icono: '🌱', color: '#047857' });
+}
+// Jun-Aug: Summer heat
+if (month >= 6 && month <= 8) {
+  seasonalMap.push({ tags: ['calor', 'verano', 'ventilacion', 'climatizacion'], titulo: 'Verano: combate el calor en tu oficina', icono: '☀️', color: '#d97706' });
+}
+// Sep-Nov: Back to routine + Black Friday
+if (month >= 9 && month <= 11) {
+  seasonalMap.push({ tags: ['vuelta', 'rutina', 'productividad', 'organizacion'], titulo: 'Vuelta a la rutina', icono: '📋', color: '#7c3aed' });
+  seasonalMap.push({ tags: ['black friday', 'ofertas', 'descuentos'], titulo: 'Black Friday se acerca', icono: '🏷️', color: '#dc2626' });
+}
+// Dec: Gifts
+if (month === 12) {
+  seasonalMap.push({ tags: ['regalo', 'navidad', 'teletrabajador'], titulo: 'Regalos para teletrabajadores', icono: '🎁', color: '#dc2626' });
+}
+
+// Find matching seasonal articles
+const seasonalArticles: { articulo: typeof articulos[0]; config: SeasonalConfig }[] = [];
+for (const config of seasonalMap) {
+  const match = articulos.find(a =>
+    a.data.tags?.some(t => config.tags.some(st => t.toLowerCase().includes(st)))
+  );
+  if (match && !seasonalArticles.some(s => s.articulo.slug === match.slug)) {
+    seasonalArticles.push({ articulo: match, config });
+  }
+}
+
+const categorias = [
+  {
+    slug: 'sillas',
+    nombre: 'Sillas',
+    icono: '🪑',
+    descripcion: 'Sillas ergonomicas, gaming, de oficina y economicas',
+    count: articulos.filter(a => a.data.categoria === 'sillas').length,
+  },
+  {
+    slug: 'escritorios',
+    nombre: 'Escritorios',
+    icono: '🖥️',
+    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequenos',
+    count: articulos.filter(a => a.data.categoria === 'escritorios').length,
+  },
+  {
+    slug: 'accesorios',
+    nombre: 'Accesorios',
+    icono: '⌨️',
+    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y mas',
+    count: articulos.filter(a => a.data.categoria === 'accesorios').length,
+  },
+  {
+    slug: 'ambiente',
+    nombre: 'Ambiente',
+    icono: '💡',
+    descripcion: 'Iluminacion, organizacion de cables, control de ruido y decoracion',
+    count: articulos.filter(a => a.data.categoria === 'ambiente').length,
+  },
+  {
+    slug: 'audio-video',
+    nombre: 'Audio y Video',
+    icono: '🎧',
+    descripcion: 'Auriculares, microfonos, webcams y monitores para videollamadas',
+    count: articulos.filter(a => a.data.categoria === 'audio-video').length,
+  },
+  {
+    slug: 'guias',
+    nombre: 'Guias',
+    icono: '📖',
+    descripcion: 'Consejos de ergonomia, productividad y organizacion del home office',
+    count: articulos.filter(a => a.data.tipo === 'informativo').length,
+  },
+];
+---
+
+<Base
+  title="Tu Espacio de Trabajo · Guias y comparativas de home office"
+  description="Analisis honestos y comparativas de sillas ergonomicas, escritorios, accesorios y equipamiento para tu home office. Todo lo que necesitas para teletrabajar mejor."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">
+        Tu espacio de trabajo perfecto,<br />
+        <span>sin perder tiempo buscando</span>
+      </h1>
+      <p class="hero-subtitle">
+        Analizamos sillas, escritorios y accesorios en Amazon para que tu solo tengas que elegir.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <strong>{totalProductos}+</strong>
+          <span>productos</span>
+        </div>
+        <div class="hero-stat">
+          <strong>{comparativas.length}</strong>
+          <span>comparativas</span>
+        </div>
+        <div class="hero-stat">
+          <strong>Solo</strong>
+          <span>Amazon</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="/sillas/" class="hero-cta-btn hero-cta-primary">
+          🪑 Sillas ergonomicas
+        </a>
+        <a href="/escritorios/" class="hero-cta-btn hero-cta-secondary">
+          🖥️ Escritorios
+        </a>
+      </div>
+      <p class="hero-meta">
+        Precios actualizados en {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })} · Comparados en Amazon.es
+      </p>
+    </div>
+  </section>
+
+  <!-- Seasonal Banner -->
+  {seasonalArticles.length > 0 && (
+    <section class="seasonal-banner">
+      <div class="container">
+        <div class="seasonal-items">
+          {seasonalArticles.slice(0, 2).map(({ articulo: sa, config }) => {
+            const saUrl = `/${sa.data.tipo === 'informativo' ? 'guias' : sa.data.categoria}/${sa.slug}/`;
+            return (
+              <a href={saUrl} class="seasonal-item" style={`--seasonal-color: ${config.color}`}>
+                <span class="seasonal-icon">{config.icono}</span>
+                <div class="seasonal-text">
+                  <strong>{config.titulo}</strong>
+                  <span>{sa.data.titulo}</span>
+                </div>
+                <span class="seasonal-arrow">→</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Categorias -->
+  <section class="section" style="background: var(--color-bg-muted); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <h2 class="section-title">Explora por categoria</h2>
+      <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
+      <div class="categories-grid reveal-group">
+        {categorias.map(cat => (
+          <a href={`/${cat.slug}/`} class="category-card">
+            <span class="category-icon" aria-hidden="true">{cat.icono}</span>
+            <div class="category-info">
+              <h3>{cat.nombre}</h3>
+              <p>{cat.descripcion}</p>
+              {cat.count > 0 && (
+                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
+                  {cat.count} {cat.count === 1 ? 'articulo' : 'articulos'}
+                </p>
+              )}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Guias destacadas -->
+  {destacados.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Guias destacadas</h2>
+        <p class="section-subtitle reveal">Nuestros analisis mas completos y populares</p>
+        <div class="articles-grid reveal-group">
+          {destacados.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Articulos recientes -->
+  {recientes.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Ultimos analisis</h2>
+        <p class="section-subtitle reveal">Los articulos mas recientes del blog</p>
+        <div class="articles-grid reveal-group">
+          {recientes.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Trust / Social proof -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid reveal-group">
+        <div class="trust-card">
+          <span class="trust-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+          <div>
+            <strong>Analisis independientes</strong>
+            <p>Probamos y comparamos productos reales. Sin resenas patrocinadas.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <span class="trust-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"/><path d="M7 7h.01"/></svg></span>
+          <div>
+            <strong>Precios actualizados</strong>
+            <p>Comparamos precios en Amazon.es para mostrarte las mejores opciones.</p>
+          </div>
+        </div>
+        <div class="trust-card">
+          <span class="trust-card-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M21 12a9 9 0 1 1-6.219-8.56"/><polyline points="21 3 21 9 15 9"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L21 9"/></svg></span>
+          <div>
+            <strong>Actualizado regularmente</strong>
+            <p>Revisamos precios y disponibilidad para que la info sea fiable.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter (home: lead magnet) -->
+  <section class="section newsletter-section">
+    <div class="container text-center">
+      <h2 class="newsletter-section-title reveal">Checklist gratis: monta tu home office ideal</h2>
+      <p class="newsletter-section-desc">
+        Descarga nuestra guia con el equipamiento imprescindible para montar un home office ergonomico y productivo.
+        Ademas, recibiras nuestras mejores comparativas y alertas de bajadas de precio.
+      </p>
+      <form
+        action="/api/subscribe"
+        method="post"
+        class="newsletter-form newsletter-form-hero"
+        id="newsletter-form-hero"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="tu@email.com"
+          required
+          aria-label="Tu email"
+          class="newsletter-input"
+        />
+        <button type="submit" class="newsletter-btn">Quiero la guia</button>
+      </form>
+      <p class="newsletter-section-privacy" id="newsletter-msg-hero">
+        Gratis y sin spam. Puedes darte de baja cuando quieras.
+      </p>
+    </div>
+  </section>
+</Base>

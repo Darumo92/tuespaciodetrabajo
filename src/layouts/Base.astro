@@ -1,0 +1,202 @@
+---
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import globalStyles from '@/styles/global.css?inline';
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonical?: string;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+}
+
+const { title, description, image, canonical, ogType = 'website', publishedTime, modifiedTime } = Astro.props;
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const ogImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-default.jpg`;
+const canonicalUrl = canonical || Astro.url.href;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2563eb" id="meta-theme-color" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="max-image-preview:large" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Preload critical font (latin covers all Spanish chars) -->
+    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Display font for headings (self-hosted) -->
+    <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Preconnect for resources loaded on article pages -->
+    <link rel="dns-prefetch" href="https://m.media-amazon.com" />
+
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
+    <link rel="dns-prefetch" href="https://www.amazon.es" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Tu Espacio de Trabajo" href="/rss.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Tu Espacio de Trabajo" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- SEO: alternate hreflang for Spanish content -->
+    <link rel="alternate" hreflang="es" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+    <style set:html={globalStyles}></style>
+
+    <!-- Dark mode: apply saved preference before paint -->
+    <script is:inline>
+      (function() {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme:dark)').matches)) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          var m = document.getElementById('meta-theme-color');
+          if (m) m.content = '#121220';
+        }
+      })();
+    </script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Tu Espacio de Trabajo",
+        "url": "https://tuespaciodetrabajo.com",
+        "description": "Guías de compra y comparativas de productos de home office y ergonomía",
+        "inLanguage": "es",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://tuespaciodetrabajo.com/buscar/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <slot name="head" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Saltar al contenido</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Mobile bottom navigation -->
+    <nav class="bottom-nav" aria-label="Navegacion rapida">
+      <a href="/" class={`bottom-nav-item ${currentPath === '/' ? 'bottom-nav-active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+        <span>Inicio</span>
+      </a>
+      <a href="/sillas/" class={`bottom-nav-item ${currentPath.startsWith('/sillas') ? 'bottom-nav-active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"/><path d="M5 15v4"/><path d="M19 15v4"/><path d="M9 11v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"/></svg>
+        <span>Sillas</span>
+      </a>
+      <a href="/escritorios/" class={`bottom-nav-item ${currentPath.startsWith('/escritorios') ? 'bottom-nav-active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="4" rx="1"/><path d="M4 11v8"/><path d="M20 11v8"/><path d="M12 11v4"/></svg>
+        <span>Escritorios</span>
+      </a>
+      <a href="/guias/" class={`bottom-nav-item ${currentPath.startsWith('/guias') ? 'bottom-nav-active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></svg>
+        <span>Guias</span>
+      </a>
+      <a href="/buscar/" class={`bottom-nav-item ${currentPath.startsWith('/buscar') ? 'bottom-nav-active' : ''}`}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+        <span>Buscar</span>
+      </a>
+    </nav>
+
+    <!-- Scroll reveal observer -->
+    <script is:inline>
+      (function() {
+        var els = document.querySelectorAll('.reveal, .reveal-group');
+        if (!els.length || !('IntersectionObserver' in window)) {
+          els.forEach(function(el) { el.classList.add('revealed'); });
+          return;
+        }
+        var obs = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('revealed');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        els.forEach(function(el) { obs.observe(el); });
+      })();
+    </script>
+
+    <!-- GA4: load after page is interactive -->
+    <script is:inline>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          var s = document.createElement('script');
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+          s.async = true;
+          document.head.appendChild(s);
+          s.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-XXXXXXXXXX');
+          };
+        }, 2000);
+      });
+
+      // Track affiliate clicks (works even before GA loads, queues events)
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[rel*="sponsored"]');
+        if (!link) return;
+        var href = link.href || '';
+        var tienda = 'otro';
+        if (href.includes('amazon.')) tienda = 'amazon';
+        if (typeof gtag === 'function') {
+          gtag('event', 'affiliate_click', {
+            event_category: 'afiliados',
+            event_label: tienda,
+            link_url: href,
+            page_path: window.location.pathname
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+project:
+  name: "Tu Espacio de Trabajo"
+  tagline: "Guías y comparativas de home office para teletrabajadores"
+  website: "https://tuespaciodetrabajo.com"
+  language: "es"
+  target_audience: "Teletrabajadores en España que buscan mejorar su espacio de trabajo"
+  categories:
+    - sillas
+    - escritorios
+    - accesorios
+    - ambiente
+    - audio-video
+    - guias
+
+author:
+  name: "David Rubio"
+  role: "Fundador de Tu Espacio de Trabajo"
+  bio: "Ingeniero de software que lleva teletrabajando desde 2019. Después de destrozarme la espalda con una silla de comedor durante el confinamiento, me obsesioné con la ergonomía y montar el home office perfecto. Vivo en Barcelona con mi mujer y mi hijo de año y medio."
+  location: "Barcelona"
+  experience: "7 años teletrabajando"
+  setup:
+    silla: "Autonomous ErgoChair Pro"
+    escritorio: "FlexiSpot E7 con tablero de bambú 140x70"
+    monitor: "Dell U2723QE 27\" 4K USB-C"
+    teclado: "Logitech Ergo K860"
+    raton: "Logitech MX Vertical"
+    auriculares: "Sony WH-1000XM5"
+    webcam: "Logitech Brio 4K"
+    iluminacion: "BenQ ScreenBar Halo"
+  quirks:
+    - "Probé 5 sillas diferentes antes de encontrar la que me quitó el dolor lumbar"
+    - "Teletrabajar con un niño de año y medio en casa te obliga a optimizar cada minuto — el despacho tiene que funcionar bien sí o sí"
+    - "Trabajo siempre con la BenQ ScreenBar encendida, incluso de día. La diferencia en fatiga visual es brutal"
+    - "Tengo un reposapiés debajo del escritorio que compré por capricho y ahora no puedo vivir sin él"
+
+trust_signals:
+  reviews: []
+  testimonials: []
+  metrics: []
+
+content:
+  min_words_comparativa: 2000
+  min_words_informativo: 1500
+  max_title_length: 60
+  max_description_length: 155
+
+monetization:
+  amazon_tag: "tuespaciodet-21"
+  ads: "pendiente"

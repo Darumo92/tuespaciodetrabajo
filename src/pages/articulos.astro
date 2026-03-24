@@ -1,0 +1,181 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = await getCollection('articulos');
+const articulosOrdenados = articulos.sort(
+  (a, b) => b.data.fecha.getTime() - a.data.fecha.getTime()
+);
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Todos los articulos' },
+  ],
+};
+---
+
+<Base
+  title="Todos los articulos | Tu Espacio de Trabajo"
+  description="Todos los articulos, guias y comparativas de productos de home office en Tu Espacio de Trabajo. Filtra por tipo o categoria."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true">📚</div>
+      <h1>Todos los articulos</h1>
+      <p>{articulosOrdenados.length} guias y comparativas de home office</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>Todos los articulos</span>
+    </nav>
+
+    {/* Combined filters */}
+    <div class="all-articles-filters">
+      <div class="filter-group">
+        <span class="filter-label">Tipo:</span>
+        <div class="tipo-filter" role="tablist" aria-label="Filtrar por tipo">
+          <button class="tipo-filter-btn active" data-tipo="todos">Todos</button>
+          <button class="tipo-filter-btn" data-tipo="comparativa">Comparativas</button>
+          <button class="tipo-filter-btn" data-tipo="informativo">Guias</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Categoria:</span>
+        <div class="cat-filter" role="tablist" aria-label="Filtrar por categoria">
+          <button class="cat-filter-btn active" data-cat="todos">Todas</button>
+          <button class="cat-filter-btn" data-cat="sillas">🪑 Sillas</button>
+          <button class="cat-filter-btn" data-cat="escritorios">🖥️ Escritorios</button>
+          <button class="cat-filter-btn" data-cat="accesorios">⌨️ Accesorios</button>
+          <button class="cat-filter-btn" data-cat="ambiente">💡 Ambiente</button>
+          <button class="cat-filter-btn" data-cat="audio-video">🎧 Audio y Video</button>
+        </div>
+      </div>
+      <p class="filter-count" id="filter-count"></p>
+    </div>
+
+    <div class="articles-grid">
+      {articulosOrdenados.map(a => (
+        <ArticleCard articulo={a} headingLevel={2} />
+      ))}
+    </div>
+  </div>
+</Base>
+
+<script>
+  function initArticleFilters() {
+    const catBtns = document.querySelectorAll('.cat-filter-btn');
+    const tipoBtns = document.querySelectorAll('.tipo-filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('.article-card');
+    const countEl = document.getElementById('filter-count');
+
+    let activeCat = 'todos';
+    let activeTipo = 'todos';
+
+    function applyFilters() {
+      let visible = 0;
+      cards.forEach(card => {
+        const tipo = card.dataset.tipo || 'comparativa';
+        const catBadge = card.querySelector('.article-card-category');
+        const cardCat = catBadge ? catBadge.className.replace(/.*badge-(\S+).*/, '$1') : '';
+
+        const catMatch = activeCat === 'todos' || cardCat === activeCat;
+        const tipoMatch = activeTipo === 'todos' || tipo === activeTipo;
+
+        if (catMatch && tipoMatch) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (countEl) {
+        countEl.textContent = `Mostrando ${visible} de ${cards.length} articulos`;
+      }
+    }
+
+    catBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeCat = (btn as HTMLElement).dataset.cat || 'todos';
+        catBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    tipoBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        activeTipo = (btn as HTMLElement).dataset.tipo || 'todos';
+        tipoBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    applyFilters();
+  }
+
+  document.addEventListener('DOMContentLoaded', initArticleFilters);
+</script>
+
+<style>
+  .all-articles-filters {
+    margin-bottom: 2rem;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    min-width: 70px;
+  }
+  .cat-filter, .tipo-filter {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .cat-filter-btn, .tipo-filter-btn {
+    padding: 0.4rem 0.85rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 99px;
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .cat-filter-btn:hover, .tipo-filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .cat-filter-btn.active, .tipo-filter-btn.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+  .filter-count {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+  }
+</style>

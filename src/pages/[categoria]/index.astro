@@ -1,0 +1,187 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import SmoothScroll from '@/components/SmoothScroll.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return [
+    { params: { categoria: 'sillas' } },
+    { params: { categoria: 'escritorios' } },
+    { params: { categoria: 'accesorios' } },
+    { params: { categoria: 'ambiente' } },
+    { params: { categoria: 'audio-video' } },
+  ];
+}
+
+const { categoria } = Astro.params;
+
+const categoriasInfo: Record<string, {
+  nombre: string;
+  descripcion: string;
+  icono: string;
+  intro: string;
+}> = {
+  sillas: {
+    nombre: 'Sillas',
+    descripcion: 'Sillas ergonomicas, gaming, de oficina y economicas',
+    icono: '🪑',
+    intro: 'Una buena silla es la inversion mas importante para tu home office. Pasas 8 o mas horas al dia sentado, y una silla inadecuada puede provocar dolor de espalda, cuello y hombros a largo plazo. En esta seccion analizamos sillas ergonomicas, gaming, de oficina y opciones economicas, comparando prestaciones, comodidad y precio en Amazon.',
+  },
+  escritorios: {
+    nombre: 'Escritorios',
+    descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequenos',
+    icono: '🖥️',
+    intro: 'El escritorio define tu espacio de trabajo. Ya busques un standing desk para alternar entre sentado y de pie, un escritorio amplio para dos monitores o una opcion compacta para un piso pequeno, aqui encontraras comparativas detalladas con precios actualizados en Amazon.',
+  },
+  accesorios: {
+    nombre: 'Accesorios',
+    descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y mas',
+    icono: '⌨️',
+    intro: 'Los accesorios marcan la diferencia entre un setup funcional y uno realmente comodo y productivo. Un buen teclado ergonomico, un raton vertical, un soporte de monitor a la altura correcta o un reposamuñecas pueden prevenir lesiones y mejorar tu jornada laboral. Analizamos los mejores accesorios para home office disponibles en Amazon.',
+  },
+  ambiente: {
+    nombre: 'Ambiente',
+    descripcion: 'Iluminacion, organizacion de cables, control de ruido y decoracion',
+    icono: '💡',
+    intro: 'El ambiente de tu espacio de trabajo influye directamente en tu concentracion, productividad y bienestar. Una buena iluminacion reduce la fatiga visual, los cables organizados dan sensacion de orden, y un espacio bien decorado motiva. Comparamos productos de iluminacion, gestion de cables, insonorizacion y decoracion funcional.',
+  },
+  'audio-video': {
+    nombre: 'Audio y Video',
+    descripcion: 'Auriculares, microfonos, webcams y monitores para videollamadas',
+    icono: '🎧',
+    intro: 'Las videollamadas son parte del dia a dia del teletrabajo. Unos buenos auriculares con cancelacion de ruido, un microfono claro y una webcam de calidad marcan la diferencia en tus reuniones. Analizamos el mejor equipamiento de audio y video para teletrabajadores en Amazon.',
+  },
+};
+
+const info = categoriasInfo[categoria as string];
+
+// Excluir informativos de las paginas de categoria (van en /guias/)
+const articulos = await getCollection('articulos', ({ data }) =>
+  data.categoria === categoria && data.tipo !== 'informativo'
+);
+const articulosOrdenados = articulos.sort(
+  (a, b) => b.data.fecha.getTime() - a.data.fecha.getTime()
+);
+
+const destacados = articulosOrdenados.filter(a => a.data.destacado).slice(0, 3);
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${info.nombre} para home office`,
+  numberOfItems: articulosOrdenados.length,
+  itemListElement: articulosOrdenados.map((a, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `${siteUrl}/${a.data.categoria}/${a.slug}`,
+    name: a.data.titulo,
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: info.nombre, item: `${siteUrl}/${categoria}/` },
+  ],
+};
+---
+
+<Base
+  title={`${info.nombre} para home office ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
+  description={info.descripcion}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true">{info.icono}</div>
+      <h1>{info.nombre}</h1>
+      <p>{info.descripcion}</p>
+    </div>
+  </div>
+
+  <div class="container section">
+
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>{info.nombre}</span>
+    </nav>
+
+    <!-- Intro SEO -->
+    <div class="category-intro">
+      <p>{info.intro}</p>
+    </div>
+
+    {articulosOrdenados.length > 0 ? (
+      <>
+        {/* Destacados */}
+        {destacados.length > 0 && (
+          <div style="margin-bottom: 3rem;">
+            <h2 class="subcat-heading">
+              <span class="subcat-heading-icon" aria-hidden="true">⭐</span>
+              Guias destacadas
+            </h2>
+            <div class="articles-grid">
+              {destacados.map(articulo => (
+                <ArticleCard articulo={articulo} />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Todos los articulos */}
+        <div class="articles-grid">
+          {articulosOrdenados.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </>
+    ) : (
+      <div class="text-center" style="padding: 4rem 0;">
+        <p style="font-size: 3rem; margin-bottom: 1rem;">{info.icono}</p>
+        <h2 style="margin-bottom: 0.5rem;">Proximamente</h2>
+        <p class="text-muted">Estamos preparando los primeros articulos de esta categoria.</p>
+        <a href="/" class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">
+          ← Volver al inicio
+        </a>
+      </div>
+    )}
+  </div>
+</Base>
+
+<SmoothScroll />
+
+<style>
+  .category-intro {
+    background: var(--color-bg-muted);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--color-primary);
+  }
+  .category-intro p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .subcat-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-border);
+    flex-wrap: wrap;
+  }
+  .subcat-heading-icon {
+    font-size: 1.2rem;
+  }
+</style>

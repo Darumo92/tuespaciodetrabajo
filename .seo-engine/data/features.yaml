@@ -1,0 +1,10 @@
+# Feature registry for tuespaciodetrabajo.com
+# Each feature represents a product category or capability we cover
+
+features: []
+# Example:
+# - id: sillas-ergonomicas
+#   name: "Sillas ergonómicas"
+#   category: sillas
+#   description: "Análisis de sillas ergonómicas para teletrabajo"
+#   blog_refs: []

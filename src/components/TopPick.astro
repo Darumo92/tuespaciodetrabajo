@@ -1,0 +1,175 @@
+---
+import StoreIcon from './StoreIcon.astro';
+
+const AMAZON_TAG = 'tuespaciodet-21';
+
+interface Props {
+  nombre: string;
+  descripcion: string;
+  precio: string;
+  enlaceAmazon?: string;
+  imagen?: string;
+  etiqueta?: string;
+}
+
+const {
+  nombre,
+  descripcion,
+  precio,
+  enlaceAmazon,
+  imagen,
+  etiqueta = 'Nuestra eleccion',
+} = Astro.props;
+
+const amazonFinal = enlaceAmazon && !enlaceAmazon.includes('tag=')
+  ? `${enlaceAmazon}${enlaceAmazon.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`
+  : enlaceAmazon;
+---
+
+<div class="top-pick">
+  <div class="top-pick-badge">🏆 {etiqueta}</div>
+  <div class="top-pick-body">
+    {imagen && (
+      <div class="top-pick-img-wrap">
+        <img src={imagen} alt={nombre} width="160" height="160" class="top-pick-img" loading="lazy" decoding="async" sizes="(max-width: 540px) 160px, 140px" />
+      </div>
+    )}
+    <div class="top-pick-info">
+      <p class="top-pick-nombre">{nombre}</p>
+      <p class="top-pick-desc">{descripcion}</p>
+      <p class="top-pick-precio">{precio}</p>
+      {amazonFinal && (
+        <div class="top-pick-stores">
+          <a
+            href={amazonFinal}
+            class="affiliate-button amazon"
+            target="_blank"
+            rel="nofollow noopener noreferrer sponsored"
+          >
+            <StoreIcon tienda="amazon" size={15} />
+            Ver en Amazon — {precio}
+          </a>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+
+<style>
+.top-pick {
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem 1.5rem;
+  margin: 1.5rem 0;
+  background: color-mix(in srgb, var(--color-primary) 4%, var(--color-bg));
+  position: relative;
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--color-primary) 10%, transparent);
+}
+
+.top-pick-badge {
+  position: absolute;
+  top: -0.8rem;
+  left: 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
+
+.top-pick-body {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 0.25rem;
+}
+
+.top-pick-img-wrap {
+  flex-shrink: 0;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-md);
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-pick-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.top-pick-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.top-pick-nombre {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 0 0 0.4rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.top-pick-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+}
+
+.top-pick-precio {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+/* --- Single store button --- */
+.top-pick-stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.top-pick-stores .affiliate-button {
+  font-size: 0.88rem;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 540px) {
+  .top-pick-body {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-pick-img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .top-pick-desc {
+    text-align: left;
+  }
+
+  .top-pick-stores {
+    flex-direction: column;
+  }
+
+  .top-pick-stores .affiliate-button {
+    justify-content: center;
+    width: 100%;
+    font-size: 0.88rem;
+    padding: 0.7rem 1.1rem;
+  }
+}
+</style>

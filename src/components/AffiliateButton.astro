@@ -1,0 +1,33 @@
+---
+import StoreIcon from './StoreIcon.astro';
+
+interface Props {
+  href: string;
+  tienda?: 'amazon' | 'default';
+  texto?: string;
+}
+
+const { href, tienda = 'default', texto } = Astro.props;
+
+const tiendaInfo: Record<string, { label: string }> = {
+  amazon: { label: 'Ver en Amazon' },
+  default: { label: 'Ver oferta' },
+};
+
+const info = tiendaInfo[tienda];
+const label = texto || info.label;
+
+const finalHref = tienda === 'amazon' && !href.includes('tag=')
+  ? `${href}${href.includes('?') ? '&' : '?'}tag=tuespaciodet-21`
+  : href;
+---
+
+<a
+  href={finalHref}
+  class={`affiliate-button ${tienda !== 'default' ? tienda : ''}`}
+  target="_blank"
+  rel="nofollow noopener noreferrer sponsored"
+>
+  <StoreIcon tienda={tienda} size={15} />
+  {label}
+</a>

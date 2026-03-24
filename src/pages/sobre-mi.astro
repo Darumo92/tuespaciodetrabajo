@@ -1,0 +1,148 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Sobre mí' },
+  ],
+};
+
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  name: 'Sobre mí — Tu Espacio de Trabajo',
+  description: 'Soy David Rubio, creador de Tu Espacio de Trabajo. Ingeniero de software y teletrabajador desde 2019, analizo productos de home office para ayudarte a montar tu espacio ideal.',
+  url: `${siteUrl}/sobre-mi/`,
+  mainEntity: {
+    '@type': 'Person',
+    name: 'David Rubio',
+    url: `${siteUrl}/sobre-mi/`,
+    jobTitle: 'Fundador de Tu Espacio de Trabajo',
+    description: 'Ingeniero de software, teletrabajador y entusiasta de la ergonomía. Creador de guías de compra y comparativas de productos de home office.',
+    knowsAbout: ['ergonomía', 'home office', 'sillas ergonómicas', 'standing desks', 'productividad', 'teletrabajo'],
+  },
+};
+---
+
+<Base title="Sobre mí — Tu Espacio de Trabajo" description="Soy David Rubio, creador de Tu Espacio de Trabajo. Ingeniero de software y teletrabajador desde 2019, analizo productos de home office para ayudarte a montar tu espacio ideal.">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} slot="head" />
+
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Sobre mí</span>
+    </nav>
+
+    <h1>Sobre mí</h1>
+
+    <p>
+      Me llamo <strong>David Rubio</strong>, vivo en Barcelona y llevo teletrabajando desde <strong>2019</strong>
+      como ingeniero de software. Cuando llegó el confinamiento y el teletrabajo pasó de ser una opción a ser
+      mi día a día, cometí el error clásico: trabajar 10 horas en una silla de comedor con el portátil encima
+      de la mesa del salón.
+    </p>
+    <p>
+      A los tres meses tenía dolor lumbar crónico y hormigueo en la muñeca derecha. Visita al fisio, 300€
+      en sesiones, y la receta fue clara: "Necesitas una silla y un escritorio decentes, o esto va a ir a más".
+    </p>
+    <p>
+      Ahí empecé a investigar. Y descubrí que encontrar información fiable sobre productos de home office
+      en español era una pesadilla: artículos de medios generalistas que recomiendan "las 10 mejores sillas"
+      sin haber probado ninguna, listas copiadas de Amazon, y muy poco contenido de gente que realmente
+      teletrabaje a diario.
+    </p>
+    <p>
+      Creé <strong>Tu Espacio de Trabajo</strong> para ser las guías que me habría gustado encontrar a mí.
+    </p>
+
+    <h2>Mi setup actual</h2>
+    <p>
+      Después de probar 5 sillas, 3 escritorios y más accesorios de los que quiero admitir, este es mi
+      setup de trabajo diario:
+    </p>
+    <ul>
+      <li><strong>Silla:</strong> Autonomous ErgoChair Pro — la tercera que probé y la primera que me quitó el dolor lumbar. Llevo casi 2 años con ella y sigue como nueva.</li>
+      <li><strong>Escritorio:</strong> FlexiSpot E7 con tablero de bambú 140×70 cm. Lo alterno entre sentado y de pie unas 3-4 veces al día. El motor es silencioso y el bambú aguanta bien el uso diario.</li>
+      <li><strong>Monitor:</strong> Dell U2723QE 27" 4K USB-C. Un solo cable al portátil que carga, transmite vídeo y conecta los periféricos. Cambió mi vida.</li>
+      <li><strong>Teclado:</strong> Logitech Ergo K860. El diseño dividido me parecía raro los primeros días, pero la muñeca me lo agradeció en una semana.</li>
+      <li><strong>Ratón:</strong> Logitech MX Vertical. Pasé de ratón normal a vertical y el dolor de muñeca desapareció. No exagero.</li>
+      <li><strong>Auriculares:</strong> Sony WH-1000XM5. Cancelación de ruido imprescindible cuando los vecinos deciden hacer obras.</li>
+      <li><strong>Iluminación:</strong> BenQ ScreenBar Halo. La uso incluso de día. La diferencia en fatiga visual después de 8 horas es brutal.</li>
+    </ul>
+    <p>
+      Desde que nació mi hijo, tener un despacho bien montado dejó de ser un capricho y se convirtió en
+      una necesidad. Cuando tu ventana de concentración se reduce a las horas de siesta y después de
+      cenar, el setup tiene que funcionar a la primera. Y los cables sueltos al alcance de un niño
+      pequeño no son una opción.
+    </p>
+
+    <h2>Cómo trabajo</h2>
+    <p>
+      Investigo, comparo y analizo productos de home office. Para cada artículo:
+    </p>
+    <ul>
+      <li>Estudio las fichas técnicas de cada producto</li>
+      <li>Leo cientos de valoraciones de compradores reales en Amazon</li>
+      <li>Consulto foros de ergonomía, Reddit (r/homeoffice, r/standingdesk) y comunidades de teletrabajadores</li>
+      <li>Siempre que puedo, pruebo los productos personalmente</li>
+      <li>Para temas de salud postural, contrasto con fuentes médicas y consulto con mi fisioterapeuta</li>
+    </ul>
+    <p>
+      Para los artículos sobre ergonomía y postura, contrasto la información con fuentes médicas reconocidas.
+      Mi fisioterapeuta, en su clínica en Barcelona, es a quien consulto cuando tengo dudas sobre
+      recomendaciones posturales. Pero no soy médico ni fisioterapeuta, y siempre recomiendo consultar con
+      un profesional para problemas de salud.
+    </p>
+    <p>
+      No tengo productos favoritos ni marcas patrocinadoras. Recomiendo lo que creo que es la mejor opción
+      para cada necesidad y presupuesto. Si algo no me convence, lo digo.
+    </p>
+
+    <h2>Cómo se financia Tu Espacio de Trabajo</h2>
+    <p>
+      Tu Espacio de Trabajo participa en el <strong>Programa de Afiliados de Amazon EU</strong>. Esto
+      significa que cuando compras un producto a través de mis enlaces, recibo una pequeña comisión
+      <strong>sin coste adicional para ti</strong>.
+    </p>
+    <p>
+      Este modelo me permite mantener el sitio gratuito y sin publicidad intrusiva. La comisión es la misma
+      independientemente del producto que recomiende, así que no tengo incentivo para recomendar algo peor
+      solo porque pague más.
+    </p>
+
+    <h2>Mi compromiso</h2>
+    <ul>
+      <li><strong>Honestidad:</strong> si un producto no me convence, lo digo. Incluyo contras reales, no solo ventajas</li>
+      <li><strong>Transparencia:</strong> siempre indico que uso enlaces de afiliados</li>
+      <li><strong>Actualización:</strong> reviso precios, disponibilidad y recomendaciones periódicamente. Los productos descatalogados los sustituyo por alternativas reales</li>
+      <li><strong>Ergonomía real:</strong> nunca recomendaré productos que puedan perjudicar tu salud postural</li>
+      <li><strong>Experiencia propia:</strong> todo lo que recomiendo lo he investigado a fondo, y gran parte lo he probado personalmente</li>
+    </ul>
+
+    <h2>Contacto</h2>
+    <p>
+      Si tienes alguna pregunta, sugerencia o simplemente quieres contarme tu experiencia con algún
+      producto, puedes escribirme a
+      <strong><!--email_off-->contacto@tuespaciodetrabajo.com<!--email_on--></strong>.
+    </p>
+    <p>
+      También me interesa saber de ti: ¿cómo es tu setup? ¿Qué producto te cambió la vida trabajando
+      desde casa? ¿Qué guía te gustaría que escribiera? Respondo todos los emails.
+    </p>
+
+    <h2>Empieza a explorar</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
+      <a href="/sillas/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">🪑 Sillas ergonómicas</a>
+      <a href="/escritorios/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">🖥️ Escritorios</a>
+      <a href="/guias/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">📖 Guías</a>
+      <a href="/articulos/" class="affiliate-button secondary" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">Todos los artículos</a>
+    </div>
+  </article>
+</Base>

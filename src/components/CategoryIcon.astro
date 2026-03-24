@@ -1,0 +1,89 @@
+---
+interface Props {
+  categoria: string;
+  size?: number;
+}
+
+const { categoria, size = 24 } = Astro.props;
+---
+
+{/* sillas: office chair */}
+{categoria === 'sillas' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <path d="M5 11a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v2a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1v-2z"/>
+    <path d="M6 14v3"/>
+    <path d="M18 14v3"/>
+    <path d="M9 17h6"/>
+    <path d="M7 17l-1 4"/>
+    <path d="M17 17l1 4"/>
+    <path d="M7 6h10"/>
+    <path d="M8 6v3"/>
+    <path d="M16 6v3"/>
+  </svg>
+)}
+
+{/* escritorios: desk/table */}
+{categoria === 'escritorios' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <rect x="3" y="8" width="18" height="2" rx="1"/>
+    <path d="M5 10v8"/>
+    <path d="M19 10v8"/>
+    <path d="M8 10v4h8v-4"/>
+  </svg>
+)}
+
+{/* accesorios: keyboard */}
+{categoria === 'accesorios' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <rect x="2" y="6" width="20" height="12" rx="2"/>
+    <path d="M6 10h0"/>
+    <path d="M10 10h0"/>
+    <path d="M14 10h0"/>
+    <path d="M18 10h0"/>
+    <path d="M6 14h0"/>
+    <path d="M18 14h0"/>
+    <path d="M10 14h4"/>
+  </svg>
+)}
+
+{/* ambiente: lightbulb/lamp */}
+{categoria === 'ambiente' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <path d="M9 16a5 5 0 1 1 6 0v2a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1v-2z"/>
+    <path d="M10 21h4"/>
+    <path d="M12 3v-1"/>
+    <path d="M18.36 5.64l.71 -.71"/>
+    <path d="M21 12h1"/>
+    <path d="M3 12h-1"/>
+    <path d="M5.64 5.64l-.71 -.71"/>
+  </svg>
+)}
+
+{/* audio-video: headphones */}
+{categoria === 'audio-video' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <path d="M4 13a8 8 0 1 1 16 0"/>
+    <path d="M4 13v2a2 2 0 0 0 2 2h1v-6h-1a2 2 0 0 0 -2 2z"/>
+    <path d="M20 13v2a2 2 0 0 1 -2 2h-1v-6h1a2 2 0 0 1 2 2z"/>
+  </svg>
+)}
+
+{/* guias: book/guide */}
+{categoria === 'guias' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <path d="M19.5 12.572 12 20l-7.5-7.428A5 5 0 1 1 12 6.006a5 5 0 1 1 7.5 6.572"/>
+    <path d="M12 6v4"/>
+    <path d="M10 10h4"/>
+  </svg>
+)}
+
+{/* articulos: books */}
+{categoria === 'articulos' && (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width={size} height={size} aria-hidden="true">
+    <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/>
+    <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/>
+    <path d="M3 6l0 13"/>
+    <path d="M12 6l0 13"/>
+    <path d="M21 6l0 13"/>
+  </svg>
+)}

@@ -1,0 +1,61 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+const articulos = await getCollection('articulos');
+const actualizados = articulos
+  .filter(a => a.data.actualizadoEn)
+  .sort((a, b) => b.data.actualizadoEn!.getTime() - a.data.actualizadoEn!.getTime());
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Actualizaciones recientes' },
+  ],
+};
+---
+
+<Base
+  title="Actualizaciones recientes | Tu Espacio de Trabajo"
+  description="Articulos actualizados recientemente en Tu Espacio de Trabajo. Guias y comparativas revisadas con precios e informacion al dia."
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true">🔄</div>
+      <h1>Actualizaciones recientes</h1>
+      <p>{actualizados.length} articulos revisados y actualizados</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>Actualizaciones recientes</span>
+    </nav>
+
+    {actualizados.length > 0 ? (
+      <div class="articles-grid">
+        {actualizados.map(a => (
+          <ArticleCard articulo={a} />
+        ))}
+      </div>
+    ) : (
+      <div class="text-center" style="padding: 4rem 0;">
+        <p style="font-size: 3rem; margin-bottom: 1rem;">🔄</p>
+        <h2 style="margin-bottom: 0.5rem;">Sin actualizaciones aun</h2>
+        <p class="text-muted">Los articulos actualizados apareceran aqui.</p>
+        <a href="/" class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">
+          ← Volver al inicio
+        </a>
+      </div>
+    )}
+  </div>
+</Base>

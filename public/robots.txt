@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /404
+Disallow: /api/
+Disallow: /tags/
+
+Sitemap: https://tuespaciodetrabajo.com/sitemap-index.xml

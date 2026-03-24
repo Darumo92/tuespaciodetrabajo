@@ -1,0 +1,183 @@
+# Blog Structures by Type — Voice Variation Guide
+# Each structure specifies sections, voice, word count, and E-E-A-T injection points.
+# Adapted for tuespaciodetrabajo.com (home office & ergonomics)
+
+comparativa:
+  name: "Comparativa de productos"
+  voice: "analítico, basado en datos, experto pero accesible"
+  word_count: "2000-3500"
+  description: "Análisis detallado de productos con tabla comparativa y recomendación destacada"
+  humanization:
+    intro_variation: true  # Obligatorio: intro diferente a otros artículos de la misma categoría
+    min_personal_experience: 2  # Mínimo 2 inserciones de experiencia personal
+    asymmetric_lists: true  # Pros/contras con número variable por producto
+    variable_faq_count: "3-7"  # No siempre 5
+  structure:
+    - section: "TopPick"
+      description: "Producto destacado con componente TopPick"
+      eeat_injection: false
+    - section: "Introducción"
+      description: "Contexto del problema, por qué importa elegir bien para tu espacio de trabajo. Keyword principal. VARIAR formato: pregunta, anécdota, dato, recomendación directa."
+      eeat_injection: true  # experiencia personal con tu setup
+    - section: "ComparisonTable"
+      description: "Tabla comparativa con todos los productos"
+      eeat_injection: false
+    - section: "Análisis detallado"
+      description: "Review individual de cada producto: pros, contras, para quién es ideal"
+      eeat_injection: true  # experiencia de uso, datos reales, referencia a tu setup
+    - section: "Guía de compra"
+      description: "Criterios ergonómicos y prácticos para elegir: qué mirar, errores comunes, medidas del espacio"
+      eeat_injection: true  # consejos basados en errores propios
+    - section: "Nuestra recomendación"
+      description: "Resumen final con recomendación por caso de uso (presupuesto, espacio disponible, tipo de trabajo)"
+      eeat_injection: false
+    - section: "FAQs"
+      description: "3-7 preguntas de People Also Ask"
+      eeat_injection: false
+
+informativo:
+  name: "Guía informativa / Tutorial"
+  voice: "profesor paciente, usa 'yo', comparte experiencia con su propio setup"
+  word_count: "1500-2500"
+  description: "Guía paso a paso sobre ergonomía, productividad o configuración del espacio de trabajo"
+  humanization:
+    intro_variation: true
+    min_personal_experience: 3  # Guías deben ser muy personales
+    asymmetric_lists: true
+    variable_faq_count: "3-7"
+  structure:
+    - section: "Introducción"
+      description: "Por qué es importante, contexto del teletrabajo. VARIAR: pregunta, dato, anécdota personal."
+      eeat_injection: true  # experiencia personal
+    - section: "Conceptos clave"
+      description: "Lo que necesitas entender antes de actuar"
+      eeat_injection: false
+    - section: "Paso a paso / Desarrollo"
+      description: "Instrucciones detalladas o explicación en profundidad"
+      eeat_injection: true  # tips de experiencia propia
+    - section: "Errores comunes"
+      description: "Qué evitar y por qué — con ejemplos reales"
+      eeat_injection: true  # "yo cometí este error cuando..."
+    - section: "Recomendaciones de productos (si aplica)"
+      description: "Productos que ayudan, sin ser una comparativa completa. Solo si el artículo lo requiere."
+      eeat_injection: false
+    - section: "FAQs"
+      description: "3-7 preguntas frecuentes"
+      eeat_injection: false
+
+pilar:
+  name: "Página pilar / Hub"
+  voice: "enciclopédico pero personal, autoridad con cercanía"
+  word_count: "3000-5000"
+  description: "Página central de un cluster temático. Cubre el tema ampliamente y enlaza a todos los artículos del cluster."
+  humanization:
+    intro_variation: true
+    min_personal_experience: 3
+    asymmetric_lists: true
+    variable_faq_count: "5-8"
+  structure:
+    - section: "Introducción"
+      description: "Qué es [tema] y por qué importa para teletrabajadores"
+      eeat_injection: true
+    - section: "Definición"
+      description: "Qué es exactamente [tema] — los cluster pages enlazan aquí"
+      eeat_injection: false
+    - section: "Por qué importa"
+      description: "Impacto en salud, productividad, bienestar"
+      eeat_injection: true  # experiencia personal
+    - section: "Tipos / Categorías"
+      description: "Diferentes tipos de [tema] — cada uno enlaza a un cluster page"
+      eeat_injection: false
+    - section: "Cómo elegir / Guía paso a paso"
+      description: "Criterios, medidas, presupuesto"
+      eeat_injection: true
+    - section: "Mejores prácticas"
+      description: "Consejos de experto y ergónomo"
+      eeat_injection: false
+    - section: "Errores comunes"
+      description: "Lo que la mayoría hace mal"
+      eeat_injection: true
+    - section: "Productos recomendados"
+      description: "Resumen con links a comparativas detalladas"
+      eeat_injection: false
+    - section: "FAQs"
+      description: "5-8 preguntas de People Also Ask"
+      eeat_injection: false
+
+experiencia:
+  name: "Experiencia personal / Review en profundidad"
+  voice: "reviewer honesto, admite inconvenientes, muy específico, cuenta su historia"
+  word_count: "2000-3000"
+  description: "Análisis basado en experiencia personal con un producto o setup concreto"
+  humanization:
+    intro_variation: true
+    min_personal_experience: 5  # Este formato ES experiencia personal
+    asymmetric_lists: true
+    variable_faq_count: "3-6"
+  structure:
+    - section: "Resumen rápido"
+      description: "Veredicto en 2-3 frases para quien tiene prisa"
+      eeat_injection: false
+    - section: "Por qué lo compré / elegí"
+      description: "Contexto personal: qué problema tenía, qué buscaba"
+      eeat_injection: true
+    - section: "Primeras impresiones"
+      description: "Unboxing, montaje, calidad percibida"
+      eeat_injection: true
+    - section: "Uso diario"
+      description: "Cómo es usarlo 8 horas al día, durante semanas/meses"
+      eeat_injection: true
+    - section: "Puntos fuertes"
+      description: "Lo mejor, con datos concretos y comparación con lo anterior"
+      eeat_injection: true
+    - section: "Puntos débiles"
+      description: "Lo peor, sin disimular. Qué cambiarías."
+      eeat_injection: true
+    - section: "Alternativas que consideré"
+      description: "Vs 2-3 opciones que descartaste y por qué"
+      eeat_injection: false
+    - section: "Veredicto después de X meses"
+      description: "¿Lo volverías a comprar? ¿Para quién sí y para quién no?"
+      eeat_injection: false
+    - section: "FAQs"
+      description: "3-6 preguntas frecuentes"
+      eeat_injection: false
+
+setup:
+  name: "Setup / Showcase de espacio de trabajo"
+  voice: "entusiasta pero práctico, comparte detalles útiles, inspira sin presumir"
+  word_count: "1500-2500"
+  description: "Presentación de un setup de home office completo con análisis de cada componente"
+  humanization:
+    intro_variation: true
+    min_personal_experience: 4
+    asymmetric_lists: true
+    variable_faq_count: "3-5"
+  structure:
+    - section: "Visión general"
+      description: "Foto del setup completo y contexto: qué tipo de trabajo, espacio disponible, presupuesto total"
+      eeat_injection: true
+    - section: "La silla"
+      description: "Qué silla, por qué, experiencia, precio"
+      eeat_injection: true
+    - section: "El escritorio"
+      description: "Tipo, medidas, organización"
+      eeat_injection: true
+    - section: "Monitores y pantalla"
+      description: "Monitor(es), soporte, configuración"
+      eeat_injection: true
+    - section: "Periféricos"
+      description: "Teclado, ratón, webcam, micro"
+      eeat_injection: false
+    - section: "Iluminación y ambiente"
+      description: "Luz natural, artificial, temperatura, plantas"
+      eeat_injection: true
+    - section: "Lo que cambiaría"
+      description: "Errores cometidos y próximas mejoras planeadas"
+      eeat_injection: true
+    - section: "Presupuesto desglosado"
+      description: "Tabla con coste de cada elemento"
+      eeat_injection: false
+    - section: "FAQs"
+      description: "3-5 preguntas frecuentes"
+      eeat_injection: false

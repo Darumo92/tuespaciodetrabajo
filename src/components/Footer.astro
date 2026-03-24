@@ -1,0 +1,145 @@
+---
+import LogoIcon from './LogoIcon.astro';
+
+const categorias = [
+  { href: '/sillas/', label: 'Sillas' },
+  { href: '/escritorios/', label: 'Escritorios' },
+  { href: '/accesorios/', label: 'Accesorios' },
+  { href: '/ambiente/', label: 'Ambiente' },
+  { href: '/audio-video/', label: 'Audio y Video' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="color: #fff;">
+          <LogoIcon size={28} />
+          Tu Espacio de <span style="color: #60a5fa">Trabajo</span>
+        </a>
+        <p>
+          Guias de compra y comparativas de productos para tu home office.
+          Analisis honestos para ayudarte a crear el espacio de trabajo perfecto.
+        </p>
+      </div>
+
+      <nav class="footer-col" aria-label="Categorias">
+        <p class="footer-heading">Categorias</p>
+        <ul class="footer-links" role="list">
+          {categorias.map(c => (
+            <li><a href={c.href}>{c.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <nav aria-label="Explorar">
+          <p class="footer-heading">Explorar</p>
+          <ul class="footer-links" role="list">
+            <li><a href="/guias/">📖 Guias</a></li>
+            <li><a href="/buscar/">🔍 Buscar articulos</a></li>
+            <li><a href="/articulos/">📚 Todos los articulos</a></li>
+            <li><a href="/tags/">🏷️ Temas</a></li>
+            <li><a href="/actualizaciones/">🔄 Actualizaciones</a></li>
+            <li><a href="/rss.xml">📡 RSS Feed</a></li>
+            <li><a href="/sobre-mi/">Sobre mi</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Informacion legal" style="margin-top: 1rem;">
+          <p class="footer-heading">Legal</p>
+          <ul class="footer-links" role="list">
+            <li><a href="/politica-privacidad/">Privacidad</a></li>
+            <li><a href="/aviso-legal/">Aviso legal</a></li>
+            <li><a href="/cookies/">Cookies</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="footer-newsletter">
+      <p class="footer-heading">📬 Newsletter</p>
+      <p style="font-size: 0.85rem; color: #a0a0b8; margin-bottom: 0.75rem;">
+        Ofertas, nuevos articulos y los mejores consejos para tu espacio de trabajo. Una vez por semana, directo a tu bandeja.
+      </p>
+      <form
+        action="/api/subscribe"
+        method="post"
+        class="newsletter-form"
+        id="newsletter-form-footer"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="tu@email.com"
+          required
+          aria-label="Tu email"
+          class="newsletter-input"
+        />
+        <button type="submit" class="newsletter-btn">Suscribirme</button>
+      </form>
+      <p id="newsletter-msg-footer" style="font-size: 0.8rem; color: #a0a0b8; margin-top: 0.5rem;"></p>
+    </div>
+
+    <div class="footer-affiliate-notice">
+      ⚠️ <strong>Aviso de afiliados:</strong> tuespaciodetrabajo.com participa en el
+      Programa de Afiliados de Amazon EU. Cuando
+      compras a traves de nuestros enlaces podemos recibir una comision sin coste
+      adicional para ti. Esto nos ayuda a mantener el sitio gratuito.
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {year} tuespaciodetrabajo.com &middot; Todos los derechos reservados</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('form[action="/api/subscribe"]').forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formEl = e.target as HTMLFormElement;
+      const email = (formEl.querySelector('input[name="email"]') as HTMLInputElement).value;
+      const btn = formEl.querySelector('button') as HTMLButtonElement;
+      const msgEl = formEl.nextElementSibling as HTMLElement;
+
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('/api/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          formEl.style.display = 'none';
+          if (msgEl) {
+            msgEl.textContent = '¡Suscrito! Revisa tu email para confirmar.';
+            msgEl.style.color = '#22c55e';
+            msgEl.style.fontWeight = '600';
+          }
+        } else {
+          if (msgEl) {
+            msgEl.textContent = data.error || 'Hubo un error. Intentalo de nuevo.';
+            msgEl.style.color = '#ef4444';
+          }
+          btn.textContent = 'Suscribirme';
+          btn.disabled = false;
+        }
+      } catch {
+        if (msgEl) {
+          msgEl.textContent = 'Error de conexion. Intentalo de nuevo.';
+          msgEl.style.color = '#ef4444';
+        }
+        btn.textContent = 'Suscribirme';
+        btn.disabled = false;
+      }
+    });
+  });
+</script>

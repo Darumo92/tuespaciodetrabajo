@@ -1,0 +1,14 @@
+# Template frontmatter for articles
+titulo: ""
+descripcion: ""
+categoria: "" # sillas | escritorios | accesorios | ambiente | audio-video | guias
+tipo: "" # comparativa | informativo
+fecha: "" # YYYY-MM-DD
+imagen: ""
+imagenAlt: ""
+destacado: false
+tags: []
+autor: "David Rubio"
+faqs:
+  - pregunta: ""
+    respuesta: ""

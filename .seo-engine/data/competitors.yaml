@@ -1,0 +1,10 @@
+# Competitor analysis
+competitors: []
+# Example:
+# - name: "Ofisillas"
+#   url: "https://www.ofisillas.es"
+#   type: "tienda"
+#   strengths: ["Gran catálogo de sillas"]
+#   weaknesses: ["Sin contenido educativo"]
+#   confidence: "unverified"
+#   last_checked: null

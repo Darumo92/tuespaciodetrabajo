@@ -1,0 +1,809 @@
+---
+import Base from './Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  articulo: CollectionEntry<'articulos'>;
+}
+
+const { articulo } = Astro.props;
+const { titulo, descripcion, categoria, fecha, actualizadoEn, tags, imagen, imagenAlt, faqs, tipo } = articulo.data;
+const esInformativo = tipo === 'informativo';
+const autor = articulo.data.autor || 'Tu Espacio de Trabajo';
+
+// Reading time: ~200 words per minute, strip MDX syntax first
+const wordCount = articulo.body
+  .replace(/^---[\s\S]*?---/, '')
+  .replace(/^import\s.+$/gm, '')
+  .replace(/<[^>]+>/g, ' ')
+  .replace(/[#*`_~\[\]()]/g, '')
+  .trim()
+  .split(/\s+/).length;
+const minutosLectura = Math.max(1, Math.round(wordCount / 200));
+
+// Related articles: prioritize shared tags, then same category
+const allArticles = await getCollection('articulos', ({ slug }) => slug !== articulo.slug);
+const articleTags = new Set(tags || []);
+
+const scored = allArticles.map(a => {
+  let score = 0;
+  // Same tipo: +2
+  if (a.data.tipo === tipo) score += 2;
+  // Same category: +3
+  if (a.data.categoria === categoria) score += 3;
+  // Shared tags: +1 per tag
+  (a.data.tags || []).forEach(t => { if (articleTags.has(t)) score += 1; });
+  return { article: a, score };
+});
+
+const related = scored
+  .filter(s => s.score > 0)
+  .sort((a, b) => b.score - a.score || b.article.data.fecha.getTime() - a.article.data.fecha.getTime())
+  .slice(0, 3)
+  .map(s => s.article);
+
+const categoriasInfo: Record<string, { nombre: string; icono: string }> = {
+  sillas: { nombre: 'Sillas', icono: '🪑' },
+  escritorios: { nombre: 'Escritorios', icono: '🖥️' },
+  accesorios: { nombre: 'Accesorios', icono: '⌨️' },
+  ambiente: { nombre: 'Ambiente', icono: '💡' },
+  'audio-video': { nombre: 'Audio y Video', icono: '🎧' },
+};
+
+const catInfo = esInformativo
+  ? { nombre: 'Guias', icono: '📖' }
+  : categoriasInfo[categoria];
+
+const fechaFormateada = fecha.toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const actualizadoFormateado = actualizadoEn?.toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+
+const articleUrl = `${siteUrl}/${esInformativo ? 'guias' : categoria}/${articulo.slug}/`;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: titulo,
+  description: descripcion,
+  ...(imagen && { image: `${siteUrl}${imagen}` }),
+  datePublished: fecha.toISOString(),
+  dateModified: (actualizadoEn || fecha).toISOString(),
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': articleUrl,
+  },
+  wordCount: wordCount,
+  inLanguage: 'es',
+  ...(tags && tags.length > 0 && { keywords: tags.join(', ') }),
+  author: {
+    '@type': 'Person',
+    name: autor,
+    url: `${siteUrl}/sobre-mi/`,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Tu Espacio de Trabajo',
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/favicon.svg`,
+    },
+  },
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Tu Espacio de Trabajo',
+    url: siteUrl,
+  },
+};
+
+const faqSchema = faqs && faqs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(f => ({
+    '@type': 'Question',
+    name: f.pregunta,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: f.respuesta,
+    },
+  })),
+} : null;
+
+// HowTo schema: auto-detect articles with "### Paso N:" headings
+const stepRegex = /^### Paso \d+:\s*(.+)$/gm;
+const bodyText = articulo.body || '';
+const steps: { name: string; text: string }[] = [];
+let match;
+while ((match = stepRegex.exec(bodyText)) !== null) {
+  const stepName = match[1].trim();
+  const startIdx = match.index + match[0].length;
+  const nextHeading = bodyText.indexOf('\n#', startIdx);
+  const endIdx = nextHeading > -1 ? nextHeading : bodyText.length;
+  const rawText = bodyText.slice(startIdx, endIdx)
+    .replace(/<[^>]+>/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_`~]/g, '')
+    .replace(/\n+/g, ' ')
+    .trim();
+  const text = rawText.slice(0, 300);
+  if (stepName && text) steps.push({ name: stepName, text });
+}
+
+const howToSchema = steps.length >= 3 ? {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: titulo,
+  description: descripcion,
+  ...(imagen && { image: `${siteUrl}${imagen}` }),
+  totalTime: `PT${minutosLectura * 2}M`,
+  step: steps.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.name,
+    text: s.text,
+  })),
+} : null;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: catInfo.nombre, item: `${siteUrl}/${esInformativo ? 'guias' : categoria}/` },
+    { '@type': 'ListItem', position: 3, name: titulo, item: articleUrl },
+  ],
+};
+---
+
+<Base title={titulo} description={descripcion} image={imagen} ogType="article" publishedTime={fecha.toISOString()} modifiedTime={(actualizadoEn || fecha).toISOString()}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />}
+  {howToSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(howToSchema)} slot="head" />}
+
+  <div class="reading-progress" id="reading-progress" aria-hidden="true">
+    <div class="reading-progress-bar" id="reading-progress-bar"></div>
+  </div>
+
+  <article class="article-page">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <a href={esInformativo ? '/guias/' : `/${categoria}/`}>{catInfo.nombre}</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>{titulo}</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="article-category-badge">
+        <span aria-hidden="true">{catInfo.icono}</span> {catInfo.nombre}
+      </span>
+
+      <h1 class="article-title">{titulo}</h1>
+      <p class="article-description">{descripcion}</p>
+
+      <div class="article-meta">
+        <span class="article-author">Por <a href="/sobre-mi/" rel="author">{autor}</a></span>
+        <time datetime={fecha.toISOString().split('T')[0]}>Publicado: {fechaFormateada}</time>
+        {actualizadoFormateado && (
+          <time datetime={(actualizadoEn as Date).toISOString().split('T')[0]} class="article-updated">
+            Actualizado: {actualizadoFormateado}
+          </time>
+        )}
+        <span>{minutosLectura} min lectura</span>
+      </div>
+    </header>
+
+    {imagen && (
+      <img
+        src={imagen}
+        alt={imagenAlt || titulo}
+        width="800"
+        height="400"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        sizes="(max-width: 768px) 100vw, 800px"
+        style="width: 100%; height: auto; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;"
+      />
+    )}
+
+    <aside class="trust-bar">
+      <div class="trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Analisis independiente
+      </div>
+      <div class="trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2v4"/><path d="m16.24 7.76-2.83 2.83"/><path d="M18 12h4"/><path d="m16.24 16.24-2.83-2.83"/><path d="M12 18v4"/><path d="m7.76 16.24 2.83-2.83"/><path d="M2 12h4"/><path d="m7.76 7.76 2.83 2.83"/></svg>
+        Productos probados
+      </div>
+      <div class="trust-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21.5 2v6s-6-1-12 4c0 0-1-5-1-10 7.5 0 13 0 13 0z"/><path d="M2.5 22c2-2 8-6 9.5-9.5"/><path d="M10 15c-3 0-6 3-6 3"/></svg>
+        Actualizado regularmente
+      </div>
+    </aside>
+
+    {!esInformativo && (
+      <div class="affiliate-disclaimer" role="note">
+        <span aria-hidden="true">i</span>
+        <span>
+          Este articulo contiene enlaces de afiliados. Si compras a traves de
+          ellos podemos recibir una pequena comision <strong>sin coste adicional
+          para ti</strong>.
+        </span>
+      </div>
+    )}
+
+    <nav class="toc" id="toc" aria-label="Tabla de contenidos" style="display:none;">
+      <p class="toc-title">En este articulo</p>
+      <ol class="toc-list" id="toc-list"></ol>
+    </nav>
+
+    <div class="prose" id="article-content">
+      <slot />
+    </div>
+
+    {tags && tags.length > 0 && (
+      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
+        <strong style="font-size: 0.85rem; color: var(--color-text-muted);">Etiquetas:</strong>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+          {tags.map(tag => {
+            const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9áéíóúñü-]/g, '');
+            return (
+              <a href={`/tags/${tagSlug}/`} class="badge" style="background: var(--color-bg-muted); color: var(--color-text-muted); text-decoration: none;">
+                {tag}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    )}
+
+    {faqs && faqs.length > 0 && (
+      <section class="faq-section" aria-labelledby="faq-titulo">
+        <div class="faq-header">
+          <h2 id="faq-titulo">Preguntas frecuentes</h2>
+          <p class="faq-subtitle">{faqs.length} preguntas sobre {titulo.toLowerCase().includes('mejor') ? titulo.replace(/^mejor\w*\s*/i, '') : titulo.toLowerCase()}</p>
+        </div>
+        <div class="faq-list">
+          {faqs.map((f, i) => (
+            <details class="faq-item" {...(i === 0 ? { open: true } : {})}>
+              <summary class="faq-pregunta">
+                <span class="faq-pregunta-text">{f.pregunta}</span>
+                <span class="faq-toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-respuesta">{f.respuesta}</div>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <div class="article-newsletter">
+      <p class="article-newsletter-title">Te avisamos cuando actualicemos esta guia</p>
+      <p class="article-newsletter-desc">Actualizamos precios y productos regularmente. Suscribete y te avisaremos de los cambios en esta guia y otras similares.</p>
+      <form
+        action="/api/subscribe"
+        method="post"
+        class="newsletter-form article-newsletter-form"
+      >
+        <input
+          type="email"
+          name="email"
+          placeholder="tu@email.com"
+          required
+          aria-label="Tu email"
+          class="article-newsletter-input"
+        />
+        <button type="submit" class="newsletter-btn">Suscribirme</button>
+      </form>
+      <p id="newsletter-msg-article" style="font-size: 0.8rem; margin-top: 0.5rem;"></p>
+    </div>
+
+    {related.length > 0 && (
+      <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--color-border);">
+        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;">
+          Articulos relacionados
+        </h2>
+        <div class="articles-grid reveal-group">
+          {related.map(a => (
+            <ArticleCard articulo={a} />
+          ))}
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button" style="display: inline-flex; font-size: 0.9rem; padding: 0.65rem 1.5rem;">
+            {catInfo.icono} Ver mas en {catInfo.nombre} →
+          </a>
+        </div>
+      </section>
+    )}
+
+    <div class="back-to-top-wrap">
+      <a href="#main-content" class="back-to-top-link">↑ Volver arriba</a>
+    </div>
+  </article>
+
+  {!esInformativo && (
+    <div class="sticky-cta-bar" id="sticky-cta" aria-hidden="true">
+      <div class="sticky-cta-inner">
+        <span class="sticky-cta-name" id="sticky-cta-name"></span>
+        <span class="sticky-cta-price" id="sticky-cta-price"></span>
+        <a href="#" class="sticky-cta-btn" id="sticky-cta-link" target="_blank" rel="nofollow noopener noreferrer sponsored">
+          Ver precio →
+        </a>
+      </div>
+    </div>
+  )}
+
+  <script>
+    // Reading progress bar
+    (function() {
+      const bar = document.getElementById('reading-progress-bar');
+      const article = document.querySelector('.article-page');
+      if (!bar || !article) return;
+      window.addEventListener('scroll', () => {
+        const rect = article.getBoundingClientRect();
+        const total = article.scrollHeight - window.innerHeight;
+        const scrolled = -rect.top;
+        const pct = Math.min(100, Math.max(0, (scrolled / total) * 100));
+        bar.style.width = pct + '%';
+      }, { passive: true });
+    })();
+
+    // TOC active section tracking
+    (function() {
+      const tocLinks = document.querySelectorAll('.toc-list a');
+      if (tocLinks.length < 3) return;
+      const headings = Array.from(tocLinks).map(a => {
+        const id = a.getAttribute('href')?.slice(1);
+        return id ? document.getElementById(id) : null;
+      }).filter(Boolean) as HTMLElement[];
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            const id = entry.target.id;
+            const link = document.querySelector(`.toc-list a[href="#${id}"]`);
+            if (link) link.classList.toggle('toc-active', entry.isIntersecting);
+          });
+        },
+        { rootMargin: '-80px 0px -60% 0px', threshold: 0 }
+      );
+      headings.forEach(h => observer.observe(h));
+    })();
+
+    // Sticky CTA bar for mobile
+    (function() {
+      const stickyBar = document.getElementById('sticky-cta');
+      if (!stickyBar) return;
+
+      const nameEl = document.getElementById('sticky-cta-name');
+      const priceEl = document.getElementById('sticky-cta-price');
+      const linkEl = document.getElementById('sticky-cta-link') as HTMLAnchorElement;
+      if (!nameEl || !priceEl || !linkEl) return;
+
+      const topPick = document.querySelector('.top-pick');
+      if (!topPick) return;
+
+      const name = topPick.querySelector('.top-pick-nombre')?.textContent || '';
+      const price = topPick.querySelector('.top-pick-precio')?.textContent || '';
+      const firstLink = topPick.querySelector('.affiliate-button') as HTMLAnchorElement;
+      if (!firstLink) return;
+
+      nameEl.textContent = name.length > 30 ? name.slice(0, 30) + '...' : name;
+      priceEl.textContent = price;
+      linkEl.href = firstLink.href;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (window.innerWidth <= 768) {
+            stickyBar.classList.toggle('sticky-cta-visible', !entry.isIntersecting);
+            stickyBar.setAttribute('aria-hidden', String(entry.isIntersecting));
+          }
+        },
+        { threshold: 0 }
+      );
+      observer.observe(topPick);
+
+      // Hide on scroll to bottom (footer area)
+      window.addEventListener('scroll', () => {
+        const nearBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 200;
+        if (nearBottom) {
+          stickyBar.classList.remove('sticky-cta-visible');
+        }
+      }, { passive: true });
+    })();
+
+    // Wrap tables for horizontal scroll on mobile
+    document.querySelectorAll('.prose table').forEach(table => {
+      if (!table.parentElement?.classList.contains('table-wrapper')) {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'table-wrapper';
+        table.parentNode?.insertBefore(wrapper, table);
+        wrapper.appendChild(table);
+      }
+    });
+
+    const content = document.getElementById('article-content');
+    const tocNav = document.getElementById('toc');
+    const tocList = document.getElementById('toc-list');
+    if (content && tocNav && tocList) {
+      const headings = content.querySelectorAll('h2');
+      if (headings.length >= 3) {
+        headings.forEach((h, i) => {
+          if (!h.id) h.id = `section-${i}`;
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = `#${h.id}`;
+          a.textContent = h.textContent;
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+        tocNav.style.display = '';
+      }
+    }
+  </script>
+
+  <style>
+    /* Reading progress bar */
+    .reading-progress {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      z-index: 99;
+      background: transparent;
+    }
+    .reading-progress-bar {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+      transition: width 0.1s linear;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .toc {
+      background: var(--color-bg-muted);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .toc-title {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text);
+    }
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      counter-reset: toc-counter;
+    }
+    .toc-list li {
+      padding-left: 0;
+    }
+    .toc-list li::before {
+      content: counter(toc-counter) ". ";
+      counter-increment: toc-counter;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      font-size: 0.85rem;
+    }
+    .toc-list a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      transition: all var(--transition);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+    }
+    .toc-list a:hover {
+      color: var(--color-primary);
+      background: color-mix(in srgb, var(--color-primary) 6%, transparent);
+    }
+    .toc-list a.toc-active {
+      color: var(--color-primary);
+      font-weight: 600;
+      background: color-mix(in srgb, var(--color-primary) 8%, transparent);
+    }
+
+    /* Trust bar */
+    .trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.25rem 0;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--color-secondary);
+      background: color-mix(in srgb, var(--color-secondary) 8%, var(--color-bg));
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+      border: 1px solid color-mix(in srgb, var(--color-secondary) 15%, transparent);
+    }
+    .trust-item svg {
+      flex-shrink: 0;
+    }
+    @media (max-width: 480px) {
+      .trust-bar {
+        gap: 0.375rem;
+      }
+      .trust-item {
+        font-size: 0.72rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+
+    .article-author a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .article-author a:hover {
+      text-decoration: underline;
+    }
+
+    .back-to-top-wrap {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .back-to-top-link {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      text-decoration: none;
+      padding: 0.5rem 1.25rem;
+      border: 1.5px solid var(--color-primary);
+      border-radius: 99px;
+      transition: all 0.2s;
+    }
+    .back-to-top-link:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    .article-updated {
+      color: var(--color-secondary);
+      font-weight: 600;
+    }
+
+    .article-newsletter {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: var(--color-bg-muted);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .article-newsletter-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .article-newsletter-desc {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: 1rem;
+    }
+    .article-newsletter-form {
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .article-newsletter-input {
+      flex: 1;
+      padding: 0.6rem 0.875rem;
+      border-radius: 100px;
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-card);
+      color: var(--color-text);
+      font-size: 0.85rem;
+      font-family: var(--font-sans);
+      outline: none;
+      transition: border-color var(--transition);
+    }
+    .article-newsletter-input:focus {
+      border-color: var(--color-primary);
+    }
+    .article-newsletter-input::placeholder {
+      color: var(--color-text-light);
+    }
+    @media (max-width: 480px) {
+      .article-newsletter-form {
+        flex-direction: column;
+      }
+    }
+
+    /* Sticky CTA bar (mobile only) */
+    .sticky-cta-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: var(--color-bg-card);
+      border-top: 1px solid var(--color-border);
+      box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+      padding: 0.625rem 1rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    .sticky-cta-bar.sticky-cta-visible {
+      transform: translateY(0);
+    }
+    .sticky-cta-inner {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .sticky-cta-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-text);
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .sticky-cta-price {
+      font-size: 0.9rem;
+      font-weight: 800;
+      color: var(--color-primary);
+      white-space: nowrap;
+    }
+    .sticky-cta-btn {
+      background: var(--color-primary);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      border-radius: 100px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .sticky-cta-btn:hover {
+      background: var(--color-primary-dark);
+      color: #fff;
+    }
+    @media (max-width: 768px) {
+      .sticky-cta-bar {
+        display: block;
+      }
+    }
+
+    /* FAQ */
+    .faq-section {
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--color-border);
+    }
+    .faq-header {
+      margin-bottom: 1.25rem;
+    }
+    .faq-section h2 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.25rem;
+    }
+    .faq-subtitle {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+    }
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-left: 3px solid var(--color-primary);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item[open] {
+      border-left-color: var(--color-secondary);
+      background: color-mix(in srgb, var(--color-secondary) 2%, var(--color-bg));
+    }
+    .faq-pregunta {
+      background: var(--color-bg-muted);
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .faq-pregunta:hover {
+      background: var(--color-border);
+    }
+    .faq-pregunta::-webkit-details-marker {
+      display: none;
+    }
+    .faq-pregunta-text {
+      flex: 1;
+    }
+    .faq-toggle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      flex-shrink: 0;
+      position: relative;
+      transition: transform 0.3s ease, background 0.2s;
+    }
+    .faq-toggle::before,
+    .faq-toggle::after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 1px;
+    }
+    .faq-toggle::before {
+      width: 10px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .faq-toggle::after {
+      width: 2px;
+      height: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.3s ease;
+    }
+    .faq-item[open] .faq-toggle {
+      background: var(--color-secondary);
+      transform: rotate(45deg);
+    }
+    .faq-respuesta {
+      padding: 0.875rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0;
+      border-top: 1px solid var(--color-border);
+    }
+  </style>
+</Base>

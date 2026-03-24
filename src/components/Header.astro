@@ -1,0 +1,165 @@
+---
+import LogoIcon from './LogoIcon.astro';
+import CategoryIcon from './CategoryIcon.astro';
+
+const currentPath = Astro.url.pathname;
+
+const comparativaLinks = [
+  { href: '/sillas/', label: 'Sillas', cat: 'sillas' },
+  { href: '/escritorios/', label: 'Escritorios', cat: 'escritorios' },
+  { href: '/accesorios/', label: 'Accesorios', cat: 'accesorios' },
+  { href: '/ambiente/', label: 'Ambiente', cat: 'ambiente' },
+  { href: '/audio-video/', label: 'Audio y Video', cat: 'audio-video' },
+];
+
+const infoLinks = [
+  { href: '/guias/', label: 'Guias', cat: 'guias' },
+  { href: '/articulos/', label: 'Todos los articulos', cat: 'articulos' },
+];
+
+const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPath.startsWith(l.href));
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="/" class="logo">
+        <LogoIcon size={28} />
+        Tu Espacio de <span>Trabajo</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span class="hamburger-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <nav class="nav" id="nav" role="navigation" aria-label="Navegacion principal">
+        {/* Dropdown secciones */}
+        <div class="nav-dropdown" id="nav-dropdown">
+          <button
+            class={`nav-link nav-dropdown-trigger ${isSectionActive ? 'active' : ''}`}
+            aria-expanded="false"
+            aria-haspopup="true"
+            id="dropdown-trigger"
+          >
+            Secciones <span class="nav-dropdown-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="nav-dropdown-menu" id="dropdown-menu" role="menu">
+            <p class="nav-dropdown-heading">Comparativas</p>
+            {comparativaLinks.map(link => (
+              <a
+                href={link.href}
+                class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+                role="menuitem"
+              >
+                <CategoryIcon categoria={link.cat} size={18} />
+                {link.label}
+              </a>
+            ))}
+            <div class="nav-dropdown-divider"></div>
+            <p class="nav-dropdown-heading">Informacion</p>
+            {infoLinks.map(link => (
+              <a
+                href={link.href}
+                class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+                role="menuitem"
+              >
+                <CategoryIcon categoria={link.cat} size={18} />
+                {link.label}
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <a
+          href="/buscar/"
+          class={`nav-link nav-search ${currentPath === '/buscar/' ? 'active' : ''}`}
+          aria-label="Buscar articulos"
+          title="Buscar"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </a>
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Cambiar tema claro/oscuro"
+          title="Cambiar tema"
+        >
+          <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+          <svg id="theme-icon-moon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('nav');
+  const dropdownTrigger = document.getElementById('dropdown-trigger');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+
+  function closeDropdown() {
+    dropdownMenu?.classList.remove('open');
+    dropdownTrigger?.setAttribute('aria-expanded', 'false');
+    const arrow = dropdownTrigger?.querySelector('.nav-dropdown-arrow') as HTMLElement;
+    if (arrow) arrow.style.transform = '';
+  }
+
+  function closeNav() {
+    nav?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    closeDropdown();
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = nav?.classList.contains('open');
+    if (isOpen) {
+      closeNav();
+    } else {
+      nav?.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+  });
+
+  // Close mobile menu on link click
+  nav?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => closeNav());
+  });
+
+  // Dropdown toggle (mobile + click fallback)
+  dropdownTrigger?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdownMenu?.classList.contains('open');
+    dropdownMenu?.classList.toggle('open');
+    dropdownTrigger.setAttribute('aria-expanded', String(!isOpen));
+    const arrow = dropdownTrigger.querySelector('.nav-dropdown-arrow');
+    if (arrow) (arrow as HTMLElement).style.transform = isOpen ? '' : 'rotate(180deg)';
+  });
+
+  // Close dropdown on outside click
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element)?.closest('.nav-dropdown')) {
+      closeDropdown();
+    }
+  });
+
+  // Dark mode
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn?.addEventListener('click', () => {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const metaTheme = document.getElementById('meta-theme-color');
+    if (isDark) {
+      document.documentElement.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      if (metaTheme) metaTheme.setAttribute('content', '#2563eb');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      if (metaTheme) metaTheme.setAttribute('content', '#121220');
+    }
+  });
+</script>

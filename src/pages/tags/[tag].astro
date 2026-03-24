@@ -1,0 +1,73 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const articulos = await getCollection('articulos');
+  const tagMap = new Map<string, typeof articulos>();
+
+  articulos.forEach(a => {
+    (a.data.tags || []).forEach(tag => {
+      const slug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9áéíóúñü-]/g, '');
+      if (!tagMap.has(slug)) tagMap.set(slug, []);
+      tagMap.get(slug)!.push(a);
+    });
+  });
+
+  return Array.from(tagMap.entries()).map(([slug, arts]) => ({
+    params: { tag: slug },
+    props: {
+      tagName: arts[0].data.tags?.find(t =>
+        t.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9áéíóúñü-]/g, '') === slug
+      ) || slug,
+      articulos: arts.sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime()),
+    },
+  }));
+}
+
+const { tagName, articulos } = Astro.props;
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Tags', item: `${siteUrl}/tags/` },
+    { '@type': 'ListItem', position: 3, name: tagName },
+  ],
+};
+---
+
+<Base
+  title={`${tagName} — articulos y guias | Tu Espacio de Trabajo`}
+  description={`Todos los articulos sobre ${tagName} en Tu Espacio de Trabajo. ${articulos.length} guias y comparativas de home office.`}
+>
+  <meta name="robots" content="noindex, follow" slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true">🏷️</div>
+      <h1>{tagName}</h1>
+      <p>{articulos.length} {articulos.length === 1 ? 'articulo' : 'articulos'}</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <a href="/tags/">Tags</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>{tagName}</span>
+    </nav>
+
+    <div class="articles-grid">
+      {articulos.map(a => (
+        <ArticleCard articulo={a} />
+      ))}
+    </div>
+  </div>
+</Base>

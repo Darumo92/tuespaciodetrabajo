@@ -1,0 +1,26 @@
+---
+/**
+ * Keeps anchor navigation clean by using replaceState instead of pushState,
+ * so clicking multiple subcategory links doesn't pollute browser history.
+ *
+ * The actual smooth scrolling + header offset is handled entirely by CSS:
+ *   html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+ *   .subcat-section { scroll-margin-top: 5rem; }
+ *
+ * Usage: Place <SmoothScroll /> anywhere on the page.
+ */
+---
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.subcat-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        const href = (link as HTMLAnchorElement).getAttribute('href');
+        if (href?.startsWith('#')) {
+          // Replace history entry so Back doesn't cycle through anchors
+          setTimeout(() => history.replaceState(null, '', href), 50);
+        }
+      });
+    });
+  });
+</script>
