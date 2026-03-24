@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
 
 const articulos = await getCollection('articulos');
@@ -27,7 +28,7 @@ const breadcrumbSchema = {
 
   <div class="category-page-header">
     <div class="container">
-      <div class="category-icon-large" aria-hidden="true">📚</div>
+      <div class="category-icon-large" aria-hidden="true"><CategoryIcon categoria="articulos" size={32} /></div>
       <h1>Todos los artículos</h1>
       <p>{articulosOrdenados.length} guías y comparativas de home office</p>
     </div>
@@ -54,11 +55,11 @@ const breadcrumbSchema = {
         <span class="filter-label">Categoria:</span>
         <div class="cat-filter" role="tablist" aria-label="Filtrar por categoria">
           <button class="cat-filter-btn active" data-cat="todos">Todas</button>
-          <button class="cat-filter-btn" data-cat="sillas">🪑 Sillas</button>
-          <button class="cat-filter-btn" data-cat="escritorios">🖥️ Escritorios</button>
-          <button class="cat-filter-btn" data-cat="accesorios">⌨️ Accesorios</button>
-          <button class="cat-filter-btn" data-cat="ambiente">💡 Ambiente</button>
-          <button class="cat-filter-btn" data-cat="audio-video">🎧 Audio y Video</button>
+          <button class="cat-filter-btn" data-cat="sillas"><CategoryIcon categoria="sillas" size={14} /> Sillas</button>
+          <button class="cat-filter-btn" data-cat="escritorios"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</button>
+          <button class="cat-filter-btn" data-cat="accesorios"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</button>
+          <button class="cat-filter-btn" data-cat="ambiente"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</button>
+          <button class="cat-filter-btn" data-cat="audio-video"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</button>
         </div>
       </div>
       <p class="filter-count" id="filter-count"></p>

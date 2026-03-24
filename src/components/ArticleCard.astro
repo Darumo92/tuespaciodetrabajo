@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import CategoryIcon from './CategoryIcon.astro';
 
 interface Props {
   articulo: CollectionEntry<'articulos'>;
@@ -12,16 +13,16 @@ const { titulo, descripcion, categoria, fecha, actualizadoEn, imagen, tipo } = a
 
 const esInformativo = tipo === 'informativo';
 
-const categoriasInfo: Record<string, { nombre: string; icono: string }> = {
-  sillas: { nombre: 'Sillas', icono: '🪑' },
-  escritorios: { nombre: 'Escritorios', icono: '🖥️' },
-  accesorios: { nombre: 'Accesorios', icono: '⌨️' },
-  ambiente: { nombre: 'Ambiente', icono: '💡' },
-  'audio-video': { nombre: 'Audio y Video', icono: '🎧' },
+const categoriasInfo: Record<string, { nombre: string }> = {
+  sillas: { nombre: 'Sillas' },
+  escritorios: { nombre: 'Escritorios' },
+  accesorios: { nombre: 'Accesorios' },
+  ambiente: { nombre: 'Ambiente' },
+  'audio-video': { nombre: 'Audio y Video' },
 };
 
 const info = esInformativo
-  ? { nombre: 'Guias', icono: '📖' }
+  ? { nombre: 'Guías' }
   : categoriasInfo[categoria];
 const url = esInformativo
   ? `/guias/${articulo.slug}/`
@@ -51,7 +52,7 @@ const esActualizado = !!actualizadoEn;
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />
     ) : (
       <div class="article-card-image-placeholder" aria-hidden="true">
-        {info.icono}
+        <CategoryIcon categoria={esInformativo ? 'guias' : categoria} size={48} />
       </div>
     )}
   </a>

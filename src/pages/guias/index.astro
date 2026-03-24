@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 import SmoothScroll from '@/components/SmoothScroll.astro';
 import { getCollection } from 'astro:content';
 
@@ -40,7 +41,7 @@ const collectionSchema = {
 
   <div class="category-page-header">
     <div class="container">
-      <div class="category-icon-large" aria-hidden="true">📖</div>
+      <div class="category-icon-large" aria-hidden="true"><CategoryIcon categoria="guias" size={32} /></div>
       <h1>Guías y consejos</h1>
       <p>{articulosOrdenados.length} guías informativas para mejorar tu home office</p>
     </div>
@@ -79,7 +80,7 @@ const collectionSchema = {
       </>
     ) : (
       <div class="text-center" style="padding: 4rem 0;">
-        <p style="font-size: 3rem; margin-bottom: 1rem;">📖</p>
+        <p style="font-size: 3rem; margin-bottom: 1rem;"><CategoryIcon categoria="guias" size={48} /></p>
         <h2 style="margin-bottom: 0.5rem;">Próximamente</h2>
         <p class="text-muted">Estamos preparando las primeras guías.</p>
         <a href="/" class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">

@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const breadcrumbSchema = {
@@ -55,11 +56,11 @@ const breadcrumbSchema = {
         <h2 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Sin resultados</h2>
         <p class="text-muted">Prueba con otras palabras clave o explora por categoria:</p>
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
-          <a href="/sillas/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🪑 Sillas</a>
-          <a href="/escritorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🖥️ Escritorios</a>
-          <a href="/accesorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">⌨️ Accesorios</a>
-          <a href="/ambiente/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">💡 Ambiente</a>
-          <a href="/audio-video/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;">🎧 Audio y Video</a>
+          <a href="/sillas/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="sillas" size={14} /> Sillas</a>
+          <a href="/escritorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</a>
+          <a href="/accesorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</a>
+          <a href="/ambiente/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</a>
+          <a href="/audio-video/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</a>
         </div>
       </div>
       <div id="results-grid" class="articles-grid" style="display:none;" role="region" aria-live="polite" aria-label="Resultados de busqueda"></div>

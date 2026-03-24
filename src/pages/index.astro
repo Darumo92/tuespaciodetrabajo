@@ -1,6 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
 
 const articulos = await getCollection('articulos');
@@ -111,42 +112,36 @@ const categorias = [
   {
     slug: 'sillas',
     nombre: 'Sillas',
-    icono: '🪑',
     descripcion: 'Sillas ergonómicas, gaming, de oficina y económicas',
     count: articulos.filter(a => a.data.categoria === 'sillas').length,
   },
   {
     slug: 'escritorios',
     nombre: 'Escritorios',
-    icono: '🖥️',
     descripcion: 'Standing desks, escritorios regulares, esquineros y para espacios pequeños',
     count: articulos.filter(a => a.data.categoria === 'escritorios').length,
   },
   {
     slug: 'accesorios',
     nombre: 'Accesorios',
-    icono: '⌨️',
     descripcion: 'Teclados, ratones, soportes de monitor, reposamuñecas y más',
     count: articulos.filter(a => a.data.categoria === 'accesorios').length,
   },
   {
     slug: 'ambiente',
     nombre: 'Ambiente',
-    icono: '💡',
     descripcion: 'Iluminación, organización de cables, control de ruido y decoración',
     count: articulos.filter(a => a.data.categoria === 'ambiente').length,
   },
   {
     slug: 'audio-video',
     nombre: 'Audio y Video',
-    icono: '🎧',
     descripcion: 'Auriculares, micrófonos, webcams y monitores para videollamadas',
     count: articulos.filter(a => a.data.categoria === 'audio-video').length,
   },
   {
     slug: 'guias',
     nombre: 'Guias',
-    icono: '📖',
     descripcion: 'Consejos de ergonomía, productividad y organización del home office',
     count: articulos.filter(a => a.data.tipo === 'informativo').length,
   },
@@ -188,7 +183,7 @@ const categorias = [
       <div class="hero-cta">
         {categorias.map(cat => (
           <a href={`/${cat.slug}/`} class="hero-cat-pill">
-            <span aria-hidden="true">{cat.icono}</span> {cat.nombre}
+            <CategoryIcon categoria={cat.slug} size={16} /> {cat.nombre}
           </a>
         ))}
       </div>
@@ -258,7 +253,7 @@ const categorias = [
       <div class="categories-grid reveal-group">
         {categorias.map(cat => (
           <a href={`/${cat.slug}/`} class="category-card">
-            <span class="category-icon" aria-hidden="true">{cat.icono}</span>
+            <span class="category-icon" aria-hidden="true"><CategoryIcon categoria={cat.slug} size={24} /></span>
             <div class="category-info">
               <h3>{cat.nombre}</h3>
               <p>{cat.descripcion}</p>

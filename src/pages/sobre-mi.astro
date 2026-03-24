@@ -1,5 +1,6 @@
 ---
 import Base from '@/layouts/Base.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
@@ -139,9 +140,9 @@ const aboutPageSchema = {
 
     <h2>Empieza a explorar</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-      <a href="/sillas/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">🪑 Sillas ergonómicas</a>
-      <a href="/escritorios/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">🖥️ Escritorios</a>
-      <a href="/guias/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">📖 Guías</a>
+      <a href="/sillas/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="sillas" size={16} /> Sillas ergonómicas</a>
+      <a href="/escritorios/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="escritorios" size={16} /> Escritorios</a>
+      <a href="/guias/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="guias" size={16} /> Guías</a>
       <a href="/articulos/" class="affiliate-button secondary" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">Todos los artículos</a>
     </div>
   </article>

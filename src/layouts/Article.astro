@@ -1,6 +1,7 @@
 ---
 import Base from './Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
 
@@ -44,16 +45,16 @@ const related = scored
   .slice(0, 3)
   .map(s => s.article);
 
-const categoriasInfo: Record<string, { nombre: string; icono: string }> = {
-  sillas: { nombre: 'Sillas', icono: '🪑' },
-  escritorios: { nombre: 'Escritorios', icono: '🖥️' },
-  accesorios: { nombre: 'Accesorios', icono: '⌨️' },
-  ambiente: { nombre: 'Ambiente', icono: '💡' },
-  'audio-video': { nombre: 'Audio y Video', icono: '🎧' },
+const categoriasInfo: Record<string, { nombre: string }> = {
+  sillas: { nombre: 'Sillas' },
+  escritorios: { nombre: 'Escritorios' },
+  accesorios: { nombre: 'Accesorios' },
+  ambiente: { nombre: 'Ambiente' },
+  'audio-video': { nombre: 'Audio y Video' },
 };
 
 const catInfo = esInformativo
-  ? { nombre: 'Guias', icono: '📖' }
+  ? { nombre: 'Guías' }
   : categoriasInfo[categoria];
 
 const fechaFormateada = fecha.toLocaleDateString('es-ES', {
@@ -188,7 +189,7 @@ const breadcrumbSchema = {
 
     <header class="article-header">
       <span class="article-category-badge">
-        <span aria-hidden="true">{catInfo.icono}</span> {catInfo.nombre}
+        <CategoryIcon categoria={esInformativo ? 'guias' : categoria} size={16} /> {catInfo.nombre}
       </span>
 
       <h1 class="article-title">{titulo}</h1>
@@ -324,7 +325,7 @@ const breadcrumbSchema = {
         </div>
         <div style="text-align: center; margin-top: 1.5rem;">
           <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button" style="display: inline-flex; font-size: 0.9rem; padding: 0.65rem 1.5rem;">
-            {catInfo.icono} Ver más en {catInfo.nombre} →
+            Ver más en {catInfo.nombre} →
           </a>
         </div>
       </section>

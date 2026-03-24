@@ -1,5 +1,6 @@
 ---
 import LogoIcon from './LogoIcon.astro';
+import CategoryIcon from './CategoryIcon.astro';
 
 const categorias = [
   { href: '/sillas/', label: 'Sillas' },
@@ -39,9 +40,9 @@ const year = new Date().getFullYear();
         <nav aria-label="Explorar">
           <p class="footer-heading">Explorar</p>
           <ul class="footer-links" role="list">
-            <li><a href="/guias/">📖 Guías</a></li>
+            <li><a href="/guias/"><CategoryIcon categoria="guias" size={14} /> Guías</a></li>
             <li><a href="/buscar/">🔍 Buscar artículos</a></li>
-            <li><a href="/articulos/">📚 Todos los artículos</a></li>
+            <li><a href="/articulos/"><CategoryIcon categoria="articulos" size={14} /> Todos los artículos</a></li>
             <li><a href="/tags/">🏷️ Temas</a></li>
             <li><a href="/actualizaciones/">🔄 Actualizaciones</a></li>
             <li><a href="/rss.xml">📡 RSS Feed</a></li>
