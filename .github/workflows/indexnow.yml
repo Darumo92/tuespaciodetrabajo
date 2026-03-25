@@ -1,0 +1,41 @@
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/content/**'
+      - 'src/pages/**'
+      - 'src/layouts/**'
+      - 'src/components/**'
+
+jobs:
+  notify:
+    name: Submit changed URLs to IndexNow
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Restore IndexNow state
+        uses: actions/cache/restore@v4
+        with:
+          path: .indexnow-state.json
+          key: indexnow-state
+
+      - name: Submit to IndexNow
+        run: node scripts/indexnow.mjs
+
+      - name: Save IndexNow state
+        uses: actions/cache/save@v4
+        with:
+          path: .indexnow-state.json
+          key: indexnow-state-${{ github.sha }}

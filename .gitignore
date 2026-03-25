@@ -20,5 +20,8 @@ Thumbs.db
 *.swp
 *.swo
 
+# IndexNow
+.indexnow-state.json
+
 # Claude Code
 .claude/
