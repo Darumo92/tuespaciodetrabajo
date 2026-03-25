@@ -17,9 +17,13 @@ const tiendaInfo: Record<string, { label: string }> = {
 const info = tiendaInfo[tienda];
 const label = texto || info.label;
 
-const finalHref = tienda === 'amazon' && !href.includes('tag=')
-  ? `${href}${href.includes('?') ? '&' : '?'}tag=tuespaciodet-21`
+const normalizedHref = tienda === 'amazon' && href.startsWith('/dp/')
+  ? `https://www.amazon.es${href}`
   : href;
+
+const finalHref = tienda === 'amazon' && !normalizedHref.includes('tag=')
+  ? `${normalizedHref}${normalizedHref.includes('?') ? '&' : '?'}tag=tuespaciodet-21`
+  : normalizedHref;
 ---
 
 <a

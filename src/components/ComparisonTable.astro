@@ -14,8 +14,9 @@ interface Producto {
 const AMAZON_TAG = 'tuespaciodet-21';
 
 function amazonHref(url: string): string {
-  if (url.includes('tag=')) return url;
-  return `${url}${url.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`;
+  const normalized = url.startsWith('/dp/') ? `https://www.amazon.es${url}` : url;
+  if (normalized.includes('tag=')) return normalized;
+  return `${normalized}${normalized.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`;
 }
 
 interface Props {

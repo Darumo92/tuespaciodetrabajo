@@ -21,9 +21,13 @@ const {
   etiqueta = 'Nuestra eleccion',
 } = Astro.props;
 
-const amazonFinal = enlaceAmazon && !enlaceAmazon.includes('tag=')
-  ? `${enlaceAmazon}${enlaceAmazon.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`
+const normalizedAmazon = enlaceAmazon && enlaceAmazon.startsWith('/dp/')
+  ? `https://www.amazon.es${enlaceAmazon}`
   : enlaceAmazon;
+
+const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
+  ? `${normalizedAmazon}${normalizedAmazon.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`
+  : normalizedAmazon;
 ---
 
 <div class="top-pick">
