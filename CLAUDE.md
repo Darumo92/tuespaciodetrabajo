@@ -88,6 +88,7 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por articulo, variable
 - Requiere `PEXELS_API_KEY` en `.env`
 - Uso con `--list` para previsualizar resultados antes de descargar
 - Guarda en `public/images/articulos/<slug>.webp` (WebP, quality 80)
+- **Tamaño maximo de imagenes hero:** las imagenes de articulos en `public/images/articulos/` deben tener un ancho maximo de 800px. Si la imagen descargada es mayor, redimensionar con sharp: `sharp('ruta').resize(800).webp({ quality: 80 }).toFile('ruta-opt.webp')`. Esto evita avisos de PageSpeed por imagenes sobredimensionadas (se muestran a max 800px segun el atributo `sizes`).
 
 ## CSP y seguridad
 
