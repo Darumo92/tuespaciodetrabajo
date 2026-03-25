@@ -31,7 +31,7 @@ const amazonFinal = enlaceAmazon && !enlaceAmazon.includes('tag=')
   <div class="top-pick-body">
     {imagen && (
       <div class="top-pick-img-wrap">
-        <img src={imagen} alt={nombre} width="160" height="160" class="top-pick-img" loading="lazy" decoding="async" sizes="(max-width: 540px) 160px, 140px" />
+        <img src={imagen} alt={nombre} width="200" height="200" class="top-pick-img" loading="lazy" decoding="async" sizes="(max-width: 540px) 180px, 200px" />
       </div>
     )}
     <div class="top-pick-info">
@@ -99,8 +99,8 @@ const amazonFinal = enlaceAmazon && !enlaceAmazon.includes('tag=')
 }
 
 .top-pick-img {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
 }
 
@@ -153,8 +153,8 @@ const amazonFinal = enlaceAmazon && !enlaceAmazon.includes('tag=')
   }
 
   .top-pick-img {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
   }
 
   .top-pick-desc {
