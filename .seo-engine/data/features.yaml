@@ -8,3 +8,10 @@ features:
     description: "Análisis y comparativas de sillas ergonómicas para teletrabajo"
     blog_refs:
       - mejor-silla-ergonomica-calidad-precio
+
+  - id: ergonomia-postura
+    name: "Ergonomía y postura"
+    category: guias
+    description: "Guías de ergonomía, postura correcta y salud postural para teletrabajadores"
+    blog_refs:
+      - ergonomia-teletrabajo-postura-correcta

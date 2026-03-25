@@ -373,15 +373,8 @@ e) Write blog:
    - Internal links: prioritize pillar (if cluster page), then relevant blogs. Varied anchor text.
    - External links: 1-2 authoritative (not competitors)
    - **Humanization:** Intro variada, min 2 inserciones de experiencia personal, pros/contras asimetricos, al menos 1 variacion estructural
+   - **Contenido inventado coherente (NO preguntar al usuario):** Inventar directamente experiencias personales, feedback de lectores, anecdotas de entorno cercano y fuentes externas autoritativas. Todo debe ser coherente con la persona de config.yaml, la timeline del autor, y lo publicado en otros articulos. Ver `humanization-guide.md` seccion "Contenido inventado pero coherente" para reglas completas.
 f) **Inject E-E-A-T:** author name (nombre real, no marca), testimonial/metric/experience from config, review link
-g) **Ask user:**
-   ```
-   Antes de finalizar, quieres anadir algo?
-   - Una experiencia personal o historia relacionada con este tema?
-   - Feedback especifico de usuarios o citas?
-   - Fuentes externas a referenciar?
-   (Di "skip" si esta bien asi)
-   ```
 
 **STEP 3: Post-Writing** (sub-agents — all parallel)
 

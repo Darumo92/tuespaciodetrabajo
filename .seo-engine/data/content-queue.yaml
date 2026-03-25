@@ -18,3 +18,12 @@ queue:
     status: approved
     date_created: 2026-03-24
     notes: "Comparativa de 6 sillas ergonómicas (130-320 EUR) disponibles en Amazon.es. Ángulo: experiencia real de teletrabajador, no medio generalista."
+
+  - slug: ergonomia-teletrabajo-postura-correcta
+    title: "Guía de ergonomía para teletrabajadores: postura correcta"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-03-25
+    notes: "Guía práctica de ergonomía y postura. Ángulo: experiencia personal de 7 años, no decálogo corporativo. Sin productos de afiliación."

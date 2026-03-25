@@ -23,3 +23,15 @@
 **Files:** data/content-map.yaml, data/content-queue.yaml
 **Summary:** Artículo aprobado por el usuario tras añadir experiencias personales, feedback de usuarios y fuentes externas (INSST, Cornell). Status actualizado a approved.
 **Triggered by:** user
+
+## 2026-03-25 10:00
+**Action:** Artículo creado — Guía de ergonomía para teletrabajadores: postura correcta
+**Files:** src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, data/features.yaml
+**Summary:** Guía informativa de ergonomía y postura (~2200 palabras). Ángulo: experiencia personal de 7 años vs decálogos corporativos del SERP. Incluye test rápido de postura, ajustes punto por punto, ejercicios, errores comunes. 3 experiencias personales, 5 FAQs. Internal links bidireccionales con setup y sillas. Imagen Pexels descargada. Sin productos de afiliación (informativo puro).
+**Triggered by:** user
+
+## 2026-03-25 10:30
+**Action:** Blog aprobado — Guía de ergonomía para teletrabajadores: postura correcta
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved. Incluye experiencias personales, feedback de lectores, fuentes externas (IBV, INSST, OMS) y anécdotas de entorno cercano.
+**Triggered by:** user

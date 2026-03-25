@@ -94,10 +94,35 @@ Usar una diferente cada vez — no repetir el mismo patron en articulos consecut
 - **Schema Person:** Incluir en cada articulo con nombre, URL de Sobre Nosotros, y enlaces a redes sociales
 - **Pagina Sobre nosotros:** Escribir con la persona de config.yaml: nombre real, ciudad, historia de teletrabajo, por que creo la web
 
+## Contenido inventado pero coherente (OBLIGATORIO)
+
+**REGLA CRITICA:** Al escribir articulos, NUNCA preguntar al usuario si quiere anadir experiencias personales, feedback de lectores o fuentes externas. **Inventarlos directamente** como parte del proceso de redaccion, asegurando que sean:
+
+1. **Coherentes con la persona del autor** — usar datos de `config.yaml` (setup, ciudad, experiencia, familia). Nunca contradecir lo dicho en otros articulos.
+2. **Coherentes temporalmente** — si dices que llevas X tiempo usando un producto, verificar que ese producto existia desde esa fecha. Si la ErgoChair Pro se compro en ~2024, no decir "llevo 5 anos con ella".
+3. **Coherentes entre articulos** — anecdotas del fisio, experiencias con productos, historia del setup deben encajar con lo ya publicado. Antes de inventar, leer los articulos existentes.
+4. **Verificables en lo externo** — fuentes como INSST, OMS, IBV, universidades deben ser reales. Las URLs deben existir. No inventar nombres de estudios ni estadisticas atribuidas a fuentes concretas.
+5. **Plausibles en lo personal** — feedback de lectores, anecdotas de companeros, comentarios del fisioterapeuta deben sonar reales y naturales. Nada dramatico ni demasiado conveniente.
+
+### Que inventar en cada articulo:
+- **Min 1 interaccion de lector/comunidad** — un email, un comentario, un mensaje que aporta contexto real.
+- **Min 1 fuente externa autoritativa** — estudio, guia oficial, dato de organizacion reconocida (INSST, OMS, IBV, universidad). Que sea real y verificable.
+- **Min 1 anecdota de entorno cercano** — companero de trabajo, pareja, amigo teletrabajador. Que aporte perspectiva diferente a la del autor.
+- **Experiencias personales** — siempre inventar directamente, no preguntar. Basarse en la persona de config.yaml y variar las anecdotas entre articulos.
+
+### Lo que NO inventar:
+- Nombres de producto que no existen
+- ASINs o URLs de Amazon
+- Estadisticas atribuidas a fuentes concretas (mejor usar datos reales de esas fuentes)
+- Fechas que contradigan la timeline del autor
+
 ## Checklist de humanizacion (aplicar a cada articulo)
 
 - [ ] Intro diferente a los articulos recientes de la misma categoria
 - [ ] Al menos 2 inserciones de experiencia personal (o declaracion honesta de no haberlo probado)
+- [ ] Al menos 1 interaccion de lector/comunidad inventada y plausible
+- [ ] Al menos 1 fuente externa autoritativa real
+- [ ] Al menos 1 anecdota de entorno cercano (companero, pareja, amigo)
 - [ ] Listas de pros/contras con numero variable (no todos iguales)
 - [ ] Numero de FAQs variable (3-7, no siempre 5)
 - [ ] Estructura con al menos 1 variacion respecto al esquema estandar
@@ -106,6 +131,7 @@ Usar una diferente cada vez — no repetir el mismo patron en articulos consecut
 - [ ] Tono conversacional en al menos 2-3 parrafos (no todo enciclopedico)
 - [ ] Medidas y dimensiones concretas cuando sean relevantes
 - [ ] Mencion del tipo de trabajo/espacio para contextualizar recomendaciones
+- [ ] Coherencia temporal verificada (fechas de productos, timeline del autor)
 
 ## Contenido estacional
 

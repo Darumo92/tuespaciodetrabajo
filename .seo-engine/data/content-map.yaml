@@ -17,8 +17,10 @@ articles:
     internal_links_to:
       - sillas (categoría)
       - escritorios (categoría)
+      - ergonomia-teletrabajo-postura-correcta
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
+      - ergonomia-teletrabajo-postura-correcta
 
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
@@ -37,4 +39,28 @@ articles:
     has_eeat_signals: true
     internal_links_to:
       - mi-setup-home-office-2026
-    internal_links_from: []
+      - ergonomia-teletrabajo-postura-correcta
+    internal_links_from:
+      - ergonomia-teletrabajo-postura-correcta
+
+  - slug: ergonomia-teletrabajo-postura-correcta
+    title: "Guía de ergonomía para teletrabajadores: postura correcta"
+    path: src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "ergonomía teletrabajo postura correcta"
+    secondary_keywords:
+      - postura correcta escritorio
+      - dolor espalda teletrabajo
+      - higiene postural home office
+      - ejercicios oficina en casa
+    cluster: null
+    status: approved
+    date: 2026-03-21
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-silla-ergonomica-calidad-precio
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - mi-setup-home-office-2026

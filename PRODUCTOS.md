@@ -32,3 +32,6 @@
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
 | SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~152 EUR | verificado |
 | Durrafy Silla Ergonómica | B0C3BZHVK8 | /dp/B0C3BZHVK8 | https://m.media-amazon.com/images/I/619GSz1-BML._AC_SL1500_.jpg | ~130 EUR | verificado |
+
+### ergonomia-teletrabajo-postura-correcta
+Artículo informativo sin productos de afiliación. No requiere tracking de productos.
