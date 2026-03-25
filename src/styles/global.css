@@ -47,6 +47,7 @@
   --color-primary-dark: #1d4ed8;
   --color-primary-light: #60a5fa;
   --color-secondary: #f59e0b;
+  --color-secondary-text: #92400e;
   --color-accent: #10b981;
 
   --color-bg: #f8fafc;
@@ -95,6 +96,7 @@
   --color-primary-dark: #3b82f6;
   --color-primary-light: #93c5fd;
   --color-secondary: #f59e0b;
+  --color-secondary-text: #fbbf24;
   --color-accent: #34d399;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
@@ -839,8 +841,8 @@ a:hover {
 
 .article-category-badge {
   display: inline-block;
-  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg));
-  color: var(--color-primary);
+  background: var(--color-primary);
+  color: #fff;
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
