@@ -27,3 +27,12 @@ queue:
     status: approved
     date_created: 2026-03-25
     notes: "Guía práctica de ergonomía y postura. Ángulo: experiencia personal de 7 años, no decálogo corporativo. Sin productos de afiliación."
+
+  - slug: dolor-espalda-trabajar-casa
+    title: "Dolor de espalda por trabajar en casa: causas y soluciones"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-03-25
+    notes: "Guía sobre dolor de espalda específico por teletrabajo. Ángulo: experiencia real de teletrabajador vs clínicas del SERP. Complementa la guía de ergonomía (preventivo) con enfoque diagnóstico/soluciones. ~2100 palabras, 4 FAQs de PAA."

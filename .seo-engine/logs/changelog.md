@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-25 15:30
+**Action:** Blog aprobado — Dolor de espalda por trabajar en casa: causas y soluciones
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-03-25 15:00
+**Action:** Artículo creado — Dolor de espalda por trabajar en casa: causas y soluciones
+**Files:** src/content/articulos/dolor-espalda-trabajar-casa.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, data/features.yaml
+**Summary:** Guía informativa sobre dolor de espalda en teletrabajo (~2100 palabras). Ángulo: experiencia real de teletrabajador vs clínicas médicas del SERP. Complementa la guía de ergonomía (preventivo) con enfoque diagnóstico/soluciones. 4 FAQs de PAA Google. Incluye 3+ experiencias personales, 1 anécdota entorno cercano (mujer), 1 interacción lector, fuentes externas (SER, INSST, OMS, Spine). Internal links bidireccionales con los 3 artículos existentes. Imagen Pexels descargada.
+**Triggered by:** user
+
 ## 2026-03-24 12:00
 **Action:** Inicializacion del SEO engine
 **Files:** Todos los archivos de .seo-engine/

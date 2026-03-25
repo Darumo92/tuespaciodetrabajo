@@ -18,9 +18,11 @@ articles:
       - sillas (categoría)
       - escritorios (categoría)
       - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
 
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
@@ -40,8 +42,10 @@ articles:
     internal_links_to:
       - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
 
   - slug: ergonomia-teletrabajo-postura-correcta
     title: "Guía de ergonomía para teletrabajadores: postura correcta"
@@ -61,6 +65,32 @@ articles:
     internal_links_to:
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
+      - dolor-espalda-trabajar-casa
     internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - mi-setup-home-office-2026
+      - dolor-espalda-trabajar-casa
+
+  - slug: dolor-espalda-trabajar-casa
+    title: "Dolor de espalda por trabajar en casa: causas y soluciones"
+    path: src/content/articulos/dolor-espalda-trabajar-casa.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "dolor de espalda trabajar en casa"
+    secondary_keywords:
+      - dolor lumbar teletrabajo
+      - dolor cervical home office
+      - causas dolor espalda sentado
+      - salud postural teletrabajo
+    cluster: null
+    status: approved
+    date: 2026-04-03
+    has_eeat_signals: true
+    internal_links_to:
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-silla-ergonomica-calidad-precio
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
