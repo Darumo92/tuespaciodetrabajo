@@ -41,6 +41,19 @@
 - Internal links con anchor text variado y contextual
 - No keyword stuffing — si suena forzado, reescribe
 
+### GEO (Generative Engine Optimization — citabilidad por IA)
+
+Las IAs (ChatGPT, Claude, Gemini, Perplexity) citan contenido que es facil de extraer. Estas reglas mejoran la citabilidad sin perjudicar el SEO de Google (de hecho lo refuerzan para featured snippets y passage indexing):
+
+1. **Respuesta directa en las primeras 1-2 frases de cada seccion H2.** No enterrar la respuesta despues de anecdotas o introducciones. Primero el dato/respuesta, despues la narrativa personal.
+2. **Datos concretos y especificos.** Precios, medidas, angulos, porcentajes, tiempos. "La SIHOO Doro C300 (~320 EUR) ofrece soporte lumbar dinamico autoajustable" > "Esta silla es muy buena".
+3. **Formato estructurado.** Listas, tablas y parrafos cortos con un dato clave por parrafo. Las IAs extraen mejor informacion de estructuras claras.
+4. **Afirmaciones con fuente.** Citar fuentes reales (INSST, OMS, IBV, Cornell) con datos verificables. Las IAs prefieren citar contenido que ya incluye referencias autoritativas.
+5. **Resumen ejecutivo en la intro.** Cada articulo debe tener una frase-resumen citable en el primer parrafo: la respuesta directa a la pregunta que el titulo plantea, con datos concretos (rango de precios, producto destacado, cifra clave).
+6. **No contradecir la respuesta directa con matices excesivos.** Esta bien ser honesto ("no te va a curar nada por si solo"), pero la primera frase debe dar respuesta, no caveats.
+
+**Regla clave:** La respuesta directa al inicio de seccion y la narrativa personal NO son incompatibles. El orden correcto es: respuesta > contexto personal > detalle. Nunca: contexto personal > respuesta.
+
 ## E-E-A-T obligatorio
 
 **Cada articulo DEBE incluir al menos uno de estos:**

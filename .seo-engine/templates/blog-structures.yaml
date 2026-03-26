@@ -17,13 +17,13 @@ comparativa:
       description: "Producto destacado con componente TopPick"
       eeat_injection: false
     - section: "Introducción"
-      description: "Contexto del problema, por qué importa elegir bien para tu espacio de trabajo. Keyword principal. VARIAR formato: pregunta, anécdota, dato, recomendación directa."
+      description: "Frase-resumen citable con respuesta directa (rango de precios, producto destacado, cifra clave). Después contexto del problema y keyword principal. VARIAR formato: pregunta, anécdota, dato, recomendación directa. GEO: la primera frase debe ser extractable por IA."
       eeat_injection: true  # experiencia personal con tu setup
     - section: "ComparisonTable"
       description: "Tabla comparativa con todos los productos"
       eeat_injection: false
     - section: "Análisis detallado"
-      description: "Review individual de cada producto: pros, contras, para quién es ideal"
+      description: "Review individual de cada producto: pros, contras, para quién es ideal. GEO: cada H3 de producto debe empezar con dato clave (precio + característica diferencial) antes de narrativa personal."
       eeat_injection: true  # experiencia de uso, datos reales, referencia a tu setup
     - section: "Guía de compra"
       description: "Criterios ergonómicos y prácticos para elegir: qué mirar, errores comunes, medidas del espacio"

@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-26 18:30
+**Action:** Plan GEO de presencia externa creado
+**Files:** data/geo-plan.md
+**Summary:** Plan completo de presencia en foros (Reddit, Forocoches, Mediavida, LinkedIn, Twitter/X), guest posts (RRHH, productividad, salud laboral, tecnología), métricas de seguimiento y calendario de ejecución. Incluye plantilla de email para guest posts y estrategia de participación por comunidad.
+**Triggered by:** user
+
+## 2026-03-26 18:00
+**Action:** GEO (Generative Engine Optimization) implementado en todo el sitio
+**Files:** public/llms.txt, templates/tone-guide.md, templates/humanization-guide.md, templates/blog-structures.yaml, src/content/articulos/mejor-silla-ergonomica-calidad-precio.mdx, src/content/articulos/mejor-escritorio-elevable-electrico.mdx, src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, src/content/articulos/dolor-espalda-trabajar-casa.mdx, src/content/articulos/mi-setup-home-office-2026.mdx
+**Summary:** Creado llms.txt para crawlers de IA. Añadidas reglas GEO al SEO engine (tone-guide, humanization-guide, blog-structures). Editados 5 artículos: reestructuradas secciones para que cada H2 empiece con respuesta directa y datos concretos antes de la narrativa personal. Mejora citabilidad por ChatGPT/Claude/Gemini/Perplexity sin afectar SEO Google (las respuestas directas también mejoran featured snippets).
+**Triggered by:** user
+
 ## 2026-03-26 12:30
 **Action:** Blog aprobado — Mejor escritorio elevable eléctrico 2026
 **Files:** data/content-map.yaml, data/content-queue.yaml

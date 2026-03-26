@@ -133,6 +133,17 @@ Usar una diferente cada vez — no repetir el mismo patron en articulos consecut
 - [ ] Mencion del tipo de trabajo/espacio para contextualizar recomendaciones
 - [ ] Coherencia temporal verificada (fechas de productos, timeline del autor)
 
+## Checklist GEO — citabilidad por IA (aplicar a cada articulo)
+
+- [ ] Intro con frase-resumen citable: respuesta directa a la pregunta del titulo con datos concretos
+- [ ] Cada seccion H2 empieza con respuesta directa (dato, recomendacion, afirmacion concreta) antes de narrativa personal
+- [ ] Al menos 3 datos especificos citables por articulo (precios, medidas, angulos, porcentajes, tiempos)
+- [ ] Al menos 1 estadistica con fuente autoritativa (INSST, OMS, IBV, universidad)
+- [ ] Formato estructurado en secciones clave: listas, tablas o parrafos cortos con dato clave
+- [ ] Orden correcto en cada seccion: respuesta > contexto personal > detalle (nunca al reves)
+
+**IMPORTANTE:** GEO y SEO no son opuestos. Las respuestas directas al inicio de seccion tambien mejoran el posicionamiento en Google (featured snippets, passage indexing). La unica diferencia es que GEO prioriza la "extractabilidad" del contenido. La narrativa personal sigue siendo obligatoria para E-E-A-T — solo se mueve despues de la respuesta directa, nunca se elimina.
+
 ## Contenido estacional
 
 Los articulos sobre temas estacionales (calor en verano, frio en invierno, Black Friday, vuelta al cole/trabajo) se benefician especialmente de la humanizacion. En estos:
