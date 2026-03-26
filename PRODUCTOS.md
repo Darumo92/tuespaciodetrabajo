@@ -35,3 +35,13 @@
 
 ### ergonomia-teletrabajo-postura-correcta
 Artículo informativo sin productos de afiliación. No requiere tracking de productos.
+
+### mejor-escritorio-elevable-electrico
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| FlexiSpot EC5 PRO (solo estructura) | B09DCNDGWB | /dp/B09DCNDGWB | https://m.media-amazon.com/images/I/61ONgqMe-DL._AC_SL1500_.jpg | ~310 EUR | verificado |
+| FlexiSpot E1 PRO (solo estructura) | B0DSF66NHF | /dp/B0DSF66NHF | https://m.media-amazon.com/images/I/61XkknSupRL._AC_SL1500_.jpg | ~200 EUR | verificado |
+| Maidesite EL2 Pro Art (solo estructura) | B0DBVFDM3D | /dp/B0DBVFDM3D | https://m.media-amazon.com/images/I/61yWYUnyA3L._AC_SL1500_.jpg | ~300 EUR | verificado |
+| SANODESK QS+ 160×60 cm (con tablero) | B0GN24B9LF | /dp/B0GN24B9LF | https://m.media-amazon.com/images/I/81KkiM1HHsL._AC_SL1500_.jpg | ~220 EUR | verificado |
+| ErGear 140×70 cm (con tablero) | B0FMQTKZKD | /dp/B0FMQTKZKD | https://m.media-amazon.com/images/I/71ufKH15fYL._AC_SL1500_.jpg | ~152 EUR | verificado |
+| JUMMICO 140×60 cm (con tablero) | B0C1WYNCXP | /dp/B0C1WYNCXP | https://m.media-amazon.com/images/I/61ZD8TxCgRL._AC_SL1500_.jpg | ~110 EUR | verificado |

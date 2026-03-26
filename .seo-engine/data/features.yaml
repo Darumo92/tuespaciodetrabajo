@@ -9,6 +9,13 @@ features:
     blog_refs:
       - mejor-silla-ergonomica-calidad-precio
 
+  - id: escritorios-elevables
+    name: "Escritorios elevables eléctricos"
+    category: escritorios
+    description: "Análisis y comparativas de escritorios elevables (standing desks) eléctricos para teletrabajo"
+    blog_refs:
+      - mejor-escritorio-elevable-electrico
+
   - id: ergonomia-postura
     name: "Ergonomía y postura"
     category: guias

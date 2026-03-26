@@ -66,10 +66,12 @@ articles:
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
       - dolor-espalda-trabajar-casa
+      - mejor-escritorio-elevable-electrico
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
       - dolor-espalda-trabajar-casa
+      - mejor-escritorio-elevable-electrico
 
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
@@ -90,7 +92,32 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
+      - mejor-escritorio-elevable-electrico
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
+      - mejor-escritorio-elevable-electrico
+
+  - slug: mejor-escritorio-elevable-electrico
+    title: "Mejor escritorio elevable eléctrico 2026"
+    path: src/content/articulos/mejor-escritorio-elevable-electrico.mdx
+    type: comparativa
+    category: escritorios
+    primary_keyword: "mejor escritorio elevable eléctrico"
+    secondary_keywords:
+      - standing desk eléctrico
+      - escritorio ajustable altura
+      - mesa elevable teletrabajo
+      - FlexiSpot escritorio
+      - escritorio elevable calidad precio
+    cluster: null
+    status: approved
+    date: 2026-04-10
+    has_eeat_signals: true
+    internal_links_to:
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+    internal_links_from:
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa

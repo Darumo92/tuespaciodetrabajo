@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-26 12:30
+**Action:** Blog aprobado — Mejor escritorio elevable eléctrico 2026
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-03-26 12:00
+**Action:** Artículo creado — Mejor escritorio elevable eléctrico 2026
+**Files:** src/content/articulos/mejor-escritorio-elevable-electrico.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, data/features.yaml, PRODUCTOS.md
+**Summary:** Comparativa de 6 escritorios elevables eléctricos (110-310 EUR) con ASINs verificados en Amazon.es. Incluye 3 solo estructura (FlexiSpot EC5 PRO, FlexiSpot E1 PRO, Maidesite EL2 Pro Art) y 3 con tablero (SANODESK QS+, ErGear, JUMMICO). Ángulo: experiencia real de 2+ años con FlexiSpot E7 (descatalogado). ~2500 palabras, 5 FAQs de PAA/búsquedas relacionadas, intro tipo contraposición. Experiencias personales (FlexiSpot E7, fisioterapeuta, compañero de trabajo, amigo con SANODESK), pros/contras asimétricos. Internal links a ergonomía y dolor de espalda. Imagen Pexels descargada. SERP: Xataka, PCComponentes, Andro4all, El Independiente.
+**Triggered by:** user
+
 ## 2026-03-25 15:30
 **Action:** Blog aprobado — Dolor de espalda por trabajar en casa: causas y soluciones
 **Files:** data/content-map.yaml, data/content-queue.yaml

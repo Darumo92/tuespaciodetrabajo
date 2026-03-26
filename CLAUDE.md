@@ -255,6 +255,7 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - [ ] Autor con nombre real
 - [ ] No hay keyword stuffing
 - [ ] Medidas y dimensiones incluidas donde sean relevantes
+- [ ] **Coherencia entre articulos verificada** (experiencias personales, datos del autor, anecdotas del fisio/compañeros/lectores, datos de productos mencionados en otros articulos — nada puede contradecir lo dicho previamente)
 - [ ] `npm run build` ejecutado sin errores
 - [ ] PRODUCTOS.md actualizado con los datos del articulo
 
@@ -271,6 +272,7 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - **No poner `actualizadoEn` en bulk** — senal de freshness spam para Google
 - **Imagenes de Amazon** (m.media-amazon.com) son OK para hotlinking
 - **Buscar CADA producto** por su nombre especifico, nunca busquedas genericas de categoria
+- **COHERENCIA OBLIGATORIA entre articulos** — Antes de escribir experiencias personales, anecdotas del fisioterapeuta, menciones de compañeros/lectores, datos del setup o cualquier afirmacion que pueda aparecer en otros articulos, LEER los articulos existentes para verificar que no se contradice nada. Esto incluye: frecuencia de uso de productos (ej: "3-4 veces al dia"), datos personales (altura, ciudad, medidas del despacho), timeline de compras, citas del fisioterapeuta, y anecdotas de personas del entorno. Si hay duda, releer el articulo relevante antes de escribir.
 
 ---
 
