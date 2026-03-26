@@ -77,6 +77,7 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por articulo, variable
 
 - Amazon Associates ID: `tuespaciodet-21` — se anade automaticamente en `AffiliateButton.astro`, `ComparisonTable.astro` y `TopPick.astro`
 - Nunca incluir `?tag=tuespaciodet-21` en las URLs de los articulos MDX — los componentes lo anaden solos
+- **Nunca usar links markdown a `/dp/ASIN`** en el texto de los articulos (ej: `[Producto](/dp/ASIN)`) — se resuelven como URLs de la propia web y dan 404. Para enlazar a Amazon, usar siempre `<AffiliateButton href="/dp/ASIN" tienda="amazon" texto="Ver Producto en Amazon" />`
 - Usar URLs directas `/dp/ASIN` (no URLs de busqueda `/s?k=`)
 - Imagenes de producto Amazon: usar siempre `_AC_SL300_` en la URL, nunca `_AC_SL1500_`. Se muestran a ~140px, asi que 300px es suficiente y ahorra ~375 KiB por pagina
 
