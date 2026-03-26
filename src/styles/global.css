@@ -1027,6 +1027,10 @@ a:hover {
   box-shadow: 0 6px 20px rgba(255, 153, 0, 0.35);
 }
 
+.prose > .affiliate-button {
+  margin-bottom: 1.5rem;
+}
+
 .affiliate-button-group {
   display: flex;
   flex-wrap: wrap;
