@@ -37,6 +37,15 @@ queue:
     date_created: 2026-03-25
     notes: "Guía sobre dolor de espalda específico por teletrabajo. Ángulo: experiencia real de teletrabajador vs clínicas del SERP. Complementa la guía de ergonomía (preventivo) con enfoque diagnóstico/soluciones. ~2100 palabras, 4 FAQs de PAA."
 
+  - slug: standing-desk-merece-la-pena
+    title: "Standing desk: ¿merece la pena? Mi experiencia real"
+    type: informativo
+    category: escritorios
+    priority: high
+    status: approved
+    date_created: 2026-03-27
+    notes: "Guía experiencial sobre si merece la pena un standing desk. Ángulo: experiencia real de 2 años con FlexiSpot E7 en despacho 8m², no artículo de marketing. Diferente a mejor-escritorio-elevable-electrico (comparativa). ~2100 palabras, 4 FAQs, estructura experiencia."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

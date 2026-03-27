@@ -1,5 +1,21 @@
 # Tracking de Productos — tuespaciodetrabajo.com
 
+## Imágenes de artículos (Pexels)
+
+Registro de fotos hero para evitar imágenes repetidas entre artículos.
+**Regla:** antes de descargar una imagen, verificar que el `pexels_id` no está ya en esta tabla.
+
+| Slug | Archivo | Pexels ID | Fotógrafo | URL Pexels |
+|------|---------|-----------|-----------|------------|
+| standing-desk-merece-la-pena | standing-desk-merece-la-pena.webp | 8001036 | Pavel Danilyuk | https://www.pexels.com/photo/8001036/ |
+| mejor-escritorio-elevable-electrico | mejor-escritorio-elevable-electrico.webp | — | — | a identificar |
+| dolor-espalda-trabajar-casa | dolor-espalda-trabajar-casa.webp | — | — | a identificar |
+| ergonomia-teletrabajo-postura-correcta | ergonomia-teletrabajo-postura-correcta.webp | — | — | a identificar |
+| mejor-silla-ergonomica-calidad-precio | mejor-silla-ergonomica-calidad-precio.webp | — | — | a identificar |
+| mi-setup-home-office-2026 | setup-home-office-escritorio-elevable.webp | — | — | a identificar |
+
+---
+
 ## Formato por articulo
 
 ### [nombre-del-articulo]

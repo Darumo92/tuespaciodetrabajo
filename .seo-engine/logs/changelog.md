@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-27 17:10
+**Action:** Blog aprobado — Standing desk: ¿merece la pena? Mi experiencia real
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-03-27 10:00
+**Action:** Artículo creado — Standing desk: ¿merece la pena? Mi experiencia real
+**Files:** src/content/articulos/standing-desk-merece-la-pena.mdx, data/content-map.yaml, data/content-queue.yaml, logs/changelog.md
+**Summary:** Guía experiencial tipo informativo (~2100 palabras) sobre si merece la pena un escritorio elevable. Ángulo de contraposición ("no es para todos"). Estructura experiencia: resumen rápido, por qué lo compré, primeras semanas (adaptación real), 2 años después, lo que me costó admitir, para quién sí/no, antes de comprar, setup actual. 4 FAQs. 3+ experiencias personales, 1 interacción lector, fuente INSST, 1 anécdota entorno (compañero). Internal links a 4 artículos. Pendiente: imagen y enlaces bidireccionales desde artículos existentes.
+**Triggered by:** user
+
 ## 2026-03-26 18:30
 **Action:** Plan GEO de presencia externa creado
 **Files:** data/geo-plan.md

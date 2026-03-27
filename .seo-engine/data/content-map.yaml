@@ -121,3 +121,30 @@ articles:
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - standing-desk-merece-la-pena
+
+  - slug: standing-desk-merece-la-pena
+    title: "Standing desk: ¿merece la pena? Mi experiencia real"
+    path: src/content/articulos/standing-desk-merece-la-pena.mdx
+    type: informativo
+    category: escritorios
+    primary_keyword: "standing desk merece la pena"
+    secondary_keywords:
+      - escritorio elevable vale la pena
+      - escritorio de pie experiencia
+      - standing desk teletrabajo
+      - escritorio elevable ergonomía
+    cluster: null
+    status: approved
+    date: 2026-03-27
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-escritorio-elevable-electrico
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - mejor-escritorio-elevable-electrico
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - mi-setup-home-office-2026
