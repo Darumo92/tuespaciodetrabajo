@@ -19,10 +19,12 @@ articles:
       - escritorios (categoría)
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - home-office-productivo-500-euros
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - home-office-productivo-500-euros
 
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
@@ -43,9 +45,11 @@ articles:
       - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - home-office-productivo-500-euros
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - home-office-productivo-500-euros
 
   - slug: ergonomia-teletrabajo-postura-correcta
     title: "Guía de ergonomía para teletrabajadores: postura correcta"
@@ -67,11 +71,13 @@ articles:
       - mi-setup-home-office-2026
       - dolor-espalda-trabajar-casa
       - mejor-escritorio-elevable-electrico
+      - home-office-productivo-500-euros
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
       - dolor-espalda-trabajar-casa
       - mejor-escritorio-elevable-electrico
+      - home-office-productivo-500-euros
 
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
@@ -93,11 +99,13 @@ articles:
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
       - mejor-escritorio-elevable-electrico
+      - home-office-productivo-500-euros
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mi-setup-home-office-2026
       - mejor-escritorio-elevable-electrico
+      - home-office-productivo-500-euros
 
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
@@ -118,10 +126,40 @@ articles:
     internal_links_to:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - home-office-productivo-500-euros
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - standing-desk-merece-la-pena
+      - home-office-productivo-500-euros
+
+  - slug: home-office-productivo-500-euros
+    title: "Home office productivo por menos de 500 €"
+    path: src/content/articulos/home-office-productivo-500-euros.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "montar home office productivo 500 euros"
+    secondary_keywords:
+      - home office barato
+      - setup teletrabajo económico
+      - montar oficina en casa
+      - presupuesto home office
+    cluster: null
+    status: human-review
+    date: 2026-04-07
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-escritorio-elevable-electrico
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-escritorio-elevable-electrico
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - mi-setup-home-office-2026
 
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"

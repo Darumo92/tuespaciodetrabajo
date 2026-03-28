@@ -13,6 +13,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | ergonomia-teletrabajo-postura-correcta | ergonomia-teletrabajo-postura-correcta.webp | — | — | a identificar |
 | mejor-silla-ergonomica-calidad-precio | mejor-silla-ergonomica-calidad-precio.webp | — | — | a identificar |
 | mi-setup-home-office-2026 | setup-home-office-escritorio-elevable.webp | — | — | a identificar |
+| home-office-productivo-500-euros | home-office-productivo-500-euros.webp | 7168054 | Curtis Adams | https://www.pexels.com/photo/7168054/ |
 
 ---
 
@@ -51,6 +52,9 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 
 ### ergonomia-teletrabajo-postura-correcta
 Artículo informativo sin productos de afiliación. No requiere tracking de productos.
+
+### home-office-productivo-500-euros
+Artículo informativo. Productos referenciados de otros artículos (SIHOO M18, Durrafy, JUMMICO). No requiere tracking adicional de productos.
 
 ### mejor-escritorio-elevable-electrico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

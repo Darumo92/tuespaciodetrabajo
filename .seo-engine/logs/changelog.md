@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-28 12:00
+**Action:** Artículo creado — Home office productivo por menos de 500 €
+**Files:** src/content/articulos/home-office-productivo-500-euros.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa (~2250 palabras) sobre cómo montar un home office completo por <500€. Ángulo: experiencia real del autor (primer setup 400€) + framework de priorización de presupuesto. SERP débil (competencia baja). Estructura diferenciada: tabla de presupuesto inmediata en intro, sección "Lo que NO necesitas", ejemplo real de 490€, errores personales. 4 FAQs. Productos referenciados de artículos existentes (SIHOO M18, Durrafy, JUMMICO). Internal links a 5 artículos. Imagen Pexels #7168054 (Curtis Adams). Pendiente: revisión humana y enlaces bidireccionales desde artículos existentes.
+**Triggered by:** user
+
 ## 2026-03-27 17:10
 **Action:** Blog aprobado — Standing desk: ¿merece la pena? Mi experiencia real
 **Files:** data/content-map.yaml, data/content-queue.yaml
