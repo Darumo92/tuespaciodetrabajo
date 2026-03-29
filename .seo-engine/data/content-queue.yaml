@@ -55,6 +55,15 @@ queue:
     date_created: 2026-03-28
     notes: "Guía de presupuesto paso a paso para montar home office por <500€. Ángulo: experiencia real del autor (primer setup 400€), priorización de gasto. SERP débil. Productos verificados: SIHOO M18, Durrafy, JUMMICO. ~2250 palabras, 4 FAQs."
 
+  - slug: mejor-monitor-trabajar-desde-casa
+    title: "Mejor monitor para trabajar desde casa 2026"
+    type: comparativa
+    category: accesorios
+    priority: high
+    status: approved
+    date_created: 2026-03-29
+    notes: "Comparativa de 6 monitores (114-459 EUR) en Amazon.es. Ángulo: experiencia real de casi 4 años con BenQ PD2705U, no medio generalista. SERP: Xataka, El Corte Inglés, Samsung, El Confidencial. ~2600 palabras, 5 FAQs, estructura con agrupación por tipo (27\" 4K, ultrawide, económico)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

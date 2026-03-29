@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-29 11:00
+**Action:** Blog aprobado — Mejor monitor para trabajar desde casa 2026
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-03-29 10:00
+**Action:** Artículo creado — Mejor monitor para trabajar desde casa 2026
+**Files:** src/content/articulos/mejor-monitor-trabajar-desde-casa.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, data/features.yaml, PRODUCTOS.md, logs/changelog.md
+**Summary:** Comparativa de 6 monitores (114-459 EUR) con ASINs verificados en Amazon.es: BenQ PD2705U (top pick), Dell P2723QE, LG 27UP850N-W, Samsung ViewFinity S6 S65VC, LG 34WR55QK-B, LG 24MR400-B. Ángulo: experiencia real de casi 4 años con BenQ PD2705U, ergonomía de monitor como prioridad nº1 en home office. ~2600 palabras, 5 FAQs, estructura agrupada por tipo (27" 4K, ultrawide 34", económico 24"). Experiencias personales (cervical pain, setup de 8 m², compañera Ana con ultrawide, lector), fuente INSST, pros/contras asimétricos. Internal links a 5 artículos. SERP: Xataka, El Corte Inglés, Samsung, El Confidencial. Pendiente: imagen Pexels, revisión humana, enlaces bidireccionales.
+**Triggered by:** user
+
 ## 2026-03-28 12:00
 **Action:** Artículo creado — Home office productivo por menos de 500 €
 **Files:** src/content/articulos/home-office-productivo-500-euros.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md

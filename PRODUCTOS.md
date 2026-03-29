@@ -14,6 +14,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-silla-ergonomica-calidad-precio | mejor-silla-ergonomica-calidad-precio.webp | — | — | a identificar |
 | mi-setup-home-office-2026 | setup-home-office-escritorio-elevable.webp | — | — | a identificar |
 | home-office-productivo-500-euros | home-office-productivo-500-euros.webp | 7168054 | Curtis Adams | https://www.pexels.com/photo/7168054/ |
+| mejor-monitor-trabajar-desde-casa | mejor-monitor-trabajar-desde-casa.webp | 1714208 | Josh Sorenson | https://www.pexels.com/photo/1714208/ |
 
 ---
 
@@ -55,6 +56,16 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 
 ### home-office-productivo-500-euros
 Artículo informativo. Productos referenciados de otros artículos (SIHOO M18, Durrafy, JUMMICO). No requiere tracking adicional de productos.
+
+### mejor-monitor-trabajar-desde-casa
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| BenQ PD2705U 27" 4K USB-C | B096B3PBFZ | /dp/B096B3PBFZ | https://m.media-amazon.com/images/I/61Pvf1fZAgL._AC_SL300_.jpg | ~380 EUR | verificado |
+| Dell P2723QE 27" 4K USB-C | B09TY127B8 | /dp/B09TY127B8 | https://m.media-amazon.com/images/I/612mDVMoGvL._AC_SL300_.jpg | ~415 EUR | verificado |
+| LG 27UP850N-W 27" 4K USB-C | B0B9C8VV4X | /dp/B0B9C8VV4X | https://m.media-amazon.com/images/I/71dyokO-HpL._AC_SL300_.jpg | ~459 EUR | verificado |
+| Samsung ViewFinity S6 S65VC 34" | B0C9YNF36R | /dp/B0C9YNF36R | https://m.media-amazon.com/images/I/61vo-JKgyjL._AC_SL300_.jpg | ~411 EUR | verificado |
+| LG 34WR55QK-B 34" UltraWide | B0DGLR66J6 | /dp/B0DGLR66J6 | https://m.media-amazon.com/images/I/71ONN9tqFdL._AC_SL300_.jpg | ~290 EUR | verificado |
+| LG 24MR400-B 24" Full HD | B0CKRXP2PG | /dp/B0CKRXP2PG | https://m.media-amazon.com/images/I/71PFeevpOnL._AC_SL300_.jpg | ~114 EUR | verificado |
 
 ### mejor-escritorio-elevable-electrico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

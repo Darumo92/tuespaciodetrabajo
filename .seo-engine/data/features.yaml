@@ -16,6 +16,13 @@ features:
     blog_refs:
       - mejor-escritorio-elevable-electrico
 
+  - id: monitores-teletrabajo
+    name: "Monitores para teletrabajo"
+    category: accesorios
+    description: "Análisis y comparativas de monitores para home office y teletrabajo"
+    blog_refs:
+      - mejor-monitor-trabajar-desde-casa
+
   - id: ergonomia-postura
     name: "Ergonomía y postura"
     category: guias
