@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-30 10:30
+**Action:** Blog aprobado — Productividad en casa: cómo el entorno físico afecta tu rendimiento
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-03-30 10:00
+**Action:** Artículo creado — Productividad en casa: cómo el entorno físico afecta tu rendimiento
+**Files:** src/content/articulos/productividad-en-casa-entorno-fisico.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa (~2100 palabras) sobre cómo el entorno físico (luz, temperatura, ruido, orden, distribución) afecta la productividad en teletrabajo. Ángulo: experiencia real de 7 años en despacho 8m² con datos concretos, no listicle genérico de tips. SERP: listicles débiles (Sociment, FacileThings, Randstad, Mitsubishi). Estructura variada (sin secciones estándar, sección experiencial final). 5 FAQs. Experiencias personales: orientación del escritorio, calefactor 22°C, ScreenBar Halo, Sony WH-1000XM5 con hijo, rutina de orden. Anécdota compañero (dolores de cabeza + lámpara), lector (temperatura verano), mujer (ruido blanco), fisioterapeuta (distribución espacio). Fuentes: OMS, Cornell, Princeton Neuroscience Institute, Helsinki University of Technology, JASA. Internal links a 3 artículos. Imagen Pexels #14715851 (Curtis Adams). Pendiente: revisión humana, enlaces bidireccionales.
+**Triggered by:** user
+
 ## 2026-03-29 11:00
 **Action:** Blog aprobado — Mejor monitor para trabajar desde casa 2026
 **Files:** data/content-map.yaml, data/content-queue.yaml

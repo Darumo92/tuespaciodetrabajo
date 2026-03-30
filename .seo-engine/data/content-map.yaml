@@ -197,6 +197,27 @@ articles:
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
 
+  - slug: productividad-en-casa-entorno-fisico
+    title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
+    path: src/content/articulos/productividad-en-casa-entorno-fisico.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "productividad en casa entorno físico"
+    secondary_keywords:
+      - productividad teletrabajo
+      - home office productivo
+      - rendimiento teletrabajo
+      - entorno de trabajo en casa
+    cluster: null
+    status: approved
+    date: 2026-04-14
+    has_eeat_signals: true
+    internal_links_to:
+      - ergonomia-teletrabajo-postura-correcta
+      - home-office-productivo-500-euros
+      - mi-setup-home-office-2026
+    internal_links_from: []
+
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
     path: src/content/articulos/standing-desk-merece-la-pena.mdx

@@ -15,6 +15,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mi-setup-home-office-2026 | setup-home-office-escritorio-elevable.webp | — | — | a identificar |
 | home-office-productivo-500-euros | home-office-productivo-500-euros.webp | 7168054 | Curtis Adams | https://www.pexels.com/photo/7168054/ |
 | mejor-monitor-trabajar-desde-casa | mejor-monitor-trabajar-desde-casa.webp | 1714208 | Josh Sorenson | https://www.pexels.com/photo/1714208/ |
+| productividad-en-casa-entorno-fisico | productividad-en-casa-entorno-fisico.webp | 14715851 | Curtis Adams | https://www.pexels.com/photo/14715851/ |
 
 ---
 
@@ -66,6 +67,9 @@ Artículo informativo. Productos referenciados de otros artículos (SIHOO M18, D
 | Samsung ViewFinity S6 S65VC 34" | B0C9YNF36R | /dp/B0C9YNF36R | https://m.media-amazon.com/images/I/61vo-JKgyjL._AC_SL300_.jpg | ~411 EUR | verificado |
 | LG 34WR55QK-B 34" UltraWide | B0DGLR66J6 | /dp/B0DGLR66J6 | https://m.media-amazon.com/images/I/71ONN9tqFdL._AC_SL300_.jpg | ~290 EUR | verificado |
 | LG 24MR400-B 24" Full HD | B0CKRXP2PG | /dp/B0CKRXP2PG | https://m.media-amazon.com/images/I/71PFeevpOnL._AC_SL300_.jpg | ~114 EUR | verificado |
+
+### productividad-en-casa-entorno-fisico
+Artículo informativo sin productos de afiliación. No requiere tracking de productos.
 
 ### mejor-escritorio-elevable-electrico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
