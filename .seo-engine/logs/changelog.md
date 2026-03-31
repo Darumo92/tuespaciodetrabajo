@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-03-31 12:15
+**Action:** Blog aprobado — Mejor teclado ergonómico 2026
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios.
+**Triggered by:** user
+
+## 2026-03-31 12:00
+**Action:** Blog redactado — Mejor teclado ergonómico 2026
+**Files:** src/content/articulos/mejor-teclado-ergonomico.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md
+**Summary:** Comparativa de 5 teclados ergonómicos (33-102 EUR). Ángulo: experiencia real de 2+ años con K860. 5 productos verificados en Amazon.es. Imagen Pexels #4088255. Status: human-review.
+**Triggered by:** user
+
 ## 2026-03-30 10:30
 **Action:** Blog aprobado — Productividad en casa: cómo el entorno físico afecta tu rendimiento
 **Files:** data/content-map.yaml, data/content-queue.yaml

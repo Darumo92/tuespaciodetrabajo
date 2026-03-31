@@ -73,6 +73,15 @@ queue:
     date_created: 2026-03-30
     notes: "Guía informativa sobre cómo luz, temperatura, ruido, orden y distribución del espacio afectan la productividad. Ángulo: experiencia real de 7 años en despacho 8m², datos concretos, no listicle genérico de tips. SERP: listicles débiles (Sociment, FacileThings, Randstad). ~2100 palabras, 5 FAQs, estructura con variación (sin 'Conceptos clave' ni 'Errores comunes' estándar). Imagen Pexels #14715851 (Curtis Adams)."
 
+  - slug: mejor-teclado-ergonomico
+    title: "Mejor teclado ergonómico 2026"
+    type: comparativa
+    category: accesorios
+    priority: high
+    status: approved
+    date_created: 2026-03-31
+    notes: "Comparativa de 5 teclados ergonómicos (33-102 EUR) en Amazon.es. Ángulo: experiencia real de 2+ años con Logitech Ergo K860, no listicle de medio tech. SERP: PCComponentes, Xataka, Hardzone, Reddit. ~2700 palabras, 4 FAQs, estructura con variación ('Lo que nadie te cuenta' en vez de 'Guía de compra')."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

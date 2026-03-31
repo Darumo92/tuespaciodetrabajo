@@ -218,6 +218,30 @@ articles:
       - mi-setup-home-office-2026
     internal_links_from: []
 
+  - slug: mejor-teclado-ergonomico
+    title: "Mejor teclado ergonómico 2026"
+    path: src/content/articulos/mejor-teclado-ergonomico.mdx
+    type: comparativa
+    category: accesorios
+    primary_keyword: "mejor teclado ergonómico"
+    secondary_keywords:
+      - teclado ergonómico teletrabajo
+      - mejor teclado para trabajar desde casa
+      - teclado split ergonómico
+      - teclado inalámbrico ergonómico
+      - Logitech Ergo K860
+    cluster: null
+    status: approved
+    date: 2026-03-31
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-monitor-trabajar-desde-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - mi-setup-home-office-2026
+      - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
+    internal_links_from: []
+
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
     path: src/content/articulos/standing-desk-merece-la-pena.mdx

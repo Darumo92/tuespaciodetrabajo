@@ -16,6 +16,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | home-office-productivo-500-euros | home-office-productivo-500-euros.webp | 7168054 | Curtis Adams | https://www.pexels.com/photo/7168054/ |
 | mejor-monitor-trabajar-desde-casa | mejor-monitor-trabajar-desde-casa.webp | 1714208 | Josh Sorenson | https://www.pexels.com/photo/1714208/ |
 | productividad-en-casa-entorno-fisico | productividad-en-casa-entorno-fisico.webp | 14715851 | Curtis Adams | https://www.pexels.com/photo/14715851/ |
+| mejor-teclado-ergonomico | mejor-teclado-ergonomico.webp | 4088255 | Christian Naccarato | https://www.pexels.com/photo/4088255/ |
 
 ---
 
@@ -80,3 +81,12 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | SANODESK QS+ 160×60 cm (con tablero) | B0GN24B9LF | /dp/B0GN24B9LF | https://m.media-amazon.com/images/I/81KkiM1HHsL._AC_SL1500_.jpg | ~220 EUR | verificado |
 | ErGear 140×70 cm (con tablero) | B0FMQTKZKD | /dp/B0FMQTKZKD | https://m.media-amazon.com/images/I/71ufKH15fYL._AC_SL1500_.jpg | ~152 EUR | verificado |
 | JUMMICO 140×60 cm (con tablero) | B0C1WYNCXP | /dp/B0C1WYNCXP | https://m.media-amazon.com/images/I/61ZD8TxCgRL._AC_SL1500_.jpg | ~110 EUR | verificado |
+
+### mejor-teclado-ergonomico
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| Logitech Ergo K860 | B07W7L66L8 | /dp/B07W7L66L8 | https://m.media-amazon.com/images/I/81X3LIHz6+L._AC_SL300_.jpg | ~102 EUR | verificado |
+| Perixx PERIBOARD-612 | B07YMY1ZX8 | /dp/B07YMY1ZX8 | https://m.media-amazon.com/images/I/71fKMsC8xnS._AC_SL300_.jpg | ~70 EUR | verificado |
+| Logitech Wave Keys | B07W6J71BL | /dp/B07W6J71BL | https://m.media-amazon.com/images/I/71s7K0xjGRL._AC_SL300_.jpg | ~65 EUR | verificado |
+| Cherry KC 4500 ERGO | B09ZDZX8T2 | /dp/B09ZDZX8T2 | https://m.media-amazon.com/images/I/61cPP5iAqJL._AC_SL300_.jpg | ~45 EUR | verificado |
+| Logitech Pebble Keys 2 K380s | B07W5JK8TV | /dp/B07W5JK8TV | https://m.media-amazon.com/images/I/61QwtrvzAeL._AC_SL300_.jpg | ~33 EUR | verificado |
