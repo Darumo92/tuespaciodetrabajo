@@ -17,7 +17,7 @@ import { createHash } from 'crypto';
 import https from 'https';
 
 const SITE = 'https://tuespaciodetrabajo.com';
-const KEY = 'b968ae571ae6a242eb6ef27eef7d5ec9';
+const KEY = '1d9244a681114ca19849ee6c53fa5d74';
 const KEY_LOCATION = `${SITE}/${KEY}.txt`;
 const ENDPOINT = 'https://api.indexnow.org/indexnow';
 const STATE_FILE = join(import.meta.dirname, '..', '.indexnow-state.json');
