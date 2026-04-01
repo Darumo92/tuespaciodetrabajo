@@ -82,6 +82,15 @@ queue:
     date_created: 2026-03-31
     notes: "Comparativa de 5 teclados ergonómicos (33-102 EUR) en Amazon.es. Ángulo: experiencia real de 2+ años con Logitech Ergo K860, no listicle de medio tech. SERP: PCComponentes, Xataka, Hardzone, Reddit. ~2700 palabras, 4 FAQs, estructura con variación ('Lo que nadie te cuenta' en vez de 'Guía de compra')."
 
+  - slug: tunel-carpiano-teletrabajo-prevencion
+    title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-04-01
+    notes: "Guía de prevención del STC específica para teletrabajadores. Ángulo: experiencia real de teletrabajador que casi lo sufrió, no artículo clínico. SERP: eldiario.es, doctoralia.es, elpais.com — todos clínicos. ~2200 palabras, 5 FAQs, estructura variada con sección de ejercicios prácticos. Imagen Pexels #7298399 (Kindel Media)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

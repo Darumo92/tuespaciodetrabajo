@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-01 10:15
+**Action:** Blog aprobado — Túnel carpiano en teletrabajadores: cómo prevenirlo
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-04-01 10:00
+**Action:** Blog redactado — Túnel carpiano en teletrabajadores: cómo prevenirlo
+**Files:** src/content/articulos/tunel-carpiano-teletrabajo-prevencion.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, src/content/articulos/dolor-espalda-trabajar-casa.mdx, src/content/articulos/mejor-teclado-ergonomico.mdx
+**Summary:** Guía informativa sobre prevención del STC en teletrabajadores. Ángulo: experiencia real, no artículo clínico. ~2200 palabras, 5 FAQs. Links bidireccionales añadidos a ergonomía, dolor espalda y teclados. Imagen Pexels #7298399 (Kindel Media, 800×451). Status: human-review.
+**Triggered by:** user
+
 ## 2026-03-31 12:15
 **Action:** Blog aprobado — Mejor teclado ergonómico 2026
 **Files:** data/content-map.yaml, data/content-queue.yaml

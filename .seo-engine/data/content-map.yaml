@@ -242,6 +242,30 @@ articles:
       - mejor-escritorio-elevable-electrico
     internal_links_from: []
 
+  - slug: tunel-carpiano-teletrabajo-prevencion
+    title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
+    path: src/content/articulos/tunel-carpiano-teletrabajo-prevencion.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "túnel carpiano teletrabajo"
+    secondary_keywords:
+      - prevención túnel carpiano
+      - dolor muñecas trabajar ordenador
+      - ergonomía muñecas home office
+      - síndrome túnel carpiano prevención
+    cluster: null
+    status: approved
+    date: 2026-04-01
+    has_eeat_signals: true
+    internal_links_to:
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-teclado-ergonomico
+      - dolor-espalda-trabajar-casa
+    internal_links_from:
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-teclado-ergonomico
+      - dolor-espalda-trabajar-casa
+
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
     path: src/content/articulos/standing-desk-merece-la-pena.mdx

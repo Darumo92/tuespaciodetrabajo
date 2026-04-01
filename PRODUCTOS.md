@@ -17,6 +17,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-monitor-trabajar-desde-casa | mejor-monitor-trabajar-desde-casa.webp | 1714208 | Josh Sorenson | https://www.pexels.com/photo/1714208/ |
 | productividad-en-casa-entorno-fisico | productividad-en-casa-entorno-fisico.webp | 14715851 | Curtis Adams | https://www.pexels.com/photo/14715851/ |
 | mejor-teclado-ergonomico | mejor-teclado-ergonomico.webp | 4088255 | Christian Naccarato | https://www.pexels.com/photo/4088255/ |
+| tunel-carpiano-teletrabajo-prevencion | tunel-carpiano-teletrabajo-prevencion.webp | 7298399 | Kindel Media | https://www.pexels.com/photo/7298399/ |
 
 ---
 
