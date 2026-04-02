@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-02 21:30
+**Action:** Blog redactado — Mejor ratón vertical ergonómico 2026
+**Files:** src/content/articulos/mejor-raton-vertical-ergonomico.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Comparativa de 6 ratones verticales (18-66 EUR) con ASINs verificados en Amazon.es: Logitech MX Vertical (top pick), Logitech Lift, ProtoArc EM11 NL, Trust Verto, Anker AK-UBA, Perixx PERIMICE-513. Ángulo: experiencia real de 1+ año con MX Vertical, no listicle de medio tech. SERP: Xataka, PCComponentes, Hardzone, Fnac, Reddit. ~2600 palabras, 6 FAQs. Estructura variada: sin sección separada "por qué importa", incluye "Vertical, trackball o ergonómico: cuál te conviene". Intro tipo "dato sorprendente" (diferente a teclado y monitor). Experiencias personales (fisio, adaptación MX Vertical, compañero Madrid con Anker), lector consultor IT con ProtoArc, fuente IBV. Pros/contras asimétricos (6/2, 5/3, 4/4, 4/5, 4/4, 5/2). Internal links a teclado, túnel carpiano, monitor, setup. Imagen Pexels #7151690 (Helena Lopes, 800×533). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-01 10:15
 **Action:** Blog aprobado — Túnel carpiano en teletrabajadores: cómo prevenirlo
 **Files:** data/content-map.yaml, data/content-queue.yaml

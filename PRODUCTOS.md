@@ -18,6 +18,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | productividad-en-casa-entorno-fisico | productividad-en-casa-entorno-fisico.webp | 14715851 | Curtis Adams | https://www.pexels.com/photo/14715851/ |
 | mejor-teclado-ergonomico | mejor-teclado-ergonomico.webp | 4088255 | Christian Naccarato | https://www.pexels.com/photo/4088255/ |
 | tunel-carpiano-teletrabajo-prevencion | tunel-carpiano-teletrabajo-prevencion.webp | 7298399 | Kindel Media | https://www.pexels.com/photo/7298399/ |
+| mejor-raton-vertical-ergonomico | mejor-raton-vertical-ergonomico.webp | 7151690 | Helena Lopes | https://www.pexels.com/photo/7151690/ |
 
 ---
 
@@ -82,6 +83,16 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | SANODESK QS+ 160×60 cm (con tablero) | B0GN24B9LF | /dp/B0GN24B9LF | https://m.media-amazon.com/images/I/81KkiM1HHsL._AC_SL1500_.jpg | ~220 EUR | verificado |
 | ErGear 140×70 cm (con tablero) | B0FMQTKZKD | /dp/B0FMQTKZKD | https://m.media-amazon.com/images/I/71ufKH15fYL._AC_SL1500_.jpg | ~152 EUR | verificado |
 | JUMMICO 140×60 cm (con tablero) | B0C1WYNCXP | /dp/B0C1WYNCXP | https://m.media-amazon.com/images/I/61ZD8TxCgRL._AC_SL1500_.jpg | ~110 EUR | verificado |
+
+### mejor-raton-vertical-ergonomico
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| Logitech MX Vertical | B07FNHV4MW | /dp/B07FNHV4MW | https://m.media-amazon.com/images/I/51mRzPilrNL._AC_SL300_.jpg | ~66 EUR | verificado |
+| Logitech Lift | B07W4DGC27 | /dp/B07W4DGC27 | https://m.media-amazon.com/images/I/61OkuiCWbDL._AC_SL300_.jpg | ~48 EUR | verificado |
+| ProtoArc EM11 NL | B0D12PGGKK | /dp/B0D12PGGKK | https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg | ~27 EUR | verificado |
+| Trust Verto | B07FM2GLNQ | /dp/B07FM2GLNQ | https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg | ~20 EUR | verificado |
+| Anker AK-UBA Vertical | B00BIFNTMC | /dp/B00BIFNTMC | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | ~19 EUR | verificado |
+| Perixx PERIMICE-513 | B00GZIA2AE | /dp/B00GZIA2AE | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | ~18 EUR | verificado |
 
 ### mejor-teclado-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

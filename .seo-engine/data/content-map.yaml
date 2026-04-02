@@ -266,6 +266,32 @@ articles:
       - mejor-teclado-ergonomico
       - dolor-espalda-trabajar-casa
 
+  - slug: mejor-raton-vertical-ergonomico
+    title: "Mejor ratón vertical ergonómico 2026"
+    path: src/content/articulos/mejor-raton-vertical-ergonomico.mdx
+    type: comparativa
+    category: accesorios
+    primary_keyword: "mejor ratón vertical ergonómico"
+    secondary_keywords:
+      - ratón vertical teletrabajo
+      - ratón ergonómico inalámbrico
+      - Logitech MX Vertical
+      - ratón vertical túnel carpiano
+      - mejor ratón ergonómico
+    cluster: null
+    status: approved
+    date: 2026-04-02
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-teclado-ergonomico
+      - tunel-carpiano-teletrabajo-prevencion
+      - mejor-monitor-trabajar-desde-casa
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - tunel-carpiano-teletrabajo-prevencion
+      - mi-setup-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
+
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
     path: src/content/articulos/standing-desk-merece-la-pena.mdx

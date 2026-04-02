@@ -91,6 +91,15 @@ queue:
     date_created: 2026-04-01
     notes: "Guía de prevención del STC específica para teletrabajadores. Ángulo: experiencia real de teletrabajador que casi lo sufrió, no artículo clínico. SERP: eldiario.es, doctoralia.es, elpais.com — todos clínicos. ~2200 palabras, 5 FAQs, estructura variada con sección de ejercicios prácticos. Imagen Pexels #7298399 (Kindel Media)."
 
+  - slug: mejor-raton-vertical-ergonomico
+    title: "Mejor ratón vertical ergonómico 2026"
+    type: comparativa
+    category: accesorios
+    priority: high
+    status: approved
+    date_created: 2026-04-02
+    notes: "Comparativa de 6 ratones verticales (18-66 EUR) en Amazon.es. Ángulo: experiencia real de 1+ año con Logitech MX Vertical, no listicle de medio tech. SERP: Xataka, PCComponentes, Hardzone, Fnac, Reddit. ~2600 palabras, 6 FAQs, estructura con variación (sin sección 'por qué importa' separada, sección 'vertical vs trackball vs convencional'). Imagen Pexels #7151690 (Helena Lopes)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa
