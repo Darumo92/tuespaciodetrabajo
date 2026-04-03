@@ -1,2 +1,65 @@
 # Pillar/cluster architecture
-clusters: []
+clusters:
+  - name: ergonomia-y-salud-postural
+    pillar:
+      slug: ergonomia-teletrabajo-postura-correcta
+      title: "Guía de ergonomía para teletrabajadores: postura correcta"
+      keyword: "ergonomía teletrabajo postura correcta"
+    cluster_pages:
+      - slug: dolor-espalda-trabajar-casa
+        title: "Dolor de espalda por trabajar en casa: causas y soluciones"
+        keyword: "dolor de espalda trabajar en casa"
+        status: published
+      - slug: tunel-carpiano-teletrabajo-prevencion
+        title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
+        keyword: "túnel carpiano teletrabajo"
+        status: published
+      - slug: altura-correcta-escritorio-silla
+        title: "Altura correcta de escritorio y silla para teletrabajar"
+        keyword: "altura correcta escritorio y silla"
+        status: published
+      - slug: mejor-silla-ergonomica-calidad-precio
+        title: "Mejor silla ergonómica calidad-precio 2026"
+        keyword: "silla ergonómica calidad precio"
+        status: published
+    notes: "Pilar informativo de salud postural. Cluster pages cubren dolencias específicas, ajustes y producto clave (silla)."
+
+  - name: accesorios-ergonomicos
+    pillar:
+      slug: mi-setup-home-office-2026
+      title: "Mi setup de home office 2026: qué uso y por qué"
+      keyword: "setup home office"
+    cluster_pages:
+      - slug: mejor-monitor-trabajar-desde-casa
+        title: "Mejor monitor para trabajar desde casa 2026"
+        keyword: "mejor monitor para trabajar desde casa"
+        status: published
+      - slug: mejor-teclado-ergonomico
+        title: "Mejor teclado ergonómico 2026"
+        keyword: "mejor teclado ergonómico"
+        status: published
+      - slug: mejor-raton-vertical-ergonomico
+        title: "Mejor ratón vertical ergonómico 2026"
+        keyword: "mejor ratón vertical ergonómico"
+        status: published
+    notes: "Pilar experiencial (setup del autor) que enlaza a comparativas de cada componente. Funciona como hub de accesorios."
+
+  - name: escritorio-y-espacio-de-trabajo
+    pillar:
+      slug: home-office-productivo-500-euros
+      title: "Home office productivo por menos de 500 €"
+      keyword: "montar home office productivo 500 euros"
+    cluster_pages:
+      - slug: mejor-escritorio-elevable-electrico
+        title: "Mejor escritorio elevable eléctrico 2026"
+        keyword: "mejor escritorio elevable eléctrico"
+        status: published
+      - slug: standing-desk-merece-la-pena
+        title: "Standing desk: ¿merece la pena? Mi experiencia real"
+        keyword: "standing desk merece la pena"
+        status: published
+      - slug: productividad-en-casa-entorno-fisico
+        title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
+        keyword: "productividad en casa entorno físico"
+        status: published
+    notes: "Pilar de presupuesto/setup que conecta escritorios, entorno y productividad. Ángulo práctico y económico."

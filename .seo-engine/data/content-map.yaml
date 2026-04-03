@@ -10,8 +10,8 @@ articles:
       - mi escritorio teletrabajo
       - espacio de trabajo en casa
       - ergonomía teletrabajo
-    cluster: null
-    status: human-review
+    cluster: accesorios-ergonomicos
+    status: approved
     date: 2026-03-24
     has_eeat_signals: true
     internal_links_to:
@@ -39,7 +39,7 @@ articles:
       - silla oficina barata y buena
       - silla escritorio ergonómica
       - sillas para trabajar desde casa
-    cluster: null
+    cluster: ergonomia-y-salud-postural
     status: approved
     date: 2026-03-28
     has_eeat_signals: true
@@ -64,7 +64,7 @@ articles:
       - dolor espalda teletrabajo
       - higiene postural home office
       - ejercicios oficina en casa
-    cluster: null
+    cluster: ergonomia-y-salud-postural
     status: approved
     date: 2026-03-21
     has_eeat_signals: true
@@ -94,7 +94,7 @@ articles:
       - dolor cervical home office
       - causas dolor espalda sentado
       - salud postural teletrabajo
-    cluster: null
+    cluster: ergonomia-y-salud-postural
     status: approved
     date: 2026-04-03
     has_eeat_signals: true
@@ -125,7 +125,7 @@ articles:
       - mesa elevable teletrabajo
       - FlexiSpot escritorio
       - escritorio elevable calidad precio
-    cluster: null
+    cluster: escritorio-y-espacio-de-trabajo
     status: approved
     date: 2026-04-10
     has_eeat_signals: true
@@ -150,8 +150,8 @@ articles:
       - setup teletrabajo económico
       - montar oficina en casa
       - presupuesto home office
-    cluster: null
-    status: human-review
+    cluster: escritorio-y-espacio-de-trabajo
+    status: approved
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
@@ -181,7 +181,7 @@ articles:
       - monitor 4K USB-C home office
       - mejores monitores teletrabajo
       - monitor calidad precio para trabajar
-    cluster: null
+    cluster: accesorios-ergonomicos
     status: approved
     date: 2026-03-29
     has_eeat_signals: true
@@ -208,14 +208,16 @@ articles:
       - home office productivo
       - rendimiento teletrabajo
       - entorno de trabajo en casa
-    cluster: null
+    cluster: escritorio-y-espacio-de-trabajo
     status: approved
-    date: 2026-04-14
+    date: 2026-03-30
     has_eeat_signals: true
     internal_links_to:
       - ergonomia-teletrabajo-postura-correcta
       - home-office-productivo-500-euros
       - mi-setup-home-office-2026
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-silla-ergonomica-calidad-precio
     internal_links_from: []
 
   - slug: mejor-teclado-ergonomico
@@ -230,7 +232,7 @@ articles:
       - teclado split ergonómico
       - teclado inalámbrico ergonómico
       - Logitech Ergo K860
-    cluster: null
+    cluster: accesorios-ergonomicos
     status: approved
     date: 2026-03-31
     has_eeat_signals: true
@@ -253,7 +255,7 @@ articles:
       - dolor muñecas trabajar ordenador
       - ergonomía muñecas home office
       - síndrome túnel carpiano prevención
-    cluster: null
+    cluster: ergonomia-y-salud-postural
     status: approved
     date: 2026-04-01
     has_eeat_signals: true
@@ -278,7 +280,7 @@ articles:
       - Logitech MX Vertical
       - ratón vertical túnel carpiano
       - mejor ratón ergonómico
-    cluster: null
+    cluster: accesorios-ergonomicos
     status: approved
     date: 2026-04-02
     has_eeat_signals: true
@@ -303,7 +305,7 @@ articles:
       - escritorio de pie experiencia
       - standing desk teletrabajo
       - escritorio elevable ergonomía
-    cluster: null
+    cluster: escritorio-y-espacio-de-trabajo
     status: approved
     date: 2026-03-27
     has_eeat_signals: true
@@ -330,7 +332,7 @@ articles:
       - calcular altura mesa escritorio
       - altura silla escritorio
       - altura mesa ordenador
-    cluster: null
+    cluster: ergonomia-y-salud-postural
     status: approved
     date: 2026-04-03
     has_eeat_signals: true

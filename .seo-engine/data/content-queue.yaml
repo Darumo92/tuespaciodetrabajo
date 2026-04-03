@@ -6,7 +6,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: human-review
+    status: approved
     date_created: 2026-03-24
     notes: "Artículo personal del autor sobre su setup. Primer artículo del sitio."
 
@@ -51,7 +51,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: human-review
+    status: approved
     date_created: 2026-03-28
     notes: "Guía de presupuesto paso a paso para montar home office por <500€. Ángulo: experiencia real del autor (primer setup 400€), priorización de gasto. SERP débil. Productos verificados: SIHOO M18, Durrafy, JUMMICO. ~2250 palabras, 4 FAQs."
 

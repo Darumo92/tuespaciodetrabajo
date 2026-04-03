@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-03 22:15
+**Action:** Auditoría Ahrefs — correcciones SEO y arquitectura de clusters
+**Files:** data/topic-clusters.yaml, data/content-map.yaml, data/content-queue.yaml, src/content/articulos/productividad-en-casa-entorno-fisico.mdx, src/content/articulos/mi-setup-home-office-2026.mdx, src/content/articulos/altura-correcta-escritorio-silla.mdx, src/pages/index.astro, src/pages/sobre-mi.astro, src/pages/[categoria]/index.astro, CLAUDE.md, logs/changelog.md
+**Summary:** Correcciones tras auditoría de Ahrefs: 2 enlaces 404 corregidos (email obfuscation de Cloudflare en MDX, link a artículo informativo con ruta de comparativa), meta descriptions de 5 categorías ampliadas a 120-140 chars, meta descriptions de homepage y sobre-mí recortadas a ≤155 chars, schema Organization logo con width/height. Definidos 3 topic clusters (ergonomia-y-salud-postural, accesorios-ergonomicos, escritorio-y-espacio-de-trabajo) con pillar pages asignadas. Todos los artículos mapeados a su cluster en content-map.yaml. 2 artículos pasados de human-review a approved (mi-setup, home-office-500). Fecha de productividad-en-casa-entorno-fisico corregida de 2026-04-14 a 2026-03-30 (fecha real del commit). Añadidos 2 internal links cruzados a categorías de comparativas (monitor, silla) en productividad-en-casa-entorno-fisico. Reglas de prevención añadidas a CLAUDE.md.
+**Triggered by:** user (auditoría Ahrefs)
+
 ## 2026-04-03 10:00
 **Action:** Blog redactado — Altura correcta de escritorio y silla para teletrabajar
 **Files:** src/content/articulos/altura-correcta-escritorio-silla.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
