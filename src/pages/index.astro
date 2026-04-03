@@ -38,6 +38,8 @@ const organizationSchema = {
   logo: {
     '@type': 'ImageObject',
     url: `${siteUrl}/favicon.svg`,
+    width: 512,
+    height: 512,
   },
   description: 'Guías de compra y comparativas de productos de home office y ergonomía para teletrabajadores',
   contactPoint: {
@@ -150,7 +152,7 @@ const categorias = [
 
 <Base
   title="Tu Espacio de Trabajo · Guías y comparativas de home office"
-  description="Análisis honestos y comparativas de sillas ergonómicas, escritorios, accesorios y equipamiento para tu home office. Todo lo que necesitas para teletrabajar mejor."
+  description="Comparativas de sillas ergonómicas, escritorios y accesorios para tu home office. Todo lo que necesitas para teletrabajar mejor."
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
