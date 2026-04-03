@@ -78,6 +78,7 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por articulo, variable
 - Amazon Associates ID: `tuespaciodet-21` — se anade automaticamente en `AffiliateButton.astro`, `ComparisonTable.astro` y `TopPick.astro`
 - Nunca incluir `?tag=tuespaciodet-21` en las URLs de los articulos MDX — los componentes lo anaden solos
 - **Nunca usar links markdown a `/dp/ASIN`** en el texto de los articulos (ej: `[Producto](/dp/ASIN)`) — se resuelven como URLs de la propia web y dan 404. Para enlazar a Amazon, usar siempre `<AffiliateButton href="/dp/ASIN" tienda="amazon" texto="Ver Producto en Amazon" />`
+- **Props de AffiliateButton:** siempre usar `href` (no `enlace`), `tienda="amazon"` y `texto`. El prop se llama `href`, nunca `enlace`
 - Usar URLs directas `/dp/ASIN` (no URLs de busqueda `/s?k=`)
 - Imagenes de producto Amazon: usar siempre `_AC_SL300_` en la URL, nunca `_AC_SL1500_`. Se muestran a ~140px, asi que 300px es suficiente y ahorra ~375 KiB por pagina
 
@@ -89,6 +90,9 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por articulo, variable
 - Requiere `PEXELS_API_KEY` en `.env`
 - Uso con `--list` para previsualizar resultados antes de descargar
 - Guarda en `public/images/articulos/<slug>.webp` (WebP, quality 80)
+- **Antes de descargar:** verificar en `PRODUCTOS.md` (tabla "Imagenes de articulos (Pexels)") que el `pexels_id` candidato no esta ya usado en otro articulo
+- **Despues de descargar:** añadir inmediatamente una fila a esa tabla con: slug, archivo, pexels_id, fotografo y URL de Pexels
+- Si ninguna imagen del resultado `--list` es suficientemente diferente a las ya usadas, buscar con otro query
 - **Tamaño maximo de imagenes hero:** las imagenes de articulos en `public/images/articulos/` deben tener un ancho maximo de 800px. Si la imagen descargada es mayor, redimensionar con sharp: `sharp('ruta').resize(800).webp({ quality: 80 }).toFile('ruta-opt.webp')`. Esto evita avisos de PageSpeed por imagenes sobredimensionadas (se muestran a max 800px segun el atributo `sizes`).
 
 ## CSP y seguridad
@@ -274,6 +278,9 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - **Imagenes de Amazon** (m.media-amazon.com) son OK para hotlinking
 - **Buscar CADA producto** por su nombre especifico, nunca busquedas genericas de categoria
 - **Fecha de publicacion = fecha real del commit** — el campo `fecha` en frontmatter debe ser la fecha del dia en que se crea el articulo (hoy), nunca una fecha futura ni inventada para escalonar
+- **Internal links: verificar tipo del articulo destino** — Los articulos con `tipo: informativo` van bajo `/guias/[slug]/`, los de `tipo: comparativa` (o sin tipo) van bajo `/[categoria]/[slug]/`. Antes de escribir un internal link, comprobar el frontmatter del destino
+- **No poner emails en texto plano en archivos MDX** — Cloudflare Email Protection los obfusca y genera links a `/cdn-cgi/l/email-protection` que dan 404. Los comentarios HTML (`<!--email_off-->`) no funcionan en MDX. En su lugar, enlazar a `/sobre-mi/`
+- **Meta descriptions: entre 120 y 155 caracteres** — Ni demasiado cortas (desperdician espacio en SERPs) ni demasiado largas (Google las trunca). Aplica a todas las paginas: articulos, categorias, homepage, legales
 - **COHERENCIA OBLIGATORIA entre articulos** — Antes de escribir experiencias personales, anecdotas del fisioterapeuta, menciones de compañeros/lectores, datos del setup o cualquier afirmacion que pueda aparecer en otros articulos, LEER los articulos existentes para verificar que no se contradice nada. Esto incluye: frecuencia de uso de productos (ej: "3-4 veces al dia"), datos personales (altura, ciudad, medidas del despacho), timeline de compras, citas del fisioterapeuta, y anecdotas de personas del entorno. Si hay duda, releer el articulo relevante antes de escribir.
 
 ---
