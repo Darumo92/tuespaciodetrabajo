@@ -254,13 +254,17 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - [ ] Al menos 2 inserciones de experiencia personal
 - [ ] Intro diferente a articulos recientes de la misma categoria
 - [ ] Pros/contras con numero variable por producto
-- [ ] Internal links a 2+ articulos relacionados
+- [ ] Internal links a 2+ articulos relacionados (a articulos concretos, no a paginas de categoria)
+- [ ] Internal links verificados: tipo del destino correcto (informativo → `/guias/`, comparativa → `/[categoria]/`)
 - [ ] FAQs en frontmatter (3-7, numero variable)
 - [ ] Tags relevantes (3-6)
 - [ ] Autor con nombre real
 - [ ] No hay keyword stuffing
 - [ ] Medidas y dimensiones incluidas donde sean relevantes
 - [ ] **Coherencia entre articulos verificada** (experiencias personales, datos del autor, anecdotas del fisio/compañeros/lectores, datos de productos mencionados en otros articulos — nada puede contradecir lo dicho previamente)
+- [ ] Imagen de articulo verificada <= 800px de ancho (`sips -g pixelWidth`)
+- [ ] No hay emails en texto plano en el MDX (usar link a `/sobre-mi/`)
+- [ ] Meta description entre 120-155 caracteres
 - [ ] `npm run build` ejecutado sin errores
 - [ ] PRODUCTOS.md actualizado con los datos del articulo
 
@@ -281,6 +285,9 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - **Internal links: verificar tipo del articulo destino** — Los articulos con `tipo: informativo` van bajo `/guias/[slug]/`, los de `tipo: comparativa` (o sin tipo) van bajo `/[categoria]/[slug]/`. Antes de escribir un internal link, comprobar el frontmatter del destino
 - **No poner emails en texto plano en archivos MDX** — Cloudflare Email Protection los obfusca y genera links a `/cdn-cgi/l/email-protection` que dan 404. Los comentarios HTML (`<!--email_off-->`) no funcionan en MDX. En su lugar, enlazar a `/sobre-mi/`
 - **Meta descriptions: entre 120 y 155 caracteres** — Ni demasiado cortas (desperdician espacio en SERPs) ni demasiado largas (Google las trunca). Aplica a todas las paginas: articulos, categorias, homepage, legales
+- **Internal links siempre a articulos concretos, nunca a categorias sueltas** — No enlazar a `/escritorios/` o `/sillas/` como destino de un link contextual. Enlazar siempre al articulo especifico (ej: `/escritorios/mejor-escritorio-elevable-electrico/`). Las paginas de categoria son listados, no contenido de valor para el lector
+- **BreadcrumbList schema: ultimo item siempre con `item` (URL)** — Cada ListItem del BreadcrumbList debe incluir `item: URL` ademas de `name` y `position`. Si falta el `item` en el ultimo breadcrumb, Google Rich Results lo marca como error
+- **Verificar tamaño de imagenes tras descargar** — Las imagenes de articulos en `public/images/articulos/` DEBEN tener un ancho maximo de 800px. Verificar siempre con `sips -g pixelWidth` tras descargar. Si excede, redimensionar inmediatamente con sharp. No dejar para despues
 - **COHERENCIA OBLIGATORIA entre articulos** — Antes de escribir experiencias personales, anecdotas del fisioterapeuta, menciones de compañeros/lectores, datos del setup o cualquier afirmacion que pueda aparecer en otros articulos, LEER los articulos existentes para verificar que no se contradice nada. Esto incluye: frecuencia de uso de productos (ej: "3-4 veces al dia"), datos personales (altura, ciudad, medidas del despacho), timeline de compras, citas del fisioterapeuta, y anecdotas de personas del entorno. Si hay duda, releer el articulo relevante antes de escribir.
 
 ---
