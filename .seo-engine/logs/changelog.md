@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-03 10:00
+**Action:** Blog redactado — Altura correcta de escritorio y silla para teletrabajar
+**Files:** src/content/articulos/altura-correcta-escritorio-silla.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa sobre cálculo de alturas de escritorio y silla según estatura. Ángulo: experiencia real de teletrabajador con fórmulas prácticas y test del codo, vs guías genéricas de tiendas de muebles del SERP. ~2100 palabras, 5 FAQs (variable). Estructura variada: tabla de alturas por estatura, sección de errores comunes, sin sección "Conceptos clave". Intro tipo "pregunta directa" (diferente a últimos informativos: anécdota, contraposición, dato). Experiencias personales: contractura trapecio por 3 cm de desajuste, ajuste fino del FlexiSpot, memorias guardadas para calzado. Anécdota entorno: compañera 160 cm con pies colgando. Lector 192 cm con IKEA MALM. Fuente: INSST guía ergonomía oficina. Internal links a ergonomía, escritorios elevables, standing desk, túnel carpiano, dolor espalda. Imagen Pexels #4974907 (olia danilevich, 800px). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-02 21:30
 **Action:** Blog redactado — Mejor ratón vertical ergonómico 2026
 **Files:** src/content/articulos/mejor-raton-vertical-ergonomico.mdx, data/content-map.yaml, data/content-queue.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md

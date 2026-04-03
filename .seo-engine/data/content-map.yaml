@@ -317,3 +317,27 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
+      - altura-correcta-escritorio-silla
+
+  - slug: altura-correcta-escritorio-silla
+    title: "Altura correcta de escritorio y silla para teletrabajar"
+    path: src/content/articulos/altura-correcta-escritorio-silla.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "altura correcta escritorio y silla"
+    secondary_keywords:
+      - altura ideal escritorio
+      - calcular altura mesa escritorio
+      - altura silla escritorio
+      - altura mesa ordenador
+    cluster: null
+    status: approved
+    date: 2026-04-03
+    has_eeat_signals: true
+    internal_links_to:
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-escritorio-elevable-electrico
+      - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
+      - dolor-espalda-trabajar-casa
+    internal_links_from: []
