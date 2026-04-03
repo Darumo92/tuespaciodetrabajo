@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-03 23:00
+**Action:** Reestructurar topic clusters según plan editorial del usuario
+**Files:** data/topic-clusters.yaml, data/content-map.yaml, logs/changelog.md
+**Summary:** Reemplazada la arquitectura de clusters anterior (3 clusters con pilares informativos) por la del plan editorial del usuario (7 clusters). Nuevos clusters: C1 Sillas (pilar: silla ergonómica), C2 Escritorios (pilar: standing desk eléctrico), C3 Periféricos (pilar: teclado ergonómico), C4 Audio/Vídeo (pilar: auriculares cancelación ruido), C5 Ambiente (pilar: lámpara LED), C6 Productividad (sin pilar, ads RPM), HUB Central (pilar: guía completa home office). Incluye los 47 artículos futuros del plan con status planned. Actualizados todos los cluster assignments en content-map.yaml. Motivación: los pilares deben ser comparativas transaccionales (no informativos), cada cluster debe coincidir con una categoría de producto real, y se necesita un hub central que conecte todos los clusters.
+**Triggered by:** user (plan editorial)
+
 ## 2026-04-03 22:15
 **Action:** Auditoría Ahrefs — correcciones SEO y arquitectura de clusters
 **Files:** data/topic-clusters.yaml, data/content-map.yaml, data/content-queue.yaml, src/content/articulos/productividad-en-casa-entorno-fisico.mdx, src/content/articulos/mi-setup-home-office-2026.mdx, src/content/articulos/altura-correcta-escritorio-silla.mdx, src/pages/index.astro, src/pages/sobre-mi.astro, src/pages/[categoria]/index.astro, CLAUDE.md, logs/changelog.md

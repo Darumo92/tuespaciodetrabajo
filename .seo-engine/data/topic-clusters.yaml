@@ -1,65 +1,238 @@
 # Pillar/cluster architecture
 clusters:
-  - name: ergonomia-y-salud-postural
+  - name: sillas
     pillar:
-      slug: ergonomia-teletrabajo-postura-correcta
-      title: "Guía de ergonomía para teletrabajadores: postura correcta"
-      keyword: "ergonomía teletrabajo postura correcta"
+      slug: mejor-silla-ergonomica-calidad-precio
+      title: "Mejor silla ergonómica calidad-precio 2026"
+      keyword: "silla ergonómica calidad precio"
     cluster_pages:
+      - slug: silla-gaming-vs-ergonomica
+        title: "Silla gaming vs silla ergonómica: cuál es mejor para trabajar"
+        keyword: "silla gaming vs ergonómica"
+        status: planned
+      - slug: mejor-silla-oficina-menos-200-euros
+        title: "Mejores sillas de oficina por menos de 200€"
+        keyword: "silla oficina menos 200 euros"
+        status: planned
+      - slug: ajustar-silla-oficina-correctamente
+        title: "Cómo ajustar correctamente tu silla de oficina (paso a paso)"
+        keyword: "ajustar silla oficina"
+        status: planned
       - slug: dolor-espalda-trabajar-casa
         title: "Dolor de espalda por trabajar en casa: causas y soluciones"
         keyword: "dolor de espalda trabajar en casa"
         status: published
-      - slug: tunel-carpiano-teletrabajo-prevencion
-        title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
-        keyword: "túnel carpiano teletrabajo"
+      - slug: ergonomia-teletrabajo-postura-correcta
+        title: "Guía de ergonomía para teletrabajadores: postura correcta"
+        keyword: "ergonomía teletrabajo postura correcta"
+        status: published
+      - slug: mejor-silla-personas-altas
+        title: "Mejor silla ergonómica para personas altas (+180cm)"
+        keyword: "silla ergonómica personas altas"
+        status: planned
+      - slug: mejor-silla-dolor-espalda
+        title: "Mejor silla ergonómica para dolor de espalda 2026"
+        keyword: "silla ergonómica dolor espalda"
+        status: planned
+      - slug: ejercicios-estiramientos-silla-oficina
+        title: "Ejercicios y estiramientos para hacer en la silla de oficina"
+        keyword: "ejercicios silla oficina"
+        status: planned
+    notes: "Pilar comparativo. Cluster pages: comparativas específicas (gaming vs, <200€, altas, dolor), guías de uso y ergonomía."
+
+  - name: escritorios
+    pillar:
+      slug: mejor-escritorio-elevable-electrico
+      title: "Mejor escritorio elevable eléctrico 2026"
+      keyword: "mejor escritorio elevable eléctrico"
+    cluster_pages:
+      - slug: standing-desk-merece-la-pena
+        title: "Standing desk: ¿merece la pena? Mi experiencia real"
+        keyword: "standing desk merece la pena"
+        status: published
+      - slug: home-office-productivo-500-euros
+        title: "Home office productivo por menos de 500 €"
+        keyword: "montar home office productivo 500 euros"
         status: published
       - slug: altura-correcta-escritorio-silla
         title: "Altura correcta de escritorio y silla para teletrabajar"
         keyword: "altura correcta escritorio y silla"
         status: published
-      - slug: mejor-silla-ergonomica-calidad-precio
-        title: "Mejor silla ergonómica calidad-precio 2026"
-        keyword: "silla ergonómica calidad precio"
-        status: published
-    notes: "Pilar informativo de salud postural. Cluster pages cubren dolencias específicas, ajustes y producto clave (silla)."
+      - slug: ikea-bekant-vs-flexispot-e7
+        title: "IKEA BEKANT vs FlexiSpot E7: ¿cuál es mejor standing desk?"
+        keyword: "IKEA BEKANT vs FlexiSpot E7"
+        status: planned
+      - slug: mejor-escritorio-esquinero-piso-pequeno
+        title: "Mejor escritorio esquinero para piso pequeño 2026"
+        keyword: "escritorio esquinero piso pequeño"
+        status: planned
+      - slug: mejor-escritorio-2-monitores
+        title: "Mejor escritorio para 2 monitores 2026"
+        keyword: "escritorio 2 monitores"
+        status: planned
+      - slug: home-office-piso-pequeno
+        title: "Home office en piso pequeño: ideas y soluciones que funcionan"
+        keyword: "home office piso pequeño"
+        status: planned
+    notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio."
 
-  - name: accesorios-ergonomicos
+  - name: perifericos
     pillar:
-      slug: mi-setup-home-office-2026
-      title: "Mi setup de home office 2026: qué uso y por qué"
-      keyword: "setup home office"
+      slug: mejor-teclado-ergonomico
+      title: "Mejor teclado ergonómico 2026"
+      keyword: "mejor teclado ergonómico"
     cluster_pages:
-      - slug: mejor-monitor-trabajar-desde-casa
-        title: "Mejor monitor para trabajar desde casa 2026"
-        keyword: "mejor monitor para trabajar desde casa"
-        status: published
-      - slug: mejor-teclado-ergonomico
-        title: "Mejor teclado ergonómico 2026"
-        keyword: "mejor teclado ergonómico"
-        status: published
       - slug: mejor-raton-vertical-ergonomico
         title: "Mejor ratón vertical ergonómico 2026"
         keyword: "mejor ratón vertical ergonómico"
         status: published
-    notes: "Pilar experiencial (setup del autor) que enlaza a comparativas de cada componente. Funciona como hub de accesorios."
+      - slug: mejor-monitor-trabajar-desde-casa
+        title: "Mejor monitor para trabajar desde casa 2026"
+        keyword: "mejor monitor para trabajar desde casa"
+        status: published
+      - slug: tunel-carpiano-teletrabajo-prevencion
+        title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
+        keyword: "túnel carpiano teletrabajo"
+        status: published
+      - slug: mejor-soporte-monitor
+        title: "Mejor soporte de monitor (brazo articulado) 2026"
+        keyword: "soporte monitor brazo articulado"
+        status: planned
+      - slug: mejor-reposamunecas
+        title: "Mejor reposamuñecas para teclado y ratón 2026"
+        keyword: "reposamuñecas teclado ratón"
+        status: planned
+      - slug: mejor-soporte-portatil
+        title: "Mejor soporte de portátil para escritorio 2026"
+        keyword: "soporte portátil escritorio"
+        status: planned
+      - slug: mejor-hub-usb-c
+        title: "Mejor hub USB-C para portátil 2026"
+        keyword: "hub USB-C portátil"
+        status: planned
+      - slug: mejor-alfombrilla-xxl
+        title: "Mejor alfombrilla XXL para escritorio 2026"
+        keyword: "alfombrilla XXL escritorio"
+        status: planned
+      - slug: mejor-teclado-mecanico-silencioso
+        title: "Mejor teclado mecánico silencioso para oficina 2026"
+        keyword: "teclado mecánico silencioso"
+        status: planned
+      - slug: fatiga-visual-pantalla
+        title: "Fatiga visual por pantalla: cómo proteger tus ojos trabajando desde casa"
+        keyword: "fatiga visual pantalla"
+        status: planned
+    notes: "Pilar comparativo. Cluster pages: periféricos de entrada (ratón, reposamuñecas), salida (monitor, soporte), conectividad (hub), salud (túnel carpiano, fatiga visual)."
 
-  - name: escritorio-y-espacio-de-trabajo
+  - name: audio-video
     pillar:
-      slug: home-office-productivo-500-euros
-      title: "Home office productivo por menos de 500 €"
-      keyword: "montar home office productivo 500 euros"
+      slug: mejores-auriculares-cancelacion-ruido
+      title: "Mejores auriculares con cancelación de ruido para trabajar 2026"
+      keyword: "auriculares cancelación ruido trabajar"
     cluster_pages:
-      - slug: mejor-escritorio-elevable-electrico
-        title: "Mejor escritorio elevable eléctrico 2026"
-        keyword: "mejor escritorio elevable eléctrico"
-        status: published
-      - slug: standing-desk-merece-la-pena
-        title: "Standing desk: ¿merece la pena? Mi experiencia real"
-        keyword: "standing desk merece la pena"
-        status: published
+      - slug: mejor-webcam-videollamadas
+        title: "Mejor webcam para videollamadas 2026"
+        keyword: "mejor webcam videollamadas"
+        status: planned
+      - slug: mejor-microfono-videollamadas
+        title: "Mejor micrófono para videollamadas y reuniones 2026"
+        keyword: "micrófono videollamadas"
+        status: planned
+      - slug: mejorar-imagen-videollamadas
+        title: "Cómo mejorar tu imagen en videollamadas (sin gastar mucho)"
+        keyword: "mejorar imagen videollamadas"
+        status: planned
+    notes: "Pilar comparativo. Cluster: webcam, micrófono, guía de videollamadas. Productos clave: Sony WH-1000XM5, Logitech Brio, Elgato Wave."
+
+  - name: ambiente
+    pillar:
+      slug: mejor-lampara-escritorio-led
+      title: "Mejor lámpara de escritorio LED 2026"
+      keyword: "lámpara escritorio LED"
+    cluster_pages:
+      - slug: mejorar-iluminacion-espacio-trabajo
+        title: "Cómo mejorar la iluminación de tu espacio de trabajo"
+        keyword: "iluminación espacio trabajo"
+        status: planned
+      - slug: mejor-ventilador-silencioso-oficina
+        title: "Mejor ventilador silencioso para oficina 2026"
+        keyword: "ventilador silencioso oficina"
+        status: planned
+      - slug: plantas-interior-oficina-casa
+        title: "Plantas de interior para tu oficina en casa: cuáles funcionan"
+        keyword: "plantas oficina casa"
+        status: planned
+      - slug: organizar-cables-escritorio
+        title: "Cómo organizar los cables de tu escritorio"
+        keyword: "organizar cables escritorio"
+        status: planned
+      - slug: decorar-home-office-poco-presupuesto
+        title: "Cómo decorar tu home office con poco presupuesto"
+        keyword: "decorar home office barato"
+        status: planned
+      - slug: insonorizar-home-office
+        title: "Cómo insonorizar tu home office (sin obras)"
+        keyword: "insonorizar home office"
+        status: planned
+      - slug: trabajar-casa-calor
+        title: "Trabajar desde casa con calor: cómo mantener tu oficina fresca"
+        keyword: "trabajar desde casa calor"
+        status: planned
+    notes: "Pilar comparativo. Cluster: iluminación, ruido, temperatura, orden, decoración. Productos clave: BenQ ScreenBar, Dyson Pure Cool."
+
+  - name: productividad
+    pillar: null
+    cluster_pages:
       - slug: productividad-en-casa-entorno-fisico
         title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
         keyword: "productividad en casa entorno físico"
         status: published
-    notes: "Pilar de presupuesto/setup que conecta escritorios, entorno y productividad. Ángulo práctico y económico."
+      - slug: rutina-trabajo-productiva-casa
+        title: "Cómo crear una rutina de trabajo productiva en casa"
+        keyword: "rutina trabajo productiva casa"
+        status: planned
+      - slug: evitar-distracciones-trabajar-casa
+        title: "Cómo evitar distracciones trabajando desde casa"
+        keyword: "evitar distracciones trabajar casa"
+        status: planned
+      - slug: pausas-activas-trabajar-casa
+        title: "Cómo hacer pausas activas trabajando desde casa"
+        keyword: "pausas activas trabajar casa"
+        status: planned
+      - slug: teletrabajo-ninos-casa
+        title: "Teletrabajo con niños en casa: cómo organizarte sin perder la cabeza"
+        keyword: "teletrabajo niños casa"
+        status: planned
+      - slug: setup-home-office-minimalista
+        title: "Setup home office minimalista: menos es más"
+        keyword: "home office minimalista"
+        status: planned
+      - slug: apps-productividad-teletrabajadores
+        title: "Las mejores apps y herramientas de productividad para teletrabajadores 2026"
+        keyword: "apps productividad teletrabajadores"
+        status: planned
+      - slug: proteger-espalda-8-horas-sentado
+        title: "Cómo proteger tu espalda si trabajas +8 horas sentado"
+        keyword: "proteger espalda 8 horas sentado"
+        status: planned
+    notes: "Sin pilar de producto. Monetización por ads (RPM alto). Artículos informativos puros de productividad y bienestar."
+
+  - name: hub-central
+    pillar:
+      slug: guia-completa-home-office
+      title: "Guía completa de home office: todo lo que necesitas"
+      keyword: "guía completa home office"
+    cluster_pages:
+      - slug: mi-setup-home-office-2026
+        title: "Mi setup de home office 2026: qué uso y por qué"
+        keyword: "setup home office"
+        status: published
+      - slug: mejores-accesorios-home-office-amazon
+        title: "Los mejores accesorios de home office en Amazon España"
+        keyword: "accesorios home office Amazon"
+        status: planned
+      - slug: ergonomia-guia-definitiva
+        title: "Ergonomía en casa: guía definitiva para teletrabajadores"
+        keyword: "ergonomía casa guía definitiva"
+        status: planned
+    notes: "Hub central que enlaza a TODOS los clusters. Pilar: guía completa. Cluster pages: setup personal, hub accesorios Amazon, hub ergonomía."
