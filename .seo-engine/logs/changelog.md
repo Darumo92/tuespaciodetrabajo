@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-04 12:00
+**Action:** Blog redactado — Fatiga visual por pantalla: cómo proteger tus ojos
+**Files:** src/content/articulos/fatiga-visual-pantalla.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, data/features.yaml, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa sobre fatiga visual digital para teletrabajadores. Ángulo: experiencia real de 7 años frente a pantalla vs artículos clínicos del SERP (admiravision, AAO, creu-blanca, eizo, fernandez-vega). ~1900 palabras, 4 FAQs (variable). Estructura variada: sin sección 'Conceptos clave', incluye sección de mitos (gafas luz azul, modo noche) y guía de configuración de pantalla. Intro tipo 'dato sorprendente' (diferente a últimos informativos: pregunta retórica, hook directo, corrección de creencia). Experiencias personales: visión borrosa 17:00, oftalmóloga, regla 20-20-20 automatizada, compañero gafas azules. Lector con ojos rojos. Fuentes: Academia Americana de Oftalmología, Universidad de Cornell. Internal links a monitor, ergonomía, productividad, mi-setup, altura. Cluster: periféricos. Imagen Pexels #5712122 (Arina Krasnikova, 800px). Nueva feature: salud-visual. 9 keywords añadidas. Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-03 23:00
 **Action:** Reestructurar topic clusters según plan editorial del usuario
 **Files:** data/topic-clusters.yaml, data/content-map.yaml, logs/changelog.md

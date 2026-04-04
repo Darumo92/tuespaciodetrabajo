@@ -27,6 +27,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
+      - fatiga-visual-pantalla
 
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
@@ -82,6 +83,7 @@ articles:
       - mejor-escritorio-elevable-electrico
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
+      - fatiga-visual-pantalla
 
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
@@ -196,6 +198,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
+      - fatiga-visual-pantalla
 
   - slug: productividad-en-casa-entorno-fisico
     title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
@@ -218,7 +221,8 @@ articles:
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
       - mejor-silla-ergonomica-calidad-precio
-    internal_links_from: []
+    internal_links_from:
+      - fatiga-visual-pantalla
 
   - slug: mejor-teclado-ergonomico
     title: "Mejor teclado ergonómico 2026"
@@ -242,7 +246,8 @@ articles:
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
-    internal_links_from: []
+    internal_links_from:
+      - tunel-carpiano-teletrabajo-prevencion
 
   - slug: tunel-carpiano-teletrabajo-prevencion
     title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
@@ -342,4 +347,29 @@ articles:
       - standing-desk-merece-la-pena
       - tunel-carpiano-teletrabajo-prevencion
       - dolor-espalda-trabajar-casa
+    internal_links_from:
+      - fatiga-visual-pantalla
+
+  - slug: fatiga-visual-pantalla
+    title: "Fatiga visual por pantalla: cómo proteger tus ojos"
+    path: src/content/articulos/fatiga-visual-pantalla.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "fatiga visual pantalla"
+    secondary_keywords:
+      - fatiga visual digital
+      - síndrome visual informático
+      - proteger ojos pantalla
+      - ojos cansados ordenador
+      - como evitar fatiga ocular
+    cluster: perifericos
+    status: approved
+    date: 2026-04-04
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-monitor-trabajar-desde-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - productividad-en-casa-entorno-fisico
+      - mi-setup-home-office-2026
+      - altura-correcta-escritorio-silla
     internal_links_from: []

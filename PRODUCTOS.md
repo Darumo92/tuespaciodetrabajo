@@ -20,6 +20,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | tunel-carpiano-teletrabajo-prevencion | tunel-carpiano-teletrabajo-prevencion.webp | 7298399 | Kindel Media | https://www.pexels.com/photo/7298399/ |
 | mejor-raton-vertical-ergonomico | mejor-raton-vertical-ergonomico.webp | 7151690 | Helena Lopes | https://www.pexels.com/photo/7151690/ |
 | altura-correcta-escritorio-silla | altura-correcta-escritorio-silla.webp | 4974907 | olia danilevich | https://www.pexels.com/photo/4974907/ |
+| fatiga-visual-pantalla | fatiga-visual-pantalla.webp | 5712122 | Arina Krasnikova | https://www.pexels.com/photo/5712122/ |
 
 ---
 

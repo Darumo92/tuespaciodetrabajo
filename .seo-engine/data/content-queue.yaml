@@ -109,6 +109,15 @@ queue:
     date_created: 2026-04-03
     notes: "Guía práctica de cálculo de alturas de escritorio y silla según estatura. Ángulo: experiencia real de teletrabajador con fórmulas y test del codo, no guía genérica de tienda de muebles. SERP: Ofiprix, Sklum, Manutan, Oficinas Montiel — todos tiendas. ~2100 palabras, 5 FAQs, estructura variada (sin 'Conceptos clave', incluye tabla de alturas por estatura y sección de errores comunes). Imagen Pexels #4974907 (olia danilevich)."
 
+  - slug: fatiga-visual-pantalla
+    title: "Fatiga visual por pantalla: cómo proteger tus ojos"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-04-04
+    notes: "Guía informativa sobre fatiga visual digital para teletrabajadores. Ángulo: experiencia real de 7 años frente a pantalla, no artículo clínico. SERP: admiravision.es, aao.org, creu-blanca.es, eizo.es, fernandez-vega.com — todo clínicas/médicos. ~1900 palabras, 4 FAQs, estructura variada (sin 'Conceptos clave', sección mitos, configuración de pantalla paso a paso). Imagen Pexels #5712122 (Arina Krasnikova)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

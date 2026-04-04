@@ -30,3 +30,10 @@ features:
     blog_refs:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+
+  - id: salud-visual
+    name: "Salud visual y fatiga ocular"
+    category: guias
+    description: "Guías de prevención de fatiga visual digital y protección ocular para teletrabajadores"
+    blog_refs:
+      - fatiga-visual-pantalla
