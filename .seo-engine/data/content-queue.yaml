@@ -118,6 +118,15 @@ queue:
     date_created: 2026-04-04
     notes: "Guía informativa sobre fatiga visual digital para teletrabajadores. Ángulo: experiencia real de 7 años frente a pantalla, no artículo clínico. SERP: admiravision.es, aao.org, creu-blanca.es, eizo.es, fernandez-vega.com — todo clínicas/médicos. ~1900 palabras, 4 FAQs, estructura variada (sin 'Conceptos clave', sección mitos, configuración de pantalla paso a paso). Imagen Pexels #5712122 (Arina Krasnikova)."
 
+  - slug: mejor-soporte-monitor-brazo-articulado
+    title: "Mejor soporte de monitor (brazo articulado) 2026"
+    type: comparativa
+    category: accesorios
+    priority: high
+    status: approved
+    date_created: 2026-04-05
+    notes: "Comparativa de 6 brazos articulados para monitor (27-199 EUR) en Amazon.es. Ángulo: ergonomía específica para teletrabajadores, no listicle genérico. SERP: blogdegaming, PCComponentes, Profesional Review, Klisst, Reddit. ~2500 palabras, 5 FAQs, estructura con variación ('Brazo articulado vs. soporte de sobremesa' y 'Guía de montaje VESA'). Intro tipo contraposición/irónica. Experiencias personales: montaje ErGear con compañero, fisio con Ergotron LX. Lector preguntando dual vs individual. Fuente: INSST. Imagen Pexels #8001032 (Pavel Danilyuk)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

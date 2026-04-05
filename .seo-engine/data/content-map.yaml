@@ -84,6 +84,7 @@ articles:
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
       - fatiga-visual-pantalla
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
@@ -114,6 +115,7 @@ articles:
       - mejor-escritorio-elevable-electrico
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
@@ -140,6 +142,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - standing-desk-merece-la-pena
       - home-office-productivo-500-euros
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: home-office-productivo-500-euros
     title: "Home office productivo por menos de 500 €"
@@ -199,6 +202,7 @@ articles:
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
       - fatiga-visual-pantalla
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: productividad-en-casa-entorno-fisico
     title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
@@ -349,6 +353,7 @@ articles:
       - dolor-espalda-trabajar-casa
     internal_links_from:
       - fatiga-visual-pantalla
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: fatiga-visual-pantalla
     title: "Fatiga visual por pantalla: cómo proteger tus ojos"
@@ -372,4 +377,32 @@ articles:
       - productividad-en-casa-entorno-fisico
       - mi-setup-home-office-2026
       - altura-correcta-escritorio-silla
-    internal_links_from: []
+    internal_links_from:
+      - mejor-soporte-monitor-brazo-articulado
+
+  - slug: mejor-soporte-monitor-brazo-articulado
+    title: "Mejor soporte de monitor (brazo articulado) 2026"
+    path: src/content/articulos/mejor-soporte-monitor-brazo-articulado.mdx
+    type: comparativa
+    category: accesorios
+    primary_keyword: "mejor soporte monitor brazo articulado"
+    secondary_keywords:
+      - soporte monitor escritorio
+      - brazo articulado monitor
+      - brazo monitor VESA
+      - ergonomía monitor altura
+    cluster: perifericos
+    status: approved
+    date: 2026-04-05
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-escritorio-elevable-electrico
+      - mejor-monitor-trabajar-desde-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - altura-correcta-escritorio-silla
+      - dolor-espalda-trabajar-casa
+    internal_links_from:
+      - mejor-monitor-trabajar-desde-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - altura-correcta-escritorio-silla

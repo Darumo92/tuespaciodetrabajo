@@ -21,6 +21,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-raton-vertical-ergonomico | mejor-raton-vertical-ergonomico.webp | 7151690 | Helena Lopes | https://www.pexels.com/photo/7151690/ |
 | altura-correcta-escritorio-silla | altura-correcta-escritorio-silla.webp | 4974907 | olia danilevich | https://www.pexels.com/photo/4974907/ |
 | fatiga-visual-pantalla | fatiga-visual-pantalla.webp | 5712122 | Arina Krasnikova | https://www.pexels.com/photo/5712122/ |
+| mejor-soporte-monitor-brazo-articulado | mejor-soporte-monitor-brazo-articulado.webp | 8001032 | Pavel Danilyuk | https://www.pexels.com/photo/8001032/ |
 
 ---
 
@@ -104,3 +105,13 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Logitech Wave Keys | B07W6J71BL | /dp/B07W6J71BL | https://m.media-amazon.com/images/I/71s7K0xjGRL._AC_SL300_.jpg | ~65 EUR | verificado |
 | Cherry KC 4500 ERGO | B09ZDZX8T2 | /dp/B09ZDZX8T2 | https://m.media-amazon.com/images/I/61cPP5iAqJL._AC_SL300_.jpg | ~45 EUR | verificado |
 | Logitech Pebble Keys 2 K380s | B07W5JK8TV | /dp/B07W5JK8TV | https://m.media-amazon.com/images/I/61QwtrvzAeL._AC_SL300_.jpg | ~33 EUR | verificado |
+
+### mejor-soporte-monitor-brazo-articulado
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| ErGear Soporte Monitor 13-34" | B0FQM6QB48 | /dp/B0FQM6QB48 | https://m.media-amazon.com/images/I/619hqhPelvL._AC_SL300_.jpg | ~27 EUR | verificado |
+| BONTEC Brazo Monitor 15-34" | B0FJD3TXG4 | /dp/B0FJD3TXG4 | https://m.media-amazon.com/images/I/71vxMP+UvmL._AC_SL300_.jpg | ~35 EUR | verificado |
+| HUANUO Brazo Monitor 17-30" | B07T4HQS2N | /dp/B07T4HQS2N | https://m.media-amazon.com/images/I/71vK6sp4kZL._AC_SL300_.jpg | ~36 EUR | verificado |
+| Amazon Basics Brazo Monitor | B07DHK5DHN | /dp/B07DHK5DHN | https://m.media-amazon.com/images/I/71LoJcCSlkL._AC_SL300_.jpg | ~38 EUR | verificado |
+| ErGear Soporte Monitor Dual 32" | B0C7KQ7MX8 | /dp/B0C7KQ7MX8 | https://m.media-amazon.com/images/I/61bCfb9mO7L._AC_SL300_.jpg | ~60 EUR | verificado |
+| Ergotron LX Aluminio | B07Q8TJ2KL | /dp/B07Q8TJ2KL | https://m.media-amazon.com/images/I/71+VZmr4paL._AC_SL300_.jpg | ~199 EUR | verificado |

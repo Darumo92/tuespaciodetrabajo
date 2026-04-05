@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-05 10:30
+**Action:** Blog aprobado — Mejor soporte de monitor (brazo articulado) 2026
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-04-05 10:00
+**Action:** Blog redactado — Mejor soporte de monitor (brazo articulado) 2026
+**Files:** src/content/articulos/mejor-soporte-monitor-brazo-articulado.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Comparativa de 6 brazos articulados para monitor (27-199 EUR) con ASINs verificados en Amazon.es: ErGear 13-34" (top pick), BONTEC 15-34", HUANUO 17-30", Amazon Basics, ErGear Dual, Ergotron LX. Ángulo: ergonomía específica para teletrabajadores + sección "brazo vs sobremesa" + guía de montaje VESA, no listicle genérico de accesorios gaming. SERP: blogdegaming, PCComponentes, Profesional Review, Klisst, Reddit. ~2500 palabras, 5 FAQs. Estructura variada: incluye "Brazo articulado vs. soporte de sobremesa" y "Guía de montaje y compatibilidad VESA". Intro tipo contraposición/irónica (diferente a monitor: recomendación directa, ratón: dato biomecánico, teclado: ironía). Experiencias personales: montaje ErGear con compañero en IKEA, fisioterapeuta con Ergotron LX. Lector preguntando dual vs individual. Fuente: INSST. Pros/contras asimétricos (5/2, 3/2, 3/3, 4/2, 4/3, 5/2). Internal links a 5 artículos (escritorios, monitor, ergonomía, altura, dolor). Cluster: periféricos. Imagen Pexels #8001032 (Pavel Danilyuk, 800px). 8 keywords añadidas. Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-04 12:00
 **Action:** Blog redactado — Fatiga visual por pantalla: cómo proteger tus ojos
 **Files:** src/content/articulos/fatiga-visual-pantalla.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, data/features.yaml, PRODUCTOS.md, logs/changelog.md
