@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-05 18:30
+**Action:** Blog aprobado — Cómo mejorar la iluminación de tu espacio de trabajo
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-04-05 14:00
+**Action:** Blog redactado — Cómo mejorar la iluminación de tu espacio de trabajo
+**Files:** src/content/articulos/mejorar-iluminacion-espacio-trabajo.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa sobre iluminación de home office para teletrabajadores. Ángulo: experiencia real en despacho 8m² vs SERP dominado por tiendas de lámparas y normativa corporativa (Lightingspain, La Casa de las Lámparas, Ofiprix, Leroy Merlin, faro.es). ~2000 palabras, 5 FAQs (variable). Estructura variada: sin 'Conceptos clave', incluye 'Lo que probé antes de encontrar una solución' (sección personal única) y 'Soluciones por presupuesto' (tres niveles). Intro tipo 'ir al grano' (diferente a últimos informativos: dato sorprendente, anécdota personal). Experiencias personales: lámpara de pie con reflejos en pantalla, flexo barato que ocupaba escritorio, BenQ ScreenBar Halo. Compañera Ana en semisótano Madrid (~75 EUR solución). Lector con 6500K todo el día. Fuentes: INSST Guía Técnica RD 486/1997 (500 lux), IBV. Internal links bidireccionales a fatiga-visual-pantalla, productividad-en-casa-entorno-fisico, mi-setup-home-office-2026. Cluster: ambiente. Imagen Pexels #28491194 (Thới Nam Cao, 800px). 8 keywords añadidas. Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-05 10:30
 **Action:** Blog aprobado — Mejor soporte de monitor (brazo articulado) 2026
 **Files:** data/content-map.yaml, data/content-queue.yaml

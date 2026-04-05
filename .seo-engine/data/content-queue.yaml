@@ -127,6 +127,15 @@ queue:
     date_created: 2026-04-05
     notes: "Comparativa de 6 brazos articulados para monitor (27-199 EUR) en Amazon.es. Ángulo: ergonomía específica para teletrabajadores, no listicle genérico. SERP: blogdegaming, PCComponentes, Profesional Review, Klisst, Reddit. ~2500 palabras, 5 FAQs, estructura con variación ('Brazo articulado vs. soporte de sobremesa' y 'Guía de montaje VESA'). Intro tipo contraposición/irónica. Experiencias personales: montaje ErGear con compañero, fisio con Ergotron LX. Lector preguntando dual vs individual. Fuente: INSST. Imagen Pexels #8001032 (Pavel Danilyuk)."
 
+  - slug: mejorar-iluminacion-espacio-trabajo
+    title: "Cómo mejorar la iluminación de tu espacio de trabajo"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-04-05
+    notes: "Guía informativa sobre iluminación de home office. Ángulo: experiencia real de teletrabajador en despacho 8m², no tienda de lámparas ni normativa corporativa. SERP: Lightingspain, La Casa de las Lámparas, Ofiprix, Leroy Merlin, faro.es — todos tiendas/normativa. ~2000 palabras, 5 FAQs, estructura variada (sin 'Conceptos clave', incluye 'Lo que probé' personal y 'Soluciones por presupuesto'). Intro tipo 'ir al grano' (diferente a últimos informativos: dato sorprendente, anécdota personal). Experiencias personales: lámpara de pie con reflejos, flexo barato, BenQ ScreenBar. Compañera Ana en Madrid (semisótano). Lector con 6500K. Fuentes: INSST RD 486/1997, IBV. Internal links a 3 artículos (fatiga visual, productividad, mi-setup). Cluster: ambiente. Imagen Pexels #28491194 (Thới Nam Cao, 800px)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

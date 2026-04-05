@@ -21,6 +21,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
+      - mejorar-iluminacion-espacio-trabajo
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - ergonomia-teletrabajo-postura-correcta
@@ -28,6 +29,7 @@ articles:
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
       - fatiga-visual-pantalla
+      - mejorar-iluminacion-espacio-trabajo
 
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
@@ -225,8 +227,10 @@ articles:
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
       - mejor-silla-ergonomica-calidad-precio
+      - mejorar-iluminacion-espacio-trabajo
     internal_links_from:
       - fatiga-visual-pantalla
+      - mejorar-iluminacion-espacio-trabajo
 
   - slug: mejor-teclado-ergonomico
     title: "Mejor teclado ergonómico 2026"
@@ -377,8 +381,10 @@ articles:
       - productividad-en-casa-entorno-fisico
       - mi-setup-home-office-2026
       - altura-correcta-escritorio-silla
+      - mejorar-iluminacion-espacio-trabajo
     internal_links_from:
       - mejor-soporte-monitor-brazo-articulado
+      - mejorar-iluminacion-espacio-trabajo
 
   - slug: mejor-soporte-monitor-brazo-articulado
     title: "Mejor soporte de monitor (brazo articulado) 2026"
@@ -406,3 +412,27 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
+
+  - slug: mejorar-iluminacion-espacio-trabajo
+    title: "Cómo mejorar la iluminación de tu espacio de trabajo"
+    path: src/content/articulos/mejorar-iluminacion-espacio-trabajo.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "iluminación espacio trabajo"
+    secondary_keywords:
+      - luz para trabajar en casa
+      - lámpara escritorio home office
+      - temperatura de color trabajo
+      - iluminación home office
+    cluster: ambiente
+    status: approved
+    date: 2026-04-05
+    has_eeat_signals: true
+    internal_links_to:
+      - fatiga-visual-pantalla
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico
+    internal_links_from:
+      - fatiga-visual-pantalla
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico

@@ -22,6 +22,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | altura-correcta-escritorio-silla | altura-correcta-escritorio-silla.webp | 4974907 | olia danilevich | https://www.pexels.com/photo/4974907/ |
 | fatiga-visual-pantalla | fatiga-visual-pantalla.webp | 5712122 | Arina Krasnikova | https://www.pexels.com/photo/5712122/ |
 | mejor-soporte-monitor-brazo-articulado | mejor-soporte-monitor-brazo-articulado.webp | 8001032 | Pavel Danilyuk | https://www.pexels.com/photo/8001032/ |
+| mejorar-iluminacion-espacio-trabajo | mejorar-iluminacion-espacio-trabajo.webp | 28491194 | Thới Nam Cao | https://www.pexels.com/photo/28491194/ |
 
 ---
 
@@ -105,6 +106,9 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Logitech Wave Keys | B07W6J71BL | /dp/B07W6J71BL | https://m.media-amazon.com/images/I/71s7K0xjGRL._AC_SL300_.jpg | ~65 EUR | verificado |
 | Cherry KC 4500 ERGO | B09ZDZX8T2 | /dp/B09ZDZX8T2 | https://m.media-amazon.com/images/I/61cPP5iAqJL._AC_SL300_.jpg | ~45 EUR | verificado |
 | Logitech Pebble Keys 2 K380s | B07W5JK8TV | /dp/B07W5JK8TV | https://m.media-amazon.com/images/I/61QwtrvzAeL._AC_SL300_.jpg | ~33 EUR | verificado |
+
+### mejorar-iluminacion-espacio-trabajo
+Artículo informativo sin productos de afiliación. No requiere tracking de productos.
 
 ### mejor-soporte-monitor-brazo-articulado
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
