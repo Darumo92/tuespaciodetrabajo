@@ -23,6 +23,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | fatiga-visual-pantalla | fatiga-visual-pantalla.webp | 5712122 | Arina Krasnikova | https://www.pexels.com/photo/5712122/ |
 | mejor-soporte-monitor-brazo-articulado | mejor-soporte-monitor-brazo-articulado.webp | 8001032 | Pavel Danilyuk | https://www.pexels.com/photo/8001032/ |
 | mejorar-iluminacion-espacio-trabajo | mejorar-iluminacion-espacio-trabajo.webp | 28491194 | Thới Nam Cao | https://www.pexels.com/photo/28491194/ |
+| mejor-lampara-escritorio-led | mejor-lampara-escritorio-led.webp | 12792219 | Elijah Pilchard | https://www.pexels.com/photo/12792219/ |
 
 ---
 
@@ -109,6 +110,17 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 
 ### mejorar-iluminacion-espacio-trabajo
 Artículo informativo sin productos de afiliación. No requiere tracking de productos.
+
+### mejor-lampara-escritorio-led
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| SLATOR Lámpara LED | B07ZCY9XZ9 | /dp/B07ZCY9XZ9 | https://m.media-amazon.com/images/I/41hkXRPrNIL._AC_SL300_.jpg | ~29 EUR | verificado |
+| Aigostar Flexo LED | B0CTZXNX3D | /dp/B0CTZXNX3D | https://m.media-amazon.com/images/I/51BkjFG68SL._AC_SL300_.jpg | ~37 EUR | verificado |
+| Xiaomi Mi LED Desk Lamp 1S | B07XHCDR3M | /dp/B07XHCDR3M | https://m.media-amazon.com/images/I/31F3vrHVbXL._AC_SL300_.jpg | ~48 EUR | verificado |
+| Hokone Lámpara Pinza LED | B095KDBVDF | /dp/B095KDBVDF | https://m.media-amazon.com/images/I/61IvYe3z4rL._AC_SL300_.jpg | ~46 EUR | verificado |
+| EYOCEAN Lámpara Pinza 12W | B0DPSWPYF6 | /dp/B0DPSWPYF6 | https://m.media-amazon.com/images/I/71EjekRoskL._AC_SL300_.jpg | ~50 EUR | verificado |
+| BenQ ScreenBar | B0785D93KD | /dp/B0785D93KD | https://m.media-amazon.com/images/I/41nI6sm+OKS._AC_SL300_.jpg | ~99 EUR | verificado |
+| BenQ ScreenBar Halo 2 | B0DK59YKRS | /dp/B0DK59YKRS | https://m.media-amazon.com/images/I/41fmQI53UNL._AC_SL300_.jpg | ~179 EUR | verificado |
 
 ### mejor-soporte-monitor-brazo-articulado
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

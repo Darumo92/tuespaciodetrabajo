@@ -432,7 +432,33 @@ articles:
       - fatiga-visual-pantalla
       - mi-setup-home-office-2026
       - productividad-en-casa-entorno-fisico
+      - mejor-lampara-escritorio-led
     internal_links_from:
       - fatiga-visual-pantalla
       - mi-setup-home-office-2026
       - productividad-en-casa-entorno-fisico
+      - mejor-lampara-escritorio-led
+
+  - slug: mejor-lampara-escritorio-led
+    title: "Mejor lámpara de escritorio LED 2026"
+    path: src/content/articulos/mejor-lampara-escritorio-led.mdx
+    type: comparativa
+    category: ambiente
+    primary_keyword: "mejor lámpara escritorio LED"
+    secondary_keywords:
+      - flexo LED teletrabajo
+      - lámpara escritorio para trabajar
+      - barra de monitor LED
+      - iluminación home office
+    cluster: ambiente
+    status: approved
+    date: 2026-04-06
+    has_eeat_signals: true
+    internal_links_to:
+      - mejorar-iluminacion-espacio-trabajo
+      - fatiga-visual-pantalla
+      - mi-setup-home-office-2026
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-escritorio-elevable-electrico
+    internal_links_from:
+      - mejorar-iluminacion-espacio-trabajo

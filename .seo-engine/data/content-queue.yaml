@@ -136,6 +136,15 @@ queue:
     date_created: 2026-04-05
     notes: "Guía informativa sobre iluminación de home office. Ángulo: experiencia real de teletrabajador en despacho 8m², no tienda de lámparas ni normativa corporativa. SERP: Lightingspain, La Casa de las Lámparas, Ofiprix, Leroy Merlin, faro.es — todos tiendas/normativa. ~2000 palabras, 5 FAQs, estructura variada (sin 'Conceptos clave', incluye 'Lo que probé' personal y 'Soluciones por presupuesto'). Intro tipo 'ir al grano' (diferente a últimos informativos: dato sorprendente, anécdota personal). Experiencias personales: lámpara de pie con reflejos, flexo barato, BenQ ScreenBar. Compañera Ana en Madrid (semisótano). Lector con 6500K. Fuentes: INSST RD 486/1997, IBV. Internal links a 3 artículos (fatiga visual, productividad, mi-setup). Cluster: ambiente. Imagen Pexels #28491194 (Thới Nam Cao, 800px)."
 
+  - slug: mejor-lampara-escritorio-led
+    title: "Mejor lámpara de escritorio LED 2026"
+    type: comparativa
+    category: ambiente
+    priority: high
+    status: approved
+    date_created: 2026-04-06
+    notes: "Comparativa de 7 lámparas LED de escritorio (29-179 EUR) en Amazon.es. Pillar del cluster ambiente. Ángulo: teletrabajo + ergonomía visual (cómo la lámpara interactúa con monitor, videollamadas, jornadas largas) vs SERP dominado por El País, Xataka, La Casa Sibarita enfocados en estudiar. ~2800 palabras, 5 FAQs, estructura con variación ('Flexo, pinza o barra de monitor' + 'Tres errores que veo'). Intro tipo experiencia + recomendación directa. Productos: SLATOR (29€), Aigostar (37€), Xiaomi Desk Lamp 1S (48€, top pick), Hokone pinza (46€), EYOCEAN pinza 12W (50€), BenQ ScreenBar (99€), BenQ ScreenBar Halo 2 (179€). Experiencias personales: flexo barato ~20€ que rozaba alfombrilla, Xiaomi en escritorio de mi mujer, BenQ Halo uso diario >1 año, compañero con pinza y mando. Lector preguntando si pagar doble. Fuentes: RD 486/1997. Internal links a 5 artículos bidireccionales. Cluster: ambiente (pillar). Imagen Pexels #12792219 (Elijah Pilchard, 800px)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

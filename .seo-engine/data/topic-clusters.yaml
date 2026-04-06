@@ -149,6 +149,7 @@ clusters:
       slug: mejor-lampara-escritorio-led
       title: "Mejor lámpara de escritorio LED 2026"
       keyword: "lámpara escritorio LED"
+      status: published
     cluster_pages:
       - slug: mejorar-iluminacion-espacio-trabajo
         title: "Cómo mejorar la iluminación de tu espacio de trabajo"
