@@ -14,7 +14,9 @@ export default defineConfig({
         !page.includes('/politica-privacidad/') &&
         !page.includes('/buscar/') &&
         !page.includes('/tags') &&
-        !page.includes('/actualizaciones/'),
+        !page.includes('/actualizaciones/') &&
+        !page.includes('/ambiente/') &&
+        !page.includes('/audio-video/'),
       serialize(item) {
         return { ...item, lastmod: new Date().toISOString() };
       },
