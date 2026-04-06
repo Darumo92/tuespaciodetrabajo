@@ -61,6 +61,8 @@ const articulosOrdenados = articulos.sort(
 
 const destacados = articulosOrdenados.filter(a => a.data.destacado).slice(0, 3);
 
+// Categorías sin artículos → noindex para evitar thin content
+const esVacia = articulosOrdenados.length === 0;
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const itemListSchema = {
   '@context': 'https://schema.org',
@@ -89,6 +91,7 @@ const breadcrumbSchema = {
   title={`${info.nombre} para home office ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
   description={info.descripcion}
 >
+  {esVacia && <meta name="robots" content="noindex, follow" slot="head" />}
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="category-page-header">

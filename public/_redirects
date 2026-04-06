@@ -1,0 +1,2 @@
+# Redirect convencional de sitemap
+/sitemap.xml /sitemap-index.xml 301

@@ -30,6 +30,7 @@ const currentPath = Astro.url.pathname;
     <meta name="color-scheme" content="light dark" />
     <meta name="robots" content="max-image-preview:large" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Preload critical font (latin covers all Spanish chars) -->
@@ -39,6 +40,7 @@ const currentPath = Astro.url.pathname;
     <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Preconnect for resources loaded on article pages -->
+    <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
     <link rel="dns-prefetch" href="https://m.media-amazon.com" />
 
     <!-- DNS prefetch for external resources -->

@@ -15,6 +15,9 @@ export default defineConfig({
         !page.includes('/buscar/') &&
         !page.includes('/tags') &&
         !page.includes('/actualizaciones/'),
+      serialize(item) {
+        return { ...item, lastmod: new Date().toISOString() };
+      },
     }),
   ],
   output: 'static',
