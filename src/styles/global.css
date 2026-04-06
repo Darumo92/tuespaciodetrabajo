@@ -249,7 +249,7 @@ a:hover {
 }
 
 .logo span {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .nav {
@@ -273,7 +273,7 @@ a:hover {
 }
 
 .nav-link.active {
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   background: color-mix(in srgb, var(--color-primary) 8%, transparent);
   font-weight: 600;
 }
