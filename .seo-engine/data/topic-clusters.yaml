@@ -216,6 +216,10 @@ clusters:
         title: "Cómo proteger tu espalda si trabajas +8 horas sentado"
         keyword: "proteger espalda 8 horas sentado"
         status: planned
+      - slug: home-office-piso-pequeno
+        title: "Home office en piso pequeño: ideas y soluciones que funcionan"
+        keyword: "home office piso pequeño"
+        status: published
     notes: "Sin pilar de producto. Monetización por ads (RPM alto). Artículos informativos puros de productividad y bienestar."
 
   - name: hub-central

@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-07 10:15
+**Action:** Blog aprobado — Home office en piso pequeño: ideas y soluciones que funcionan
+**Files:** data/content-map.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-04-07 10:00
+**Action:** Blog redactado — Home office en piso pequeño: ideas y soluciones que funcionan
+**Files:** src/content/articulos/home-office-piso-pequeno.mdx, src/content/articulos/home-office-productivo-500-euros.mdx, src/content/articulos/productividad-en-casa-entorno-fisico.mdx, src/content/articulos/mejor-escritorio-elevable-electrico.mdx, src/content/articulos/mejor-soporte-monitor-brazo-articulado.mdx, data/content-map.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa sobre montar un home office en pisos pequeños (~2000 palabras). Ángulo: ergonomía real + experiencia práctica vs SERP dominado por revistas decoración (Interiores, HOLA, AD Magazine). Intro tipo contraste Pinterest vs realidad. 4 experiencias personales: salón 2019, despacho 8m², escritorio 160cm que no cabía, brazo monitor. Compañero Marcos (Madrid 50m²). Lector Pablo (cortina separadora). Fisioterapeuta sobre temperatura. Secciones: espacio mínimo, distribución (3 tipos), muebles compactos, lo que revistas no cuentan (acústica/temperatura/cables), errores, checklist. 5 FAQs de SERP data. 7 internal links salientes, 4 bidireccionales añadidos. Cluster: productividad. Imagen Pexels #6934240 (Max Vakhtbovych, 800px). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-06 12:30
 **Action:** Blog aprobado — Mejor lámpara de escritorio LED 2026
 **Files:** data/content-map.yaml, data/content-queue.yaml

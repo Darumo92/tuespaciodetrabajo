@@ -462,3 +462,32 @@ articles:
       - mejor-escritorio-elevable-electrico
     internal_links_from:
       - mejorar-iluminacion-espacio-trabajo
+
+  - slug: home-office-piso-pequeno
+    title: "Home office en piso pequeño: ideas y soluciones que funcionan"
+    path: src/content/articulos/home-office-piso-pequeno.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "home office piso pequeño"
+    secondary_keywords:
+      - despacho pequeño en casa
+      - teletrabajar espacio reducido
+      - escritorio compacto teletrabajo
+      - oficina en casa piso pequeño
+    cluster: productividad
+    status: approved
+    date: 2026-04-07
+    has_eeat_signals: true
+    internal_links_to:
+      - productividad-en-casa-entorno-fisico
+      - standing-desk-merece-la-pena
+      - mejor-escritorio-elevable-electrico
+      - mejor-soporte-monitor-brazo-articulado
+      - mejorar-iluminacion-espacio-trabajo
+      - altura-correcta-escritorio-silla
+      - home-office-productivo-500-euros
+    internal_links_from:
+      - home-office-productivo-500-euros
+      - productividad-en-casa-entorno-fisico
+      - mejor-escritorio-elevable-electrico
+      - mejor-soporte-monitor-brazo-articulado

@@ -24,6 +24,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-soporte-monitor-brazo-articulado | mejor-soporte-monitor-brazo-articulado.webp | 8001032 | Pavel Danilyuk | https://www.pexels.com/photo/8001032/ |
 | mejorar-iluminacion-espacio-trabajo | mejorar-iluminacion-espacio-trabajo.webp | 28491194 | Thới Nam Cao | https://www.pexels.com/photo/28491194/ |
 | mejor-lampara-escritorio-led | mejor-lampara-escritorio-led.webp | 12792219 | Elijah Pilchard | https://www.pexels.com/photo/12792219/ |
+| home-office-piso-pequeno | home-office-piso-pequeno.webp | 6934240 | Max Vakhtbovych | https://www.pexels.com/photo/6934240/ |
 
 ---
 
