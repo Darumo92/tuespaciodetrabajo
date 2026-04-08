@@ -267,6 +267,8 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - [ ] Meta description entre 120-155 caracteres
 - [ ] `npm run build` ejecutado sin errores
 - [ ] PRODUCTOS.md actualizado con los datos del articulo
+- [ ] Keywords verificadas en Keyword Surfer y volúmenes añadidos a seo-keywords.csv
+- [ ] Meta description incluye la variación de keyword con mayor volumen real
 
 ---
 
@@ -377,7 +379,22 @@ d) **SERP Analysis — CRITICAL RULE:**
      4. Keywords relacionadas de tus herramientas SEO (opcional)
      ```
    - WAIT for response before proceeding.
-e) **Define unique angle** from SERP data gaps. 1 sentence. If no genuine gap found, tell user.
+e) **Keyword Surfer volume check — OBLIGATORIO:**
+   After SERP data is received, present the user with a list of candidate keywords to search in Keyword Surfer:
+   ```
+   Busca estas keywords en Google con Keyword Surfer y pásame el volumen de cada una:
+   1. {primary keyword}
+   2. {secondary keyword 1}
+   3. {secondary keyword 2}
+   4-8. {variaciones más cortas / head terms que podrían tener volumen}
+   ```
+   - Include 6-10 candidate keywords: the primary, 2-3 secondaries, and 3-5 shorter/broader variations (head terms)
+   - Head terms should be 2-3 word versions WITHOUT "mejor", "para trabajar desde casa", etc. — these are the ones that actually show volume in Keyword Surfer
+   - WAIT for the user to respond with volumes
+   - Use the volume data to choose which keyword variation to prioritize in: meta description, first paragraph, and one H2
+   - Add ALL searched keywords with their volumes to seo-keywords.csv immediately
+   - If ALL candidate keywords show 0, ask user to also check the "Keyword ideas" sidebar for the highest-volume related term — that becomes the head term to include naturally in the content
+f) **Define unique angle** from SERP data gaps. 1 sentence. If no genuine gap found, tell user.
 
 **STEP 2: Draft** (sub-agents for long blog sections)
 
