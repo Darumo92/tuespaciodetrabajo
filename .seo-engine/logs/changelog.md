@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-08 16:30
+**Action:** SEO keyword data import completa — Keyword Surfer (99 keywords)
+**Files:** data/seo-keywords.csv, logs/changelog.md
+**Summary:** Importación completa de datos reales de Keyword Surfer (España) para las 99 keywords del CSV. De 99 keywords, solo 19 tienen volumen >0 en KW Surfer. Top keywords con volumen: soporte monitor escritorio (1600), escritorio elevable eléctrico (1000), mesa elevable eléctrica (720), ratón ergonómico inalámbrico (590), mejor silla ergonómica (480), organizador cables escritorio (480), caja organizador cables (480), fatiga ocular síntomas (390). La mayoría de las primary keywords muestran 0 por ser demasiado long-tail, pero Google agrupa intents y nuestros títulos contienen los head terms que sí tienen volumen. Datos corregidos vs versión anterior: organizar cables escritorio 480→110, ocultar cables escritorio 480→90, organizador cables escritorio 320→480. Principales head terms descubiertos en keyword ideas: sindrome tunel carpiano 27100, teclados ordenador 14800, flexos 9900, escritorio elevable 8100, gafas luz azul 8100, ratón ergonómico 6600, ratón vertical 3600, soporte monitor 2900, organizador de cables 2900.
+**Triggered by:** user (Keyword Surfer screenshots)
+
 ## 2026-04-08 10:15
 **Action:** Blog aprobado — Cómo organizar los cables de tu escritorio
 **Files:** data/content-map.yaml, data/content-queue.yaml
