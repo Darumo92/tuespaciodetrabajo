@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-08 10:15
+**Action:** Blog aprobado — Cómo organizar los cables de tu escritorio
+**Files:** data/content-map.yaml, data/content-queue.yaml
+**Summary:** Artículo aprobado por el usuario sin cambios. Status actualizado a approved.
+**Triggered by:** user
+
+## 2026-04-08 10:00
+**Action:** Blog redactado — Cómo organizar los cables de tu escritorio
+**Files:** src/content/articulos/organizar-cables-escritorio.mdx, src/content/articulos/productividad-en-casa-entorno-fisico.mdx, src/content/articulos/home-office-piso-pequeno.mdx, src/content/articulos/mejor-escritorio-elevable-electrico.mdx, src/content/articulos/mejorar-iluminacion-espacio-trabajo.mdx, src/content/articulos/mejor-lampara-escritorio-led.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Guía informativa sobre organización de cables de escritorio (~2000 palabras). Ángulo: experiencia real de teletrabajador tras 4 intentos en 7 años vs SERP dominado por tiendas (Leroy Merlin, Amazon) y listicles (Xataka). Intro tipo problema del lector (diferente a últimos ambiente: ir al grano, experiencia + recomendación, contraposición). 3 experiencias personales: 4 intentos de cable management, FlexiSpot E7 tensando cables, compañero de equipo con 11 cables. Lector con JUMMICO. Fisioterapeuta sobre entorno limpio. Fuente: INSST seguridad laboral. Secciones: diagnóstico cables, método 5 pasos, qué comprar y qué no, escritorios elevables, lo que aprendí tras 4 intentos. 4 FAQs de SERP. 5 internal links salientes, 5 bidireccionales añadidos. Cluster: ambiente. Imagen Pexels #25223697 (Jakub Zerdzicki, 800px). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-07 10:15
 **Action:** Blog aprobado — Home office en piso pequeño: ideas y soluciones que funcionan
 **Files:** data/content-map.yaml

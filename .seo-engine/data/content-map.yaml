@@ -139,12 +139,14 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - home-office-productivo-500-euros
+      - organizar-cables-escritorio
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - standing-desk-merece-la-pena
       - home-office-productivo-500-euros
       - mejor-soporte-monitor-brazo-articulado
+      - organizar-cables-escritorio
 
   - slug: home-office-productivo-500-euros
     title: "Home office productivo por menos de 500 €"
@@ -228,9 +230,11 @@ articles:
       - mejor-monitor-trabajar-desde-casa
       - mejor-silla-ergonomica-calidad-precio
       - mejorar-iluminacion-espacio-trabajo
+      - organizar-cables-escritorio
     internal_links_from:
       - fatiga-visual-pantalla
       - mejorar-iluminacion-espacio-trabajo
+      - organizar-cables-escritorio
 
   - slug: mejor-teclado-ergonomico
     title: "Mejor teclado ergonómico 2026"
@@ -433,11 +437,13 @@ articles:
       - mi-setup-home-office-2026
       - productividad-en-casa-entorno-fisico
       - mejor-lampara-escritorio-led
+      - organizar-cables-escritorio
     internal_links_from:
       - fatiga-visual-pantalla
       - mi-setup-home-office-2026
       - productividad-en-casa-entorno-fisico
       - mejor-lampara-escritorio-led
+      - organizar-cables-escritorio
 
   - slug: mejor-lampara-escritorio-led
     title: "Mejor lámpara de escritorio LED 2026"
@@ -460,8 +466,10 @@ articles:
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
       - mejor-escritorio-elevable-electrico
+      - organizar-cables-escritorio
     internal_links_from:
       - mejorar-iluminacion-espacio-trabajo
+      - organizar-cables-escritorio
 
   - slug: home-office-piso-pequeno
     title: "Home office en piso pequeño: ideas y soluciones que funcionan"
@@ -486,8 +494,38 @@ articles:
       - mejorar-iluminacion-espacio-trabajo
       - altura-correcta-escritorio-silla
       - home-office-productivo-500-euros
+      - organizar-cables-escritorio
     internal_links_from:
       - home-office-productivo-500-euros
       - productividad-en-casa-entorno-fisico
       - mejor-escritorio-elevable-electrico
       - mejor-soporte-monitor-brazo-articulado
+      - organizar-cables-escritorio
+
+  - slug: organizar-cables-escritorio
+    title: "Cómo organizar los cables de tu escritorio"
+    path: src/content/articulos/organizar-cables-escritorio.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "organizar cables escritorio"
+    secondary_keywords:
+      - organizador cables escritorio
+      - ocultar cables escritorio
+      - esconder cables bajo mesa
+      - gestión cables home office
+    cluster: ambiente
+    status: approved
+    date: 2026-04-08
+    has_eeat_signals: true
+    internal_links_to:
+      - productividad-en-casa-entorno-fisico
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
+      - mejorar-iluminacion-espacio-trabajo
+      - mejor-lampara-escritorio-led
+    internal_links_from:
+      - productividad-en-casa-entorno-fisico
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
+      - mejorar-iluminacion-espacio-trabajo
+      - mejor-lampara-escritorio-led

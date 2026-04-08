@@ -145,6 +145,15 @@ queue:
     date_created: 2026-04-06
     notes: "Comparativa de 7 lámparas LED de escritorio (29-179 EUR) en Amazon.es. Pillar del cluster ambiente. Ángulo: teletrabajo + ergonomía visual (cómo la lámpara interactúa con monitor, videollamadas, jornadas largas) vs SERP dominado por El País, Xataka, La Casa Sibarita enfocados en estudiar. ~2800 palabras, 5 FAQs, estructura con variación ('Flexo, pinza o barra de monitor' + 'Tres errores que veo'). Intro tipo experiencia + recomendación directa. Productos: SLATOR (29€), Aigostar (37€), Xiaomi Desk Lamp 1S (48€, top pick), Hokone pinza (46€), EYOCEAN pinza 12W (50€), BenQ ScreenBar (99€), BenQ ScreenBar Halo 2 (179€). Experiencias personales: flexo barato ~20€ que rozaba alfombrilla, Xiaomi en escritorio de mi mujer, BenQ Halo uso diario >1 año, compañero con pinza y mando. Lector preguntando si pagar doble. Fuentes: RD 486/1997. Internal links a 5 artículos bidireccionales. Cluster: ambiente (pillar). Imagen Pexels #12792219 (Elijah Pilchard, 800px)."
 
+  - slug: organizar-cables-escritorio
+    title: "Cómo organizar los cables de tu escritorio"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-04-08
+    notes: "Guía informativa sobre organización de cables de escritorio. Ángulo: experiencia real de teletrabajador tras 4 intentos en 7 años, no catálogo de tienda ni listicle de accesorios. SERP: Ofiprix (blog tienda), Leroy Merlin (productos), Amazon (productos), Reddit, Xataka (23 ideas listicle). ~2000 palabras, 4 FAQs de SERP data. Estructura variada (sin 'Conceptos clave', sección personal 'Lo que aprendí tras 4 intentos' en vez de 'Errores comunes'). Intro tipo 'problema del lector'. Experiencias personales: 4 intentos cable management, FlexiSpot E7 tensando cables, bridas de plástico rompiendo. Compañero de equipo con 11 cables. Lector con JUMMICO. Fisioterapeuta sobre entorno limpio. Fuente: INSST. 5 internal links bidireccionales. Cluster: ambiente. Imagen Pexels #25223697 (Jakub Zerdzicki, 800px)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

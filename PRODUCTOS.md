@@ -25,6 +25,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejorar-iluminacion-espacio-trabajo | mejorar-iluminacion-espacio-trabajo.webp | 28491194 | Thới Nam Cao | https://www.pexels.com/photo/28491194/ |
 | mejor-lampara-escritorio-led | mejor-lampara-escritorio-led.webp | 12792219 | Elijah Pilchard | https://www.pexels.com/photo/12792219/ |
 | home-office-piso-pequeno | home-office-piso-pequeno.webp | 6934240 | Max Vakhtbovych | https://www.pexels.com/photo/6934240/ |
+| organizar-cables-escritorio | organizar-cables-escritorio.webp | 25223697 | Jakub Zerdzicki | https://www.pexels.com/photo/25223697/ |
 
 ---
 
