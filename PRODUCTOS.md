@@ -26,6 +26,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-lampara-escritorio-led | mejor-lampara-escritorio-led.webp | 12792219 | Elijah Pilchard | https://www.pexels.com/photo/12792219/ |
 | home-office-piso-pequeno | home-office-piso-pequeno.webp | 6934240 | Max Vakhtbovych | https://www.pexels.com/photo/6934240/ |
 | organizar-cables-escritorio | organizar-cables-escritorio.webp | 25223697 | Jakub Zerdzicki | https://www.pexels.com/photo/25223697/ |
+| novedades-home-office-2026 | novedades-home-office-2026.webp | 4596575 | Alex Staudinger | https://www.pexels.com/photo/4596575/ |
 
 ---
 

@@ -22,6 +22,7 @@ articles:
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
       - mejorar-iluminacion-espacio-trabajo
+      - novedades-home-office-2026
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - ergonomia-teletrabajo-postura-correcta
@@ -170,6 +171,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
+      - novedades-home-office-2026
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - mejor-escritorio-elevable-electrico
@@ -231,6 +233,7 @@ articles:
       - mejor-silla-ergonomica-calidad-precio
       - mejorar-iluminacion-espacio-trabajo
       - organizar-cables-escritorio
+      - novedades-home-office-2026
     internal_links_from:
       - fatiga-visual-pantalla
       - mejorar-iluminacion-espacio-trabajo
@@ -529,3 +532,34 @@ articles:
       - mejor-escritorio-elevable-electrico
       - mejorar-iluminacion-espacio-trabajo
       - mejor-lampara-escritorio-led
+
+  - slug: novedades-home-office-2026
+    title: "Novedades en home office 2026: los productos más interesantes"
+    path: src/content/articulos/novedades-home-office-2026.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "novedades home office 2026"
+    secondary_keywords:
+      - productos home office
+      - tendencias teletrabajo
+      - accesorios home office
+      - home office 2026
+    cluster: hub-central
+    status: approved
+    date: 2026-04-09
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-escritorio-elevable-electrico
+      - standing-desk-merece-la-pena
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-raton-vertical-ergonomico
+      - mejor-teclado-ergonomico
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-soporte-monitor-brazo-articulado
+      - mi-setup-home-office-2026
+      - home-office-productivo-500-euros
+    internal_links_from:
+      - mi-setup-home-office-2026
+      - home-office-productivo-500-euros
+      - productividad-en-casa-entorno-fisico

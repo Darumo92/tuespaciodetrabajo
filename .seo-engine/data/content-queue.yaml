@@ -154,6 +154,15 @@ queue:
     date_created: 2026-04-08
     notes: "Guía informativa sobre organización de cables de escritorio. Ángulo: experiencia real de teletrabajador tras 4 intentos en 7 años, no catálogo de tienda ni listicle de accesorios. SERP: Ofiprix (blog tienda), Leroy Merlin (productos), Amazon (productos), Reddit, Xataka (23 ideas listicle). ~2000 palabras, 4 FAQs de SERP data. Estructura variada (sin 'Conceptos clave', sección personal 'Lo que aprendí tras 4 intentos' en vez de 'Errores comunes'). Intro tipo 'problema del lector'. Experiencias personales: 4 intentos cable management, FlexiSpot E7 tensando cables, bridas de plástico rompiendo. Compañero de equipo con 11 cables. Lector con JUMMICO. Fisioterapeuta sobre entorno limpio. Fuente: INSST. 5 internal links bidireccionales. Cluster: ambiente. Imagen Pexels #25223697 (Jakub Zerdzicki, 800px)."
 
+  - slug: novedades-home-office-2026
+    title: "Novedades en home office 2026: los productos más interesantes"
+    type: informativo
+    category: guias
+    priority: medium
+    status: approved
+    date_created: 2026-04-09
+    notes: "Artículo informativo transversal sobre productos interesantes de home office en 2026. Ángulo: selección personal de un teletrabajador de 7 años, no resumen de feria. Keywords con 0 volumen directo pero funciona como hub de internal linking (10 links a comparativas). SERP débil y sin listicle de novedades. ~1900 palabras, 4 FAQs. Estructura variada (incluye 'Lo que todavía no me convence' y 'Qué voy a cambiar'). Imagen Pexels #4596575 (Alex Staudinger, 800px)."
+
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     type: comparativa

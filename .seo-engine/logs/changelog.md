@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-09 10:00
+**Action:** Blog redactado — Novedades en home office 2026: los productos más interesantes
+**Files:** src/content/articulos/novedades-home-office-2026.mdx, public/images/articulos/novedades-home-office-2026.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Artículo informativo transversal (hub-central) sobre productos interesantes de home office en 2026. ~1900 palabras, 4 FAQs, 10 internal links a comparativas existentes. Keywords con 0 volumen directo (8 keywords buscadas en KW Surfer, todas 0). Ángulo: selección personal de teletrabajador veterano, no resumen de feria. Estructura variada con "Lo que todavía no me convence" y "Qué voy a cambiar". Imagen Pexels #4596575 (Alex Staudinger, 800px). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-08 16:30
 **Action:** SEO keyword data import completa — Keyword Surfer (99 keywords)
 **Files:** data/seo-keywords.csv, logs/changelog.md
