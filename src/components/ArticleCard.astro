@@ -46,7 +46,7 @@ const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
 const esActualizado = !!actualizadoEn;
 ---
 
-<article class="article-card" data-tipo={esInformativo ? 'informativo' : 'comparativa'}>
+<article class="article-card" data-tipo={esInformativo ? 'informativo' : 'comparativa'} style={`--card-accent: var(--color-cat-${esInformativo ? 'guias' : categoria})`}>
   <a href={url} class="article-card-image" aria-hidden="true" tabindex="-1">
     {imagen ? (
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />
@@ -55,15 +55,12 @@ const esActualizado = !!actualizadoEn;
         <CategoryIcon categoria={esInformativo ? 'guias' : categoria} size={48} />
       </div>
     )}
+    <span class={`article-card-category badge badge-${esInformativo ? 'guias' : categoria}`}>
+      {info.nombre}
+    </span>
   </a>
 
   <div class="article-card-body">
-    <div class="article-card-badges">
-      <span class={`article-card-category badge badge-${categoria}`}>
-        {info.nombre}
-      </span>
-    </div>
-
     <a href={url}>
       <Heading class="article-card-title">{titulo}</Heading>
     </a>
