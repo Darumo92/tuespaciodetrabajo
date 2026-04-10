@@ -1699,14 +1699,15 @@ button:focus-visible,
 
 .trust-card {
   display: flex;
-  align-items: flex-start;
-  gap: 0.875rem;
-  padding: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2rem 1.5rem;
   background: var(--color-bg-card);
   border-radius: var(--radius-md);
   border: 1px solid var(--color-border);
-  border-top: 3px solid var(--color-primary);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
 }
 
 .trust-card:hover {
@@ -1714,31 +1715,34 @@ button:focus-visible,
   box-shadow: var(--shadow-md);
 }
 
-.trust-card:nth-child(2) {
-  border-top-color: var(--color-secondary);
-}
-
-.trust-card:nth-child(3) {
-  border-top-color: var(--color-accent);
-}
-
 .trust-card-icon {
-  flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: color-mix(in srgb, var(--color-primary) 8%, var(--color-bg));
-  border-radius: var(--radius-sm);
+  border-radius: 14px;
+  margin-bottom: 0.25rem;
+}
+
+.trust-card-icon--blue {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 12%, transparent), color-mix(in srgb, var(--color-primary) 5%, transparent));
   color: var(--color-primary);
 }
 
+.trust-card-icon--rose {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-rose) 12%, transparent), color-mix(in srgb, var(--color-rose) 5%, transparent));
+  color: var(--color-rose);
+}
+
+.trust-card-icon--green {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 12%, transparent), color-mix(in srgb, var(--color-accent) 5%, transparent));
+  color: var(--color-accent);
+}
+
 .trust-card strong {
-  display: block;
   font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 0.2rem;
   color: var(--color-text);
 }
 
