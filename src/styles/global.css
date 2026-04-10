@@ -85,9 +85,9 @@
   --radius-xl: 16px;
 
   --color-footer-bg: #1a1a2e;
-  --color-footer-text: #a0a0b8;
+  --color-footer-text: #b8b8cc;
   --color-footer-heading: #f0eff4;
-  --color-footer-link: #8e8ea6;
+  --color-footer-link: #a0a0ba;
   --color-footer-border: #2e2e48;
 
   --transition: 0.2s ease;
@@ -1245,7 +1245,7 @@ a:hover {
 }
 
 .footer-logo-accent {
-  color: var(--color-primary-light);
+  color: #93c5fd;
 }
 
 .footer-legal-nav {
