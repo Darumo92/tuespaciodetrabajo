@@ -14,19 +14,10 @@ const recientes = articulos
   .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime())
   .slice(0, 4);
 
-const comparativas = articulos.filter(a => a.data.tipo !== 'informativo');
-const totalProductos = comparativas.reduce((sum, a) => {
-  const matches = a.body?.match(/nombre:\s*"/g);
-  return sum + (matches ? matches.length : 0);
-}, 0);
-
 // Avoid showing duplicate sections: if all recientes are already in destacados, skip recientes
 const destacadoSlugs = new Set(destacados.map(a => a.slug));
 const recientesSinDuplicar = recientes.filter(a => !destacadoSlugs.has(a.slug));
 const mostrarRecientes = recientesSinDuplicar.length > 0;
-
-// Only show stats when numbers are meaningful
-const mostrarStats = totalProductos >= 10 && comparativas.length >= 3;
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
@@ -68,47 +59,6 @@ const itemListSchema = {
     name: a.data.titulo,
   })),
 };
-
-// Seasonal content for home office
-const now = new Date();
-const month = now.getMonth() + 1; // 1-12
-
-type SeasonalConfig = { tags: string[]; titulo: string; icono: string; color: string };
-const seasonalMap: SeasonalConfig[] = [];
-
-// Jan-Feb: New year resolutions + back to remote work
-if (month >= 1 && month <= 2) {
-  seasonalMap.push({ tags: ['propositos', 'renovar', 'setup'], titulo: 'Propósitos: renueva tu espacio', icono: '🎯', color: '#2563eb' });
-  seasonalMap.push({ tags: ['teletrabajo', 'home office', 'vuelta'], titulo: 'Vuelta al trabajo remoto', icono: '💻', color: '#047857' });
-}
-// Mar-May: Spring refresh
-if (month >= 3 && month <= 5) {
-  seasonalMap.push({ tags: ['renovar', 'setup', 'primavera', 'organizacion'], titulo: 'Primavera: hora de renovar tu setup', icono: '🌱', color: '#047857' });
-}
-// Jun-Aug: Summer heat
-if (month >= 6 && month <= 8) {
-  seasonalMap.push({ tags: ['calor', 'verano', 'ventilacion', 'climatizacion'], titulo: 'Verano: combate el calor en tu oficina', icono: '☀️', color: '#d97706' });
-}
-// Sep-Nov: Back to routine + Black Friday
-if (month >= 9 && month <= 11) {
-  seasonalMap.push({ tags: ['vuelta', 'rutina', 'productividad', 'organizacion'], titulo: 'Vuelta a la rutina', icono: '📋', color: '#7c3aed' });
-  seasonalMap.push({ tags: ['black friday', 'ofertas', 'descuentos'], titulo: 'Black Friday se acerca', icono: '🏷️', color: '#dc2626' });
-}
-// Dec: Gifts
-if (month === 12) {
-  seasonalMap.push({ tags: ['regalo', 'navidad', 'teletrabajador'], titulo: 'Regalos para teletrabajadores', icono: '🎁', color: '#dc2626' });
-}
-
-// Find matching seasonal articles
-const seasonalArticles: { articulo: typeof articulos[0]; config: SeasonalConfig }[] = [];
-for (const config of seasonalMap) {
-  const match = articulos.find(a =>
-    a.data.tags?.some(t => config.tags.some(st => t.toLowerCase().includes(st)))
-  );
-  if (match && !seasonalArticles.some(s => s.articulo.slug === match.slug)) {
-    seasonalArticles.push({ articulo: match, config });
-  }
-}
 
 const categorias = [
   {
@@ -159,64 +109,52 @@ const categorias = [
   <!-- Hero -->
   <section class="hero">
     <div class="container">
-      <h1 class="hero-title">
-        Tu espacio de trabajo perfecto,<br />
-        <span>sin perder tiempo buscando</span>
-      </h1>
-      <p class="hero-subtitle">
-        Analizamos sillas, escritorios y accesorios en Amazon para que tú solo tengas que elegir.
-      </p>
-      {mostrarStats && (
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <strong>{totalProductos}+</strong>
-            <span>productos</span>
-          </div>
-          <div class="hero-stat">
-            <strong>{comparativas.length}</strong>
-            <span>comparativas</span>
-          </div>
-          <div class="hero-stat">
-            <strong>100%</strong>
-            <span>independiente</span>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Guías y comparativas {new Date().getFullYear()}</p>
+          <h1 class="hero-title">
+            Crea tu espacio de trabajo <span>perfecto</span>
+          </h1>
+          <p class="hero-subtitle">
+            Análisis honestos de sillas, escritorios y accesorios para teletrabajar desde casa con comodidad.
+          </p>
+          <div class="hero-cta">
+            <a href="/articulos/" class="hero-cta-btn hero-cta-primary">Ver comparativas</a>
+            <a href="/guias/" class="hero-cta-btn hero-cta-secondary">Leer guías</a>
           </div>
         </div>
-      )}
-      <div class="hero-cta">
-        {categorias.map(cat => (
-          <a href={`/${cat.slug}/`} class="hero-cat-pill">
-            <CategoryIcon categoria={cat.slug} size={16} /> {cat.nombre}
-          </a>
-        ))}
-      </div>
-      <p class="hero-meta">
-        Precios actualizados en {new Date().toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })} · Comparados en Amazon.es
-      </p>
-    </div>
-  </section>
-
-  <!-- Seasonal Banner -->
-  {seasonalArticles.length > 0 && (
-    <section class="seasonal-banner">
-      <div class="container">
-        <div class="seasonal-items">
-          {seasonalArticles.slice(0, 2).map(({ articulo: sa, config }) => {
-            const saUrl = `/${sa.data.tipo === 'informativo' ? 'guias' : sa.data.categoria}/${sa.slug}/`;
+        <div class="hero-bento">
+          {categorias.slice(0, 4).map(cat => (
+            <a href={`/${cat.slug}/`} class="hero-bento-card">
+              <span class="hero-bento-icon"><CategoryIcon categoria={cat.slug} size={24} /></span>
+              <div>
+                <p class="hero-bento-name">{cat.nombre}</p>
+                <p class="hero-bento-count">{cat.count > 0 ? `${cat.count} artículos` : 'Próximamente'}</p>
+              </div>
+            </a>
+          ))}
+          {destacados.length > 0 && (() => {
+            const feat = destacados[0];
+            const featUrl = feat.data.tipo === 'informativo'
+              ? `/guias/${feat.slug}/`
+              : `/${feat.data.categoria}/${feat.slug}/`;
             return (
-              <a href={saUrl} class="seasonal-item" style={`--seasonal-color: ${config.color}`}>
-                <span class="seasonal-icon">{config.icono}</span>
-                <div class="seasonal-text">
-                  <strong>{config.titulo}</strong>
-                  <span>{sa.data.titulo}</span>
+              <a href={featUrl} class="hero-bento-featured">
+                <div class="hero-bento-featured-icon">
+                  <CategoryIcon categoria={feat.data.tipo === 'informativo' ? 'guias' : feat.data.categoria} size={20} />
                 </div>
-                <span class="seasonal-arrow">→</span>
+                <div class="hero-bento-featured-text">
+                  <p class="hero-bento-featured-label">Destacado</p>
+                  <p class="hero-bento-featured-title">{feat.data.titulo}</p>
+                </div>
+                <span class="hero-bento-featured-arrow">→</span>
               </a>
             );
-          })}
+          })()}
         </div>
       </div>
-    </section>
-  )}
+    </div>
+  </section>
 
   <!-- Trust / Social proof — above the fold for E-E-A-T -->
   <section class="trust-section">
