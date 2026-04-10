@@ -60,6 +60,15 @@ const itemListSchema = {
   })),
 };
 
+const catColors: Record<string, string> = {
+  sillas: '#2563eb',
+  escritorios: '#f59e0b',
+  accesorios: '#10b981',
+  ambiente: '#ec4899',
+  'audio-video': '#8b5cf6',
+  guias: '#f43f5e',
+};
+
 const categorias = [
   {
     slug: 'sillas',
@@ -192,19 +201,15 @@ const categorias = [
       <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
       <div class="categories-grid reveal-group">
         {categorias.map(cat => (
-          <a href={`/${cat.slug}/`} class="category-card">
+          <a href={`/${cat.slug}/`} class="category-card" style={`--cat-color: ${catColors[cat.slug] || '#2563eb'}`}>
             <span class="category-icon" aria-hidden="true"><CategoryIcon categoria={cat.slug} size={24} /></span>
             <div class="category-info">
               <h3>{cat.nombre}</h3>
               <p>{cat.descripcion}</p>
               {cat.count > 0 ? (
-                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-primary); font-weight: 600;">
-                  {cat.count} {cat.count === 1 ? 'artículo' : 'artículos'}
-                </p>
+                <p class="category-count">{cat.count} {cat.count === 1 ? 'artículo' : 'artículos'}</p>
               ) : (
-                <p style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--color-text-light); font-weight: 500;">
-                  Próximamente
-                </p>
+                <p class="category-count category-count--empty">Próximamente</p>
               )}
             </div>
           </a>
