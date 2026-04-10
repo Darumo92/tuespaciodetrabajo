@@ -218,12 +218,16 @@ function starData(val: number) {
   background: var(--color-bg);
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .comp-sort-btn:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
+}
+
+.comp-sort-btn:active {
+  transform: scale(0.97);
 }
 
 .comp-sort-btn--active,
