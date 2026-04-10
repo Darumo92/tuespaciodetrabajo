@@ -1871,6 +1871,22 @@ button:focus-visible,
   .reveal-group.revealed > * {
     animation: none;
   }
+
+  .nav-dropdown-menu {
+    transition: none;
+  }
+
+  .article-card,
+  .affiliate-button,
+  .hero-cta-btn,
+  .hero-cat-pill,
+  .seasonal-item,
+  .category-card,
+  .category-icon,
+  .trust-card,
+  .comp-sort-btn {
+    transition: none;
+  }
 }
 
 /* =========================================
