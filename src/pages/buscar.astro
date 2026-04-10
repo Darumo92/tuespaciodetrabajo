@@ -21,16 +21,16 @@ const breadcrumbSchema = {
   <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="container section">
-    <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">
+    <h1 class="search-title">
       Buscar artículos
     </h1>
-    <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
+    <p class="search-subtitle">
       Encuentra guías y comparativas sobre productos para tu home office
     </p>
 
     <div class="search-box">
       <label for="search-input" class="sr-only">Buscar artículos</label>
-      <div style="position: relative;">
+      <div class="search-input-wrap">
         <span class="search-icon" aria-hidden="true">🔍</span>
         <input
           type="search"
@@ -40,30 +40,30 @@ const breadcrumbSchema = {
           spellcheck="false"
         />
       </div>
-      <div id="search-meta" class="search-meta" style="display:none;"></div>
+      <div id="search-meta" class="search-meta search-meta--hidden"></div>
     </div>
 
     <div id="results-container">
       <div id="loading-state" class="search-state">
         <p class="text-muted">Cargando índice de artículos...</p>
       </div>
-      <div id="empty-state" class="search-state" style="display:none;">
-        <p style="font-size: 3rem; margin-bottom: 0.75rem;">🖥️</p>
+      <div id="empty-state" class="search-state search-state--hidden">
+        <p class="search-state-icon">🖥️</p>
         <p class="text-muted">Escribe algo para buscar entre los artículos</p>
       </div>
-      <div id="no-results-state" class="search-state" style="display:none;">
-        <p style="font-size: 3rem; margin-bottom: 0.75rem;">🔍</p>
-        <h2 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Sin resultados</h2>
+      <div id="no-results-state" class="search-state search-state--hidden">
+        <p class="search-state-icon">🔍</p>
+        <h2 class="search-state-heading">Sin resultados</h2>
         <p class="text-muted">Prueba con otras palabras clave o explora por categoria:</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-top: 1rem;">
-          <a href="/sillas/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="sillas" size={14} /> Sillas</a>
-          <a href="/escritorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</a>
-          <a href="/accesorios/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</a>
-          <a href="/ambiente/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</a>
-          <a href="/audio-video/" class="affiliate-button" style="font-size: 0.85rem; padding: 0.5rem 1rem;"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</a>
+        <div class="search-state-cats">
+          <a href="/sillas/" class="affiliate-button search-cat-btn"><CategoryIcon categoria="sillas" size={14} /> Sillas</a>
+          <a href="/escritorios/" class="affiliate-button search-cat-btn"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</a>
+          <a href="/accesorios/" class="affiliate-button search-cat-btn"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</a>
+          <a href="/ambiente/" class="affiliate-button search-cat-btn"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</a>
+          <a href="/audio-video/" class="affiliate-button search-cat-btn"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</a>
         </div>
       </div>
-      <div id="results-grid" class="articles-grid" style="display:none;" role="region" aria-live="polite" aria-label="Resultados de busqueda"></div>
+      <div id="results-grid" class="articles-grid search-results--hidden" role="region" aria-live="polite" aria-label="Resultados de busqueda"></div>
     </div>
   </div>
 </Base>
@@ -121,6 +121,60 @@ const breadcrumbSchema = {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+  }
+
+  .search-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-subtitle {
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .search-input-wrap {
+    position: relative;
+  }
+
+  .search-meta--hidden {
+    display: none;
+  }
+
+  .search-state--hidden {
+    display: none;
+  }
+
+  .search-results--hidden {
+    display: none;
+  }
+
+  .search-state-icon {
+    font-size: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .search-state-heading {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .search-state-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .search-cat-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .search-error {
+    color: var(--color-primary);
   }
 </style>
 
@@ -238,10 +292,10 @@ const breadcrumbSchema = {
 
     if (!q) {
       loadingState.style.display = 'none';
-      emptyState.style.display = '';
-      noResultsState.style.display = 'none';
-      resultsGrid.style.display = 'none';
-      meta.style.display = 'none';
+      emptyState.classList.remove('search-state--hidden');
+      noResultsState.classList.add('search-state--hidden');
+      resultsGrid.classList.add('search-results--hidden');
+      meta.classList.add('search-meta--hidden');
       return;
     }
 
@@ -261,18 +315,18 @@ const breadcrumbSchema = {
     });
 
     loadingState.style.display = 'none';
-    emptyState.style.display = 'none';
+    emptyState.classList.add('search-state--hidden');
 
     if (results.length === 0) {
-      noResultsState.style.display = '';
-      resultsGrid.style.display = 'none';
-      meta.style.display = 'none';
+      noResultsState.classList.remove('search-state--hidden');
+      resultsGrid.classList.add('search-results--hidden');
+      meta.classList.add('search-meta--hidden');
     } else {
-      noResultsState.style.display = 'none';
+      noResultsState.classList.add('search-state--hidden');
       resultsGrid.innerHTML = results.map(a => renderCard(a, q)).join('');
-      resultsGrid.style.display = '';
+      resultsGrid.classList.remove('search-results--hidden');
       meta.textContent = `${results.length} ${results.length === 1 ? 'resultado' : 'resultados'} para "${q}"`;
-      meta.style.display = '';
+      meta.classList.remove('search-meta--hidden');
     }
   }
 
@@ -284,11 +338,11 @@ const breadcrumbSchema = {
     .then((data: Article[]) => {
       allArticles = data;
       loadingState.style.display = 'none';
-      emptyState.style.display = '';
+      emptyState.classList.remove('search-state--hidden');
       if (input.value.trim()) search(input.value);
     })
     .catch(() => {
-      loadingState.innerHTML = '<p style="color:var(--color-primary);">Error cargando el índice. Recarga la página.</p>';
+      loadingState.innerHTML = '<p class="search-error">Error cargando el índice. Recarga la página.</p>';
     });
 
   let debounceTimer: ReturnType<typeof setTimeout>;
