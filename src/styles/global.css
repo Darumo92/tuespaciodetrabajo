@@ -1210,6 +1210,14 @@ a:hover {
   gap: 0.5rem;
 }
 
+.footer a {
+  color: var(--color-footer-link);
+}
+
+.footer a:hover {
+  color: var(--color-footer-heading);
+}
+
 .footer-links a {
   color: var(--color-footer-link);
   font-size: 0.875rem;
@@ -1244,8 +1252,8 @@ a:hover {
   color: var(--color-footer-heading);
 }
 
-.footer-logo-accent {
-  color: #e0e7ff;
+.footer .footer-logo-accent {
+  color: #fff;
 }
 
 .footer-legal-nav {
