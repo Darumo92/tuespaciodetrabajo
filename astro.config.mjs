@@ -15,8 +15,8 @@ export default defineConfig({
         !page.includes('/buscar/') &&
         !page.includes('/tags') &&
         !page.includes('/actualizaciones/') &&
-        !page.includes('/ambiente/') &&
-        !page.includes('/audio-video/'),
+        page !== 'https://tuespaciodetrabajo.com/ambiente/' &&
+        page !== 'https://tuespaciodetrabajo.com/audio-video/',
       serialize(item) {
         return { ...item, lastmod: new Date().toISOString() };
       },
