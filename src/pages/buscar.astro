@@ -342,7 +342,7 @@ const breadcrumbSchema = {
       if (input.value.trim()) search(input.value);
     })
     .catch(() => {
-      loadingState.innerHTML = '<p class="search-error">Error cargando el índice. Recarga la página.</p>';
+      loadingState.innerHTML = '<p class="search-error" role="alert">Error cargando el índice. Recarga la página.</p>';
     });
 
   let debounceTimer: ReturnType<typeof setTimeout>;
@@ -351,5 +351,5 @@ const breadcrumbSchema = {
     debounceTimer = setTimeout(() => search(input.value), 200);
   });
 
-  input.focus();
+  if (new URLSearchParams(window.location.search).get('q')) input.focus();
 </script>

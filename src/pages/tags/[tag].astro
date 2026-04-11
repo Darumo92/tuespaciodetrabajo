@@ -41,8 +41,8 @@ const breadcrumbSchema = {
 ---
 
 <Base
-  title={`${tagName} — articulos y guias | Tu Espacio de Trabajo`}
-  description={`Todos los articulos sobre ${tagName} en Tu Espacio de Trabajo. ${articulos.length} guias y comparativas de home office.`}
+  title={`${tagName} | Tu Espacio de Trabajo`}
+  description={`Articulos sobre ${tagName}: guias de ergonomia, comparativas de productos y consejos para tu home office. ${articulos.length} ${articulos.length === 1 ? 'articulo disponible' : 'articulos disponibles'}.`}
 >
   <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
