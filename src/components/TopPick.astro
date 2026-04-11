@@ -52,6 +52,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
           >
             <StoreIcon tienda="amazon" size={15} />
             Ver en Amazon — {precio}
+            <span class="sr-only">(se abre en nueva pestaña)</span>
           </a>
         </div>
       )}
@@ -184,5 +185,17 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   background: rgba(255, 255, 255, 0.04);
   border-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
   box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 8%, transparent), 0 0 0 1px color-mix(in srgb, var(--color-primary) 5%, transparent);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 </style>

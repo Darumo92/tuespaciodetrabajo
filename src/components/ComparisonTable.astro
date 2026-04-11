@@ -126,10 +126,10 @@ function starData(val: number) {
 {productos.length > 2 && (
   <div class="comp-sort">
     <span class="comp-sort-label">Ordenar por:</span>
-    <button class="comp-sort-btn comp-sort-btn--active" data-sort="default">Recomendado</button>
-    <button class="comp-sort-btn" data-sort="price-asc">Precio ↑</button>
-    <button class="comp-sort-btn" data-sort="price-desc">Precio ↓</button>
-    <button class="comp-sort-btn" data-sort="rating">Valoración</button>
+    <button class="comp-sort-btn comp-sort-btn--active" data-sort="default" aria-pressed="true">Recomendado</button>
+    <button class="comp-sort-btn" data-sort="price-asc" aria-pressed="false">Precio ↑</button>
+    <button class="comp-sort-btn" data-sort="price-desc" aria-pressed="false">Precio ↓</button>
+    <button class="comp-sort-btn" data-sort="rating" aria-pressed="false">Valoración</button>
   </div>
 )}
 
@@ -183,6 +183,7 @@ function starData(val: number) {
             >
               <StoreIcon tienda="amazon" size={15} />
               Amazon — {p.precio}
+              <span class="sr-only">(se abre en nueva pestaña)</span>
             </a>
           </div>
         )}
@@ -432,6 +433,18 @@ function starData(val: number) {
     padding: 0.6rem 1.1rem;
   }
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 </style>
 
 <script>
@@ -445,7 +458,9 @@ function starData(val: number) {
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
         btns.forEach(b => b.classList.remove('comp-sort-btn--active'));
+        btns.forEach(b => b.setAttribute('aria-pressed', 'false'));
         btn.classList.add('comp-sort-btn--active');
+        btn.setAttribute('aria-pressed', 'true');
 
         const sortType = (btn as HTMLElement).dataset.sort;
         const sorted = [...cards];
