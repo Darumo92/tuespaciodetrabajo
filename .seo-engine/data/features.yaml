@@ -8,6 +8,7 @@ features:
     description: "Análisis y comparativas de sillas ergonómicas para teletrabajo"
     blog_refs:
       - mejor-silla-ergonomica-calidad-precio
+      - silla-gaming-vs-ergonomica
 
   - id: escritorios-elevables
     name: "Escritorios elevables eléctricos"

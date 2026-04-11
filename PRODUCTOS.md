@@ -27,6 +27,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | home-office-piso-pequeno | home-office-piso-pequeno.webp | 6934240 | Max Vakhtbovych | https://www.pexels.com/photo/6934240/ |
 | organizar-cables-escritorio | organizar-cables-escritorio.webp | 25223697 | Jakub Zerdzicki | https://www.pexels.com/photo/25223697/ |
 | novedades-home-office-2026 | novedades-home-office-2026.webp | 4596575 | Alex Staudinger | https://www.pexels.com/photo/4596575/ |
+| silla-gaming-vs-ergonomica | silla-gaming-vs-ergonomica.webp | 28955779 | Minh Phuc | https://www.pexels.com/photo/28955779/ |
 
 ---
 

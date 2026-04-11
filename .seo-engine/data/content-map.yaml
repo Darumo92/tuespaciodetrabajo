@@ -563,3 +563,26 @@ articles:
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
       - productividad-en-casa-entorno-fisico
+
+  - slug: silla-gaming-vs-ergonomica
+    title: "Silla gaming vs ergonómica: cuál elegir para trabajar"
+    path: src/content/articulos/silla-gaming-vs-ergonomica.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "silla gaming vs ergonómica"
+    secondary_keywords:
+      - silla gaming para trabajar
+      - silla gaming o silla oficina
+      - silla gaming teletrabajo
+      - silla ergonómica oficina
+    cluster: sillas
+    status: human-review
+    date: 2026-04-11
+    has_eeat_signals: true
+    internal_links_to:
+      - mi-setup-home-office-2026
+      - mejor-silla-ergonomica-calidad-precio
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - altura-correcta-escritorio-silla
+    internal_links_from: []

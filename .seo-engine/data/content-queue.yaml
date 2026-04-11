@@ -171,3 +171,12 @@ queue:
     status: approved
     date_created: 2026-03-26
     notes: "Comparativa de 6 escritorios elevables eléctricos (110-310 EUR) en Amazon.es. Ángulo: experiencia real de 2+ años con FlexiSpot E7, no medio tech generalista. SERP dominado por Xataka, PCComponentes, Andro4all."
+
+  - slug: silla-gaming-vs-ergonomica
+    title: "Silla gaming vs ergonómica: cuál elegir para trabajar"
+    type: informativo
+    category: guias
+    priority: high
+    status: human-review
+    date_created: 2026-04-11
+    notes: "Guía informativa comparando sillas gaming vs ergonómicas para teletrabajar. Ángulo: experiencia real con ambos tipos (gaming fue regalo, cambió a ergonómica por dolor lumbar). SERP: Ofiprix, PCComponentes, Hardzone, Reddit, MisSillasDeOficina — todo tiendas/medios con sesgo comercial. ~2000 palabras, 5 FAQs. Estructura variada (tabla comparativa, sección personal, consejos para quienes ya tienen gaming). Intro tipo contraposición. Experiencias personales: gaming regalada, compañero Javi con Newskill, lector con gaming. Fuentes: INSST, Cornell. Imagen Pexels #28955779 (Minh Phuc, 800px)."

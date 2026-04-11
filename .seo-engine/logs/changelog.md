@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-11 --:--
+**Action:** Blog written — "Silla gaming vs ergonómica: cuál elegir para trabajar"
+**Files:** src/content/articulos/silla-gaming-vs-ergonomica.mdx, seo-keywords.csv, content-map.yaml, content-queue.yaml, topic-clusters.yaml, features.yaml, PRODUCTOS.md
+**Summary:** Artículo informativo del cluster sillas comparando gaming vs ergonómica para teletrabajo. ~2000 palabras, 5 FAQs, 5 internal links, 2 AffiliateButtons. Imagen Pexels #28955779.
+**Triggered by:** user
+
 ## 2026-04-09 10:00
 **Action:** Blog redactado — Novedades en home office 2026: los productos más interesantes
 **Files:** src/content/articulos/novedades-home-office-2026.mdx, public/images/articulos/novedades-home-office-2026.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
