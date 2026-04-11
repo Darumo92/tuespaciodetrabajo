@@ -55,7 +55,7 @@ const itemListSchema = {
   itemListElement: recientes.map((a, i) => ({
     '@type': 'ListItem',
     position: i + 1,
-    url: `${siteUrl}/${a.data.tipo === 'informativo' ? 'guias' : a.data.categoria}/${a.slug}`,
+    url: `${siteUrl}/${a.data.tipo === 'informativo' ? 'guias' : a.data.categoria}/${a.slug}/`,
     name: a.data.titulo,
   })),
 };
