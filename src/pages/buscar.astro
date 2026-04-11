@@ -237,7 +237,7 @@ const breadcrumbSchema = {
     const norm = normalize(contenido);
     const normQ = normalize(query);
     const idx = norm.indexOf(normQ);
-    if (idx === -1) return contenido.slice(0, maxLen) + '...';
+    if (idx === -1) return escapeHtml(contenido.slice(0, maxLen)) + '...';
     const start = Math.max(0, idx - 60);
     const end = Math.min(contenido.length, idx + query.length + 90);
     const prefix = start > 0 ? '...' : '';
