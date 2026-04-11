@@ -173,6 +173,7 @@ const breadcrumbSchema = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   {faqSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />}
   {howToSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(howToSchema)} slot="head" />}
+  {imagen && <link rel="preload" as="image" href={imagen} slot="head" />}
 
   <div class="reading-progress" id="reading-progress" aria-hidden="true">
     <div class="reading-progress-bar" id="reading-progress-bar"></div>
@@ -217,7 +218,7 @@ const breadcrumbSchema = {
         decoding="async"
         fetchpriority="high"
         sizes="(max-width: 768px) 100vw, 800px"
-        style="width: 100%; height: auto; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 1.5rem;"
+        class="article-hero-img"
       />
     )}
 
@@ -257,13 +258,13 @@ const breadcrumbSchema = {
     </div>
 
     {tags && tags.length > 0 && (
-      <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--color-border);">
-        <strong style="font-size: 0.85rem; color: var(--color-text-muted);">Etiquetas:</strong>
-        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem;">
+      <div class="article-tags-section">
+        <strong class="article-tags-label">Etiquetas:</strong>
+        <div class="article-tags-list">
           {tags.map(tag => {
             const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9áéíóúñü-]/g, '');
             return (
-              <a href={`/tags/${tagSlug}/`} class="badge" style="background: var(--color-bg-muted); color: var(--color-text-muted); text-decoration: none;">
+              <a href={`/tags/${tagSlug}/`} class="badge article-tag-badge">
                 {tag}
               </a>
             );
@@ -293,8 +294,8 @@ const breadcrumbSchema = {
     )}
 
     {related.length > 0 && (
-      <section style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--color-border);">
-        <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;">
+      <section class="article-related-section">
+        <h2 class="article-related-title">
           Artículos relacionados
         </h2>
         <div class="articles-grid reveal-group">
@@ -302,8 +303,8 @@ const breadcrumbSchema = {
             <ArticleCard articulo={a} />
           ))}
         </div>
-        <div style="text-align: center; margin-top: 1.5rem;">
-          <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button" style="display: inline-flex; font-size: 0.9rem; padding: 0.65rem 1.5rem;">
+        <div class="article-related-more">
+          <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button article-related-btn">
             Ver más en {catInfo.nombre} →
           </a>
         </div>
@@ -737,6 +738,56 @@ const breadcrumbSchema = {
       line-height: 1.7;
       margin: 0;
       border-top: 1px solid var(--color-border);
+    }
+
+    .article-hero-img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-tags-section {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .article-tags-label {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+    .article-tags-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+    .article-tag-badge {
+      background: var(--color-bg-muted);
+      color: var(--color-text-muted);
+      text-decoration: none;
+    }
+
+    .article-related-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--color-border);
+    }
+    .article-related-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+    .article-related-more {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    .article-related-btn {
+      display: inline-flex;
+      font-size: 0.9rem;
+      padding: 0.65rem 1.5rem;
     }
   </style>
 </Base>
