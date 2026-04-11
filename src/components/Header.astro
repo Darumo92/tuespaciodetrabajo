@@ -36,7 +36,7 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
         </span>
       </button>
 
-      <nav class="nav" id="nav" role="navigation" aria-label="Navegacion principal">
+      <nav class="nav" id="nav" aria-label="Navegacion principal">
         {/* Dropdown secciones */}
         <div class="nav-dropdown" id="nav-dropdown">
           <button
@@ -47,13 +47,12 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
           >
             Secciones <span class="nav-dropdown-arrow" aria-hidden="true">▾</span>
           </button>
-          <div class="nav-dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="nav-dropdown-menu" id="dropdown-menu">
             <p class="nav-dropdown-heading">Comparativas</p>
             {comparativaLinks.map(link => (
               <a
                 href={link.href}
                 class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
-                role="menuitem"
               >
                 <CategoryIcon categoria={link.cat} size={18} />
                 {link.label}
@@ -65,7 +64,6 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
               <a
                 href={link.href}
                 class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
-                role="menuitem"
               >
                 <CategoryIcon categoria={link.cat} size={18} />
                 {link.label}
@@ -112,6 +110,7 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
   function closeNav() {
     nav?.classList.remove('open');
     toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Abrir menú');
     closeDropdown();
   }
 
@@ -119,9 +118,15 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
     const isOpen = nav?.classList.contains('open');
     if (isOpen) {
       closeNav();
+      toggle.focus();
     } else {
       nav?.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
+      toggle.setAttribute('aria-label', 'Cerrar menú');
+      requestAnimationFrame(() => {
+        const firstLink = nav?.querySelector('a, button:not(#nav-toggle)') as HTMLElement;
+        firstLink?.focus();
+      });
     }
   });
 
@@ -156,10 +161,41 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('theme', 'light');
       if (metaTheme) metaTheme.setAttribute('content', '#2563eb');
+      themeBtn.setAttribute('aria-label', 'Activar modo oscuro');
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
       if (metaTheme) metaTheme.setAttribute('content', '#121220');
+      themeBtn.setAttribute('aria-label', 'Activar modo claro');
+    }
+  });
+
+  // Escape key: close dropdown or mobile menu
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (dropdownMenu?.classList.contains('open')) {
+        closeDropdown();
+        dropdownTrigger?.focus();
+      } else if (nav?.classList.contains('open')) {
+        closeNav();
+        toggle?.focus();
+      }
+    }
+  });
+
+  // Focus trap for mobile menu
+  nav?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || !nav.classList.contains('open')) return;
+    const focusable = nav.querySelectorAll('a, button') as NodeListOf<HTMLElement>;
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
     }
   });
 </script>
