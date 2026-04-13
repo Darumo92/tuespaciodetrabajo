@@ -162,12 +162,12 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
     if (isDark) {
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('theme', 'light');
-      if (metaTheme) metaTheme.setAttribute('content', '#2563eb');
+      if (metaTheme) metaTheme.setAttribute('content', '#fafafa');
       themeBtn.setAttribute('aria-label', 'Activar modo oscuro');
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
-      if (metaTheme) metaTheme.setAttribute('content', '#121220');
+      if (metaTheme) metaTheme.setAttribute('content', '#09090b');
       themeBtn.setAttribute('aria-label', 'Activar modo claro');
     }
   });
