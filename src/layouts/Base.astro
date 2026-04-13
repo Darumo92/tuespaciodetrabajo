@@ -26,8 +26,8 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#09090b" id="meta-theme-color" />
-    <meta name="color-scheme" content="dark light" />
+    <meta name="theme-color" content="#ffffff" id="meta-theme-color" />
+    <meta name="color-scheme" content="light dark" />
     <meta name="robots" content="max-image-preview:large" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -83,7 +83,7 @@ const currentPath = Astro.url.pathname;
     <script is:inline>
       (function() {
         var t = localStorage.getItem('theme');
-        if (t !== 'light') {
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme:dark)').matches)) {
           document.documentElement.setAttribute('data-theme', 'dark');
           var m = document.getElementById('meta-theme-color');
           if (m) m.content = '#09090b';
