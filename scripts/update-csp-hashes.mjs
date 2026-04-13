@@ -51,8 +51,8 @@ const hashList = [...hashes].sort().join(' ');
 const scriptSrc = `script-src 'self' ${hashList} https://www.googletagmanager.com https://static.cloudflareinsights.com`;
 
 let headers = readFileSync(HEADERS_FILE, 'utf8');
-headers = headers.replace(
-  /script-src\s[^;]+/,
+headers = headers.replaceAll(
+  /script-src\s[^;]+/g,
   scriptSrc
 );
 writeFileSync(HEADERS_FILE, headers, 'utf8');

@@ -22,29 +22,32 @@
 /buscar.json
   Cache-Control: public, max-age=86400
 
-# Sitemaps y RSS — CSP mínimo para sobreescribir el de HTML
+# Sitemaps y RSS — solo cache, sin CSP
 /sitemap-index.xml
   Cache-Control: public, max-age=3600
-  X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'
-  X-Frame-Options: SAMEORIGIN
 /sitemap-0.xml
   Cache-Control: public, max-age=3600
-  X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'
-  X-Frame-Options: SAMEORIGIN
 /rss.xml
   Cache-Control: public, max-age=3600
-  X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'
-  X-Frame-Options: SAMEORIGIN
 
-# Páginas HTML
+# Seguridad universal (todas las respuestas)
 /*
-  Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
-  X-Frame-Options: DENY
-  Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+
+# Páginas HTML — CSP y frame protection
+# Solo matchean rutas con trailing slash (= HTML), no archivos .xml/.json
+/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: DENY
+  Content-Security-Policy: upgrade-insecure-requests; default-src 'none'; script-src 'self' 'sha256-1d2L9v5mDhAHfRfEifVe5es3rJcZtAiPTmLi+hGy5Ww=' 'sha256-40FKRN5F4SKR+MKdYtvgxhD6OzVIYkviFxizzoXydEU=' 'sha256-JTkVpxi4jpSoqlbZf9rN/2ipB3fuh/PUCzueQOM9R84=' 'sha256-Jew8op2IAHKZvVqAVRczx36uErcgNQFGbznuKKEgmrA=' 'sha256-VDdxmxJ3Zh4kUd82OrOi0QX9/k//XvFOWtvveAFv7TM=' 'sha256-b+w8idt9RyD41ESt8q+LHlUdmT9H0QvlERNbdAEvEZA=' 'sha256-neG9Voz9HC6myH9WuW8M83K53hSwvUOnvqgjESTta6M=' 'sha256-oMHjCM5uXLJvu3smLLdm/NlaF+dA65mYFo76DbYYn+4=' 'sha256-vJ9zTI3gOMbK8N7H0u1mqs3/pz4gWhCq9I6VRhplJtg=' 'sha256-xNy9YYg/8CZ9XX4gJbY5iycdHU5F3qnbuXUNsSKHixo=' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://m.media-amazon.com https://www.googletagmanager.com data:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'
+/*/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: DENY
+  Content-Security-Policy: upgrade-insecure-requests; default-src 'none'; script-src 'self' 'sha256-1d2L9v5mDhAHfRfEifVe5es3rJcZtAiPTmLi+hGy5Ww=' 'sha256-40FKRN5F4SKR+MKdYtvgxhD6OzVIYkviFxizzoXydEU=' 'sha256-JTkVpxi4jpSoqlbZf9rN/2ipB3fuh/PUCzueQOM9R84=' 'sha256-Jew8op2IAHKZvVqAVRczx36uErcgNQFGbznuKKEgmrA=' 'sha256-VDdxmxJ3Zh4kUd82OrOi0QX9/k//XvFOWtvveAFv7TM=' 'sha256-b+w8idt9RyD41ESt8q+LHlUdmT9H0QvlERNbdAEvEZA=' 'sha256-neG9Voz9HC6myH9WuW8M83K53hSwvUOnvqgjESTta6M=' 'sha256-oMHjCM5uXLJvu3smLLdm/NlaF+dA65mYFo76DbYYn+4=' 'sha256-vJ9zTI3gOMbK8N7H0u1mqs3/pz4gWhCq9I6VRhplJtg=' 'sha256-xNy9YYg/8CZ9XX4gJbY5iycdHU5F3qnbuXUNsSKHixo=' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://m.media-amazon.com https://www.googletagmanager.com data:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'
+/*/*/
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Frame-Options: DENY
   Content-Security-Policy: upgrade-insecure-requests; default-src 'none'; script-src 'self' 'sha256-1d2L9v5mDhAHfRfEifVe5es3rJcZtAiPTmLi+hGy5Ww=' 'sha256-40FKRN5F4SKR+MKdYtvgxhD6OzVIYkviFxizzoXydEU=' 'sha256-JTkVpxi4jpSoqlbZf9rN/2ipB3fuh/PUCzueQOM9R84=' 'sha256-Jew8op2IAHKZvVqAVRczx36uErcgNQFGbznuKKEgmrA=' 'sha256-VDdxmxJ3Zh4kUd82OrOi0QX9/k//XvFOWtvveAFv7TM=' 'sha256-b+w8idt9RyD41ESt8q+LHlUdmT9H0QvlERNbdAEvEZA=' 'sha256-neG9Voz9HC6myH9WuW8M83K53hSwvUOnvqgjESTta6M=' 'sha256-oMHjCM5uXLJvu3smLLdm/NlaF+dA65mYFo76DbYYn+4=' 'sha256-vJ9zTI3gOMbK8N7H0u1mqs3/pz4gWhCq9I6VRhplJtg=' 'sha256-xNy9YYg/8CZ9XX4gJbY5iycdHU5F3qnbuXUNsSKHixo=' https://www.googletagmanager.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://m.media-amazon.com https://www.googletagmanager.com data:; font-src 'self'; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://cloudflareinsights.com; object-src 'none'; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; manifest-src 'self'
