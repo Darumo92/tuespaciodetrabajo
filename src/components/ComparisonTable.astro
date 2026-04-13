@@ -487,17 +487,29 @@ function starData(val: number) {
 
 .comp-score-badge--excellent {
   background: color-mix(in srgb, #10b981 12%, transparent);
-  color: #10b981;
+  color: #047857;
 }
 
 .comp-score-badge--good {
   background: color-mix(in srgb, var(--color-primary) 12%, transparent);
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
 }
 
 .comp-score-badge--average {
   background: color-mix(in srgb, var(--color-secondary) 12%, transparent);
-  color: var(--color-secondary);
+  color: #92400e;
+}
+
+:global([data-theme="dark"]) .comp-score-badge--excellent {
+  color: #34d399;
+}
+
+:global([data-theme="dark"]) .comp-score-badge--good {
+  color: var(--color-primary-light);
+}
+
+:global([data-theme="dark"]) .comp-score-badge--average {
+  color: #fbbf24;
 }
 
 .comp-score-value {
