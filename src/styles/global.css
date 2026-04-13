@@ -184,7 +184,7 @@ body {
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.65;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-slow), color var(--transition-slow);
   overflow-x: hidden;
 }
 
@@ -238,7 +238,7 @@ a:hover {
   font-weight: 700;
   color: var(--color-text);
   margin-bottom: 0.5rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
@@ -901,7 +901,7 @@ a:hover {
   font-weight: 600;
   background: color-mix(in srgb, var(--color-primary) 8%, transparent);
   padding: 0.2rem 0.6rem;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
 }
 
 .article-card-link {
@@ -960,7 +960,7 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 0.25rem 0.75rem;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   margin-bottom: 1rem;
 }
 
@@ -993,8 +993,8 @@ a:hover {
 }
 
 .affiliate-disclaimer {
-  background: color-mix(in srgb, var(--color-secondary) 8%, var(--color-bg));
-  border: 1px solid color-mix(in srgb, var(--color-secondary) 20%, var(--color-bg));
+  background: color-mix(in srgb, var(--color-secondary) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-secondary) 15%, transparent);
   border-radius: var(--radius-md);
   padding: 0.75rem 1rem;
   font-size: 0.85rem;
@@ -1334,7 +1334,7 @@ a:hover {
 .badge {
   display: inline-block;
   padding: 0.2rem 0.6rem;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 600;
 }
@@ -1500,8 +1500,6 @@ button:focus-visible,
 
 
 [data-theme="dark"] .affiliate-disclaimer {
-  background: color-mix(in srgb, var(--color-secondary) 10%, var(--color-bg));
-  border-color: color-mix(in srgb, var(--color-secondary) 20%, var(--color-bg));
   color: var(--color-text-muted);
 }
 
@@ -1582,7 +1580,7 @@ button:focus-visible,
   height: 2px;
   background: var(--color-text);
   border-radius: 1px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  transition: transform var(--transition), opacity var(--transition);
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
@@ -2013,12 +2011,12 @@ button:focus-visible,
   font-size: 0.8rem;
   font-weight: 600;
   padding: 0.35rem 0.85rem;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   border: 1px solid var(--color-border);
   background: var(--color-bg);
   color: var(--color-text-muted);
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
 .filter-btn:hover {
