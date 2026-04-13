@@ -62,30 +62,33 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 
 <style>
 .top-pick {
-  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-border));
-  border-radius: var(--radius-xl);
-  padding: 2rem 1.5rem 1.5rem;
-  margin: 1.5rem 0;
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 2px solid var(--color-primary);
+  border-left: 6px solid var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-card));
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin: 2.5rem 0;
   position: relative;
-  box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 8%, transparent);
+  transition: box-shadow var(--transition);
+}
+
+.top-pick:hover {
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primary) 15%, rgba(0, 0, 0, 0.1));
 }
 
 .top-pick-badge {
   position: absolute;
   top: -0.8rem;
   left: 1.25rem;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-rose, #f43f5e));
-  color: white;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #78350f;
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.3rem 0.9rem;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 .top-pick-body {
@@ -133,12 +136,12 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 }
 
 .top-pick-precio {
-  font-size: 1.6rem;
   font-family: var(--font-display);
+  font-size: 1.75rem;
   font-weight: 700;
+  color: var(--color-primary);
   font-variant-numeric: tabular-nums;
   margin: 0 0 1rem;
-  color: var(--color-primary);
   letter-spacing: -0.02em;
 }
 
@@ -185,8 +188,8 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 }
 
 :global([data-theme="dark"]) .top-pick {
-  background: var(--glass-bg);
-  border-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-bg-card));
+  border-color: var(--color-primary);
 }
 
 .sr-only {
