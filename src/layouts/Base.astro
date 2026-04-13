@@ -26,7 +26,7 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#2563eb" id="meta-theme-color" />
+    <meta name="theme-color" content="#ffffff" id="meta-theme-color" />
     <meta name="color-scheme" content="light dark" />
     <meta name="robots" content="max-image-preview:large" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -37,7 +37,7 @@ const currentPath = Astro.url.pathname;
     <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Display font for headings (self-hosted) -->
-    <link rel="preload" href="/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Preconnect for resources loaded on article pages -->
     <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />
@@ -86,7 +86,7 @@ const currentPath = Astro.url.pathname;
         if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme:dark)').matches)) {
           document.documentElement.setAttribute('data-theme', 'dark');
           var m = document.getElementById('meta-theme-color');
-          if (m) m.content = '#121220';
+          if (m) m.content = '#09090b';
         }
       })();
     </script>
@@ -248,8 +248,10 @@ const currentPath = Astro.url.pathname;
         left: 0;
         right: 0;
         z-index: 200;
-        background: var(--color-bg-card);
-        border-top: 1px solid var(--color-border);
+        background: var(--glass-bg-strong);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+        border-top: 1px solid var(--glass-border);
         box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         padding: 1rem 1.5rem;
       }
@@ -281,18 +283,20 @@ const currentPath = Astro.url.pathname;
         font-size: 0.8rem;
         font-weight: 600;
         padding: 0.5rem 1.25rem;
-        border-radius: 100px;
+        border-radius: var(--radius-md);
         cursor: pointer;
         border: none;
       }
       .cookie-btn-accept {
         background: var(--color-primary);
         color: #fff;
+        border-radius: var(--radius-md);
       }
       .cookie-btn-reject {
-        background: var(--color-bg-muted);
+        background: transparent;
         color: var(--color-text-muted);
         border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
       }
       @media (max-width: 480px) {
         .cookie-banner { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
