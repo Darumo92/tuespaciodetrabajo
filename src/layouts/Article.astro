@@ -444,14 +444,14 @@ const breadcrumbSchema = {
       top: 60px;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 2px;
       z-index: 99;
       background: transparent;
     }
     .reading-progress-bar {
       height: 100%;
       width: 0;
-      background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
       transition: width 0.1s linear;
       border-radius: 0 2px 2px 0;
     }
@@ -459,14 +459,15 @@ const breadcrumbSchema = {
     .toc {
       background: var(--color-bg-muted);
       border: 1px solid var(--color-border);
-      border-radius: var(--radius-md);
+      border-radius: var(--radius-lg);
       padding: 1.25rem 1.5rem;
       margin-bottom: 2rem;
     }
     .toc-title {
       font-family: var(--font-display);
+      font-size: 0.88rem;
       font-weight: 700;
-      font-size: 0.95rem;
+      letter-spacing: -0.01em;
       margin-bottom: 0.75rem;
       color: var(--color-text);
     }
@@ -515,28 +516,31 @@ const breadcrumbSchema = {
       gap: 0.5rem;
       margin: 1.25rem 0;
     }
-    .trust-item {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.78rem;
+    .trust-item,
+    .trust-badge {
+      font-size: 0.7rem;
       font-weight: 600;
-      color: var(--color-secondary-text);
-      background: color-mix(in srgb, var(--color-secondary) 8%, var(--color-bg));
-      padding: 0.35rem 0.75rem;
-      border-radius: 100px;
-      border: 1px solid color-mix(in srgb, var(--color-secondary) 15%, transparent);
+      padding: 0.3rem 0.65rem;
+      border-radius: var(--radius-full);
+      background: var(--color-bg-muted);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
     }
-    .trust-item svg {
+    .trust-item svg,
+    .trust-badge svg {
       flex-shrink: 0;
     }
     @media (max-width: 480px) {
       .trust-bar {
         gap: 0.375rem;
       }
-      .trust-item {
-        font-size: 0.72rem;
-        padding: 0.3rem 0.6rem;
+      .trust-item,
+      .trust-badge {
+        font-size: 0.68rem;
+        padding: 0.25rem 0.55rem;
       }
     }
 
@@ -661,24 +665,22 @@ const breadcrumbSchema = {
     .faq-list {
       display: flex;
       flex-direction: column;
-      gap: 0.625rem;
     }
     .faq-item {
       border: 1px solid var(--color-border);
-      border-left: 3px solid var(--color-primary);
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      border-radius: var(--radius-md);
+      margin-bottom: 0.5rem;
       overflow: hidden;
       transition: border-color 0.2s;
     }
     .faq-item[open] {
-      border-left-color: var(--color-secondary);
-      background: color-mix(in srgb, var(--color-secondary) 2%, var(--color-bg));
+      border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
     }
     .faq-pregunta {
-      background: var(--color-bg-muted);
+      background: var(--color-bg-card);
       padding: 1rem 1.25rem;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       cursor: pointer;
       list-style: none;
       display: flex;
@@ -688,7 +690,7 @@ const breadcrumbSchema = {
       transition: background 0.2s;
     }
     .faq-pregunta:hover {
-      background: var(--color-border);
+      background: var(--color-bg-muted);
     }
     .faq-pregunta::-webkit-details-marker {
       display: none;
@@ -699,17 +701,18 @@ const breadcrumbSchema = {
     .faq-toggle {
       width: 24px;
       height: 24px;
-      border-radius: 50%;
-      background: var(--color-primary);
+      border-radius: var(--radius-sm);
+      background: var(--color-bg-muted);
       flex-shrink: 0;
       position: relative;
-      transition: transform 0.3s ease, background 0.2s;
+      transition: transform 0.3s ease, background 0.2s, color 0.2s;
+      color: var(--color-text-muted);
     }
     .faq-toggle::before,
     .faq-toggle::after {
       content: '';
       position: absolute;
-      background: var(--color-bg);
+      background: currentColor;
       border-radius: 1px;
     }
     .faq-toggle::before {
@@ -728,16 +731,16 @@ const breadcrumbSchema = {
       transition: transform 0.3s ease;
     }
     .faq-item[open] .faq-toggle {
-      background: var(--color-secondary);
+      background: color-mix(in srgb, var(--color-primary) 10%, transparent);
+      color: var(--color-primary);
       transform: rotate(45deg);
     }
     .faq-respuesta {
-      padding: 0.875rem 1.25rem;
+      padding: 0 1.25rem 1.25rem;
       font-size: 0.9rem;
       color: var(--color-text-muted);
       line-height: 1.7;
       margin: 0;
-      border-top: 1px solid var(--color-border);
     }
 
     .article-hero-img {

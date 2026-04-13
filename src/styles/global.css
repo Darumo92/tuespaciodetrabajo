@@ -956,12 +956,12 @@ a:hover {
 
 .article-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
-  color: var(--color-text);
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  line-height: 1.12;
   letter-spacing: -0.03em;
+  color: var(--color-text);
+  margin-bottom: 1rem;
 }
 
 .article-description {
@@ -1007,29 +1007,25 @@ a:hover {
 
 .prose h2 {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 2.5rem 0 1rem;
-  color: var(--color-text);
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  scroll-margin-top: 5rem;
-  border-bottom: 2px solid var(--color-border);
-  border-left: 4px solid var(--color-primary);
   letter-spacing: -0.02em;
-}
-
-[data-theme="dark"] .prose h2 {
-  border-left-color: var(--color-primary-light);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-text);
+  scroll-margin-top: 5rem;
 }
 
 .prose h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 2rem 0 0.75rem;
-  color: var(--color-text);
+  font-size: 1.15rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
   scroll-margin-top: 5rem;
 }
 
@@ -1053,16 +1049,21 @@ a:hover {
 .prose a {
   color: var(--color-primary);
   text-decoration: underline;
+  text-underline-offset: 2px;
   text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  transition: color var(--transition);
+}
+
+.prose a:hover {
+  color: var(--color-primary-dark);
 }
 
 .prose blockquote {
-  border-left: 4px solid var(--color-primary);
+  border-left: 3px solid var(--color-primary);
   padding-left: 1rem;
   margin: 1.5rem 0;
-  font-style: italic;
   color: var(--color-text-muted);
+  font-style: italic;
 }
 
 .prose .table-wrapper {
