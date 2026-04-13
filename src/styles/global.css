@@ -1216,8 +1216,8 @@ a:hover {
 .footer {
   background: var(--color-footer-bg);
   color: var(--color-footer-text);
-  padding: 3.5rem 0 2rem;
-  margin-top: 3rem;
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid var(--color-border);
 }
 
 .footer-grid {
@@ -1234,18 +1234,20 @@ a:hover {
 }
 
 .footer-brand p {
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   line-height: 1.6;
+  max-width: 320px;
   margin-top: 0.75rem;
 }
 
 .footer-heading {
-  color: var(--color-footer-heading);
-  font-size: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--color-footer-heading);
+  margin-bottom: 0.75rem;
 }
 
 .footer-links {
@@ -1264,33 +1266,43 @@ a:hover {
 }
 
 .footer-links a {
+  font-size: 0.82rem;
   color: var(--color-footer-link);
-  font-size: 0.875rem;
+  text-decoration: none;
   transition: color var(--transition);
 }
 
 .footer-links a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-footer-heading);
 }
 
 .footer-bottom {
   border-top: 1px solid var(--color-footer-border);
-  padding-top: 1.5rem;
+  padding-top: 1.25rem;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
+  opacity: 0.6;
 }
 
 .footer-affiliate-notice {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: var(--radius-sm);
+  font-size: 0.72rem;
+  color: var(--color-footer-text);
+  opacity: 0.7;
   padding: 0.75rem 1rem;
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  margin-top: 1rem;
   line-height: 1.5;
 }
 
 .footer-logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--color-footer-heading);
+  text-decoration: none;
 }
 
 .footer-logo:hover {
@@ -1848,17 +1860,19 @@ button:focus-visible,
    ========================================= */
 
 .bottom-nav {
-  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 95;
-  background: var(--color-bg-card);
-  border-top: 1px solid var(--color-border);
-  padding: 0.4rem 0 calc(0.4rem + env(safe-area-inset-bottom, 0px));
+  z-index: 100;
+  display: none;
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--glass-border);
+  padding: 0.5rem 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
   justify-content: space-around;
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -1876,14 +1890,14 @@ button:focus-visible,
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.15rem;
-  padding: 0.5rem 0.75rem;
-  min-height: 44px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--color-text-muted);
+  gap: 0.2rem;
   text-decoration: none;
-  transition: color 0.2s ease;
+  color: var(--color-text-light);
+  font-size: 0.62rem;
+  font-weight: 500;
+  min-width: 48px;
+  padding: 0.25rem 0;
+  transition: color var(--transition);
   -webkit-tap-highlight-color: transparent;
 }
 
