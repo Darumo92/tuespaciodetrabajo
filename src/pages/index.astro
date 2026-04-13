@@ -117,25 +117,30 @@ const categorias = [
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
   <!-- Hero -->
   <section class="hero">
+    <div class="hero-glow hero-glow--blue" aria-hidden="true"></div>
+    <div class="hero-glow hero-glow--rose" aria-hidden="true"></div>
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
           <p class="hero-eyebrow">Guías y comparativas {new Date().getFullYear()}</p>
           <h1 class="hero-title">
-            Crea tu espacio de trabajo <span>perfecto</span>
+            Tu espacio de trabajo,<br /><span class="hero-title-accent">analizado al detalle</span>
           </h1>
           <p class="hero-subtitle">
-            Análisis honestos de sillas, escritorios y accesorios para teletrabajar desde casa con comodidad.
+            Análisis independientes de sillas, escritorios y accesorios para teletrabajar con ergonomía real.
           </p>
           <div class="hero-cta">
-            <a href="/articulos/" class="hero-cta-btn hero-cta-primary">Ver comparativas</a>
+            <a href="/articulos/" class="hero-cta-btn hero-cta-primary">
+              <span>Ver comparativas</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
             <a href="/guias/" class="hero-cta-btn hero-cta-secondary">Leer guías</a>
           </div>
         </div>
         <div class="hero-bento">
           {categorias.slice(0, 4).map(cat => (
             <a href={`/${cat.slug}/`} class="hero-bento-card">
-              <span class="hero-bento-icon"><CategoryIcon categoria={cat.slug} size={24} /></span>
+              <span class="hero-bento-icon"><CategoryIcon categoria={cat.slug} size={22} /></span>
               <div>
                 <p class="hero-bento-name">{cat.nombre}</p>
                 <p class="hero-bento-count">{cat.count > 0 ? `${cat.count} artículos` : 'Próximamente'}</p>
@@ -150,7 +155,7 @@ const categorias = [
             return (
               <a href={featUrl} class="hero-bento-featured">
                 <div class="hero-bento-featured-icon">
-                  <CategoryIcon categoria={feat.data.tipo === 'informativo' ? 'guias' : feat.data.categoria} size={20} />
+                  <CategoryIcon categoria={feat.data.tipo === 'informativo' ? 'guias' : feat.data.categoria} size={18} />
                 </div>
                 <div class="hero-bento-featured-text">
                   <p class="hero-bento-featured-label">Destacado</p>
