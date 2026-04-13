@@ -45,15 +45,15 @@ const breadcrumbSchema = {
     <div class="all-articles-filters">
       <div class="filter-group">
         <span class="filter-label">Tipo:</span>
-        <div class="tipo-filter" role="tablist" aria-label="Filtrar por tipo">
-          <button class="tipo-filter-btn active" data-tipo="todos">Todos</button>
-          <button class="tipo-filter-btn" data-tipo="comparativa">Comparativas</button>
-          <button class="tipo-filter-btn" data-tipo="informativo">Guias</button>
+        <div class="tipo-filter" role="group" aria-label="Filtrar por tipo">
+          <button class="tipo-filter-btn active" data-tipo="todos" aria-pressed="true">Todos</button>
+          <button class="tipo-filter-btn" data-tipo="comparativa" aria-pressed="false">Comparativas</button>
+          <button class="tipo-filter-btn" data-tipo="informativo" aria-pressed="false">Guias</button>
         </div>
       </div>
       <div class="filter-group">
         <span class="filter-label">Categoria:</span>
-        <div class="cat-filter" role="tablist" aria-label="Filtrar por categoria">
+        <div class="cat-filter" role="group" aria-label="Filtrar por categoria">
           <button class="cat-filter-btn active" data-cat="todos">Todas</button>
           <button class="cat-filter-btn" data-cat="sillas"><CategoryIcon categoria="sillas" size={14} /> Sillas</button>
           <button class="cat-filter-btn" data-cat="escritorios"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</button>
