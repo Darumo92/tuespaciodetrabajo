@@ -227,6 +227,7 @@ clusters:
       slug: guia-completa-home-office
       title: "Guía completa de home office: todo lo que necesitas"
       keyword: "guía completa home office"
+      status: approved
     cluster_pages:
       - slug: mi-setup-home-office-2026
         title: "Mi setup de home office 2026: qué uso y por qué"

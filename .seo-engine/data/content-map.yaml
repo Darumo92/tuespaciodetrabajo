@@ -1,5 +1,51 @@
 # Blog <-> keyword <-> feature mapping
 articles:
+  - slug: guia-completa-home-office
+    title: "Guía completa de home office: todo lo que necesitas"
+    path: src/content/articulos/guia-completa-home-office.mdx
+    type: informativo
+    category: guias
+    primary_keyword: "guía completa home office"
+    secondary_keywords:
+      - home office
+      - oficina en casa
+      - teletrabajo desde casa
+      - equipamiento home office
+      - montar home office
+    cluster: hub-central
+    status: approved
+    date: 2026-04-13
+    has_eeat_signals: true
+    internal_links_to:
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
+      - standing-desk-merece-la-pena
+      - altura-correcta-escritorio-silla
+      - mejor-silla-ergonomica-calidad-precio
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - silla-gaming-vs-ergonomica
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-teclado-ergonomico
+      - mejor-raton-vertical-ergonomico
+      - mejor-soporte-monitor-brazo-articulado
+      - fatiga-visual-pantalla
+      - tunel-carpiano-teletrabajo-prevencion
+      - mejor-lampara-escritorio-led
+      - mejorar-iluminacion-espacio-trabajo
+      - organizar-cables-escritorio
+      - home-office-productivo-500-euros
+      - novedades-home-office-2026
+    internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-escritorio-elevable-electrico
+      - mejor-teclado-ergonomico
+      - mejor-lampara-escritorio-led
+      - mi-setup-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
+
   - slug: mi-setup-home-office-2026
     title: "Mi setup de home office 2026: qué uso y por qué"
     path: src/content/articulos/mi-setup-home-office-2026.mdx

@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-13 --:--
+**Action:** Blog written — "Guía completa de home office: todo lo que necesitas" (HUB central)
+**Files:** src/content/articulos/guia-completa-home-office.mdx, public/images/articulos/guia-completa-home-office.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md, docs/superpowers/specs/2026-04-13-guia-completa-home-office-design.md
+**Summary:** HUB central del sitio (pilar del cluster hub-central). Enfoque B: proceso de montaje en 6 pasos. ~3500 palabras, 6 FAQs, 21 internal links (todos los artículos existentes). 6 links bidireccionales añadidos desde pilares de cada cluster. Keywords: 'home office' 2400, 'oficina en casa' 880, 'teletrabajo desde casa' 720 — 10 keywords añadidas a seo-keywords.csv. SERP informacional, competencia débil. Imagen Pexels #31726669 (Alpha En, 800px). Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-11 --:--
 **Action:** Blog written — "Silla gaming vs ergonómica: cuál elegir para trabajar"
 **Files:** src/content/articulos/silla-gaming-vs-ergonomica.mdx, seo-keywords.csv, content-map.yaml, content-queue.yaml, topic-clusters.yaml, features.yaml, PRODUCTOS.md

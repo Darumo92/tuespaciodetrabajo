@@ -180,3 +180,12 @@ queue:
     status: human-review
     date_created: 2026-04-11
     notes: "Guía informativa comparando sillas gaming vs ergonómicas para teletrabajar. Ángulo: experiencia real con ambos tipos (gaming fue regalo, cambió a ergonómica por dolor lumbar). SERP: Ofiprix, PCComponentes, Hardzone, Reddit, MisSillasDeOficina — todo tiendas/medios con sesgo comercial. ~2000 palabras, 5 FAQs. Estructura variada (tabla comparativa, sección personal, consejos para quienes ya tienen gaming). Intro tipo contraposición. Experiencias personales: gaming regalada, compañero Javi con Newskill, lector con gaming. Fuentes: INSST, Cornell. Imagen Pexels #28955779 (Minh Phuc, 800px)."
+
+  - slug: guia-completa-home-office
+    title: "Guía completa de home office: todo lo que necesitas"
+    type: informativo
+    category: guias
+    priority: high
+    status: approved
+    date_created: 2026-04-13
+    notes: "HUB central del sitio. Enfoque B: proceso de montaje en 6 pasos. Enlaza a los 21 artículos existentes. SERP: informacional, competencia débil (tiendas muebles, PDFs viejos). Keywords: 'home office' 2400, 'oficina en casa' 880, 'teletrabajo desde casa' 720. ~3500 palabras, 6 FAQs. Intro directo al grano (ejecutivo). Imagen Pexels #31726669 (Alpha En, 800px)."
