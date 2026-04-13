@@ -67,8 +67,8 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   padding: 2rem 1.5rem 1.5rem;
   margin: 1.5rem 0;
   background: var(--glass-bg-strong);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
   position: relative;
   box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 8%, transparent);
 }
@@ -135,7 +135,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 .top-pick-precio {
   font-size: 1.6rem;
   font-family: var(--font-display);
-  font-weight: 800;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
   margin: 0 0 1rem;
   color: var(--color-primary);
@@ -185,7 +185,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 }
 
 :global([data-theme="dark"]) .top-pick {
-  background: rgba(24, 24, 27, 0.6);
+  background: var(--glass-bg);
   border-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
 }
 
