@@ -206,6 +206,16 @@ a:hover {
 :focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 20%, transparent);
+  color: var(--color-text);
 }
 
 /* =========================================
@@ -1196,10 +1206,10 @@ a:hover {
 
 .category-page-header h1 {
   font-family: var(--font-display);
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .category-page-header p {
@@ -1926,7 +1936,7 @@ button:focus-visible,
 @keyframes reveal-up {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
@@ -1939,54 +1949,44 @@ button:focus-visible,
 }
 
 .reveal.revealed {
-  animation: reveal-up 0.5s ease forwards;
+  animation: reveal-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Stagger children in grids */
 .reveal-group.revealed > :nth-child(1) { animation-delay: 0s; }
-.reveal-group.revealed > :nth-child(2) { animation-delay: 0.08s; }
-.reveal-group.revealed > :nth-child(3) { animation-delay: 0.16s; }
-.reveal-group.revealed > :nth-child(4) { animation-delay: 0.24s; }
-.reveal-group.revealed > :nth-child(5) { animation-delay: 0.32s; }
-.reveal-group.revealed > :nth-child(6) { animation-delay: 0.4s; }
+.reveal-group.revealed > :nth-child(2) { animation-delay: 0.06s; }
+.reveal-group.revealed > :nth-child(3) { animation-delay: 0.12s; }
+.reveal-group.revealed > :nth-child(4) { animation-delay: 0.18s; }
+.reveal-group.revealed > :nth-child(5) { animation-delay: 0.24s; }
+.reveal-group.revealed > :nth-child(6) { animation-delay: 0.3s; }
 
 .reveal-group > * {
   opacity: 0;
 }
 
 .reveal-group.revealed > * {
-  animation: reveal-up 0.5s ease forwards;
+  animation: reveal-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 
   .reveal,
   .reveal-group > * {
     opacity: 1;
-  }
-  .reveal.revealed,
-  .reveal-group.revealed > * {
     animation: none;
   }
 
-  .nav-dropdown-menu {
-    transition: none;
-  }
-
-  .article-card,
-  .affiliate-button,
-  .hero-cta-btn,
-  .hero-bento-card,
-  .hero-bento-featured,
-  .category-card,
-  .category-icon,
-  .trust-card,
-  .comp-sort-btn {
-    transition: none;
+  .hero-glow {
+    display: none;
   }
 }
 
