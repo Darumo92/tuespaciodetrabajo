@@ -1105,23 +1105,28 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition);
   background: var(--color-primary);
   color: #fff;
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 0.7rem 1.4rem;
-  border-radius: 10px;
-  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-  text-decoration: none;
-  letter-spacing: -0.01em;
-  white-space: nowrap;
 }
 
 .affiliate-button:hover {
   background: var(--color-primary-dark);
   color: #fff;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.affiliate-button:active {
+  transform: scale(0.97);
 }
 
 .affiliate-button.amazon {
@@ -1132,11 +1137,7 @@ a:hover {
 .affiliate-button.amazon:hover {
   background: #e88b00;
   color: #0f1111;
-  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.35);
-}
-
-.affiliate-button:active {
-  transform: scale(0.97);
+  box-shadow: 0 6px 20px rgba(255, 153, 0, 0.25);
 }
 
 .prose > .affiliate-button {

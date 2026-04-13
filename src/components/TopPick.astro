@@ -62,15 +62,15 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 
 <style>
 .top-pick {
-  border: 2px solid color-mix(in srgb, var(--color-primary) 20%, transparent);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem 1.5rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-border));
+  border-radius: var(--radius-xl);
+  padding: 2rem 1.5rem 1.5rem;
   margin: 1.5rem 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--glass-bg-strong);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   position: relative;
-  box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 10%, transparent), 0 0 0 1px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 8%, transparent);
 }
 
 .top-pick-badge {
@@ -82,7 +82,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.3rem 0.9rem;
-  border-radius: 100px;
+  border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   box-shadow: 0 2px 8px color-mix(in srgb, var(--color-primary) 30%, transparent);
@@ -118,7 +118,8 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 
 .top-pick-nombre {
   font-size: 1.2rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-weight: 700;
   margin: 0 0 0.4rem;
   color: var(--color-text);
   letter-spacing: -0.02em;
@@ -133,7 +134,9 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 
 .top-pick-precio {
   font-size: 1.6rem;
+  font-family: var(--font-display);
   font-weight: 800;
+  font-variant-numeric: tabular-nums;
   margin: 0 0 1rem;
   color: var(--color-primary);
   letter-spacing: -0.02em;
@@ -150,7 +153,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   font-size: 0.88rem;
   padding: 0.65rem 1.2rem;
   font-weight: 700;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
 @media (max-width: 540px) {
@@ -182,9 +185,8 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
 }
 
 :global([data-theme="dark"]) .top-pick {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
-  box-shadow: 0 8px 32px color-mix(in srgb, var(--color-primary) 8%, transparent), 0 0 0 1px color-mix(in srgb, var(--color-primary) 5%, transparent);
+  background: rgba(24, 24, 27, 0.6);
+  border-color: color-mix(in srgb, var(--color-primary) 12%, transparent);
 }
 
 .sr-only {
