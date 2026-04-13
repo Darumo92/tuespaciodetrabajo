@@ -772,24 +772,23 @@ a:hover {
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 .article-card {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-  border-left: 4px solid var(--card-accent, var(--color-primary));
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
   display: flex;
   flex-direction: column;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .article-card:hover {
-  box-shadow: var(--shadow-lg);
   transform: translateY(-3px);
-  border-color: color-mix(in srgb, var(--color-primary) 25%, var(--color-border));
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-border-dark);
 }
 
 .article-card-image {
@@ -812,11 +811,11 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .article-card:hover .article-card-image img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .article-card-image-placeholder {
@@ -830,10 +829,11 @@ a:hover {
 }
 
 .article-card-body {
-  padding: 1.5rem;
-  flex: 1;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
 }
 
 .article-card-category {
@@ -841,47 +841,48 @@ a:hover {
   top: 0.75rem;
   left: 0.75rem;
   z-index: 2;
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
   color: #fff;
 }
 
 .article-card-title {
   font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
   color: var(--color-text);
-  line-height: 1.35;
-  margin-bottom: 0.5rem;
-  flex: 1;
-}
-
-.article-card-title:hover {
-  color: var(--color-primary);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .article-card-excerpt {
-  font-size: 0.875rem;
+  font-size: 0.82rem;
   color: var(--color-text-muted);
-  line-height: 1.5;
-  margin-bottom: 1rem;
+  line-height: 1.55;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .article-card-meta {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-size: 0.8rem;
+  justify-content: space-between;
+  font-size: 0.75rem;
   color: var(--color-text-light);
-  border-top: 1px solid var(--color-border);
-  padding-top: 0.75rem;
-  margin-top: auto;
 }
 
 .article-card-reading-time {
@@ -894,15 +895,18 @@ a:hover {
 }
 
 .article-card-link {
-  margin-left: auto;
-  font-size: 0.85rem;
   font-weight: 600;
+  font-size: 0.78rem;
   color: var(--color-primary);
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: gap var(--transition);
 }
 
 .article-card:hover .article-card-link {
-  transform: translateX(3px);
+  gap: 0.4rem;
 }
 
 /* =========================================
@@ -1311,11 +1315,11 @@ a:hover {
   font-weight: 600;
 }
 
-.badge-sillas { background: var(--color-cat-sillas); color: #fff; }
-.badge-escritorios { background: #b45309; color: #fff; }
-.badge-accesorios { background: #047857; color: #fff; }
-.badge-ambiente { background: #be185d; color: #fff; }
-.badge-audio-video { background: var(--color-cat-audio-video); color: #fff; }
+.badge-sillas { background: #2563eb; color: #fff; }
+.badge-escritorios { background: #d97706; color: #fff; }
+.badge-accesorios { background: #059669; color: #fff; }
+.badge-ambiente { background: #db2777; color: #fff; }
+.badge-audio-video { background: #7c3aed; color: #fff; }
 .badge-guias { background: #e11d48; color: #fff; }
 
 .text-center {
