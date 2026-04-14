@@ -189,3 +189,12 @@ queue:
     status: approved
     date_created: 2026-04-13
     notes: "HUB central del sitio. Enfoque B: proceso de montaje en 6 pasos. Enlaza a los 21 artículos existentes. SERP: informacional, competencia débil (tiendas muebles, PDFs viejos). Keywords: 'home office' 2400, 'oficina en casa' 880, 'teletrabajo desde casa' 720. ~3500 palabras, 6 FAQs. Intro directo al grano (ejecutivo). Imagen Pexels #31726669 (Alpha En, 800px)."
+
+  - slug: mejor-silla-oficina-menos-200-euros
+    title: "Mejor silla de oficina barata: 6 opciones por menos de 200€"
+    type: comparativa
+    category: sillas
+    priority: high
+    status: human-review
+    date_created: 2026-04-14
+    notes: "Comparativa 6 sillas <200€. Ángulo: trade-offs honestos del segmento presupuesto. 4 tiers (81-200€). TopPick COMHOMA ~150€. Primary keyword: silla oficina barata (480 SV). 4 FAQs. Imagen Pexels #5644330."

@@ -632,3 +632,27 @@ articles:
       - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
     internal_links_from: []
+
+  - slug: mejor-silla-oficina-menos-200-euros
+    title: "Mejor silla de oficina barata: 6 opciones por menos de 200€"
+    path: src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx
+    type: comparativa
+    category: sillas
+    primary_keyword: "silla oficina barata"
+    secondary_keywords:
+      - mejor silla ergonómica
+      - mejor silla oficina
+      - silla ergonómica barata
+      - mejor silla escritorio
+      - silla oficina menos 200 euros
+    cluster: sillas
+    status: human-review
+    date: 2026-04-15
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-silla-ergonomica-calidad-precio
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+    internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - home-office-productivo-500-euros

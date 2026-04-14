@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-15 --:--
+**Action:** Blog written — "Mejor silla de oficina barata: 6 opciones por menos de 200€"
+**Files:** src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx, public/images/articulos/mejor-silla-oficina-menos-200-euros.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Comparativa de 6 sillas ergonómicas por debajo de 200 € en 4 tiers de precio (81-200€). Ángulo: trade-offs honestos del segmento presupuesto. TopPick: COMHOMA (~150€). Primary keyword: "silla oficina barata" (480 SV). 4 FAQs. 3 experiencias personales + fisio + lector. Internal links: pilar sillas, dolor-espalda, ergonomía-postura. Cluster sillas. Imagen Pexels #5644330. Status: human-review.
+**Triggered by:** user
+
 ## 2026-04-13 --:--
 **Action:** Blog written — "Guía completa de home office: todo lo que necesitas" (HUB central)
 **Files:** src/content/articulos/guia-completa-home-office.mdx, public/images/articulos/guia-completa-home-office.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md, docs/superpowers/specs/2026-04-13-guia-completa-home-office-design.md
