@@ -29,6 +29,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | novedades-home-office-2026 | novedades-home-office-2026.webp | 4596575 | Alex Staudinger | https://www.pexels.com/photo/4596575/ |
 | silla-gaming-vs-ergonomica | silla-gaming-vs-ergonomica.webp | 28955779 | Minh Phuc | https://www.pexels.com/photo/28955779/ |
 | guia-completa-home-office | guia-completa-home-office.webp | 31726669 | Alpha En | https://www.pexels.com/photo/31726669/ |
+| mejor-silla-oficina-menos-200-euros | mejor-silla-oficina-menos-200-euros.webp | 5644330 | Polina | https://www.pexels.com/photo/5644330/ |
 
 ---
 
@@ -136,3 +137,14 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Amazon Basics Brazo Monitor | B07DHK5DHN | /dp/B07DHK5DHN | https://m.media-amazon.com/images/I/71LoJcCSlkL._AC_SL300_.jpg | ~38 EUR | verificado |
 | ErGear Soporte Monitor Dual 32" | B0C7KQ7MX8 | /dp/B0C7KQ7MX8 | https://m.media-amazon.com/images/I/61bCfb9mO7L._AC_SL300_.jpg | ~60 EUR | verificado |
 | Ergotron LX Aluminio | B07Q8TJ2KL | /dp/B07Q8TJ2KL | https://m.media-amazon.com/images/I/71+VZmr4paL._AC_SL300_.jpg | ~199 EUR | verificado |
+
+### mejor-silla-oficina-menos-200-euros
+
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| Naspaluro Silla Oficina Ergonómica | B0FLXSQN3J | /dp/B0FLXSQN3J | https://m.media-amazon.com/images/I/61GTUcJNZ+L._AC_SL1500_.jpg | ~81 EUR | verificado |
+| SONGMICS OBN55BK | B07ZCJVFDJ | /dp/B07ZCJVFDJ | https://m.media-amazon.com/images/I/71vUF7tlyKS._AC_SL1500_.jpg | ~110 EUR | verificado |
+| COMHOMA Silla Ergonómica | B0F66N6N3J | /dp/B0F66N6N3J | https://m.media-amazon.com/images/I/71LJ0XGfsFL._AC_SL1500_.jpg | ~150 EUR | verificado |
+| FelixKing Silla Ergonómica | B0D8HWL8VP | /dp/B0D8HWL8VP | https://m.media-amazon.com/images/I/81GODetTd8L._SL1500_.jpg | ~172 EUR | verificado |
+| Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
+| SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~200 EUR | verificado |
