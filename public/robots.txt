@@ -3,4 +3,5 @@ Allow: /
 Disallow: /404
 Disallow: /api/
 
+Sitemap: https://tuespaciodetrabajo.com/sitemap-index.xml
 Sitemap: https://tuespaciodetrabajo.com/sitemap-0.xml
