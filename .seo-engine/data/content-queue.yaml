@@ -6,7 +6,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-24
     notes: "Artículo personal del autor sobre su setup. Primer artículo del sitio."
 
@@ -15,7 +15,7 @@ queue:
     type: comparativa
     category: sillas
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-24
     notes: "Comparativa de 6 sillas ergonómicas (130-320 EUR) disponibles en Amazon.es. Ángulo: experiencia real de teletrabajador, no medio generalista."
 
@@ -24,7 +24,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-25
     notes: "Guía práctica de ergonomía y postura. Ángulo: experiencia personal de 7 años, no decálogo corporativo. Sin productos de afiliación."
 
@@ -33,7 +33,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-25
     notes: "Guía sobre dolor de espalda específico por teletrabajo. Ángulo: experiencia real de teletrabajador vs clínicas del SERP. Complementa la guía de ergonomía (preventivo) con enfoque diagnóstico/soluciones. ~2100 palabras, 4 FAQs de PAA."
 
@@ -42,7 +42,7 @@ queue:
     type: informativo
     category: escritorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-27
     notes: "Guía experiencial sobre si merece la pena un standing desk. Ángulo: experiencia real de 2 años con FlexiSpot E7 en despacho 8m², no artículo de marketing. Diferente a mejor-escritorio-elevable-electrico (comparativa). ~2100 palabras, 4 FAQs, estructura experiencia."
 
@@ -51,7 +51,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-28
     notes: "Guía de presupuesto paso a paso para montar home office por <500€. Ángulo: experiencia real del autor (primer setup 400€), priorización de gasto. SERP débil. Productos verificados: SIHOO M18, Durrafy, JUMMICO. ~2250 palabras, 4 FAQs."
 
@@ -60,7 +60,7 @@ queue:
     type: comparativa
     category: accesorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-29
     notes: "Comparativa de 6 monitores (114-459 EUR) en Amazon.es. Ángulo: experiencia real de casi 4 años con BenQ PD2705U, no medio generalista. SERP: Xataka, El Corte Inglés, Samsung, El Confidencial. ~2600 palabras, 5 FAQs, estructura con agrupación por tipo (27\" 4K, ultrawide, económico)."
 
@@ -69,7 +69,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-30
     notes: "Guía informativa sobre cómo luz, temperatura, ruido, orden y distribución del espacio afectan la productividad. Ángulo: experiencia real de 7 años en despacho 8m², datos concretos, no listicle genérico de tips. SERP: listicles débiles (Sociment, FacileThings, Randstad). ~2100 palabras, 5 FAQs, estructura con variación (sin 'Conceptos clave' ni 'Errores comunes' estándar). Imagen Pexels #14715851 (Curtis Adams)."
 
@@ -78,7 +78,7 @@ queue:
     type: comparativa
     category: accesorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-31
     notes: "Comparativa de 5 teclados ergonómicos (33-102 EUR) en Amazon.es. Ángulo: experiencia real de 2+ años con Logitech Ergo K860, no listicle de medio tech. SERP: PCComponentes, Xataka, Hardzone, Reddit. ~2700 palabras, 4 FAQs, estructura con variación ('Lo que nadie te cuenta' en vez de 'Guía de compra')."
 
@@ -87,7 +87,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-01
     notes: "Guía de prevención del STC específica para teletrabajadores. Ángulo: experiencia real de teletrabajador que casi lo sufrió, no artículo clínico. SERP: eldiario.es, doctoralia.es, elpais.com — todos clínicos. ~2200 palabras, 5 FAQs, estructura variada con sección de ejercicios prácticos. Imagen Pexels #7298399 (Kindel Media)."
 
@@ -96,7 +96,7 @@ queue:
     type: comparativa
     category: accesorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-02
     notes: "Comparativa de 6 ratones verticales (18-66 EUR) en Amazon.es. Ángulo: experiencia real de 1+ año con Logitech MX Vertical, no listicle de medio tech. SERP: Xataka, PCComponentes, Hardzone, Fnac, Reddit. ~2600 palabras, 6 FAQs, estructura con variación (sin sección 'por qué importa' separada, sección 'vertical vs trackball vs convencional'). Imagen Pexels #7151690 (Helena Lopes)."
 
@@ -105,7 +105,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-03
     notes: "Guía práctica de cálculo de alturas de escritorio y silla según estatura. Ángulo: experiencia real de teletrabajador con fórmulas y test del codo, no guía genérica de tienda de muebles. SERP: Ofiprix, Sklum, Manutan, Oficinas Montiel — todos tiendas. ~2100 palabras, 5 FAQs, estructura variada (sin 'Conceptos clave', incluye tabla de alturas por estatura y sección de errores comunes). Imagen Pexels #4974907 (olia danilevich)."
 
@@ -114,7 +114,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-04
     notes: "Guía informativa sobre fatiga visual digital para teletrabajadores. Ángulo: experiencia real de 7 años frente a pantalla, no artículo clínico. SERP: admiravision.es, aao.org, creu-blanca.es, eizo.es, fernandez-vega.com — todo clínicas/médicos. ~1900 palabras, 4 FAQs, estructura variada (sin 'Conceptos clave', sección mitos, configuración de pantalla paso a paso). Imagen Pexels #5712122 (Arina Krasnikova)."
 
@@ -123,7 +123,7 @@ queue:
     type: comparativa
     category: accesorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-05
     notes: "Comparativa de 6 brazos articulados para monitor (27-199 EUR) en Amazon.es. Ángulo: ergonomía específica para teletrabajadores, no listicle genérico. SERP: blogdegaming, PCComponentes, Profesional Review, Klisst, Reddit. ~2500 palabras, 5 FAQs, estructura con variación ('Brazo articulado vs. soporte de sobremesa' y 'Guía de montaje VESA'). Intro tipo contraposición/irónica. Experiencias personales: montaje ErGear con compañero, fisio con Ergotron LX. Lector preguntando dual vs individual. Fuente: INSST. Imagen Pexels #8001032 (Pavel Danilyuk)."
 
@@ -132,7 +132,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-05
     notes: "Guía informativa sobre iluminación de home office. Ángulo: experiencia real de teletrabajador en despacho 8m², no tienda de lámparas ni normativa corporativa. SERP: Lightingspain, La Casa de las Lámparas, Ofiprix, Leroy Merlin, faro.es — todos tiendas/normativa. ~2000 palabras, 5 FAQs, estructura variada (sin 'Conceptos clave', incluye 'Lo que probé' personal y 'Soluciones por presupuesto'). Intro tipo 'ir al grano' (diferente a últimos informativos: dato sorprendente, anécdota personal). Experiencias personales: lámpara de pie con reflejos, flexo barato, BenQ ScreenBar. Compañera Ana en Madrid (semisótano). Lector con 6500K. Fuentes: INSST RD 486/1997, IBV. Internal links a 3 artículos (fatiga visual, productividad, mi-setup). Cluster: ambiente. Imagen Pexels #28491194 (Thới Nam Cao, 800px)."
 
@@ -141,7 +141,7 @@ queue:
     type: comparativa
     category: ambiente
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-06
     notes: "Comparativa de 7 lámparas LED de escritorio (29-179 EUR) en Amazon.es. Pillar del cluster ambiente. Ángulo: teletrabajo + ergonomía visual (cómo la lámpara interactúa con monitor, videollamadas, jornadas largas) vs SERP dominado por El País, Xataka, La Casa Sibarita enfocados en estudiar. ~2800 palabras, 5 FAQs, estructura con variación ('Flexo, pinza o barra de monitor' + 'Tres errores que veo'). Intro tipo experiencia + recomendación directa. Productos: SLATOR (29€), Aigostar (37€), Xiaomi Desk Lamp 1S (48€, top pick), Hokone pinza (46€), EYOCEAN pinza 12W (50€), BenQ ScreenBar (99€), BenQ ScreenBar Halo 2 (179€). Experiencias personales: flexo barato ~20€ que rozaba alfombrilla, Xiaomi en escritorio de mi mujer, BenQ Halo uso diario >1 año, compañero con pinza y mando. Lector preguntando si pagar doble. Fuentes: RD 486/1997. Internal links a 5 artículos bidireccionales. Cluster: ambiente (pillar). Imagen Pexels #12792219 (Elijah Pilchard, 800px)."
 
@@ -150,7 +150,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-08
     notes: "Guía informativa sobre organización de cables de escritorio. Ángulo: experiencia real de teletrabajador tras 4 intentos en 7 años, no catálogo de tienda ni listicle de accesorios. SERP: Ofiprix (blog tienda), Leroy Merlin (productos), Amazon (productos), Reddit, Xataka (23 ideas listicle). ~2000 palabras, 4 FAQs de SERP data. Estructura variada (sin 'Conceptos clave', sección personal 'Lo que aprendí tras 4 intentos' en vez de 'Errores comunes'). Intro tipo 'problema del lector'. Experiencias personales: 4 intentos cable management, FlexiSpot E7 tensando cables, bridas de plástico rompiendo. Compañero de equipo con 11 cables. Lector con JUMMICO. Fisioterapeuta sobre entorno limpio. Fuente: INSST. 5 internal links bidireccionales. Cluster: ambiente. Imagen Pexels #25223697 (Jakub Zerdzicki, 800px)."
 
@@ -159,7 +159,7 @@ queue:
     type: informativo
     category: guias
     priority: medium
-    status: approved
+    status: published
     date_created: 2026-04-09
     notes: "Artículo informativo transversal sobre productos interesantes de home office en 2026. Ángulo: selección personal de un teletrabajador de 7 años, no resumen de feria. Keywords con 0 volumen directo pero funciona como hub de internal linking (10 links a comparativas). SERP débil y sin listicle de novedades. ~1900 palabras, 4 FAQs. Estructura variada (incluye 'Lo que todavía no me convence' y 'Qué voy a cambiar'). Imagen Pexels #4596575 (Alex Staudinger, 800px)."
 
@@ -168,7 +168,7 @@ queue:
     type: comparativa
     category: escritorios
     priority: high
-    status: approved
+    status: published
     date_created: 2026-03-26
     notes: "Comparativa de 6 escritorios elevables eléctricos (110-310 EUR) en Amazon.es. Ángulo: experiencia real de 2+ años con FlexiSpot E7, no medio tech generalista. SERP dominado por Xataka, PCComponentes, Andro4all."
 
@@ -177,7 +177,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: human-review
+    status: published
     date_created: 2026-04-11
     notes: "Guía informativa comparando sillas gaming vs ergonómicas para teletrabajar. Ángulo: experiencia real con ambos tipos (gaming fue regalo, cambió a ergonómica por dolor lumbar). SERP: Ofiprix, PCComponentes, Hardzone, Reddit, MisSillasDeOficina — todo tiendas/medios con sesgo comercial. ~2000 palabras, 5 FAQs. Estructura variada (tabla comparativa, sección personal, consejos para quienes ya tienen gaming). Intro tipo contraposición. Experiencias personales: gaming regalada, compañero Javi con Newskill, lector con gaming. Fuentes: INSST, Cornell. Imagen Pexels #28955779 (Minh Phuc, 800px)."
 
@@ -186,7 +186,7 @@ queue:
     type: informativo
     category: guias
     priority: high
-    status: approved
+    status: published
     date_created: 2026-04-13
     notes: "HUB central del sitio. Enfoque B: proceso de montaje en 6 pasos. Enlaza a los 21 artículos existentes. SERP: informacional, competencia débil (tiendas muebles, PDFs viejos). Keywords: 'home office' 2400, 'oficina en casa' 880, 'teletrabajo desde casa' 720. ~3500 palabras, 6 FAQs. Intro directo al grano (ejecutivo). Imagen Pexels #31726669 (Alpha En, 800px)."
 

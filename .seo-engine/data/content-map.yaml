@@ -13,7 +13,7 @@ articles:
       - equipamiento home office
       - montar home office
     cluster: hub-central
-    status: approved
+    status: published
     date: 2026-04-13
     has_eeat_signals: true
     internal_links_to:
@@ -57,7 +57,7 @@ articles:
       - espacio de trabajo en casa
       - ergonomía teletrabajo
     cluster: hub-central
-    status: approved
+    status: published
     date: 2026-03-24
     has_eeat_signals: true
     internal_links_to:
@@ -90,7 +90,7 @@ articles:
       - silla escritorio ergonómica
       - sillas para trabajar desde casa
     cluster: sillas
-    status: approved
+    status: published
     date: 2026-03-28
     has_eeat_signals: true
     internal_links_to:
@@ -115,7 +115,7 @@ articles:
       - higiene postural home office
       - ejercicios oficina en casa
     cluster: sillas
-    status: approved
+    status: published
     date: 2026-03-21
     has_eeat_signals: true
     internal_links_to:
@@ -147,7 +147,7 @@ articles:
       - causas dolor espalda sentado
       - salud postural teletrabajo
     cluster: sillas
-    status: approved
+    status: published
     date: 2026-04-03
     has_eeat_signals: true
     internal_links_to:
@@ -179,7 +179,7 @@ articles:
       - FlexiSpot escritorio
       - escritorio elevable calidad precio
     cluster: escritorios
-    status: approved
+    status: published
     date: 2026-04-10
     has_eeat_signals: true
     internal_links_to:
@@ -207,7 +207,7 @@ articles:
       - montar oficina en casa
       - presupuesto home office
     cluster: escritorios
-    status: approved
+    status: published
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
@@ -239,7 +239,7 @@ articles:
       - mejores monitores teletrabajo
       - monitor calidad precio para trabajar
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-03-29
     has_eeat_signals: true
     internal_links_to:
@@ -268,7 +268,7 @@ articles:
       - rendimiento teletrabajo
       - entorno de trabajo en casa
     cluster: productividad
-    status: approved
+    status: published
     date: 2026-03-30
     has_eeat_signals: true
     internal_links_to:
@@ -298,7 +298,7 @@ articles:
       - teclado inalámbrico ergonómico
       - Logitech Ergo K860
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-03-31
     has_eeat_signals: true
     internal_links_to:
@@ -307,8 +307,17 @@ articles:
       - mi-setup-home-office-2026
       - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
+      - guia-completa-home-office
+      - tunel-carpiano-teletrabajo-prevencion
+      - mejor-raton-vertical-ergonomico
+      - fatiga-visual-pantalla
+      - mejor-soporte-monitor-brazo-articulado
     internal_links_from:
       - tunel-carpiano-teletrabajo-prevencion
+      - mejor-raton-vertical-ergonomico
+      - guia-completa-home-office
+      - novedades-home-office-2026
+      - mejor-soporte-monitor-brazo-articulado
 
   - slug: tunel-carpiano-teletrabajo-prevencion
     title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
@@ -322,7 +331,7 @@ articles:
       - ergonomía muñecas home office
       - síndrome túnel carpiano prevención
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-04-01
     has_eeat_signals: true
     internal_links_to:
@@ -347,7 +356,7 @@ articles:
       - ratón vertical túnel carpiano
       - mejor ratón ergonómico
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-04-02
     has_eeat_signals: true
     internal_links_to:
@@ -359,6 +368,7 @@ articles:
       - tunel-carpiano-teletrabajo-prevencion
       - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
+      - mejor-teclado-ergonomico
 
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
@@ -372,7 +382,7 @@ articles:
       - standing desk teletrabajo
       - escritorio elevable ergonomía
     cluster: escritorios
-    status: approved
+    status: published
     date: 2026-03-27
     has_eeat_signals: true
     internal_links_to:
@@ -399,7 +409,7 @@ articles:
       - altura silla escritorio
       - altura mesa ordenador
     cluster: escritorios
-    status: approved
+    status: published
     date: 2026-04-03
     has_eeat_signals: true
     internal_links_to:
@@ -425,7 +435,7 @@ articles:
       - ojos cansados ordenador
       - como evitar fatiga ocular
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-04-04
     has_eeat_signals: true
     internal_links_to:
@@ -438,6 +448,7 @@ articles:
     internal_links_from:
       - mejor-soporte-monitor-brazo-articulado
       - mejorar-iluminacion-espacio-trabajo
+      - mejor-teclado-ergonomico
 
   - slug: mejor-soporte-monitor-brazo-articulado
     title: "Mejor soporte de monitor (brazo articulado) 2026"
@@ -451,7 +462,7 @@ articles:
       - brazo monitor VESA
       - ergonomía monitor altura
     cluster: perifericos
-    status: approved
+    status: published
     date: 2026-04-05
     has_eeat_signals: true
     internal_links_to:
@@ -460,11 +471,14 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - altura-correcta-escritorio-silla
       - dolor-espalda-trabajar-casa
+      - home-office-piso-pequeno
+      - mejor-teclado-ergonomico
     internal_links_from:
       - mejor-monitor-trabajar-desde-casa
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
+      - mejor-teclado-ergonomico
 
   - slug: mejorar-iluminacion-espacio-trabajo
     title: "Cómo mejorar la iluminación de tu espacio de trabajo"
@@ -478,7 +492,7 @@ articles:
       - temperatura de color trabajo
       - iluminación home office
     cluster: ambiente
-    status: approved
+    status: published
     date: 2026-04-05
     has_eeat_signals: true
     internal_links_to:
@@ -506,7 +520,7 @@ articles:
       - barra de monitor LED
       - iluminación home office
     cluster: ambiente
-    status: approved
+    status: published
     date: 2026-04-06
     has_eeat_signals: true
     internal_links_to:
@@ -532,7 +546,7 @@ articles:
       - escritorio compacto teletrabajo
       - oficina en casa piso pequeño
     cluster: productividad
-    status: approved
+    status: published
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
@@ -563,7 +577,7 @@ articles:
       - esconder cables bajo mesa
       - gestión cables home office
     cluster: ambiente
-    status: approved
+    status: published
     date: 2026-04-08
     has_eeat_signals: true
     internal_links_to:
@@ -591,7 +605,7 @@ articles:
       - accesorios home office
       - home office 2026
     cluster: hub-central
-    status: approved
+    status: published
     date: 2026-04-09
     has_eeat_signals: true
     internal_links_to:
@@ -622,7 +636,7 @@ articles:
       - silla gaming teletrabajo
       - silla ergonómica oficina
     cluster: sillas
-    status: human-review
+    status: published
     date: 2026-04-11
     has_eeat_signals: true
     internal_links_to:
@@ -631,7 +645,11 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
-    internal_links_from: []
+    internal_links_from:
+      - mejor-silla-ergonomica-calidad-precio
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
 
   - slug: mejor-silla-oficina-menos-200-euros
     title: "Mejor silla de oficina barata: 6 opciones por menos de 200€"

@@ -1,6 +1,18 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
 ## 2026-04-15 --:--
+**Action:** Keyword research audio-video completado — S4 procede
+**Files:** data/seo-keywords.csv, logs/changelog.md
+**Summary:** Keyword research audio-video completado con Keyword Surfer. Resultados: "auriculares cancelación ruido" 2900 SV (fuerte para pilar), "mejor webcam" 210, "mejor webcam calidad precio" 260, "micrófono pc" 720, "micrófonos para la pc" 1000. Keywords long-tail con 0 volumen: "auriculares cancelación ruido trabajar", "mejor webcam videollamadas", "mejor micrófono videollamadas", "webcam teletrabajo". Keywords relacionadas fuertes: "auriculares con cancelación de ruido" 2400, "cascos cancelación ruido" 1600, "auriculares con micro" 2400. 23 keywords añadidas a seo-keywords.csv. VEREDICTO: S4 procede — el pilar de auriculares tiene keyword fuerte (2900). Webcam y micrófono son cluster pages de apoyo.
+**Triggered by:** user
+
+## 2026-04-15 --:--
+**Action:** SEO engine sync — tareas previas obligatorias Plan v2
+**Files:** data/content-queue.yaml, data/content-map.yaml, data/topic-clusters.yaml, src/content/articulos/mejor-teclado-ergonomico.mdx, src/content/articulos/mejor-soporte-monitor-brazo-articulado.mdx
+**Summary:** Sincronización masiva del SEO engine: 20 artículos approved→published en content-queue y content-map. silla-gaming-vs-ergonomica human-review→published (ya estaba publicado). fatiga-visual-pantalla planned→published en topic-clusters (perifericos). home-office-piso-pequeno planned→published en topic-clusters (escritorios). guia-completa-home-office y novedades-home-office-2026 approved→published en hub-central. Internal linking: añadidos 3 links salientes desde pilar mejor-teclado-ergonomico (→ratón, →soporte-monitor, →fatiga-visual) y 1 link desde mejor-soporte-monitor-brazo-articulado→teclado. Actualizado content-map con todos los links nuevos y internal_links_from de silla-gaming-vs-ergonomica (4 links entrantes). Todas las tareas previas del Plan v2 S1 completadas excepto keyword research audio-video (deadline 25 abril).
+**Triggered by:** user
+
+## 2026-04-15 --:--
 **Action:** Blog written — "Mejor silla de oficina barata: 6 opciones por menos de 200€"
 **Files:** src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx, public/images/articulos/mejor-silla-oficina-menos-200-euros.webp, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
 **Summary:** Comparativa de 6 sillas ergonómicas por debajo de 200 € en 4 tiers de precio (81-200€). Ángulo: trade-offs honestos del segmento presupuesto. TopPick: COMHOMA (~150€). Primary keyword: "silla oficina barata" (480 SV). 4 FAQs. 3 experiencias personales + fisio + lector. Internal links: pilar sillas, dolor-espalda, ergonomía-postura. Cluster sillas. Imagen Pexels #5644330. Status: human-review.

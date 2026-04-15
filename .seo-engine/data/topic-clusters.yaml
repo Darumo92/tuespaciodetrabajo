@@ -73,7 +73,7 @@ clusters:
       - slug: home-office-piso-pequeno
         title: "Home office en piso pequeño: ideas y soluciones que funcionan"
         keyword: "home office piso pequeño"
-        status: planned
+        status: published
     notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio."
 
   - name: perifericos
@@ -121,7 +121,7 @@ clusters:
       - slug: fatiga-visual-pantalla
         title: "Fatiga visual por pantalla: cómo proteger tus ojos trabajando desde casa"
         keyword: "fatiga visual pantalla"
-        status: planned
+        status: published
     notes: "Pilar comparativo. Cluster pages: periféricos de entrada (ratón, reposamuñecas), salida (monitor, soporte), conectividad (hub), salud (túnel carpiano, fatiga visual)."
 
   - name: audio-video
@@ -227,7 +227,7 @@ clusters:
       slug: guia-completa-home-office
       title: "Guía completa de home office: todo lo que necesitas"
       keyword: "guía completa home office"
-      status: approved
+      status: published
     cluster_pages:
       - slug: mi-setup-home-office-2026
         title: "Mi setup de home office 2026: qué uso y por qué"
@@ -236,7 +236,7 @@ clusters:
       - slug: novedades-home-office-2026
         title: "Novedades en home office 2026: los productos más interesantes"
         keyword: "novedades home office 2026"
-        status: approved
+        status: published
       - slug: mejores-accesorios-home-office-amazon
         title: "Los mejores accesorios de home office en Amazon España"
         keyword: "accesorios home office Amazon"
