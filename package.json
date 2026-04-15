@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/optimize-images.mjs && astro build && node scripts/update-csp-hashes.mjs",
+    "build": "node scripts/optimize-images.mjs && astro build && node scripts/fix-sitemap-lastmod.mjs && node scripts/update-csp-hashes.mjs",
     "preview": "astro preview"
   },
   "dependencies": {
