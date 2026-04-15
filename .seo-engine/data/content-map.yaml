@@ -678,7 +678,7 @@ articles:
       - mejor silla escritorio
       - silla oficina menos 200 euros
     cluster: sillas
-    status: human-review
+    status: published
     date: 2026-04-15
     has_eeat_signals: true
     internal_links_to:

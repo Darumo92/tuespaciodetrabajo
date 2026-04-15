@@ -195,6 +195,6 @@ queue:
     type: comparativa
     category: sillas
     priority: high
-    status: human-review
+    status: published
     date_created: 2026-04-14
     notes: "Comparativa 6 sillas <200€. Ángulo: trade-offs honestos del segmento presupuesto. 4 tiers (81-200€). TopPick COMHOMA ~150€. Primary keyword: silla oficina barata (480 SV). 4 FAQs. Imagen Pexels #5644330."
