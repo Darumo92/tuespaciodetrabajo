@@ -45,6 +45,9 @@ articles:
       - mejor-lampara-escritorio-led
       - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
+      - home-office-productivo-500-euros
 
   - slug: mi-setup-home-office-2026
     title: "Mi setup de home office 2026: qué uso y por qué"
@@ -134,6 +137,7 @@ articles:
       - mejor-monitor-trabajar-desde-casa
       - fatiga-visual-pantalla
       - mejor-soporte-monitor-brazo-articulado
+      - mejor-raton-vertical-ergonomico
 
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
@@ -187,6 +191,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - home-office-productivo-500-euros
       - organizar-cables-escritorio
+      - altura-correcta-escritorio-silla
     internal_links_from:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
@@ -218,6 +223,7 @@ articles:
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
       - novedades-home-office-2026
+      - guia-completa-home-office
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - mejor-escritorio-elevable-electrico
@@ -225,6 +231,7 @@ articles:
       - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
 
   - slug: mejor-monitor-trabajar-desde-casa
     title: "Mejor monitor para trabajar desde casa 2026"
@@ -364,6 +371,8 @@ articles:
       - tunel-carpiano-teletrabajo-prevencion
       - mejor-monitor-trabajar-desde-casa
       - mi-setup-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
+      - home-office-productivo-500-euros
     internal_links_from:
       - tunel-carpiano-teletrabajo-prevencion
       - mi-setup-home-office-2026
@@ -390,6 +399,8 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
+      - guia-completa-home-office
+      - altura-correcta-escritorio-silla
     internal_links_from:
       - mejor-escritorio-elevable-electrico
       - ergonomia-teletrabajo-postura-correcta
@@ -421,6 +432,8 @@ articles:
     internal_links_from:
       - fatiga-visual-pantalla
       - mejor-soporte-monitor-brazo-articulado
+      - standing-desk-merece-la-pena
+      - mejor-escritorio-elevable-electrico
 
   - slug: fatiga-visual-pantalla
     title: "Fatiga visual por pantalla: cómo proteger tus ojos"
@@ -645,6 +658,7 @@ articles:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
+      - guia-completa-home-office
     internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
       - dolor-espalda-trabajar-casa

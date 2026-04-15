@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-15 23:15
+**Action:** Internal linking audit + fix — 9 new bidirectional links
+**Files:** 7 MDX articles, data/content-map.yaml
+**Summary:** Linking audit identified gaps: mejor-raton-vertical (1 outgoing → 3), silla-gaming (no hub link → added), soporte-monitor (no monitor link → added), teclado (weak fatiga-visual → reinforced), standing-desk (no hub/altura links → added 2), home-office-500 (no hub link → added), escritorio-elevable (no altura link → added). Hub guia-completa-home-office incoming 3→6. altura-correcta incoming 2→4. content-map.yaml updated with all new links.
+**Triggered by:** user (maintenance day)
+
 ## 2026-04-15 --:--
 **Action:** Keyword research audio-video completado — S4 procede
 **Files:** data/seo-keywords.csv, logs/changelog.md
