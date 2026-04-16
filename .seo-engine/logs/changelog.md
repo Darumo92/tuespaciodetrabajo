@@ -275,3 +275,15 @@
 **Files:** data/content-map.yaml, data/content-queue.yaml
 **Summary:** Artículo aprobado por el usuario. Status actualizado a approved. Incluye experiencias personales, feedback de lectores, fuentes externas (IBV, INSST, OMS) y anécdotas de entorno cercano.
 **Triggered by:** user
+
+## 2026-04-16 22:15
+**Action:** Artículo creado — Cómo ajustar la silla de oficina: guía paso a paso
+**Files:** src/content/articulos/ajustar-silla-oficina-correctamente.mdx, data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml, PRODUCTOS.md, src/content/articulos/altura-correcta-escritorio-silla.mdx, src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, src/content/articulos/dolor-espalda-trabajar-casa.mdx, src/content/articulos/mejor-silla-ergonomica-calidad-precio.mdx, src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx
+**Summary:** Guía informativa paso a paso sobre ajuste de silla oficina (~2000 palabras). Ángulo único vs SERP (tiendas genéricas): 6 ajustes en orden + identificar palancas + 2 fallos mecánicos más buscados (silla se baja sola → pistón neumático, respaldo suelto → perilla tensión). Primary KW "ajustar silla oficina" (0 vol long-tail). Head terms insertados: mecanismo silla oficina (90), espaldar silla ergonómica (110). 5 FAQs de PAA/related. 5 internal links bidireccionales al cluster sillas. 1 AffiliateButton (pistones recambio). Status human-review. Imagen Pexels #31726650 redimensionada a 800px.
+**Triggered by:** user (adelanto calendario S1 — plan v2)
+
+## 2026-04-16 22:25
+**Action:** Blog aprobado — Cómo ajustar la silla de oficina: guía paso a paso
+**Files:** data/content-map.yaml, data/content-queue.yaml, data/topic-clusters.yaml
+**Summary:** Artículo aprobado por el usuario. Status actualizado a published en content-map, content-queue y topic-clusters. Listo para commit.
+**Triggered by:** user

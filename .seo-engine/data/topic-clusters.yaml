@@ -15,9 +15,9 @@ clusters:
         keyword: "silla oficina menos 200 euros"
         status: human-review
       - slug: ajustar-silla-oficina-correctamente
-        title: "Cómo ajustar correctamente tu silla de oficina (paso a paso)"
+        title: "Cómo ajustar la silla de oficina: guía paso a paso"
         keyword: "ajustar silla oficina"
-        status: planned
+        status: published
       - slug: dolor-espalda-trabajar-casa
         title: "Dolor de espalda por trabajar en casa: causas y soluciones"
         keyword: "dolor de espalda trabajar en casa"
