@@ -76,6 +76,8 @@
   --color-cat-ambiente: #ec4899;
   --color-cat-audio-video: #8b5cf6;
   --color-cat-guias: #f43f5e;
+  --color-cat-herramientas: #06b6d4;
+  --color-cat-articulos: #71717a;
 
   --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -2014,4 +2016,1293 @@ button:focus-visible,
     border: 1px solid #ddd;
     margin-bottom: 1rem;
   }
+}
+
+/* =========================================
+   HOMEPAGE — BANNER HERRAMIENTA
+   ========================================= */
+
+.section-tool-banner {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.tool-banner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(37, 99, 235, 0.1) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  border-radius: var(--radius-2xl);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.tool-banner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(6, 182, 212, 0.18);
+  border-color: var(--color-accent);
+}
+
+.tool-banner-content {
+  position: relative;
+  max-width: 560px;
+}
+
+.tool-banner-eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  background: rgba(6, 182, 212, 0.15);
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.tool-banner-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3.2vw, 2rem);
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.tool-banner-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.tool-banner-cta {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  padding: 0.5rem 0;
+  border-bottom: 2px solid currentColor;
+}
+
+.tool-banner-figure {
+  width: 200px;
+  height: 180px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.tool-banner-figure svg {
+  width: 100%;
+  height: 100%;
+}
+
+[data-theme="dark"] .tool-banner {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.06) 0%, rgba(59, 130, 246, 0.08) 100%);
+  border-color: rgba(34, 211, 238, 0.2);
+}
+
+@media (max-width: 720px) {
+  .tool-banner {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .tool-banner-figure {
+    width: 140px;
+    height: 120px;
+    margin: 0 auto;
+  }
+  .tool-banner-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* =========================================
+   HERRAMIENTAS / CALCULADORA ERGONOMIA v2
+   Blueprint / technical / editorial
+   ========================================= */
+
+:root {
+  --font-mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --ergo-blueprint: rgba(37, 99, 235, 0.06);
+  --ergo-blueprint-strong: rgba(37, 99, 235, 0.12);
+  --ergo-progress: 0%;
+  /* Figura SVG */
+  --ergo-bg-top: #f8fafc;
+  --ergo-bg-bot: #eef2ff;
+  --ergo-floor: #94a3b8;
+  --ergo-desk: #1e293b;
+  --ergo-kbd: #e2e8f0;
+  --ergo-mon-bezel: #ffffff;
+  --ergo-mon-border: #1e293b;
+  --ergo-person-head: #475569;
+  --ergo-person-hair: #334155;
+  --ergo-person-torso: #1e293b;
+  --ergo-person-limb: #64748b;
+  --ergo-person-arm-fore: #475569;
+  --ergo-person-leg-fore: #475569;
+  --ergo-pill-bg: #ffffff;
+  --ergo-pill-text-mono: #0f172a;
+}
+
+[data-theme="dark"] {
+  --ergo-blueprint: rgba(59, 130, 246, 0.08);
+  --ergo-blueprint-strong: rgba(59, 130, 246, 0.15);
+  --ergo-bg-top: #111827;
+  --ergo-bg-bot: #0f172a;
+  --ergo-floor: #475569;
+  --ergo-desk: #94a3b8;
+  --ergo-kbd: #1e293b;
+  --ergo-mon-bezel: #1e293b;
+  --ergo-mon-border: #cbd5e1;
+  --ergo-person-head: #cbd5e1;
+  --ergo-person-hair: #e2e8f0;
+  --ergo-person-torso: #94a3b8;
+  --ergo-person-limb: #9ca3af;
+  --ergo-person-arm-fore: #cbd5e1;
+  --ergo-person-leg-fore: #cbd5e1;
+  --ergo-pill-bg: #0f172a;
+  --ergo-pill-text-mono: #e2e8f0;
+}
+
+/* ---------- Page shell ---------- */
+.ergo-page {
+  max-width: 1200px;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.ergo-header {
+  max-width: 780px;
+  margin-bottom: 3rem;
+}
+
+.ergo-eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.3rem 0.75rem;
+  background: var(--ergo-blueprint-strong);
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.ergo-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
+}
+
+.ergo-lead {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ---------- App container ---------- */
+.ergo-app {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  position: relative;
+}
+
+[data-theme="dark"] .ergo-app {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- Progress ---------- */
+.ergo-progress-wrapper {
+  padding: 1.5rem 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ergo-progress {
+  height: 3px;
+  background: var(--color-border);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.ergo-progress-bar {
+  position: absolute;
+  inset: 0;
+  width: var(--ergo-progress);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 2px;
+  transition: width 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-origin: left center;
+}
+
+.ergo-progress-steps {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.ergo-progress-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: color 200ms;
+  outline: none;
+}
+
+.ergo-progress-steps li:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.ergo-progress-steps li.is-active { color: var(--color-text); font-weight: 600; }
+.ergo-progress-steps li.is-done { color: var(--color-primary); }
+
+.ergo-step-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-bg-muted);
+  color: var(--color-text-light);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: all 200ms;
+  flex-shrink: 0;
+}
+
+.ergo-progress-steps li.is-active .ergo-step-dot {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 0 0 4px var(--ergo-blueprint-strong);
+}
+
+.ergo-progress-steps li.is-done .ergo-step-dot {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.ergo-step-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Stage (split layout) ---------- */
+.ergo-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 0;
+  min-height: 520px;
+}
+
+.ergo-panel-input {
+  padding: 2rem;
+  border-right: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+.ergo-panel-figure {
+  padding: 1.5rem;
+  background: var(--color-bg-muted);
+  position: sticky;
+  top: 0;
+  align-self: start;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+.ergo-app[data-step="4"] .ergo-panel-figure {
+  position: sticky;
+  top: 1rem;
+}
+
+/* ---------- Steps animation ---------- */
+.ergo-step {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
+}
+
+.ergo-step.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ergo-step { transition: none; transform: none; }
+  .ergo-progress-bar { transition: none; }
+}
+
+.ergo-step-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+.ergo-step-sub {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 2rem;
+}
+
+/* ---------- Fields ---------- */
+.ergo-field {
+  border: 0;
+  padding: 0;
+  margin: 0 0 1.75rem;
+}
+
+.ergo-field legend,
+.ergo-field > label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.65rem;
+  color: var(--color-text);
+}
+
+.ergo-field-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.ergo-field-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.ergo-unit {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-left: 0.15rem;
+}
+
+.ergo-field-num {
+  width: 84px;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.6rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin-top: 0.5rem;
+}
+
+.ergo-field-num:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.ergo-field-hint {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+  margin-top: 0.5rem;
+}
+
+/* ---------- Slider ---------- */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 36px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary) calc((var(--val, 50) - 140) / 70 * 100%), var(--color-border) calc((var(--val, 50) - 140) / 70 * 100%));
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+input[type="range"]::-moz-range-progress {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  border-radius: 2px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 3px solid var(--color-primary);
+  margin-top: -8px;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+  transition: transform 120ms, box-shadow 120ms;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-bg-card);
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+input[type="range"]:focus-visible::-webkit-slider-thumb {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.ergo-slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-text-light);
+  padding: 0 6px;
+  margin-top: -4px;
+  user-select: none;
+}
+
+/* ---------- Chips (radio/checkbox) ---------- */
+.ergo-radio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ergo-radio-grid--compact {
+  gap: 0.4rem;
+}
+
+.ergo-chip {
+  position: relative;
+  cursor: pointer;
+}
+
+.ergo-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ergo-chip > span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 500;
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: all 180ms;
+  user-select: none;
+}
+
+.ergo-chip:hover > span {
+  border-color: var(--color-primary-light);
+  background: var(--ergo-blueprint);
+}
+
+.ergo-chip input:checked + span {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.ergo-chip input:focus-visible + span {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Dolor chips (larger) ---------- */
+.ergo-dolor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.ergo-dolor-chip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1rem 0.9rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 180ms;
+  background: var(--color-bg);
+}
+
+.ergo-dolor-chip input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ergo-dolor-chip:hover {
+  border-color: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.ergo-dolor-chip.is-selected {
+  border-color: var(--color-primary);
+  background: var(--ergo-blueprint);
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.12);
+}
+
+.ergo-dolor-chip.ergo-dolor-chip--none.is-selected {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.08);
+  color: #047857;
+}
+
+[data-theme="dark"] .ergo-dolor-chip.ergo-dolor-chip--none.is-selected {
+  color: #34d399;
+}
+
+.ergo-dolor-icon {
+  color: var(--color-text-muted);
+  transition: color 180ms;
+}
+
+.ergo-dolor-chip.is-selected .ergo-dolor-icon {
+  color: var(--color-primary);
+}
+
+.ergo-dolor-chip.ergo-dolor-chip--none.is-selected .ergo-dolor-icon {
+  color: #10b981;
+}
+
+.ergo-dolor-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+}
+
+.ergo-dolor-desc {
+  font-size: 0.78rem;
+  color: var(--color-text-light);
+}
+
+.ergo-dolor-chip.is-selected::after {
+  content: '✓';
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ergo-dolor-chip.ergo-dolor-chip--none.is-selected::after {
+  background: #10b981;
+}
+
+/* ---------- Figure panel ---------- */
+.ergo-figure-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+}
+
+.ergo-figure-dims {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.ergo-figure-canvas {
+  flex: 1;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  position: relative;
+  color: var(--color-text-muted);
+  min-height: 360px;
+  max-height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ergo-svg {
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  display: block;
+  color: var(--color-text);
+}
+
+.ergo-svg-muted {
+  font-size: 9px;
+  fill: currentColor;
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+}
+
+.ergo-svg-dim {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  fill: currentColor;
+}
+
+.ergo-figure-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  padding: 0 0.5rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.ergo-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.ergo-legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* ---------- Controls ---------- */
+.ergo-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.ergo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 180ms;
+  background: transparent;
+}
+
+.ergo-btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  margin-left: auto;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.25);
+}
+
+.ergo-btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.ergo-btn-secondary {
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}
+
+.ergo-btn-secondary:hover {
+  background: var(--color-bg-muted);
+  border-color: var(--color-border-dark);
+  color: var(--color-text);
+}
+
+.ergo-btn:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Results ---------- */
+.ergo-step--results {
+  padding: 0;
+}
+
+.ergo-results-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ergo-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--color-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 180ms;
+}
+
+.ergo-share-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+/* ---------- Score gauge ---------- */
+.ergo-score-panel {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--color-bg-muted);
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--color-text-light);
+  transition: border-color 300ms;
+}
+
+.ergo-score-panel[data-color="red"] { border-left-color: #ef4444; }
+.ergo-score-panel[data-color="amber"] { border-left-color: #f59e0b; }
+.ergo-score-panel[data-color="green"] { border-left-color: #10b981; }
+
+.ergo-score-gauge {
+  position: relative;
+  width: 160px;
+  height: 100px;
+  flex-shrink: 0;
+  color: var(--color-text);
+}
+
+.ergo-score-gauge svg {
+  width: 100%;
+  height: 100%;
+}
+
+#gauge-fill {
+  transition: stroke-dashoffset 900ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ergo-score-num {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.ergo-score-label {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.ergo-score-text { flex: 1; min-width: 0; }
+
+.ergo-score-tag {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-card);
+  border: 1.5px solid var(--color-text-light);
+  margin-bottom: 0.5rem;
+}
+
+.ergo-score-tag[data-color="red"] { color: #991b1b; border-color: #ef4444; background: #fef2f2; }
+.ergo-score-tag[data-color="amber"] { color: #92400e; border-color: #f59e0b; background: #fffbeb; }
+.ergo-score-tag[data-color="green"] { color: #065f46; border-color: #10b981; background: #f0fdf4; }
+
+[data-theme="dark"] .ergo-score-tag[data-color="red"] { background: rgba(239, 68, 68, 0.12); }
+[data-theme="dark"] .ergo-score-tag[data-color="amber"] { background: rgba(245, 158, 11, 0.12); }
+[data-theme="dark"] .ergo-score-tag[data-color="green"] { background: rgba(16, 185, 129, 0.12); }
+
+.ergo-score-sub {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ergo-results-sub {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.55;
+}
+
+.ergo-results-sub strong {
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+/* ---------- Measures ---------- */
+.ergo-measures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.ergo-measure {
+  padding: 1rem 1.1rem;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-primary);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: ergoReveal 500ms calc(var(--i) * 80ms) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes ergoReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ergo-measure { animation: none; opacity: 1; transform: none; }
+}
+
+.ergo-measure-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.ergo-measure-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.ergo-measure-unit {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-left: 0.15rem;
+}
+
+.ergo-measure-hint {
+  font-size: 0.76rem;
+  color: var(--color-text-light);
+  margin-top: 0.3rem;
+}
+
+/* ---------- Tips ---------- */
+.ergo-tips { margin-bottom: 2rem; }
+.ergo-tips:empty { display: none; }
+
+.ergo-tips-title {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+}
+
+.ergo-tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.ergo-tip {
+  position: relative;
+  padding: 0.85rem 1rem 0.85rem 2.75rem;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  background: rgba(245, 158, 11, 0.08);
+  border-left: 3px solid var(--color-secondary);
+}
+
+.ergo-tip--warn {
+  background: rgba(239, 68, 68, 0.08);
+  border-left-color: #ef4444;
+}
+
+.ergo-tip::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.ergo-tip--warn::before {
+  background: #ef4444;
+  content: '!';
+}
+
+.ergo-tip--info::before {
+  content: 'i';
+  font-style: italic;
+}
+
+.ergo-tip strong { color: var(--color-text); }
+
+/* ---------- CTAs ---------- */
+.ergo-ctas-block {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.ergo-ctas-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0 0 0.4rem;
+}
+
+.ergo-ctas-intro {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem;
+}
+
+.ergo-ctas-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.85rem;
+  counter-reset: ctas;
+}
+
+.ergo-cta {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--cta-color, var(--color-primary));
+  border-radius: var(--radius-lg);
+  transition: all 220ms;
+  opacity: 0;
+  animation: ergoReveal 500ms calc(var(--i) * 100ms + 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.ergo-cta:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: var(--cta-color, var(--color-primary));
+}
+
+.ergo-cta-num {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cta-color, var(--color-primary));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.ergo-cta-body { flex: 1; min-width: 0; }
+
+.ergo-cta-cat {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cta-color, var(--color-primary));
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.ergo-cta-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+  font-family: var(--font-display);
+}
+
+.ergo-cta-razon {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0 0 0.6rem;
+  line-height: 1.5;
+}
+
+.ergo-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--cta-color, var(--color-primary));
+  text-decoration: none;
+  border-bottom: 1.5px solid currentColor;
+  padding-bottom: 2px;
+}
+
+/* ---------- Modal ---------- */
+.ergo-modal[hidden] { display: none !important; }
+.ergo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.ergo-modal.is-open { opacity: 1; }
+
+.ergo-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(9, 9, 11, 0.55);
+  backdrop-filter: blur(4px);
+}
+
+.ergo-modal-panel {
+  position: relative;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  transform: translateY(10px);
+  transition: transform 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ergo-modal.is-open .ergo-modal-panel { transform: translateY(0); }
+
+.ergo-modal-panel h3 {
+  font-family: var(--font-display);
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.ergo-modal-panel p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin: 0 0 1rem;
+}
+
+.ergo-share-input {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.ergo-modal-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+/* ---------- Noscript ---------- */
+.ergo-noscript {
+  padding: 2rem;
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Content below ---------- */
+.ergo-content {
+  max-width: 75ch;
+  margin: 4rem auto 0;
+}
+
+.ergo-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 3rem 0 1rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.ergo-content h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.ergo-content p, .ergo-content li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+}
+
+.ergo-content ul { padding-left: 1.25rem; line-height: 1.7; }
+.ergo-content ul li { margin: 0.5rem 0; }
+
+.ergo-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+.ergo-content a:hover { color: var(--color-primary-dark); }
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .ergo-stage { grid-template-columns: 1fr; min-height: auto; }
+  .ergo-panel-input { border-right: none; border-bottom: 1px solid var(--color-border); padding: 1.5rem; }
+  .ergo-panel-figure { padding: 1rem; order: 2; }
+  .ergo-figure-canvas { min-height: 320px; }
+}
+
+@media (max-width: 640px) {
+  .ergo-page { padding-bottom: 3rem; }
+  .ergo-progress-wrapper { padding: 1.25rem 1rem 0; }
+  .ergo-progress-steps { gap: 0.25rem; }
+  .ergo-step-label { display: none; }
+  .ergo-progress-steps li { justify-content: center; }
+  .ergo-panel-input { padding: 1.25rem; }
+  .ergo-controls { padding: 1rem; }
+  .ergo-score-panel { flex-direction: column; text-align: center; gap: 1rem; padding: 1.25rem; }
+  .ergo-score-gauge { margin: 0 auto; }
+  .ergo-results-head { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+  .ergo-dolor-grid { grid-template-columns: repeat(2, 1fr); }
+  .ergo-cta { flex-direction: column; gap: 0.6rem; padding: 1rem; }
+  .ergo-cta-num { width: 32px; height: 32px; }
 }

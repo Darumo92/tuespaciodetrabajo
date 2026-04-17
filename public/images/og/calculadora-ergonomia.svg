@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
+
+  <!-- Brand -->
+  <text x="60" y="85" font-family="Space Grotesk, system-ui, sans-serif" font-size="24" font-weight="700" fill="#2563eb" letter-spacing="1">TU ESPACIO DE TRABAJO</text>
+
+  <!-- Label -->
+  <rect x="60" y="130" width="220" height="38" rx="19" fill="#2563eb" opacity="0.12"/>
+  <text x="170" y="156" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#1d4ed8" text-anchor="middle">HERRAMIENTA GRATUITA</text>
+
+  <!-- Title -->
+  <text x="60" y="250" font-family="Space Grotesk, system-ui, sans-serif" font-size="62" font-weight="700" fill="#09090b">Calculadora de</text>
+  <text x="60" y="320" font-family="Space Grotesk, system-ui, sans-serif" font-size="62" font-weight="700" fill="#2563eb">ergonomía</text>
+
+  <!-- Subtitle -->
+  <text x="60" y="385" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#52525b">Altura exacta de silla, escritorio y monitor</text>
+  <text x="60" y="420" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#52525b">según tu estatura. En 3 segundos.</text>
+
+  <!-- Bottom URL -->
+  <text x="60" y="570" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" fill="#2563eb">tuespaciodetrabajo.com/herramientas/calculadora-ergonomia</text>
+
+  <!-- Figure right side -->
+  <g transform="translate(780,180)">
+    <!-- floor -->
+    <line x1="0" y1="340" x2="340" y2="340" stroke="#52525b" stroke-width="2" opacity="0.3"/>
+    <!-- desk -->
+    <rect x="180" y="180" width="150" height="6" fill="#2563eb" opacity="0.85"/>
+    <line x1="325" y1="186" x2="325" y2="340" stroke="#2563eb" stroke-width="3" opacity="0.7"/>
+    <!-- monitor -->
+    <rect x="195" y="90" width="70" height="92" rx="3" fill="#e4e4e7" stroke="#09090b" stroke-width="1.5"/>
+    <rect x="200" y="95" width="60" height="80" rx="2" fill="#2563eb" opacity="0.3"/>
+    <rect x="224" y="175" width="12" height="6" fill="#09090b" opacity="0.4"/>
+    <!-- chair seat -->
+    <rect x="90" y="240" width="80" height="6" fill="#06b6d4" opacity="0.85"/>
+    <rect x="90" y="180" width="6" height="66" fill="#06b6d4" opacity="0.85"/>
+    <line x1="130" y1="246" x2="130" y2="336" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+    <line x1="120" y1="336" x2="140" y2="336" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+    <!-- person -->
+    <circle cx="150" cy="110" r="16" fill="#f59e0b" opacity="0.9"/>
+    <rect x="132" y="126" width="36" height="114" rx="6" fill="#f59e0b" opacity="0.85"/>
+    <line x1="165" y1="145" x2="210" y2="182" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <line x1="148" y1="243" x2="215" y2="243" stroke="#f59e0b" stroke-width="10" stroke-linecap="round" opacity="0.85"/>
+    <line x1="215" y1="243" x2="215" y2="336" stroke="#f59e0b" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
+    <!-- measures -->
+    <line x1="60" y1="340" x2="60" y2="240" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="20" y="295" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#09090b" font-weight="600">46 cm</text>
+    <line x1="340" y1="340" x2="340" y2="180" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <text x="348" y="265" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#09090b" font-weight="600">74 cm</text>
+  </g>
+</svg>

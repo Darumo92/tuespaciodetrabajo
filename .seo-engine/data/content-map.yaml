@@ -729,3 +729,42 @@ articles:
       - dolor-espalda-trabajar-casa
       - mejor-silla-ergonomica-calidad-precio
       - mejor-silla-oficina-menos-200-euros
+
+tools:
+  - slug: calculadora-ergonomia
+    title: "Calculadora de ergonomía: altura silla y escritorio"
+    path: src/pages/herramientas/calculadora-ergonomia.astro
+    type: tool
+    category: herramientas
+    url: /herramientas/calculadora-ergonomia/
+    primary_keyword: "calculadora ergonomía"
+    secondary_keywords:
+      - altura escritorio según estatura
+      - medidas silla ergonómica
+      - altura monitor ergonomía
+      - calcular altura mesa trabajo
+      - altura standing desk estatura
+    status: published
+    date: 2026-04-17
+    has_eeat_signals: true
+    description: "Calculadora interactiva que devuelve altura de silla, escritorio y monitor según estatura + pulgadas + uso. SVG dinámico. CTAs afiliado por categoría."
+    schema_types:
+      - SoftwareApplication
+      - HowTo
+      - FAQPage
+      - BreadcrumbList
+    internal_links_to:
+      - altura-correcta-escritorio-silla
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - ajustar-silla-oficina-correctamente
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-escritorio-elevable-electrico
+      - mejor-soporte-monitor-brazo-articulado
+    internal_links_from:
+      - altura-correcta-escritorio-silla
+      - ergonomia-teletrabajo-postura-correcta
+      - dolor-espalda-trabajar-casa
+      - ajustar-silla-oficina-correctamente
+      - standing-desk-merece-la-pena
+    og_image: /images/og/calculadora-ergonomia.jpg
