@@ -17,38 +17,37 @@ articles:
     date: 2026-04-13
     has_eeat_signals: true
     internal_links_to:
-      - mi-setup-home-office-2026
-      - productividad-en-casa-entorno-fisico
-      - home-office-piso-pequeno
-      - mejor-escritorio-elevable-electrico
-      - standing-desk-merece-la-pena
       - altura-correcta-escritorio-silla
-      - mejor-silla-ergonomica-calidad-precio
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
-      - silla-gaming-vs-ergonomica
-      - mejor-monitor-trabajar-desde-casa
-      - mejor-teclado-ergonomico
-      - mejor-raton-vertical-ergonomico
-      - mejor-soporte-monitor-brazo-articulado
-      - fatiga-visual-pantalla
-      - tunel-carpiano-teletrabajo-prevencion
-      - mejor-lampara-escritorio-led
-      - mejorar-iluminacion-espacio-trabajo
-      - organizar-cables-escritorio
-      - home-office-productivo-500-euros
-      - novedades-home-office-2026
-    internal_links_from:
-      - mejor-silla-ergonomica-calidad-precio
-      - mejor-escritorio-elevable-electrico
-      - mejor-teclado-ergonomico
-      - mejor-lampara-escritorio-led
-      - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
+      - fatiga-visual-pantalla
+      - home-office-piso-pequeno
+      - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
+      - mejorar-iluminacion-espacio-trabajo
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
+      - organizar-cables-escritorio
+      - productividad-en-casa-entorno-fisico
       - silla-gaming-vs-ergonomica
       - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
+      - ergonomia-teletrabajo-postura-correcta
       - home-office-productivo-500-euros
-
+      - mejor-escritorio-elevable-electrico
+      - mejor-lampara-escritorio-led
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-teclado-ergonomico
+      - mi-setup-home-office-2026
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
   - slug: mi-setup-home-office-2026
     title: "Mi setup de home office 2026: qué uso y por qué"
     path: src/content/articulos/mi-setup-home-office-2026.mdx
@@ -64,23 +63,35 @@ articles:
     date: 2026-03-24
     has_eeat_signals: true
     internal_links_to:
-      - sillas (categoría)
-      - escritorios (categoría)
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - fatiga-visual-pantalla
+      - guia-completa-home-office
       - home-office-productivo-500-euros
       - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
       - mejorar-iluminacion-espacio-trabajo
       - novedades-home-office-2026
+      - standing-desk-merece-la-pena
+      - sillas (categoría)
+      - escritorios (categoría)
     internal_links_from:
-      - mejor-silla-ergonomica-calidad-precio
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
-      - home-office-productivo-500-euros
-      - mejor-monitor-trabajar-desde-casa
+      - ergonomia-teletrabajo-postura-correcta
       - fatiga-visual-pantalla
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-teclado-ergonomico
       - mejorar-iluminacion-espacio-trabajo
-
+      - novedades-home-office-2026
+      - productividad-en-casa-entorno-fisico
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
   - slug: mejor-silla-ergonomica-calidad-precio
     title: "Mejor silla ergonómica calidad-precio 2026"
     path: src/content/articulos/mejor-silla-ergonomica-calidad-precio.mdx
@@ -97,19 +108,27 @@ articles:
     date: 2026-03-28
     has_eeat_signals: true
     internal_links_to:
+      - ajustar-silla-oficina-correctamente
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
+      - mejor-silla-oficina-menos-200-euros
       - mi-setup-home-office-2026
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
-      - home-office-productivo-500-euros
-      - mejor-silla-oficina-menos-200-euros
-      - ajustar-silla-oficina-correctamente
+      - silla-gaming-vs-ergonomica
     internal_links_from:
-      - ergonomia-teletrabajo-postura-correcta
+      - ajustar-silla-oficina-correctamente
+      - calculadora-ergonomia
       - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
       - home-office-productivo-500-euros
       - mejor-silla-oficina-menos-200-euros
-      - ajustar-silla-oficina-correctamente
-
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
+      - productividad-en-casa-entorno-fisico
+      - silla-gaming-vs-ergonomica
   - slug: ergonomia-teletrabajo-postura-correcta
     title: "Guía de ergonomía para teletrabajadores: postura correcta"
     path: src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx
@@ -126,25 +145,40 @@ articles:
     date: 2026-03-21
     has_eeat_signals: true
     internal_links_to:
-      - mejor-silla-ergonomica-calidad-precio
-      - mi-setup-home-office-2026
-      - dolor-espalda-trabajar-casa
-      - mejor-escritorio-elevable-electrico
-      - home-office-productivo-500-euros
-      - mejor-monitor-trabajar-desde-casa
       - ajustar-silla-oficina-correctamente
-    internal_links_from:
-      - mejor-silla-ergonomica-calidad-precio
-      - mi-setup-home-office-2026
+      - calculadora-ergonomia
       - dolor-espalda-trabajar-casa
-      - mejor-escritorio-elevable-electrico
+      - guia-completa-home-office
       - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
       - mejor-monitor-trabajar-desde-casa
-      - fatiga-visual-pantalla
-      - mejor-soporte-monitor-brazo-articulado
       - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-soporte-monitor-brazo-articulado
+      - mi-setup-home-office-2026
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
       - ajustar-silla-oficina-correctamente
-
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - fatiga-visual-pantalla
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-silla-oficina-menos-200-euros
+      - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
   - slug: dolor-espalda-trabajar-casa
     title: "Dolor de espalda por trabajar en casa: causas y soluciones"
     path: src/content/articulos/dolor-espalda-trabajar-casa.mdx
@@ -161,23 +195,34 @@ articles:
     date: 2026-04-03
     has_eeat_signals: true
     internal_links_to:
-      - ergonomia-teletrabajo-postura-correcta
-      - mejor-silla-ergonomica-calidad-precio
-      - mi-setup-home-office-2026
-      - mejor-escritorio-elevable-electrico
-      - home-office-productivo-500-euros
-      - mejor-monitor-trabajar-desde-casa
       - ajustar-silla-oficina-correctamente
-    internal_links_from:
+      - calculadora-ergonomia
       - ergonomia-teletrabajo-postura-correcta
-      - mejor-silla-ergonomica-calidad-precio
-      - mi-setup-home-office-2026
-      - mejor-escritorio-elevable-electrico
       - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
       - mejor-monitor-trabajar-desde-casa
+      - mejor-silla-ergonomica-calidad-precio
       - mejor-soporte-monitor-brazo-articulado
+      - mi-setup-home-office-2026
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
       - ajustar-silla-oficina-correctamente
-
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
+      - mejor-escritorio-elevable-electrico
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-silla-oficina-menos-200-euros
+      - mejor-soporte-monitor-brazo-articulado
+      - mi-setup-home-office-2026
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
+      - tunel-carpiano-teletrabajo-prevencion
   - slug: mejor-escritorio-elevable-electrico
     title: "Mejor escritorio elevable eléctrico 2026"
     path: src/content/articulos/mejor-escritorio-elevable-electrico.mdx
@@ -195,19 +240,30 @@ articles:
     date: 2026-04-10
     has_eeat_signals: true
     internal_links_to:
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
-      - home-office-productivo-500-euros
-      - organizar-cables-escritorio
       - altura-correcta-escritorio-silla
-    internal_links_from:
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
-      - standing-desk-merece-la-pena
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-piso-pequeno
       - home-office-productivo-500-euros
-      - mejor-soporte-monitor-brazo-articulado
       - organizar-cables-escritorio
-
+      - standing-desk-merece-la-pena
+    internal_links_from:
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-piso-pequeno
+      - home-office-productivo-500-euros
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
+      - novedades-home-office-2026
+      - organizar-cables-escritorio
+      - standing-desk-merece-la-pena
   - slug: home-office-productivo-500-euros
     title: "Home office productivo por menos de 500 €"
     path: src/content/articulos/home-office-productivo-500-euros.mdx
@@ -224,23 +280,29 @@ articles:
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
-      - mejor-silla-ergonomica-calidad-precio
-      - mejor-escritorio-elevable-electrico
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
-      - mi-setup-home-office-2026
-      - mejor-monitor-trabajar-desde-casa
-      - novedades-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
       - guia-completa-home-office
-    internal_links_from:
-      - mejor-silla-ergonomica-calidad-precio
+      - home-office-piso-pequeno
       - mejor-escritorio-elevable-electrico
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-silla-oficina-menos-200-euros
       - mi-setup-home-office-2026
+      - novedades-home-office-2026
+    internal_links_from:
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
       - mejor-monitor-trabajar-desde-casa
       - mejor-raton-vertical-ergonomico
-
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-teclado-ergonomico
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
+      - productividad-en-casa-entorno-fisico
   - slug: mejor-monitor-trabajar-desde-casa
     title: "Mejor monitor para trabajar desde casa 2026"
     path: src/content/articulos/mejor-monitor-trabajar-desde-casa.mdx
@@ -258,19 +320,27 @@ articles:
     date: 2026-03-29
     has_eeat_signals: true
     internal_links_to:
-      - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
-      - mi-setup-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
+      - fatiga-visual-pantalla
       - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
-    internal_links_from:
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
-      - mi-setup-home-office-2026
-      - home-office-productivo-500-euros
-      - fatiga-visual-pantalla
       - mejor-soporte-monitor-brazo-articulado
-
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - fatiga-visual-pantalla
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
+      - mejor-lampara-escritorio-led
+      - mejor-raton-vertical-ergonomico
+      - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
+      - productividad-en-casa-entorno-fisico
   - slug: productividad-en-casa-entorno-fisico
     title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
     path: src/content/articulos/productividad-en-casa-entorno-fisico.mdx
@@ -288,18 +358,21 @@ articles:
     has_eeat_signals: true
     internal_links_to:
       - ergonomia-teletrabajo-postura-correcta
+      - fatiga-visual-pantalla
+      - home-office-piso-pequeno
       - home-office-productivo-500-euros
-      - mi-setup-home-office-2026
       - mejor-monitor-trabajar-desde-casa
       - mejor-silla-ergonomica-calidad-precio
       - mejorar-iluminacion-espacio-trabajo
-      - organizar-cables-escritorio
+      - mi-setup-home-office-2026
       - novedades-home-office-2026
+      - organizar-cables-escritorio
     internal_links_from:
       - fatiga-visual-pantalla
+      - guia-completa-home-office
+      - home-office-piso-pequeno
       - mejorar-iluminacion-espacio-trabajo
       - organizar-cables-escritorio
-
   - slug: mejor-teclado-ergonomico
     title: "Mejor teclado ergonómico 2026"
     path: src/content/articulos/mejor-teclado-ergonomico.mdx
@@ -317,23 +390,23 @@ articles:
     date: 2026-03-31
     has_eeat_signals: true
     internal_links_to:
-      - mejor-monitor-trabajar-desde-casa
       - ergonomia-teletrabajo-postura-correcta
-      - mi-setup-home-office-2026
+      - fatiga-visual-pantalla
+      - guia-completa-home-office
       - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
-      - guia-completa-home-office
-      - tunel-carpiano-teletrabajo-prevencion
+      - mejor-monitor-trabajar-desde-casa
       - mejor-raton-vertical-ergonomico
-      - fatiga-visual-pantalla
       - mejor-soporte-monitor-brazo-articulado
+      - mi-setup-home-office-2026
+      - tunel-carpiano-teletrabajo-prevencion
     internal_links_from:
-      - tunel-carpiano-teletrabajo-prevencion
-      - mejor-raton-vertical-ergonomico
+      - calculadora-ergonomia
       - guia-completa-home-office
-      - novedades-home-office-2026
+      - mejor-raton-vertical-ergonomico
       - mejor-soporte-monitor-brazo-articulado
-
+      - novedades-home-office-2026
+      - tunel-carpiano-teletrabajo-prevencion
   - slug: tunel-carpiano-teletrabajo-prevencion
     title: "Túnel carpiano en teletrabajadores: cómo prevenirlo"
     path: src/content/articulos/tunel-carpiano-teletrabajo-prevencion.mdx
@@ -350,14 +423,17 @@ articles:
     date: 2026-04-01
     has_eeat_signals: true
     internal_links_to:
-      - ergonomia-teletrabajo-postura-correcta
-      - mejor-teclado-ergonomico
       - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-raton-vertical-ergonomico
+      - mejor-teclado-ergonomico
     internal_links_from:
-      - ergonomia-teletrabajo-postura-correcta
-      - mejor-teclado-ergonomico
+      - altura-correcta-escritorio-silla
       - dolor-espalda-trabajar-casa
-
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - mejor-raton-vertical-ergonomico
+      - mejor-teclado-ergonomico
   - slug: mejor-raton-vertical-ergonomico
     title: "Mejor ratón vertical ergonómico 2026"
     path: src/content/articulos/mejor-raton-vertical-ergonomico.mdx
@@ -375,18 +451,20 @@ articles:
     date: 2026-04-02
     has_eeat_signals: true
     internal_links_to:
-      - mejor-teclado-ergonomico
-      - tunel-carpiano-teletrabajo-prevencion
-      - mejor-monitor-trabajar-desde-casa
-      - mi-setup-home-office-2026
       - ergonomia-teletrabajo-postura-correcta
       - home-office-productivo-500-euros
-    internal_links_from:
-      - tunel-carpiano-teletrabajo-prevencion
-      - mi-setup-home-office-2026
-      - ergonomia-teletrabajo-postura-correcta
+      - mejor-monitor-trabajar-desde-casa
       - mejor-teclado-ergonomico
-
+      - mi-setup-home-office-2026
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
+      - calculadora-ergonomia
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - mejor-teclado-ergonomico
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
+      - tunel-carpiano-teletrabajo-prevencion
   - slug: standing-desk-merece-la-pena
     title: "Standing desk: ¿merece la pena? Mi experiencia real"
     path: src/content/articulos/standing-desk-merece-la-pena.mdx
@@ -403,19 +481,23 @@ articles:
     date: 2026-03-27
     has_eeat_signals: true
     internal_links_to:
-      - mejor-escritorio-elevable-electrico
-      - ergonomia-teletrabajo-postura-correcta
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
       - dolor-espalda-trabajar-casa
-      - mi-setup-home-office-2026
+      - ergonomia-teletrabajo-postura-correcta
       - guia-completa-home-office
-      - altura-correcta-escritorio-silla
-    internal_links_from:
       - mejor-escritorio-elevable-electrico
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
       - mi-setup-home-office-2026
+    internal_links_from:
       - altura-correcta-escritorio-silla
-
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
+      - mi-setup-home-office-2026
+      - novedades-home-office-2026
   - slug: altura-correcta-escritorio-silla
     title: "Altura correcta de escritorio y silla para teletrabajar"
     path: src/content/articulos/altura-correcta-escritorio-silla.mdx
@@ -432,19 +514,24 @@ articles:
     date: 2026-04-03
     has_eeat_signals: true
     internal_links_to:
+      - ajustar-silla-oficina-correctamente
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-escritorio-elevable-electrico
-      - standing-desk-merece-la-pena
-      - tunel-carpiano-teletrabajo-prevencion
-      - dolor-espalda-trabajar-casa
-      - ajustar-silla-oficina-correctamente
-    internal_links_from:
-      - fatiga-visual-pantalla
       - mejor-soporte-monitor-brazo-articulado
       - standing-desk-merece-la-pena
-      - mejor-escritorio-elevable-electrico
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
       - ajustar-silla-oficina-correctamente
-
+      - calculadora-ergonomia
+      - fatiga-visual-pantalla
+      - guia-completa-home-office
+      - home-office-piso-pequeno
+      - mejor-escritorio-elevable-electrico
+      - mejor-soporte-monitor-brazo-articulado
+      - silla-gaming-vs-ergonomica
+      - standing-desk-merece-la-pena
   - slug: fatiga-visual-pantalla
     title: "Fatiga visual por pantalla: cómo proteger tus ojos"
     path: src/content/articulos/fatiga-visual-pantalla.mdx
@@ -462,17 +549,20 @@ articles:
     date: 2026-04-04
     has_eeat_signals: true
     internal_links_to:
-      - mejor-monitor-trabajar-desde-casa
-      - ergonomia-teletrabajo-postura-correcta
-      - productividad-en-casa-entorno-fisico
-      - mi-setup-home-office-2026
       - altura-correcta-escritorio-silla
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-monitor-trabajar-desde-casa
       - mejorar-iluminacion-espacio-trabajo
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico
     internal_links_from:
-      - mejor-soporte-monitor-brazo-articulado
-      - mejorar-iluminacion-espacio-trabajo
+      - guia-completa-home-office
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
       - mejor-teclado-ergonomico
-
+      - mejorar-iluminacion-espacio-trabajo
+      - mi-setup-home-office-2026
+      - productividad-en-casa-entorno-fisico
   - slug: mejor-soporte-monitor-brazo-articulado
     title: "Mejor soporte de monitor (brazo articulado) 2026"
     path: src/content/articulos/mejor-soporte-monitor-brazo-articulado.mdx
@@ -489,20 +579,23 @@ articles:
     date: 2026-04-05
     has_eeat_signals: true
     internal_links_to:
+      - altura-correcta-escritorio-silla
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - home-office-piso-pequeno
       - mejor-escritorio-elevable-electrico
       - mejor-monitor-trabajar-desde-casa
-      - ergonomia-teletrabajo-postura-correcta
-      - altura-correcta-escritorio-silla
-      - dolor-espalda-trabajar-casa
-      - home-office-piso-pequeno
       - mejor-teclado-ergonomico
     internal_links_from:
-      - mejor-monitor-trabajar-desde-casa
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - home-office-piso-pequeno
+      - mejor-monitor-trabajar-desde-casa
       - mejor-teclado-ergonomico
-
+      - novedades-home-office-2026
   - slug: mejorar-iluminacion-espacio-trabajo
     title: "Cómo mejorar la iluminación de tu espacio de trabajo"
     path: src/content/articulos/mejorar-iluminacion-espacio-trabajo.mdx
@@ -520,17 +613,18 @@ articles:
     has_eeat_signals: true
     internal_links_to:
       - fatiga-visual-pantalla
-      - mi-setup-home-office-2026
-      - productividad-en-casa-entorno-fisico
       - mejor-lampara-escritorio-led
+      - mi-setup-home-office-2026
       - organizar-cables-escritorio
+      - productividad-en-casa-entorno-fisico
     internal_links_from:
       - fatiga-visual-pantalla
-      - mi-setup-home-office-2026
-      - productividad-en-casa-entorno-fisico
+      - guia-completa-home-office
+      - home-office-piso-pequeno
       - mejor-lampara-escritorio-led
+      - mi-setup-home-office-2026
       - organizar-cables-escritorio
-
+      - productividad-en-casa-entorno-fisico
   - slug: mejor-lampara-escritorio-led
     title: "Mejor lámpara de escritorio LED 2026"
     path: src/content/articulos/mejor-lampara-escritorio-led.mdx
@@ -547,16 +641,19 @@ articles:
     date: 2026-04-06
     has_eeat_signals: true
     internal_links_to:
-      - mejorar-iluminacion-espacio-trabajo
       - fatiga-visual-pantalla
-      - mi-setup-home-office-2026
-      - mejor-monitor-trabajar-desde-casa
+      - guia-completa-home-office
       - mejor-escritorio-elevable-electrico
+      - mejor-monitor-trabajar-desde-casa
+      - mejorar-iluminacion-espacio-trabajo
+      - mi-setup-home-office-2026
       - organizar-cables-escritorio
     internal_links_from:
+      - calculadora-ergonomia
+      - guia-completa-home-office
       - mejorar-iluminacion-espacio-trabajo
+      - novedades-home-office-2026
       - organizar-cables-escritorio
-
   - slug: home-office-piso-pequeno
     title: "Home office en piso pequeño: ideas y soluciones que funcionan"
     path: src/content/articulos/home-office-piso-pequeno.mdx
@@ -573,21 +670,21 @@ articles:
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
-      - productividad-en-casa-entorno-fisico
-      - standing-desk-merece-la-pena
+      - altura-correcta-escritorio-silla
+      - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
       - mejor-soporte-monitor-brazo-articulado
       - mejorar-iluminacion-espacio-trabajo
-      - altura-correcta-escritorio-silla
-      - home-office-productivo-500-euros
       - organizar-cables-escritorio
-    internal_links_from:
-      - home-office-productivo-500-euros
       - productividad-en-casa-entorno-fisico
+      - standing-desk-merece-la-pena
+    internal_links_from:
+      - guia-completa-home-office
+      - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
       - mejor-soporte-monitor-brazo-articulado
       - organizar-cables-escritorio
-
+      - productividad-en-casa-entorno-fisico
   - slug: organizar-cables-escritorio
     title: "Cómo organizar los cables de tu escritorio"
     path: src/content/articulos/organizar-cables-escritorio.mdx
@@ -604,18 +701,18 @@ articles:
     date: 2026-04-08
     has_eeat_signals: true
     internal_links_to:
-      - productividad-en-casa-entorno-fisico
       - home-office-piso-pequeno
       - mejor-escritorio-elevable-electrico
-      - mejorar-iluminacion-espacio-trabajo
       - mejor-lampara-escritorio-led
+      - mejorar-iluminacion-espacio-trabajo
+      - productividad-en-casa-entorno-fisico
     internal_links_from:
-      - productividad-en-casa-entorno-fisico
+      - guia-completa-home-office
       - home-office-piso-pequeno
       - mejor-escritorio-elevable-electrico
-      - mejorar-iluminacion-espacio-trabajo
       - mejor-lampara-escritorio-led
-
+      - mejorar-iluminacion-espacio-trabajo
+      - productividad-en-casa-entorno-fisico
   - slug: novedades-home-office-2026
     title: "Novedades en home office 2026: los productos más interesantes"
     path: src/content/articulos/novedades-home-office-2026.mdx
@@ -632,21 +729,21 @@ articles:
     date: 2026-04-09
     has_eeat_signals: true
     internal_links_to:
+      - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
-      - standing-desk-merece-la-pena
-      - mejor-silla-ergonomica-calidad-precio
-      - mejor-raton-vertical-ergonomico
-      - mejor-teclado-ergonomico
       - mejor-lampara-escritorio-led
       - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
       - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
       - mi-setup-home-office-2026
-      - home-office-productivo-500-euros
+      - standing-desk-merece-la-pena
     internal_links_from:
-      - mi-setup-home-office-2026
+      - guia-completa-home-office
       - home-office-productivo-500-euros
+      - mi-setup-home-office-2026
       - productividad-en-casa-entorno-fisico
-
   - slug: silla-gaming-vs-ergonomica
     title: "Silla gaming vs ergonómica: cuál elegir para trabajar"
     path: src/content/articulos/silla-gaming-vs-ergonomica.mdx
@@ -663,18 +760,17 @@ articles:
     date: 2026-04-11
     has_eeat_signals: true
     internal_links_to:
-      - mi-setup-home-office-2026
-      - mejor-silla-ergonomica-calidad-precio
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
       - altura-correcta-escritorio-silla
-      - guia-completa-home-office
-    internal_links_from:
-      - mejor-silla-ergonomica-calidad-precio
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - guia-completa-home-office
-
+      - mejor-silla-ergonomica-calidad-precio
+      - mi-setup-home-office-2026
+    internal_links_from:
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - guia-completa-home-office
+      - mejor-silla-ergonomica-calidad-precio
   - slug: mejor-silla-oficina-menos-200-euros
     title: "Mejor silla de oficina barata: 6 opciones por menos de 200€"
     path: src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx
@@ -692,15 +788,15 @@ articles:
     date: 2026-04-15
     has_eeat_signals: true
     internal_links_to:
-      - mejor-silla-ergonomica-calidad-precio
+      - ajustar-silla-oficina-correctamente
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
-      - ajustar-silla-oficina-correctamente
-    internal_links_from:
       - mejor-silla-ergonomica-calidad-precio
-      - home-office-productivo-500-euros
+    internal_links_from:
       - ajustar-silla-oficina-correctamente
-
+      - calculadora-ergonomia
+      - home-office-productivo-500-euros
+      - mejor-silla-ergonomica-calidad-precio
   - slug: ajustar-silla-oficina-correctamente
     title: "Cómo ajustar la silla de oficina: guía paso a paso"
     path: src/content/articulos/ajustar-silla-oficina-correctamente.mdx
@@ -719,17 +815,18 @@ articles:
     has_eeat_signals: true
     internal_links_to:
       - altura-correcta-escritorio-silla
-      - ergonomia-teletrabajo-postura-correcta
+      - calculadora-ergonomia
       - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mejor-silla-oficina-menos-200-euros
     internal_links_from:
       - altura-correcta-escritorio-silla
-      - ergonomia-teletrabajo-postura-correcta
+      - calculadora-ergonomia
       - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mejor-silla-oficina-menos-200-euros
-
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"
@@ -754,17 +851,23 @@ tools:
       - FAQPage
       - BreadcrumbList
     internal_links_to:
-      - altura-correcta-escritorio-silla
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
       - ajustar-silla-oficina-correctamente
-      - mejor-silla-ergonomica-calidad-precio
+      - altura-correcta-escritorio-silla
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
       - mejor-escritorio-elevable-electrico
+      - mejor-lampara-escritorio-led
+      - mejor-monitor-trabajar-desde-casa
+      - mejor-raton-vertical-ergonomico
+      - mejor-silla-ergonomica-calidad-precio
+      - mejor-silla-oficina-menos-200-euros
       - mejor-soporte-monitor-brazo-articulado
+      - mejor-teclado-ergonomico
+      - standing-desk-merece-la-pena
     internal_links_from:
-      - altura-correcta-escritorio-silla
-      - ergonomia-teletrabajo-postura-correcta
-      - dolor-espalda-trabajar-casa
       - ajustar-silla-oficina-correctamente
+      - altura-correcta-escritorio-silla
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
       - standing-desk-merece-la-pena
     og_image: /images/og/calculadora-ergonomia.jpg
