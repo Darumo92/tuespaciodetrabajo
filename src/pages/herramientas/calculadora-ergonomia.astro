@@ -311,26 +311,22 @@ const faqSchema = {
               </button>
             </div>
 
-            <!-- Score -->
-            <div class="ergo-score-panel">
-              <div class="ergo-score-gauge" aria-hidden="true">
-                <svg viewBox="0 0 120 70" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="gauge-grad" x1="0" y1="0" x2="100%" y2="0">
-                      <stop offset="0%" stop-color="#ef4444"/>
-                      <stop offset="45%" stop-color="#f59e0b"/>
-                      <stop offset="100%" stop-color="#10b981"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M 10 60 A 50 50 0 0 1 110 60" stroke="currentColor" stroke-width="8" stroke-linecap="round" fill="none" opacity="0.12"/>
-                  <path d="M 10 60 A 50 50 0 0 1 110 60" stroke="url(#gauge-grad)" stroke-width="8" stroke-linecap="round" fill="none" id="gauge-fill" stroke-dasharray="157" stroke-dashoffset="157"/>
+            <!-- Score card -->
+            <div class="ergo-score-card" id="score-card" data-color="green">
+              <div class="ergo-score-ring" aria-hidden="true">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="10" opacity="0.1"/>
+                  <circle cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round" transform="rotate(-90 60 60)" id="ring-fill" stroke-dasharray="327" stroke-dashoffset="327"/>
                 </svg>
-                <div class="ergo-score-num" id="score-num">—</div>
-                <div class="ergo-score-label">de 100</div>
+                <div class="ergo-score-ring-center">
+                  <div class="ergo-score-num" id="score-num">—</div>
+                  <div class="ergo-score-denom">de 100</div>
+                </div>
               </div>
-              <div class="ergo-score-text">
-                <div class="ergo-score-tag" id="score-tag">Calculando…</div>
-                <p class="ergo-score-sub" id="score-desc">Score de tu setup actual según tus respuestas.</p>
+              <div class="ergo-score-body">
+                <span class="ergo-score-badge" id="score-badge">—</span>
+                <h3 class="ergo-score-title" id="score-title">Calculando tu setup…</h3>
+                <p class="ergo-score-desc" id="score-desc">Score basado en tu silla, monitor, horas sentado y dolores reportados.</p>
               </div>
             </div>
 
@@ -608,9 +604,17 @@ const faqSchema = {
         if (i.dolor.has('muñecas')) s -= 6;
         if (i.dolor.has('ojos')) s -= 6;
         s = Math.max(8, Math.min(100, s));
-        const color = s < 40 ? 'red' : s < 70 ? 'amber' : 'green';
-        const tag = s < 40 ? 'Setup de riesgo' : s < 70 ? 'Margen de mejora claro' : s < 85 ? 'Razonable, puede ser mejor' : 'Excelente';
-        return { value: s, color, tag };
+        const color = s < 40 ? 'red' : s < 70 ? 'amber' : s < 85 ? 'greenLight' : 'green';
+        const badge = s < 40 ? 'Riesgo' : s < 70 ? 'Mejorable' : s < 85 ? 'Aceptable' : 'Excelente';
+        const title = s < 40 ? 'Setup de riesgo alto'
+                    : s < 70 ? 'Margen de mejora claro'
+                    : s < 85 ? 'Base razonable'
+                    : 'Setup excelente';
+        const desc = s < 40 ? 'Si sigues 5+ horas al día aquí, va a pasar factura pronto. Prioriza los cambios de las recomendaciones.'
+                   : s < 70 ? 'Con una inversión enfocada (100-250 €) puedes subir 15-25 puntos en semanas.'
+                   : s < 85 ? 'Funciona bien. Ajustes finos en silla y monitor te llevan al rango óptimo.'
+                   : 'Setup bien dimensionado. Mantenlo, cuida las pausas activas cada 45 minutos, y listo.';
+        return { value: s, color, badge, title, desc };
       }
 
       function calcPriorities(i) {
@@ -1160,17 +1164,17 @@ const faqSchema = {
         // Sub text
         $('result-sub').innerHTML = 'Calculado para <strong>' + S.inputs.estatura + ' cm</strong>, monitor <strong>' + (S.inputs.monitor === 'laptop' ? 'portátil' : S.inputs.monitor + '"') + '</strong>, <strong>' + S.inputs.horas + 'h/día</strong>. Basado en ISO 7250 (±2 cm según proporciones personales).';
 
-        // Score gauge
-        const scoreNum = $('score-num');
-        const gaugeFill = $('gauge-fill');
-        const scoreTag = $('score-tag');
-        const scorePanel = $('score-num').closest('.ergo-score-panel');
-        scorePanel.dataset.color = score.color;
-        scoreTag.textContent = score.tag;
-        scoreTag.dataset.color = score.color;
-        animateCount(scoreNum, 0, score.value, 900);
-        const dashLen = 157;
-        gaugeFill.style.strokeDashoffset = dashLen - (score.value / 100) * dashLen;
+        // Score card
+        const scoreCard = $('score-card');
+        scoreCard.dataset.color = score.color;
+        $('score-badge').textContent = score.badge;
+        $('score-title').textContent = score.title;
+        $('score-desc').textContent = score.desc;
+        animateCount($('score-num'), 0, score.value, 900);
+        const ringLen = 2 * Math.PI * 52;
+        const ringFill = $('ring-fill');
+        ringFill.style.strokeDasharray = ringLen;
+        ringFill.style.strokeDashoffset = ringLen - (score.value / 100) * ringLen;
 
         // Measures
         const measHtml = [
