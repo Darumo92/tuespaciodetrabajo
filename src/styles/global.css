@@ -2202,7 +2202,7 @@ button:focus-visible,
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-primary-dark);
   text-transform: uppercase;
   letter-spacing: 0.15em;
   padding: 0.3rem 0.75rem;
@@ -2678,7 +2678,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   margin-bottom: 0.75rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--color-text-light);
+  color: var(--color-text-muted);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 0 0.5rem;
