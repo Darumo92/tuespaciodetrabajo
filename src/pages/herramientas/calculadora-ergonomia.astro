@@ -690,123 +690,207 @@ const faqSchema = {
         return ctas.slice(0, 4);
       }
 
-      // ===== Render figura SVG estilo CAD maniquí (inspirado en DeskHeight.com) =====
+      // ===== Render figura SVG — plano técnico blueprint =====
       function renderFigure() {
         const m = calcMeasures(S.inputs);
         const i = S.inputs;
         const SCALE = 2.4;
-        const VBW = 720, VBH = 540;
-        const floorY = 475;
+        const VBW = 820, VBH = 560;
+        const floorY = 500;
 
-        // Layout en vista lateral pura (persona + desk + monitor todo side-on)
-        const chairCenterX = 210;
-        const deskFrontX = 320;          // borde frontal de la mesa (cerca de la persona)
-        const deskDepth = 185;           // profundidad de la mesa visible en el lateral
+        // Layout (persona pegada a la mesa para antebrazo realista)
+        const chairCenterX = 290;
+        const deskFrontX = 305;
+        const deskDepth = 240;
         const deskBackX = deskFrontX + deskDepth;
         const deskTopY = floorY - m.escritorio * SCALE;
         const seatY = floorY - m.asiento * SCALE;
         const eyeY = floorY - m.topMonitor * SCALE;
 
+        // Rails (dimensión vertical izquierda)
+        const railMonitor = 38;
+        const railDesk = 104;
+        const railAsiento = 170;
+        const gridStartX = railAsiento + 34;
+
         figDims.textContent = i.estatura + ' cm · ' + (i.monitor === 'laptop' ? 'portátil' : i.monitor === '34' ? '34" ultra' : i.monitor + '"');
         if (figAlt) {
           const chairDesc = { ergo: 'silla ergonómica', gaming: 'silla gaming', basica: 'silla básica de oficina', ninguna: 'silla de comedor' }[i.silla];
-          figAlt.textContent = 'Figura con persona de ' + i.estatura + ' cm sentada en ' + chairDesc + '. Asiento ' + m.asiento + ' cm, escritorio ' + m.escritorio + ' cm, monitor ' + m.topMonitor + ' cm.';
+          figAlt.textContent = 'Plano técnico con persona de ' + i.estatura + ' cm sentada en ' + chairDesc + '. Asiento ' + m.asiento + ' cm, escritorio ' + m.escritorio + ' cm, borde superior monitor ' + m.topMonitor + ' cm del suelo, distancia ojos-pantalla ' + m.distMin + '-' + m.distMax + ' cm.';
         }
 
-        // === Persona anclada al asiento; cabeza/ojos alineados con top del monitor ===
-        // Regla antropométrica del artículo: altura ojos sentado = borde superior del monitor (topMonitor).
-        // Por tanto centro cabeza (ojos) debe estar exactamente en eyeY.
+        // === Persona ===
         const hipX = chairCenterX;
         const hipY = seatY - 4;
         const headR = Math.round(i.estatura * SCALE * 0.037);
         const headCx = hipX;
-        const headCy = eyeY;                     // ojos al nivel borde superior del monitor
-        // Cuello justo bajo la cabeza
+        const headCy = eyeY;
         const neckLen = Math.round(headR * 0.9);
         const neckTopY = headCy + headR;
-        // Hombro bajo el cuello
         const shoulderX = hipX;
         const shoulderY = neckTopY + neckLen;
-        // Torso: largo real de hombro a cadera (geometría emergente, no fórmula fija)
         const torsoH = Math.max(40, hipY - shoulderY);
 
-        // === Teclado y ratón en mesa ===
-        const kbdX = deskFrontX + 30;
-        const kbdW = 85;
-        const kbdY = deskTopY - 7;
-        const kbdH = 7;
+        // Teclado/ratón
+        const kbdX = deskFrontX + 28;
+        const kbdW = 100;
+        const kbdY = deskTopY - 8;
+        const kbdH = 8;
         const mouseCx = kbdX + kbdW + 22;
 
-        // === Brazo: codo a nivel mesa ~90-100°, antebrazo horizontal sobre teclado ===
-        const wristX = kbdX + kbdW * 0.55;
-        const wristY = kbdY - 1;                // mano sobre teclado
-        const elbowY = deskTopY - 2;            // codo al nivel del tablero
-        const elbowX = Math.max(shoulderX + 28, deskFrontX - 2);
-        // Hombro: ligeramente delantero del torso
-        const shoulderJointX = shoulderX + 10;
-        const shoulderJointY = shoulderY + 8;
+        // Brazo (codo pegado al torso, antebrazo horizontal ~90°)
+        const wristX = kbdX + kbdW * 0.5;
+        const wristY = kbdY - 1;
+        const shoulderJointX = shoulderX + 14;
+        const shoulderJointY = shoulderY + 10;
+        const elbowX = shoulderJointX + 6;
+        const elbowY = deskTopY + 2;
 
-        // === Piernas (vista lateral) ===
+        // Piernas
         const thighL = i.estatura * SCALE * 0.245;
         const kneeX = hipX + thighL;
         const kneeY = seatY + 4;
         const ankleY = floorY - 5;
-        const toeX = kneeX + 26;
+        const toeX = kneeX + 28;
 
-        // === Monitor specs (vista lateral: altura variable según tipo, thin profile) ===
-        // Altura monitor en cm aprox para cada tipo (medida vertical real)
+        // Monitor
         const monHeightCm = { '22': 29, '24': 33, '27': 37, '32': 43, '34': 38, 'laptop': 22 };
         const monHeightPx = monHeightCm[i.monitor] * SCALE;
+        const monDepth = 11;
+        const monCx = deskBackX - 55;
+        const monFrontX = monCx - monDepth / 2;
 
-        // === Silla por tipo ===
+        const C_SEAT = 'var(--color-accent)';
+        const C_DESK = 'var(--color-primary)';
+        const C_EYE = 'var(--ergo-pill-text-mono)';
+        const C_SAFE = '#10b981';
+
+        // ===== Helpers cota =====
+        function dimVertical(railX, targetY, extTargetX, value, color) {
+          const midY = (floorY + targetY) / 2;
+          const pillW = 62, pillH = 24;
+          const pillTop = midY - pillH / 2;
+          const pillBot = midY + pillH / 2;
+          return `
+            <g style="color:${color}">
+              <line x1="${railX}" y1="${floorY}" x2="${railX}" y2="${pillBot}" stroke="${color}" stroke-width="1.4" marker-start="url(#arrDown)"/>
+              <line x1="${railX}" y1="${pillTop}" x2="${railX}" y2="${targetY}" stroke="${color}" stroke-width="1.4" marker-end="url(#arrUp)"/>
+              <line x1="${railX - 8}" y1="${floorY}" x2="${railX + 8}" y2="${floorY}" stroke="${color}" stroke-width="1.4"/>
+              <line x1="${railX}" y1="${targetY}" x2="${extTargetX}" y2="${targetY}" stroke="${color}" stroke-width="0.75" stroke-dasharray="3,3" opacity="0.65"/>
+              <rect x="${railX - pillW / 2}" y="${pillTop}" width="${pillW}" height="${pillH}" rx="12" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.6"/>
+              <text x="${railX}" y="${midY + 5}" font-size="14" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${value} cm</text>
+            </g>
+          `;
+        }
+
+        function dimHorizontal(y, x1, x2, label, color) {
+          const midX = (x1 + x2) / 2;
+          const pillW = 88, pillH = 24;
+          return `
+            <g style="color:${color}">
+              <line x1="${x1}" y1="${y}" x2="${midX - pillW / 2}" y2="${y}" stroke="${color}" stroke-width="1.4" marker-start="url(#arrLeft)"/>
+              <line x1="${midX + pillW / 2}" y1="${y}" x2="${x2}" y2="${y}" stroke="${color}" stroke-width="1.4" marker-end="url(#arrRight)"/>
+              <line x1="${x1}" y1="${y - 6}" x2="${x1}" y2="${y + 6}" stroke="${color}" stroke-width="1.4"/>
+              <line x1="${x2}" y1="${y - 6}" x2="${x2}" y2="${y + 6}" stroke="${color}" stroke-width="1.4"/>
+              <rect x="${midX - pillW / 2}" y="${y - pillH / 2}" width="${pillW}" height="${pillH}" rx="12" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.6"/>
+              <text x="${midX}" y="${y + 5}" font-size="13" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${label}</text>
+            </g>
+          `;
+        }
+
+        // ===== Silla =====
         const chairSVG = (() => {
           const seatW = 100;
           const seatX = chairCenterX - seatW / 2;
           const A = 'var(--color-accent)';
           if (i.silla === 'gaming') {
-            const backTopY = seatY - 150;
+            const backTopY = seatY - 180;
+            const backMidY = (backTopY + seatY) / 2;
             return `
-              <rect x="${seatX + 6}" y="${backTopY - 18}" width="22" height="16" rx="4" fill="${A}" opacity="0.75"/>
-              <path d="M ${seatX + 4} ${backTopY} Q ${seatX - 6} ${(backTopY + seatY) / 2} ${seatX - 2} ${seatY - 2} L ${seatX + 16} ${seatY - 2} L ${seatX + 16} ${backTopY + 10} Z" fill="${A}" opacity="0.88"/>
-              <ellipse cx="${seatX - 2}" cy="${seatY - 70}" rx="8" ry="34" fill="${A}" opacity="0.5"/>
-              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="12" rx="3" fill="${A}" opacity="0.95"/>
-              <rect x="${seatX + 48}" y="${seatY - 40}" width="32" height="6" rx="2" fill="${A}" opacity="0.7"/>
-              <rect x="${seatX + 72}" y="${seatY - 34}" width="5" height="32" fill="${A}" opacity="0.7"/>
-              <rect x="${chairCenterX - 4}" y="${seatY + 8}" width="8" height="${floorY - seatY - 22}" fill="${A}" opacity="0.75"/>
-              <path d="M ${chairCenterX - 42} ${floorY - 10} L ${chairCenterX + 42} ${floorY - 10} L ${chairCenterX + 36} ${floorY - 2} L ${chairCenterX - 36} ${floorY - 2} Z" fill="${A}" opacity="0.8"/>
-              <circle cx="${chairCenterX - 30}" cy="${floorY - 2}" r="4" fill="${A}"/>
-              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="4" fill="${A}"/>
-              <circle cx="${chairCenterX + 30}" cy="${floorY - 2}" r="4" fill="${A}"/>
+              <!-- reposacabezas (cojín separado) -->
+              <ellipse cx="${seatX + 5}" cy="${backTopY - 14}" rx="15" ry="11" fill="${A}" opacity="0.92"/>
+              <ellipse cx="${seatX + 6}" cy="${backTopY - 14}" rx="10" ry="7" fill="${A}" opacity="0.55"/>
+              <rect x="${seatX + 3}" y="${backTopY - 4}" width="4" height="10" fill="${A}" opacity="0.8"/>
+              <!-- respaldo alto (curvatura gaming con alas) -->
+              <path d="M ${seatX + 4} ${backTopY} Q ${seatX - 8} ${backMidY} ${seatX - 2} ${seatY - 2} L ${seatX + 20} ${seatY - 2} L ${seatX + 20} ${backTopY + 8} Z" fill="${A}" opacity="0.88"/>
+              <!-- alas laterales del respaldo -->
+              <path d="M ${seatX + 4} ${backTopY + 4} Q ${seatX - 12} ${backTopY + 40} ${seatX - 4} ${backTopY + 60}" stroke="${A}" stroke-width="3" fill="none" opacity="0.7"/>
+              <!-- cojín lumbar -->
+              <ellipse cx="${seatX - 3}" cy="${seatY - 85}" rx="9" ry="26" fill="${A}" opacity="0.55"/>
+              <!-- líneas costuras -->
+              <path d="M ${seatX + 10} ${seatY - 14} Q ${seatX} ${backMidY} ${seatX + 10} ${backTopY + 8}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
+              <!-- asiento -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="14" rx="3" fill="${A}" opacity="0.95"/>
+              <!-- costura frontal asiento -->
+              <line x1="${seatX + 5}" y1="${seatY + 2}" x2="${seatX + seatW - 5}" y2="${seatY + 2}" stroke="${A}" stroke-width="0.75" opacity="0.3"/>
+              <!-- reposabrazos con acolchado -->
+              <rect x="${seatX + 48}" y="${seatY - 44}" width="34" height="8" rx="3" fill="${A}" opacity="0.8"/>
+              <rect x="${seatX + 74}" y="${seatY - 36}" width="6" height="34" fill="${A}" opacity="0.75"/>
+              <!-- pistón gas -->
+              <rect x="${chairCenterX - 4}" y="${seatY + 10}" width="8" height="${floorY - seatY - 24}" fill="${A}" opacity="0.78"/>
+              <!-- base 5 patas -->
+              <path d="M ${chairCenterX - 46} ${floorY - 10} L ${chairCenterX + 46} ${floorY - 10} L ${chairCenterX + 40} ${floorY - 2} L ${chairCenterX - 40} ${floorY - 2} Z" fill="${A}" opacity="0.8"/>
+              <circle cx="${chairCenterX - 34}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
+              <circle cx="${chairCenterX + 34}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
             `;
           }
           if (i.silla === 'ergo') {
-            const backTopY = seatY - 100;
+            const backTopY = seatY - 130;
+            const headrestCx = seatX + 4;
+            const headrestCy = backTopY - 20;
+            const backMidY = (backTopY + seatY) / 2;
             return `
-              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 8} ${(backTopY + seatY) / 2} ${seatX + 2} ${backTopY} L ${seatX + 18} ${backTopY + 2} L ${seatX + 18} ${seatY - 4} Z" fill="${A}" opacity="0.35"/>
-              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 8} ${(backTopY + seatY) / 2} ${seatX + 2} ${backTopY}" stroke="${A}" stroke-width="2.5" fill="none" opacity="0.9"/>
-              <path d="M ${seatX + 8} ${seatY - 10} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 8} ${backTopY + 4}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
-              <ellipse cx="${seatX - 2}" cy="${seatY - 34}" rx="5" ry="10" fill="${A}" opacity="0.75"/>
-              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="10" rx="3" fill="${A}" opacity="0.95"/>
-              <rect x="${seatX + 48}" y="${seatY - 32}" width="30" height="5" rx="2" fill="${A}" opacity="0.7"/>
-              <rect x="${seatX + 72}" y="${seatY - 28}" width="4" height="26" fill="${A}" opacity="0.7"/>
-              <rect x="${chairCenterX - 3}" y="${seatY + 6}" width="6" height="${floorY - seatY - 20}" fill="${A}" opacity="0.75"/>
-              <path d="M ${chairCenterX - 38} ${floorY - 8} L ${chairCenterX + 38} ${floorY - 8} L ${chairCenterX + 32} ${floorY - 2} L ${chairCenterX - 32} ${floorY - 2} Z" fill="${A}" opacity="0.75"/>
-              <circle cx="${chairCenterX - 28}" cy="${floorY - 2}" r="3.5" fill="${A}"/>
-              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="3.5" fill="${A}"/>
-              <circle cx="${chairCenterX + 28}" cy="${floorY - 2}" r="3.5" fill="${A}"/>
+              <!-- reposacabezas regulable (malla separada) -->
+              <rect x="${seatX + 3}" y="${backTopY - 10}" width="3" height="14" fill="${A}" opacity="0.85"/>
+              <ellipse cx="${headrestCx}" cy="${headrestCy}" rx="14" ry="12" fill="${A}" opacity="0.35"/>
+              <ellipse cx="${headrestCx}" cy="${headrestCy}" rx="14" ry="12" stroke="${A}" stroke-width="2" fill="none" opacity="0.95"/>
+              <path d="M ${headrestCx - 10} ${headrestCy - 4} Q ${headrestCx - 2} ${headrestCy - 10} ${headrestCx + 10} ${headrestCy - 2}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
+              <!-- respaldo malla con curvatura lumbar marcada -->
+              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 10} ${backMidY} ${seatX + 2} ${backTopY} L ${seatX + 20} ${backTopY + 2} L ${seatX + 20} ${seatY - 4} Z" fill="${A}" opacity="0.32"/>
+              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 10} ${backMidY} ${seatX + 2} ${backTopY}" stroke="${A}" stroke-width="2.5" fill="none" opacity="0.95"/>
+              <!-- marco estructural respaldo -->
+              <path d="M ${seatX + 20} ${seatY - 4} L ${seatX + 20} ${backTopY + 2}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <!-- malla líneas -->
+              <path d="M ${seatX + 10} ${seatY - 10} Q ${seatX - 2} ${backMidY} ${seatX + 10} ${backTopY + 4}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.45"/>
+              <path d="M ${seatX + 15} ${seatY - 14} Q ${seatX + 5} ${backMidY} ${seatX + 15} ${backTopY + 6}" stroke="${A}" stroke-width="0.5" fill="none" opacity="0.3"/>
+              <!-- soporte lumbar regulable -->
+              <ellipse cx="${seatX - 3}" cy="${seatY - 44}" rx="6" ry="14" fill="${A}" opacity="0.8"/>
+              <!-- asiento con acolchado -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="12" rx="3" fill="${A}" opacity="0.95"/>
+              <rect x="${seatX + 5}" y="${seatY + 4}" width="${seatW - 10}" height="3" rx="1" fill="${A}" opacity="0.4"/>
+              <!-- reposabrazos 4D -->
+              <rect x="${seatX + 48}" y="${seatY - 34}" width="32" height="6" rx="2.5" fill="${A}" opacity="0.75"/>
+              <rect x="${seatX + 74}" y="${seatY - 30}" width="5" height="28" fill="${A}" opacity="0.75"/>
+              <!-- pistón gas -->
+              <rect x="${chairCenterX - 3}" y="${seatY + 8}" width="6" height="${floorY - seatY - 22}" fill="${A}" opacity="0.78"/>
+              <!-- base aluminio pulido -->
+              <path d="M ${chairCenterX - 42} ${floorY - 9} L ${chairCenterX + 42} ${floorY - 9} L ${chairCenterX + 36} ${floorY - 2} L ${chairCenterX - 36} ${floorY - 2} Z" fill="${A}" opacity="0.78"/>
+              <circle cx="${chairCenterX - 32}" cy="${floorY - 2}" r="4" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="4" fill="${A}"/>
+              <circle cx="${chairCenterX + 32}" cy="${floorY - 2}" r="4" fill="${A}"/>
             `;
           }
           if (i.silla === 'basica') {
-            const backTopY = seatY - 60;
+            const backTopY = seatY - 85;
             return `
-              <rect x="${seatX + 4}" y="${backTopY}" width="8" height="${seatY - backTopY - 2}" fill="${A}" opacity="0.85"/>
-              <rect x="${seatX - 2}" y="${backTopY}" width="22" height="5" rx="1" fill="${A}" opacity="0.85"/>
-              <rect x="${seatX + 10}" y="${seatY - 38}" width="22" height="4" fill="${A}" opacity="0.75"/>
-              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="8" rx="2" fill="${A}" opacity="0.95"/>
-              <rect x="${chairCenterX - 3}" y="${seatY + 4}" width="5" height="${floorY - seatY - 18}" fill="${A}" opacity="0.7"/>
-              <path d="M ${chairCenterX - 28} ${floorY - 6} L ${chairCenterX + 28} ${floorY - 6} L ${chairCenterX + 24} ${floorY - 1} L ${chairCenterX - 24} ${floorY - 1} Z" fill="${A}" opacity="0.7"/>
-              <circle cx="${chairCenterX - 22}" cy="${floorY - 1}" r="2.5" fill="${A}"/>
-              <circle cx="${chairCenterX + 22}" cy="${floorY - 1}" r="2.5" fill="${A}"/>
+              <!-- respaldo plástico básico -->
+              <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY} L ${seatX + 16} ${backTopY + 2} L ${seatX + 16} ${seatY - 2} Z" fill="${A}" opacity="0.85"/>
+              <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.95"/>
+              <!-- hueco central típico -->
+              <rect x="${seatX + 8}" y="${seatY - 30}" width="6" height="22" rx="2" fill="var(--color-bg-card)" opacity="0.5"/>
+              <!-- reposabrazos fijo -->
+              <rect x="${seatX + 48}" y="${seatY - 28}" width="24" height="5" rx="1" fill="${A}" opacity="0.75"/>
+              <rect x="${seatX + 66}" y="${seatY - 24}" width="4" height="22" fill="${A}" opacity="0.75"/>
+              <!-- asiento simple -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="9" rx="2" fill="${A}" opacity="0.95"/>
+              <!-- pistón -->
+              <rect x="${chairCenterX - 3}" y="${seatY + 5}" width="5" height="${floorY - seatY - 20}" fill="${A}" opacity="0.72"/>
+              <!-- base simple (menos patas) -->
+              <path d="M ${chairCenterX - 32} ${floorY - 7} L ${chairCenterX + 32} ${floorY - 7} L ${chairCenterX + 28} ${floorY - 1} L ${chairCenterX - 28} ${floorY - 1} Z" fill="${A}" opacity="0.72"/>
+              <circle cx="${chairCenterX - 24}" cy="${floorY - 1}" r="3" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 1}" r="3" fill="${A}"/>
+              <circle cx="${chairCenterX + 24}" cy="${floorY - 1}" r="3" fill="${A}"/>
             `;
           }
           // comedor
@@ -825,111 +909,117 @@ const faqSchema = {
           `;
         })();
 
-        // === Monitor vista LATERAL (edge-on) ===
+        // ===== Monitor (vista lateral) =====
         const monitorSVG = (() => {
           if (i.monitor === 'laptop') {
-            // Laptop: base sobre mesa + tapa abierta a ~105°
-            const baseL = 70, baseH = 5;
-            const baseX = deskBackX - 80;
+            const baseL = 95, baseH = 6;
+            const baseX = deskBackX - baseL - 20;
             const baseY = deskTopY - baseH;
-            // Hinge en back-left de la base
-            const hingeX = baseX;
+            const hingeX = baseX + baseL - 6;
             const hingeY = baseY;
-            // Screen top a eyeY
-            const screenTopY = eyeY;
-            const screenTopX = hingeX - 22;  // tapa inclinada atrás
+            const lidH = 24 * SCALE;
+            const lidLeanX = lidH * 0.22;
+            const screenTopX = hingeX + lidLeanX;
+            const screenTopY = hingeY - lidH;
+            const bezel = 3;
             return `
-              <!-- base laptop -->
-              <rect x="${baseX}" y="${baseY}" width="${baseL}" height="${baseH}" rx="1" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1"/>
-              <rect x="${baseX + 3}" y="${baseY + 1}" width="${baseL - 6}" height="2" fill="var(--ergo-mon-border)" opacity="0.35"/>
-              <!-- tapa (lateral) -->
-              <path d="M ${hingeX + 2} ${hingeY} L ${screenTopX} ${screenTopY} L ${screenTopX - 3} ${screenTopY + 2} L ${hingeX} ${hingeY + 3} Z" fill="var(--ergo-mon-border)" opacity="0.85"/>
-              <!-- pantalla (lado visible de la tapa, delgado) -->
-              <path d="M ${hingeX + 3} ${hingeY - 1} L ${screenTopX + 1} ${screenTopY + 1} L ${screenTopX - 1} ${screenTopY + 3} L ${hingeX + 1} ${hingeY + 1} Z" fill="var(--color-primary)" opacity="0.3"/>
+              <rect x="${baseX}" y="${baseY}" width="${baseL}" height="${baseH}" rx="1.5" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.25"/>
+              <rect x="${baseX + 8}" y="${baseY + 1.5}" width="${baseL - 42}" height="2" fill="var(--ergo-mon-border)" opacity="0.55"/>
+              <rect x="${baseX + baseL - 32}" y="${baseY + 3}" width="24" height="2" rx="0.5" fill="var(--ergo-mon-border)" opacity="0.4"/>
+              <path d="M ${hingeX + 2} ${hingeY + 1} L ${screenTopX + 2} ${screenTopY + 1} L ${screenTopX - 1} ${screenTopY - 1} L ${hingeX - 1} ${hingeY - 1} Z" fill="var(--ergo-mon-border)" opacity="0.92"/>
+              <path d="M ${hingeX - 2} ${hingeY - 1} L ${screenTopX - 2} ${screenTopY - 1} L ${screenTopX - 5} ${screenTopY + 1} L ${hingeX - 5} ${hingeY + 1} Z" fill="var(--color-primary)" opacity="0.6"/>
+              <path d="M ${hingeX - 3} ${hingeY - 2} L ${(hingeX + screenTopX) / 2 - 4} ${(hingeY + screenTopY) / 2 - 2} L ${(hingeX + screenTopX) / 2 - 6} ${(hingeY + screenTopY) / 2} L ${hingeX - 5} ${hingeY} Z" fill="#ffffff" opacity="0.22"/>
+              <line x1="${screenTopX + 6}" y1="${screenTopY - 2}" x2="${screenTopX + 6}" y2="${eyeY + 2}" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
+              <text x="${screenTopX + 12}" y="${(screenTopY + eyeY) / 2}" font-size="9" fill="#ef4444" font-weight="700" font-family="var(--font-mono)">pantalla</text>
+              <text x="${screenTopX + 12}" y="${(screenTopY + eyeY) / 2 + 11}" font-size="9" fill="#ef4444" font-weight="700" font-family="var(--font-mono)">muy baja</text>
             `;
           }
-          // Monitor standing: vista de perfil (thin bar) + cuello + base
-          const monDepth = 11;                  // profundidad visible del monitor (5-6cm ≈ 11-14px)
-          const monCx = deskBackX - 45;        // centro del monitor de izq-der (profundidad del desk)
-          const monX = monCx - monDepth / 2;
           const standNeckTopY = eyeY + monHeightPx;
-          const standBaseW = i.monitor === '34' ? 95 : 65;   // ultrawide = base más ancha
+          const standBaseW = i.monitor === '34' ? 100 : 70;
+          const monX = monCx - monDepth / 2;
           return `
-            <!-- cuerpo monitor (perfil) -->
-            <rect x="${monX}" y="${eyeY}" width="${monDepth}" height="${monHeightPx}" rx="2" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.5"/>
-            <!-- cara frontal pantalla (franja izquierda) -->
-            <rect x="${monX}" y="${eyeY + 2}" width="3" height="${monHeightPx - 4}" fill="var(--color-primary)" opacity="0.45"/>
-            <!-- cuello/soporte -->
-            <rect x="${monCx - 3}" y="${standNeckTopY}" width="6" height="${deskTopY - standNeckTopY - 2}" fill="var(--ergo-mon-border)" opacity="0.7"/>
-            <!-- base redonda/plana -->
-            <ellipse cx="${monCx}" cy="${deskTopY - 3}" rx="${standBaseW / 2}" ry="4" fill="var(--ergo-mon-border)" opacity="0.55"/>
-            <rect x="${monCx - standBaseW / 2}" y="${deskTopY - 5}" width="${standBaseW}" height="3" rx="1.5" fill="var(--ergo-mon-border)" opacity="0.3"/>
-            ${i.monitor === '34' ? `<text x="${monCx - 30}" y="${eyeY - 6}" font-size="10" font-weight="700" fill="var(--ergo-pill-text-mono)" font-family="var(--font-mono)">34" ULTRAWIDE</text>` : ''}
+            <rect x="${monX - 1}" y="${eyeY - 2}" width="${monDepth + 3}" height="${monHeightPx + 4}" rx="3" fill="var(--ergo-desk)" opacity="0.15"/>
+            <rect x="${monX}" y="${eyeY}" width="${monDepth}" height="${monHeightPx}" rx="2.5" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.5"/>
+            <rect x="${monX + 1}" y="${eyeY + 2}" width="3.5" height="${monHeightPx - 4}" fill="var(--color-primary)" opacity="0.55"/>
+            <rect x="${monX + 1}" y="${eyeY + monHeightPx * 0.12}" width="3.5" height="${monHeightPx * 0.18}" fill="#ffffff" opacity="0.3"/>
+            <rect x="${monCx - 3.5}" y="${standNeckTopY}" width="7" height="${deskTopY - standNeckTopY - 2}" fill="var(--ergo-mon-border)" opacity="0.78"/>
+            <ellipse cx="${monCx}" cy="${deskTopY - 3}" rx="${standBaseW / 2}" ry="4.5" fill="var(--ergo-mon-border)" opacity="0.55"/>
+            <rect x="${monCx - standBaseW / 2}" y="${deskTopY - 5.5}" width="${standBaseW}" height="3.5" rx="1.75" fill="var(--ergo-mon-border)" opacity="0.3"/>
+            ${i.monitor === '34' ? `<text x="${monCx - 32}" y="${eyeY - 10}" font-size="10" font-weight="700" fill="var(--ergo-pill-text-mono)" font-family="var(--font-mono)" letter-spacing="0.5">34" ULTRAWIDE</text>` : ''}
           `;
         })();
 
-        // === Persona (maniquí CAD) ===
+        // ===== Persona silueta =====
         const personSVG = `
           <g class="ergo-person">
-            <!-- torso -->
-            <rect x="${hipX - 16}" y="${shoulderY + 2}" width="32" height="${torsoH - 2}" rx="10" fill="var(--ergo-person-torso)"/>
-            <!-- cuello -->
-            <rect x="${hipX - 6}" y="${shoulderY - headR * 0.5}" width="12" height="${headR * 0.8}" fill="var(--ergo-person-head)"/>
-            <!-- cabeza -->
-            <circle cx="${headCx}" cy="${headCy}" r="${headR}" fill="var(--ergo-person-head)"/>
-            <!-- pelo -->
-            <path d="M ${headCx - headR * 0.9} ${headCy - headR * 0.4} Q ${headCx - headR * 0.2} ${headCy - headR * 1.2} ${headCx + headR * 0.95} ${headCy - headR * 0.3} L ${headCx + headR * 0.95} ${headCy - headR * 0.05} Q ${headCx - headR * 0.1} ${headCy - headR * 0.9} ${headCx - headR * 0.9} ${headCy - headR * 0.1} Z" fill="var(--ergo-person-hair)"/>
-            <!-- nariz perfil -->
-            <path d="M ${headCx + headR * 0.88} ${headCy - headR * 0.05} L ${headCx + headR * 1.18} ${headCy + headR * 0.15} L ${headCx + headR * 0.82} ${headCy + headR * 0.25} Z" fill="var(--ergo-person-head)" opacity="0.92"/>
+            <path d="M ${hipX - 18} ${shoulderY + 4}
+                     Q ${hipX - 18} ${shoulderY - 2} ${hipX - 14} ${shoulderY - 4}
+                     L ${hipX - 6} ${shoulderY - headR * 0.25}
+                     Q ${hipX - headR - 1} ${headCy + headR * 0.65} ${hipX - headR - 1} ${headCy}
+                     A ${headR + 1} ${headR + 1} 0 1 1 ${hipX + headR + 1} ${headCy}
+                     Q ${hipX + headR + 1} ${headCy + headR * 0.65} ${hipX + 6} ${shoulderY - headR * 0.25}
+                     L ${hipX + 14} ${shoulderY - 4}
+                     Q ${hipX + 18} ${shoulderY - 2} ${hipX + 18} ${shoulderY + 4}
+                     L ${hipX + 18} ${hipY}
+                     L ${hipX - 18} ${hipY} Z"
+                  fill="var(--ergo-person-torso)" opacity="0.96"/>
+            <path d="M ${hipX} ${hipY - 6} Q ${hipX - 3} ${(hipY + shoulderY) / 2} ${hipX} ${shoulderY + 4}"
+                  stroke="var(--ergo-pill-bg)" stroke-width="0.75" fill="none" opacity="0.35"/>
           </g>
 
-          <!-- Brazo superior: hombro → codo -->
-          <line x1="${shoulderJointX}" y1="${shoulderJointY}" x2="${elbowX}" y2="${elbowY}" stroke="var(--ergo-person-limb)" stroke-width="11" stroke-linecap="round"/>
-          <!-- Antebrazo: codo → muñeca (casi horizontal sobre teclado) -->
-          <line x1="${elbowX}" y1="${elbowY}" x2="${wristX}" y2="${wristY}" stroke="var(--ergo-person-arm-fore)" stroke-width="9" stroke-linecap="round"/>
-          <!-- Mano -->
-          <ellipse cx="${wristX + 8}" cy="${wristY + 1}" rx="8" ry="4" fill="var(--ergo-person-arm-fore)"/>
+          <line x1="${shoulderJointX}" y1="${shoulderJointY}" x2="${elbowX}" y2="${elbowY}" stroke="var(--ergo-person-limb)" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="${elbowX}" cy="${elbowY}" r="4.5" fill="var(--ergo-person-arm-fore)"/>
+          <line x1="${elbowX}" y1="${elbowY}" x2="${wristX}" y2="${wristY}" stroke="var(--ergo-person-arm-fore)" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="${wristX + 8}" cy="${wristY + 1}" rx="7" ry="3.5" fill="var(--ergo-person-arm-fore)"/>
 
-          <!-- Muslo -->
-          <line x1="${hipX + 4}" y1="${hipY + 3}" x2="${kneeX}" y2="${kneeY}" stroke="var(--ergo-person-limb)" stroke-width="14" stroke-linecap="round"/>
-          <!-- Tibia -->
-          <line x1="${kneeX - 2}" y1="${kneeY}" x2="${kneeX - 6}" y2="${ankleY}" stroke="var(--ergo-person-leg-fore)" stroke-width="12" stroke-linecap="round"/>
-          <!-- Pie -->
-          <path d="M ${kneeX - 12} ${ankleY} L ${toeX} ${floorY - 2} L ${toeX} ${floorY} L ${kneeX - 14} ${floorY} Z" fill="var(--ergo-person-leg-fore)"/>
-
-          <!-- Ángulo rodilla 90° (arco + pill) -->
-          <path d="M ${kneeX - 2} ${kneeY + 16} A 16 16 0 0 0 ${kneeX - 18} ${kneeY}" stroke="#10b981" stroke-width="2" fill="none"/>
-          <rect x="${kneeX - 54}" y="${kneeY + 6}" width="34" height="20" rx="10" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="2"/>
-          <text x="${kneeX - 37}" y="${kneeY + 19}" font-size="12" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">90°</text>
-
-          <!-- Ángulo codo ~100° (arco + pill) -->
-          <path d="M ${elbowX - 16} ${elbowY - 6} A 16 16 0 0 1 ${elbowX - 2} ${elbowY + 12}" stroke="#10b981" stroke-width="2" fill="none"/>
-          <rect x="${elbowX - 58}" y="${elbowY - 14}" width="38" height="20" rx="10" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="2"/>
-          <text x="${elbowX - 39}" y="${elbowY - 1}" font-size="12" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">100°</text>
+          <line x1="${hipX + 4}" y1="${hipY + 3}" x2="${kneeX}" y2="${kneeY}" stroke="var(--ergo-person-limb)" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="${kneeX}" cy="${kneeY}" r="5" fill="var(--ergo-person-leg-fore)"/>
+          <line x1="${kneeX - 2}" y1="${kneeY}" x2="${kneeX - 6}" y2="${ankleY}" stroke="var(--ergo-person-leg-fore)" stroke-width="11" stroke-linecap="round"/>
+          <path d="M ${kneeX - 14} ${ankleY + 2} L ${toeX} ${floorY - 3} L ${toeX + 2} ${floorY} L ${kneeX - 16} ${floorY} Z" fill="var(--ergo-person-leg-fore)"/>
         `;
 
-        // === Pills de medidas ===
-        function pill(x, y, val, color) {
-          return `
-            <circle cx="${x}" cy="${y}" r="4" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.5"/>
-            <path d="M ${x - 8} ${y} L ${x - 36} ${y}" stroke="${color}" stroke-width="1.5"/>
-            <rect x="${x - 112}" y="${y - 13}" width="76" height="26" rx="13" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.5"/>
-            <text x="${x - 74}" y="${y + 5}" font-size="12" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${val} cm</text>
-          `;
-        }
-        function pillRight(x, y, val, color) {
-          return `
-            <circle cx="${x}" cy="${y}" r="4" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.5"/>
-            <path d="M ${x + 8} ${y} L ${x + 36} ${y}" stroke="${color}" stroke-width="1.5"/>
-            <rect x="${x + 36}" y="${y - 13}" width="76" height="26" rx="13" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.5"/>
-            <text x="${x + 74}" y="${y + 5}" font-size="12" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${val} cm</text>
-          `;
-        }
+        // ===== Ángulos =====
+        const anglesSVG = `
+          <path d="M ${kneeX - 2} ${kneeY + 16} A 16 16 0 0 0 ${kneeX - 18} ${kneeY}" stroke="#10b981" stroke-width="2.25" fill="none"/>
+          <rect x="${kneeX - 58}" y="${kneeY + 22}" width="42" height="22" rx="11" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="1.75"/>
+          <text x="${kneeX - 37}" y="${kneeY + 38}" font-size="13" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">90°</text>
 
-        // Zonas verdes de rango seguro
-        const safeBandSeat = `<rect x="${chairCenterX - 60}" y="${seatY - 4}" width="120" height="8" fill="#10b981" opacity="0.15"/>`;
-        const safeBandDesk = `<rect x="${deskFrontX}" y="${deskTopY - 4}" width="${deskDepth}" height="8" fill="#10b981" opacity="0.15"/>`;
-        const safeBandEye = `<rect x="${deskFrontX - 20}" y="${eyeY - 5}" width="${deskDepth + 40}" height="10" fill="#10b981" opacity="0.12"/>`;
+          <path d="M ${elbowX - 14} ${elbowY} A 14 14 0 0 1 ${elbowX} ${elbowY - 14}" stroke="#10b981" stroke-width="2.25" fill="none"/>
+          <rect x="${elbowX + 8}" y="${elbowY - 40}" width="44" height="22" rx="11" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="1.75"/>
+          <text x="${elbowX + 30}" y="${elbowY - 24}" font-size="13" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">90°</text>
+        `;
+
+        // ===== Regla cm (left edge) =====
+        const ruler = (() => {
+          let r = `<rect x="8" y="0" width="10" height="${VBH}" fill="var(--ergo-blueprint-strong)" opacity="0.35"/>`;
+          for (let cm = 0; cm <= 220; cm += 10) {
+            const y = floorY - cm * SCALE;
+            if (y < 12 || y > floorY + 2) continue;
+            const major = cm % 50 === 0;
+            const len = major ? 10 : 5;
+            r += `<line x1="18" y1="${y}" x2="${18 + len}" y2="${y}" stroke="var(--ergo-person-limb)" stroke-width="${major ? 1.25 : 0.65}" opacity="${major ? 0.85 : 0.45}"/>`;
+            if (major && cm > 0) {
+              r += `<text x="${18 + len + 2}" y="${y + 3}" font-size="9" fill="var(--ergo-person-limb)" font-family="var(--font-mono)" opacity="0.85">${cm}</text>`;
+            }
+          }
+          r += `<text x="13" y="${floorY + 18}" font-size="8" fill="var(--ergo-person-limb)" font-family="var(--font-mono)" text-anchor="middle" opacity="0.65" letter-spacing="1">CM</text>`;
+          return r;
+        })();
+
+        // ===== Safe zones =====
+        const safeSeat = `<rect x="${chairCenterX - 64}" y="${seatY - 5}" width="128" height="10" fill="${C_SAFE}" opacity="0.2"/>`;
+        const safeDesk = `<rect x="${deskFrontX - 2}" y="${deskTopY - 5}" width="${deskDepth + 4}" height="10" fill="${C_SAFE}" opacity="0.18"/>`;
+
+        // ===== Dim lines =====
+        const dims = `
+          ${dimVertical(railMonitor, eyeY, monCx - 4, m.topMonitor, C_EYE)}
+          ${dimVertical(railDesk, deskTopY - 4, deskFrontX, m.escritorio, C_DESK)}
+          ${dimVertical(railAsiento, seatY, chairCenterX - 52, m.asiento, C_SEAT)}
+        `;
+
+        const monDistDim = i.monitor === 'laptop' ? '' : dimHorizontal(eyeY - 34, hipX + headR + 4, monFrontX - 3, m.distMin + '-' + m.distMax + ' cm', C_EYE);
+
+        const eyeGuide = `<line x1="${railMonitor + 30}" y1="${eyeY}" x2="${monFrontX - 3}" y2="${eyeY}" stroke="#10b981" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.5"/>`;
 
         const svg = `<svg viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg" role="img" class="ergo-svg" preserveAspectRatio="xMidYMax meet">
           <defs>
@@ -937,56 +1027,68 @@ const faqSchema = {
               <stop offset="0%" stop-color="var(--ergo-bg-top)"/>
               <stop offset="100%" stop-color="var(--ergo-bg-bot)"/>
             </linearGradient>
+            <pattern id="grid-minor" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M 24 0 L 0 0 0 24" fill="none" stroke="var(--ergo-blueprint-strong)" stroke-width="0.5" opacity="0.7"/>
+            </pattern>
+            <pattern id="grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
+              <path d="M 120 0 L 0 0 0 120" fill="none" stroke="var(--ergo-blueprint-strong)" stroke-width="1" opacity="0.85"/>
+            </pattern>
+            <marker id="arrUp" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 10 L 5 0 L 10 10 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrDown" viewBox="0 0 10 10" refX="5" refY="10" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 5 10 L 10 0 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrLeft" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 10 0 L 0 5 L 10 10 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrRight" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 Z" fill="currentColor"/>
+            </marker>
           </defs>
-          <rect width="${VBW}" height="${VBH}" fill="url(#ergo-bg)"/>
 
-          ${safeBandEye}
-          ${safeBandDesk}
-          ${safeBandSeat}
+          <rect width="${VBW}" height="${VBH}" fill="url(#ergo-bg)"/>
+          <rect x="${gridStartX}" y="0" width="${VBW - gridStartX}" height="${VBH}" fill="url(#grid-minor)"/>
+          <rect x="${gridStartX}" y="0" width="${VBW - gridStartX}" height="${VBH}" fill="url(#grid-major)"/>
+
+          ${ruler}
+
+          ${safeSeat}
+          ${safeDesk}
 
           <!-- Suelo -->
-          <line x1="20" y1="${floorY}" x2="${VBW - 20}" y2="${floorY}" stroke="var(--ergo-floor)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="${gridStartX}" y1="${floorY}" x2="${VBW - 10}" y2="${floorY}" stroke="var(--ergo-floor)" stroke-width="2.5" stroke-linecap="round"/>
+          <g opacity="0.5">
+            ${Array.from({ length: 14 }, (_, k) => {
+              const x = gridStartX + 8 + k * 48;
+              if (x > VBW - 20) return '';
+              return `<line x1="${x}" y1="${floorY + 3}" x2="${x + 10}" y2="${floorY + 10}" stroke="var(--ergo-floor)" stroke-width="1"/>`;
+            }).join('')}
+          </g>
 
-          <!-- Escritorio (vista lateral: profundidad visible) -->
-          <!-- sombra bajo tablero -->
-          <ellipse cx="${deskFrontX + deskDepth / 2}" cy="${floorY + 1}" rx="${deskDepth / 2 + 8}" ry="3" fill="var(--ergo-desk)" opacity="0.15"/>
-          <!-- tablero de mesa -->
+          <!-- Escritorio -->
+          <ellipse cx="${deskFrontX + deskDepth / 2}" cy="${floorY + 1}" rx="${deskDepth / 2 + 8}" ry="3" fill="var(--ergo-desk)" opacity="0.18"/>
           <rect x="${deskFrontX}" y="${deskTopY - 8}" width="${deskDepth}" height="10" rx="1.5" fill="var(--ergo-desk)"/>
-          <rect x="${deskFrontX}" y="${deskTopY + 1}" width="${deskDepth}" height="2" fill="var(--ergo-desk)" opacity="0.55"/>
-          <!-- canto frontal (pequeña línea que marca el borde frontal de la mesa) -->
-          <line x1="${deskFrontX}" y1="${deskTopY - 8}" x2="${deskFrontX}" y2="${deskTopY + 1}" stroke="var(--ergo-desk)" stroke-width="2" opacity="0.8"/>
-          <!-- modesty panel/trasero -->
-          <rect x="${deskFrontX + 30}" y="${deskTopY + 4}" width="${deskDepth - 60}" height="${(floorY - deskTopY) * 0.5}" fill="var(--ergo-desk)" opacity="0.15"/>
-          <!-- pata frontal -->
+          <rect x="${deskFrontX}" y="${deskTopY + 1}" width="${deskDepth}" height="2" fill="var(--ergo-desk)" opacity="0.6"/>
+          <line x1="${deskFrontX}" y1="${deskTopY - 8}" x2="${deskFrontX}" y2="${deskTopY + 1}" stroke="var(--ergo-desk)" stroke-width="2" opacity="0.85"/>
+          <rect x="${deskFrontX + 30}" y="${deskTopY + 4}" width="${deskDepth - 60}" height="${(floorY - deskTopY) * 0.5}" fill="var(--ergo-desk)" opacity="0.12"/>
           <rect x="${deskFrontX + 8}" y="${deskTopY + 4}" width="7" height="${floorY - deskTopY - 6}" fill="var(--ergo-desk)" opacity="0.9"/>
-          <!-- pata trasera -->
           <rect x="${deskFrontX + deskDepth - 15}" y="${deskTopY + 4}" width="7" height="${floorY - deskTopY - 6}" fill="var(--ergo-desk)" opacity="0.95"/>
-          <!-- pies patas -->
           <rect x="${deskFrontX + 2}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
           <rect x="${deskFrontX + deskDepth - 21}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
 
-          <!-- Teclado lateral (thin bar sobre tablero) -->
+          <!-- Teclado + ratón -->
           <rect x="${kbdX}" y="${kbdY}" width="${kbdW}" height="${kbdH}" rx="1.5" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>
           <rect x="${kbdX}" y="${kbdY + kbdH - 1}" width="${kbdW}" height="1" fill="var(--ergo-desk)" opacity="0.5"/>
-          <!-- Ratón lateral -->
           <path d="M ${mouseCx - 10} ${deskTopY} Q ${mouseCx} ${deskTopY - 7} ${mouseCx + 10} ${deskTopY} Z" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>
 
-          <!-- Silla -->
           ${chairSVG}
-
-          <!-- Persona -->
           ${personSVG}
-
-          <!-- Monitor (vista lateral) -->
           ${monitorSVG}
-
-          <!-- Eye level reference line -->
-          <line x1="30" y1="${eyeY}" x2="${deskFrontX - 60}" y2="${eyeY}" stroke="var(--color-primary)" stroke-width="1" stroke-dasharray="4,4" opacity="0.45"/>
-
-          <!-- Pills de medidas -->
-          ${pill(chairCenterX - 60, seatY, m.asiento, 'var(--color-accent)')}
-          ${pillRight(deskFrontX + deskDepth - 5, deskTopY - 4, m.escritorio, 'var(--color-primary)')}
-          ${pillRight(deskBackX - 38, eyeY, m.topMonitor, 'var(--ergo-pill-text-mono)')}
+          ${eyeGuide}
+          ${anglesSVG}
+          ${monDistDim}
+          ${dims}
         </svg>`;
 
         svgStage.innerHTML = svg;
