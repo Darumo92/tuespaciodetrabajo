@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-04-19 22:30
+**Action:** Nuevo artículo #25 dolor-cervicales-ordenador (Info, cluster sillas) publicado
+**Files:** src/content/articulos/dolor-cervicales-ordenador.mdx, src/content/articulos/dolor-espalda-trabajar-casa.mdx, src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, src/content/articulos/ajustar-silla-oficina-correctamente.mdx, src/content/articulos/altura-correcta-escritorio-silla.mdx, src/content/articulos/tunel-carpiano-teletrabajo-prevencion.mdx, src/pages/herramientas/calculadora-ergonomia.astro, data/content-map.yaml, data/content-queue.yaml, PRODUCTOS.md
+**Summary:** Artículo informativo ~2100 palabras sobre dolor cervical por ordenador. Ángulo propio vs SERP clínico (Quirónsalud, Sanitas, Mapfre): biomecánica Hansraj, 3 síntomas tech neck, ajustes que cambiaron cervicalgia propia, ejercicios realistas entre meetings, red flags para fisio. 5 FAQs de PAA real. Head terms embebidos: dolor cervical (8100), cervicalgia (12100), ejercicios para las cervicales (2400), estiramientos cervicales (1600), tech neck (210). 7 internal links salientes, 6 bidireccionales (dolor-espalda, ergonomia-postura, ajustar-silla, altura-correcta, tunel-carpiano, calculadora-ergonomia). content-map actualizado en las 7 entries. Imagen Pexels pendiente (PEXELS_API_KEY no disponible en worktree).
+**Triggered by:** user ("vamos con el artículo de mañana")
+
 ## 2026-04-15 23:15
 **Action:** Internal linking audit + fix — 9 new bidirectional links
 **Files:** 7 MDX articles, data/content-map.yaml

@@ -147,6 +147,7 @@ articles:
     internal_links_to:
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - guia-completa-home-office
       - home-office-productivo-500-euros
@@ -163,6 +164,7 @@ articles:
       - ajustar-silla-oficina-correctamente
       - altura-correcta-escritorio-silla
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - fatiga-visual-pantalla
       - guia-completa-home-office
@@ -197,6 +199,7 @@ articles:
     internal_links_to:
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - ergonomia-teletrabajo-postura-correcta
       - home-office-productivo-500-euros
       - mejor-escritorio-elevable-electrico
@@ -211,6 +214,7 @@ articles:
       - ajustar-silla-oficina-correctamente
       - altura-correcta-escritorio-silla
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - ergonomia-teletrabajo-postura-correcta
       - guia-completa-home-office
       - home-office-productivo-500-euros
@@ -423,12 +427,14 @@ articles:
     date: 2026-04-01
     has_eeat_signals: true
     internal_links_to:
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-raton-vertical-ergonomico
       - mejor-teclado-ergonomico
     internal_links_from:
       - altura-correcta-escritorio-silla
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - guia-completa-home-office
@@ -516,6 +522,7 @@ articles:
     internal_links_to:
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-escritorio-elevable-electrico
@@ -525,6 +532,7 @@ articles:
     internal_links_from:
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - fatiga-visual-pantalla
       - guia-completa-home-office
       - home-office-piso-pequeno
@@ -816,6 +824,7 @@ articles:
     internal_links_to:
       - altura-correcta-escritorio-silla
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
@@ -823,10 +832,42 @@ articles:
     internal_links_from:
       - altura-correcta-escritorio-silla
       - calculadora-ergonomia
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-silla-ergonomica-calidad-precio
       - mejor-silla-oficina-menos-200-euros
+  - slug: dolor-cervicales-ordenador
+    title: "Dolor cervical por ordenador: causas y soluciones reales"
+    path: src/content/articulos/dolor-cervicales-ordenador.mdx
+    type: informativo
+    category: sillas
+    primary_keyword: "dolor cervicales ordenador"
+    secondary_keywords:
+      - cervicalgia teletrabajo
+      - tech neck
+      - ejercicios cervicales oficina
+      - dolor cervical teletrabajo
+      - postura pantalla cuello
+    cluster: sillas
+    status: published
+    date: 2026-04-20
+    has_eeat_signals: true
+    internal_links_to:
+      - ajustar-silla-oficina-correctamente
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - mejor-soporte-monitor-brazo-articulado
+      - tunel-carpiano-teletrabajo-prevencion
+    internal_links_from:
+      - ajustar-silla-oficina-correctamente
+      - altura-correcta-escritorio-silla
+      - calculadora-ergonomia
+      - dolor-espalda-trabajar-casa
+      - ergonomia-teletrabajo-postura-correcta
+      - tunel-carpiano-teletrabajo-prevencion
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"
@@ -853,6 +894,7 @@ tools:
     internal_links_to:
       - ajustar-silla-oficina-correctamente
       - altura-correcta-escritorio-silla
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - mejor-escritorio-elevable-electrico
@@ -867,6 +909,7 @@ tools:
     internal_links_from:
       - ajustar-silla-oficina-correctamente
       - altura-correcta-escritorio-silla
+      - dolor-cervicales-ordenador
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - standing-desk-merece-la-pena
