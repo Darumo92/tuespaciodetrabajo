@@ -31,7 +31,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | guia-completa-home-office | guia-completa-home-office.webp | 31726669 | Alpha En | https://www.pexels.com/photo/31726669/ |
 | mejor-silla-oficina-menos-200-euros | mejor-silla-oficina-menos-200-euros.webp | 5644330 | Polina | https://www.pexels.com/photo/5644330/ |
 | ajustar-silla-oficina-correctamente | ajustar-silla-oficina-correctamente.webp | 31726650 | Alpha En | https://www.pexels.com/photo/31726650/ |
-| dolor-cervicales-ordenador | dolor-cervicales-ordenador.webp | — | — | pendiente descarga (PEXELS_API_KEY) |
+| dolor-cervicales-ordenador | dolor-cervicales-ordenador.webp | 4064177 | Marcus Aurelius | https://www.pexels.com/photo/4064177/ |
 
 ---
 
