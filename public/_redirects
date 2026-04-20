@@ -1,2 +1,6 @@
 # Redirect convencional de sitemap
 /sitemap.xml /sitemap-index.xml 301
+
+# Rename: /sobre-nosotros → /sobre-mi (indexado en Google)
+/sobre-nosotros /sobre-mi/ 301
+/sobre-nosotros/ /sobre-mi/ 301
