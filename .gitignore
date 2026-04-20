@@ -26,3 +26,8 @@ Thumbs.db
 # Claude Code
 .claude/
 .superpowers/
+.agents/
+
+# Python
+__pycache__/
+*.pyc
