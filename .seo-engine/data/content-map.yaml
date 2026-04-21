@@ -23,6 +23,7 @@ articles:
       - fatiga-visual-pantalla
       - home-office-piso-pequeno
       - home-office-productivo-500-euros
+      - insonorizar-home-office
       - mejor-escritorio-elevable-electrico
       - mejor-lampara-escritorio-led
       - mejor-monitor-trabajar-desde-casa
@@ -680,6 +681,7 @@ articles:
     internal_links_to:
       - altura-correcta-escritorio-silla
       - home-office-productivo-500-euros
+      - insonorizar-home-office
       - mejor-escritorio-elevable-electrico
       - mejor-soporte-monitor-brazo-articulado
       - mejorar-iluminacion-espacio-trabajo
@@ -689,6 +691,7 @@ articles:
     internal_links_from:
       - guia-completa-home-office
       - home-office-productivo-500-euros
+      - insonorizar-home-office
       - mejor-escritorio-elevable-electrico
       - mejor-soporte-monitor-brazo-articulado
       - organizar-cables-escritorio
@@ -868,6 +871,28 @@ articles:
       - dolor-espalda-trabajar-casa
       - ergonomia-teletrabajo-postura-correcta
       - tunel-carpiano-teletrabajo-prevencion
+  - slug: insonorizar-home-office
+    title: "Cómo insonorizar una habitación sin obras (home office)"
+    path: src/content/articulos/insonorizar-home-office.mdx
+    type: informativo
+    category: ambiente
+    primary_keyword: "cómo insonorizar una habitación"
+    secondary_keywords:
+      - insonorizar home office
+      - insonorizar pared sin obras
+      - paneles acústicos oficina casa
+      - reducir ruido teletrabajo
+      - insonorizar pared con vecino
+    cluster: ambiente
+    status: human-review
+    date: 2026-04-21
+    has_eeat_signals: true
+    internal_links_to:
+      - home-office-piso-pequeno
+      - mejorar-iluminacion-espacio-trabajo
+    internal_links_from:
+      - guia-completa-home-office
+      - home-office-piso-pequeno
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

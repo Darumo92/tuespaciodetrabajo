@@ -32,6 +32,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | mejor-silla-oficina-menos-200-euros | mejor-silla-oficina-menos-200-euros.webp | 5644330 | Polina | https://www.pexels.com/photo/5644330/ |
 | ajustar-silla-oficina-correctamente | ajustar-silla-oficina-correctamente.webp | 31726650 | Alpha En | https://www.pexels.com/photo/31726650/ |
 | dolor-cervicales-ordenador | dolor-cervicales-ordenador.webp | 4064177 | Marcus Aurelius | https://www.pexels.com/photo/4064177/ |
+| insonorizar-home-office | insonorizar-home-office.webp | 2547555 | Mateusz Dach | https://www.pexels.com/photo/2547555/ |
 
 ---
 

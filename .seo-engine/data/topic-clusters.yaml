@@ -172,9 +172,9 @@ clusters:
         keyword: "decorar home office barato"
         status: planned
       - slug: insonorizar-home-office
-        title: "Cómo insonorizar tu home office (sin obras)"
-        keyword: "insonorizar home office"
-        status: planned
+        title: "Cómo insonorizar una habitación sin obras (home office)"
+        keyword: "cómo insonorizar una habitación"
+        status: human-review
       - slug: trabajar-casa-calor
         title: "Trabajar desde casa con calor: cómo mantener tu oficina fresca"
         keyword: "trabajar desde casa calor"
