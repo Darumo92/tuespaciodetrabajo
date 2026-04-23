@@ -261,14 +261,9 @@ const breadcrumbSchema = {
       <div class="article-tags-section">
         <strong class="article-tags-label">Etiquetas:</strong>
         <div class="article-tags-list">
-          {tags.map(tag => {
-            const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9áéíóúñü-]/g, '');
-            return (
-              <a href={`/tags/${tagSlug}/`} class="badge article-tag-badge">
-                {tag}
-              </a>
-            );
-          })}
+          {tags.map(tag => (
+            <span class="badge article-tag-badge">{tag}</span>
+          ))}
         </div>
       </div>
     )}

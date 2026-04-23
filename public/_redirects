@@ -1,6 +1,24 @@
-# Redirect convencional de sitemap
-/sitemap.xml /sitemap-index.xml 301
+# Sitemap convencional
+/sitemap.xml /sitemap-0.xml 301
 
-# Rename: /sobre-nosotros → /sobre-mi (indexado en Google)
+# Rename: /sobre-nosotros → /sobre-mi/
 /sobre-nosotros /sobre-mi/ 301
 /sobre-nosotros/ /sobre-mi/ 301
+
+# Eliminar sistema de tags — redirigir a home (antes generaba ~20 URLs con señales mixtas robots/noindex)
+/tags /  301
+/tags/ /  301
+/tags/* /  301
+
+# Trailing slash: URLs sin slash rastreadas por GSC → canónicas con slash
+/accesorios/mejor-raton-vertical-ergonomico /accesorios/mejor-raton-vertical-ergonomico/ 301
+/accesorios/mejor-teclado-ergonomico /accesorios/mejor-teclado-ergonomico/ 301
+/accesorios/mejor-monitor-trabajar-desde-casa /accesorios/mejor-monitor-trabajar-desde-casa/ 301
+/sillas/mejor-silla-ergonomica-calidad-precio /sillas/mejor-silla-ergonomica-calidad-precio/ 301
+/escritorios/mejor-escritorio-elevable-electrico /escritorios/mejor-escritorio-elevable-electrico/ 301
+/ambiente/mejor-lampara-escritorio-led /ambiente/mejor-lampara-escritorio-led/ 301
+/guias/mi-setup-home-office-2026 /guias/mi-setup-home-office-2026/ 301
+/guias/novedades-home-office-2026 /guias/novedades-home-office-2026/ 301
+/guias/productividad-en-casa-entorno-fisico /guias/productividad-en-casa-entorno-fisico/ 301
+/guias/tunel-carpiano-teletrabajo-prevencion /guias/tunel-carpiano-teletrabajo-prevencion/ 301
+/guias/dolor-espalda-trabajar-casa /guias/dolor-espalda-trabajar-casa/ 301
