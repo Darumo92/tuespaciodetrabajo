@@ -33,6 +33,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | ajustar-silla-oficina-correctamente | ajustar-silla-oficina-correctamente.webp | 31726650 | Alpha En | https://www.pexels.com/photo/31726650/ |
 | dolor-cervicales-ordenador | dolor-cervicales-ordenador.webp | 4064177 | Marcus Aurelius | https://www.pexels.com/photo/4064177/ |
 | insonorizar-home-office | insonorizar-home-office.webp | 2547555 | Mateusz Dach | https://www.pexels.com/photo/2547555/ |
+| ejercicios-estiramientos-silla-oficina | ejercicios-estiramientos-silla-oficina.webp | 5899200 | kaboompics.com | https://www.pexels.com/photo/5899200/ |
 
 ---
 

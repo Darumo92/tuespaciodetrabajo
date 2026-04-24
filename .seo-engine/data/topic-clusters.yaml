@@ -35,9 +35,9 @@ clusters:
         keyword: "silla ergonómica dolor espalda"
         status: planned
       - slug: ejercicios-estiramientos-silla-oficina
-        title: "Ejercicios y estiramientos para hacer en la silla de oficina"
-        keyword: "ejercicios silla oficina"
-        status: planned
+        title: "Ejercicios y estiramientos en la silla de oficina: guía"
+        keyword: "ejercicios en silla"
+        status: published
     notes: "Pilar comparativo. Cluster pages: comparativas específicas (gaming vs, <200€, altas, dolor), guías de uso y ergonomía."
 
   - name: escritorios

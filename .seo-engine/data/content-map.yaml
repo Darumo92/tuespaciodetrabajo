@@ -893,6 +893,32 @@ articles:
     internal_links_from:
       - guia-completa-home-office
       - home-office-piso-pequeno
+  - slug: ejercicios-estiramientos-silla-oficina
+    title: "Ejercicios y estiramientos en la silla de oficina: guía"
+    path: src/content/articulos/ejercicios-estiramientos-silla-oficina.mdx
+    type: informativo
+    category: sillas
+    primary_keyword: "ejercicios en silla"
+    secondary_keywords:
+      - estiramientos silla oficina
+      - ejercicios sentado oficina
+      - pausas activas teletrabajo
+      - rutina estiramientos escritorio
+      - ejercicios en la oficina
+    cluster: sillas
+    status: published
+    date: 2026-04-24
+    has_eeat_signals: true
+    internal_links_to:
+      - ajustar-silla-oficina-correctamente
+      - dolor-cervicales-ordenador
+      - dolor-espalda-trabajar-casa
+      - mejor-silla-ergonomica-calidad-precio
+    internal_links_from:
+      - ajustar-silla-oficina-correctamente
+      - dolor-cervicales-ordenador
+      - dolor-espalda-trabajar-casa
+      - mejor-silla-ergonomica-calidad-precio
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"
