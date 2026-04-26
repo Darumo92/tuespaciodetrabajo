@@ -34,6 +34,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | dolor-cervicales-ordenador | dolor-cervicales-ordenador.webp | 4064177 | Marcus Aurelius | https://www.pexels.com/photo/4064177/ |
 | insonorizar-home-office | insonorizar-home-office.webp | 2547555 | Mateusz Dach | https://www.pexels.com/photo/2547555/ |
 | ejercicios-estiramientos-silla-oficina | ejercicios-estiramientos-silla-oficina.webp | 5899200 | kaboompics.com | https://www.pexels.com/photo/5899200/ |
+| ikea-bekant-vs-flexispot-e7 | ikea-bekant-vs-flexispot-e7.webp | 7899239 | Josh Sorenson | https://www.pexels.com/photo/7899239/ |
 
 ---
 
@@ -152,3 +153,21 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | FelixKing Silla Ergonómica | B0D8HWL8VP | /dp/B0D8HWL8VP | https://m.media-amazon.com/images/I/81GODetTd8L._SL1500_.jpg | ~172 EUR | verificado |
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
 | SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~200 EUR | verificado |
+
+### ikea-bekant-vs-flexispot-e7
+**Productos comparados (descatalogados, sin afiliación directa):**
+- IKEA BEKANT eléctrico — descatalogado, retirado del catálogo IKEA
+- FlexiSpot E7 — descatalogado, sustituido por E7 Pro
+
+**Productos alternativos referenciados (afiliados, ASINs verificados en pilar `mejor-escritorio-elevable-electrico`):**
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| FlexiSpot EC5 PRO | B09DCNDGWB | /dp/B09DCNDGWB | https://m.media-amazon.com/images/I/61ONgqMe-DL._AC_SL300_.jpg | ~310 EUR | verificado |
+| FlexiSpot E1 PRO | B0DSF66NHF | /dp/B0DSF66NHF | https://m.media-amazon.com/images/I/61XkknSupRL._AC_SL300_.jpg | ~200 EUR | verificado |
+| Maidesite EL2 Pro Art | B0DBVFDM3D | /dp/B0DBVFDM3D | https://m.media-amazon.com/images/I/61yWYUnyA3L._AC_SL300_.jpg | ~300 EUR | verificado |
+| JUMMICO 140×60 | B0C1WYNCXP | /dp/B0C1WYNCXP | https://m.media-amazon.com/images/I/61ZD8TxCgRL._AC_SL300_.jpg | ~110 EUR | verificado |
+| ErGear 140×70 | B0FMQTKZKD | /dp/B0FMQTKZKD | https://m.media-amazon.com/images/I/71ufKH15fYL._AC_SL300_.jpg | ~152 EUR | verificado |
+| SANODESK QS+ 160×60 | B0GN24B9LF | /dp/B0GN24B9LF | https://m.media-amazon.com/images/I/81KkiM1HHsL._AC_SL300_.jpg | ~220 EUR | verificado |
+
+**URL externa IKEA referenciada (sin afiliación):**
+- IKEA MITTZON eléctrico — https://www.ikea.com/es/es/p/mittzon-escritorio-elevable-electrico-chapa-abedul-blanco-s19528619/ — ~429 EUR
