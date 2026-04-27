@@ -14,10 +14,26 @@ project:
 
 author:
   name: "David Rubio"
+  full_name: "David Rubio Mota"
   role: "Fundador de Tu Espacio de Trabajo"
   bio: "Ingeniero de software que lleva teletrabajando desde 2019. Después de destrozarme la espalda con una silla de comedor durante el confinamiento, me obsesioné con la ergonomía y montar el home office perfecto. Vivo en Barcelona con mi mujer y mi hijo de año y medio."
-  location: "Barcelona"
+  location: "Rubí (Barcelona)"
   experience: "7 años teletrabajando"
+  linkedin: "https://www.linkedin.com/in/david-rubio-mota/"
+  physical:
+    altura: "1,80 m"
+    peso: "85 kg"
+    horas_sentado_dia: "7-8 horas jornada laboral"
+  workspace:
+    despacho: "habitación de 9 m² en piso en Rubí (Barcelona)"
+    setup_actual_desde: "marzo 2024 (silla), abril 2024 (escritorio) — fechas aproximadas, ajustar si el usuario las confirma"
+  hijo:
+    fecha_nacimiento: "septiembre 2024"
+    edad_a_fecha_referencia: "1 año y medio aprox a 2026-04 (recalcular según fecha del artículo)"
+  fisioterapeuta:
+    nombre: "Pep"
+    clinica: "Fisiosthetic"
+    coste_inicial_2020: "300 EUR en 6 sesiones tras dolor lumbar del confinamiento"
   setup:
     silla: "Autonomous ErgoChair Pro"
     escritorio: "FlexiSpot E7 con tablero de bambú 140x70"
