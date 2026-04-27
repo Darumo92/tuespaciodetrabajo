@@ -8,9 +8,28 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${siteUrl}/` },
     { '@type': 'ListItem', position: 2, name: 'Sobre mí', item: `${siteUrl}/sobre-mi/` },
   ],
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'David Rubio Mota',
+  alternateName: 'David Rubio',
+  url: `${siteUrl}/sobre-mi/`,
+  jobTitle: 'Ingeniero de software y fundador de Tu Espacio de Trabajo',
+  description: 'Ingeniero de software, teletrabajador desde 2019 en Barcelona y entusiasta de la ergonomía. Creador de guías de compra y comparativas de productos de home office.',
+  knowsAbout: ['ergonomía', 'home office', 'sillas ergonómicas', 'standing desks', 'productividad', 'teletrabajo'],
+  sameAs: [
+    'https://www.linkedin.com/in/david-rubio-mota/',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Tu Espacio de Trabajo',
+    url: siteUrl,
+  },
 };
 
 const aboutPageSchema = {
@@ -19,20 +38,14 @@ const aboutPageSchema = {
   name: 'Sobre mí — Tu Espacio de Trabajo',
   description: 'Soy David Rubio, creador de Tu Espacio de Trabajo. Ingeniero de software y teletrabajador desde 2019, analizo productos de home office para ayudarte a montar tu espacio ideal.',
   url: `${siteUrl}/sobre-mi/`,
-  mainEntity: {
-    '@type': 'Person',
-    name: 'David Rubio',
-    url: `${siteUrl}/sobre-mi/`,
-    jobTitle: 'Fundador de Tu Espacio de Trabajo',
-    description: 'Ingeniero de software, teletrabajador y entusiasta de la ergonomía. Creador de guías de compra y comparativas de productos de home office.',
-    knowsAbout: ['ergonomía', 'home office', 'sillas ergonómicas', 'standing desks', 'productividad', 'teletrabajo'],
-  },
+  mainEntity: personSchema,
 };
 ---
 
 <Base title="Sobre mí — Tu Espacio de Trabajo" description="Soy David Rubio, ingeniero y teletrabajador desde 2019. Analizo productos de home office para ayudarte a montar tu espacio ideal.">
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
 
   <article class="container legal-page">
     <nav class="breadcrumb" aria-label="Migas de pan">
@@ -127,14 +140,19 @@ const aboutPageSchema = {
       <li><strong>Experiencia propia:</strong> todo lo que recomiendo lo he investigado a fondo, y gran parte lo he probado personalmente</li>
     </ul>
 
-    <h2>Contacto</h2>
+    <h2>Contacto y redes</h2>
     <p>
       Si tienes alguna pregunta, sugerencia o simplemente quieres contarme tu experiencia con algún
       producto, puedes escribirme a
       <strong><!--email_off-->contacto@tuespaciodetrabajo.com<!--email_on--></strong>.
     </p>
     <p>
-      También me interesa saber de ti: ¿cómo es tu setup? ¿Qué producto te cambió la vida trabajando
+      También puedes encontrarme en
+      <a href="https://www.linkedin.com/in/david-rubio-mota/" rel="me noopener" target="_blank">LinkedIn (David Rubio Mota)</a>,
+      donde comparto novedades del sitio y respondo dudas profesionales sobre teletrabajo y ergonomía.
+    </p>
+    <p>
+      Me interesa saber de ti: ¿cómo es tu setup? ¿Qué producto te cambió la vida trabajando
       desde casa? ¿Qué guía te gustaría que escribiera? Respondo todos los emails.
     </p>
 
