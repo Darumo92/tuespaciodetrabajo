@@ -22,3 +22,6 @@
 /guias/productividad-en-casa-entorno-fisico /guias/productividad-en-casa-entorno-fisico/ 301
 /guias/tunel-carpiano-teletrabajo-prevencion /guias/tunel-carpiano-teletrabajo-prevencion/ 301
 /guias/dolor-espalda-trabajar-casa /guias/dolor-espalda-trabajar-casa/ 301
+
+# Catch-all: cualquier /dp/ASIN errante (markdown links a Amazon mal escritos) → Amazon ES con tag afiliado. Evita 404 internos y preserva monetización.
+/dp/* https://www.amazon.es/dp/:splat?tag=tuespaciodet-21 301!

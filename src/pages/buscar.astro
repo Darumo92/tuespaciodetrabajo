@@ -17,8 +17,8 @@ const breadcrumbSchema = {
   title="Buscador de artículos | Tu Espacio de Trabajo"
   description="Busca entre todas nuestras guías y comparativas de productos de home office. Encuentra análisis de sillas, escritorios, accesorios y más."
   canonical="https://tuespaciodetrabajo.com/buscar/"
+  noindex={true}
 >
-  <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="container section">
     <h1 class="search-title">

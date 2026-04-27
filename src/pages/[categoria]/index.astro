@@ -90,8 +90,8 @@ const breadcrumbSchema = {
 <Base
   title={`${info.nombre} para home office ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
   description={info.descripcion}
+  noindex={esVacia}
 >
-  {esVacia && <meta name="robots" content="noindex, follow" slot="head" />}
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <div class="category-page-header">

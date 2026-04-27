@@ -22,8 +22,8 @@ const breadcrumbSchema = {
 <Base
   title="Actualizaciones recientes | Tu Espacio de Trabajo"
   description="Artículos actualizados recientemente en Tu Espacio de Trabajo. Guías y comparativas revisadas con precios e información al día."
+  noindex={true}
 >
-  <meta name="robots" content="noindex, follow" slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 
   <div class="category-page-header">

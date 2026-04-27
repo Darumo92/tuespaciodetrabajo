@@ -11,9 +11,12 @@ interface Props {
   ogType?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
+  robots?: string;
+  noindex?: boolean;
 }
 
-const { title, description, image, canonical, ogType = 'website', publishedTime, modifiedTime } = Astro.props;
+const { title, description, image, canonical, ogType = 'website', publishedTime, modifiedTime, robots, noindex = false } = Astro.props;
+const robotsContent = robots ?? (noindex ? 'noindex, follow, max-image-preview:large' : 'max-image-preview:large');
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const ogImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-default.jpg`;
@@ -28,7 +31,7 @@ const currentPath = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#ffffff" id="meta-theme-color" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="robots" content="max-image-preview:large" />
+    <meta name="robots" content={robotsContent} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
