@@ -48,7 +48,7 @@ for (const file of walkHtml(DIST_DIR)) {
 console.log(`Found ${hashes.size} unique inline executable script hashes`);
 
 const hashList = [...hashes].sort().join(' ');
-const scriptSrc = `script-src 'self' ${hashList} https://www.googletagmanager.com https://static.cloudflareinsights.com`;
+const scriptSrc = `script-src 'self' ${hashList} https://www.googletagmanager.com https://static.cloudflareinsights.com https://www.clarity.ms`;
 
 let headers = readFileSync(HEADERS_FILE, 'utf8');
 headers = headers.replaceAll(
