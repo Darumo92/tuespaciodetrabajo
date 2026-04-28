@@ -5,4 +5,4 @@ Disallow: /api/
 Disallow: /buscar/
 Disallow: /actualizaciones/
 
-Sitemap: https://tuespaciodetrabajo.com/sitemap-0.xml
+Sitemap: https://tuespaciodetrabajo.com/sitemap-index.xml
