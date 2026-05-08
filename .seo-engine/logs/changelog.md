@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-05-08 21:15
+**Action:** Refactor mejor-teclado-ergonomico (Recovery Bloque B pieza 2) — diluir densidad afiliada
+**Files:** src/content/articulos/mejor-teclado-ergonomico.mdx
+**Summary:** Bajada densidad afiliada de 6.19 a 2.62 affiliates/1000w. Insertado bloque educativo ~750w pre-ComparisonTable cubriendo: biomecánica de la muñeca (desviación cubital 15-20°, pronación, extensión dorsal — con referencias Cornell Ergonomics e INSST), tres formatos diferenciados (wave / split fijo curvado / split separable + mención Kinesis Advantage columnar para programadores con RSI), cuatro señales tempranas (hormigueo meñique-anular, epicondilitis, tensión trapecios, manos pesadas a media tarde) con anécdota lector que escribió pidiendo enlace K860, y cuatro escenarios donde NO comprar (uso <3h/día, gaming, presupuesto <30€, síntomas agudos). Mantenida cita de Pep como referencia ergonómica. Eliminados 5 AffiliateButton sueltos en cuerpo (uno tras cada análisis de producto) — conservados TopPick, 5 filas ComparisonTable y 5 CTAs finales en "Nuestra recomendación". Fix coherencia persona: "home office en Barcelona" → "despacho de 9 m² en Rubí" + mención Pep/Fisiosthetic/Rubí. Total enlaces /dp/ pasa de 16 a 11 sobre ~4200w body. Build OK. Push único del día.
+**Triggered by:** user ("seguimos con el plan" — plan recovery indexación, calendario vie 08 may)
+
+## 2026-05-07 22:18
+**Action:** Refactor mejor-raton-vertical-ergonomico (Recovery Bloque B pieza 1) — diluir densidad afiliada
+**Files:** src/content/articulos/mejor-raton-vertical-ergonomico.mdx
+**Summary:** Bajada densidad afiliada de 7.40 a 3.43 affiliates/1000w. Insertado bloque educativo ~700w pre-ComparisonTable cubriendo: biomecánica de la pronación (con referencia Cornell Ergonomics), señales tempranas (hormigueo, dolor base pulgar, mano dormida), perfiles para los que NO compensa (gaming competitivo, diseño <0.5mm, uso <2h/día, ratón compartido), curva de adaptación días 1-3 / 4-7 / 8-14 con anécdota de compañera de Sabadell. Eliminados 6 AffiliateButton sueltos en cuerpo (uno tras cada análisis de producto) — conservados TopPick, 6 filas ComparisonTable y 5 CTAs finales en "Nuestra recomendación". Fix coherencia persona: "setup de Barcelona" → "despacho de 9 m² en Rubí" + "fisioterapeuta Pep en Fisiosthetic en Rubí". Total enlaces afiliados pasa de 18 a 12 sobre ~3500w body. Build OK. Push 49524be (1/1 del día).
+**Triggered by:** user ("vamos con el plan de hoy" — plan recovery indexación, calendario jue 07 may)
+
 ## 2026-04-24 22:40
 **Action:** Nuevo artículo #27 ejercicios-estiramientos-silla-oficina (Info, cluster sillas) en human-review
 **Files:** src/content/articulos/ejercicios-estiramientos-silla-oficina.mdx, src/content/articulos/ajustar-silla-oficina-correctamente.mdx, src/content/articulos/dolor-cervicales-ordenador.mdx, src/content/articulos/dolor-espalda-trabajar-casa.mdx, src/content/articulos/mejor-silla-ergonomica-calidad-precio.mdx, .seo-engine/data/content-map.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, PRODUCTOS.md, public/images/articulos/ejercicios-estiramientos-silla-oficina.webp
