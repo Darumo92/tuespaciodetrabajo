@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "plugins": [
+    {
+      "id": "superpowers@claude-plugins-official",
+      "name": "superpowers",
+      "marketplace": "claude-plugins-official",
+      "versions": [
+        "5.1.0"
+      ]
+    },
+    {
+      "id": "ui-ux-pro-max@ui-ux-pro-max-skill",
+      "name": "ui-ux-pro-max",
+      "marketplace": "ui-ux-pro-max-skill",
+      "versions": [
+        "2.5.0"
+      ]
+    },
+    {
+      "id": "claude-mem@thedotmack",
+      "name": "claude-mem",
+      "marketplace": "thedotmack",
+      "versions": [
+        "12.1.4"
+      ]
+    },
+    {
+      "id": "everything-claude-code@everything-claude-code",
+      "name": "everything-claude-code",
+      "marketplace": "everything-claude-code",
+      "versions": [
+        "1.10.0"
+      ]
+    },
+    {
+      "id": "caveman@caveman",
+      "name": "caveman",
+      "marketplace": "caveman",
+      "versions": [
+        "c2ed24b3e5d4"
+      ]
+    }
+  ]
+}

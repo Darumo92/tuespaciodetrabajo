@@ -1,0 +1,66 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-05-09T20:09:54.757Z"
+  },
+  "superpowers-marketplace": {
+    "source": {
+      "source": "github",
+      "repo": "obra/superpowers-marketplace"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/superpowers-marketplace",
+    "lastUpdated": "2026-04-10T11:25:48.786Z"
+  },
+  "context-engineering-marketplace": {
+    "source": {
+      "source": "github",
+      "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/context-engineering-marketplace",
+    "lastUpdated": "2026-04-10T11:27:49.475Z"
+  },
+  "ui-ux-pro-max-skill": {
+    "source": {
+      "source": "github",
+      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/ui-ux-pro-max-skill",
+    "lastUpdated": "2026-04-10T19:36:00.079Z"
+  },
+  "last30days-skill": {
+    "source": {
+      "source": "github",
+      "repo": "mvanhorn/last30days-skill"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/last30days-skill",
+    "lastUpdated": "2026-04-15T08:27:48.897Z"
+  },
+  "thedotmack": {
+    "source": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/thedotmack",
+    "lastUpdated": "2026-04-15T20:41:50.292Z"
+  },
+  "everything-claude-code": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/affaan-m/everything-claude-code.git"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/everything-claude-code",
+    "lastUpdated": "2026-04-15T20:44:06.116Z"
+  },
+  "caveman": {
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    },
+    "installLocation": "/Users/darumo/.claude/plugins/marketplaces/caveman",
+    "lastUpdated": "2026-04-15T20:50:28.566Z"
+  }
+}

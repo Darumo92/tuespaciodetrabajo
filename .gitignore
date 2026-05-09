@@ -24,7 +24,8 @@ Thumbs.db
 .indexnow-state.json
 
 # Claude Code
-.claude/
+.claude/*
+!.claude/settings.json
 .superpowers/
 .agents/
 

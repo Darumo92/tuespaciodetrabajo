@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "description": "Skills clonadas desde repos externos. El bootstrap script las re-clona en la máquina nueva si no existen ya. Para 'humanizer/mcp-sentinel/prompt-master' va directo a ~/.claude/skills/. El paquete 'marketing-skills' es un set de 36 skills que el setup script extrae de coreyhaines31/marketingskills al directorio ~/.agents/skills/ y enlaza con symlinks desde ~/.claude/skills/.",
+  "single_skills": [
+    {
+      "name": "humanizer",
+      "url": "https://github.com/blader/humanizer.git",
+      "target": "~/.claude/skills/humanizer"
+    },
+    {
+      "name": "mcp-sentinel",
+      "url": "https://github.com/soy-rafa/claude-mcp-sentinel.git",
+      "target": "~/.claude/skills/mcp-sentinel"
+    },
+    {
+      "name": "prompt-master",
+      "url": "https://github.com/nidhinjs/prompt-master.git",
+      "target": "~/.claude/skills/prompt-master"
+    }
+  ],
+  "bundles": [
+    {
+      "name": "marketing-skills",
+      "url": "https://github.com/coreyhaines31/marketingskills.git",
+      "skills_subdir": "skills",
+      "target_dir": "~/.agents/skills",
+      "symlink_into": "~/.claude/skills",
+      "skills": [
+        "ab-test-setup", "ad-creative", "ai-seo", "analytics-tracking", "aso-audit",
+        "churn-prevention", "cold-email", "competitor-alternatives", "content-strategy",
+        "copy-editing", "copywriting", "customer-research", "email-sequence",
+        "find-skills", "form-cro", "free-tool-strategy", "launch-strategy",
+        "lead-magnets", "marketing-ideas", "marketing-psychology", "onboarding-cro",
+        "page-cro", "paid-ads", "paywall-upgrade-cro", "popup-cro", "pricing-strategy",
+        "product-marketing-context", "programmatic-seo", "referral-program", "revops",
+        "sales-enablement", "schema-markup", "seo-audit", "signup-flow-cro",
+        "site-architecture", "social-content"
+      ]
+    }
+  ]
+}
