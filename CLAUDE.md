@@ -2,6 +2,19 @@
 
 Web de guias y comparativas de productos de home office y ergonomia para teletrabajadores en Espana, con monetizacion por afiliados (Amazon) y publicidad (futuro).
 
+## Contexto persistente del proyecto (LEER AL INICIO DE CADA SESIÓN)
+
+**Toda la información de contexto del proyecto vive en `docs/agent-context/`, versionada en el repo.** Esto reemplaza la memoria local de Claude — así cualquier sesión en cualquier máquina parte del mismo estado.
+
+Al iniciar cualquier sesión (o cuando el usuario pida "seguimos con lo de ayer", "vamos con el de hoy", "retomamos backlinks", "estado del recovery", etc.):
+
+1. Leer `docs/agent-context/INDEX.md` (índice de archivos de contexto)
+2. Leer los archivos relevantes según la tarea (persona del autor, planes activos, sesiones en curso, feedback permanente, métodos validados)
+
+Cuando aparezca información nueva que deba persistir entre sesiones (cambios de plan, decisiones, estado de sesión, datos de la persona, feedback del usuario, métodos que han funcionado): **escribir/actualizar el archivo correspondiente en `docs/agent-context/` y registrar la entrada en `INDEX.md`**. NO usar la auto-memory local de Claude para nada que sea de proyecto.
+
+Auto-memory local de Claude solo para datos cross-proyecto del usuario (ej: idioma, preferencias de herramienta globales). Todo lo del proyecto va al repo.
+
 ## Stack tecnico
 
 - **Framework:** Astro 5 (static output)
@@ -269,6 +282,18 @@ Antes de publicar CUALQUIER articulo, verificar TODOS estos puntos:
 - [ ] PRODUCTOS.md actualizado con los datos del articulo
 - [ ] Keywords verificadas en Keyword Surfer y volúmenes añadidos a seo-keywords.csv
 - [ ] Meta description incluye la variación de keyword con mayor volumen real
+- [ ] **Texto pasado por skill `humanizer`** — Antes de dar el artículo por terminado, ejecutar la skill `humanizer` sobre el cuerpo del MDX para detectar y corregir patrones IA (em-dashes, regla de tres, vocabulario IA, parallelismos negativos, atribuciones vagas, simbolismo inflado, voz pasiva, frases relleno). Aplicar las correcciones que la skill proponga.
+
+---
+
+## Humanizer obligatorio antes de publicar
+
+Antes de marcar como terminado o publicar CUALQUIER contenido público (artículo MDX, post Reddit, respuesta Quora, comentario en foro, hilo Mediavida, post Dev.to, About.me, página legal o cualquier copia que vaya a salir bajo el nombre de David Rubio), pasar el texto por la skill `humanizer`.
+
+- Aplica a: artículos en `src/content/articulos/`, posts/comentarios para backlinks (Reddit, Quora, Mediavida, Habitissimo, Dev.to, foros ES), copy de páginas (homepage, sobre-mi, legales) y cualquier draft listo para publicar.
+- No aplica a: código, commits, PRs, mensajes internos al usuario, frontmatter YAML, archivos del SEO engine.
+- Flujo: terminar el draft → invocar skill `humanizer` con el texto → revisar correcciones → aplicar las que mejoren el resultado → solo entonces marcar como terminado / pedir aprobación / commitear.
+- Si el texto ya pasó humanizer en una iteración previa y se modifica >20% del cuerpo, volver a pasarlo.
 
 ---
 
