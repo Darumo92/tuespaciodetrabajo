@@ -37,7 +37,11 @@ info "$(ls "$TARGET_SKILLS" | wc -l | tr -d ' ') skills disponibles en $TARGET_S
 
 bold "[2/4] Clonando skills externos sueltos"
 if ! command -v jq >/dev/null 2>&1; then
-  warn "jq no encontrado. Instala con: brew install jq"
+  warn "jq no encontrado. Instálalo:"
+  warn "  macOS: brew install jq"
+  warn "  Debian/Ubuntu: sudo apt install jq"
+  warn "  Fedora/RHEL: sudo dnf install jq"
+  warn "  Arch: sudo pacman -S jq"
   warn "Saltando clones."
 else
   while IFS=$'\t' read -r name url; do
