@@ -1,9 +1,33 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 6 completado (2026-05-10). Reddit karma cuenta Dear_Potato8535 = 2 (link 1 + comment 1). Próximo: continuar warmup sin link hasta karma ≥50.
+description: Día 7 completado (2026-05-11). Reddit karma cuenta Dear_Potato8535 = 2 (link 1 + comment 1). 6 comentarios posteados sin link. Próximo: re-check karma 48-72h, continuar warmup hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Estado al cierre Día 7 (2026-05-11)
+
+### Karma al inicio: 2 (link 1 + comment 1)
+### Volumen Día 7: 6 comentarios SIN link (4 nuevos posts + 2 replies en hilos existentes)
+
+**4 nuevos comentarios calentamiento:**
+- r/homeoffice 1t7y4h8 (twobit46 — Kentucky $400-600 follow-up Crandall + Cincinnati)
+  - URL: https://www.reddit.com/r/homeoffice/comments/1t7y4h8/comment/ol50mem/
+- r/OfficeChairs 1t9o07m (Juiseii — student Japan ¥6000 chair fell apart, Sylphy/Mercari)
+  - URL: https://www.reddit.com/r/OfficeChairs/comments/1t9o07m/comment/ol584lp/
+- r/Ergonomics 1t9l8px (SecondTriggerEvent — recline 100-110° posture, neck strain)
+  - URL: https://www.reddit.com/r/Ergonomics/comments/1t9l8px/comment/ol5ezgi/
+- r/OfficeChairs 1t9kj2e (lyroux — 6'2" 280lbs Embody vs Fern vs Leap, Gesture L/T)
+  - URL: https://www.reddit.com/r/OfficeChairs/comments/1t9kj2e/comment/ol5k6tz/
+
+**2 replies a usuarios que respondieron:**
+- r/homeoffice 1t7y4h8 → reply a twobit46 "scratch and dent" tier Crandall
+  - URL: https://www.reddit.com/r/homeoffice/comments/1t7y4h8/comment/ol5l2h9/
+- r/Ergonomics 1t9l8px → reply a SecondTriggerEvent forward tilt + hamstrings (footrest + 5-10° range)
+  - URL: https://www.reddit.com/r/Ergonomics/comments/1t9l8px/comment/ol5mmpg/
+
+**Total comentarios cuenta:** 11 calentamiento (Día 5-6) + 6 Día 7 + 3 pre-campaña = **20**
+Próxima verificación karma: 48-72h (vie 13 may o sáb 14 may)
 
 ## Método validado fetch karma Reddit (2026-05-11)
 
