@@ -12,19 +12,24 @@ Publicadas **3 respuestas nuevas en Quora ES** para diversificar fuera del clust
 1. Escritorios elevables
    - Pregunta: https://es.quora.com/Para-que-sirven-los-escritorios-elevables
    - Link destino: https://tuespaciodetrabajo.com/escritorios/mejor-escritorio-elevable-electrico/
-   - URL respuesta: pendiente de copiar desde Quora
+   - URL respuesta: https://es.quora.com/Para-que-sirven-los-escritorios-elevables/answer/David-Rubio-96?ch=10&oid=1477743907303737&share=716c1e78&srid=5DCHRt&target_type=answer
 2. Pasar 12 horas sentado
    - Pregunta: https://es.quora.com/Qué-hacer-cuando-paso-mucho-tiempo-solo-en-un-lugar-sentado-Duro-practiacamente-12-hora-trabajando-sentado-que-me-recomiendan-para-mi-bienestar
    - Link destino: https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/
-   - URL respuesta: pendiente de copiar desde Quora
+   - URL respuesta: https://es.quora.com/Qué-hacer-cuando-paso-mucho-tiempo-solo-en-un-lugar-sentado-Duro-practiacamente-12-hora-trabajando-sentado-que-me-recomiendan-para-mi-bienestar/answer/David-Rubio-96?ch=10&oid=1477743907303797&share=36be86c1&srid=5DCHRt&target_type=answer
 3. Síndrome de cuello de texto
    - Pregunta: https://es.quora.com/Qué-es-el-sindrome-de-cuello-de-texto-Qué-causa-dolor-en-el-cuello
    - Link destino: https://tuespaciodetrabajo.com/guias/dolor-cervicales-ordenador/
-   - URL respuesta: pendiente de copiar desde Quora
+   - URL respuesta: https://es.quora.com/Qué-es-el-sindrome-de-cuello-de-texto-Qué-causa-dolor-en-el-cuello/answer/David-Rubio-96?ch=10&oid=1477743907303860&share=11a22de6&srid=5DCHRt&target_type=answer
 
 Decisión: no editar las 5 respuestas Quora del 2026-04-30 salvo que aparezcan ocultas/colapsadas. Evitar más respuestas de sillas esta semana por concentración temática y afiliada. Mantener Quora como goteo: 2-3 respuestas/semana máximo, priorizando guías informativas y clusters no saturados.
 
-Shortlinks de respuestas enviados por usuario 2026-05-11 (qr.ae bloquea resolución externa con Cloudflare 403 desde CLI; mapear manualmente si hace falta):
+4. Fatiga visual / pantalla móvil vs PC
+   - Pregunta: https://es.quora.com/Qué-pantalla-es-más-dañina-para-la-vista-la-del-móvil-o-la-del-PC
+   - Link destino: https://tuespaciodetrabajo.com/guias/fatiga-visual-pantalla/
+   - URL respuesta: https://es.quora.com/Qué-pantalla-es-más-dañina-para-la-vista-la-del-móvil-o-la-del-PC/answer/David-Rubio-96?ch=10&oid=1477743907303388&share=65784860&srid=5DCHRt&target_type=answer
+
+Shortlinks de respuestas enviados por usuario 2026-05-11:
 - https://qr.ae/pFv5eE
 - https://qr.ae/pFv5St
 - https://qr.ae/pFv5Z3
