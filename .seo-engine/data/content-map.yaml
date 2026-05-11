@@ -271,6 +271,7 @@ articles:
       - novedades-home-office-2026
       - organizar-cables-escritorio
       - standing-desk-merece-la-pena
+      - trabajar-desde-casa-calor
   - slug: home-office-productivo-500-euros
     title: "Home office productivo por menos de 500 €"
     path: src/content/articulos/home-office-productivo-500-euros.mdx
@@ -348,6 +349,7 @@ articles:
       - mi-setup-home-office-2026
       - novedades-home-office-2026
       - productividad-en-casa-entorno-fisico
+      - trabajar-desde-casa-calor
   - slug: productividad-en-casa-entorno-fisico
     title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
     path: src/content/articulos/productividad-en-casa-entorno-fisico.mdx
@@ -380,6 +382,7 @@ articles:
       - home-office-piso-pequeno
       - mejorar-iluminacion-espacio-trabajo
       - organizar-cables-escritorio
+      - trabajar-desde-casa-calor
   - slug: mejor-teclado-ergonomico
     title: "Mejor teclado ergonómico 2026"
     path: src/content/articulos/mejor-teclado-ergonomico.mdx
@@ -897,6 +900,7 @@ articles:
     internal_links_from:
       - guia-completa-home-office
       - home-office-piso-pequeno
+      - trabajar-desde-casa-calor
   - slug: ejercicios-estiramientos-silla-oficina
     title: "Ejercicios y estiramientos en la silla de oficina: guía"
     path: src/content/articulos/ejercicios-estiramientos-silla-oficina.mdx
@@ -947,6 +951,28 @@ articles:
     internal_links_from:
       - mejor-escritorio-elevable-electrico
       - standing-desk-merece-la-pena
+  - slug: trabajar-desde-casa-calor
+    title: "Trabajar desde casa con calor: guía para no derretirte"
+    path: src/content/articulos/trabajar-desde-casa-calor.mdx
+    type: informativo
+    category: ambiente
+    primary_keyword: "trabajar desde casa calor"
+    secondary_keywords:
+      - teletrabajo verano
+      - oficina casa fresca
+      - ventilador silencioso oficina
+      - climatizar home office
+      - despacho calor verano
+    cluster: ambiente
+    status: published
+    date: 2026-05-11
+    has_eeat_signals: true
+    internal_links_to:
+      - mejor-escritorio-elevable-electrico
+      - mejor-monitor-trabajar-desde-casa
+      - insonorizar-home-office
+      - productividad-en-casa-entorno-fisico
+    internal_links_from: []
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

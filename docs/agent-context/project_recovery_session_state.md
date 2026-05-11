@@ -4,13 +4,7 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (Lun 11 may 2026)
-
-**Artículo nuevo #29: trabajar-desde-casa-calor (estacional jun-ago)**
-
-Tipo: Informativo (Info), cluster ambiente. Workflow estándar SEO engine — preguntar SERP + Keyword Surfer antes de redactar.
-
-## Después (Mar 12 may 2026)
+## Próxima acción (Mar 12 may 2026)
 
 **Refactor lámpara LED (Bloque B pieza 3 de 3)**
 
@@ -34,8 +28,8 @@ Mismo patrón que piezas 1 y 2:
 | Vie 08 may | Bloque B pieza 2: refactor teclado ergonómico (commit 671d6c3) | ✅ 6.19 → 2.62/1000w |
 | Sáb 09 may | Sin pushes. Opcional: Bloque C backlinks (Quora 5 respuestas) | — |
 | Dom 10 may | Sin pushes | — |
-| Lun 11 may | **Artículo nuevo #29: trabajar-desde-casa-calor** ← SIGUIENTE | Pendiente |
-| Mar 12 may | Bloque B pieza 3: refactor lámpara LED | Pendiente |
+| Lun 11 may | Artículo nuevo #29: trabajar-desde-casa-calor | ✅ publicado (2868w, info ambiente) |
+| Mar 12 may | **Bloque B pieza 3: refactor lámpara LED** ← SIGUIENTE | Pendiente |
 | Mié 13 may | Bloque D: solicitar indexación manual GSC top 8 URLs | Pendiente |
 | Jue 14 may | Bloque C backlinks Tier 1 | Pendiente |
 
@@ -60,7 +54,7 @@ GSC → Inspección URL → Solicitar indexación:
 - [x] Bloque B pieza 1: ratón vertical (commit 49524be, 07 may, 7.40 → 3.43/1000w)
 - [x] Bloque B pieza 2: teclado ergonómico (commit 671d6c3, 08 may, 6.19 → 2.62/1000w)
 - [ ] Bloque B pieza 3: lámpara LED ← MAR 12 MAY
-- [ ] Bloque C: backlinks Tier 1 (Quora 5 respuestas Bloque B pendientes desde 29 abr)
+- [x] Bloque C SESION_1 Quora: 5 respuestas publicadas 2026-04-30 (confirmado dom 10 may). Siguiente: SESION_2 Reddit Día 6+ (karma check)
 - [ ] Bloque D: solicitud indexación manual GSC top 8
 
 ## Resumen pieza 2 (vie 08 may)

@@ -175,10 +175,10 @@ clusters:
         title: "Cómo insonorizar una habitación sin obras (home office)"
         keyword: "cómo insonorizar una habitación"
         status: human-review
-      - slug: trabajar-casa-calor
-        title: "Trabajar desde casa con calor: cómo mantener tu oficina fresca"
+      - slug: trabajar-desde-casa-calor
+        title: "Trabajar desde casa con calor: guía para no derretirte"
         keyword: "trabajar desde casa calor"
-        status: planned
+        status: published
     notes: "Pilar comparativo. Cluster: iluminación, ruido, temperatura, orden, decoración. Productos clave: BenQ ScreenBar, Dyson Pure Cool."
 
   - name: productividad

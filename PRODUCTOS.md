@@ -35,6 +35,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | insonorizar-home-office | insonorizar-home-office.webp | 2547555 | Mateusz Dach | https://www.pexels.com/photo/2547555/ |
 | ejercicios-estiramientos-silla-oficina | ejercicios-estiramientos-silla-oficina.webp | 5899200 | kaboompics.com | https://www.pexels.com/photo/5899200/ |
 | ikea-bekant-vs-flexispot-e7 | ikea-bekant-vs-flexispot-e7.webp | 7899239 | Josh Sorenson | https://www.pexels.com/photo/7899239/ |
+| trabajar-desde-casa-calor | trabajar-desde-casa-calor.webp | 31517321 | Bingqian Li | https://www.pexels.com/photo/31517321/ |
 
 ---
 
