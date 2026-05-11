@@ -8,6 +8,23 @@ originSessionId: 756302ed-c7eb-46af-8771-2aad4315a99e
 
 **Why:** el usuario tiene cuenta nueva con karma 2 (Dear_Potato8535). Un solo comentario detectado como IA o como off-topic con respecto al OP = downvote masivo, removal, posible shadowban. Quemada la cuenta = quemado el plan backlinks Tier 1 entero. Además daña reputación del dominio si se asocia el sitio a spam.
 
+## Paso 0 OBLIGATORIO antes de presentar borradores: invocar skill humanizer
+
+**Sin esperar a que el usuario lo pida. Sin excepciones.** Aplica a:
+- Comentarios Reddit (cualquier sub, cualquier longitud)
+- Respuestas Quora
+- Posts/respuestas Mediavida, Habitissimo, Forocoches, X/Twitter, LinkedIn, Dev.to
+- Comentarios en otros blogs
+- Cualquier copy público que vaya bajo el nombre / la cuenta del usuario
+
+**Flujo correcto:**
+1. Redactar borrador(es) interno
+2. Invocar `Skill humanizer` con los borradores como input ANTES de mostrar al usuario
+3. Aplicar correcciones del humanizer al texto
+4. Solo ENTONCES presentar el resultado humanizado al usuario para aprobación/posteo
+
+**Flujo INCORRECTO (no repetir):** presentar borrador "limpio mentalmente" sin pasar por la skill. CLAUDE.md ya lo dice (sección "Humanizer obligatorio antes de publicar"), este feedback lo refuerza: el usuario no debe tener que pedirlo. Si está claro que no se hizo, el usuario perderá tiempo recordándolo y la cuenta perderá ritmo de respuesta.
+
 **How to apply (checklist obligatorio antes de enviar cualquier comentario):**
 
 1. **Leer el post original completo.** Citar 1-2 detalles concretos del OP en la respuesta (su problema concreto, datos que dio, no genérico).
