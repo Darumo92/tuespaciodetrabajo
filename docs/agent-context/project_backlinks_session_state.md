@@ -1,9 +1,20 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 7 completado (2026-05-11). Reddit karma cuenta Dear_Potato8535 = 2 (link 1 + comment 1). 6 comentarios posteados sin link. Próximo: re-check karma 48-72h, continuar warmup hasta ≥50.
+description: Día 8 (2026-05-11): 1 reply posteada a lyroux (Gesture Large seat vs Embody). Total 21 comentarios. Próximo: re-check karma 48-72h, continuar warmup hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Estado al cierre Día 8 (2026-05-11)
+
+### Reply posteada (1):
+- r/OfficeChairs 1t9kj2e → reply a lyroux (ol5r1uo) sobre Gesture Large seat size vs Embody 6'2"/280lbs
+  - URL: https://www.reddit.com/r/OfficeChairs/comments/1t9kj2e/comment/ol739ma/
+
+**Total comentarios cuenta:** 20 (Días 5-7) + 1 Día 8 + 3 pre-campaña = **21**
+Próxima verificación karma: 48-72h (vie 13 may o sáb 14 may)
+
+**Recon replies 2026-05-11:** todos los hilos salvo lyroux cerrados/sin reply nueva.
 
 ## Estado al cierre Día 7 (2026-05-11)
 
