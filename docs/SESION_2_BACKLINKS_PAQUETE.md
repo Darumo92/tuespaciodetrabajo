@@ -146,6 +146,12 @@ Si dudas, espera al Black Friday. Suelen bajar 60-80 €.
     https://www.reddit.com/r/StandingDesks/comments/1t2dntz/comment/ojuib7r/
 [x] 2026-05-05 · r/homeoffice · 1t4ci0m (laptop stands ergonomics)
     https://www.reddit.com/r/homeoffice/comments/1t4ci0m/comment/ok1nkr7/
+[x] 2026-05-10 · r/Ergonomics · 1t81y19 (monitor 32" 800mm tech neck)
+    https://www.reddit.com/r/Ergonomics/comments/1t81y19/comment/okzvmog/
+[x] 2026-05-10 · r/OfficeChairs · 1t857w7 (Embody lumbar pain post-switch)
+    https://www.reddit.com/r/OfficeChairs/comments/1t857w7/comment/ol06vvi/
+[x] 2026-05-10 · r/homeoffice · 1t7y4h8 (ergo chair recommendations)
+    https://www.reddit.com/r/homeoffice/comments/1t7y4h8/comment/ol0kemf/
 ```
 
 ### Bloque A con link (karma ≥50)
