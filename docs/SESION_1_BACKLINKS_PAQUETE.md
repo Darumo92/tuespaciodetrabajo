@@ -231,6 +231,18 @@ Y un apunte que parece de coña pero no lo es: la mejor silla para estar mucho t
 [x] 2026-04-30 · Pregunta #3 aspectos comprar silla  · URL respuesta: https://es.quora.com/Qué-aspectos-hay-que-tener-en-cuenta-a-la-hora-de-comprar-una-silla-ergonómica-para-escritorio/answer/David-Rubio-96 · Upvotes 7d: ___
 [x] 2026-04-30 · Pregunta #4 silla dolor espalda     · URL respuesta: https://es.quora.com/Qué-silla-es-la-más-cómoda-para-el-dolor-de-espalda/answer/David-Rubio-96 · Upvotes 7d: ___
 [x] 2026-04-30 · Pregunta #5 mucho tiempo PC         · URL respuesta: https://es.quora.com/Cuál-es-la-mejor-silla-para-estar-mucho-tiempo-delante-de-la-PC/answer/David-Rubio-96 · Upvotes 7d: ___
+[x] 2026-05-11 · Pregunta #6 escritorios elevables    · URL pregunta: https://es.quora.com/Para-que-sirven-los-escritorios-elevables · URL respuesta: pendiente · Upvotes 7d: ___
+[x] 2026-05-11 · Pregunta #7 12 horas sentado         · URL pregunta: https://es.quora.com/Qué-hacer-cuando-paso-mucho-tiempo-solo-en-un-lugar-sentado-Duro-practiacamente-12-hora-trabajando-sentado-que-me-recomiendan-para-mi-bienestar · URL respuesta: pendiente · Upvotes 7d: ___
+[x] 2026-05-11 · Pregunta #8 cuello de texto          · URL pregunta: https://es.quora.com/Qué-es-el-sindrome-de-cuello-de-texto-Qué-causa-dolor-en-el-cuello · URL respuesta: pendiente · Upvotes 7d: ___
+```
+
+Shortlinks Quora enviados por usuario 2026-05-11 (pendiente mapear a pregunta concreta si se necesita):
+
+```
+https://qr.ae/pFv5eE
+https://qr.ae/pFv5St
+https://qr.ae/pFv5Z3
+https://qr.ae/pFv5S5
 ```
 
 ---

@@ -5,6 +5,31 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update noche Día 8 (2026-05-11) — Quora ES
+
+Publicadas **3 respuestas nuevas en Quora ES** para diversificar fuera del cluster sillas:
+
+1. Escritorios elevables
+   - Pregunta: https://es.quora.com/Para-que-sirven-los-escritorios-elevables
+   - Link destino: https://tuespaciodetrabajo.com/escritorios/mejor-escritorio-elevable-electrico/
+   - URL respuesta: pendiente de copiar desde Quora
+2. Pasar 12 horas sentado
+   - Pregunta: https://es.quora.com/Qué-hacer-cuando-paso-mucho-tiempo-solo-en-un-lugar-sentado-Duro-practiacamente-12-hora-trabajando-sentado-que-me-recomiendan-para-mi-bienestar
+   - Link destino: https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/
+   - URL respuesta: pendiente de copiar desde Quora
+3. Síndrome de cuello de texto
+   - Pregunta: https://es.quora.com/Qué-es-el-sindrome-de-cuello-de-texto-Qué-causa-dolor-en-el-cuello
+   - Link destino: https://tuespaciodetrabajo.com/guias/dolor-cervicales-ordenador/
+   - URL respuesta: pendiente de copiar desde Quora
+
+Decisión: no editar las 5 respuestas Quora del 2026-04-30 salvo que aparezcan ocultas/colapsadas. Evitar más respuestas de sillas esta semana por concentración temática y afiliada. Mantener Quora como goteo: 2-3 respuestas/semana máximo, priorizando guías informativas y clusters no saturados.
+
+Shortlinks de respuestas enviados por usuario 2026-05-11 (qr.ae bloquea resolución externa con Cloudflare 403 desde CLI; mapear manualmente si hace falta):
+- https://qr.ae/pFv5eE
+- https://qr.ae/pFv5St
+- https://qr.ae/pFv5Z3
+- https://qr.ae/pFv5S5
+
 ## Estado al cierre Día 8 (2026-05-11)
 
 ### Reply posteada (1):
