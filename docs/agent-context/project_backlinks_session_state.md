@@ -1,9 +1,41 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 5 completado (2026-05-05). Reddit karma desconocido (Reddit bloquea fetch, RSS no expone karma). 5 comentarios calentamiento sin link. Próximo: verificar karma manualmente, si ≥50 ejecutar Bloque A con links.
+description: Día 6 completado (2026-05-10). Reddit karma cuenta Dear_Potato8535 = 2 (link 1 + comment 1). Próximo: continuar warmup sin link hasta karma ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Método validado fetch karma Reddit (2026-05-11)
+
+```bash
+curl -sSL -A 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15' \
+  "https://www.reddit.com/user/Dear_Potato8535/about.json"
+```
+
+Devuelve JSON con `data.link_karma`, `data.comment_karma`, `data.total_karma`, `data.created_utc`. Método idéntico al usado en proyecto patasyhogar para Pristine_Review5630. La nota previa "Reddit bloquea todo fetch externo incluyendo .json" era incorrecta — con UA Safari funciona 200.
+
+## Estado al cierre Día 6 (2026-05-10)
+
+### Karma confirmado: 2 (curl about.json 2026-05-11)
+- link_karma=1, comment_karma=1, total_karma=2
+- 3 comentarios Día 6 (10 may) no movieron karma (sin upvotes registrados aún)
+- Muy lejos del umbral 50. Continuar warmup SIN link.
+- Próxima verificación: 48-72h tras nuevos comentarios
+- 3 comentarios calentamiento Día 6 posteados 2026-05-10 SIN link:
+  - r/Ergonomics 1t81y19 (OutrageousDegree7502 — monitor 32" 800mm tech neck)
+    URL: https://www.reddit.com/r/Ergonomics/comments/1t81y19/comment/okzvmog/
+  - r/OfficeChairs 1t857w7 (Informal_Air_9180 — Embody lumbar dolor post-switch)
+    URL: https://www.reddit.com/r/OfficeChairs/comments/1t857w7/comment/ol06vvi/
+  - r/homeoffice 1t7y4h8 (twobit46 — ergo chair recommendations)
+    URL: https://www.reddit.com/r/homeoffice/comments/1t7y4h8/comment/ol0kemf/
+- Total comentarios cuenta: 8 calentamiento + 3 historial pre-campaña = 11
+- Verificación karma 11 may: total=2 (sin cambio vs 10 may) — ver bloque "Método validado" arriba
+
+### Pool ES Reddit (recon 2026-05-10): VACÍO
+- 9 subs ES probados (Autonomos, spain, askspain, Madrid, Barcelona, freelance_es, programacion, developersES, profesionales)
+- 0 hilos on-topic +question ventana 14d. 3 falsos positivos en 21d.
+- Confirma reference_reddit_thread_recon.md ("subs ES esporádicos").
+- Plan link en ES: usar search RSS reddit-wide cuando karma ≥50 (queries descargados a /tmp/reddit-search-es-2026-05-10/)
 
 ## Estado al cierre Día 5 (2026-05-05)
 
