@@ -37,15 +37,15 @@ Origen: GSC export 2026-04-27 (carpetas tuespaciodetrabajo-12 en ~/Downloads).
 | 3 | mejor-monitor-trabajar-desde-casa | /accesorios/mejor-monitor-trabajar-desde-casa/ | ✅ Hecho 2026-04-29 (commit c247e9c). Intro contraintuitiva ("compra que más cambió"), bloque metodología (probados físicamente / oficina ajena / no probados), Pep + Fisiosthetic + 300 €/6 sesiones, Cornell + INSST, fix 8→9 m² |
 | 4 | dolor-espalda-trabajar-casa | /guias/dolor-espalda-trabajar-casa/ | ✅ Hecho 2026-04-28 (commit b73ed7c). Encadenado médico→Pep→Fisiosthetic 300 €/6 sesiones, disclaimer YMYL "no soy médico", Cornell, 9 m² Rubí |
 | 5 | ergonomia-teletrabajo-postura-correcta | /guias/ergonomia-teletrabajo-postura-correcta/ | ✅ Hecho 2026-04-28 (commit 4125f3e). Bloque YMYL transparencia, Pep×6, Cornell+INSST+IBV, 9 m² Rubí, apertura lead-stat distinta |
-| 6 | mejor-raton-vertical-ergonomico | /accesorios/mejor-raton-vertical-ergonomico/ | Pendiente |
-| 7 | mejor-teclado-ergonomico | /accesorios/mejor-teclado-ergonomico/ | Pendiente |
+| 6 | mejor-raton-vertical-ergonomico | /accesorios/mejor-raton-vertical-ergonomico/ | ✅ Refactor Bloque B 2026-05-07 (7.40 → 3.43 afiliados/1000w) |
+| 7 | mejor-teclado-ergonomico | /accesorios/mejor-teclado-ergonomico/ | ✅ Refactor Bloque B 2026-05-08 (6.19 → 2.62 afiliados/1000w) |
 | 8 | altura-correcta-escritorio-silla | /guias/altura-correcta-escritorio-silla/ | Pendiente |
 | 9 | mi-setup-home-office-2026 | /guias/mi-setup-home-office-2026/ | ✅ Hecho 2026-04-28 (commit 48e0b32). Apertura tour-style nueva, Pep×3 + Fisiosthetic, Cornell+INSST en intro, 9 m² Rubí norte, 1,80 m, 74/110 cm |
 | 10 | organizar-cables-escritorio | /guias/organizar-cables-escritorio/ | Pendiente |
 | 11 | home-office-piso-pequeno | /guias/home-office-piso-pequeno/ | Pendiente |
 | 12 | novedades-home-office-2026 | /guias/novedades-home-office-2026/ | Pendiente |
 | 13 | productividad-en-casa-entorno-fisico | /guias/productividad-en-casa-entorno-fisico/ | Pendiente |
-| 14 | ambiente/mejor-lampara-escritorio-led | /ambiente/mejor-lampara-escritorio-led/ | Pendiente |
+| 14 | ambiente/mejor-lampara-escritorio-led | /ambiente/mejor-lampara-escritorio-led/ | ✅ Refactor Bloque B 2026-05-12 (6.29 → 3.08 afiliados/1000w) |
 | 15 | tunel-carpiano-teletrabajo-prevencion | /guias/tunel-carpiano-teletrabajo-prevencion/ | Pendiente |
 | - | accesorios/ (categoría) | /accesorios/ | NO tocar — listing, no contenido |
 
@@ -54,7 +54,7 @@ Origen: GSC export 2026-04-27 (carpetas tuespaciodetrabajo-12 en ~/Downloads).
 - Día 1 (2026-04-27): #1 mejor-silla-ergonomica-calidad-precio ✅ (commit 5b48b81)
 - Día 2 (2026-04-28): #2, #4, #5, #9 ✅
 - Día 3 (2026-04-29): #3 mejor-monitor-trabajar-desde-casa ✅ (commit c247e9c). Resto pausado por foco en plan backlinks
-- **Próximos pendientes (orden):** #15 tunel-carpiano, #6 raton-vertical, #8 altura-correcta, #7 teclado, #14 lampara-led, #10 organizar-cables, #11 home-office-piso-pequeno, #12 novedades, #13 productividad-entorno
+- **Próximos pendientes (orden):** #15 tunel-carpiano, #8 altura-correcta, #10 organizar-cables, #11 home-office-piso-pequeno, #12 novedades, #13 productividad-entorno
 
 ## Trigger para retomar mañana
 

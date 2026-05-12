@@ -4,20 +4,15 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (Mar 12 may 2026)
+## Próxima acción (Mié 13 may 2026)
 
-**Refactor lámpara LED (Bloque B pieza 3 de 3)**
+**Bloque D: solicitar indexación manual GSC top 8 URLs**
 
-Archivo: `src/content/articulos/mejor-lampara-escritorio-led.mdx`
+GSC → Inspección URL → Solicitar indexación. Ya están refactorizadas las 3 piezas con densidad afiliada alta:
 
-Densidad reportada 06 may: **6.29 affiliates/1000w** (objetivo ≤5).
-
-Mismo patrón que piezas 1 y 2:
-- Bloque educativo ~600-700w pre-ComparisonTable: lux recomendados según tarea (INSST 500 lux trabajo administrativo, 750 lux precisión), CCT 4000-5000K para jornada vs 2700-3000K para descanso, CRI ≥80, evitar parpadeo (driver PWM vs DC), brazo articulado vs barra LED clip vs lámpara de pie, perfiles que NO necesitan (luz natural ventana norte, jornada <4h)
-- Coherencia persona: David Rubio (Rubí, despacho 9 m², ventana orientación a contrastar — revisar mi-setup-home-office-2026 antes de escribir)
-- Mención fisio Pep solo si encaja (mejor reservarlo para temas posturales puros)
-- Eliminar AffiliateButton sueltos del cuerpo, mantener TopPick + ComparisonTable + 5 CTAs finales
-- Verificar coherencia con artículos del cluster ambiente
+- Ratón vertical: 7.40 → 3.43/1000w
+- Teclado ergonómico: 6.19 → 2.62/1000w
+- Lámpara LED: 6.29 → 3.08/1000w
 
 ## Calendario semana 06-14 may
 
@@ -29,8 +24,8 @@ Mismo patrón que piezas 1 y 2:
 | Sáb 09 may | Sin pushes. Opcional: Bloque C backlinks (Quora 5 respuestas) | — |
 | Dom 10 may | Sin pushes | — |
 | Lun 11 may | Artículo nuevo #29: trabajar-desde-casa-calor | ✅ publicado (2868w, info ambiente) |
-| Mar 12 may | **Bloque B pieza 3: refactor lámpara LED** ← SIGUIENTE | Pendiente |
-| Mié 13 may | Bloque D: solicitar indexación manual GSC top 8 URLs | Pendiente |
+| Mar 12 may | Bloque B pieza 3: refactor lámpara LED | ✅ 6.29 → 3.08/1000w |
+| Mié 13 may | **Bloque D: solicitar indexación manual GSC top 8 URLs** ← SIGUIENTE | Pendiente |
 | Jue 14 may | Bloque C backlinks Tier 1 | Pendiente |
 
 ## Top 8 URLs para Bloque D (mié 13 may)
@@ -42,18 +37,18 @@ GSC → Inspección URL → Solicitar indexación:
 3. https://tuespaciodetrabajo.com/escritorios/mejor-escritorio-elevable-electrico/
 4. https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/
 5. https://tuespaciodetrabajo.com/guias/dolor-espalda-trabajar-casa/
-6. https://tuespaciodetrabajo.com/guias/altura-correcta-escritorio-silla/
+6. https://tuespaciodetrabajo.com/ambiente/mejor-lampara-escritorio-led/ (post-refactor 12 may)
 7. https://tuespaciodetrabajo.com/accesorios/mejor-raton-vertical-ergonomico/ (post-refactor 07 may)
 8. https://tuespaciodetrabajo.com/accesorios/mejor-teclado-ergonomico/ (post-refactor 08 may)
 
-(Homepage queda fuera del top 8 — sustituida por teclado refactorizado)
+(Homepage y altura-correcta quedan fuera del top 8 inicial — sustituidas por las tres comparativas refactorizadas con densidad afiliada corregida)
 
 ## Estado bloques recovery
 
 - [x] Bloque A día 0: fix fechas frontmatter (commit fa30f13)
 - [x] Bloque B pieza 1: ratón vertical (commit 49524be, 07 may, 7.40 → 3.43/1000w)
 - [x] Bloque B pieza 2: teclado ergonómico (commit 671d6c3, 08 may, 6.19 → 2.62/1000w)
-- [ ] Bloque B pieza 3: lámpara LED ← MAR 12 MAY
+- [x] Bloque B pieza 3: lámpara LED (commit pendiente, 12 may, 6.29 → 3.08/1000w)
 - [x] Bloque C SESION_1 Quora: 5 respuestas publicadas 2026-04-30 (confirmado dom 10 may). Siguiente: SESION_2 Reddit Día 6+ (karma check)
 - [ ] Bloque D: solicitud indexación manual GSC top 8
 
@@ -68,6 +63,16 @@ GSC → Inspección URL → Solicitar indexación:
 - Compañero Madrid (existente) coherente con ratón vertical post-refactor (mismo compañero: tendinitis 1ª, Anker después)
 - Fuentes externas: Cornell Ergonomics + INSST (existentes reforzadas)
 - Build OK, push único del día (671d6c3)
+
+## Resumen pieza 3 (mar 12 may)
+
+- Bloque educativo nuevo ~780w pre-ComparisonTable: lux y lúmenes (500 lux como referencia de trabajo con pantalla), INSST/RD 486/1997, distancia y orientación real, CCT 4000-5000 K para jornada, 2700-3000 K para cierre, CRI ≥80, parpadeo/PWM, y casos donde NO comprar lámpara nueva.
+- Eliminados 7 AffiliateButton sueltos tras cada producto.
+- Conservados/reubicados: TopPick (1) + ComparisonTable (7 filas) + 5 CTAs finales = 13 enlaces /dp/.
+- Densidad final: 13 / 4224w = **3.08/1000w** (objetivo ≤5).
+- Coherencia persona: Rubí, despacho 9 m², ventana norte, BenQ ScreenBar Halo y Xiaomi usada por su mujer, consistente con `mi-setup-home-office-2026`.
+- Fuentes externas: INSST iluminación.
+- Build OK (`npm run build`, 46 páginas, CSP hashes actualizados).
 
 ## Documentación de referencia
 
