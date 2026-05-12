@@ -152,6 +152,8 @@ Si dudas, espera al Black Friday. Suelen bajar 60-80 €.
     https://www.reddit.com/r/OfficeChairs/comments/1t857w7/comment/ol06vvi/
 [x] 2026-05-10 · r/homeoffice · 1t7y4h8 (ergo chair recommendations)
     https://www.reddit.com/r/homeoffice/comments/1t7y4h8/comment/ol0kemf/
+[x] 2026-05-12 · r/homeoffice · 1ta3aff (affordable accessories for long desk sessions)
+    https://www.reddit.com/r/homeoffice/comments/1ta3aff/comment/olcse83/
 ```
 
 ### Bloque A con link (karma ≥50)

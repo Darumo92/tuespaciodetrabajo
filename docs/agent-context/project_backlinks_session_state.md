@@ -1,9 +1,28 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 8 (2026-05-11): 1 reply posteada a lyroux (Gesture Large seat vs Embody). Total 21 comentarios. Próximo: re-check karma 48-72h, continuar warmup hasta ≥50.
+description: Día 9 (2026-05-12): 1 comentario warmup Reddit sin link en r/homeoffice. Total 22 comentarios. Karma verificado 4. Próximo: re-check 48-72h, continuar warmup hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 9 (2026-05-12) — Reddit warmup
+
+Karma verificado antes de comentar:
+- link_karma=1
+- comment_karma=3
+- total_karma=4
+- Cuenta verificada, no suspendida.
+
+Decisión: NO meter links en Reddit todavía. Umbral operativo sigue siendo ≥50 total karma. Quora se deja descansar hoy porque el 2026-05-11 se publicaron 4 respuestas.
+
+### Comentario posteado (SIN link)
+
+- r/homeoffice 1ta3aff → "What are the best affordable accessories for long desk sessions?"
+  - URL: https://www.reddit.com/r/homeoffice/comments/1ta3aff/comment/olcse83/
+  - Enfoque: accesorios asequibles para sesiones de ~6h, priorizando silla no-gaming, reposapiés, monitor arm/laptop stand, teclado/ratón externo, lámpara y cable management.
+
+**Total comentarios cuenta:** 21 anteriores + 1 Día 9 + 3 pre-campaña ya incluidos en total anterior = **22**
+Próxima verificación karma: 48-72h (jue 14 may o vie 15 may)
 
 ## Update noche Día 8 (2026-05-11) — Quora ES
 
