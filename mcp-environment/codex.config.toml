@@ -1,0 +1,31 @@
+# MCP servers shared by this repo for OpenAI Codex CLI.
+# Keep this file aligned with the root .mcp.json used by Claude Code.
+#
+# Apply to ~/.codex/config.toml with:
+#   bash mcp-environment/setup-codex-mcp.sh
+
+[mcp_servers.cloudflare-api]
+url = "https://mcp.cloudflare.com/mcp"
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+bearer_token_env_var = "CLOUDFLARE_API_TOKEN"
+
+[mcp_servers.google-analytics]
+command = "pipx"
+args = ["run", "analytics-mcp"]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+env_vars = ["GOOGLE_APPLICATION_CREDENTIALS", "GOOGLE_PROJECT_ID"]
+
+[mcp_servers.google-search-console]
+command = "npx"
+args = ["-y", "mcp-server-gsc@0.3.0"]
+enabled = true
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+env_vars = ["GOOGLE_APPLICATION_CREDENTIALS"]
+# Defense in depth: the server uses webmasters.readonly credentials, but this
+# tool is write-shaped and not needed for analytics.
+disabled_tools = ["submit_sitemap"]

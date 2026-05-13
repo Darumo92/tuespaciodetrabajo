@@ -9,6 +9,14 @@ node_modules/
 .env
 .env.production
 .env.local
+.env.*
+!.env.example
+*credentials*.json
+*service-account*.json
+google-application-credentials*.json
+client_secret*.json
+oauth-client.json
+.credentials/
 
 # OS files
 .DS_Store

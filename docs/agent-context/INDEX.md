@@ -6,6 +6,8 @@ Contexto persistente del proyecto, versionado en repo (no en memoria local Claud
 
 
 - [Usar todos los agentes y skills](feedback_use_all_tools.md) — El usuario quiere que use todos los agentes, plugins y skills sin pedir permiso cada vez
+- [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Configuracion versionada para usar MCPs de Cloudflare, Google Analytics y Search Console en Claude Code y Codex CLI
+- [Usar MCP antes de pedir datos](feedback_use_mcp_analytics_before_asking.md) — Para SEO, trafico, indexacion y prioridades, consultar primero GSC/GA4/Cloudflare via MCP
 - [Calendario de publicación Recovery](project_content_calendar.md) — Mapa fecha→artículo POST-recovery (cadencia rebajada). Reemplaza Plan v2. Para "vamos con el de hoy"
 - [Plan Recovery Indexación activo](project_recovery_plan.md) — Estado plan tras colapso indexación 06 may. Bloques A-E. Para SEO/GSC/indexación
 - [Sesión recovery handoff](project_recovery_session_state.md) — Próxima acción concreta: jue 07 may refactor ratón vertical. Para "vamos con lo de ayer" / "seguimos con recovery"
