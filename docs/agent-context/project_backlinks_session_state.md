@@ -1,9 +1,49 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 9 (2026-05-12): 1 comentario warmup Reddit sin link en r/homeoffice. Total 22 comentarios. Karma verificado 4. Próximo: re-check 48-72h, continuar warmup hasta ≥50.
+description: Día 10 (2026-05-13): 1 comentario warmup Reddit sin link en r/OfficeChairs. Total 23 comentarios. Karma verificado 5. Sin replies pendientes. Continuar warmup hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 10 (2026-05-13) — Reddit warmup + recon replies
+
+### Quora ES cierre de sesión
+
+Publicada **1 respuesta nueva en Quora ES**:
+
+- Pregunta: "¿Qué es mejor para trabajar frente al ordenador, una silla gaming o una de oficina?"
+  - URL pregunta: https://es.quora.com/Qué-es-mejor-para-trabajar-frente-al-ordenador-una-silla-gaming-o-una-de-oficina
+  - Link destino: https://tuespaciodetrabajo.com/guias/silla-gaming-vs-ergonomica/
+  - URL respuesta: https://es.quora.com/Qué-es-mejor-para-trabajar-frente-al-ordenador-una-silla-gaming-o-una-de-oficina/answer/David-Rubio-96?ch=10&oid=1477743907438072&share=1b6cd5a7&srid=5DCHRt&target_type=answer
+
+Decisión permanente de canal: **Habitissimo descartado** por el usuario. No proponerlo de nuevo salvo que el usuario lo reactive explícitamente.
+
+Karma verificado antes/después de comentar:
+- link_karma=1
+- comment_karma=4
+- total_karma=5
+- Cuenta verificada, no suspendida.
+
+Decisión: NO meter links en Reddit todavía. Umbral operativo sigue siendo ≥50 total karma.
+
+### Comentario posteado (SIN link)
+
+- r/OfficeChairs 1tbtei9 → "Is the seat too deep for me?"
+  - URL: https://www.reddit.com/r/OfficeChairs/comments/1tbtei9/comment/olj9hwa/
+  - Enfoque: seat depth 48 cm para usuario 172 cm, presión detrás de rodillas, piernas dormidas, test 2-3 dedos, recomendar devolución si no hay ajuste real de profundidad.
+
+### Recon replies
+
+Revisados hilos recientes con conversación:
+- 1tbtei9: comentario visible, score 1, 0 replies.
+- 1ta3aff: score 2, 0 replies.
+- 1t9kj2e: conversación con lyroux ya contestada con follow-up `ol739ma`; 0 replies nuevas.
+- 1t9l8px: conversación con SecondTriggerEvent ya contestada con follow-up `ol5mmpg`; 0 replies nuevas.
+- 1t7y4h8: conversación con twobit46 ya cerrada con follow-up `ol5l2h9`; 0 replies nuevas.
+- 1t9o07m, 1t857w7, 1t81y19: 0 replies.
+
+**Total comentarios cuenta:** 22 anteriores + 1 Día 10 = **23**
+Próxima verificación karma: vie 15 may o sáb 16 may. No publicar más Quora esta semana salvo oportunidad excepcional no comercial.
 
 ## Update Día 9 (2026-05-12) — Reddit warmup
 

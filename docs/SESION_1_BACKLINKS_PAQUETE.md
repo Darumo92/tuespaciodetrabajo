@@ -235,6 +235,7 @@ Y un apunte que parece de coña pero no lo es: la mejor silla para estar mucho t
 [x] 2026-05-11 · Pregunta #7 escritorios elevables    · URL respuesta: https://es.quora.com/Para-que-sirven-los-escritorios-elevables/answer/David-Rubio-96?ch=10&oid=1477743907303737&share=716c1e78&srid=5DCHRt&target_type=answer · Upvotes 7d: ___
 [x] 2026-05-11 · Pregunta #8 12 horas sentado         · URL respuesta: https://es.quora.com/Qué-hacer-cuando-paso-mucho-tiempo-solo-en-un-lugar-sentado-Duro-practiacamente-12-hora-trabajando-sentado-que-me-recomiendan-para-mi-bienestar/answer/David-Rubio-96?ch=10&oid=1477743907303797&share=36be86c1&srid=5DCHRt&target_type=answer · Upvotes 7d: ___
 [x] 2026-05-11 · Pregunta #9 cuello de texto          · URL respuesta: https://es.quora.com/Qué-es-el-sindrome-de-cuello-de-texto-Qué-causa-dolor-en-el-cuello/answer/David-Rubio-96?ch=10&oid=1477743907303860&share=11a22de6&srid=5DCHRt&target_type=answer · Upvotes 7d: ___
+[x] 2026-05-13 · Pregunta #10 gaming vs oficina       · URL respuesta: https://es.quora.com/Qué-es-mejor-para-trabajar-frente-al-ordenador-una-silla-gaming-o-una-de-oficina/answer/David-Rubio-96?ch=10&oid=1477743907438072&share=1b6cd5a7&srid=5DCHRt&target_type=answer · Upvotes 7d: ___
 ```
 
 Shortlinks Quora enviados por usuario 2026-05-11:

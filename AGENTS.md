@@ -511,3 +511,12 @@ Esta sección documenta elementos del entorno Claude Code que no tienen equivale
 4. Si la tarea toca artículos: respetar el checklist obligatorio + las 12 reglas anti-error + el pre-publish checklist.
 5. Antes de publicar copy público (artículo, comentario foro, Reddit, Quora, página): aplicar humanización manualmente desde `.seo-engine/templates/humanization-guide.md`.
 6. Persistir nuevo contexto (planes, estado de sesión, decisiones) en `docs/agent-context/` y registrar en `INDEX.md`. Nunca en memoria local del agente.
+
+
+<claude-mem-context>
+# Memory Context
+
+# [tuespaciodetrabajo] recent context, 2026-05-11 10:51pm GMT+2
+
+No previous sessions found.
+</claude-mem-context>

@@ -4,11 +4,15 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (Mié 13 may 2026)
+## Próxima acción (Jue 14 may 2026)
 
-**Bloque D: solicitar indexación manual GSC top 8 URLs**
+**Bloque C: backlinks Tier 1 — SESION_2 Reddit Día 6+**
 
-GSC → Inspección URL → Solicitar indexación. Ya están refactorizadas las 3 piezas con densidad afiliada alta:
+Bloque D completado el mié 13 may: usuario confirmó "indexación solicitada" para las 8 URLs prioritarias en GSC.
+
+Siguiente paso: retomar backlinks Tier 1. Revisar `docs/PLAN_BACKLINKS_TIER1.md`, `docs/SESION_2_BACKLINKS_PAQUETE.md` y `docs/agent-context/project_backlinks_session_state.md`. Empezar por karma check Reddit y selección de hilos vivos antes de publicar respuestas.
+
+Las 3 piezas con densidad afiliada alta ya están refactorizadas:
 
 - Ratón vertical: 7.40 → 3.43/1000w
 - Teclado ergonómico: 6.19 → 2.62/1000w
@@ -25,8 +29,8 @@ GSC → Inspección URL → Solicitar indexación. Ya están refactorizadas las 
 | Dom 10 may | Sin pushes | — |
 | Lun 11 may | Artículo nuevo #29: trabajar-desde-casa-calor | ✅ publicado (2868w, info ambiente) |
 | Mar 12 may | Bloque B pieza 3: refactor lámpara LED | ✅ 6.29 → 3.08/1000w |
-| Mié 13 may | **Bloque D: solicitar indexación manual GSC top 8 URLs** ← SIGUIENTE | Pendiente |
-| Jue 14 may | Bloque C backlinks Tier 1 | Pendiente |
+| Mié 13 may | Bloque D: solicitar indexación manual GSC top 8 URLs | ✅ solicitado por usuario |
+| Jue 14 may | **Bloque C backlinks Tier 1** ← SIGUIENTE | Pendiente |
 
 ## Top 8 URLs para Bloque D (mié 13 may)
 
@@ -50,7 +54,7 @@ GSC → Inspección URL → Solicitar indexación:
 - [x] Bloque B pieza 2: teclado ergonómico (commit 671d6c3, 08 may, 6.19 → 2.62/1000w)
 - [x] Bloque B pieza 3: lámpara LED (commit pendiente, 12 may, 6.29 → 3.08/1000w)
 - [x] Bloque C SESION_1 Quora: 5 respuestas publicadas 2026-04-30 (confirmado dom 10 may). Siguiente: SESION_2 Reddit Día 6+ (karma check)
-- [ ] Bloque D: solicitud indexación manual GSC top 8
+- [x] Bloque D: solicitud indexación manual GSC top 8 (confirmado por usuario 2026-05-13)
 
 ## Resumen pieza 2 (vie 08 may)
 

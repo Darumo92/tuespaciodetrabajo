@@ -158,6 +158,8 @@ Priorizar DoFollow + autoridad alta + relevancia España.
 
 ### Habitissimo (preguntas.habitissimo.es)
 
+> Descartado por decisión del usuario el 2026-05-13. No proponer este canal de nuevo salvo reactivación explícita.
+
 - Buscar preguntas activas con keywords `despacho`, `oficina en casa`, `teletrabajo`, `silla`, `iluminación despacho`.
 - Ejemplo encontrado: https://preguntas.habitissimo.es/pregunta/ayuda-con-decoracion-y-distribucion-de-un-despacho-en-casa
 - Habitissimo es portal de profesionales de reformas, pero las preguntas las ven usuarios reales y los enlaces de respuestas largas suelen ser DoFollow tras moderación.

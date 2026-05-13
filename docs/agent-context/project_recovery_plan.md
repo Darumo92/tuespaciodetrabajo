@@ -39,9 +39,9 @@ Acción: añadir 600-800w guía compra/ergonomía pre-tabla; quitar 2-3 botones 
 Continuar plan en `docs/PLAN_BACKLINKS_TIER1.md`. Estado: about.me ✅, Dev.to ✅, pendiente 5 respuestas Quora Bloque B (sesión 2026-04-29 a medias). Mínimo 2 sesiones/semana durante recovery.
 
 ### Bloque D — GSC indexación manual (post-deploy +24h)
-Solicitar indexación manual para top 8 URLs. NO antes de aplicar Bloque B en las 3 piezas afectadas — sería bandera roja repetir sin cambios.
+✅ Completado 2026-05-13. Usuario confirmó solicitud manual de indexación en GSC para las 8 URLs prioritarias, después de aplicar Bloque B en las 3 piezas afectadas.
 
-URLs prioritarias: silla-calidad-precio, monitor, escritorio-elevable, ergonomia-postura, dolor-espalda, altura-escritorio, raton-vertical, homepage.
+URLs solicitadas: silla-calidad-precio, monitor, escritorio-elevable, ergonomia-postura, dolor-espalda, lámpara LED, raton-vertical, teclado-ergonomico.
 
 ### Bloque E — No tocar
 Sitemap, robots.txt, _redirects, schema, headers, CSP. No añadir actualizadoEn en bulk.

@@ -359,3 +359,21 @@
 **Files:** src/content/articulos/mejor-lampara-escritorio-led.mdx, docs/agent-context/project_recovery_session_state.md, docs/agent-context/project_eeat_recovery_plan.md
 **Summary:** Refactor para diluir densidad afiliada en una de las 3 comparativas prioritarias del recovery. Añadido bloque educativo pre-ComparisonTable sobre lux/lúmenes, 500 lux como referencia de trabajo con pantalla, INSST/RD 486/1997, temperatura 4000-5000 K, CRI ≥80, parpadeo/PWM y casos donde no comprar lámpara nueva. Eliminados 7 AffiliateButton sueltos tras productos y reubicados 5 CTAs al cierre. Resultado: 13 enlaces /dp/ sobre 4224 palabras = 3.08 afiliados/1000w (objetivo ≤5). Build OK. Próxima acción: Bloque D, solicitar indexación manual GSC top 8 URLs.
 **Triggered by:** user ("vamos con el plan de hoy")
+
+## 2026-05-13 12:00
+**Action:** Recovery Bloque D completado — indexación manual GSC top 8
+**Files:** docs/agent-context/project_recovery_session_state.md, docs/agent-context/project_recovery_plan.md
+**Summary:** Usuario confirmó que solicitó indexación manual en Google Search Console para las 8 URLs prioritarias del recovery: silla calidad-precio, monitor, escritorio elevable, ergonomía postura, dolor espalda, lámpara LED, ratón vertical y teclado ergonómico. Próxima acción: Bloque C backlinks Tier 1, empezando por SESION_2 Reddit Día 6+ con karma check y selección de hilos vivos.
+**Triggered by:** user ("indexación solicitada")
+
+## 2026-05-13 13:00
+**Action:** Backlinks Tier 1 — Reddit warmup sin link
+**Files:** docs/agent-context/project_backlinks_session_state.md, docs/SESION_2_BACKLINKS_PAQUETE.md
+**Summary:** Karma Reddit verificado en 5 total (link 1, comment 4), por debajo del umbral de 50 para enlazar. Publicado comentario sin link en r/OfficeChairs sobre seat depth 48 cm para usuario de 172 cm. Revisados hilos recientes: no hay replies pendientes. Total comentarios cuenta: 23. Próxima verificación recomendada: 15-16 may.
+**Triggered by:** user (comentario publicado en Reddit)
+
+## 2026-05-13 13:30
+**Action:** Backlinks Tier 1 — Quora ES respuesta gaming vs oficina
+**Files:** docs/agent-context/project_backlinks_session_state.md, docs/SESION_1_BACKLINKS_PAQUETE.md, docs/PLAN_BACKLINKS_TIER1.md
+**Summary:** Publicada respuesta Quora ES en pregunta "Qué es mejor para trabajar frente al ordenador, una silla gaming o una de oficina" enlazando al artículo informativo correcto `/guias/silla-gaming-vs-ergonomica/`. Habitissimo queda descartado por decisión del usuario. Recomendación operativa: no publicar más Quora esta semana salvo oportunidad excepcional no comercial.
+**Triggered by:** user (URL respuesta Quora)
