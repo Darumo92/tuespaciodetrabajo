@@ -1,9 +1,33 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 10 (2026-05-13): 1 comentario warmup Reddit sin link en r/OfficeChairs. Total 23 comentarios. Karma verificado 5. Sin replies pendientes. Continuar warmup hasta ≥50.
+description: Día 11 (2026-05-14): 1 comentario warmup Reddit sin link en r/homeoffice. Total 24 comentarios. Karma verificado 5 antes de comentar. Continuar warmup hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 11 (2026-05-14) — Reddit warmup
+
+GSC revisado antes de la sesión:
+- 2026-05-06 → 2026-05-13: 3 impresiones totales, 0 clics.
+- Todas las impresiones visibles por página corresponden a `https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/`.
+- Señal pequeña pero rompe parcialmente la racha de 0 impresiones.
+
+Karma verificado antes de comentar:
+- link_karma=1
+- comment_karma=4
+- total_karma=5
+- Cuenta verificada, no suspendida.
+
+Decisión: NO meter links en Reddit todavía. Umbral operativo sigue siendo ≥50 total karma.
+
+### Comentario posteado (SIN link)
+
+- r/homeoffice 1tcufg1 → "Office Chair Recommendations?"
+  - URL: https://www.reddit.com/r/homeoffice/comments/1tcufg1/office_chair_recommendations/olr22wk/
+  - Enfoque: recomendación de silla para home office con preferencia por reposacabezas y malla; separar respaldo de malla vs asiento de malla, priorizar lumbar ajustable, profundidad de asiento, reposabrazos bajos y headrest realmente ajustable; sugerir usados Steelcase/Herman Miller/Haworth y comprar solo con ventana de devolución.
+
+**Total comentarios cuenta:** 23 anteriores + 1 Día 11 = **24**
+Próxima verificación karma: vie 15 may o sáb 16 may. Seguir con 1 comentario SIN link si el karma sigue <50. No publicar más Quora esta semana salvo oportunidad excepcional no comercial.
 
 ## Update Día 10 (2026-05-13) — Reddit warmup + recon replies
 

@@ -156,6 +156,8 @@ Si dudas, espera al Black Friday. Suelen bajar 60-80 €.
     https://www.reddit.com/r/homeoffice/comments/1ta3aff/comment/olcse83/
 [x] 2026-05-13 · r/OfficeChairs · 1tbtei9 (seat depth 48cm at 172cm)
     https://www.reddit.com/r/OfficeChairs/comments/1tbtei9/comment/olj9hwa/
+[x] 2026-05-14 · r/homeoffice · 1tcufg1 (office chair recommendations: mesh/headrest/used market)
+    https://www.reddit.com/r/homeoffice/comments/1tcufg1/office_chair_recommendations/olr22wk/
 ```
 
 ### Bloque A con link (karma ≥50)
