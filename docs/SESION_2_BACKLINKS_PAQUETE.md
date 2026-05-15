@@ -156,6 +156,12 @@ Si dudas, espera al Black Friday. Suelen bajar 60-80 €.
     https://www.reddit.com/r/homeoffice/comments/1ta3aff/comment/olcse83/
 [x] 2026-05-13 · r/OfficeChairs · 1tbtei9 (seat depth 48cm at 172cm)
     https://www.reddit.com/r/OfficeChairs/comments/1tbtei9/comment/olj9hwa/
+[x] 2026-05-15 · r/Ergonomics · 1tdjkv4 (chronic lower body pain, chair question)
+    https://www.reddit.com/r/Ergonomics/comments/1tdjkv4/comment/olxx7ec/
+[x] 2026-05-15 · r/homeoffice · 1td87h0 (affordable monitor light bar)
+    https://www.reddit.com/r/homeoffice/comments/1td87h0/comment/oly6uzy/
+[x] 2026-05-15 · r/OfficeChairs · 1tdbcs6 (145kg heavy duty chair in Greece)
+    https://www.reddit.com/r/OfficeChairs/comments/1tdbcs6/comment/olyflal/
 ```
 
 ### Bloque A con link (karma ≥50)
