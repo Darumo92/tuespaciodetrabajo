@@ -1,5 +1,6 @@
 ---
 import StoreIcon from './StoreIcon.astro';
+import { formatAmazonLastChecked, getCachedAmazonAvailability, isAmazonProductAvailable } from '@/lib/amazon-products';
 
 interface Props {
   href: string;
@@ -24,13 +25,21 @@ const normalizedHref = tienda === 'amazon' && href.startsWith('/dp/')
 const finalHref = tienda === 'amazon' && !normalizedHref.includes('tag=')
   ? `${normalizedHref}${normalizedHref.includes('?') ? '&' : '?'}tag=tuespaciodet-21`
   : normalizedHref;
+
+const disponibilidad = tienda === 'amazon' ? getCachedAmazonAvailability(href) : null;
+const disponible = tienda === 'amazon' ? isAmazonProductAvailable(href) : null;
+const revisado = tienda === 'amazon' ? formatAmazonLastChecked(href) : null;
+const title = [disponibilidad, revisado && `Revisado: ${revisado}`].filter(Boolean).join(' · ') || undefined;
 ---
 
 <a
   href={finalHref}
-  class={`affiliate-button ${tienda !== 'default' ? tienda : ''}`}
+  class={`affiliate-button ${tienda !== 'default' ? tienda : ''} ${disponible === false ? 'affiliate-button--unavailable' : ''}`}
   target="_blank"
   rel="nofollow noopener noreferrer sponsored"
+  title={title}
+  data-amazon-available={disponible === null ? undefined : String(disponible)}
+  data-amazon-checked={revisado || undefined}
 >
   <StoreIcon tienda={tienda} size={15} />
   {label}
