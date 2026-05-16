@@ -1,30 +1,53 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 12 (2026-05-16): 3 comentarios warmup Reddit preparados. Karma=6. Moderación editorial Amazon: LG 27UP850N-W → 27UP85NP-W, FelixKing → TONFARY. Desde 2026-05-15, ritmo 3 comentarios warmup/día.
+description: Día 13 (2026-05-17): 5 comentarios + 2 replies publicados. Karma=7. Script reddit_replies.py creado.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 12 (2026-05-16) — Reddit warmup + moderación Amazon
+## Update Día 13 (2026-05-17) — Replies Reddit + script fix + replies contestadas
 
-Karma verificado: total_karma=6 (link=1, comment=5). Sin cambio desde ayer.
+Karma verificado: total_karma=7 (link=1, comment=6). +1 desde ayer.
 
-### Comentarios preparados (sin publicar aún — pendiente usuario)
+### Comentarios publicados hoy (5)
 
-1. r/OfficeChairs 1teh5ek → "Just started an office job with remote work and need recommendations for a decent ergo chair within a budget of $200-$400"
-   - Enfoque: presupuesto $200-400, 5'11"/190lbs, refurbished comercial, Staples Hyken como opción in-store, seat depth para 5'11", probar 2-3 días antes de decidir.
+1. r/Ergonomics 1tesspa → "Is posture awareness software useful or is desk setup enough?"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tesspa/is_posture_awareness_software_useful_or_is_desk/om4i7it/
+   - Enfoque: setup es 80-90%, software addresses habit not equipment, timer cada 45min, camera-based tools privacy, physio "best posture is the next one".
 
-2. r/OfficeChairs 1tej6fb → "Need help with recs for a High footrest/calfrest with my Aeron!"
-   - Enfoque: calf rest vs footrest para Aeron en 120°, LiberNovo validado, Humanscale FR300, recomendación de empujar aside para sesiones upright.
+2. r/OfficeChairs 1teh5ek → "Just started an office job with remote work and need recommendations for a decent ergo chair within a budget of $200-$400"
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1teh5ek/just_started_an_office_job_with_remote_work_and/om4si7l/
+   - Enfoque: 5'11"/190lbs sweet spot, Shioo/Sihoo paid review warning, Staples Hyken in-store pickup, used Leap V2/Think Marketplace ~$200-300, probar 2-3 días.
 
-3. r/homeoffice 1tddnb5 → "I'm really struggling to find a decent desk"
-   - Enfoque: profundidad mínimo 70cm, IKEA LINNMON/ALEX para budget, KARLY butcher block para durabilidad, FlexiSpot E7 para height-adjustable, Facebook Marketplace para commercial usado.
+3. r/OfficeChairs 1tej6fb → "Need help with recs for a High footrest/calfrest with my Aeron!"
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tej6fb/need_help_with_recs_for_a_high_footrestcalfrest/om54tjj/
+   - Enfoque: calf rest vs footrest para Aeron en 120°, LiberNovo validado por test local, Humanscale FR300, explicar sensación correcta, push aside para upright.
 
-### Reply contestada
+4. r/homeoffice 1tddnb5 → "I'm really struggling to find a decent desk"
+   - URL: https://www.reddit.com/r/homeoffice/comments/1tddnb5/im_really_struggling_to_find_a_decent_desk_pls/om5gq6s/
+   - Enfoque: preguntar presupuesto, profundidad 70cm mín ideal 75-80cm, LINNMON/ALEX budget, KARLY butcher block, FlexiSpot E7 elevable, Facebook Marketplace commercial.
 
-- r/OfficeChairs 1tdbcs6 → AlbatrossTemporary65 pregunta "So you suggesting that I should get steelcase?" a nuestro comentario olyflal. Reply publicada: refurbished route holds up better at higher weights, Leap/Haworth Very/HON Ignition, gas cylinder rated for weight, metal base, weight rating with margin.
+5. r/OfficeChairs 1tdbcs6 → reply sobre Libernovo Maxis
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tdbcs6/looking_for_a_heavy_duty_chair_145kg_320lbs_in/om5i5so/
+   - Enfoque: 180kg rating no garantiza foam durability, seat pan width check, Greece summer OK mesh, return window 30+ días, refurbished mejor pero Maxis práctico en Greece.
 
-**Total comentarios cuenta estimado:** 26 (anteriores) + 3 (pendientes) = **29 tras publicación**
+### Replies contestadas hoy (2)
+
+- r/OfficeChairs 1tdbcs6 → AlbatrossTemporary65 "So you suggesting that I should get steelcase?" → reply: refurbished route, Leap/Haworth Very/HON Ignition, gas cylinder + metal base.
+
+- r/OfficeChairs 1tdbcs6 → AlbatrossTemporary65 pregunta sobre Libernovo Maxis → reply: 180kg rating no dice nada sobre foam, seat pan width, 30+ day return window, refurbished mejor pero Maxis accesible.
+
+### Reply del usuario publicada (1)
+
+- r/OfficeChairs 1tej6fb → jachreja pregunta sobre footpad para sesiones upright → reply del usuario: push aside para upright, footpad fino si suelo duro, no over-accessorize early, give chair 2 weeks.
+
+### Script reddit_replies.py creado
+
+- `scripts/reddit_replies.py` — resuelve bug truncación RSS (antes limitaba a 120 chars)
+- Modos: `python3 scripts/reddit_replies.py [comments|replies|thread <id>]`
+- Muestra contenido COMPLETO de comentarios sin truncar
+
+**Total comentarios cuenta estimada:** 26 (anteriores) + 5 (hoy) = **31**
 
 ### Moderación editorial Amazon
 

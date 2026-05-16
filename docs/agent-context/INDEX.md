@@ -18,6 +18,7 @@ Contexto persistente del proyecto, versionado en repo (no en memoria local Claud
 - [Estado sesión backlinks activa](project_backlinks_session_state.md) — Retomar la noche 2026-04-29. About.me + Dev.to ✅. Pendiente: 5 respuestas Quora Bloque B en docs/SESION_1_BACKLINKS_PAQUETE.md
 - [Comentarios foros anti-IA](feedback_forum_comment_humanization.md) — Regla permanente: comentarios Reddit/Quora/Mediavida/Habitissimo deben pasar test humano y referenciar al OP concreto
 - [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/* desde Claude Code (RSS + UA Safari + descarga a fichero, NO pipe a intérprete)
+- [Script reddit_replies.py](../../scripts/reddit_replies.py) — Checkear replies en hilos donde hemos comentado. Modos: comments, replies, thread. Muestra contenido COMPLETO sin truncar.
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/* desde Claude Code (Exa MCP search + fetch; Mediavida bloquea TODO acceso anónimo)
 - [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método validado curl + UA Safari + about.json para leer karma de cualquier cuenta Reddit pública. Reemplaza nota errónea previa
 - [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar precio, imagen y disponibilidad de Amazon del contenido editorial MDX
