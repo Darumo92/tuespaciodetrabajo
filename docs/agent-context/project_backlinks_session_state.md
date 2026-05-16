@@ -20,9 +20,9 @@ Karma verificado: total_karma=6 (link=1, comment=5). Sin cambio desde ayer.
 3. r/homeoffice 1tddnb5 → "I'm really struggling to find a decent desk"
    - Enfoque: profundidad mínimo 70cm, IKEA LINNMON/ALEX para budget, KARLY butcher block para durabilidad, FlexiSpot E7 para height-adjustable, Facebook Marketplace para commercial usado.
 
-### Reply pendiente de contestar
+### Reply contestada
 
-- r/OfficeChairs 1tdbcs6 → AlbatrossTemporary65 pregunta "So you suggesting that I should get steelcase?" a nuestro comentario olyflal. Reply preparado (no publicado): refurbished route holds up better at higher weights, Leap/Haworth Very/HON Ignition, gas cylinder rated for weight, metal base, weight rating with margin.
+- r/OfficeChairs 1tdbcs6 → AlbatrossTemporary65 pregunta "So you suggesting that I should get steelcase?" a nuestro comentario olyflal. Reply publicada: refurbished route holds up better at higher weights, Leap/Haworth Very/HON Ignition, gas cylinder rated for weight, metal base, weight rating with margin.
 
 **Total comentarios cuenta estimado:** 26 (anteriores) + 3 (pendientes) = **29 tras publicación**
 
