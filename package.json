@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "node scripts/optimize-images.mjs && astro build && node scripts/fix-sitemap-lastmod.mjs && node scripts/update-csp-hashes.mjs",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "audit:amazon": "node scripts/audit-amazon-products.mjs",
+    "update:amazon-cache": "node scripts/update-amazon-cache.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

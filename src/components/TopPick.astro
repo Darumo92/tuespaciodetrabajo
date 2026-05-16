@@ -1,5 +1,12 @@
 ---
 import StoreIcon from './StoreIcon.astro';
+import {
+  formatAmazonLastChecked,
+  getCachedAmazonAvailability,
+  getCachedAmazonImage,
+  getCachedAmazonPrice,
+  isAmazonProductAvailable,
+} from '@/lib/amazon-products';
 
 const AMAZON_TAG = 'tuespaciodet-21';
 
@@ -28,20 +35,32 @@ const normalizedAmazon = enlaceAmazon && enlaceAmazon.startsWith('/dp/')
 const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   ? `${normalizedAmazon}${normalizedAmazon.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`
   : normalizedAmazon;
+
+const precioAmazon = getCachedAmazonPrice(enlaceAmazon, precio);
+const imagenAmazon = getCachedAmazonImage(enlaceAmazon, imagen || '');
+const disponibilidad = getCachedAmazonAvailability(enlaceAmazon);
+const disponible = isAmazonProductAvailable(enlaceAmazon);
+const revisado = formatAmazonLastChecked(enlaceAmazon);
 ---
 
 <div class="top-pick">
   <div class="top-pick-badge">🏆 {etiqueta}</div>
   <div class="top-pick-body">
-    {imagen && (
+    {imagenAmazon && (
       <div class="top-pick-img-wrap">
-        <img src={imagen} alt={nombre} width="200" height="200" class="top-pick-img" loading="lazy" decoding="async" sizes="(max-width: 540px) 180px, 200px" />
+        <img src={imagenAmazon} alt={nombre} width="200" height="200" class="top-pick-img" loading="lazy" decoding="async" sizes="(max-width: 540px) 180px, 200px" />
       </div>
     )}
     <div class="top-pick-info">
       <p class="top-pick-nombre">{nombre}</p>
       <p class="top-pick-desc">{descripcion}</p>
-      <p class="top-pick-precio">{precio}</p>
+      <p class="top-pick-precio">{precioAmazon}</p>
+      {(disponibilidad || revisado) && (
+        <p class={`top-pick-availability ${disponible === false ? 'top-pick-availability--out' : ''}`}>
+          {disponibilidad && <span>{disponibilidad}</span>}
+          {revisado && <span>Revisado: {revisado}</span>}
+        </p>
+      )}
       {amazonFinal && (
         <div class="top-pick-stores">
           <a
@@ -51,7 +70,7 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
             rel="nofollow noopener noreferrer sponsored"
           >
             <StoreIcon tienda="amazon" size={15} />
-            Ver en Amazon — {precio}
+              Ver en Amazon — {precioAmazon}
             <span class="sr-only">(se abre en nueva pestaña)</span>
           </a>
         </div>
@@ -143,6 +162,26 @@ const amazonFinal = normalizedAmazon && !normalizedAmazon.includes('tag=')
   font-variant-numeric: tabular-nums;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
+}
+
+.top-pick-availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  margin: -0.4rem 0 1rem;
+}
+
+.top-pick-availability span + span::before {
+  content: '·';
+  margin-right: 0.5rem;
+}
+
+.top-pick-availability--out {
+  color: #b91c1c;
+  font-weight: 600;
 }
 
 /* --- Single store button --- */

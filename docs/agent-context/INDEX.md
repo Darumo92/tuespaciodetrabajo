@@ -20,3 +20,5 @@ Contexto persistente del proyecto, versionado en repo (no en memoria local Claud
 - [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/* desde Claude Code (RSS + UA Safari + descarga a fichero, NO pipe a intérprete)
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/* desde Claude Code (Exa MCP search + fetch; Mediavida bloquea TODO acceso anónimo)
 - [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método validado curl + UA Safari + about.json para leer karma de cualquier cuenta Reddit pública. Reemplaza nota errónea previa
+- [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar precio, imagen y disponibilidad de Amazon del contenido editorial MDX
+- [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos no disponibles/sin precio que sí requieren revisión editorial real

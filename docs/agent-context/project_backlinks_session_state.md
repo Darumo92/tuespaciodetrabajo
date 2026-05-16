@@ -1,6 +1,6 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 11 (2026-05-14): 1 comentario warmup Reddit sin link en r/homeoffice. Total 24 comentarios. Karma verificado 5 antes de comentar. Continuar warmup hasta ≥50.
+description: Día 11 (2026-05-14): 1 comentario warmup Reddit sin link en r/homeoffice. Total 24 comentarios. Karma verificado 5 antes de comentar. Desde 2026-05-15, cambiar a 3 comentarios warmup/día hasta ≥50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
@@ -30,6 +30,32 @@ Decisión: NO meter links en Reddit todavía. Umbral operativo sigue siendo ≥5
 Próxima verificación karma: vie 15 may o sáb 16 may. Seguir con 1 comentario SIN link si el karma sigue <50. No publicar más Quora esta semana salvo oportunidad excepcional no comercial.
 
 ## Update Día 10 (2026-05-13) — Reddit warmup + recon replies
+
+## Cambio operativo 2026-05-15 — ritmo Reddit warmup
+
+El usuario confirmó que en el proyecto paralelo el mismo procedimiento funcionó mejor con **3 comentarios Reddit al día**: en ~3 semanas la cuenta llegó a 55 karma. En esta cuenta, tras una semana y ritmo 1/día, solo hay 5 karma.
+
+Nueva regla operativa para `Dear_Potato8535`:
+
+- Mientras `total_karma < 50`: preparar/publicar **3 comentarios útiles sin link al día**, idealmente en hilos distintos y subreddits alternos.
+- Mantener 0 enlaces hasta superar 50 karma.
+- Priorizar hilos recientes (≤14 días), con problema concreto y donde la respuesta pueda aportar experiencia real.
+- Si algún comentario recibe score negativo o removal, bajar temporalmente a 1/día durante 48h.
+- Seguir usando comentarios humanizados, adaptados al OP y sin tono promocional.
+
+### Comentarios publicados 2026-05-15 (3/3 sin link)
+
+- r/Ergonomics 1tdjkv4 → "Will a new Office Chair help with my chronic pain?"
+  - URL: https://www.reddit.com/r/Ergonomics/comments/1tdjkv4/comment/olxx7ec/
+  - Enfoque: dolor crónico, silla como factor parcial, seat depth, lumbar support, refurbished antes que nueva barata, recomendación de fisio/médico por dolor agudo de pierna.
+- r/homeoffice 1td87h0 → "What’s the Best Affordable Monitor Light Bar for Desk Setups?"
+  - URL: https://www.reddit.com/r/homeoffice/comments/1td87h0/comment/oly6uzy/
+  - Enfoque: light bar útil pero no compra transformadora, glare, temperatura 4000K, Xiaomi razonable, no usar como única luz.
+- r/OfficeChairs 1tdbcs6 → "Looking for a Heavy Duty chair (145kg / 320lbs) in Greece - Tailbone & Shoulder pain"
+  - URL: https://www.reddit.com/r/OfficeChairs/comments/1tdbcs6/comment/olyflal/
+  - Enfoque: no fiarse de claims "heavy duty", cushion bottoming out, armrests ajustables para muñecas, seat depth, refurbished comercial en Europa.
+
+Total comentarios cuenta estimado tras 2026-05-15: 23 anteriores + 3 = **26**.
 
 ### Quora ES cierre de sesión
 

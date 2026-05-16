@@ -1,5 +1,13 @@
 ---
 import StoreIcon from './StoreIcon.astro';
+import {
+  formatAmazonLastChecked,
+  getCachedAmazonAvailability,
+  getCachedAmazonImage,
+  getCachedAmazonPrice,
+  getCachedAmazonPriceAmount,
+  isAmazonProductAvailable,
+} from '@/lib/amazon-products';
 
 interface Producto {
   nombre: string;
@@ -29,12 +37,28 @@ const { productos, titulo } = Astro.props;
 const FALLBACK_IMAGE = '/og-default.jpg';
 const PRICE_VALID_UNTIL = `${new Date().getFullYear() + 1}-12-31`;
 
+const productosConCache = productos.map((p) => {
+  const precio = getCachedAmazonPrice(p.enlaceAmazon, p.precio);
+  const precioNumCache = getCachedAmazonPriceAmount(p.enlaceAmazon);
+  const precioNum = precioNumCache ?? Number(precioNumerico(precio) || 0);
+
+  return {
+    ...p,
+    precio,
+    precioNum,
+    imagen: getCachedAmazonImage(p.enlaceAmazon, p.imagen || ''),
+    disponibilidad: getCachedAmazonAvailability(p.enlaceAmazon),
+    disponible: isAmazonProductAvailable(p.enlaceAmazon),
+    revisado: formatAmazonLastChecked(p.enlaceAmazon),
+  };
+});
+
 function precioNumerico(precio: string): string | null {
   const match = precio.match(/(\d+[.,]?\d*)/);
   return match ? match[1].replace(',', '.') : null;
 }
 
-const productSchemas = productos.map(p => {
+const productSchemas = productosConCache.map(p => {
   const price = precioNumerico(p.precio);
   return {
     '@type': 'Product',
@@ -63,7 +87,7 @@ const productSchemas = productos.map(p => {
         priceCurrency: 'EUR',
         price,
         priceValidUntil: PRICE_VALID_UNTIL,
-        availability: 'https://schema.org/InStock',
+        availability: p.disponible === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
         ...(p.enlaceAmazon && { url: amazonHref(p.enlaceAmazon) }),
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
@@ -123,7 +147,7 @@ function starData(val: number) {
 
 {titulo && <h3 class="comp-titulo">{titulo}</h3>}
 
-{productos.length > 2 && (
+{productosConCache.length > 2 && (
   <div class="comp-sort">
     <span class="comp-sort-label">Ordenar por:</span>
     <button class="comp-sort-btn comp-sort-btn--active" data-sort="default" aria-pressed="true">Recomendado</button>
@@ -134,11 +158,11 @@ function starData(val: number) {
 )}
 
 <div class="comp-grid">
-  {productos.map((p, i) => {
+  {productosConCache.map((p, i) => {
     const stars = starData(p.valoracion);
     const amazonUrl = p.enlaceAmazon ? amazonHref(p.enlaceAmazon) : null;
     return (
-      <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={p.precio} data-price-num={parseFloat((p.precio.match(/(\d+[.,]?\d*)/) || ['0','0'])[1].replace(',', '.'))} data-rating={p.valoracion} data-original-index={i}>
+      <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={p.precio} data-price-num={p.precioNum} data-rating={p.valoracion} data-original-index={i}>
         {i === 0 && <span class="comp-badge">🏆 Mejor opción</span>}
 
         <div class="comp-header">
@@ -168,6 +192,12 @@ function starData(val: number) {
               </div>
               <span class="comp-price">{p.precio}</span>
             </div>
+            {(p.disponibilidad || p.revisado) && (
+              <p class={`comp-availability ${p.disponible === false ? 'comp-availability--out' : ''}`}>
+                {p.disponibilidad && <span>{p.disponibilidad}</span>}
+                {p.revisado && <span>Revisado: {p.revisado}</span>}
+              </p>
+            )}
             <div class={`comp-score-badge ${p.valoracion >= 4.5 ? 'comp-score-badge--excellent' : p.valoracion >= 3.5 ? 'comp-score-badge--good' : 'comp-score-badge--average'}`}>
               <span class="comp-score-value">{p.valoracion.toFixed(1)}</span>
               <span class="comp-score-label">{p.valoracion >= 4.5 ? 'Excelente' : p.valoracion >= 3.5 ? 'Muy bueno' : 'Bueno'}</span>
@@ -397,6 +427,25 @@ function starData(val: number) {
   color: var(--color-primary);
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
+}
+
+.comp-availability {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.76rem;
+  margin: 0.35rem 0 0;
+}
+
+.comp-availability span + span::before {
+  content: '·';
+  margin-right: 0.5rem;
+}
+
+.comp-availability--out {
+  color: #b91c1c;
+  font-weight: 600;
 }
 
 /* --- Description --- */
