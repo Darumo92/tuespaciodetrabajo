@@ -16,9 +16,9 @@ Resumen:
 
 ## Cola priorizada
 
-1. `mejor-monitor-trabajar-desde-casa` — revisar `LG 27UP850N-W` (`B0B9C8VV4X`). Motivo: no disponible y sin precio. Impacto medio-alto porque es una comparativa comercial de monitores y el producto aparece en tabla, análisis y recomendación final.
-2. `mejor-silla-ergonomica-calidad-precio` — revisar `FlexiSpot C7 Lite` (`B0F6WBL3M2`). Motivo: no disponible y sin precio. Impacto alto si sigue siendo una opción destacada de malla completa.
-3. `mejor-silla-oficina-menos-200-euros` — revisar `FelixKing Silla Ergonómica` (`B0D8HWL8VP`). Motivo: no disponible y sin precio. Impacto medio porque es una opción de nicho para soporte cervical.
+1. ~~`mejor-monitor-trabajar-desde-casa` — revisar `LG 27UP850N-W` (`B0B9C8VV4X`)~~ → **RESUELTO 2026-05-16**: sustituido por LG 27UP85NP-W (B0CRL6TSW8, €389, en stock)
+2. `mejor-silla-ergonomica-calidad-precio` — revisar `FlexiSpot C7 Lite` (`B0F6WBL3M2`). ~~Motivo: no disponible y sin precio~~ → **VERIFICADO 2026-05-16**: disponible a €249.99, sin cambios necesarios
+3. ~~`mejor-silla-oficina-menos-200-euros` — revisar `FelixKing Silla Ergonómica` (`B0D8HWL8VP`)~~ → **RESUELTO 2026-05-16**: sustituido por TONFARY Silla Ergonómica (B0D8K66SJ3, €179.99, en stock)
 
 ## Productos solo cache, sin revisión editorial
 

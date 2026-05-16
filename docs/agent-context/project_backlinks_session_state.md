@@ -1,11 +1,35 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 11 (2026-05-14): 1 comentario warmup Reddit sin link en r/homeoffice. Total 24 comentarios. Karma verificado 5 antes de comentar. Desde 2026-05-15, cambiar a 3 comentarios warmup/día hasta ≥50.
+description: Día 12 (2026-05-16): 3 comentarios warmup Reddit preparados. Karma=6. Moderación editorial Amazon: LG 27UP850N-W → 27UP85NP-W, FelixKing → TONFARY. Desde 2026-05-15, ritmo 3 comentarios warmup/día.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 11 (2026-05-14) — Reddit warmup
+## Update Día 12 (2026-05-16) — Reddit warmup + moderación Amazon
+
+Karma verificado: total_karma=6 (link=1, comment=5). Sin cambio desde ayer.
+
+### Comentarios preparados (sin publicar aún — pendiente usuario)
+
+1. r/OfficeChairs 1teh5ek → "Just started an office job with remote work and need recommendations for a decent ergo chair within a budget of $200-$400"
+   - Enfoque: presupuesto $200-400, 5'11"/190lbs, refurbished comercial, Staples Hyken como opción in-store, seat depth para 5'11", probar 2-3 días antes de decidir.
+
+2. r/OfficeChairs 1tej6fb → "Need help with recs for a High footrest/calfrest with my Aeron!"
+   - Enfoque: calf rest vs footrest para Aeron en 120°, LiberNovo validado, Humanscale FR300, recomendación de empujar aside para sesiones upright.
+
+3. r/homeoffice 1tddnb5 → "I'm really struggling to find a decent desk"
+   - Enfoque: profundidad mínimo 70cm, IKEA LINNMON/ALEX para budget, KARLY butcher block para durabilidad, FlexiSpot E7 para height-adjustable, Facebook Marketplace para commercial usado.
+
+**Total comentarios cuenta estimado:** 26 (anteriores) + 3 (pendientes) = **29 tras publicación**
+
+### Moderación editorial Amazon
+
+2 productos actualizados:
+- **LG 27UP850N-W** (B0B9C8VV4X, no disponible) → **LG 27UP85NP-W** (B0CRL6TSW8, €389, en stock) en mejor-monitor-trabajar-desde-casa.mdx
+- **FelixKing Silla Ergonómica** (B0D8HWL8VP, no disponible) → **TONFARY Silla Ergonómica** (B0D8K66SJ3, €179.99, en stock) en mejor-silla-oficina-menos-200-euros.mdx
+- 1 producto verificado disponible: **FlexiSpot C7 Lite** (B0F6WBL3M2, €249.99, en stock) — sin cambios necesarios
+- Archivos actualizados: 2 MDX, PRODUCTOS.md, amazon-products.json
+- Build verificado sin errores
 
 GSC revisado antes de la sesión:
 - 2026-05-06 → 2026-05-13: 3 impresiones totales, 0 clics.

@@ -83,7 +83,7 @@ Artículo informativo. Productos referenciados de otros artículos (SIHOO M18, D
 |----------|------|-----------|--------|--------|--------|
 | BenQ PD2705U 27" 4K USB-C | B096B3PBFZ | /dp/B096B3PBFZ | https://m.media-amazon.com/images/I/61Pvf1fZAgL._AC_SL300_.jpg | ~380 EUR | verificado |
 | Dell P2723QE 27" 4K USB-C | B09TY127B8 | /dp/B09TY127B8 | https://m.media-amazon.com/images/I/612mDVMoGvL._AC_SL300_.jpg | ~415 EUR | verificado |
-| LG 27UP850N-W 27" 4K USB-C | B0B9C8VV4X | /dp/B0B9C8VV4X | https://m.media-amazon.com/images/I/71dyokO-HpL._AC_SL300_.jpg | ~459 EUR | verificado |
+| LG 27UP85NP-W 27" 4K USB-C | B0CRL6TSW8 | /dp/B0CRL6TSW8 | https://m.media-amazon.com/images/I/41-m6NQd6cL._AC_SL300_.jpg | ~389 EUR | verificado (sustituye 27UP850N-W, no disponible) |
 | Samsung ViewFinity S6 S65VC 34" | B0C9YNF36R | /dp/B0C9YNF36R | https://m.media-amazon.com/images/I/61vo-JKgyjL._AC_SL300_.jpg | ~411 EUR | verificado |
 | LG 34WR55QK-B 34" UltraWide | B0DGLR66J6 | /dp/B0DGLR66J6 | https://m.media-amazon.com/images/I/71ONN9tqFdL._AC_SL300_.jpg | ~290 EUR | verificado |
 | LG 24MR400-B 24" Full HD | B0CKRXP2PG | /dp/B0CKRXP2PG | https://m.media-amazon.com/images/I/71PFeevpOnL._AC_SL300_.jpg | ~114 EUR | verificado |
@@ -151,7 +151,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Naspaluro Silla Oficina Ergonómica | B0FLXSQN3J | /dp/B0FLXSQN3J | https://m.media-amazon.com/images/I/61GTUcJNZ+L._AC_SL1500_.jpg | ~81 EUR | verificado |
 | SONGMICS OBN55BK | B07ZCJVFDJ | /dp/B07ZCJVFDJ | https://m.media-amazon.com/images/I/71vUF7tlyKS._AC_SL1500_.jpg | ~110 EUR | verificado |
 | COMHOMA Silla Ergonómica | B0F66N6N3J | /dp/B0F66N6N3J | https://m.media-amazon.com/images/I/71LJ0XGfsFL._AC_SL1500_.jpg | ~150 EUR | verificado |
-| FelixKing Silla Ergonómica | B0D8HWL8VP | /dp/B0D8HWL8VP | https://m.media-amazon.com/images/I/81GODetTd8L._SL1500_.jpg | ~172 EUR | verificado |
+| TONFARY Silla Ergonómica | B0D8K66SJ3 | /dp/B0D8K66SJ3 | https://m.media-amazon.com/images/I/51jCTR-KvQL._AC_SL300_.jpg | ~180 EUR | verificado (sustituye FelixKing, no disponible) |
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
 | SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~200 EUR | verificado |
 
