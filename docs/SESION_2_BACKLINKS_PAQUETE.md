@@ -164,6 +164,10 @@ Si dudas, espera al Black Friday. Suelen bajar 60-80 €.
     https://www.reddit.com/r/homeoffice/comments/1td87h0/comment/oly6uzy/
 [x] 2026-05-15 · r/OfficeChairs · 1tdbcs6 (145kg heavy duty chair in Greece)
     https://www.reddit.com/r/OfficeChairs/comments/1tdbcs6/comment/olyflal/
+[x] 2026-05-18 · r/homeoffice · 1tgjr0n (kneeling chair as all-day main chair)
+    https://www.reddit.com/r/homeoffice/comments/1tgjr0n/has_anybody_tried_a_chair_like_this/omhuzsi/
+[x] 2026-05-18 · r/homeoffice · 1tddnb5 (follow-up: 120x60 desk vs 120x70)
+    https://www.reddit.com/r/homeoffice/comments/1tddnb5/im_really_struggling_to_find_a_decent_desk_pls/omhvm6c/
 ```
 
 ### Bloque A con link (karma ≥50)

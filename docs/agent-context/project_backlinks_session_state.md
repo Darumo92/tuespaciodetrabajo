@@ -1,9 +1,30 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 14 (2026-05-18): 5 comentarios + 1 reply + 1 PM publicados. Karma=7. Script reddit_replies.py creado.
+description: Día 14 (2026-05-18): 6 comentarios + 2 replies + 1 PM publicados. Karma=8. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 14 tarde (2026-05-18) — 1 comentario + 1 reply añadidos
+
+Karma verificado tras primera comprobación: total_karma=8 (link=1, comment=7). Cuenta verificada, no suspendida. Mantener 0 links hasta >=50 karma.
+
+### Publicados adicionalmente hoy (2) — todos SIN link
+
+1. r/homeoffice 1tgjr0n -> "Has anybody tried a chair like this?"
+   - URL: https://www.reddit.com/r/homeoffice/comments/1tgjr0n/has_anybody_tried_a_chair_like_this/omhuzsi/
+   - Enfoque: kneeling chair como asiento secundario, no silla principal de jornada completa; alternar 30-45 min, revisar monitor/desk/seat depth antes de confiar en una silla que fuerce postura.
+
+2. r/homeoffice 1tddnb5 -> reply a Gloomy-Sugar6669 sobre pasar de mesa 40 cm a 120x60 mientras busca 120x70
+   - URL: https://www.reddit.com/r/homeoffice/comments/1tddnb5/im_really_struggling_to_find_a_decent_desk_pls/omhvm6c/
+   - Enfoque: 120x60 ya será mejora grande frente a 40 cm; recuperar profundidad con monitor arm/riser, colocar monitor al fondo, teclado a 8-10 cm del borde, seguir buscando 120x70.
+
+Plantillas preparadas pero NO visibles en RSS de la cuenta al cierre de esta actualización:
+
+- r/OfficeChairs 1tgox0f -> IKEA ALEFJALL.
+- r/StandingDesks 1tggsuk -> standing desk para piso pequeño.
+
+**Total comentarios cuenta estimada:** 36 + 2 = **38**.
 
 ## Update Día 14 (2026-05-18) — 5 comentarios + 1 reply + 1 PM
 
