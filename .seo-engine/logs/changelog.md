@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-05-18 18:00
+**Action:** Artículo #30 creado — mejor-ventilador-silencioso-oficina
+**Files:** src/content/articulos/mejor-ventilador-silencioso-oficina.mdx, public/images/articulos/mejor-ventilador-silencioso-oficina.webp, src/content/articulos/trabajar-desde-casa-calor.mdx, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, .seo-engine/data/features.yaml, PRODUCTOS.md, AGENTS.md
+**Summary:** Comparativa recovery #30 (ambiente, estacional verano). SERP top 5 con intent commercial investigation (El Independiente, elEconomista, El Corte Inglés, La Vanguardia, ventiladores.com). Ángulo propio: ventiladores silenciosos para oficina en casa y videollamadas, no guía genérica para dormir/salón. Productos verificados con Amazon Creators API: Philips Serie 2000, Dreo PolyFan, LEVOIT torre, Dreo torre, Cecotec EnergySilence 890 y Honeywell TurboForce. Se aplicó humanizer e imagen Pexels #5850340 redimensionada a 800px.
+**Triggered by:** user (vamos con el plan de hoy)
+
 ## 2026-05-11 09:20
 **Action:** Publicar artículo #29 trabajar-desde-casa-calor (cluster ambiente, estacional jun-ago) — primer artículo post-recovery indexación
 **Files:** src/content/articulos/trabajar-desde-casa-calor.mdx, public/images/articulos/trabajar-desde-casa-calor.webp, .seo-engine/data/content-queue.yaml, PRODUCTOS.md

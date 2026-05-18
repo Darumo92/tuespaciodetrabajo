@@ -36,6 +36,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | ejercicios-estiramientos-silla-oficina | ejercicios-estiramientos-silla-oficina.webp | 5899200 | kaboompics.com | https://www.pexels.com/photo/5899200/ |
 | ikea-bekant-vs-flexispot-e7 | ikea-bekant-vs-flexispot-e7.webp | 7899239 | Josh Sorenson | https://www.pexels.com/photo/7899239/ |
 | trabajar-desde-casa-calor | trabajar-desde-casa-calor.webp | 31517321 | Bingqian Li | https://www.pexels.com/photo/31517321/ |
+| mejor-ventilador-silencioso-oficina | mejor-ventilador-silencioso-oficina.webp | 5850340 | FOX ^.ᆽ.^= ∫ | https://www.pexels.com/photo/antique-fan-and-a-radio-on-a-desk-5850340/ |
 
 ---
 
@@ -143,6 +144,17 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Amazon Basics Brazo Monitor | B07DHK5DHN | /dp/B07DHK5DHN | https://m.media-amazon.com/images/I/71LoJcCSlkL._AC_SL300_.jpg | ~38 EUR | verificado |
 | ErGear Soporte Monitor Dual 32" | B0C7KQ7MX8 | /dp/B0C7KQ7MX8 | https://m.media-amazon.com/images/I/61bCfb9mO7L._AC_SL300_.jpg | ~60 EUR | verificado |
 | Ergotron LX Aluminio | B07Q8TJ2KL | /dp/B07Q8TJ2KL | https://m.media-amazon.com/images/I/71+VZmr4paL._AC_SL300_.jpg | ~199 EUR | verificado |
+
+### mejor-ventilador-silencioso-oficina
+
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| Philips Serie 2000 CX2550/00 | B0CYTL9FTD | /dp/B0CYTL9FTD | https://m.media-amazon.com/images/I/31KaAptzJSL._AC_SL300_.jpg | ~63 EUR | verificado |
+| Dreo PolyFan 23 dB | B0CSG46SSN | /dp/B0CSG46SSN | https://m.media-amazon.com/images/I/31zoNPuw9ZL._AC_SL300_.jpg | ~98 EUR | verificado |
+| LEVOIT Ventilador de Torre 20 dB | B0CTMLBB1Q | /dp/B0CTMLBB1Q | https://m.media-amazon.com/images/I/31NXjPoFBDL._AC_SL300_.jpg | ~95 EUR | verificado |
+| Dreo Ventilador de Torre 20 dB | B09MKPDJRT | /dp/B09MKPDJRT | https://m.media-amazon.com/images/I/31D9xMfdK7L._AC_SL300_.jpg | ~90 EUR | verificado |
+| Cecotec EnergySilence 890 Skyline | B092JB4Z7J | /dp/B092JB4Z7J | https://m.media-amazon.com/images/I/31CHx+eOQJL._AC_SL300_.jpg | ~35 EUR | verificado |
+| Honeywell TurboForce HT900E4 | B003KHJO6G | /dp/B003KHJO6G | https://m.media-amazon.com/images/I/4166MTYRk2L._AC_SL300_.jpg | ~29 EUR | verificado |
 
 ### mejor-silla-oficina-menos-200-euros
 

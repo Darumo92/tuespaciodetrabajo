@@ -972,7 +972,29 @@ articles:
       - mejor-monitor-trabajar-desde-casa
       - insonorizar-home-office
       - productividad-en-casa-entorno-fisico
-    internal_links_from: []
+    internal_links_from:
+      - mejor-ventilador-silencioso-oficina
+  - slug: mejor-ventilador-silencioso-oficina
+    title: "Mejor ventilador silencioso para oficina 2026"
+    path: src/content/articulos/mejor-ventilador-silencioso-oficina.mdx
+    type: comparativa
+    category: ambiente
+    primary_keyword: "ventilador silencioso oficina"
+    secondary_keywords:
+      - ventilador silencioso
+      - mejor ventilador silencioso
+      - ventilador de torre silencioso
+      - ventilador bajo consumo
+      - ventilador para oficina
+    cluster: ambiente
+    status: published
+    date: 2026-05-18
+    has_eeat_signals: true
+    internal_links_to:
+      - trabajar-desde-casa-calor
+      - fatiga-visual-pantalla
+    internal_links_from:
+      - trabajar-desde-casa-calor
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

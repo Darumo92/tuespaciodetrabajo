@@ -86,6 +86,13 @@ faqs?: [{pregunta, respuesta}]    # 3-7 por artículo, variable
 ### Afiliación
 
 - Amazon Associates ID: `tuespaciodet-21` — se añade automáticamente en `AffiliateButton.astro`, `ComparisonTable.astro` y `TopPick.astro`
+- Datos volátiles de Amazon (precio, imagen, disponibilidad, fecha de revisión) viven en `src/data/amazon-products.json` y se leen con `src/lib/amazon-products.ts`
+- Antes de crear/revisar comparativas, usar la Creators API con `npm run update:amazon-cache -- --article <slug> --limit <n>` o `npm run audit:amazon -- --article <slug> --limit <n>`
+- Para buscar candidatos de producto, usar `node scripts/amazon-lookup.mjs --search "<keyword>"` antes de pedir ASINs al usuario
+- El parseo correcto de precio en Creators API es `offersV2.listings[0].price.money.displayAmount`; no usar solo `price.displayAmount`
+- No editar artículos por pequeñas diferencias de precio, imagen o disponibilidad: lo cubre el cache. Editar MDX solo si el producto está roto, no disponible de forma grave, no corresponde o el análisis editorial queda obsoleto
+- Cadencia Amazon: mensual ejecutar `npm run audit:amazon -- --delay 2500 --retries 3` y `npm run update:amazon-cache -- --delay 2500 --retries 3`; semanal auditar muestra de 5-10 artículos/productos o productos tocados recientemente; antes de crear/revisar comparativa auditar todos sus ASINs con `--article <slug>`
+- Las incidencias editoriales reales de Amazon viven en `docs/agent-context/project_amazon_editorial_review_queue.md`; no reescribir artículos en masa, priorizar 1-2 revisiones editoriales por semana salvo bug grave
 - Nunca incluir `?tag=tuespaciodet-21` en las URLs de los artículos MDX — los componentes lo añaden solos
 - **Nunca usar links markdown a `/dp/ASIN`** en el texto de los artículos (ej: `[Producto](/dp/ASIN)`) — se resuelven como URLs de la propia web y dan 404. Para enlazar a Amazon, usar siempre `<AffiliateButton href="/dp/ASIN" tienda="amazon" texto="Ver Producto en Amazon" />`
 - **Props de AffiliateButton:** siempre usar `href` (no `enlace`), `tienda="amazon"` y `texto`. El prop se llama `href`, nunca `enlace`
@@ -138,10 +145,10 @@ La memoria local del agente solo para datos cross-proyecto del usuario (ej: idio
 - Si existe uno similar, proponer ampliar/mejorar el existente
 
 #### 2. URLs y productos Amazon reales
-- Buscar en Amazon.es los productos reales
+- Buscar primero productos reales con la Creators API (`node scripts/amazon-lookup.mjs --search "<keyword>"`)
 - Nunca inventar ASINs, URLs ni imágenes de productos
 - Si un producto no existe en Amazon.es, buscar un reemplazo equivalente
-- Pedir al usuario que confirme los nombres de producto y ASINs
+- Pedir al usuario ASINs solo si la API/cache no puede verificar productos reales o devuelve resultados insuficientes
 
 #### 3. Contenido extenso y de calidad SEO
 - Artículos largos, detallados y de calidad para indexación y posicionamiento

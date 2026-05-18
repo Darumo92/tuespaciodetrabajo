@@ -38,3 +38,11 @@ features:
     description: "Guías de prevención de fatiga visual digital y protección ocular para teletrabajadores"
     blog_refs:
       - fatiga-visual-pantalla
+
+  - id: ambiente-termico
+    name: "Ambiente térmico en home office"
+    category: ambiente
+    description: "Guías y comparativas para controlar calor, ventilación y confort térmico en oficinas en casa"
+    blog_refs:
+      - trabajar-desde-casa-calor
+      - mejor-ventilador-silencioso-oficina

@@ -26,7 +26,7 @@ Plan v2 (`docs/PLAN_v2_2026-04-12.md`) **DEPRECADO** desde semanas posteriores a
 | # | Lun | Slug | Tipo | Cluster | Razón orden |
 |---|---|---|---|---|---|
 | 29 | 11 may | trabajar-desde-casa-calor | Info | ambiente | ESTACIONAL pico jun-ago |
-| 30 | 18 may | mejor-ventilador-silencioso-oficina | Comp | ambiente | ESTACIONAL acompaña #29 |
+| 30 | 18 may | mejor-ventilador-silencioso-oficina | Comp | ambiente | ✅ publicado. ESTACIONAL acompaña #29 |
 | 31 | 25 may | mejores-auriculares-cancelacion-ruido-trabajar | Comp PILLAR | audio-video | Pillar cluster nuevo |
 | 32 | 01 jun | teletrabajo-con-ninos-en-casa | Info | productividad | ESTACIONAL fin curso 20-23 jun |
 

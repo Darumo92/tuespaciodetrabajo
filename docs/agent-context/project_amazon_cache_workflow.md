@@ -15,6 +15,7 @@ Separar contenido editorial de datos que cambian con frecuencia:
 - `scripts/amazon-api.mjs` — cliente Creators API, OAuth, parseo normalizado.
 - `scripts/update-amazon-cache.mjs` — escanea artículos, consulta ASINs y actualiza `src/data/amazon-products.json`.
 - `scripts/audit-amazon-products.mjs` — genera reporte Markdown en `reports/amazon-products/` sin modificar artículos.
+- `scripts/amazon-lookup.mjs` — busca candidatos reales por keyword o ASIN antes de pedir datos al usuario.
 - `src/lib/amazon-products.ts` — helper para extraer ASIN y leer precio, imagen, disponibilidad y fecha del cache.
 - `src/data/amazon-products.json` — cache versionado de productos usados.
 
@@ -37,6 +38,7 @@ Opciones soportadas:
 ## Reglas editoriales
 
 - Usar primero la API/cache para precio, imagen y disponibilidad.
+- Para nuevas comparativas, buscar candidatos con `node scripts/amazon-lookup.mjs --search "<keyword>"` antes de pedir ASINs al usuario.
 - No inventar ASINs, precios, imágenes, specs ni disponibilidad.
 - No pedir datos al usuario si la API puede devolverlos.
 - No editar artículos por pequeñas diferencias de precio: las cubre el cache.

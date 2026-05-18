@@ -4,13 +4,41 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (Jue 14 may 2026)
+## Próxima acción (después de Lun 18 may 2026)
 
-**Bloque C: backlinks Tier 1 — SESION_2 Reddit Día 6+**
+**Bloque C: backlinks Tier 1 o seguimiento post-publicación #30**
 
-Bloque D completado el mié 13 may: usuario confirmó "indexación solicitada" para las 8 URLs prioritarias en GSC.
+Publicado el artículo recovery #30 el lun 18 may: `mejor-ventilador-silencioso-oficina`.
 
-Siguiente paso: retomar backlinks Tier 1. Revisar `docs/PLAN_BACKLINKS_TIER1.md`, `docs/SESION_2_BACKLINKS_PAQUETE.md` y `docs/agent-context/project_backlinks_session_state.md`. Empezar por karma check Reddit y selección de hilos vivos antes de publicar respuestas.
+Siguiente paso recomendado para sesión posterior: retomar backlinks Tier 1. Revisar `docs/PLAN_BACKLINKS_TIER1.md`, `docs/SESION_2_BACKLINKS_PAQUETE.md` y `docs/agent-context/project_backlinks_session_state.md`. Empezar por karma check Reddit y selección de hilos vivos antes de publicar respuestas.
+
+Alternativa si la sesión es corta: revisar GSC/GA4 24-48h después del deploy para confirmar que sitemap/deploy y primeras señales de rastreo del #30 no tienen incidencias.
+
+Próximo artículo del calendario recovery: lun 25 may, `mejores-auriculares-cancelacion-ruido-trabajar` (comparativa pillar audio-video). No adelantar antes del 25 may salvo cambio explícito del usuario, por cadencia recovery 1/semana.
+
+## Trabajo realizado Lun 18 may 2026
+
+- Artículo #30 creado: `src/content/articulos/mejor-ventilador-silencioso-oficina.mdx`.
+- URL: `/ambiente/mejor-ventilador-silencioso-oficina/`.
+- SERP real aportada por usuario: El Independiente, elEconomista, El Corte Inglés, La Vanguardia, ventiladores.com. Intent dominante: commercial investigation/listicle.
+- Keyword Surfer aportado por usuario: `ventilador silencioso` 9900, `mejor ventilador silencioso` 260, `ventilador de torre silencioso` 1000, `ventilador silencioso para dormir` 1600, `ventilador bajo consumo` 390, `ventilador para oficina` 0.
+- Productos verificados con `node scripts/amazon-lookup.mjs` y cache API: Philips Serie 2000, Dreo PolyFan, LEVOIT torre, Dreo torre, Cecotec EnergySilence 890, Honeywell TurboForce.
+- Cache Amazon actualizado con `npm run update:amazon-cache -- --article mejor-ventilador-silencioso-oficina --delay 2500 --retries 3` (6 ASINs, 0 errores).
+- Imagen Pexels descargada tras confirmación de `PEXELS_API_KEY`: Pexels `5850340`, fotógrafo `FOX ^.ᆽ.^= ∫`, guardada como `public/images/articulos/mejor-ventilador-silencioso-oficina.webp`, redimensionada a 800x533.
+- SVG temporal eliminado y `PRODUCTOS.md` actualizado con crédito Pexels y tabla de productos.
+- `trabajar-desde-casa-calor` actualizado para enlazar al artículo #30.
+- SEO engine actualizado: `content-map`, `content-queue`, `topic-clusters`, `seo-keywords`, `features`, `changelog`.
+- `AGENTS.md` y `project_amazon_cache_workflow.md` actualizados: usar `scripts/amazon-lookup.mjs --search` antes de pedir ASINs al usuario.
+- Skills usadas: `seo` y `humanizer`; además se aplicó el flujo propio `.seo-engine/` del proyecto.
+- Build OK: `npm run build`, 47 páginas, CSP hashes actualizados.
+
+## Pendiente para seguir luego
+
+- Confirmar deploy/push final del commit de hoy.
+- En 24-48h: comprobar GSC/GA4 para `/ambiente/mejor-ventilador-silencioso-oficina/` y sitemap.
+- Retomar Bloque C backlinks Tier 1 si no hay incidencia técnica.
+- Preparar, no publicar aún, investigación del artículo del 25 may: `mejores-auriculares-cancelacion-ruido-trabajar`.
+- Mantener cadencia recovery: no publicar otro artículo antes del lun 25 may.
 
 Las 3 piezas con densidad afiliada alta ya están refactorizadas:
 
