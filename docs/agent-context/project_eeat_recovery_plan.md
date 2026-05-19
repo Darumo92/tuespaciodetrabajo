@@ -8,23 +8,39 @@ originSessionId: 526f9e83-434f-4fe7-8dcd-23c58725559b
 
 **How to apply:** Cuando el usuario diga "vamos con E-E-A-T" o "siguiente artículo del plan recovery" o "el de [slug]", retomar este plan en el siguiente artículo pendiente. Aplicar SIEMPRE el patrón de refuerzo descrito abajo. Respetar la cadencia (1-2 artículos/día) — NO hacer todos de golpe.
 
-## Cadencia (criterio corregido 2026-04-27)
+## Cadencia vigente (actualizada 2026-05-19)
 
-- **Aplicar los 15 artículos cuanto antes** — el sitio está en colapso crítico (4 indexadas, 0 impresiones). No hay rankings que proteger. Esperar = más días con veredicto "Rastreada-no-indexada"
-- **Commits separados por artículo** (no batch grande). Mensaje: `content: strengthen E-E-A-T in [slug]`. Razón: rollback granular si un artículo falla + historial git muestra patrón de "autor mejorando" no "IA en 1 commit gigante"
-- Push tras cada commit o batch final tras toda la sesión
-- Argumento "sitio inestable por churn alto" NO aplica a sitios sin tráfico/rankings. Aplica a sitios establecidos. En este caso, el cambio masivo es positivo
-- NO penalty algorítmico por editar artículos. Solo riesgo "re-evaluación temporal" — irrelevante cuando partes de 0 impresiones
+- **No aplicar todos los artículos de golpe.** Decisión del usuario 2026-05-19 tras auditoría live: trabajar en tandas pequeñas para poder medir qué ayuda a indexar.
+- **Ritmo operativo:** 1 URL prioritaria por día normal. Máximo 2-3 URLs por tanda si los cambios son mecánicos y de bajo riesgo.
+- **Commits separados por artículo.** Mensaje recomendado: `content: improve [slug]` o `content: strengthen E-E-A-T in [slug]`.
+- **Medición:** tras deploy, esperar 3-7 días y revisar GSC antes de replicar el mismo patrón en muchas URLs.
+- **Indexación manual:** solicitar solo para URLs realmente mejoradas, no en masa.
+- **Compatibilidad con el plan diario:** en días sin artículo nuevo, hacer backlinks Tier 1 + una mejora SEO editorial concreta.
 
 ## Patrón de refuerzo por artículo
 
-Aplicar estos 5 cambios siempre:
+Aplicar estos cambios según necesidad, sin forzar todos si el artículo ya los cumple:
 
 1. **Intro reescrita** con datos físicos/biográficos verificables del autor (1,80 m, 85 kg, vive en Rubí, 7-8 h sentado/día, etc.)
 2. **Bloque metodología** tras TopPick (en comparativas) o tras intro (en guías): cuántos productos probó físicamente, cuáles no, fuentes consultadas (r/teletrabajo, r/spain, valoraciones Amazon filtradas), criterios objetivos
 3. **Mención Pep (fisioterapeuta) + clínica Fisiosthetic** al menos 1 vez por artículo de salud postural. Variar entre "Pep" y "mi fisioterapeuta" para naturalidad. Datos canónicos: 300 € en 6 sesiones tras dolor lumbar post-confinamiento 2020
 4. **1-2 enlaces externos autoritativos**: Cornell Ergonomics (https://ergo.human.cornell.edu/AHTutorials/ckpttoc.html), INSST (https://www.insst.es/), CDC NIOSH, OSHA. NO enlazar a competidores
 5. **Verificar y corregir inconsistencias** entre lo que se dice en este artículo y otros artículos / `/sobre-mi/` (frecuencia uso productos, fechas, cifras)
+6. **Añadir utilidad original:** checklist de compra, límites de precio, casos donde NO comprar, tabla de decisión, mantenimiento, segunda mano o errores reales.
+7. **Bajar señal afiliada:** quitar CTAs redundantes, evitar links Amazon Markdown, usar `AffiliateButton`/`TopPick`/`ComparisonTable` con `/dp/ASIN`, precios orientativos y verificados.
+8. **Reforzar enlaces internos a artículos concretos**, especialmente bidireccionales dentro del cluster.
+
+## Errores de creación detectados y prevención en artículos nuevos
+
+- No volver a publicar en cadencia alta hasta que GSC muestre recuperación sostenida.
+- No crear comparativas que empiecen rápido con tabla de productos sin metodología ni guía de decisión.
+- No repetir estructura estándar en todos los artículos; variar intro, orden y secciones.
+- No escribir experiencias genéricas: usar datos coherentes de David Rubio (Rubí, 9 m², FlexiSpot E7, silla, monitor, Pep/Fisiosthetic cuando aplique).
+- No abusar de CTAs ni botones tras cada producto; objetivo ≤5 enlaces afiliados/1000 palabras.
+- No tratar precios Amazon como fijos; verificar con API/cache y redactar como orientativos.
+- No usar `actualizadoEn` salvo revisión real de producto/contenido.
+- No enlazar a categorías como sustituto de enlazado interno; enlazar a URLs concretas relevantes.
+- No publicar sin una sección que aporte experiencia/criterio propio difícil de copiar: metodología, pruebas, límites de compra, escenarios de uso o checklist.
 
 ## Estado de los 15 artículos en "Rastreada-no-indexada"
 

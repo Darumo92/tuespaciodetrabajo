@@ -17,7 +17,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 
 ## Estado de proyectos activos
 
-- [Calendario de publicación](project_content_calendar.md) — Mapa fecha→artículo POST-recovery. Para "vamos con el de hoy".
+- [Calendario de publicación](project_content_calendar.md) — Mapa fecha→artículo POST-recovery + plan diario de backlinks y mejoras SEO editoriales por tandas. Para "vamos con el de hoy".
 - [Plan Recovery Indexación](project_recovery_plan.md) — Estado plan tras colapso indexación 06 may. Bloques A-E.
 - [Sesión recovery handoff](project_recovery_session_state.md) — Próxima acción concreta para "vamos con lo de ayer".
 - [Plan recovery E-E-A-T](project_eeat_recovery_plan.md) — Refactor de 15 artículos "Rastreada-no-indexada".

@@ -4,9 +4,28 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (después de Lun 18 may 2026)
+## Próxima acción (después de Mar 19 may 2026)
 
-**Bloque C: backlinks Tier 1 o seguimiento post-publicación #30**
+**Bloque C: backlinks Tier 1 + mejora SEO editorial diaria en tandas pequeñas**
+
+Update 2026-05-19 noche:
+
+- Auditoría live GSC/GA4/Cloudflare completada y documentada en `seo-indexing-audit/`.
+- Diagnóstico confirmado: problema principal de calidad/indexación, no bloqueo técnico. Home indexada; internas clave rastreadas sin indexar con canonical correcta, fetch correcto y robots permitido.
+- Quick wins técnicos aplicados y commiteados:
+  - `4e65285 fix: improve category indexability signals` — `/ambiente/` vuelve al sitemap y `/audio-video/` queda oculto de navegación/home/footer/búsqueda mientras está vacío/noindex.
+  - `4ffd007 fix: mark direct amazon links as sponsored` — enlaces Amazon directos del artículo BEKANT/E7 marcados como sponsored.
+  - `e9023ac content: improve bekant flexispot comparison` — mejora editorial de `/escritorios/ikea-bekant-vs-flexispot-e7/` con `actualizadoEn` real, nota de revisión, tabla de decisión, `AffiliateButton` y checklist de segunda mano.
+- Build OK tras cambios.
+- Auditoría Amazon del artículo BEKANT/E7: 6 ASINs, 0 incidencias; informe local generado en `reports/amazon-products/audit-2026-05-19.md`.
+- Decisión del usuario: NO hacer todos los cambios de golpe. Añadir al plan diario una mejora SEO editorial por tandas pequeñas, además de backlinks y artículos nuevos cuando toque.
+
+Próximo día de trabajo recomendado:
+
+1. Hacer backlinks Tier 1 según `project_backlinks_session_state.md` (Reddit warmup sin links hasta karma >=50).
+2. Elegir 1 URL prioritaria y mejorarla con commit separado. Siguiente recomendada: `/ambiente/mejor-lampara-escritorio-led/` o `/sillas/mejor-silla-oficina-menos-200-euros/` según GSC del día.
+3. Si se trabaja una URL, aplicar patrón: metodología visible, menos afiliación redundante si existe, experiencia concreta, sección útil tipo checklist/casos donde NO comprar, enlaces internos a artículos concretos.
+4. No pedir indexación masiva; pedir solo para URL mejorada tras deploy.
 
 Update 2026-05-19:
 

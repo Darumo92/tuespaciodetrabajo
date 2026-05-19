@@ -65,3 +65,18 @@ Sitemap, robots.txt, _redirects, schema, headers, CSP. No añadir actualizadoEn 
 - Densidad afiliada ≤5/1000w en comparativas nuevas.
 - No solicitar indexación masiva en GSC sin haber refactorizado primero.
 - Subir cadencia solo si hay señales de recovery.
+- Decisión 2026-05-19: no hacer refactors editoriales masivos. Aplicar mejoras por tandas pequeñas (1 URL prioritaria por día normal, máximo 2-3 si son cambios mecánicos), medir en GSC 3-7 días y mantener commits separados.
+- En días sin artículo nuevo: combinar backlinks Tier 1 con una mejora SEO editorial concreta en una URL prioritaria.
+
+## Criterio editorial vigente tras auditoría live 2026-05-19
+
+La auditoría live confirmó que el problema principal no es técnico: home indexada, internas rastreadas con `INDEXING_ALLOWED`, robots permitido, fetch correcto y canonical correcta, pero varias internas siguen en `Rastreada: actualmente sin indexar`.
+
+Por tanto, las mejoras deben centrarse en calidad percibida y utilidad:
+
+- Añadir metodología clara en comparativas: productos probados, no probados, fuentes y criterios.
+- Reducir señales thin-affiliate: menos CTAs redundantes, más guía de decisión antes de tablas, precios orientativos.
+- Añadir experiencia personal concreta y coherente con la persona del autor.
+- Añadir secciones útiles no copiables: checklist de compra, límites de precio, casos donde NO comprar, comparativas de uso real.
+- Reforzar enlazado interno bidireccional hacia artículos concretos del cluster.
+- Evitar `actualizadoEn` en bulk; solo usarlo si hay revisión real verificable de contenido/productos.

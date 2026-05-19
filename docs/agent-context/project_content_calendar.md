@@ -79,4 +79,28 @@ Plan v2 (`docs/PLAN_v2_2026-04-12.md`) **DEPRECADO** desde semanas posteriores a
 - `fecha:` frontmatter = fecha real del commit. Verificar pre-publicación.
 - Densidad afiliada ≤5 affiliates/1000w en comparativas.
 - Si "vamos con el de hoy": buscar fecha en tabla → leer `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md` para detalles → seguir SEO engine workflow de `docs/agent-context/reference_seo_workflows.md`.
-- Si el día no tiene artículo: proponer Bloque B (diluir afiliados top 3), Bloque C (backlinks Tier 1), o mantenimiento — NO adelantar siguiente artículo.
+- Si el día no tiene artículo: hacer **backlinks Tier 1 + una mejora SEO editorial pequeña** de una URL prioritaria, o mantenimiento — NO adelantar siguiente artículo.
+
+## Plan diario añadido 2026-05-19
+
+Además de backlinks y de los artículos nuevos cuando toque calendario:
+
+- Cada día de trabajo SEO elegir **máximo 1 URL prioritaria** en `Rastreada: actualmente sin indexar` y aplicar una mejora editorial concreta.
+- Trabajar en **tandas pequeñas**: 1 URL por día normal; máximo 2-3 URLs por tanda si son cambios muy mecánicos y de bajo riesgo.
+- No hacer reescrituras masivas de 10-15 artículos en una misma sesión. Si todo cambia a la vez, no se podrá atribuir qué ayudó a indexar.
+- Después de cada URL mejorada: build, commit separado y anotar qué cambió.
+- Solicitar indexación manual solo para URLs con mejora sustancial, no en masa.
+- Esperar 3-7 días para observar GSC antes de repetir el mismo patrón en muchas URLs.
+
+### Errores detectados en la creación de artículos que NO debemos repetir
+
+- Publicar demasiado rápido en un sitio nuevo: la cadencia alta de abril pareció señal de contenido generado en masa.
+- Comparativas demasiado afiliadas: muchas llamadas a Amazon y poca utilidad previa a la tabla.
+- Fechas incoherentes o antedatadas: `fecha` debe ser siempre la fecha real del commit.
+- Poca diferenciación entre artículos: intros, estructura y pros/contras demasiado parecidos.
+- Experiencia personal insuficiente o genérica: cada artículo debe incluir señales concretas, coherentes con David Rubio y su setup.
+- Falta de metodología visible: explicar qué se ha probado, qué no, qué fuentes se han usado y cómo se decidió.
+- Recomendaciones sin contexto de usuario: cada producto debe decir para quién sí y para quién no.
+- Enlaces internos débiles: enlazar a artículos concretos relacionados, no a categorías sueltas.
+- Precios y disponibilidad tratados como fijos: usar precios orientativos, verificar Amazon y no prometer importes exactos.
+- URLs Amazon directas en Markdown o con `?tag=` manual: usar `AffiliateButton`, `TopPick` o `ComparisonTable` con `/dp/ASIN`.
