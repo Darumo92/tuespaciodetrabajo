@@ -8,6 +8,16 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 
 **Bloque C: backlinks Tier 1 o seguimiento post-publicación #30**
 
+Update 2026-05-19:
+
+- GSC URL Inspection para `https://tuespaciodetrabajo.com/ambiente/mejor-ventilador-silencioso-oficina/`: `Google no reconoce esta URL`.
+- La URL sí está publicada y carga correctamente.
+- La URL sí aparece en `https://tuespaciodetrabajo.com/sitemap-0.xml` con `lastmod` 2026-05-18.
+- GSC muestra `sitemap-index.xml` último envío/descarga 2026-04-27 y `sitemap-0.xml` última descarga 2026-04-26; el sitemap live tiene `lastmod` 2026-05-19.
+- Intento de reenviar sitemap por MCP/API falló con `403 Insufficient Permission`. Acción manual recomendada: en Search Console, reenviar `https://tuespaciodetrabajo.com/sitemap-index.xml` y solicitar inspección/indexación de la URL #30 si procede.
+- GSC 2026-05-06→2026-05-18: 1 impresión visible (`postura teletrabajo`, `/guias/ergonomia-teletrabajo-postura-correcta/`, posición 88, 2026-05-13).
+- GA4 2026-05-18→hoy: sin filas para el sitio ni para la URL #30 en la consulta realizada.
+
 Publicado el artículo recovery #30 el lun 18 may: `mejor-ventilador-silencioso-oficina`.
 
 Siguiente paso recomendado para sesión posterior: retomar backlinks Tier 1. Revisar `docs/PLAN_BACKLINKS_TIER1.md`, `docs/SESION_2_BACKLINKS_PAQUETE.md` y `docs/agent-context/project_backlinks_session_state.md`. Empezar por karma check Reddit y selección de hilos vivos antes de publicar respuestas.
