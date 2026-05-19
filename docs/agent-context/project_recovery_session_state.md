@@ -19,13 +19,15 @@ Update 2026-05-19 noche:
 - Build OK tras cambios.
 - Auditoría Amazon del artículo BEKANT/E7: 6 ASINs, 0 incidencias; informe local generado en `reports/amazon-products/audit-2026-05-19.md`.
 - Decisión del usuario: NO hacer todos los cambios de golpe. Añadir al plan diario una mejora SEO editorial por tandas pequeñas, además de backlinks y artículos nuevos cuando toque.
+- Deploy confirmado por el usuario y solicitud manual de indexación enviada en GSC para `https://tuespaciodetrabajo.com/escritorios/ikea-bekant-vs-flexispot-e7/`.
 
 Próximo día de trabajo recomendado:
 
 1. Hacer backlinks Tier 1 según `project_backlinks_session_state.md` (Reddit warmup sin links hasta karma >=50).
-2. Elegir 1 URL prioritaria y mejorarla con commit separado. Siguiente recomendada: `/ambiente/mejor-lampara-escritorio-led/` o `/sillas/mejor-silla-oficina-menos-200-euros/` según GSC del día.
-3. Si se trabaja una URL, aplicar patrón: metodología visible, menos afiliación redundante si existe, experiencia concreta, sección útil tipo checklist/casos donde NO comprar, enlaces internos a artículos concretos.
-4. No pedir indexación masiva; pedir solo para URL mejorada tras deploy.
+2. Revisar en 3-7 días el estado GSC de `/escritorios/ikea-bekant-vs-flexispot-e7/` tras la solicitud manual. No repetir solicitud si no hay cambios nuevos.
+3. Elegir 1 URL prioritaria y mejorarla con commit separado. Siguiente recomendada: `/ambiente/mejor-lampara-escritorio-led/` o `/sillas/mejor-silla-oficina-menos-200-euros/` según GSC del día.
+4. Si se trabaja una URL, aplicar patrón: metodología visible, menos afiliación redundante si existe, experiencia concreta, sección útil tipo checklist/casos donde NO comprar, enlaces internos a artículos concretos.
+5. No pedir indexación masiva; pedir solo para URL mejorada tras deploy.
 
 Update 2026-05-19:
 
