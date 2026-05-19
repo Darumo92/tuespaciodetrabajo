@@ -31,11 +31,14 @@ Thumbs.db
 # IndexNow
 .indexnow-state.json
 
-# Claude Code
+# Claude Code / Opencode
 .claude/*
 !.claude/settings.json
 .superpowers/
 .agents/
+
+# claude-environment skill copies (reproducible via setup.sh)
+claude-environment/skills/
 
 # Python
 __pycache__/

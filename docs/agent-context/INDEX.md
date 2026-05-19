@@ -1,25 +1,41 @@
 # Agent Context Index
 
-Contexto persistente del proyecto, versionado en repo (no en memoria local Claude). Cargar al inicio de cada sesión. Actualizar aquí cualquier estado/plan/persona/feedback que deba sobrevivir entre sesiones y máquinas.
+Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesión los archivos relevantes a la tarea.
 
-## Archivos
+---
 
+## Referencias (workflows y reglas — cargar según tarea)
 
-- [Usar todos los agentes y skills](feedback_use_all_tools.md) — El usuario quiere que use todos los agentes, plugins y skills sin pedir permiso cada vez
-- [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Configuracion versionada para usar MCPs de Cloudflare, Google Analytics y Search Console en Claude Code y Codex CLI
-- [Usar MCP antes de pedir datos](feedback_use_mcp_analytics_before_asking.md) — Para SEO, trafico, indexacion y prioridades, consultar primero GSC/GA4/Cloudflare via MCP
-- [Calendario de publicación Recovery](project_content_calendar.md) — Mapa fecha→artículo POST-recovery (cadencia rebajada). Reemplaza Plan v2. Para "vamos con el de hoy"
-- [Plan Recovery Indexación activo](project_recovery_plan.md) — Estado plan tras colapso indexación 06 may. Bloques A-E. Para SEO/GSC/indexación
-- [Sesión recovery handoff](project_recovery_session_state.md) — Próxima acción concreta: jue 07 may refactor ratón vertical. Para "vamos con lo de ayer" / "seguimos con recovery"
-- [Plan v2 DEPRECADO](reference_plan_v2.md) — docs/PLAN_v2_2026-04-12.md OBSOLETO desde 06 may. Cadencia 3/sem causó flag HCU. Solo histórico
-- [Persona del autor](project_author_persona.md) — Datos canónicos David Rubio (vive en Rubí, altura/peso/setup/fisio) para coherencia E-E-A-T entre artículos
-- [Plan recovery E-E-A-T](project_eeat_recovery_plan.md) — Estado del refactor de los 15 artículos "Rastreada-no-indexada" en GSC. Patrón refuerzo + orden 14 días
-- [Plan backlinks Tier 1 pendiente](project_backlinks_plan.md) — Cuando el usuario diga "vamos con el plan de backlinks", ejecutar plan adquisición Tier 1 (Reddit, foros ES, Quora, directorios, HARO)
-- [Estado sesión backlinks activa](project_backlinks_session_state.md) — Retomar la noche 2026-04-29. About.me + Dev.to ✅. Pendiente: 5 respuestas Quora Bloque B en docs/SESION_1_BACKLINKS_PAQUETE.md
-- [Comentarios foros anti-IA](feedback_forum_comment_humanization.md) — Regla permanente: comentarios Reddit/Quora/Mediavida/Habitissimo deben pasar test humano y referenciar al OP concreto
-- [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/* desde Claude Code (RSS + UA Safari + descarga a fichero, NO pipe a intérprete)
-- [Script reddit_replies.py](../../scripts/reddit_replies.py) — Checkear replies en hilos donde hemos comentado. Modos: comments, replies, thread. Muestra contenido COMPLETO sin truncar.
-- [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/* desde Claude Code (Exa MCP search + fetch; Mediavida bloquea TODO acceso anónimo)
-- [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método validado curl + UA Safari + about.json para leer karma de cualquier cuenta Reddit pública. Reemplaza nota errónea previa
-- [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar precio, imagen y disponibilidad de Amazon del contenido editorial MDX
-- [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos no disponibles/sin precio que sí requieren revisión editorial real
+- [SEO Workflows](reference_seo_workflows.md) — Blog Writing, Audit, Evaluate, Topic Cluster, Feature, Data Import workflows completos. **Cargar para cualquier tarea de contenido/SEO.**
+- [Article Checklists](reference_article_checklists.md) — Checklist obligatorio, 12 reglas anti-error, pre-publish checklist, humanización. **Cargar al crear/revisar artículos.**
+- [Amazon Rules](reference_amazon_rules.md) — Afiliación, comandos API, cadencia, reglas estrictas, imágenes. **Cargar al trabajar con productos/comparativas.**
+- [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Config para usar MCPs de Cloudflare, GA y GSC.
+- [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/*.
+- [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/*.
+- [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método curl + UA Safari para leer karma Reddit.
+- [Plan v2 DEPRECADO](reference_plan_v2.md) — OBSOLETO desde 06 may. Solo histórico.
+
+## Estado de proyectos activos
+
+- [Calendario de publicación](project_content_calendar.md) — Mapa fecha→artículo POST-recovery. Para "vamos con el de hoy".
+- [Plan Recovery Indexación](project_recovery_plan.md) — Estado plan tras colapso indexación 06 may. Bloques A-E.
+- [Sesión recovery handoff](project_recovery_session_state.md) — Próxima acción concreta para "vamos con lo de ayer".
+- [Plan recovery E-E-A-T](project_eeat_recovery_plan.md) — Refactor de 15 artículos "Rastreada-no-indexada".
+- [Plan backlinks Tier 1](project_backlinks_plan.md) — Para "vamos con el plan de backlinks".
+- [Estado sesión backlinks](project_backlinks_session_state.md) — Retomar backlinks. About.me + Dev.to done. Pendiente: Quora.
+- [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar datos volátiles de Amazon del MDX.
+- [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos que requieren revisión editorial.
+
+## Persona y coherencia
+
+- [Persona del autor](project_author_persona.md) — Datos canónicos David Rubio para coherencia E-E-A-T.
+
+## Feedback permanente (reglas del usuario)
+
+- [Usar todos los agentes y skills](feedback_use_all_tools.md) — Usar todos los agentes, plugins y skills sin pedir permiso.
+- [Usar MCP antes de pedir datos](feedback_use_mcp_analytics_before_asking.md) — Para SEO/tráfico/indexación, consultar primero GSC/GA4/Cloudflare via MCP.
+- [Comentarios foros anti-IA](feedback_forum_comment_humanization.md) — Comentarios Reddit/Quora/Mediavida deben pasar test humano y referenciar al OP.
+
+## Scripts útiles
+
+- [Script reddit_replies.py](../../scripts/reddit_replies.py) — Checkear replies en hilos donde hemos comentado.

@@ -78,5 +78,5 @@ Plan v2 (`docs/PLAN_v2_2026-04-12.md`) **DEPRECADO** desde semanas posteriores a
 - Nunca fin de semana.
 - `fecha:` frontmatter = fecha real del commit. Verificar pre-publicación.
 - Densidad afiliada ≤5 affiliates/1000w en comparativas.
-- Si "vamos con el de hoy": buscar fecha en tabla → leer `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md` para detalles → seguir SEO engine workflow de CLAUDE.md.
+- Si "vamos con el de hoy": buscar fecha en tabla → leer `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md` para detalles → seguir SEO engine workflow de `docs/agent-context/reference_seo_workflows.md`.
 - Si el día no tiene artículo: proponer Bloque B (diluir afiliados top 3), Bloque C (backlinks Tier 1), o mantenimiento — NO adelantar siguiente artículo.
