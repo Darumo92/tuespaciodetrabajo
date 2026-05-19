@@ -49,7 +49,6 @@ export default defineConfig({
         !page.includes('/buscar/') &&
         !page.includes('/tags') &&
         !page.includes('/actualizaciones/') &&
-        page !== 'https://tuespaciodetrabajo.com/ambiente/' &&
         page !== 'https://tuespaciodetrabajo.com/audio-video/',
       serialize(item) {
         const lastmod = dateMap.get(item.url);
