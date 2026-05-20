@@ -6,6 +6,20 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
 ## Próxima acción (después de Mar 19 may 2026)
 
+Update 2026-05-20:
+
+- GSC revisado antes de tocar contenido:
+  - 2026-05-06→2026-05-19: 1 impresión total (`postura teletrabajo`, `/guias/ergonomia-teletrabajo-postura-correcta/`, posición 88, 2026-05-13).
+  - `/ambiente/mejor-lampara-escritorio-led/`: `Rastreada: actualmente sin indexar`, canonical correcta, robots permitido, fetch OK, último rastreo 2026-05-13.
+  - `/sillas/mejor-silla-oficina-menos-200-euros/`: `Google no reconoce esta URL`.
+- GA4 2026-05-06→2026-05-19: 10 filas, 0 tráfico relevante para la URL de silla barata.
+- Mejora editorial aplicada a `/sillas/mejor-silla-oficina-menos-200-euros/`:
+  - Añadida metodología visible antes de la tabla: criterios de selección, límites del rango <200 EUR, experiencia directa vs análisis por fichas/reseñas, y casos donde no conviene comprar una silla barata.
+  - Añadido `actualizadoEn: 2026-05-20` por revisión real.
+  - Corregida coherencia persona: despacho `8 m²` → `9 m²` en Rubí.
+- Próximo paso tras deploy: solicitar inspección/indexación manual solo para `https://tuespaciodetrabajo.com/sillas/mejor-silla-oficina-menos-200-euros/`.
+- Mantener regla: no repetir este patrón en masa; esperar 3-7 días antes de escalar a más URLs.
+
 **Bloque C: backlinks Tier 1 + mejora SEO editorial diaria en tandas pequeñas**
 
 Update 2026-05-19 noche:
