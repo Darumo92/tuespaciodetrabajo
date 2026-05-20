@@ -5,6 +5,28 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update Día 16 (2026-05-20) — 3 comentarios publicados sin link
+
+Usuario confirma 3 comentarios publicados, todos SIN link directo a tuespaciodetrabajo.com:
+
+1. r/OfficeChairs 1tif121 -> "Any good ergo Chairs that lean forward?"
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tif121/comment/omu9m1x/
+   - Enfoque: revisar con cautela Lavenne R9 por pricing de lanzamiento (`$10 deposit`, 45-48% off, VIP price), aunque el forward tilt 110° encaja con ilustración/animación. Recomienda esperar reviews independientes o mirar Steelcase/Haworth/Humanscale refurbished.
+
+2. r/OfficeChairs 1tic986 -> "Need some buying guidance"
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tic986/comment/omujo62/
+   - Enfoque: usuario en Grecia, 1.83 m/85 kg, 12 h/día, budget 500-750 EUR. Separar silla de trabajo y footrest; priorizar refurbished EU con returns o probar Dromeas localmente; no buscar una silla para trabajar y tumbarse a la vez.
+
+3. r/Ergonomics 1thojng -> "Why is everyone getting a desk shelf to raise the monitor?"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1thojng/comment/omv2zdv/
+   - Enfoque: OP mide 160 cm y usa varifocales; validar que un desk shelf puede ser estética más que ergonomía si eleva demasiado el monitor. Sugerir monitor arm o shelf bajo solo si realmente falta altura.
+
+Pendiente próximo día:
+
+- Verificar karma con `about.json` antes de publicar más.
+- Mantener 0 links hasta total_karma >=50.
+- Revisar si alguno de estos hilos recibió respuesta del OP antes de añadir comentarios nuevos.
+
 ## Update Día 15 mañana (2026-05-19) — revisión sin publicar
 
 ## Update Día 15 mediodía (2026-05-19) — 3 comentarios + 2 replies + PM
