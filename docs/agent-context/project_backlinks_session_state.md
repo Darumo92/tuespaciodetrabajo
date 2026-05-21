@@ -1,11 +1,28 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 15 (2026-05-19): 3 comentarios + 2 replies publicados sin link; PM jachreja contestado. Karma=10. Seguir warmup sin links hasta karma >=50.
+description: Día 17 (2026-05-21): Karma=13. 2 comentarios preparados para publicación. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 16 (2026-05-20) — 3 comentarios publicados sin link
+## Update Día 17 (2026-05-21) — 2 comentarios preparados sin link
+
+Karma verificado: total_karma=13 (link=1, comment=12). Seguir sin links hasta ≥50.
+
+2 comentarios preparados para publicación (usuario los publica manualmente):
+
+1. r/Ergonomics 1tjh8ps → "People with perfect ergonomic setups still have neck and back pain"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tjh8ps/
+   - Enfoque: tres factores que generan dolor independientes del equipo (monitor alto, variación postura, contraste de iluminación); experiencia personal con monitor 8cm arriba + screen bar.
+
+2. r/Ergonomics 1tiny0l → "Wrist pain from mouse use getting worse despite trying different mice"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tiny0l/
+   - Enfoque: posición del ratón más importante que tipo; vertical mouse cambia carga al hombro; teclado/bandeja a 90° codos; si empeora semanas → fisio antes que más compras.
+
+Pendiente próximo día:
+- Verificar karma con `about.json` antes de publicar más.
+- Mantener 0 links hasta total_karma >=50.
+- Revisar si hilos recibieron respuesta del OP.
 
 Usuario confirma 3 comentarios publicados, todos SIN link directo a tuespaciodetrabajo.com:
 

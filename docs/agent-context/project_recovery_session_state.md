@@ -4,9 +4,28 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (después de Mar 19 may 2026)
+## Próxima acción (después de Jue 21 may 2026)
 
-Update 2026-05-20:
+Update 2026-05-21:
+
+- Mejora editorial aplicada a `/ambiente/mejor-lampara-escritorio-led/`:
+  - Añadida metodología visible antes de la ComparisonTable: experiencia directa (BenQ Halo propia + Xiaomi de mi mujer), análisis por fichas de SLATOR/Aigostar/Hokone/EYOCEAN, criterios de selección, límites.
+  - Añadida tabla de decisión rápida por tipo de comprador.
+  - Añadido `actualizadoEn: 2026-05-21`.
+  - Densidad afiliada: 13 enlaces / ~4540w = 2.86/1000w.
+  - Build OK, commit e06038c.
+- GSC re-rastreo confirmado: `/sillas/mejor-silla-oficina-menos-200-euros/` rastreada 20 may, `/escritorios/ikea-bekant-vs-flexispot-e7/` rastreada 19 may. Google está revisitando activamente.
+- Todas las URLs clave siguen "Rastreada - sin indexar" (canonical correcta, fetch OK, robots permitido).
+- Reddit karma: 13 (link=1, comment=12). Seguir sin links hasta ≥50.
+- 2 comentarios Reddit preparados (1tjh8ps neck/back pain, 1tiny0l wrist pain).
+
+Próximos pasos:
+1. **Deploy + solicitar inspección manual** solo para `https://tuespaciodetrabajo.com/ambiente/mejor-lampara-escritorio-led/`.
+2. **Lun 25 may**: próximo artículo del calendario `mejores-auriculares-cancelacion-ruido-trabajar`. NO adelantar.
+3. Esperar 3-7 días antes de otra mejora editorial en masa. Revisar GSC para ver si las URLs ya mejoradas empiezan a indexarse.
+4. Seguir Reddit warmup: 1-2 comentarios/día sin link hasta karma ≥50.
+
+## Update 2026-05-20
 
 - GSC revisado antes de tocar contenido:
   - 2026-05-06→2026-05-19: 1 impresión total (`postura teletrabajo`, `/guias/ergonomia-teletrabajo-postura-correcta/`, posición 88, 2026-05-13).
