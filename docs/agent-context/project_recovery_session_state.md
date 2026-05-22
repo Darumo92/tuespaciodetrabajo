@@ -4,7 +4,29 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Próxima acción (después de Jue 21 may 2026)
+## Próxima acción (después de Vie 22 may 2026)
+
+Update 2026-05-22:
+
+- Mejora editorial aplicada a `/sillas/mejor-silla-ergonomica-calidad-precio/`:
+  - Añadida tabla de decisión rápida por perfil de comprador antes de la ComparisonTable.
+  - Añadida sección "Cuándo NO comprar una silla de esta lista" (peso >100kg, <3h/día, altura <1.55m, dolor lumbar diagnosticado, uso lounge).
+  - Añadido `actualizadoEn: 2026-05-22`.
+  - Densidad afiliada sin cambios (5 AffiliateButton + 1 TopPick + 6 ComparisonTable = 12 enlaces / ~4000w ≈ 3/1000w).
+  - Build OK, commit 04b9226, push OK.
+- GSC re-inspección confirmada: `/sillas/mejor-silla-ergonomica-calidad-precio/` sigue "Rastreada - actualmente sin indexar", canonical correcta, fetch OK, robots permitido.
+- Solicitar indexación manual en GSC para esta URL tras deploy.
+- Reddit karma: 15 (link=1, comment=14). Seguir sin links hasta ≥50.
+- 3 comentarios Reddit preparados para publicación manual:
+  1. r/Ergonomics 1tkili1 → neck pain long-term fix (0 comments, first responder)
+  2. r/OfficeChairs 1tkagyt → completely lost, 1.90m dev, chair advice
+  3. r/Ergonomics 1tj2kbk → budget mesh chairs (ASTRIDE, Sweetcrispy, etc.)
+
+Próximos pasos:
+1. **Lun 25 may**: próximo artículo del calendario `mejores-auriculares-cancelacion-ruido-trabajar`. NO adelantar.
+2. Esperar 3-7 días antes de otra mejora editorial en masa. Revisar GSC para ver si las URLs mejoradas empiezan a indexarse.
+3. Seguir Reddit warmup: 1-2 comentarios/día sin link hasta karma ≥50.
+4. Si toca mejora editorial el próximo día sin artículo: elegir entre `/accesorios/mejor-monitor-trabajar-desde-casa/` o `/guias/dolor-espalda-trabajar-casa/`.
 
 Update 2026-05-21:
 

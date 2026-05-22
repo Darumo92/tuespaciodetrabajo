@@ -1,11 +1,36 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 17 (2026-05-21): Karma=13. 2 comentarios preparados para publicación. Seguir warmup sin links hasta karma >=50.
+description: Día 18 (2026-05-22): Karma=15. 3 comentarios preparados para publicación. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 17 (2026-05-21) — 2 comentarios preparados sin link
+## Update Día 18 (2026-05-22) — 3 comentarios preparados sin link
+
+Karma verificado: total_karma=15 (link=1, comment=14). Seguir sin links hasta ≥50.
+
+3 comentarios preparados para publicación (usuario los publica manualmente):
+
+1. r/Ergonomics 1tkili1 → "Has anyone actually fixed chronic neck pain long-term?"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tkili1/
+   - Enfoque: monitor height 8cm fixó dolor cervical; posiciones variable vs postura perfecta; nervous system tension es downstream; experiencia con fisiosthetic.
+
+2. r/OfficeChairs 1tkagyt → "I am completely lost." (1.90m/85kg, dev, probó Backforce+Titan Evo)
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tkagyt/
+   - Enfoque: seat depth para 1.90m es ventaja; gaming chairs = bucket seats con foam fino; Embody/Fern refurbished; monitor height importa más que la silla para dolor; probar 20 min antes de comprar.
+
+3. r/Ergonomics 1tj2kbk → "Need recommendations for budget Amazon mesh chairs"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tj2kbk/
+   - Enfoque: ASTRIDE mejor del grupo pero sigue siendo foam barato; todas se hunden 4-8 meses; opción refurbished Steelcase Leap/Think al mismo precio; seat depth es lo que no se negocia.
+
+Pendiente próximo día:
+- Verificar karma con `about.json` antes de publicar más.
+- Mantener 0 links hasta total_karma >=50.
+- Revisar si hilos recibieron respuesta del OP.
+- **Estrategia bilingual (2026-05-22):** karma EN = credibilidad de cuenta. Links SOLO en subreddits/foros ES (r/askspain, r/espana, mediavida, forocoches, habitissimo). Hilos EN nunca llevan link — audiencia EN no compra en Amazon.es.
+- **Siguiente paso:** buscar hilos activos en r/askspain, r/espana, mediavida y foros ES para comentarios de valor (sin link hasta karma ≥50).
+- **Primer comentario ES preparado:** r/askspain 1tgl36n → "Silla de oficina/gaming?" (OP busca silla ≤150€ sin diseño gaming, 7 comentarios, 4 días). Enfoque: SIHOO M18 alternativa a Markus, ajuste lumbar en altura, profundidad asiento, revisar monitor antes de comprar otra silla. SIN link.
+- DM de Next-Ingenuity5551 sobre comentario neck pain — respondido con pregunta abierta sobre su rutina. Construir relación 1:1, sin mencionar el sitio.
 
 Karma verificado: total_karma=13 (link=1, comment=12). Seguir sin links hasta ≥50.
 
