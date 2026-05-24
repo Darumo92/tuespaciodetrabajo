@@ -5,6 +5,38 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update Día 20 (2026-05-24) — 3 comentarios publicados sin link
+
+Karma verificado: total_karma=15 (link=1, comment=14). Email verificado. Sin señal de suspensión en `about.json`. Seguir sin links hasta ≥50.
+
+El comentario ES preparado el 2026-05-22 en r/askspain (`1tgl36n`, "Silla de oficina/gaming?") ya aparece publicado en RSS de la cuenta.
+
+Recon ES:
+- r/askspain, r/espana, r/autonomos, r/freelance_es revisados por RSS.
+- Búsquedas RSS `silla oficina`, `teletrabajo` en r/askspain, r/spain y r/programacion.
+- Resultado: no hay hilos ES nuevos suficientemente buenos para link/warmup; el único hilo reciente y on-topic era el de silla de r/askspain ya publicado. No forzar comentarios fiscales/autónomos fuera de nicho.
+
+3 comentarios EN publicados por el usuario, todos SIN link:
+
+1. r/Ergonomics `1tm4smv` → "Are ergonomic chairs actually good for older people too?"
+   - URL: https://www.reddit.com/r/Ergonomics/comments/1tm4smv/
+   - OP: quiere silla para su padre, 65 años, 5'7", 155 lbs, 2-3h/día leyendo/vídeos, rigidez lumbar.
+   - Enfoque: no comprar silla task cara tipo Embody para lectura; priorizar reclinación suave, soporte lumbar, pies apoyados, asiento que no corte muslo, facilidad para levantarse; probar 20 min.
+
+2. r/OfficeChairs `1tluhta` → "Realitically how long should a sub £200 full mesh chair last?"
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1tluhta/
+   - OP: silla full mesh sub £200 comprada en octubre 2020, casi 6 años, empiezan a caerse muelles/piezas, sin sag y postura OK.
+   - Enfoque: 6 años es buen resultado para ese rango; cambiar por seguridad/estructura, no por "heavy duty" necesariamente; revisar cilindro, base, tornillos, mecanismo de tilt; si no hay sag, la malla no fue el fallo.
+
+3. r/homeoffice `1tlzy4b` → "Thinking about getting these items for my new desk/battlestation setup. Any thoughts or advice?"
+   - URL: https://www.reddit.com/r/homeoffice/comments/1tlzy4b/
+   - OP: overhaul home office + gaming, video editing/productivity + PC/PS5; lista Embody, Hisense 55" U7, Arctis Nova Pro Wireless, Logitech Lift.
+   - Enfoque: buena lista pero priorizar geometría antes que comprar todo; 55" en desk puede provocar cuello si está cerca/alto; Embody merece test/return window; Lift bien si el dolor es pronación, no si viene de alcance/altura.
+
+Pendiente:
+- Verificar karma al día siguiente con `about.json`.
+- Mantener estrategia: comentarios EN para karma/credibilidad; links solo en ES cuando total_karma ≥50 y el hilo sea claramente contextual.
+
 ## Update Día 18 (2026-05-22) — 3 comentarios preparados sin link
 
 Karma verificado: total_karma=15 (link=1, comment=14). Seguir sin links hasta ≥50.

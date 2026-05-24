@@ -67,17 +67,17 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
 |----------|------|-----------|--------|--------|--------|
 | SIHOO Doro C300 | B0C3T865C2 | /dp/B0C3T865C2 | https://m.media-amazon.com/images/I/7194RcPKLOL._AC_SL1500_.jpg | ~320 EUR | verificado |
-| FlexiSpot C7 Lite | B0F6WBL3M2 | /dp/B0F6WBL3M2 | https://m.media-amazon.com/images/I/71Dvq5taG4L._AC_SL1500_.jpg | ~260 EUR | verificado |
+| FlexiSpot C7 Lite | B0F6XL3SFG | /dp/B0F6XL3SFG | https://m.media-amazon.com/images/I/41ie3wEJhPL._AC_SL300_.jpg | ~250 EUR | verificado 2026-05-24 |
 | HOLLUDLE Silla Ergonómica | B0BLNHPM3P | /dp/B0BLNHPM3P | https://m.media-amazon.com/images/I/71Gt43giOPL._AC_SL1500_.jpg | ~210 EUR | verificado |
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
-| SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~152 EUR | verificado |
+| SIHOO M102C | B0CLLRNFB8 | /dp/B0CLLRNFB8 | https://m.media-amazon.com/images/I/31pKOaVpQiL._AC_SL300_.jpg | ~190 EUR | verificado 2026-05-24 |
 | Durrafy Silla Ergonómica | B0C3BZHVK8 | /dp/B0C3BZHVK8 | https://m.media-amazon.com/images/I/619GSz1-BML._AC_SL1500_.jpg | ~130 EUR | verificado |
 
 ### ergonomia-teletrabajo-postura-correcta
 Artículo informativo sin productos de afiliación. No requiere tracking de productos.
 
 ### home-office-productivo-500-euros
-Artículo informativo. Productos referenciados de otros artículos (SIHOO M18, Durrafy, JUMMICO). No requiere tracking adicional de productos.
+Artículo informativo. Productos referenciados de otros artículos (SIHOO M102C, Durrafy, JUMMICO). No requiere tracking adicional de productos.
 
 ### mejor-monitor-trabajar-desde-casa
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
@@ -129,7 +129,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 |----------|------|-----------|--------|--------|--------|
 | SLATOR Lámpara LED | B07ZCY9XZ9 | /dp/B07ZCY9XZ9 | https://m.media-amazon.com/images/I/41hkXRPrNIL._AC_SL300_.jpg | ~29 EUR | verificado |
 | Aigostar Flexo LED | B0CTZXNX3D | /dp/B0CTZXNX3D | https://m.media-amazon.com/images/I/51BkjFG68SL._AC_SL300_.jpg | ~37 EUR | verificado |
-| Xiaomi Mi LED Desk Lamp 1S | B07XHCDR3M | /dp/B07XHCDR3M | https://m.media-amazon.com/images/I/31F3vrHVbXL._AC_SL300_.jpg | ~48 EUR | verificado |
+| Xiaomi LED Desk Lamp 2 | B0DBHNYP8N | /dp/B0DBHNYP8N | https://m.media-amazon.com/images/I/110MzpC85OL._AC_SL300_.jpg | ~50 EUR | verificado 2026-05-24 |
 | Hokone Lámpara Pinza LED | B095KDBVDF | /dp/B095KDBVDF | https://m.media-amazon.com/images/I/61IvYe3z4rL._AC_SL300_.jpg | ~46 EUR | verificado |
 | EYOCEAN Lámpara Pinza 12W | B0DPSWPYF6 | /dp/B0DPSWPYF6 | https://m.media-amazon.com/images/I/71EjekRoskL._AC_SL300_.jpg | ~50 EUR | verificado |
 | BenQ ScreenBar | B0785D93KD | /dp/B0785D93KD | https://m.media-amazon.com/images/I/41nI6sm+OKS._AC_SL300_.jpg | ~99 EUR | verificado |
@@ -138,7 +138,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 ### mejor-soporte-monitor-brazo-articulado
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
 |----------|------|-----------|--------|--------|--------|
-| ErGear Soporte Monitor 13-34" | B0FQM6QB48 | /dp/B0FQM6QB48 | https://m.media-amazon.com/images/I/619hqhPelvL._AC_SL300_.jpg | ~27 EUR | verificado |
+| ErGear Soporte Monitor 13-34" | B0C7KPNP7T | /dp/B0C7KPNP7T | https://m.media-amazon.com/images/I/41xjZGuagNL._AC_SL300_.jpg | ~27 EUR | verificado 2026-05-24 |
 | BONTEC Brazo Monitor 15-34" | B0FJD3TXG4 | /dp/B0FJD3TXG4 | https://m.media-amazon.com/images/I/71vxMP+UvmL._AC_SL300_.jpg | ~35 EUR | verificado |
 | HUANUO Brazo Monitor 17-30" | B07T4HQS2N | /dp/B07T4HQS2N | https://m.media-amazon.com/images/I/71vK6sp4kZL._AC_SL300_.jpg | ~36 EUR | verificado |
 | Amazon Basics Brazo Monitor | B07DHK5DHN | /dp/B07DHK5DHN | https://m.media-amazon.com/images/I/71LoJcCSlkL._AC_SL300_.jpg | ~38 EUR | verificado |
@@ -165,7 +165,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | COMHOMA Silla Ergonómica | B0F66N6N3J | /dp/B0F66N6N3J | https://m.media-amazon.com/images/I/71LJ0XGfsFL._AC_SL1500_.jpg | ~150 EUR | verificado |
 | TONFARY Silla Ergonómica | B0D8K66SJ3 | /dp/B0D8K66SJ3 | https://m.media-amazon.com/images/I/51jCTR-KvQL._AC_SL300_.jpg | ~180 EUR | verificado (sustituye FelixKing, no disponible) |
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
-| SIHOO M18 | B07GNDDNMW | /dp/B07GNDDNMW | https://m.media-amazon.com/images/I/61nb9ErcVpL._AC_SL1500_.jpg | ~200 EUR | verificado |
+| SIHOO M102C | B0CLLRNFB8 | /dp/B0CLLRNFB8 | https://m.media-amazon.com/images/I/31pKOaVpQiL._AC_SL300_.jpg | ~190 EUR | verificado 2026-05-24 |
 
 ### ikea-bekant-vs-flexispot-e7
 **Productos comparados (descatalogados, sin afiliación directa):**
