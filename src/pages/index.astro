@@ -6,6 +6,22 @@ import { getCollection } from 'astro:content';
 
 const articulos = await getCollection('articulos');
 
+// Pillar comparativas: enlazadas directamente desde home para reducir profundidad de clic
+// y reforzar señal de indexación sobre URLs prioritarias.
+const pillarSlugs = [
+  'mejor-silla-ergonomica-calidad-precio',
+  'mejor-escritorio-elevable-electrico',
+  'mejor-monitor-trabajar-desde-casa',
+  'mejor-raton-vertical-ergonomico',
+  'mejor-teclado-ergonomico',
+  'mejor-lampara-escritorio-led',
+  'mejor-ventilador-silencioso-oficina',
+  'ikea-bekant-vs-flexispot-e7',
+];
+const pillars = pillarSlugs
+  .map(slug => articulos.find(a => a.slug === slug))
+  .filter((a): a is NonNullable<typeof a> => Boolean(a));
+
 const destacados = articulos
   .filter(a => a.data.destacado)
   .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
@@ -14,9 +30,10 @@ const recientes = articulos
   .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime())
   .slice(0, 4);
 
-// Avoid showing duplicate sections: if all recientes are already in destacados, skip recientes
+// Excluir pillars y destacados de recientes para evitar duplicados
+const pillarSet = new Set(pillars.map(a => a.slug));
 const destacadoSlugs = new Set(destacados.map(a => a.slug));
-const recientesSinDuplicar = recientes.filter(a => !destacadoSlugs.has(a.slug));
+const recientesSinDuplicar = recientes.filter(a => !destacadoSlugs.has(a.slug) && !pillarSet.has(a.slug));
 const mostrarRecientes = recientesSinDuplicar.length > 0;
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
@@ -176,6 +193,24 @@ const categorias = [
       </div>
     </div>
   </section>
+
+  <!-- Comparativas pillar (enlazado directo a URLs prioritarias) -->
+  {pillars.length > 0 && (
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Comparativas</span>
+          <h2 class="section-title">Las comparativas más completas</h2>
+          <p class="section-subtitle">Análisis a fondo de sillas, escritorios y accesorios probados para teletrabajo</p>
+        </div>
+        <div class="articles-grid reveal-group">
+          {pillars.map(articulo => (
+            <ArticleCard articulo={articulo} />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Herramienta destacada -->
   <section class="section section-tool-banner">
