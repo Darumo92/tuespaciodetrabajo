@@ -4,6 +4,22 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Próxima acción (después de Dom 24 may 2026)
+
+Update 2026-05-25:
+
+- La auditoría `seo-indexing-audit/audit-2026-05-24.md` prevalece sobre el calendario anterior: **NO publicar** `mejores-auriculares-cancelacion-ruido-trabajar` ni otro artículo nuevo hasta que al menos 3 URLs prioritarias estén indexadas.
+- Evidencia audit: home indexada; internas rastreables pero `Rastreada: actualmente sin indexar`; 0 impresiones desde el 14 may; mejoras editoriales ya recrawled sin conseguir indexación.
+- P0 técnico de la auditoría ya se ejecutó el domingo 24 may: `1a0c2f8 fix(seo): add pillar comparativas block to home`, con enlaces directos desde `/` a 8 comparativas prioritarias. Commit incluido en `origin/main`.
+- Revisión live 25 may: `/` permanece `Enviada e indexada` (último rastreo 21 may); `/sillas/mejor-silla-ergonomica-calidad-precio/` sigue `Rastreada: actualmente sin indexar` (último rastreo 13 may).
+- Reddit 24 may: 3 comentarios sin link publicados; karma registrado=15. Mantener 0 links en Reddit hasta karma >=50.
+
+Próximos pasos:
+1. Solicitar manualmente reindexación de `https://tuespaciodetrabajo.com/` en GSC por el bloque de pilares añadido el 24 may.
+2. Continuar Backlinks Tier 1: warmup Reddit sin enlaces; Quora solo ante preguntas nuevas y claramente pertinentes, porque las 10 respuestas del paquete existente ya están publicadas.
+3. Mar-Mié 26-27 may: aplicar solo una mejora editorial a `/accesorios/mejor-monitor-trabajar-desde-casa/` o `/guias/dolor-espalda-trabajar-casa/`, según GSC del día.
+4. Revisar GSC/GA4 el domingo 31 may; no reactivar calendario sin cambio objetivo de indexación.
+
 ## Próxima acción (después de Vie 22 may 2026)
 
 Update 2026-05-22:

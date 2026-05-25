@@ -4,6 +4,18 @@ description: Estado del plan recovery tras colapso indexación 2026-05-06. Causa
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Override vigente — auditoría live 2026-05-24
+
+Fuente completa: `seo-indexing-audit/audit-2026-05-24.md`.
+
+La evidencia adicional invalida temporalmente la cadencia de 1 artículo/semana descrita más abajo: home indexada, todas las internas clave rastreadas sin indexar, y cero impresiones desde el 14 may. Se **pausan artículos nuevos** hasta que al menos 3 URLs prioritarias pasen a indexadas.
+
+- `mejores-auriculares-cancelacion-ruido-trabajar` (previsto 25 may): aplazado.
+- P0 completado: bloque home → 8 comparativas prioritarias, commit `1a0c2f8` del 24 may.
+- P0 pendiente manual: solicitar reindexación de `/` en GSC tras el deploy del bloque home.
+- P0 operativo: backlinks reales Tier 1 y warmup Reddit sin links mientras karma <50.
+- Próxima edición de contenido: una única mejora editorial el 26-27 may, preferentemente monitor o dolor de espalda; no nueva URL.
+
 ## Diagnóstico (2026-05-06)
 
 Site colapsó: 20 indexadas (08 abr) → 2 indexadas (01 may). 17 URLs en "Rastreada-no-indexada" GSC. Impresiones 0 desde 15 abr.

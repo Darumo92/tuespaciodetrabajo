@@ -4,6 +4,16 @@ description: Mapa fecha→artículo POST-recovery (cadencia rebajada por flag in
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## PAUSA VIGENTE — auditoría 2026-05-24
+
+La auditoría live `seo-indexing-audit/audit-2026-05-24.md` **suspende la publicación de artículos nuevos** hasta que al menos 3 URLs prioritarias pasen a indexadas. Esta decisión prevalece sobre todas las fechas de publicación que aparecen debajo.
+
+- El artículo previsto para el **lunes 25 may**, `mejores-auriculares-cancelacion-ruido-trabajar`, queda **aplazado**.
+- No publicar tampoco los siguientes artículos del calendario sin una nueva validación GSC que habilite recovery.
+- Para "vamos con el de hoy": consultar primero el audit del 24 may y `project_recovery_session_state.md`.
+- P0 ya aplicado el domingo 24 may: bloque de 8 comparativas prioritarias desde home (`1a0c2f8`).
+- Próxima operación: solicitar reindexación manual de `/` tras ese deploy, continuar backlinks Tier 1 y preparar una única mejora editorial para el 26-27 may.
+
 ## ⚠️ Cambio importante 2026-05-06
 
 Plan v2 (`docs/PLAN_v2_2026-04-12.md`) **DEPRECADO** desde semanas posteriores al 6 may. Cadencia 3/sem causó flag HCU + colapso indexación (20 → 2 indexadas). Nuevo plan: `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md`.

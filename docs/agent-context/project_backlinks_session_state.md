@@ -1,9 +1,36 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 18 (2026-05-22): Karma=15. 3 comentarios preparados para publicación. Seguir warmup sin links hasta karma >=50.
+description: Día 21 (2026-05-25): Karma=17. 2 respuestas preparadas sin link. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 21 (2026-05-25) — 2 respuestas preparadas sin link
+
+Karma verificado por `about.json`: total_karma=17 (link=1, comment=16). Email verificado y cuenta visible. Mantener 0 links hasta >=50.
+
+La auditoría de indexación del 24 may pausa artículos nuevos y prioriza autoridad externa. Quora no tiene las 3 respuestas pendientes que sugería el informe: el tracking de `docs/SESION_1_BACKLINKS_PAQUETE.md` confirma 10 respuestas publicadas (30 abr, 11 may y 13 may). No forzar nuevas respuestas Quora sin pregunta realmente pertinente.
+
+Recon Reddit vía RSS:
+- r/askspain: sin hilo nuevo de home office/ergonomía relevante hoy.
+- r/StandingDesks `1tme809` (persona baja/altura de mesa): descartado, el hilo fue retirado por moderación.
+- r/OfficeChairs `1tmgv6e` (Sihoo Doro C300/new chair): válido pero ya orientado a compra en EE.UU.; menor encaje que una réplica directa.
+- Los tres comentarios del 24 may fueron revisados. El único con continuación natural es r/OfficeChairs `1tluhta`: el OP responde que bloquea el reclinado y eligió malla para no aplastar espuma.
+
+Respuestas preparadas, ambas EN y SIN link:
+
+1. Reply a r/OfficeChairs `1tluhta` (`Tcrumpen`) — continuación directa al comentario del 24 may.
+   - Enfoque: el mecanismo bloqueado sigue siendo la pieza crítica si ya caen muelles/metal; revisar la placa inferior antes de volver a reclinar; si la malla sobrevivió seis años sin ceder, mantener malla y priorizar garantía/repuestos en el reemplazo.
+
+2. Comentario nuevo en r/Ergonomics `1tmjdo5` (`Technical_North2380`) — "OPPOSITE of elbow flare", aún sin respuestas visibles.
+   - Enfoque: el ratón está desplazado por el ancho del teclado; prueba temporal de moverlo a línea de hombro antes de comprar; teclado compacto/TKL si reduce la torsión; valoración profesional si ya hay dolor, hormigueo o debilidad.
+
+Los borradores finales se han pasado por la guía de humanización: responden a detalles concretos del OP, mezclan frases cortas/largas, evitan plantilla y no introducen promoción.
+
+Pendiente:
+- Publicación manual de las 2 respuestas preparadas, sin link.
+- Confirmar solicitud manual de reindexación de `https://tuespaciodetrabajo.com/` en GSC por el bloque pillar de home (`1a0c2f8`).
+- Tras publicar, registrar URL exacta de cada comentario y verificar karma al día siguiente.
 
 ## Update Día 20 (2026-05-24) — 3 comentarios publicados sin link
 
