@@ -1,11 +1,11 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 21 (2026-05-25): Karma=17. 2 respuestas preparadas sin link. Seguir warmup sin links hasta karma >=50.
+description: Día 21 (2026-05-25): Karma=17. 1 reply + 3 comentarios nuevos preparados sin link. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 21 (2026-05-25) — 2 respuestas preparadas sin link
+## Update Día 21 (2026-05-25) — 1 reply + 3 comentarios nuevos preparados sin link
 
 Karma verificado por `about.json`: total_karma=17 (link=1, comment=16). Email verificado y cuenta visible. Mantener 0 links hasta >=50.
 
@@ -15,20 +15,28 @@ Recon Reddit vía RSS:
 - r/askspain: sin hilo nuevo de home office/ergonomía relevante hoy.
 - r/StandingDesks `1tme809` (persona baja/altura de mesa): descartado, el hilo fue retirado por moderación.
 - r/OfficeChairs `1tmgv6e` (Sihoo Doro C300/new chair): válido pero ya orientado a compra en EE.UU.; menor encaje que una réplica directa.
+- r/homeoffice `1tmezu7` (oficina compacta antes de construir): válido; OP facilita medidas aproximadas `11'4" x 8'5"`, pregunta por ventana y colocación.
+- r/OfficeChairs `1tn234p` ("big marshmallow"): válido; nuevo, sin respuestas visibles y con presupuesto explícito de 500 EUR.
 - Los tres comentarios del 24 may fueron revisados. El único con continuación natural es r/OfficeChairs `1tluhta`: el OP responde que bloquea el reclinado y eligió malla para no aplastar espuma.
 
-Respuestas preparadas, ambas EN y SIN link:
+Respuestas preparadas, todas EN y SIN link:
 
-1. Reply a r/OfficeChairs `1tluhta` (`Tcrumpen`) — continuación directa al comentario del 24 may.
+1. Reply adicional a r/OfficeChairs `1tluhta` (`Tcrumpen`) — continuación directa al comentario del 24 may.
    - Enfoque: el mecanismo bloqueado sigue siendo la pieza crítica si ya caen muelles/metal; revisar la placa inferior antes de volver a reclinar; si la malla sobrevivió seis años sin ceder, mantener malla y priorizar garantía/repuestos en el reemplazo.
 
-2. Comentario nuevo en r/Ergonomics `1tmjdo5` (`Technical_North2380`) — "OPPOSITE of elbow flare", aún sin respuestas visibles.
+Comentarios nuevos:
+
+1. r/Ergonomics `1tmjdo5` (`Technical_North2380`) — "OPPOSITE of elbow flare", aún sin respuestas visibles.
    - Enfoque: el ratón está desplazado por el ancho del teclado; prueba temporal de moverlo a línea de hombro antes de comprar; teclado compacto/TKL si reduce la torsión; valoración profesional si ya hay dolor, hormigueo o debilidad.
+2. r/homeoffice `1tmezu7` (`ReturnAggressive2175`) — "Designing a compact home office (~11'4\" x 8'5\")".
+   - Enfoque: una ventana larga puede bastar si se puede abrir; escritorio perpendicular a ventana para luz lateral sin reflejos; reservar profundidad para silla y circulación antes de fijar armario/librería.
+3. r/OfficeChairs `1tn234p` (`enthusiasticdave`) — "I want to sit in a big marshmallow all day".
+   - Enfoque: separar confort reclinado para jugar de postura funcional al impartir clases; no buscar la silla más blanda, sino acolchado superficial con soporte y bloqueo de reclinación; probarla erguido y reclinado dentro de su presupuesto de 500 EUR.
 
 Los borradores finales se han pasado por la guía de humanización: responden a detalles concretos del OP, mezclan frases cortas/largas, evitan plantilla y no introducen promoción.
 
 Pendiente:
-- Publicación manual de las 2 respuestas preparadas, sin link.
+- Publicación manual del reply y los 3 comentarios nuevos preparados, sin link.
 - Confirmar solicitud manual de reindexación de `https://tuespaciodetrabajo.com/` en GSC por el bloque pillar de home (`1a0c2f8`).
 - Tras publicar, registrar URL exacta de cada comentario y verificar karma al día siguiente.
 
