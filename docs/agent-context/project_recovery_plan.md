@@ -12,7 +12,7 @@ La evidencia adicional invalida temporalmente la cadencia de 1 artículo/semana 
 
 - `mejores-auriculares-cancelacion-ruido-trabajar` (previsto 25 may): aplazado.
 - P0 completado: bloque home → 8 comparativas prioritarias, commit `1a0c2f8` del 24 may.
-- P0 pendiente manual: solicitar reindexación de `/` en GSC tras el deploy del bloque home.
+- P0 manual completado 2026-05-25: solicitada reindexación de `/` en GSC tras el deploy del bloque home; revisar recrawl en 24-72h, sin repetir solicitud si no hay cambios nuevos.
 - P0 operativo: backlinks reales Tier 1 y warmup Reddit sin links mientras karma <50.
 - Próxima edición de contenido: una única mejora editorial el 26-27 may, preferentemente monitor o dolor de espalda; no nueva URL.
 

@@ -40,7 +40,7 @@ Comentarios nuevos:
 Los borradores finales se han pasado por la guía de humanización: responden a detalles concretos del OP, mezclan frases cortas/largas, evitan plantilla y no introducen promoción.
 
 Pendiente:
-- Confirmar solicitud manual de reindexación de `https://tuespaciodetrabajo.com/` en GSC por el bloque pillar de home (`1a0c2f8`).
+- Solicitud manual de reindexación de `https://tuespaciodetrabajo.com/` confirmada por el usuario el 25 may por el bloque pillar de home (`1a0c2f8`).
 - Verificar karma y posibles replies el 26 may; no publicar enlaces mientras total_karma <50.
 
 ## Update Día 20 (2026-05-24) — 3 comentarios publicados sin link
