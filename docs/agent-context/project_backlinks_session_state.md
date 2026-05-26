@@ -1,11 +1,11 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 22 (2026-05-26): Karma=23. 2 comentarios publicados; 1 comentario y 1 reply preparados sin link. Seguir warmup sin links hasta karma >=50.
+description: Día 22 (2026-05-26): Karma=23. 3 comentarios + 1 reply publicados sin link. Warmup diario completado; seguir sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 22 (2026-05-26) — karma 23 + 2 comentarios publicados; 1 comentario y 1 reply preparados sin link
+## Update Día 22 (2026-05-26) — karma 23 + 3 comentarios y 1 reply publicados sin link
 
 Karma verificado por `about.json`: total_karma=23 (link=1, comment=22). Email verificado y cuenta visible. Mantener 0 links hasta >=50.
 
@@ -29,21 +29,18 @@ Comentarios publicados, EN y SIN link:
 2. r/homeoffice `1tn74kc` — "Where would you place an executive desk in this room?"
    - URL comentario: https://www.reddit.com/r/homeoffice/comments/1tn74kc/where_would_you_place_an_executive_desk_in_this/onyo6pa/
    - Enfoque: habitación suficiente solo si se mide la circulación con la silla; cinta en suelo antes de montar; desk perpendicular/lateral a la ventana para reducir reflejo; no añadir coffee table antes de comprobar espacio real.
-
-Comentario preparado, EN y SIN link, pasado por humanización:
-
-1. r/StandingDesks `1tnq1o4` — "Used Flexispot E7 for 200 a good deal or just buy a new one?"
-   - URL: https://www.reddit.com/r/StandingDesks/comments/1tnq1o4/used_flexispot_e7_for_200_a_good_deal_or_just_buy/
+3. r/StandingDesks `1tnq1o4` — "Used Flexispot E7 for 200 a good deal or just buy a new one?"
+   - URL comentario: https://www.reddit.com/r/StandingDesks/comments/1tnq1o4/used_flexispot_e7_for_200_a_good_deal_or_just_buy/onyt2t2/
    - Enfoque: `$200` es buen precio solo tras test de subida/bajada y estabilidad; al no usarlo de pie, el riesgo de garantía pesa más por las ruedas/movimientos; ruedas con freno y prueba de bamboleo antes de comprar.
 
-Reply preparado, EN y SIN link, pasado por humanización:
+Reply publicado, EN y SIN link:
 
 1. r/Ergonomics `1tkili1` — reply a `Longjumping-Kiwi-937`
-   - URL: https://www.reddit.com/r/Ergonomics/comments/1tkili1/comment/ony7h52/
+   - URL comentario: https://www.reddit.com/r/Ergonomics/comments/1tkili1/has_anyone_actually_fixed_chronic_neck_pain/onyoqru/
    - Enfoque: BenQ de 27", borde superior aproximadamente a línea de ojos, pantalla a unos 60 cm; elevar en pequeños pasos y parar antes de terminar levantando la barbilla.
 
 Pendiente:
-- Usuario publica manualmente el comentario de FlexiSpot E7 y el reply pendiente si siguen activos, y confirma URLs.
+- Warmup Reddit del día completado. Revisar karma y replies el siguiente día de trabajo; mantener 0 links mientras total_karma <50.
 - Solicitud manual de indexación de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/` pendiente tras deploy confirmado del 26 may.
 
 ## Update Día 21 (2026-05-25) — 1 reply + 3 comentarios nuevos publicados sin link

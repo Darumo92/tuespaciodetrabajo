@@ -23,7 +23,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Sesión recovery handoff](project_recovery_session_state.md) — Actualizado 26 may: revisión P0 de monitor desplegada; pendiente inspección manual y medición.
 - [Plan recovery E-E-A-T](project_eeat_recovery_plan.md) — Refactor de 15 artículos "Rastreada-no-indexada".
 - [Plan backlinks Tier 1](project_backlinks_plan.md) — Para "vamos con el plan de backlinks".
-- [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 26 may: karma Reddit 23; 2 comentarios publicados, 1 comentario y 1 reply preparados sin link.
+- [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 26 may: karma Reddit 23; warmup completado con 3 comentarios y 1 reply sin link.
 - [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar datos volátiles de Amazon del MDX.
 - [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos que requieren revisión editorial.
 
