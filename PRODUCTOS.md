@@ -83,11 +83,11 @@ Artículo informativo. Productos referenciados de otros artículos (SIHOO M102C,
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
 |----------|------|-----------|--------|--------|--------|
 | BenQ PD2705U 27" 4K USB-C | B096B3PBFZ | /dp/B096B3PBFZ | https://m.media-amazon.com/images/I/61Pvf1fZAgL._AC_SL300_.jpg | ~380 EUR | verificado |
-| Dell P2723QE 27" 4K USB-C | B09TY127B8 | /dp/B09TY127B8 | https://m.media-amazon.com/images/I/612mDVMoGvL._AC_SL300_.jpg | ~415 EUR | verificado |
-| LG 27UP85NP-W 27" 4K USB-C | B0CRL6TSW8 | /dp/B0CRL6TSW8 | https://m.media-amazon.com/images/I/41-m6NQd6cL._AC_SL300_.jpg | ~389 EUR | verificado (sustituye 27UP850N-W, no disponible) |
-| Samsung ViewFinity S6 S65VC 34" | B0C9YNF36R | /dp/B0C9YNF36R | https://m.media-amazon.com/images/I/61vo-JKgyjL._AC_SL300_.jpg | ~411 EUR | verificado |
-| LG 34WR55QK-B 34" UltraWide | B0DGLR66J6 | /dp/B0DGLR66J6 | https://m.media-amazon.com/images/I/71ONN9tqFdL._AC_SL300_.jpg | ~290 EUR | verificado |
-| LG 24MR400-B 24" Full HD | B0CKRXP2PG | /dp/B0CKRXP2PG | https://m.media-amazon.com/images/I/71PFeevpOnL._AC_SL300_.jpg | ~114 EUR | verificado |
+| Dell P2723QE 27" 4K USB-C | B09TY127B8 | /dp/B09TY127B8 | https://m.media-amazon.com/images/I/612mDVMoGvL._AC_SL300_.jpg | ~393 EUR | verificado 2026-05-26 |
+| LG 27UP85NP-W 27" 4K USB-C | B0CRL6TSW8 | /dp/B0CRL6TSW8 | https://m.media-amazon.com/images/I/41-m6NQd6cL._AC_SL300_.jpg | ~377 EUR | verificado 2026-05-26 (sustituye 27UP850N-W, no disponible) |
+| Samsung ViewFinity S6 S65VC 34" | B0C9YNF36R | /dp/B0C9YNF36R | https://m.media-amazon.com/images/I/61vo-JKgyjL._AC_SL300_.jpg | ~364 EUR | verificado 2026-05-26 |
+| AOC CU34V5C 34" UltraWide USB-C | B0B5PL93XQ | /dp/B0B5PL93XQ | https://m.media-amazon.com/images/I/41M80lvosmL._AC_SL300_.jpg | ~274 EUR | verificado 2026-05-26 (sustituye LG 34WR55QK-B, no disponible) |
+| LG 24MR400-B 24" Full HD | B0CKRXP2PG | /dp/B0CKRXP2PG | https://m.media-amazon.com/images/I/71PFeevpOnL._AC_SL300_.jpg | ~117 EUR | verificado 2026-05-26 |
 
 ### productividad-en-casa-entorno-fisico
 Artículo informativo sin productos de afiliación. No requiere tracking de productos.

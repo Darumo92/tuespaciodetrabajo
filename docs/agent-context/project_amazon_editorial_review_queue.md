@@ -22,6 +22,7 @@ Resumen:
 4. ~~`mejor-soporte-monitor-brazo-articulado` + `novedades-home-office-2026` — revisar `ErGear Soporte Monitor` (`B0FQM6QB48`)~~ → **RESUELTO 2026-05-24**: sustituido por ErGear 13-34" (`B0C7KPNP7T`, €26.99, en stock), hasta 10 kg.
 5. ~~`mejor-lampara-escritorio-led` — revisar `Xiaomi Mi LED Desk Lamp 1S` (`B07XHCDR3M`)~~ → **RESUELTO 2026-05-24**: ASIN no disponible retirado. La compra recomendada pasa a SLATOR (`B07ZCY9XZ9`, en stock) por prestaciones verificadas, y la Xiaomi disponible queda como LED Desk Lamp 2 (`B0DBHNYP8N`, €50.24, en stock) con copy conservador.
 6. ~~`home-office-productivo-500-euros`, `mejor-silla-ergonomica-calidad-precio`, `mejor-silla-oficina-menos-200-euros`, `silla-gaming-vs-ergonomica`, `novedades-home-office-2026` — revisar `SIHOO M18` (`B07GNDDNMW`)~~ → **RESUELTO 2026-05-24**: enlaces activos sustituidos por SIHOO M102C (`B0CLLRNFB8`, €189.99, en stock). Se conservaron menciones históricas a M18 solo como experiencia/anécdota, sin CTA al ASIN no disponible.
+7. ~~`mejor-monitor-trabajar-desde-casa` — revisar `LG 34WR55QK-B` (`B0DGLR66J6`)~~ → **RESUELTO 2026-05-26**: sustituido por AOC CU34V5C (`B0B5PL93XQ`, €273.55, en stock, USB-C 65 W) y corregida la distinción editorial entre paneles IPS y VA.
 
 ## Productos solo cache, sin revisión editorial
 

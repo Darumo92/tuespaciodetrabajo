@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-05-26
+**Action:** Mejora editorial recovery — mejor-monitor-trabajar-desde-casa
+**Files:** src/content/articulos/mejor-monitor-trabajar-desde-casa.mdx, src/data/amazon-products.json, PRODUCTOS.md, .seo-engine/data/content-queue.yaml, docs/agent-context/project_amazon_editorial_review_queue.md, reports/amazon-products/audit-2026-05-26.md
+**Summary:** GSC mantiene la URL en `Rastreada: actualmente sin indexar` (ultimo rastreo 2026-05-13) y la home no muestra aun recrawl tras el bloque pillar del 24 may (ultimo rastreo 2026-05-21). Revisión acotada: título corregido para no afirmar “6 probados”, metodología explícita por grado de prueba, tabla de decisión y casos donde no comprar, afirmaciones posturales suavizadas y coherencia persona corregida. Auditoría Amazon detectó el LG 34WR55QK-B no disponible; se sustituyó por AOC CU34V5C (`B0B5PL93XQ`, 273,55 EUR, en stock, USB-C 65 W) y se corrigió la explicación IPS/VA. Reauditoría: 6 ASINs disponibles, 0 incidencias. Build OK, 47 páginas.
+**Triggered by:** user ("vamos con el plan de hoy" — plan recovery, una sola URL prioritaria)
+
 ## 2026-05-20
 **Action:** Mejora editorial recovery — mejor-silla-oficina-menos-200-euros
 **Files:** src/content/articulos/mejor-silla-oficina-menos-200-euros.mdx

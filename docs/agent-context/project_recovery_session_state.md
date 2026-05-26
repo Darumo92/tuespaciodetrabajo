@@ -4,6 +4,25 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Próxima acción (después de Mar 26 may 2026)
+
+Update 2026-05-26:
+
+- GSC live: `/` sigue `Enviada e indexada`, pero su último rastreo continúa en `2026-05-21T11:33:02Z`; todavía no hay recrawl posterior al bloque home→pillars del 24 may ni a la solicitud manual del 25 may.
+- `/accesorios/mejor-monitor-trabajar-desde-casa/` sigue `Rastreada: actualmente sin indexar` (último rastreo `2026-05-13T09:10:44Z`, canonical/fetch/robots correctos). `/guias/dolor-espalda-trabajar-casa/` está igual, con último rastreo `2026-05-13T09:12:45Z`.
+- Search Analytics 14-25 may no devuelve filas: el blackout de impresiones continúa. GA4 14-25 may solo registra sesiones Direct; ninguna señal de Organic Search.
+- Se eligió una única URL para mejora editorial: `/accesorios/mejor-monitor-trabajar-desde-casa/`, por ser P0 comercial y haber tenido impresiones históricas.
+- Mejora aplicada: se retira el reclamo inexacto “6 probados”, se explicita qué modelos se han probado, se incorpora tabla de decisión y escenarios donde no comprar, y se corrigen afirmaciones personales/posturales y la distinción IPS/VA.
+- Auditoría Amazon previa detectó `LG 34WR55QK-B` (`B0DGLR66J6`) no disponible. Sustituido por `AOC CU34V5C` (`B0B5PL93XQ`, 273,55 EUR, en stock, USB-C 65 W); cache y `PRODUCTOS.md` actualizados. Reauditoría posterior: 6 ASINs, 0 incidencias.
+- `actualizadoEn: 2026-05-26` añadido por revisión real. Densidad afiliada: 13 enlaces `/dp/` sobre ~3926 palabras, aproximadamente 3,31/1000w.
+- Build OK: `npm run build`, 47 páginas, hashes CSP regenerados.
+
+Próximos pasos:
+1. Desplegar la mejora de monitor y, tras confirmar deploy, solicitar indexación manual únicamente de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/`.
+2. No repetir solicitud de la home sin cambios nuevos; revisar si cambia `lastCrawlTime` entre el 27 y el 28 may.
+3. Mantener artículos nuevos pausados; revisar GSC/GA4 el domingo 31 may y reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
+4. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
+
 ## Próxima acción (después de Dom 24 may 2026)
 
 Update 2026-05-25:

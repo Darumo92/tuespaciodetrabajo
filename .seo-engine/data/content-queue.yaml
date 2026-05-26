@@ -62,7 +62,7 @@ queue:
     priority: high
     status: published
     date_created: 2026-03-29
-    notes: "Comparativa de 6 monitores (114-459 EUR) en Amazon.es. Ángulo: experiencia real de casi 4 años con BenQ PD2705U, no medio generalista. SERP: Xataka, El Corte Inglés, Samsung, El Confidencial. ~2600 palabras, 5 FAQs, estructura con agrupación por tipo (27\" 4K, ultrawide, económico)."
+    notes: "Comparativa de 6 monitores en Amazon.es. Ángulo: experiencia real de casi 4 años con BenQ PD2705U, declarando como no probados LG, Samsung y AOC. SERP: Xataka, El Corte Inglés, Samsung, El Confidencial. Revisión 2026-05-26: AOC CU34V5C sustituye al LG 34WR55QK-B no disponible; tabla de decisión y corrección IPS/VA. 5 FAQs, estructura con agrupación por tipo (27\" 4K, ultrawide, económico)."
 
   - slug: productividad-en-casa-entorno-fisico
     title: "Productividad en casa: cómo el entorno físico afecta tu rendimiento"
