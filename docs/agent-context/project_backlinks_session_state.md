@@ -1,17 +1,17 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 22 (2026-05-26): Karma=23. 3 comentarios nuevos preparados sin link. Seguir warmup sin links hasta karma >=50.
+description: Día 22 (2026-05-26): Karma=23. 1 comentario publicado y 2 preparados sin link. Seguir warmup sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
-## Update Día 22 (2026-05-26) — karma 23 + 3 comentarios preparados sin link
+## Update Día 22 (2026-05-26) — karma 23 + 1 comentario publicado y 2 preparados sin link
 
 Karma verificado por `about.json`: total_karma=23 (link=1, comment=22). Email verificado y cuenta visible. Mantener 0 links hasta >=50.
 
 Revisión de replies:
 - Revisados los hilos comentados el 25 may. El OP de `r/OfficeChairs` `1tn234p` agradeció la recomendación, sin una nueva pregunta que requiera reply.
-- No hay conversación abierta que tenga prioridad frente a hilos nuevos.
+- Revisados de nuevo tras publicar en `r/homeoffice` `1tnagmh`: no hay respuesta posterior al comentario propio ni conversación abierta que tenga prioridad frente a hilos nuevos.
 
 Recon Reddit vía RSS:
 - `r/askspain`: sin hilo nuevo pertinente sobre ergonomía/home office.
@@ -20,11 +20,14 @@ Recon Reddit vía RSS:
 - `r/StandingDesks`: válido `1tnq1o4` (FlexiSpot E7 usado por $200, duda sobre garantía, motores y ruedas).
 - Descartado `r/StandingDesks` `1to1whd`: conversación con señales promocionales/coordinadas sobre una marca y sin encaje seguro para la cuenta.
 
-Comentarios preparados, todos EN y SIN link, pasados por humanización:
+Comentario publicado, EN y SIN link:
 
 1. r/homeoffice `1tnagmh` — "herman miller alternative, posture correction chair"
-   - URL: https://www.reddit.com/r/homeoffice/comments/1tnagmh/herman_miller_alternative_posture_correction_chair/
+   - URL comentario: https://www.reddit.com/r/homeoffice/comments/1tnagmh/herman_miller_alternative_posture_correction_chair/onyj17c/
    - Enfoque: validar que diez años con presión del aro del Aeron es un problema de ajuste real; no buscar otra silla por etiqueta "posture correction"; priorizar asiento acolchado regulable + prueba/retorno y tratar HBADA con cautela si no puede probarse.
+
+Comentarios preparados, EN y SIN link, pasados por humanización:
+
 2. r/homeoffice `1tn74kc` — "Where would you place an executive desk in this room?"
    - URL: https://www.reddit.com/r/homeoffice/comments/1tn74kc/where_would_you_place_an_executive_desk_in_this/
    - Enfoque: habitación suficiente solo si se mide la circulación con la silla; cinta en suelo antes de montar; desk perpendicular/lateral a la ventana para reducir reflejo; no añadir coffee table antes de comprobar espacio real.
@@ -33,7 +36,7 @@ Comentarios preparados, todos EN y SIN link, pasados por humanización:
    - Enfoque: `$200` es buen precio solo tras test de subida/bajada y estabilidad; al no usarlo de pie, el riesgo de garantía pesa más por las ruedas/movimientos; ruedas con freno y prueba de bamboleo antes de comprar.
 
 Pendiente:
-- Usuario publica manualmente estos tres comentarios si siguen activos y confirma URLs.
+- Usuario publica manualmente los dos comentarios pendientes si siguen activos y confirma URLs.
 - Solicitud manual de indexación de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/` pendiente tras deploy confirmado del 26 may.
 
 ## Update Día 21 (2026-05-25) — 1 reply + 3 comentarios nuevos publicados sin link
