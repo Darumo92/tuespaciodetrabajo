@@ -16,9 +16,10 @@ Update 2026-05-26:
 - Auditoría Amazon previa detectó `LG 34WR55QK-B` (`B0DGLR66J6`) no disponible. Sustituido por `AOC CU34V5C` (`B0B5PL93XQ`, 273,55 EUR, en stock, USB-C 65 W); cache y `PRODUCTOS.md` actualizados. Reauditoría posterior: 6 ASINs, 0 incidencias.
 - `actualizadoEn: 2026-05-26` añadido por revisión real. Densidad afiliada: 13 enlaces `/dp/` sobre ~3926 palabras, aproximadamente 3,31/1000w.
 - Build OK: `npm run build`, 47 páginas, hashes CSP regenerados.
+- Deploy confirmado: commit `dfcb21e` subido a `origin/main`; HTML live ya sirve `AOC CU34V5C` y la tabla `Decisión rápida`, sin el reclamo `6 probados`.
 
 Próximos pasos:
-1. Desplegar la mejora de monitor y, tras confirmar deploy, solicitar indexación manual únicamente de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/`.
+1. Solicitar indexación manual únicamente de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/`, ya que el deploy está confirmado.
 2. No repetir solicitud de la home sin cambios nuevos; revisar si cambia `lastCrawlTime` entre el 27 y el 28 may.
 3. Mantener artículos nuevos pausados; revisar GSC/GA4 el domingo 31 may y reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
 4. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
