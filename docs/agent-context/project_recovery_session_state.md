@@ -17,12 +17,12 @@ Update 2026-05-26:
 - `actualizadoEn: 2026-05-26` añadido por revisión real. Densidad afiliada: 13 enlaces `/dp/` sobre ~3926 palabras, aproximadamente 3,31/1000w.
 - Build OK: `npm run build`, 47 páginas, hashes CSP regenerados.
 - Deploy confirmado: commit `dfcb21e` subido a `origin/main`; HTML live ya sirve `AOC CU34V5C` y la tabla `Decisión rápida`, sin el reclamo `6 probados`.
+- Solicitud manual de indexación en GSC para `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/` completada por el usuario el 26 may tras el deploy. No repetir sin cambios nuevos.
 
 Próximos pasos:
-1. Solicitar indexación manual únicamente de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/`, ya que el deploy está confirmado.
-2. No repetir solicitud de la home sin cambios nuevos; revisar si cambia `lastCrawlTime` entre el 27 y el 28 may.
-3. Mantener artículos nuevos pausados; revisar GSC/GA4 el domingo 31 may y reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
-4. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
+1. No repetir solicitudes de la home ni del monitor sin cambios nuevos; revisar si cambia `lastCrawlTime` entre el 27 y el 28 may.
+2. Mantener artículos nuevos pausados; revisar GSC/GA4 el domingo 31 may y reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
+3. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
 
 ## Próxima acción (después de Dom 24 may 2026)
 

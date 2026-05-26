@@ -41,7 +41,7 @@ Reply publicado, EN y SIN link:
 
 Pendiente:
 - Warmup Reddit del día completado. Revisar karma y replies el siguiente día de trabajo; mantener 0 links mientras total_karma <50.
-- Solicitud manual de indexación de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/` pendiente tras deploy confirmado del 26 may.
+- Solicitud manual de indexación de `https://tuespaciodetrabajo.com/accesorios/mejor-monitor-trabajar-desde-casa/` confirmada por el usuario el 26 may tras deploy.
 
 ## Update Día 21 (2026-05-25) — 1 reply + 3 comentarios nuevos publicados sin link
 
