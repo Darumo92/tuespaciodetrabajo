@@ -6,10 +6,11 @@ import re
 import html
 import sys
 import subprocess
-import os
+from pathlib import Path
 
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
 USERNAME = "Dear_Potato8535"
+STATE_FILE = Path(__file__).resolve().parents[1] / "docs/agent-context/project_backlinks_session_state.md"
 
 def fetch_and_parse_comments():
     """Fetch our recent comments via RSS."""
@@ -46,6 +47,13 @@ def extract_thread_id(comment_link):
     """Extract thread ID from comment URL like .../comments/1tej6fb/..."""
     match = re.search(r"/comments/([a-z0-9]+)/", comment_link)
     return match.group(1) if match else None
+
+
+def tracked_thread_ids():
+    """Load thread IDs archived in session state so older replies are not missed."""
+    if not STATE_FILE.exists():
+        return set()
+    return set(re.findall(r"reddit\.com/r/[^/\s]+/comments/([a-z0-9]+)/", STATE_FILE.read_text()))
 
 
 def fetch_thread_replies(thread_id):
@@ -96,22 +104,23 @@ def main():
         # Check for replies in threads we commented on
         comments = fetch_and_parse_comments()
         
-        # Get unique thread IDs from our recent comments
-        thread_ids = set()
+        # Combine recent RSS comments with archived published-thread tracking.
+        thread_ids = tracked_thread_ids()
         for c in comments[:15]:
             tid = extract_thread_id(c["link"])
             if tid:
                 thread_ids.add(tid)
         
-        print(f"Checking {len(thread_ids)} threads for replies...\n")
+        print(f"Checking {len(thread_ids)} tracked threads for replies...\n")
         
         for tid in sorted(thread_ids):
+            entries = fetch_thread_replies(tid)
+            if not any(USERNAME in e["author"] for e in entries):
+                continue
             print(f"{'='*60}")
             print(f"THREAD: {tid}")
             print(f"{'='*60}")
-            
-            entries = fetch_thread_replies(tid)
-            
+
             for e in entries:
                 is_ours = USERNAME in e["author"]
                 marker = ">>> OURS" if is_ours else "    OTHER"
