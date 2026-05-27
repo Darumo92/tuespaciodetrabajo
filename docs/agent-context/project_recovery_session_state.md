@@ -4,6 +4,22 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Próxima acción (después de Mié 27 may 2026)
+
+Update 2026-05-27:
+
+- GSC live: `/` sigue `Enviada e indexada`, con último rastreo todavía en `2026-05-21T11:33:02Z`; la solicitud del 25 may no se refleja aún en un recrawl posterior al bloque home→pillars.
+- GSC live: `/accesorios/mejor-monitor-trabajar-desde-casa/` **sí fue recrawleada** el `2026-05-26T12:07:06Z`, después del deploy del contenido revisado, pero permanece `Rastreada: actualmente sin indexar`. La solicitud manual también se realizó el 26 may, sin atribuirla como causa del recrawl porque no consta su hora exacta. `robotsTxtState`, fetch y canonical siguen correctos; el único referrer detectado es la home.
+- Search Analytics `2026-05-14`→`2026-05-26`: solo 2 impresiones, ambas del 14 may (`/` y `/guias/ergonomia-teletrabajo-postura-correcta/`); sin filas posteriores. El blackout continúa.
+- GA4 `2026-05-14`→`2026-05-26`: 9 sesiones, 6 usuarios activos y 5 sesiones con interacción, todas `Direct`; ninguna señal de `Organic Search`.
+- Cloudflare Pages MCP consultado para confirmar deploy, pero la API respondió `Authentication error` (`10000`). No invalida el resultado de GSC: Google ya pudo rastrear el HTML actualizado del monitor.
+- Decisión: el recrawl del monitor sin indexación refuerza que no procede publicar artículos nuevos ni solicitar indexación otra vez sin cambios; se mantiene el foco diario en backlinks/warmup y medición.
+
+Próximos pasos:
+1. No repetir solicitudes de `/` ni del monitor sin cambios nuevos. Volver a medir home/monitor el 28-29 may o en el control completo del domingo 31 may.
+2. Mantener artículos nuevos pausados; reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
+3. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
+
 ## Próxima acción (después de Mar 26 may 2026)
 
 Update 2026-05-26:

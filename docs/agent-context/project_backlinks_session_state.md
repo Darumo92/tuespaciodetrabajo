@@ -1,9 +1,41 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 22 (2026-05-26): Karma=23. 3 comentarios + 1 reply publicados sin link. Warmup diario completado; seguir sin links hasta karma >=50.
+description: Día 23 (2026-05-27): Karma=24. Tres comentarios de warmup publicados sin link y visibles en RSS; seguir sin links hasta karma >=50.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Día 23 (2026-05-27) — karma 24 + 3 comentarios publicados sin link
+
+Karma verificado por `about.json` tras publicar: total_karma=24 (link=1, comment=23). Email verificado y cuenta visible. Los comentarios ya aparecen en el RSS público de la cuenta, pero el karma aún no refleja votos posteriores. Mantener 0 links hasta >=50.
+
+Revisión de replies:
+- Revisados los hilos comentados el 26 may mediante `scripts/reddit_replies.py` y revisión específica del hilo `r/Ergonomics` `1tkili1`.
+- El reply a `Longjumping-Kiwi-937` sobre altura/distancia del monitor no tiene continuación posterior. No hay una conversación pendiente que tenga prioridad hoy.
+
+Recon Reddit vía RSS:
+- `r/askspain`: sin hilo nuevo pertinente sobre home office/ergonomía.
+- `r/Ergonomics`: válidos `1toombf` (dolor cervical tras pasar de teclado completo a MX Keys Mini) y `1tok5my` (se desliza en la silla, con síntomas complejos; descartado para comentario por prudencia médica).
+- `r/OfficeChairs`: válidos `1too8t3` (altura de Leap V2 en persona de 5'6" con pinzamiento/dolor de gemelo) y `1tokqgm` (reposapiés para jornadas largas).
+- `r/StandingDesks`: `1tohjw9` aparece como candidato por título, pero el RSS no expone contexto suficiente para una respuesta adaptada; descartado.
+
+Comentarios publicados, EN y SIN link:
+
+1. `r/Ergonomics` `1toombf` — "MX Keys mini shoulder/neck pain"
+   - URL comentario: https://www.reddit.com/r/Ergonomics/comments/1toombf/mx_keys_mini_shoulderneck_pain/oo4kijo/
+   - Enfoque: aunque ambos teclados tengan igual altura, centrar la carcasa del `MX Keys Mini` en vez del bloque de letras puede desplazar manos/hombros; probar alineación por teclas `G/H` y posición del ratón antes de abandonar el teclado.
+
+2. `r/OfficeChairs` `1too8t3` — "Help Me With Chair Height Please"
+   - URL comentario: https://www.reddit.com/r/OfficeChairs/comments/1too8t3/help_me_with_chair_height_please/oo4u3vy/
+   - Enfoque: no perseguir un ángulo perfecto de 90 grados; ajustar primero profundidad para dejar unos dos dedos tras la rodilla y probar soporte para pies si la altura cómoda para muslo deja los pies sin apoyo.
+
+3. `r/OfficeChairs` `1tokqgm` — "Any under-desk footrest actually worth getting?"
+   - URL comentario: https://www.reddit.com/r/OfficeChairs/comments/1tokqgm/any_underdesk_footrest_actually_worth_getting/oo572yx/
+   - Enfoque: un reposapiés ayuda si silla/mesa están ajustadas para los brazos pero faltan apoyos para los pies; hacer primero prueba con caja/libros firmes y evitar modelos tipo hamaca para trabajo estable.
+
+Pendiente:
+- Verificar karma y posibles replies el siguiente día de trabajo.
+- Mantener 0 links mientras total_karma <50.
 
 ## Update Día 22 (2026-05-26) — karma 23 + 3 comentarios y 1 reply publicados sin link
 
