@@ -6,6 +6,21 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
 ## Próxima acción (después de Mié 27 may 2026)
 
+Update 2026-05-28:
+
+- GSC live: `/` sigue `Enviada e indexada`, último rastreo aún `2026-05-21T11:33:02Z`; la solicitud manual del 25 may todavía no se refleja como recrawl posterior al bloque home→pillars.
+- GSC live: `/accesorios/mejor-monitor-trabajar-desde-casa/` sigue `Rastreada: actualmente sin indexar`, último rastreo `2026-05-26T12:07:06Z`, fetch/robots/canonical correctos, referrer detectado solo home.
+- GSC live: `/sillas/mejor-silla-ergonomica-calidad-precio/` sigue `Rastreada: actualmente sin indexar`, último rastreo `2026-05-13T09:10:44Z`, fetch/robots/canonical correctos, referrer detectado solo home.
+- Search Analytics `2026-05-14`→`2026-05-27`: sin filas devueltas; el blackout continúa.
+- GA4 `2026-05-14`→`2026-05-27`: 10 sesiones, todas `Direct`; 0 sesiones `Organic Search`.
+- Cloudflare Pages MCP consultado; sigue fallando con `Authentication error` (`10000`). No bloquea la decisión porque GSC confirma rastreo correcto.
+- Decisión: mantener pausa editorial; no publicar artículos nuevos ni repetir solicitudes de indexación sin cambios. Foco operativo del día: backlinks/warmup Reddit sin enlaces.
+
+Próximos pasos:
+1. No repetir solicitud de `/` ni de monitor/silla sin cambios.
+2. Mantener artículos nuevos pausados; reactivar calendario solo si al menos 3 URLs prioritarias aparecen indexadas.
+3. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras karma sea inferior a 50.
+
 Update 2026-05-27:
 
 - GSC live: `/` sigue `Enviada e indexada`, con último rastreo todavía en `2026-05-21T11:33:02Z`; la solicitud del 25 may no se refleja aún en un recrawl posterior al bloque home→pillars.
