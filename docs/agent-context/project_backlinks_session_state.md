@@ -5,6 +5,83 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update Dia 26 (2026-05-30) — GSC sin recovery + Reddit warmup sin link preparado
+
+Contexto SEO del dia:
+- GSC y GA4 revisados antes de decidir tarea: no hay recovery objetivo. Mantener pausa editorial y priorizar autoridad externa/warmup.
+
+Karma / cuenta Reddit:
+- Intento `about.json` para `Dear_Potato8535` con UA Safari, dentro y fuera de sandbox: Reddit devuelve pantalla `You've been blocked by network security`; no se pudo leer karma live.
+- Usuario confirma manualmente karma actual: `total_karma=24`.
+- El RSS de comentarios y threads si funciono mediante `scripts/reddit_replies.py` con acceso de red. La cuenta sigue visible por RSS; no hay senal de suspension en ese canal.
+- Como sigue por debajo de `total_karma >=50`, mantener regla conservadora: **0 links**.
+
+Revision de replies:
+- `scripts/reddit_replies.py replies` ejecutado con acceso de red. Se revisaron 36 hilos tracked.
+- Los dos comentarios que estaban pendientes el 28 may ya aparecen publicados y visibles:
+  - `r/StandingDesks` `1tps7bj` -> comentario `ooda9v6`.
+  - `r/Ergonomics` `1tpw15t` -> comentario `oodhoy6`.
+- No hay reply directo nuevo que exija respuesta. Hay agradecimientos o conversaciones de terceros, pero nada prioritario para intervenir sin parecer forzado.
+
+Recon Reddit via RSS:
+- ES:
+  - `r/askspain` `1trs2ny` — "No puedo desconectar del trabajo", buen encaje para comentario sin link en espanol.
+  - `r/askspain` `1trrvd0` — doble trabajo a jornada completa; descartado para este plan por ser fiscal/laboral y fuera de nicho.
+- EN:
+  - `r/Ergonomics` `1trbdyr` — Aeron u otras sillas para 5'7", 220 lbs, torso largo, piernas cortas/musculosas, back pain; buen encaje.
+  - `r/Ergonomics` `1tr8njw` — tension trapecio lado derecho con mouse, WFH design job, 5'3", foto de setup revisada; buen encaje.
+  - `r/OfficeChairs` `1trqajt` — silla para 410 lbs; valido pero sensible y menos prioritario que los dos hilos anteriores.
+  - Descartados posts autopromo/review (`FeistyFisherman6059`, tienda ergo; setups showcase sin pregunta clara).
+
+Comentarios preparados, todos SIN link:
+
+1. `r/askspain` `1trs2ny` — "No puedo desconectar del trabajo"
+   - URL hilo: https://www.reddit.com/r/askspain/comments/1trs2ny/no_puedo_desconectar_del_trabajo/
+   - Texto:
+     > A mi me pasa mas cuando dejo el trabajo "abierto" en la cabeza que cuando he tenido un dia objetivamente estresante. Es un poco traicionero, porque puedes estar contento con el trabajo y aun asi llevartelo a la cama.
+     >
+     > Lo que mejor me funciona es cerrar la jornada con algo muy tonto: apuntar en 3-4 lineas que queda pendiente y cual es el primer paso de manana. No una lista enorme de tareas, sino algo tipo "manana empiezo por responder X, luego reviso Y". Si me viene el pensamiento por la noche, me digo literalmente "eso ya esta aparcado para manana". Suena simple, pero al cerebro le quita la sensacion de que tiene que seguir vigilando.
+     >
+     > Tambien me ayuda no terminar el dia justo en una tarea a medias. Si puedo, dejo los ultimos 10 minutos para ordenar escritorio, cerrar pestanas y mandar el ultimo mensaje pendiente. Cuando cierro con una cosa rota a medias, es cuando mas me aparece luego en modo sueno raro.
+     >
+     > Si ya te esta afectando mucho al descanso durante semanas, yo no lo dejaria solo en trucos de productividad. Pero para empezar, probaria ese ritual de cierre unos dias.
+
+2. `r/Ergonomics` `1trbdyr` — "HM Aeron chair (or others) for heftier build with back pain"
+   - URL hilo: https://www.reddit.com/r/Ergonomics/comments/1trbdyr/hm_aeron_chair_or_others_for_heftier_build_with/
+   - Texto:
+     > With your build, I would not buy an Aeron blind, especially if you already suspect thigh/lower back pressure.
+     >
+     > The Aeron can be great, but it is not a forgiving chair. The hard frame around the mesh seat is the part I would be most careful with for shorter legs and a long torso. If the size is even slightly wrong, you do not get much cushion or seat-depth adjustment to hide the mismatch. At 5'7" and 220 lbs you may fall into that awkward B/C decision where one size feels better for width and the other feels better for leg fit.
+     >
+     > If you can test one locally, sit in it for at least 20 minutes, not 2. Check whether the front lip or side frame touches your thighs when you relax, and whether your feet stay planted without raising the chair too much for the desk. If you feel pressure in the shop, it usually does not magically improve after a full workday.
+     >
+     > For a refurbished budget around $600-650, I would also look at Steelcase Leap v2, Amia, Haworth Zody/Fern, maybe Humanscale Freedom if you like a simpler chair. The Leap is not perfect, but the adjustable seat depth makes it much easier to fit weird proportions than an Aeron. I learned this the annoying way: the chair that looks "more ergonomic" on paper is not always the one your hips and thighs tolerate.
+     >
+     > Whatever you choose, I would treat the return policy as part of the product. With 10-15 years of back pain, 30-90 days to bail out matters more than saving $50.
+
+3. `r/Ergonomics` `1tr8njw` — "I think my mousehand is causing overactive trap tension in right side"
+   - URL hilo: https://www.reddit.com/r/Ergonomics/comments/1tr8njw/i_think_my_mousehand_is_causing_overactive_trap/
+   - Texto:
+     > Looking at the photo, I would suspect desk height/reach before blaming the mouse itself.
+     >
+     > Your right arm does not look wildly far away, but it does look like you are having to work at the front edge of a fairly high desk. At 5'3", that is a common trap: you raise the chair enough to reach the desk, then the feet/legs need support, the shoulders creep up a little, and the mouse side takes the hit because it moves all day.
+     >
+     > I would test this before buying anything: bring keyboard and mouse 5-8 cm closer to you, keep the mouse directly next to the keyboard, and let your upper arm hang heavy instead of reaching forward. If the desk is too high for that, raise the chair a bit and use a proper footrest or even a box for a day. The goal is not "mouse as close as humanly possible"; it is mouse close enough that your shoulder is not slightly holding your arm in space.
+     >
+     > Since your job is design-heavy, I would also try alternating input for the worst tasks. Even a trackpad or tablet for part of the day can reduce the constant right-side mouse load. I would not expect traptox to solve the geometry if the right arm is still doing the same reach for hours.
+     >
+     > Small test: after 20 minutes, check whether your right shoulder is closer to your ear than the left. If yes, the setup is still asking your trap to help.
+
+Pendiente:
+- Update post-publicacion 2026-05-30:
+  - Usuario indica que publico los 3 comentarios.
+  - Verificacion RSS cuenta `Dear_Potato8535`: visibles 2/3.
+    - `r/askspain` `1trs2ny` visible como `ootfr0v`: https://www.reddit.com/r/askspain/comments/1trs2ny/no_puedo_desconectar_del_trabajo/ootfr0v/
+    - `r/Ergonomics` `1trbdyr` visible como `ootjzk4`: https://www.reddit.com/r/Ergonomics/comments/1trbdyr/hm_aeron_chair_or_others_for_heftier_build_with/ootjzk4/
+  - `r/Ergonomics` `1tr8njw` no aparece en RSS de cuenta ni en RSS del hilo tras verificar `python3 scripts/reddit_replies.py thread 1tr8njw`. Puede haber quedado sin enviar, pendiente de aprobacion o filtrado por Reddit/moderacion. Revisar manualmente desde la cuenta antes de republicar para evitar duplicado.
+- Verificar karma por navegador si `about.json` sigue bloqueado. Hasta entonces, 0 links.
+- En la proxima sesion, confirmar si `1tr8njw` aparece visible o si hay que reemplazarlo con otro hilo.
+
 ## Update Día 24 (2026-05-28) — karma 24 + paquete de 1 reply y 3 comentarios sin link
 
 Karma verificado por `about.json`: total_karma=24 (link=1, comment=23). Email verificado y cuenta visible. Mantener 0 links hasta >=50.
