@@ -1,9 +1,93 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Día 24 (2026-05-28): Karma=24. Paquete de 1 reply + 3 comentarios sin link; 2 publicados visibles y 2 quedan para publicación espaciada.
+description: Dia 27 (2026-05-31): about.json bloqueado; ultimo karma manual=24. RSS confirma 3/3 comentarios del 30 may visibles. Paquete de 1 reply + 2 comentarios sin link preparado.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Dia 27 (2026-05-31) — GSC sin recovery + paquete Reddit sin link
+
+Contexto SEO del dia:
+- GSC Search Analytics `2026-05-14` -> `2026-05-30`: sin filas devueltas.
+- GA4 `2026-05-14` -> `2026-05-30`: 10 sesiones, todas `Direct`; 0 `Organic Search`.
+- URL Inspection: home indexada pero sin recrawl desde `2026-05-21`; monitor, silla, ergonomia, lampara, dolor de espalda y escritorio elevable siguen `Rastreada: actualmente sin indexar`.
+- Decision: mantener pausa editorial y priorizar autoridad externa/warmup Reddit.
+
+Karma / cuenta Reddit:
+- `about.json` para `Dear_Potato8535` con UA Safari devuelve pantalla `You've been blocked by network security` tanto dentro como fuera del sandbox. No se pudo leer karma live.
+- Ultimo dato manual confirmado por el usuario: `total_karma=24`. Mantener regla: **0 links** hasta confirmar `total_karma >=50`.
+- RSS de comentarios de cuenta funciona. Los 3 comentarios del 30 may aparecen visibles:
+  - `r/askspain` `1trs2ny` -> `ootfr0v`
+  - `r/Ergonomics` `1trbdyr` -> `ootjzk4`
+  - `r/Ergonomics` `1tr8njw` -> `ootugv4`
+
+Revision de replies:
+- `scripts/reddit_replies.py replies` ejecutado con acceso de red; 39 hilos tracked revisados.
+- Reply accionable detectado en `r/Ergonomics` `1tr8njw`: OP dice que el desk es una pieza familiar dificil de cambiar, que teclado/raton ya estan tan cerca como puede, usa footrest, podria subir algo la silla y le encaja probar trackpad.
+- No hay que responder a hilos antiguos solo por agradecimientos. Priorizar reply natural en `1tr8njw`.
+
+Recon Reddit via RSS:
+- `r/StandingDesks` `1tt1epz` — "Best standing desk for back pain"; nuevo, sin respuestas visibles al consultar RSS, encaje fuerte para comentario sin link.
+- `r/OfficeChairs` `1tsjv2d` — Aeron size C que no encaja, armrests demasiado anchos, closet office 6'x4', lesion de coxis; buen encaje para comentario sin link.
+- `r/homeoffice` `1tt2147` — standing desk 2026; parece mas generico/review-intent, menos prioritario que `1tt1epz`.
+- `r/OfficeChairs` hilos `1tt420v`, `1tt3zys`, `1tspw77` tambien son candidatos si hace falta volumen, pero los dos anteriores son mejores.
+
+Comentarios preparados, todos SIN link:
+
+1. Reply a `r/Ergonomics` `1tr8njw` — OP no puede cambiar el desk familiar
+   - URL hilo: https://www.reddit.com/r/Ergonomics/comments/1tr8njw/i_think_my_mousehand_is_causing_overactive_trap/
+   - Reply a comentario OP: https://www.reddit.com/r/Ergonomics/comments/1tr8njw/i_think_my_mousehand_is_causing_overactive_trap/oouiu5y/
+   - Texto:
+     > If the desk has to stay, I would stop trying to solve it by forcing everything closer and think more in terms of getting the work surface lower.
+     >
+     > Raising the chair a little might help, but only if your feet still feel fully supported on the footrest and your shoulders drop, not just your body going higher. I would do that as a short test, not a permanent change on day one. Raise it a bit, work for 20-30 minutes, then check whether your right shoulder is quieter or whether your legs/hips start feeling weird. If the footrest starts feeling like you are perched on it, the chair is probably too high.
+     >
+     > A keyboard tray is still the cleaner fix if the vintage desk top is simply too high. It brings the keyboard/mouse down to you instead of making your chair compensate for the desk. Just make sure it is wide enough for both keyboard and mouse; a narrow tray can make the mouse problem worse.
+     >
+     > For the trackpad, I would not replace the mouse completely at first. Try using it for scrolling, browsing, zooming, dragging small stuff, maybe even with the left hand for part of the day. Design work can be brutal because the mouse side never really gets a break, so even moving 20% of the load away from that hand can matter.
+     >
+     > Quick check before buying anything: sit relaxed, let your right arm hang, bend the elbow, and see where your hand naturally lands. If the mouse is still several inches outside that spot, that gap is what your trap is probably paying for.
+
+2. `r/StandingDesks` `1tt1epz` — "Best standing desk for back pain"
+   - URL hilo: https://www.reddit.com/r/StandingDesks/comments/1tt1epz/best_standing_desk_for_back_pain/
+   - Texto:
+     > For back pain, I would buy the desk for position changes, not as a cure by itself.
+     >
+     > The biggest win is usually breaking the 8-10 hour same-position loop. If you keep the laptop low, monitors too far forward, and then stand for three hours with locked knees, the expensive desk will not feel that different. But if it makes it easy to switch for 20-30 minute blocks, it can be a real upgrade.
+     >
+     > With two monitors, a gaming laptop, keyboard, mouse and speakers, I would prioritise frame stability and desktop depth over cable gimmicks. A 60 inch wide top is nice, but depth matters more than people expect. Around 28-30 inches deep gives you room to keep the monitors back and still have your keyboard/mouse in a sane position.
+     >
+     > In the $400-600 range, FlexiSpot E7-type frames are a reasonable lane if you are not overloading the desk and you buy from somewhere with a return policy. I would be more cautious with the very cheap single-motor desks or thin tops, because wobble gets annoying fast once you add monitor arms or type at standing height.
+     >
+     > Also fix the laptop part at the same time: laptop on a stand, external keyboard/mouse, monitors at a height where you are not craning down. That may do as much for your lower back as the standing feature.
+     >
+     > My boring test would be: after you get it, stand after lunch for one easy task, sit again, then stand for calls/admin. Do not try to become a standing-only person in week one. That is how people buy a mat, overdo it, and decide the whole thing was pointless.
+
+3. `r/OfficeChairs` `1tsjv2d` — Aeron size C no encaja / closet office
+   - URL hilo: https://www.reddit.com/r/OfficeChairs/comments/1tsjv2d/keep_a_herman_miller_that_technically_doesnt_fit/
+   - Texto:
+     > You are not crazy. A good chair that does not fit you is just an expensive bad chair.
+     >
+     > A size C Aeron for 5'7" / 160 lb, in a 6' x 4' closet office, already sounds like the wrong compromise. The armrests being too wide is not a small detail if it makes you lean toward one side to use them. Armrests are not mandatory for everyone, but bad armrests are worse than no armrests because they make you build little habits around the chair.
+     >
+     > The tailbone cushion part is also a big clue. Aerons are designed around that mesh seat geometry. Once you add a cushion thick enough to protect your tailbone, you change the seat height, lumbar position and how the back hits you. If the chair only works when you modify it in a way that breaks the rest of the fit, it is not really working.
+     >
+     > For up to 3 hours at a time, I would rather have a smaller used/refurbished chair that fits the room and lets your cushion sit correctly than keep the Aeron because it has the better name. Steelcase Amia or Leap v2 would be obvious used/refurb starting points because the seat is more forgiving and the footprint is usually easier to live with. Haworth Zody/Soji could also be worth trying if you can find one locally.
+     >
+     > On the sweaty-seat issue, I would avoid super soft memory foam. A normal upholstered office seat with denser foam is usually less swampy than a memory foam cushion and much kinder to a tailbone than a hard mesh pan.
+     >
+     > Your husband has a point only if the Aeron actually fits. From what you wrote, it does not.
+
+Update post-publicacion 2026-05-31:
+- Usuario indica que publico los 3 textos.
+- Verificacion RSS cuenta `Dear_Potato8535`: visibles 2/3.
+  - `r/StandingDesks` `1tt1epz` visible como `op005h5`: https://www.reddit.com/r/StandingDesks/comments/1tt1epz/best_standing_desk_for_back_pain/op005h5/
+  - `r/OfficeChairs` `1tsjv2d` visible como `op05s7r`: https://www.reddit.com/r/OfficeChairs/comments/1tsjv2d/keep_a_herman_miller_that_technically_doesnt_fit/op05s7r/
+  - Reply a `r/Ergonomics` `1tr8njw` no aparece en RSS de cuenta ni en RSS del hilo tras verificar `python3 scripts/reddit_replies.py thread 1tr8njw`. Puede haber quedado sin enviar, pendiente de aprobacion o filtrado por Reddit/moderacion. Revisar manualmente desde la cuenta antes de republicar para evitar duplicado.
+
+Pendiente:
+- Verificar RSS publico de `1tr8njw` en la siguiente sesion si el usuario confirma que lo ve publicado desde cuenta.
+- Seguir sin links hasta confirmar karma >=50.
 
 ## Update Dia 26 (2026-05-30) — GSC sin recovery + Reddit warmup sin link preparado
 

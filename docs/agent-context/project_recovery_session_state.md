@@ -6,6 +6,25 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
 ## Proxima accion (despues de Sab 30 may 2026)
 
+Update 2026-05-31:
+
+- GSC Search Analytics `2026-05-14` -> `2026-05-30`: sin filas devueltas; el blackout de rendimiento continua.
+- GA4 `2026-05-14` -> `2026-05-30`: 10 sesiones, 7 usuarios activos, 5 engaged sessions, todas `Direct`; 0 `Organic Search`.
+- GSC live:
+  - `/` sigue `Enviada e indexada`, ultimo rastreo `2026-05-21T11:33:02Z`; no hay recrawl posterior al bloque home->pillars ni a la solicitud manual del 25 may.
+  - `/accesorios/mejor-monitor-trabajar-desde-casa/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-26T12:07:06Z`.
+  - `/sillas/mejor-silla-ergonomica-calidad-precio/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-13T09:10:44Z`.
+  - `/guias/ergonomia-teletrabajo-postura-correcta/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-25T22:44:40Z`, referrer externo Quora detectado.
+  - `/ambiente/mejor-lampara-escritorio-led/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-25T12:56:27Z`.
+  - `/guias/dolor-espalda-trabajar-casa/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-13T09:12:45Z`.
+  - `/escritorios/mejor-escritorio-elevable-electrico/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-04-20T19:33:50Z`.
+- Decision: mantener pausa editorial. No publicar articulos nuevos ni repetir solicitudes de indexacion sin cambios. Foco de hoy: Reddit/backlinks sin enlaces y seguimiento de replies.
+
+Proximos pasos:
+1. No publicar `mejores-auriculares-cancelacion-ruido-trabajar` ni avanzar calendario hasta que al menos 3 URLs prioritarias esten indexadas.
+2. No repetir indexacion manual de `/`, monitor o silla sin cambios nuevos.
+3. Continuar Backlinks Tier 1 / Reddit warmup sin enlaces mientras no se confirme karma >=50.
+
 Update 2026-05-30:
 
 - GSC Search Analytics `2026-05-14` -> `2026-05-29`: sin filas devueltas; el blackout de rendimiento continua.
