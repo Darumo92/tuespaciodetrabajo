@@ -1,6 +1,5 @@
 ---
 import Base from '@/layouts/Base.astro';
-import CategoryIcon from '@/components/CategoryIcon.astro';
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
@@ -54,10 +53,10 @@ const aboutPageSchema = {
       <span>Sobre mí</span>
     </nav>
 
-    <h1>Sobre mí</h1>
+    <h1>Sobre David Rubio</h1>
 
     <p>
-      Me llamo <strong>David Rubio</strong>, vivo en <strong>Rubí</strong> (área metropolitana de Barcelona)
+      Me llamo <strong>David Rubio Mota</strong>, vivo en <strong>Rubí</strong> (área metropolitana de Barcelona)
       y llevo teletrabajando desde <strong>2019</strong> como ingeniero de software. Cuando llegó el confinamiento
       y el teletrabajo pasó de ser una opción a ser mi día a día, cometí el error clásico: trabajar 10 horas en
       una silla de comedor con el portátil encima de la mesa del salón.
@@ -77,19 +76,31 @@ const aboutPageSchema = {
       Creé <strong>Tu Espacio de Trabajo</strong> para ser las guías que me habría gustado encontrar a mí.
     </p>
 
+    <h2>Qué puedo aportar y qué no</h2>
+    <p>
+      Puedo aportar experiencia real de teletrabajo, criterio técnico para leer fichas de producto y años
+      ajustando un despacho doméstico de 9 m² para trabajar 7-8 horas al día. No soy médico, fisioterapeuta
+      ni técnico de prevención de riesgos laborales.
+    </p>
+    <p>
+      Por eso, cuando hablo de dolor lumbar, cervicales o muñeca, lo hago desde la experiencia de usuario
+      y desde lo que he aprendido con mi fisioterapeuta. Si tienes dolor persistente, hormigueo o una lesión
+      diagnosticada, usa esta web como apoyo, no como sustituto de un profesional sanitario.
+    </p>
+
     <h2>Mi setup actual</h2>
     <p>
       Después de probar 5 sillas, 3 escritorios y más accesorios de los que quiero admitir, este es mi
       setup de trabajo diario:
     </p>
     <ul>
-      <li><strong>Silla:</strong> Autonomous ErgoChair Pro — la tercera que probé y la primera que me quitó el dolor lumbar. Llevo casi 2 años con ella y sigue como nueva.</li>
+      <li><strong>Silla:</strong> Autonomous ErgoChair Pro — la tercera que probé y la primera con la que pude trabajar jornadas largas sin acabar pendiente de la zona lumbar. Llevo casi 2 años con ella.</li>
       <li><strong>Escritorio:</strong> FlexiSpot E7 con tablero de bambú 140×70 cm. Lo alterno entre sentado y de pie unas 3-4 veces al día. El motor es silencioso y el bambú aguanta bien el uso diario.</li>
-      <li><strong>Monitor:</strong> BenQ PD2705U 27" 4K USB-C. Un solo cable al portátil que carga, transmite vídeo y conecta los periféricos. Cambió mi vida.</li>
+      <li><strong>Monitor:</strong> BenQ PD2705U 27" 4K USB-C. Un solo cable al portátil carga, transmite vídeo y conecta los periféricos. Para mi forma de trabajar fue uno de los cambios más prácticos.</li>
       <li><strong>Teclado:</strong> Logitech Ergo K860. El diseño dividido me parecía raro los primeros días, pero la muñeca me lo agradeció en una semana.</li>
-      <li><strong>Ratón:</strong> Logitech MX Vertical. Pasé de ratón normal a vertical y el dolor de muñeca desapareció. No exagero.</li>
+      <li><strong>Ratón:</strong> Logitech MX Vertical. Pasé de ratón normal a vertical cuando el hormigueo de la muñeca derecha empezó a repetirse demasiado.</li>
       <li><strong>Auriculares:</strong> Sony WH-1000XM5. Cancelación de ruido imprescindible cuando los vecinos deciden hacer obras.</li>
-      <li><strong>Iluminación:</strong> BenQ ScreenBar Halo. La uso incluso de día. La diferencia en fatiga visual después de 8 horas es brutal.</li>
+      <li><strong>Iluminación:</strong> BenQ ScreenBar Halo. La uso incluso de día porque en mi despacho la luz natural no siempre cae donde toca.</li>
     </ul>
     <p>
       Desde que nació mi hijo, tener un despacho bien montado dejó de ser un capricho y se convirtió en
@@ -119,6 +130,11 @@ const aboutPageSchema = {
       No tengo productos favoritos ni marcas patrocinadoras. Recomiendo lo que creo que es la mejor opción
       para cada necesidad y presupuesto. Si algo no me convence, lo digo.
     </p>
+    <p>
+      He separado el proceso en dos páginas para que no tengas que fiarte de una promesa genérica:
+      <a href="/metodologia-editorial/">metodología editorial</a> y
+      <a href="/como-probamos-productos/">cómo probamos y elegimos productos</a>.
+    </p>
 
     <h2>Cómo se financia Tu Espacio de Trabajo</h2>
     <p>
@@ -130,6 +146,11 @@ const aboutPageSchema = {
       Este modelo me permite mantener el sitio gratuito y sin publicidad intrusiva. La comisión es la misma
       independientemente del producto que recomiende, así que no tengo incentivo para recomendar algo peor
       solo porque pague más.
+    </p>
+    <p>
+      Tampoco acepto pagos por colocar productos en una posición concreta. Si no he probado un producto
+      directamente, intento explicarlo en el artículo o dejar claro que la recomendación se basa en análisis
+      de fichas, disponibilidad, opiniones de usuarios y comparación con alternativas conocidas.
     </p>
 
     <h2>Mi compromiso</h2>
@@ -143,26 +164,21 @@ const aboutPageSchema = {
 
     <h2>Contacto y redes</h2>
     <p>
-      Si tienes alguna pregunta, sugerencia o simplemente quieres contarme tu experiencia con algún
-      producto, puedes escribirme a
-      <strong><!--email_off-->contacto@tuespaciodetrabajo.com<!--email_on--></strong>.
-    </p>
-    <p>
-      También puedes encontrarme en
+      Puedes encontrarme en
       <a href="https://www.linkedin.com/in/david-rubio-mota/" rel="me noopener" target="_blank">LinkedIn (David Rubio)</a>,
       donde comparto novedades del sitio y respondo dudas profesionales sobre teletrabajo y ergonomía.
     </p>
     <p>
-      Me interesa saber de ti: ¿cómo es tu setup? ¿Qué producto te cambió la vida trabajando
-      desde casa? ¿Qué guía te gustaría que escribiera? Respondo todos los emails.
+      Me interesa saber de ti: cómo es tu setup, qué problema te cuesta resolver y qué guía te gustaría
+      encontrar en español sin tener que leer diez comparativas iguales.
     </p>
 
-    <h2>Empieza a explorar</h2>
-    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem;">
-      <a href="/sillas/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="sillas" size={16} /> Sillas ergonómicas</a>
-      <a href="/escritorios/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="escritorios" size={16} /> Escritorios</a>
-      <a href="/guias/" class="affiliate-button" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;"><CategoryIcon categoria="guias" size={16} /> Guías</a>
-      <a href="/articulos/" class="affiliate-button secondary" style="font-size: 0.9rem; padding: 0.65rem 1.25rem;">Todos los artículos</a>
-    </div>
+    <h2>Por dónde empezar</h2>
+    <ul>
+      <li><a href="/guias/ergonomia-teletrabajo-postura-correcta/">Guía de ergonomía para teletrabajadores</a></li>
+      <li><a href="/guias/ajustar-silla-oficina-correctamente/">Cómo ajustar una silla de oficina correctamente</a></li>
+      <li><a href="/herramientas/calculadora-ergonomia/">Calculadora de ergonomía</a></li>
+      <li><a href="/guias/mi-setup-home-office-2026/">Mi setup de home office</a></li>
+    </ul>
   </article>
 </Base>

@@ -1,9 +1,84 @@
 ---
 name: Estado sesión activa plan backlinks Tier 1
-description: Dia 27 (2026-05-31): about.json bloqueado; ultimo karma manual=24. RSS confirma 3/3 comentarios del 30 may visibles. Paquete de 1 reply + 2 comentarios sin link preparado.
+description: Dia 28 (2026-06-01): GSC sin recovery; home recrawleada 31 may pero internas siguen sin indexar. Reddit about.json bloqueado; comentarios 31 may visibles; paquete de 3 comentarios sin link preparado.
 type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
+
+## Update Dia 28 (2026-06-01) — home recrawleada sin recovery + paquete Reddit sin link
+
+Contexto SEO del dia:
+- GSC Search Analytics `2026-05-14` -> `2026-05-31`: sin filas devueltas.
+- GA4 `2026-05-14` -> `2026-05-31`: 10 sesiones, todas `Direct`; 0 `Organic Search`.
+- URL Inspection: `/` sigue indexada y fue recrawleada el `2026-05-31T23:50:04Z`; monitor, ergonomia, silla, escritorio elevable y dolor espalda siguen `Rastreada: actualmente sin indexar`.
+- Decision: mantener pausa editorial; hoy no se publica `teletrabajo-con-ninos-en-casa`. Foco: autoridad externa/warmup Reddit.
+
+Karma / cuenta Reddit:
+- `about.json` para `Dear_Potato8535` con UA Safari vuelve a devolver pantalla `You've been blocked by network security`; no se pudo leer karma live.
+- Ultimo dato manual confirmado por el usuario: `total_karma=24`. Mantener regla: **0 links** hasta confirmar `total_karma >=50`.
+- RSS de comentarios funciona. Los comentarios del 31 may aparecen visibles:
+  - `r/StandingDesks` `1tt1epz` -> `op005h5`
+  - `r/OfficeChairs` `1tsjv2d` -> `op05s7r`
+- El reply adicional preparado para `r/Ergonomics` `1tr8njw` sigue sin aparecer en RSS de cuenta. El comentario base del 30 may si aparece como `ootugv4`. No republicar el reply sin revisar manualmente desde la cuenta para evitar duplicado.
+
+Revision de replies:
+- `scripts/reddit_replies.py replies` ejecutado con acceso de red; 41 hilos tracked revisados.
+- No hay reply directo prioritario que exija respuesta. Hay agradecimientos y conversaciones de terceros, pero nada que convenga forzar.
+
+Recon Reddit via RSS:
+- Subagente + recon local por RSS revisaron `r/OfficeChairs`, `r/StandingDesks`, `r/Ergonomics`, `r/homeoffice`, `r/askspain`.
+- Mejores candidatos sin link:
+  - `r/OfficeChairs` `1ttq0zy` — pareja con back pain, presupuesto limitado, pide "starter pack" para comprar silla.
+  - `r/OfficeChairs` `1ttjtqf` — 49 años, fusion L4/L5, silla Walmart hundida, presupuesto 500-700 USD, triple monitor.
+  - `r/Ergonomics` `1ts0svx` — quiere standing desk converter barato, trabaja/juega en escritorio, cuello/espalda, se mueve entre mesa/comedor/cama.
+  - Candidatos alternativos: `r/OfficeChairs` `1tt7i1i` (IKEA Jarvfjallet estudiante Canada), `r/StandingDesks` `1ttdd2e` (Loctec vs Jiecang motor).
+- Descartados: hilos con pinta de promo/app/tienda, showcases sin pregunta clara, posts ya comentados por la cuenta, y `r/askspain` por falta de encaje reciente suficiente.
+
+Comentarios preparados, todos SIN link:
+
+1. `r/OfficeChairs` `1ttq0zy` — "Looking for a comfortable office chair for my bf who is suffering from back pain"
+   - URL hilo: https://www.reddit.com/r/OfficeChairs/comments/1ttq0zy/looking_for_a_comfortable_office_chair_for_my_bf/
+   - Texto:
+     > I would treat the return policy as part of the chair here, especially because you are buying it for someone else and he already has back pain.
+     >
+     > There is not really a universal starter-pack chair. The first filter I would use is: can he sit with his feet supported, hips slightly above knees, and arms relaxed at the desk without the shoulders creeping up? If the answer is no, even a nicer chair can feel wrong because the desk height is fighting it.
+     >
+     > With a limited budget, I would look at used or refurbished office chairs before buying a random new gaming chair. Steelcase Amia, Leap v2, Haworth Zody/Soji, and Herman Miller Mirra/Aeron can all be good depending on body shape, but fit matters more than the logo. I would rather buy a slightly ugly used chair that adjusts properly than a new chair with fake lumbar bumps and no seat-depth adjustment.
+     >
+     > The features I would not skip: adjustable seat height, seat depth if possible, armrests that go low enough, and a backrest/lumbar that does not shove him forward. If you can, have him test it for at least 20 minutes. Five minutes in a shop tells you almost nothing.
+     >
+     > Also, if his back pain is persistent or sharp, I would not expect the chair alone to fix it. A good chair can stop making things worse, which is already a big deal, but it is not magic.
+
+2. `r/OfficeChairs` `1ttjtqf` — "Office Chair for great lumbar support in the $500-$700 range"
+   - URL hilo: https://www.reddit.com/r/OfficeChairs/comments/1ttjtqf/office_chair_for_great_lumbar_support_in_the/
+   - Texto:
+     > With an L4/L5 fusion, I would be careful about shopping by "strong lumbar support" alone. Strong support in the wrong spot can feel good for ten minutes and then become the thing you are trying to escape from.
+     >
+     > The broken gas lift is probably making everything worse too. If the chair drops to the lowest height, your triple-monitor setup is basically forcing you to work from a crouch. Before choosing a model, I would measure the height where your elbows can rest around desk height without your shoulders lifting, then make sure the chair can actually sit there with your feet supported. That matters as much as the backrest.
+     >
+     > In the $500-$700 range, I would look hard at refurbished commercial chairs with a real return policy: Steelcase Leap v2, Steelcase Amia, Haworth Zody, maybe a Mirra 2 if mesh works for you. At 6' / 220 lb, seat depth and width are worth checking, not just lumbar. The Leap is popular partly because the seat depth gives you more room to dial in the fit.
+     >
+     > I would avoid anything that only has a big fixed lumbar pad and no way to tune it. You want boring adjustability: seat height, seat depth, arm height, recline tension, and lumbar that can move or at least not fight your spine.
+     >
+     > Given the fusion history, I would also buy only from somewhere that lets you return it after real use. One workday will tell you more than a hundred reviews.
+
+3. `r/Ergonomics` `1ts0svx` — "Budget standing desk converter recommendations?"
+   - URL hilo: https://www.reddit.com/r/Ergonomics/comments/1ts0svx/budget_standing_desk_converter_recommendations/
+   - Texto:
+     > A converter can work, but I would be picky about typing height. That is where a lot of them go wrong.
+     >
+     > If the converter raises your monitor nicely but leaves the keyboard and mouse too high, your neck/back problem can turn into a shoulder/wrist problem. Before buying, measure two things on your current desk: where your elbows naturally sit when your shoulders are relaxed, and where your screen should be when you are not looking down. Then compare those numbers with the converter's keyboard tray height, not just the max monitor height.
+     >
+     > Since you already have a sturdy desk with drawers, I get why you do not want to replace it. I would still avoid the super tiny converters if you work and game there. They look fine in product photos, then you add keyboard, mouse, maybe a laptop, and suddenly everything is cramped and you are reaching again.
+     >
+     > The moving between desk, dining table and bed is the bit I would try to stop first. I have done that when my setup felt uncomfortable, and it usually just spreads the problem around. One stable setup that lets you change position a couple of times is better than four bad positions.
+     >
+     > If the Flexispot/Desky options fit your actual heights and have enough surface for your keyboard and mouse, I would choose the one with less wobble and easier return, not the one with the prettiest spec sheet. $580 for a converter feels hard to justify when a full desk or chair is in the same range.
+
+Pendiente:
+- Usuario publica manualmente 2-3 comentarios y confirma cuales.
+- Tras publicar, verificar RSS publico de cuenta y anotar IDs visibles.
+- Si el usuario puede verlo en navegador, confirmar karma manual. Mantener 0 links hasta `total_karma >=50`.
 
 ## Update Dia 27 (2026-05-31) — GSC sin recovery + paquete Reddit sin link
 

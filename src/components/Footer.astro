@@ -26,7 +26,7 @@ const year = new Date().getFullYear();
       </div>
 
       <nav class="footer-col" aria-label="Categorias">
-        <p class="footer-heading">Categorias</h4>
+        <p class="footer-heading">Categorias</p>
         <ul class="footer-links" role="list">
           {categorias.map(c => (
             <li><a href={c.href}>{c.label}</a></li>
@@ -35,17 +35,19 @@ const year = new Date().getFullYear();
       </nav>
 
       <nav class="footer-col" aria-label="Explorar">
-        <p class="footer-heading">Explorar</h4>
+        <p class="footer-heading">Explorar</p>
         <ul class="footer-links" role="list">
           <li><a href="/guias/">Guías</a></li>
           <li><a href="/herramientas/">Herramientas</a></li>
           <li><a href="/articulos/">Todos los artículos</a></li>
           <li><a href="/sobre-mi/">Sobre mí</a></li>
+          <li><a href="/metodologia-editorial/">Metodología editorial</a></li>
+          <li><a href="/como-probamos-productos/">Cómo probamos productos</a></li>
         </ul>
       </nav>
 
       <nav class="footer-col" aria-label="Informacion legal">
-        <p class="footer-heading">Legal</h4>
+        <p class="footer-heading">Legal</p>
         <ul class="footer-links" role="list">
           <li><a href="/politica-privacidad/">Privacidad</a></li>
           <li><a href="/aviso-legal/">Aviso legal</a></li>
@@ -55,10 +57,10 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footer-affiliate-notice">
-      ⚠️ <strong>Aviso de afiliados:</strong> tuespaciodetrabajo.com participa en el
-      Programa de Afiliados de Amazon EU. Cuando
-      compras a través de nuestros enlaces podemos recibir una comisión sin coste
-      adicional para ti. Esto nos ayuda a mantener el sitio gratuito.
+      <strong>Aviso de afiliados:</strong> tuespaciodetrabajo.com participa en el
+      Programa de Afiliados de Amazon EU. Cuando compras a través de nuestros enlaces
+      podemos recibir una comisión sin coste adicional para ti. No aceptamos pagos
+      por colocar productos en una posición concreta.
     </div>
 
     <div class="footer-bottom">

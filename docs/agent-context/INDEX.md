@@ -21,6 +21,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Calendario de publicación](project_content_calendar.md) — Mapa fecha→artículo POST-recovery, actualmente suspendido por la auditoría del 24 may. Para "vamos con el de hoy", leer primero la auditoría.
 - [Plan Recovery Indexación](project_recovery_plan.md) — Estado plan tras colapso indexación 06 may. Bloques A-E.
 - [Sesión recovery handoff](project_recovery_session_state.md) — Actualizado 27 may: monitor recrawleado post-mejora pero sigue sin indexar; se mantiene pausa editorial.
+- [Plan Recovery Indexación v2](project_recovery_plan_v2.md) — Sprint agresivo 10-14 días tras recrawl de home 31 may sin indexación de internas. Prevalece para próximas acciones.
 - [Plan recovery E-E-A-T](project_eeat_recovery_plan.md) — Refactor de 15 artículos "Rastreada-no-indexada".
 - [Plan backlinks Tier 1](project_backlinks_plan.md) — Para "vamos con el plan de backlinks".
 - [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 27 may: karma Reddit 24; 3 comentarios de warmup sin link publicados y visibles en RSS.

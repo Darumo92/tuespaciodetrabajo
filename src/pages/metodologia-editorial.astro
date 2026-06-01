@@ -1,0 +1,137 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Metodología editorial', item: `${siteUrl}/metodologia-editorial/` },
+  ],
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Metodología editorial',
+  description: 'Cómo investigamos, escribimos y actualizamos las guías y comparativas de Tu Espacio de Trabajo.',
+  url: `${siteUrl}/metodologia-editorial/`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Tu Espacio de Trabajo',
+    url: siteUrl,
+  },
+  about: [
+    'metodología editorial',
+    'ergonomía para teletrabajo',
+    'comparativas de productos home office',
+    'transparencia editorial',
+  ],
+};
+---
+
+<Base
+  title="Metodología editorial — Tu Espacio de Trabajo"
+  description="Cómo investigamos, escribimos y actualizamos guías y comparativas de home office, ergonomía y productos para teletrabajo."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(webPageSchema)} slot="head" />
+
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Metodología editorial</span>
+    </nav>
+
+    <h1>Metodología editorial</h1>
+
+    <p>
+      Tu Espacio de Trabajo publica guías y comparativas para teletrabajadores en España. El objetivo
+      no es llenar la web de listas de productos, sino ayudar a decidir qué merece la pena cambiar
+      en un despacho real: silla, mesa, pantalla, luz, periféricos y hábitos.
+    </p>
+    <p>
+      La web la escribe David Rubio Mota, ingeniero de software y teletrabajador desde 2019.
+      Puedes leer el contexto completo en la página <a href="/sobre-mi/">Sobre mí</a>. La pieza
+      principal de referencia es la <a href="/guias/ergonomia-teletrabajo-postura-correcta/">guía de ergonomía para teletrabajadores</a>,
+      porque resume el enfoque práctico del sitio sin depender de recomendaciones afiliadas.
+    </p>
+
+    <h2>Cómo decidimos qué publicar</h2>
+    <p>
+      Priorizamos temas que resuelven problemas habituales del teletrabajo: dolor de espalda,
+      mala postura, escritorios demasiado pequeños, monitores mal colocados, calor en verano,
+      ruido en casa o dudas antes de comprar una silla.
+    </p>
+    <p>
+      Antes de escribir o actualizar una pieza revisamos si ya existe un artículo que cubre esa duda.
+      Si el tema se solapa demasiado, preferimos mejorar la página existente antes que publicar otra
+      variación casi igual.
+    </p>
+
+    <h2>Fuentes que usamos</h2>
+    <p>
+      Cada artículo combina varias fuentes. No todas tienen el mismo peso, y por eso intentamos
+      explicar de dónde sale cada recomendación.
+    </p>
+    <ul>
+      <li><strong>Experiencia propia:</strong> setup real de David, pruebas en su despacho de 9 m² en Rubí y ajustes hechos durante años de teletrabajo.</li>
+      <li><strong>Fichas técnicas:</strong> medidas, rangos de altura, peso soportado, garantía, materiales, conectividad y compatibilidad.</li>
+      <li><strong>Manual o documentación del fabricante:</strong> especialmente en escritorios elevables, brazos de monitor, sillas y electrónica.</li>
+      <li><strong>Opiniones de compradores:</strong> patrones repetidos en reseñas verificadas, tanto positivos como negativos.</li>
+      <li><strong>Fuentes externas:</strong> INSST, IBV, OMS, Cornell Ergonomics y documentación técnica cuando el tema es ergonomía o salud postural.</li>
+      <li><strong>Conversaciones reales:</strong> dudas de lectores, compañeros de teletrabajo y comunidades donde se habla de home office.</li>
+    </ul>
+
+    <h2>Probado, analizado y descartado</h2>
+    <p>
+      No todos los productos de una comparativa han pasado por nuestro despacho. Cuando un producto se
+      ha probado directamente, lo indicamos en el texto. Cuando no, la recomendación se basa en datos
+      técnicos, disponibilidad, opiniones de usuarios y comparación con alternativas conocidas.
+    </p>
+    <p>
+      En productos caros, como sillas y escritorios, también damos peso a la política de devolución y a
+      la facilidad de encontrar recambios o soporte. Una silla puede parecer buena sobre el papel y aun
+      así no encajar con tu cuerpo.
+    </p>
+
+    <h2>Cómo actualizamos el contenido</h2>
+    <p>
+      Actualizamos una guía cuando cambia algo que afecta de verdad a la decisión del lector:
+      disponibilidad, producto descatalogado, nuevo modelo relevante, error detectado, cambio de precio
+      importante o aprendizaje nuevo tras usar un producto.
+    </p>
+    <p>
+      La fecha <code>actualizadoEn</code> solo se añade cuando hay una revisión real. No cambiamos fechas
+      en bloque para aparentar frescura.
+    </p>
+
+    <h2>Afiliación y recomendaciones</h2>
+    <p>
+      Algunos enlaces son de afiliado. Si compras desde ellos, podemos recibir una comisión sin coste
+      adicional para ti. Eso no cambia el precio ni garantiza que un producto aparezca mejor situado.
+    </p>
+    <p>
+      No aceptamos pagos por colocar productos en una posición concreta. Si una opción no encaja para
+      un perfil de usuario, lo decimos aunque tenga enlace de afiliado.
+    </p>
+    <p>
+      Para más detalle sobre productos, pruebas y limitaciones, puedes leer
+      <a href="/como-probamos-productos/">cómo probamos y elegimos productos</a>.
+    </p>
+
+    <h2>Correcciones</h2>
+    <p>
+      Si detectamos un error, lo corregimos en la página afectada y, cuando el cambio es relevante,
+      queda reflejado en la fecha de actualización del artículo.
+    </p>
+    <p>
+      También revisamos productos que dejan de estar disponibles o que ya no encajan con la recomendación
+      original. En esos casos preferimos sustituirlos por una alternativa actual antes que mantener una
+      recomendación rota.
+    </p>
+  </article>
+</Base>

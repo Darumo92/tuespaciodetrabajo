@@ -6,6 +6,56 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
 ## Proxima accion (despues de Sab 30 may 2026)
 
+Update 2026-06-01 tarde — Recovery v2 Dia 0 implementado:
+
+- Implementado bloque trust site-level del Plan Recovery v2.
+- Nuevas paginas indexables:
+  - `/metodologia-editorial/`
+  - `/como-probamos-productos/`
+- `/sobre-mi/` reforzada con:
+  - nombre completo David Rubio Mota;
+  - limites claros: no medico/fisio/PRL;
+  - enlaces a metodologia editorial y pruebas de productos;
+  - claims personales suavizados;
+  - email plano eliminado de esta pagina;
+  - enlaces finales a URLs concretas en vez de categorias.
+- Footer actualizado:
+  - enlaces globales a las dos paginas de metodologia desde todo el sitio;
+  - disclosure afiliado mas claro: no se aceptan pagos por posicionar productos.
+- URL test `/guias/ergonomia-teletrabajo-postura-correcta/` enlaza ahora a metodologia editorial y como probamos productos, sin CTAs afiliados nuevos y sin `actualizadoEn`.
+- SEO engine changelog actualizado.
+- Build OK: `npm run build`, 49 paginas; sitemap incluye `/metodologia-editorial/` y `/como-probamos-productos/`; CSP hashes regenerados sin cambio pendiente en `public/_headers`.
+
+Proximos pasos:
+1. Deploy/push de estos cambios.
+2. Tras deploy, solicitar indexacion manual solo de:
+   - `https://tuespaciodetrabajo.com/metodologia-editorial/`
+   - `https://tuespaciodetrabajo.com/como-probamos-productos/`
+   - `https://tuespaciodetrabajo.com/sobre-mi/`
+   - `https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/`
+3. Siguiente bloque recomendado: mejora profunda de la URL test o primer enlace externo crawlable en espanol (LinkedIn/Quora ES), no articulos nuevos.
+
+Update 2026-06-01:
+
+- Hoy tocaria calendario `teletrabajo-con-ninos-en-casa`, pero la pausa editorial sigue vigente: no publicar articulos nuevos hasta que al menos 3 URLs prioritarias esten indexadas.
+- GSC Search Analytics `2026-05-14` -> `2026-05-31`: sin filas devueltas; blackout de rendimiento continua.
+- GA4 `2026-05-14` -> `2026-05-31`: 10 sesiones, 6 filas, todas `Direct`; 0 `Organic Search`.
+- GSC live:
+  - `/` sigue `Enviada e indexada` y ya fue recrawleada el `2026-05-31T23:50:04Z` tras el bloque home->pillars.
+  - `/accesorios/mejor-monitor-trabajar-desde-casa/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-26T12:07:06Z`, referrer solo home.
+  - `/guias/ergonomia-teletrabajo-postura-correcta/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-25T22:44:40Z`, referrer Quora detectado.
+  - `/sillas/mejor-silla-ergonomica-calidad-precio/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-13T09:10:44Z`.
+  - `/escritorios/mejor-escritorio-elevable-electrico/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-04-20T19:33:50Z`.
+  - `/guias/dolor-espalda-trabajar-casa/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-13T09:12:45Z`.
+- Lectura: Google ya vio la home actualizada, pero el bloque home->pillars no ha bastado por si solo para indexar internas. Refuerza que el foco operativo debe seguir en autoridad externa/warmup, no en mas publicaciones.
+- Cloudflare Pages MCP/API consultado; sigue fallando con `Authentication error` (`10000`). No cambia diagnostico porque GSC confirma fetch correcto y recrawl mobile de la home.
+- Decision: mantener pausa editorial; continuar Backlinks Tier 1 / Reddit warmup sin enlaces.
+
+Proximos pasos:
+1. No publicar `teletrabajo-con-ninos-en-casa` ni recuperar calendario hasta senal objetiva de indexacion.
+2. No repetir solicitudes de indexacion de `/` ni de URLs recrawleadas sin cambios nuevos.
+3. Ejecutar paquete Reddit sin link preparado en `project_backlinks_session_state.md`; seguir sin links hasta confirmar `total_karma >=50`.
+
 Update 2026-05-31:
 
 - GSC Search Analytics `2026-05-14` -> `2026-05-30`: sin filas devueltas; el blackout de rendimiento continua.

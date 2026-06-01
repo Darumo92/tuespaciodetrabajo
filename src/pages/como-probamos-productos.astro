@@ -1,0 +1,159 @@
+---
+import Base from '@/layouts/Base.astro';
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Cómo probamos productos', item: `${siteUrl}/como-probamos-productos/` },
+  ],
+};
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Cómo probamos productos',
+  description: 'Criterios de prueba y análisis para sillas, escritorios, monitores, iluminación y accesorios de home office.',
+  url: `${siteUrl}/como-probamos-productos/`,
+  isPartOf: {
+    '@type': 'WebSite',
+    name: 'Tu Espacio de Trabajo',
+    url: siteUrl,
+  },
+  about: [
+    'pruebas de productos',
+    'sillas ergonómicas',
+    'escritorios elevables',
+    'monitores para teletrabajo',
+    'accesorios de home office',
+  ],
+};
+---
+
+<Base
+  title="Cómo probamos productos — Tu Espacio de Trabajo"
+  description="Criterios y límites de nuestras pruebas de sillas, escritorios, monitores, iluminación y accesorios para teletrabajo."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(webPageSchema)} slot="head" />
+
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Cómo probamos productos</span>
+    </nav>
+
+    <h1>Cómo probamos productos</h1>
+
+    <p>
+      Probamos productos de home office cuando podemos hacerlo de forma razonable y útil. Cuando no los
+      tenemos físicamente, los analizamos con una metodología separada: ficha técnica, disponibilidad en
+      España, opiniones de compradores, garantías, limitaciones y comparación con productos que sí conocemos.
+    </p>
+    <p>
+      Esta distinción es importante. Una silla usada durante meses no aporta la misma evidencia que una
+      silla analizada por especificaciones. Por eso intentamos dejar claro qué sabemos por uso directo y
+      qué sabemos por investigación.
+    </p>
+
+    <h2>Productos usados directamente</h2>
+    <p>
+      El setup actual de David incluye una silla Autonomous ErgoChair Pro, un escritorio FlexiSpot E7 con
+      tablero de bambú 140×70, un monitor BenQ PD2705U de 27", un teclado Logitech Ergo K860, un ratón
+      Logitech MX Vertical, auriculares Sony WH-1000XM5 y una BenQ ScreenBar Halo.
+    </p>
+    <p>
+      Esos productos sirven como referencia práctica: medidas reales del despacho, altura de mesa, uso de
+      7-8 horas al día, alternancia sentado/de pie y ajustes que han funcionado o no en un piso normal de Rubí.
+      Parte de ese criterio está resumido en la <a href="/guias/ergonomia-teletrabajo-postura-correcta/">guía de ergonomía para teletrabajadores</a>.
+    </p>
+
+    <h2>Qué medimos en sillas</h2>
+    <ul>
+      <li>Rango de altura y si permite apoyar los pies sin forzar la postura.</li>
+      <li>Soporte lumbar: si se puede regular y si empuja en el punto correcto.</li>
+      <li>Profundidad del asiento y espacio detrás de las rodillas.</li>
+      <li>Reposabrazos: altura mínima, anchura, estabilidad y si permiten relajar los hombros.</li>
+      <li>Comodidad tras sesiones largas, no solo la primera impresión de cinco minutos.</li>
+      <li>Garantía, devolución y facilidad para encontrar recambios.</li>
+    </ul>
+
+    <h2>Qué miramos en escritorios</h2>
+    <ul>
+      <li>Estabilidad sentado y de pie, especialmente con monitor o brazo de monitor.</li>
+      <li>Rango mínimo y máximo de altura.</li>
+      <li>Profundidad del tablero: para teletrabajar, 70 cm suelen ser más útiles que 60 cm.</li>
+      <li>Ruido del motor y suavidad del movimiento en escritorios elevables.</li>
+      <li>Montaje, gestión de cables y calidad del tablero.</li>
+      <li>Garantía, servicio posventa y disponibilidad en España.</li>
+    </ul>
+
+    <h2>Qué revisamos en monitores y brazos</h2>
+    <p>
+      En monitores nos importa tanto la ergonomía como la imagen. Un monitor puede tener buen panel y ser
+      mala compra para teletrabajo si el soporte no regula altura o si obliga a trabajar demasiado cerca.
+    </p>
+    <ul>
+      <li>Tamaño, resolución y distancia de uso razonable.</li>
+      <li>Regulación de altura, inclinación y compatibilidad VESA.</li>
+      <li>Conectividad USB-C, HDMI, DisplayPort y carga para portátil.</li>
+      <li>Uso con uno o dos monitores.</li>
+      <li>Reflejos, brillo y comodidad visual durante jornadas largas.</li>
+    </ul>
+
+    <h2>Qué miramos en iluminación y ambiente</h2>
+    <p>
+      En iluminación buscamos reducir fatiga visual y reflejos, no crear una oficina de catálogo. La luz
+      debe funcionar en una habitación real, con ventanas, sombras y cambios de luz durante el día.
+    </p>
+    <ul>
+      <li>Temperatura de color y regulación de intensidad.</li>
+      <li>Reflejos sobre pantalla y mesa.</li>
+      <li>Facilidad de colocación en escritorios pequeños.</li>
+      <li>Si molesta en videollamadas o al trabajar de noche.</li>
+      <li>Consumo y ruido si el producto tiene ventilador o electrónica activa.</li>
+    </ul>
+
+    <h2>Cómo tratamos precios y Amazon</h2>
+    <p>
+      Los precios de Amazon cambian a menudo. Por eso evitamos prometer importes exactos como si fueran
+      permanentes. Cuando actualizamos una comparativa, verificamos disponibilidad y sustituimos productos
+      agotados o poco útiles por alternativas reales.
+    </p>
+    <p>
+      Si un producto aparece en una guía, no significa que sea perfecto. Significa que, para un perfil
+      concreto, nos parece una opción razonable frente a sus alternativas.
+    </p>
+
+    <h2>Qué descartamos</h2>
+    <ul>
+      <li>Productos con especificaciones confusas o demasiado vagas.</li>
+      <li>Modelos sin disponibilidad estable en España.</li>
+      <li>Opciones con muchas quejas repetidas sobre roturas, devoluciones o piezas críticas.</li>
+      <li>Productos que solo destacan por precio pero comprometen demasiado la ergonomía.</li>
+      <li>Recomendaciones que dependen de datos de precio no verificables.</li>
+    </ul>
+
+    <h2>Límites de nuestras pruebas</h2>
+    <p>
+      No somos un laboratorio. No hacemos ensayos de resistencia certificados ni sustituimos el criterio
+      de un fisioterapeuta, médico o técnico de prevención. Nuestro valor está en traducir datos técnicos
+      y experiencia real de teletrabajo a decisiones prácticas.
+    </p>
+    <p>
+      Si tienes dolor persistente, hormigueo, una lesión diagnosticada o una condición previa, una guía de
+      compra no debe ser tu única referencia. Empieza por un profesional sanitario y usa nuestras guías
+      como apoyo para entender mejor tu puesto de trabajo.
+    </p>
+
+    <h2>Transparencia editorial</h2>
+    <p>
+      Esta página complementa la <a href="/metodologia-editorial/">metodología editorial</a>. Allí explicamos
+      cómo decidimos temas, cómo actualizamos artículos y cómo gestionamos la afiliación.
+    </p>
+  </article>
+</Base>
