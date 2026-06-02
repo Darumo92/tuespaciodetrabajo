@@ -24,13 +24,16 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 - Verificacion live inmediata post-push: produccion aun no servia la nueva seccion; esperar deploy/propagacion de Cloudflare Pages y comprobar de nuevo.
 - Usuario confirma que ya hizo la indexacion manual indicada tras la mejora.
 - Segunda verificacion live en la conversacion: produccion todavia no muestra `Plan de 7 dias` ni sitemap `lastmod` de `2026-06-02`; repo limpio/sincronizado. Sospecha: deploy de Cloudflare Pages pendiente/no actualizado.
-- Usuario confirma que publico el post publico de LinkedIn de David enlazando la URL test. Pendiente: obtener URL exacta del post y verificar que abre sin login/incognito.
+- Usuario confirma que publico el post publico de LinkedIn de David enlazando la URL test.
+- URL compartida: `https://www.linkedin.com/posts/david-rubio-mota_en-2020-empec%C3%A9-a-teletrabajar-desde-la-mesa-share-7467574822030561281-9lu8/`
+- Verificacion HTTP: la URL responde 307 y redirige a una URL canonica publica con HTTP 200:
+  `https://es.linkedin.com/posts/david-rubio-mota_gu%C3%ADa-de-ergonom%C3%ADa-para-teletrabajadores-activity-7467574822773108736-RX1s`
 
 Proximos pasos:
 1. Confirmar que produccion sirve la seccion `Plan de 7 dias para corregir tu postura sin comprar nada`.
 2. Revisar Cloudflare Pages/deploy si sigue sin actualizar tras unos minutos.
 3. Reenviar manualmente `https://tuespaciodetrabajo.com/sitemap-index.xml` en GSC si sigue con ultima descarga del 19 may.
-4. Verificar URL publica del post de LinkedIn y monitorizar si GSC lo detecta como referrer de la URL test en los proximos dias. Reddit sigue sin links hasta confirmar `total_karma >=50`.
+4. Monitorizar si GSC detecta LinkedIn como referrer de la URL test en los proximos dias. Reddit sigue sin links hasta confirmar `total_karma >=50`.
 
 ## Proxima accion (despues de Sab 30 may 2026)
 
