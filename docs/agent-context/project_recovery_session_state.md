@@ -20,10 +20,12 @@ originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
   - añadido `actualizadoEn: 2026-06-02` por cambio real;
   - añadida seccion `Plan de 7 dias para corregir tu postura sin comprar nada`, con tabla de diagnostico, mediciones por dia y criterios para decidir compra/fisio.
 - Build OK: `npm run build`, 49 paginas; sitemap `lastmod` actualizado a `2026-06-02T11:40:00.670Z`; CSP hashes regenerados sin cambio pendiente en `public/_headers`.
+- Commit/push OK: `ac2963b content: improve ergonomics recovery test guide` enviado a `origin/main`.
+- Verificacion live inmediata post-push: produccion aun no servia la nueva seccion; esperar deploy/propagacion de Cloudflare Pages y comprobar de nuevo.
 
 Proximos pasos:
-1. Commit + push de la mejora de la URL test.
-2. Tras deploy, solicitar indexacion manual solo de:
+1. Confirmar que produccion sirve la seccion `Plan de 7 dias para corregir tu postura sin comprar nada`.
+2. Tras deploy visible, solicitar indexacion manual solo de:
    - `https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/`
    - `https://tuespaciodetrabajo.com/como-probamos-productos/`
    - `https://tuespaciodetrabajo.com/sobre-mi/`
