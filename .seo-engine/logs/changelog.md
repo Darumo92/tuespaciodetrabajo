@@ -196,3 +196,9 @@
 **Files:** src/pages/metodologia-editorial.astro, src/pages/como-probamos-productos.astro, src/pages/sobre-mi.astro, src/components/Footer.astro, src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, docs/agent-context/project_recovery_plan_v2.md, logs/changelog.md
 **Summary:** Creadas paginas rastreables de metodologia editorial y pruebas de productos; reforzada pagina Sobre David con limites, autoria y enlaces a metodologia; footer actualizado para enlazar trust pages desde todo el sitio; guia test de ergonomia enlaza a las nuevas paginas sin anadir CTAs afiliados ni `actualizadoEn`.
 **Triggered by:** user
+
+## 2026-06-02 13:40
+**Action:** Recovery v2 Dia 1 — mejora profunda URL test ergonomia
+**Files:** src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, docs/agent-context/project_recovery_session_state.md, logs/changelog.md
+**Summary:** GSC/GA4 siguen sin recovery; se mejora la URL test informacional con una seccion accionable de plan de 7 dias para diagnosticar postura antes de comprar, y se anade `actualizadoEn: 2026-06-02` por cambio sustancial. Build OK, 49 paginas.
+**Triggered by:** user

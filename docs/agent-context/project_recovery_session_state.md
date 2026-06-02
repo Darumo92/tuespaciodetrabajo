@@ -4,6 +4,32 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Update 2026-06-02 — Recovery v2 Dia 1
+
+- GSC Search Analytics `2026-05-14` -> `2026-06-01`: sin filas devueltas; blackout de rendimiento continua.
+- GA4 `2026-05-14` -> `2026-06-01`: 10 sesiones, 7 usuarios activos, 5 engaged sessions, todas `Direct`; 0 `Organic Search`.
+- GSC live:
+  - `/` sigue `Enviada e indexada`, ultimo rastreo `2026-05-31T23:50:04Z`.
+  - `/guias/ergonomia-teletrabajo-postura-correcta/` sigue `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-05-25T22:44:40Z`, referrer externo Quora detectado.
+  - `/metodologia-editorial/` ya fue rastreada el `2026-06-01T14:37:22Z` y queda `Rastreada: actualmente sin indexar`.
+  - `/como-probamos-productos/` y `/sobre-mi/` todavia figuran como `Google no reconoce esta URL`, aunque ambas responden 200 en produccion.
+- GSC sitemaps: `sitemap-index.xml` sigue con ultima descarga/envio `2026-05-19`; sitemap live actualizado a `2026-06-01T14:34:07.762Z` antes de la mejora de hoy.
+- Cloudflare API/MCP probado otra vez: falla con `Authentication error` (`10000`); no cambia diagnostico porque curl live confirma 200 en paginas nuevas y GSC confirma rastreo correcto de home/metodologia.
+- Mejora profunda aplicada a la URL test:
+  - `src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx`
+  - añadido `actualizadoEn: 2026-06-02` por cambio real;
+  - añadida seccion `Plan de 7 dias para corregir tu postura sin comprar nada`, con tabla de diagnostico, mediciones por dia y criterios para decidir compra/fisio.
+- Build OK: `npm run build`, 49 paginas; sitemap `lastmod` actualizado a `2026-06-02T11:40:00.670Z`; CSP hashes regenerados sin cambio pendiente en `public/_headers`.
+
+Proximos pasos:
+1. Commit + push de la mejora de la URL test.
+2. Tras deploy, solicitar indexacion manual solo de:
+   - `https://tuespaciodetrabajo.com/guias/ergonomia-teletrabajo-postura-correcta/`
+   - `https://tuespaciodetrabajo.com/como-probamos-productos/`
+   - `https://tuespaciodetrabajo.com/sobre-mi/`
+3. Reenviar manualmente `https://tuespaciodetrabajo.com/sitemap-index.xml` en GSC si sigue con ultima descarga del 19 may.
+4. Siguiente accion de autoridad: publicar primer enlace externo crawlable fuera de Reddit, preferiblemente LinkedIn publico de David hacia la URL test; Reddit sigue sin links hasta confirmar `total_karma >=50`.
+
 ## Proxima accion (despues de Sab 30 may 2026)
 
 Update 2026-06-01 tarde — Recovery v2 Dia 0 implementado:
