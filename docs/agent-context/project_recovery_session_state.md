@@ -22,7 +22,7 @@ Backlinks Quora ES publicados hoy (3 respuestas, link contextual 1 por respuesta
 - `https://es.quora.com/Cu%C3%A1l-es-la-posici%C3%B3n-ideal-para-sentarse-frente-a-la-computadora-al-trabajar` -> `/guias/ergonomia-teletrabajo-postura-correcta/`
 
 Proximos pasos:
-1. Accion manual del usuario (API no permite Request Indexing): pedir indexacion en GSC de las 2 `Unknown to Google`: `https://tuespaciodetrabajo.com/como-probamos-productos/` y `https://tuespaciodetrabajo.com/sobre-mi/`.
+1. [HECHO 2026-06-03] Indexacion manual en GSC solicitada por el usuario para `https://tuespaciodetrabajo.com/como-probamos-productos/` y `https://tuespaciodetrabajo.com/sobre-mi/` (estaban `Unknown to Google`). Pendiente: monitorizar si pasan a rastreadas/indexadas en los proximos dias.
 2. Monitorizar re-crawl de la URL test y aparicion de Quora/LinkedIn como referrer de las 3 URLs destino en los proximos dias.
 3. Pausa editorial sigue vigente: no publicar articulos nuevos hasta >=3 URLs prioritarias indexadas. Reddit sin links hasta `total_karma >= 50`.
 4. Cadencia Quora: no mas de 3 respuestas/semana espaciadas 24h+; proxima tanda con ratio respuesta:link 2-3:1 (alguna sin link).
