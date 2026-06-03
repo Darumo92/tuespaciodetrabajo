@@ -4,6 +4,30 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Update 2026-06-03 — Recovery v2 Dia 2
+
+- Deploy Cloudflare resuelto: produccion ya sirve la seccion `Plan de 7 dias para corregir tu postura sin comprar nada` en la URL test y el sitemap live tiene `lastmod 2026-06-02T13:57:51.914Z`.
+- GSC sitemaps: `sitemap-index.xml` con `lastSubmitted 2026-06-02T12:17:21Z` y `lastDownloaded 2026-06-02T12:44:21Z`. Ya no figura el 19 may -> paso "reenviar sitemap" cerrado, no hace falta accion.
+- GSC Search Analytics `2026-05-16` -> `2026-06-02` (dim date): 0 impresiones/clicks todos los dias; blackout de rendimiento continua.
+- GSC live (index_inspect):
+  - `/guias/ergonomia-teletrabajo-postura-correcta/`: `Crawled - currently not indexed`, ultimo rastreo `2026-05-25T22:44:40Z`, referrer solo Quora ES. La mejora del 02 jun y el link de LinkedIn aun NO recogidos (no re-crawl desde 25 may). LinkedIn todavia NO aparece como referrer.
+  - `/metodologia-editorial/`: `Crawled - currently not indexed`, ultimo rastreo `2026-06-01T14:37:22Z`.
+  - `/como-probamos-productos/`: `URL is unknown to Google` (nunca rastreada pese a responder 200).
+  - `/sobre-mi/`: `URL is unknown to Google` (nunca rastreada pese a responder 200).
+- Trust pages live: `/metodologia-editorial/`, `/como-probamos-productos/`, `/sobre-mi/` responden 200 en produccion.
+
+Backlinks Quora ES publicados hoy (3 respuestas, link contextual 1 por respuesta, borradores pasados por humanizer). Metodo documentado en `reference_quora_es_workflow.md` (busqueda Brave `site:es.quora.com/`):
+- `https://es.quora.com/Qu%C3%A9-silla-para-PC-u-oficina-de-bajo-presupuesto-recomiendan` -> `/sillas/mejor-silla-ergonomica-calidad-precio/`
+- `https://es.quora.com/Cono-quitar-el-dolor-de-espalda-de-tanto-estar-sentado` -> `/guias/dolor-espalda-trabajar-casa/`
+- `https://es.quora.com/Cu%C3%A1l-es-la-posici%C3%B3n-ideal-para-sentarse-frente-a-la-computadora-al-trabajar` -> `/guias/ergonomia-teletrabajo-postura-correcta/`
+
+Proximos pasos:
+1. Accion manual del usuario (API no permite Request Indexing): pedir indexacion en GSC de las 2 `Unknown to Google`: `https://tuespaciodetrabajo.com/como-probamos-productos/` y `https://tuespaciodetrabajo.com/sobre-mi/`.
+2. Monitorizar re-crawl de la URL test y aparicion de Quora/LinkedIn como referrer de las 3 URLs destino en los proximos dias.
+3. Pausa editorial sigue vigente: no publicar articulos nuevos hasta >=3 URLs prioritarias indexadas. Reddit sin links hasta `total_karma >= 50`.
+4. Cadencia Quora: no mas de 3 respuestas/semana espaciadas 24h+; proxima tanda con ratio respuesta:link 2-3:1 (alguna sin link).
+
+---
 ## Update 2026-06-02 — Recovery v2 Dia 1
 
 - GSC Search Analytics `2026-05-14` -> `2026-06-01`: sin filas devueltas; blackout de rendimiento continua.

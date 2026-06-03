@@ -12,6 +12,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Config para usar MCPs de Cloudflare, GA y GSC.
 - [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/*.
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/*.
+- [Workflow Quora ES](reference_quora_es_workflow.md) — Encontrar preguntas REALES vía Brave `site:es.quora.com/` (WebSearch inventa slugs; curl/WebFetch dan 403). Mapeo pregunta→artículo + patrón respuesta.
 - [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método curl + UA Safari para leer karma Reddit.
 - [Plan v2 DEPRECADO](reference_plan_v2.md) — OBSOLETO desde 06 may. Solo histórico.
 
