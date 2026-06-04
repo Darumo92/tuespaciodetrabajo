@@ -29,20 +29,6 @@ const softwareAppSchema = {
   inLanguage: 'es',
 };
 
-const howToSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'HowTo',
-  name: 'Cómo calcular la altura correcta de tu escritorio, silla y monitor',
-  description: 'Guía paso a paso para calcular las medidas ergonómicas ideales de tu puesto de trabajo según tu estatura.',
-  totalTime: 'PT3M',
-  step: [
-    { '@type': 'HowToStep', position: 1, name: 'Introduce tus datos', text: 'Indica tu estatura, género y rango de edad en el primer paso.' },
-    { '@type': 'HowToStep', position: 2, name: 'Describe tu setup', text: 'Di qué monitor usas, qué tipo de silla tienes y cuántas horas al día pasas sentado.' },
-    { '@type': 'HowToStep', position: 3, name: 'Marca tus dolencias', text: 'Selecciona las zonas donde notas molestias para recibir recomendaciones personalizadas.' },
-    { '@type': 'HowToStep', position: 4, name: 'Aplica las medidas', text: 'Ajusta silla, escritorio y monitor a las alturas calculadas y prioriza las compras que más impacten tu caso.' },
-  ],
-};
-
 const faqs = [
   {
     pregunta: '¿De dónde salen las fórmulas de la calculadora?',
@@ -74,22 +60,11 @@ const faqs = [
   },
 ];
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.pregunta,
-    acceptedAnswer: { '@type': 'Answer', text: f.respuesta },
-  })),
-};
 ---
 
 <Base title={pageTitle} description={pageDescription} canonical={pageUrl} image="/images/og/calculadora-ergonomia.jpg">
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} slot="head" />
-  <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} slot="head" />
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
 
   <div class="container ergo-page">
     <nav class="breadcrumb" aria-label="Migas de pan">
