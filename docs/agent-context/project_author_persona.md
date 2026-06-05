@@ -1,31 +1,49 @@
 ---
-name: Persona del autor (David Rubio) — datos verificables
-description: Datos físicos, de despacho y de fisioterapeuta del autor para coherencia E-E-A-T entre artículos
+name: Persona del autor (David Rubio) — datos REALES verificables
+description: Datos reales del autor (identidad, físico, despacho, setup que posee) para coherencia E-E-A-T honesta entre artículos
 type: project
-originSessionId: 526f9e83-434f-4fe7-8dcd-23c58725559b
 ---
-Datos canónicos del autor para usar en TODOS los artículos del sitio tuespaciodetrabajo.com. Establecidos en `.seo-engine/config.yaml` el 2026-04-27 como parte del refuerzo E-E-A-T tras detectar 15 páginas en "Rastreada-no-indexada" en GSC.
+Datos canónicos y **100% reales** del autor de tuespaciodetrabajo.com. Depurados el 2026-06-05: se eliminó todo lo inventado de la versión anterior (setup falso, lesiones y importes inventados, "5 sillas probadas"). Política de honestidad (Opción A) — ver `PLAN-RECONDUCCION-SEO.md` §2-3.
 
-**Why:** Google rechaza indexar artículos por señales E-E-A-T débiles. Coherencia entre artículos en datos personales (altura, peso, fechas, fisio) es señal fuerte de autor real vs IA-generated.
+**Why:** Google no indexa contenido de afiliación con experiencia fabricada (Helpful Content System). La causa raíz del problema de indexación del sitio fue inventar experiencia/productos. La solución es usar SOLO datos ciertos.
 
-**How to apply:** Antes de escribir experiencia personal en cualquier artículo, verificar que los datos coincidan con esta lista. Nunca inventar nuevos datos físicos/biográficos sin actualizarlos aquí + en config.yaml.
+**How to apply:** En cualquier artículo, solo se puede presentar como "uso propio" lo que figura en SETUP REAL. Para todo lo demás, marco honesto: "comparativa por specs + reseñas verificadas". NUNCA inventar productos, lesiones, importes, fechas, anécdotas de terceros (compañeros/lectores/familia) ni "probé N unidades".
 
-**Datos canónicos:**
-
+## Identidad (real)
 - Nombre completo: David Rubio Mota
-- LinkedIn: https://www.linkedin.com/in/david-rubio-mota/
+- LinkedIn (real, público, con foto): https://www.linkedin.com/in/david-rubio-mota/
 - Profesión: ingeniero de software
-- Teletrabaja desde: 2019 (7 años)
-- Ubicación: Rubí (Vallès Occidental, provincia de Barcelona)
-- Despacho: habitación de 9 m² en piso en Rubí
-- Altura: 1,80 m
-- Peso: 85 kg
-- Horas/día sentado jornada laboral: 7-8 h
-- Familia: esposa + hijo nacido en septiembre 2024 (a 2026-04-27 tiene ~1 año 7 meses; recalcular según fecha de cada artículo)
-- Setup silla actual: Autonomous ErgoChair Pro, fecha de compra inventada (no importa al usuario)
-- Setup escritorio actual: FlexiSpot E7 bambú 140×70
-- Sillas probadas total: 5 antes de la actual
-- Fisioterapeuta: Pep, clínica Fisiosthetic
-- Tratamiento inicial 2020 confinamiento: 300 EUR en 6 sesiones por dolor lumbar + hormigueo muñeca derecha (importe inventado, mantener coherente)
-- Tratamiento inicial 2020 confinamiento: 300 EUR en 6 sesiones por dolor lumbar + hormigueo muñeca derecha
-- Frecuencia uso standing desk: alterna sentado/de pie 3-4 veces al día
+- Teletrabaja desde: 2019
+- Ubicación: Rubí (Vallès Occidental, Barcelona)
+- Físico (real): 1,80 m, 85 kg
+- Horas sentado/día: 7-8 h jornada laboral
+- Familia (real): esposa + hijo nacido en septiembre 2024 (recalcular edad según fecha del artículo)
+- Despacho: habitación en piso en Rubí
+- Preferencia: NO quiere foto propia en el sitio. El enlace a LinkedIn (con su foto y nombre) cubre la señal de autor real.
+
+## Fisioterapeuta (real)
+- Pep, clínica Fisiosthetic (Rubí). David va 1 vez al mes (mantenimiento/prevención).
+- ❌ INVENTADO (NO usar): dolor lumbar crónico, hormigueo en la muñeca, episodio del confinamiento 2020, "300 € en 6 sesiones". Nada de eso ocurrió.
+
+## SETUP REAL (lo único presentable como uso propio)
+- Silla: **Herman Miller Aeron** (gama alta — autoridad real para sillas ergonómicas)
+- Escritorio: **fijo**, tablón de madera maciza con patas de IKEA (montaje DIY). NO es elevable, NO standing desk.
+- Monitores: **doble monitor, BenQ + LG** (modelos exactos pendientes de confirmar por David)
+- Teclado: **Keychron Q1 Max** (mecánico custom)
+- Ratón: **Lamzu Maya X 8K**
+- Auriculares: **Beyerdynamic DT770 Pro**
+- Extras: reposapiés (uso diario), webcam Logitech
+- Fotos: David puede fotografiar lo que posee. Usar fotos propias solo de estos productos reales.
+
+## NO posee (no reivindicar uso)
+- ❌ Lámpara / barra de luz de escritorio (BenQ ScreenBar u otra). No tiene iluminación dedicada.
+- ❌ Escritorio elevable / standing desk (FlexiSpot ni equivalente).
+- ❌ Logitech Ergo K860, MX Vertical, Sony WH-1000XM5, Autonomous ErgoChair Pro (eran inventados).
+
+## Productos probados de verdad
+- Ha probado más de una silla/teclado/ratón a lo largo del tiempo, pero "no de forma relevante" y sin registros. NO afirmar comparativas de uso directo de varias unidades. No conserva tickets ni cajas.
+
+## Ángulos de autoridad genuina (úsalos)
+- Sillas ergonómicas: usuario real de Aeron → puede explicar con criterio qué hace bien una silla de referencia y qué buscar (o aceptar perder) en alternativas baratas. Honesto: "uso una Aeron; estas son las mejores calidad-precio según specs/reseñas".
+- Periféricos: perfil entusiasta real (teclado custom Keychron, ratón gama alta Lamzu).
+- Escritorio DIY: experiencia real de montar mesa a medida (tablón + patas), NO de standing desk.

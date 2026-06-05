@@ -24,13 +24,13 @@
 - **Conclusión:** "Solicitar indexación" es inútil aquí. **Dejar de hacerlo.** La única palanca que mueve `not indexed → indexed` en sitio nuevo es **autoridad externa real**.
 
 ### 2. Autoridad externa = ÚNICA palanca real (P0)
-- **Evidencia de que funciona:** el artículo con backlink de Quora (`/guias/ergonomia-teletrabajo-postura-correcta/`) fue **re-crawleado 2026-06-03** — mucho más reciente que los demás (05-13). Backlink → re-crawl → camino a indexación. El mecanismo correcto, no el botón de GSC.
-- **Cómo:**
-  - **Quora ES**: más olas, ratio 2-3:1 respuesta:enlace → `docs/agent-context/reference_quora_es_workflow.md`. Priorizar enlazar las páginas dinero aún no indexadas.
-  - **LinkedIn**: posts enlazando guías.
-  - **Directorios de nicho** / foros (Reddit cuando karma≥50) / comparadores home office.
-  - **Objetivo:** ≥1 backlink real apuntando a CADA página prioritaria. Google indexa lo que tiene enlaces entrantes.
-- **Esfuerzo:** medio-alto, sostenido · **Impacto:** es lo único que mueve la aguja.
+- **Realidad medida (2026-06-04):** 1 backlink de Quora NO ha bastado. Google descubrió el enlace (`es.quora.com` en `referringUrls`) pero la página sigue `not indexed`, 0 impresiones. El re-crawl 06-03 vino de la indexación manual, NO del enlace. Quora usa `nofollow` → sirve para tráfico de referido y descubrimiento, NO para pasar autoridad de indexación.
+- **Conclusión:** hace falta **volumen + calidad** de autoridad, no enlaces sueltos nofollow.
+- **Cómo (por orden de impacto en indexación):**
+  1. **Backlinks dofollow reales** — directorios de nicho que pasen link juice, menciones editoriales, colaboraciones/guest posts, comparadores home office. ESTO es lo que mueve indexación.
+  2. **Tráfico real a las páginas** — Quora ES / LinkedIn / Reddit (karma≥50) como FUENTE DE VISITAS. El tráfico real es señal de demanda que empuja indexación. Mantener Quora por esto, no por el link.
+  3. Seguir publicando contenido enlazado internamente para reforzar las páginas con autoridad de las pocas que sí indexen.
+- **Esfuerzo:** alto, sostenido (semanas) · **Impacto:** es lo único que mueve la aguja.
 
 ---
 

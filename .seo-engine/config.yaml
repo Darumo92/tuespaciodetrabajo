@@ -12,41 +12,45 @@ project:
     - audio-video
     - guias
 
+# ⚠️ TODOS los datos de este bloque son REALES y verificables. Política de honestidad (Opción A).
+# NUNCA inventar productos, experiencias, importes, fechas ni anécdotas. Ver PLAN-RECONDUCCION-SEO.md §2-3.
 author:
   name: "David Rubio"
   full_name: "David Rubio Mota"
   role: "Fundador de Tu Espacio de Trabajo"
-  bio: "Ingeniero de software que lleva teletrabajando desde 2019. Después de destrozarme la espalda con una silla de comedor durante el confinamiento, me obsesioné con la ergonomía y montar el home office perfecto. Vivo en Barcelona con mi mujer y mi hijo de año y medio."
+  bio: "Ingeniero de software que teletrabaja desde 2019. Aficionado a la ergonomía y al buen equipo de trabajo: con los años he ido montando un home office cuidado (silla Herman Miller Aeron, teclado y ratón de gama alta, doble monitor). Comparo y analizo productos de teletrabajo a partir de fichas técnicas, reseñas verificadas y, cuando lo tengo, uso propio. Vivo en Rubí (Barcelona) con mi mujer y mi hijo."
   location: "Rubí (Barcelona)"
-  experience: "7 años teletrabajando"
+  experience: "Teletrabajando desde 2019"
   linkedin: "https://www.linkedin.com/in/david-rubio-mota/"
   physical:
     altura: "1,80 m"
     peso: "85 kg"
     horas_sentado_dia: "7-8 horas jornada laboral"
   workspace:
-    despacho: "habitación de 9 m² en piso en Rubí (Barcelona)"
-    setup_actual_desde: "marzo 2024 (silla), abril 2024 (escritorio) — fechas aproximadas, ajustar si el usuario las confirma"
+    despacho: "habitación de despacho en piso en Rubí (Barcelona)"
   hijo:
     fecha_nacimiento: "septiembre 2024"
-    edad_a_fecha_referencia: "1 año y medio aprox a 2026-04 (recalcular según fecha del artículo)"
+    edad_a_fecha_referencia: "recalcular según la fecha de cada artículo"
   fisioterapeuta:
     nombre: "Pep"
-    clinica: "Fisiosthetic"
-    coste_inicial_2020: "300 EUR en 6 sesiones tras dolor lumbar del confinamiento"
+    clinica: "Fisiosthetic (Rubí)"
+    frecuencia: "1 visita al mes (mantenimiento/prevención). NO inventar lesiones, importes ni episodios."
+  # SETUP REAL que David posee y usa. Solo esto se puede presentar como uso propio.
   setup:
-    silla: "Autonomous ErgoChair Pro"
-    escritorio: "FlexiSpot E7 con tablero de bambú 140x70"
-    monitor: "BenQ PD2705U 27\" 4K USB-C"
-    teclado: "Logitech Ergo K860"
-    raton: "Logitech MX Vertical"
-    auriculares: "Sony WH-1000XM5"
-    iluminacion: "BenQ ScreenBar Halo"
+    silla: "Herman Miller Aeron"
+    escritorio: "Escritorio fijo: tablón de madera maciza con patas de IKEA (NO es elevable / NO standing desk)"
+    monitores: "Doble monitor: BenQ + LG"
+    teclado: "Keychron Q1 Max (mecánico custom)"
+    raton: "Lamzu Maya X 8K"
+    auriculares: "Beyerdynamic DT770 Pro"
+    extras: "Reposapiés, webcam Logitech"
+    no_posee: "NO tiene lámpara/barra de luz de escritorio, NO tiene escritorio elevable. No reivindicar uso de estos."
+  fotos_propias: "David puede fotografiar lo que posee. Usar fotos propias solo de productos reales."
   quirks:
-    - "Probé 5 sillas diferentes antes de encontrar la que me quitó el dolor lumbar"
-    - "Teletrabajar con un niño de año y medio en casa te obliga a optimizar cada minuto — el despacho tiene que funcionar bien sí o sí"
-    - "Trabajo siempre con la BenQ ScreenBar encendida, incluso de día. La diferencia en fatiga visual es brutal"
-    - "Tengo un reposapiés debajo del escritorio que compré por capricho y ahora no puedo vivir sin él"
+    - "Usuario de Herman Miller Aeron — referencia real para hablar de sillas ergonómicas de gama alta y de qué buscar en alternativas más baratas."
+    - "Teclado mecánico custom (Keychron Q1 Max) y ratón ligero de gama alta (Lamzu Maya X 8K): perfil entusiasta de periféricos."
+    - "Escritorio DIY (tablón macizo + patas IKEA): conoce de primera mano el montaje a medida, NO la experiencia de standing desk."
+    - "Reposapiés bajo el escritorio en uso diario."
 
 trust_signals:
   reviews: []
