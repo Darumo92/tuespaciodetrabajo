@@ -28,7 +28,7 @@ Datos canónicos y **100% reales** del autor de tuespaciodetrabajo.com. Depurado
 ## SETUP REAL (lo único presentable como uso propio)
 - Silla: **Herman Miller Aeron** (gama alta — autoridad real para sillas ergonómicas)
 - Escritorio: **fijo**, tablón de madera maciza con patas de IKEA (montaje DIY). NO es elevable, NO standing desk.
-- Monitores: **doble monitor, BenQ + LG** (modelos exactos pendientes de confirmar por David)
+- Monitores: **doble monitor de 27": BenQ ZOWIE XL + LG UltraHD**
 - Teclado: **Keychron Q1 Max** (mecánico custom)
 - Ratón: **Lamzu Maya X 8K**
 - Auriculares: **Beyerdynamic DT770 Pro**
