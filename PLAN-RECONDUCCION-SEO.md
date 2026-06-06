@@ -191,7 +191,7 @@ Para cada comparativa:
 ### FASE 1 — Comparativas (Días 3-13) — máxima prioridad
 > 11 comparativas. Ritmo ~1/día. Aplicar checklist 6.A + 6.D a cada una.
 
-- [ ] **Día 3** — `mejor-silla-ergonomica-calidad-precio` (pieza faro; usar como plantilla de referencia para el resto).
+- [x] **Día 3** — `mejor-silla-ergonomica-calidad-precio` (pieza faro; usar como plantilla de referencia para el resto). ✅ 2026-06-06: experiencia fingida purgada (ErgoChair Pro/FlexiSpot E7/M18/Pep/300€/mujer 1,62m/niño/"destrocé espalda" eliminados), metodología honesta ("no he probado estas 6; specs+reseñas; referencia real = Herman Miller Aeron"), **tabla de specs factual** (modelo surfskate) con n/d donde no hay dato. Build OK, FAQPage/HowTo=0.
 - [ ] **Día 4** — `mejor-silla-oficina-menos-200-euros`
 - [ ] **Día 5** — `mejor-escritorio-elevable-electrico`
 - [ ] **Día 6** — `ikea-bekant-vs-flexispot-e7`
