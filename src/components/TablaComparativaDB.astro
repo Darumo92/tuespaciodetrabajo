@@ -14,6 +14,7 @@ const sillas: Silla[] = slugs
 
 const ETIQUETA_LUMBAR: Record<string, string> = { fijo: 'Fijo', presion: 'Presión', altura: 'Altura', dinamico: 'Dinámico', '5d': '5D' };
 const ETIQUETA_RESPALDO: Record<string, string> = { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla+cojín' };
+const ETIQUETA_REPOSABRAZOS: Record<string, string> = { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' };
 const fmt = (v: number | null, suf = '') => (v == null ? 'n/d' : `${v}${suf}`);
 
 const productSchemas = sillas.map((s) => {
@@ -46,7 +47,7 @@ const productSchemas = sillas.map((s) => {
           <td data-th="Modelo"><a href={`/sillas/catalogo/${s.slug}/`}>{s.nombre}</a></td>
           <td data-th="Precio">{s.precioAprox == null ? 'n/d' : `~${s.precioAprox} €`}</td>
           <td data-th="Lumbar">{ETIQUETA_LUMBAR[s.lumbar] ?? s.lumbar}{s.profundidadRegulable ? ' +prof' : ''}</td>
-          <td data-th="Brazos">{s.reposabrazos}</td>
+          <td data-th="Brazos">{ETIQUETA_REPOSABRAZOS[s.reposabrazos] ?? s.reposabrazos}</td>
           <td data-th="Respaldo">{ETIQUETA_RESPALDO[s.respaldo] ?? s.respaldo}</td>
           <td data-th="Peso máx">{fmt(s.pesoMaxKg, ' kg')}</td>
           <td data-th="Garantía">{s.garantiaAnios == null ? 'n/d' : `${s.garantiaAnios} años`}</td>
