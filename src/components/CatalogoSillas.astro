@@ -118,11 +118,12 @@ const { sillas } = Astro.props;
       const orden = fOrden.value;
       const visiblesArr = cards.filter((c) => c.style.display !== 'none');
       const val = (c: HTMLElement, k: string) => num(c.dataset[k] || '');
+      const cmp = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
       visiblesArr.sort((a, b) => {
-        if (orden === 'precio-asc') return (val(a, 'precio') ?? Infinity) - (val(b, 'precio') ?? Infinity);
-        if (orden === 'precio-desc') return (val(b, 'precio') ?? -Infinity) - (val(a, 'precio') ?? -Infinity);
-        if (orden === 'peso-max') return (val(b, 'peso') ?? -Infinity) - (val(a, 'peso') ?? -Infinity);
-        return (val(b, 'valoracion') ?? 0) - (val(a, 'valoracion') ?? 0);
+        if (orden === 'precio-asc') return cmp(val(a, 'precio') ?? Infinity, val(b, 'precio') ?? Infinity);
+        if (orden === 'precio-desc') return cmp(val(b, 'precio') ?? -Infinity, val(a, 'precio') ?? -Infinity);
+        if (orden === 'peso-max') return cmp(val(b, 'peso') ?? -Infinity, val(a, 'peso') ?? -Infinity);
+        return cmp(val(b, 'valoracion') ?? 0, val(a, 'valoracion') ?? 0);
       });
       visiblesArr.forEach((c) => grid.appendChild(c));
 
