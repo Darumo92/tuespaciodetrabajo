@@ -1,0 +1,51 @@
+---
+import Base from '@/layouts/Base.astro';
+import FichaSilla from '@/components/FichaSilla.astro';
+import { buildAmazonHref } from '@/lib/sillas';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const sillas = await getCollection('sillas');
+  return sillas.map((entry) => ({
+    params: { slug: entry.id.replace(/\.(yaml|yml|json)$/, '') },
+    props: { silla: { slug: entry.id.replace(/\.(yaml|yml|json)$/, ''), ...entry.data } },
+  }));
+}
+
+const { silla } = Astro.props;
+const titulo = `${silla.nombre}: ficha y specs | Tu Espacio de Trabajo`;
+const descripcion = `Ficha técnica de la ${silla.nombre}: soporte lumbar, reposabrazos, peso máximo, garantía y precio aproximado. Datos verificables, sin experiencia inventada.`;
+
+const amazonHref = buildAmazonHref(silla.amazon);
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: silla.nombre,
+  brand: { '@type': 'Brand', name: silla.marca },
+  ...(silla.imagen && { image: silla.imagen }),
+  description: descripcion,
+  ...(silla.precioAprox != null && {
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'EUR',
+      price: String(silla.precioAprox),
+      availability: 'https://schema.org/InStock',
+      ...(amazonHref && { url: amazonHref }),
+    },
+  }),
+};
+---
+
+<Base title={titulo} description={descripcion} image={silla.imagen}>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/sillas/">Sillas</a> › <a href="/sillas/catalogo/">Catálogo</a> › <span>{silla.nombre}</span>
+    </nav>
+    <FichaSilla silla={silla} />
+    <p style="margin-top:2rem;">
+      ← <a href="/sillas/catalogo/">Volver al catálogo de sillas</a> ·
+      <a href="/sillas/mejor-silla-ergonomica-calidad-precio/">Ver la comparativa completa</a>
+    </p>
+  </main>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+</Base>

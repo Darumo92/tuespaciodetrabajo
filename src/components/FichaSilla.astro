@@ -1,0 +1,89 @@
+---
+import BotonPrecio from './BotonPrecio.astro';
+import type { Silla } from '@/lib/sillas';
+
+interface Props { silla: Silla; }
+const { silla } = Astro.props;
+
+const ETIQUETA_LUMBAR: Record<string, string> = {
+  fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura',
+  dinamico: 'Dinámico autoajustable', '5d': '5D ajustable',
+};
+const ETIQUETA_REPOSABRAZOS: Record<string, string> = {
+  ninguno: 'Ninguno', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles',
+};
+const ETIQUETA_RESPALDO: Record<string, string> = {
+  malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín',
+};
+
+function fmt(v: number | null, sufijo = ''): string {
+  return v == null ? 'n/d' : `${v}${sufijo}`;
+}
+
+const specs: { etiqueta: string; valor: string }[] = [
+  { etiqueta: 'Precio aprox.', valor: silla.precioAprox == null ? 'n/d' : `~${silla.precioAprox} €` },
+  { etiqueta: 'Soporte lumbar', valor: ETIQUETA_LUMBAR[silla.lumbar] ?? silla.lumbar },
+  { etiqueta: 'Reposabrazos', valor: ETIQUETA_REPOSABRAZOS[silla.reposabrazos] ?? silla.reposabrazos },
+  { etiqueta: 'Respaldo', valor: ETIQUETA_RESPALDO[silla.respaldo] ?? silla.respaldo },
+  { etiqueta: 'Profundidad regulable', valor: silla.profundidadRegulable ? 'Sí' : 'No' },
+  { etiqueta: 'Peso máximo', valor: fmt(silla.pesoMaxKg, ' kg') },
+  { etiqueta: 'Reclinación máx.', valor: fmt(silla.reclinacionMaxGrados, '°') },
+  { etiqueta: 'Garantía', valor: silla.garantiaAnios == null ? 'n/d' : `${silla.garantiaAnios} años` },
+];
+---
+
+<article class="ficha">
+  <header class="ficha-header">
+    {silla.imagen && (
+      <img src={silla.imagen} alt={silla.imagenAlt ?? silla.nombre} width="200" height="200" loading="lazy" decoding="async" />
+    )}
+    <div>
+      <p class="ficha-marca">{silla.marca}</p>
+      <h1 class="ficha-nombre">{silla.nombre}</h1>
+      <p class="ficha-valoracion">★ {silla.valoracion.toFixed(1)} / 5</p>
+      {silla.idealPara && <p class="ficha-ideal">Ideal para: {silla.idealPara}</p>}
+      <BotonPrecio amazon={silla.amazon} webOficial={silla.webOficial} nombre={silla.nombre} />
+    </div>
+  </header>
+
+  <h2>Ficha técnica</h2>
+  <table class="ficha-specs">
+    <tbody>
+      {specs.map((s) => (
+        <tr><th scope="row">{s.etiqueta}</th><td>{s.valor}</td></tr>
+      ))}
+    </tbody>
+  </table>
+
+  {silla.puntosFuertes.length > 0 && (
+    <>
+      <h2>Lo que destaca</h2>
+      <ul>{silla.puntosFuertes.map((p) => <li>{p}</li>)}</ul>
+    </>
+  )}
+  {silla.puntosDebiles.length > 0 && (
+    <>
+      <h2>Lo que no convence</h2>
+      <ul>{silla.puntosDebiles.map((p) => <li>{p}</li>)}</ul>
+    </>
+  )}
+
+  {(silla.fuenteSpecs || silla.verificadoEn) && (
+    <p class="ficha-fuente">
+      Datos: {silla.fuenteSpecs ?? 'n/d'}{silla.verificadoEn ? ` · verificado el ${silla.verificadoEn}` : ''}.
+      Los campos marcados como "n/d" no tienen dato verificado; verifica siempre la ficha del fabricante antes de comprar.
+    </p>
+  )}
+</article>
+
+<style>
+  .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem; }
+  .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--color-text-muted); margin: 0; }
+  .ficha-nombre { font-family: var(--font-display); margin: 0.2rem 0 0.5rem; }
+  .ficha-valoracion { color: var(--color-secondary); font-weight: 700; margin: 0 0 0.5rem; }
+  .ficha-ideal { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 1rem; }
+  .ficha-specs { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
+  .ficha-specs th, .ficha-specs td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+  .ficha-specs th { width: 45%; color: var(--color-text-muted); font-weight: 600; }
+  .ficha-fuente { font-size: 0.8rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 2rem; }
+</style>
