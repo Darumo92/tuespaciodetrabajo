@@ -77,3 +77,26 @@ export function buildAmazonHref(amazon?: SillaAmazon): string | null {
   }
   return null;
 }
+
+export type OrdenSillas = 'precio-asc' | 'precio-desc' | 'valoracion' | 'peso-max';
+
+function numOrInf(n: number | null, dir: 'asc' | 'desc'): number {
+  if (n != null) return n;
+  return dir === 'asc' ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
+}
+
+export function ordenarSillas(sillas: Silla[], orden: OrdenSillas): Silla[] {
+  const copia = [...sillas];
+  switch (orden) {
+    case 'precio-asc':
+      return copia.sort((a, b) => numOrInf(a.precioAprox, 'asc') - numOrInf(b.precioAprox, 'asc'));
+    case 'precio-desc':
+      return copia.sort((a, b) => numOrInf(b.precioAprox, 'desc') - numOrInf(a.precioAprox, 'desc'));
+    case 'valoracion':
+      return copia.sort((a, b) => b.valoracion - a.valoracion);
+    case 'peso-max':
+      return copia.sort((a, b) => numOrInf(b.pesoMaxKg, 'desc') - numOrInf(a.pesoMaxKg, 'desc'));
+    default:
+      return copia;
+  }
+}

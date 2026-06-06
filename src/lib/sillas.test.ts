@@ -56,3 +56,25 @@ describe('filtrarSillas', () => {
     expect(filtrarSillas(FIXTURE, { pesoMin: 130 }).map(s => s.slug)).toEqual(['a']);
   });
 });
+
+import { ordenarSillas } from './sillas';
+
+describe('ordenarSillas', () => {
+  it('precio ascendente (null al final)', () => {
+    expect(ordenarSillas(FIXTURE, 'precio-asc').map(s => s.slug)).toEqual(['b', 'c', 'a']);
+  });
+  it('precio descendente', () => {
+    expect(ordenarSillas(FIXTURE, 'precio-desc').map(s => s.slug)).toEqual(['a', 'c', 'b']);
+  });
+  it('valoración descendente', () => {
+    expect(ordenarSillas(FIXTURE, 'valoracion').map(s => s.slug)).toEqual(['a', 'c', 'b']);
+  });
+  it('peso máximo descendente', () => {
+    expect(ordenarSillas(FIXTURE, 'peso-max').map(s => s.slug)).toEqual(['a', 'c', 'b']);
+  });
+  it('no muta el array original', () => {
+    const copia = [...FIXTURE];
+    ordenarSillas(FIXTURE, 'precio-asc');
+    expect(FIXTURE).toEqual(copia);
+  });
+});
