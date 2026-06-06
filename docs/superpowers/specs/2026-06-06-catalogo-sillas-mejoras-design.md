@@ -105,9 +105,11 @@ Casos de test clave: media ignora `null`; nota global con todos `null` cae a `va
 - El contenido editorial rico (veredicto, comunidad, para-quién) es la palanca principal de "contenido útil".
 - `/sillas/comparar/` → `noindex`.
 
-## Población de datos (el mayor esfuerzo y riesgo)
+## Población de datos (PILAR esencial — no escatimar)
 
-- Re-investigar las 19 sillas (fuentes reales: fabricante, Amazon.es, r/OfficeChairs y foros) para rellenar los campos nuevos **solo cuando se confirmen**; resto `null`.
+> **Prioridad explícita del usuario:** los datos son el pilar del comparador; sin datos buenos, el comparador pierde todo el sentido. La investigación debe ser **exhaustiva**: el objetivo es **minimizar los `n/d`** a base de buscar de verdad en múltiples fuentes (fabricante, Amazon.es, RTINGS/reviews especializadas, r/OfficeChairs y foros, fichas de distribuidores). `n/d` se reserva **solo** para datos genuinamente no localizables tras buscar — nunca por pereza, y nunca inventando. Cada silla merece una pasada de investigación seria, no un relleno superficial.
+
+- Re-investigar las 19 sillas (fuentes reales: fabricante, Amazon.es, reviews especializadas, r/OfficeChairs y foros, distribuidores) para rellenar los campos nuevos **cuando se confirmen en una fuente real**; el resto `null` solo tras intentar localizarlo.
 - **Valoraciones por ejes**: asignación editorial siguiendo una rúbrica consistente y documentada en el plan:
   - *Ergonomía*: tipo de lumbar, soporte, reclinación, consenso ergonómico.
   - *Ajustabilidad*: nº y tipo de ajustes (reposabrazos, profundidad, lumbar, altura).
