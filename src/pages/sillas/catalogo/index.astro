@@ -1,0 +1,36 @@
+---
+import Base from '@/layouts/Base.astro';
+import CatalogoSillas from '@/components/CatalogoSillas.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('sillas');
+const sillas = entries
+  .map((e) => ({ slug: e.id.replace(/\.(yaml|yml|json)$/, ''), ...e.data }))
+  .sort((a, b) => b.valoracion - a.valoracion);
+
+const titulo = 'Catálogo de sillas ergonómicas: filtra por precio, altura y peso | Tu Espacio de Trabajo';
+const descripcion = 'Catálogo filtrable de sillas ergonómicas con specs verificables: soporte lumbar, reposabrazos, peso máximo, garantía y precio. Filtra y ordena para encontrar la tuya.';
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: sillas.map((s, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    url: `https://tuespaciodetrabajo.com/sillas/catalogo/${s.slug}/`,
+    name: s.nombre,
+  })),
+};
+---
+
+<Base title={titulo} description={descripcion}>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/sillas/">Sillas</a> › <span>Catálogo</span>
+    </nav>
+    <h1>Catálogo de sillas ergonómicas</h1>
+    <p>Filtra por presupuesto, respaldo, reposabrazos, profundidad regulable y carga máxima. Todos los datos salen de fichas de fabricante y reseñas verificadas; lo que no tiene dato confirmado aparece como <strong>n/d</strong>. ¿Prefieres que te guiemos? Usa el <a href="/sillas/selector/">selector guiado</a>.</p>
+    <CatalogoSillas sillas={sillas} />
+  </main>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+</Base>

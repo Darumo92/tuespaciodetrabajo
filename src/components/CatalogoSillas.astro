@@ -1,0 +1,138 @@
+---
+import BotonPrecio from './BotonPrecio.astro';
+import { reposabrazosNivel, type Silla } from '@/lib/sillas';
+
+interface Props { sillas: Silla[]; }
+const { sillas } = Astro.props;
+---
+
+<section class="catalogo">
+  <div class="catalogo-filtros">
+    <label>Presupuesto máx (€)
+      <input type="range" id="f-precio" min="100" max="400" step="10" value="400" />
+      <output id="f-precio-out">400</output>
+    </label>
+    <label>Respaldo
+      <select id="f-respaldo">
+        <option value="">Cualquiera</option>
+        <option value="malla">Malla</option>
+        <option value="espuma">Espuma</option>
+        <option value="mixto">Mixto</option>
+      </select>
+    </label>
+    <label>Reposabrazos mín.
+      <select id="f-brazos">
+        <option value="0">Cualquiera</option>
+        <option value="2">2D+</option>
+        <option value="3">3D+</option>
+      </select>
+    </label>
+    <label class="catalogo-check"><input type="checkbox" id="f-prof" /> Profundidad regulable</label>
+    <label class="catalogo-check"><input type="checkbox" id="f-peso" /> Soporta ≥130 kg</label>
+    <label>Ordenar
+      <select id="f-orden">
+        <option value="valoracion">Mejor valoradas</option>
+        <option value="precio-asc">Precio ↑</option>
+        <option value="precio-desc">Precio ↓</option>
+        <option value="peso-max">Más carga</option>
+      </select>
+    </label>
+  </div>
+
+  <p class="catalogo-count"><span id="catalogo-n">{sillas.length}</span> sillas</p>
+
+  <div class="catalogo-grid" id="catalogo-grid">
+    {sillas.map((s) => (
+      <article class="catalogo-card"
+        data-precio={s.precioAprox ?? ''}
+        data-respaldo={s.respaldo}
+        data-brazos={reposabrazosNivel(s.reposabrazos)}
+        data-prof={s.profundidadRegulable ? '1' : '0'}
+        data-peso={s.pesoMaxKg ?? ''}
+        data-valoracion={s.valoracion}>
+        {s.imagen && <img src={s.imagen} alt={s.imagenAlt ?? s.nombre} width="120" height="120" loading="lazy" decoding="async" />}
+        <div class="catalogo-info">
+          <a class="catalogo-nombre" href={`/sillas/catalogo/${s.slug}/`}>{s.nombre}</a>
+          <p class="catalogo-meta">★ {s.valoracion.toFixed(1)} · {s.precioAprox == null ? 'n/d' : `~${s.precioAprox} €`} · {s.pesoMaxKg == null ? 'n/d' : `${s.pesoMaxKg} kg`}{s.profundidadRegulable ? ' · prof. regulable' : ''}</p>
+          <BotonPrecio amazon={s.amazon} webOficial={s.webOficial} nombre={s.nombre} />
+        </div>
+      </article>
+    ))}
+  </div>
+  <p class="catalogo-vacio" id="catalogo-vacio" hidden>Ninguna silla cumple esos filtros. Prueba a relajar alguno.</p>
+</section>
+
+<style>
+  .catalogo-filtros { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--color-border); }
+  .catalogo-filtros label { display: flex; flex-direction: column; font-size: 0.8rem; font-weight: 600; gap: 0.25rem; color: var(--color-text-muted); }
+  .catalogo-check { flex-direction: row !important; align-items: center; gap: 0.4rem; }
+  .catalogo-count { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; }
+  .catalogo-grid { display: grid; gap: 1rem; }
+  .catalogo-card { display: flex; gap: 1rem; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; }
+  .catalogo-card img { object-fit: contain; background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 0.5rem; flex-shrink: 0; }
+  .catalogo-info { flex: 1; min-width: 0; }
+  .catalogo-nombre { font-family: var(--font-display); font-weight: 700; color: var(--color-text); text-decoration: none; }
+  .catalogo-nombre:hover { color: var(--color-primary); }
+  .catalogo-meta { font-size: 0.82rem; color: var(--color-text-muted); margin: 0.3rem 0 0.7rem; }
+</style>
+
+<script>
+  const grid = document.getElementById('catalogo-grid');
+  if (grid) {
+    const cards = Array.from(grid.querySelectorAll('.catalogo-card')) as HTMLElement[];
+    const fPrecio = document.getElementById('f-precio') as HTMLInputElement;
+    const fPrecioOut = document.getElementById('f-precio-out') as HTMLOutputElement;
+    const fRespaldo = document.getElementById('f-respaldo') as HTMLSelectElement;
+    const fBrazos = document.getElementById('f-brazos') as HTMLSelectElement;
+    const fProf = document.getElementById('f-prof') as HTMLInputElement;
+    const fPeso = document.getElementById('f-peso') as HTMLInputElement;
+    const fOrden = document.getElementById('f-orden') as HTMLSelectElement;
+    const nOut = document.getElementById('catalogo-n');
+    const vacio = document.getElementById('catalogo-vacio');
+
+    const num = (v: string) => (v === '' ? null : parseFloat(v));
+
+    function aplicar() {
+      const precioMax = parseFloat(fPrecio.value);
+      fPrecioOut.textContent = String(precioMax);
+      let visibles = 0;
+
+      cards.forEach((c) => {
+        const precio = num(c.dataset.precio || '');
+        const respaldo = c.dataset.respaldo || '';
+        const brazos = parseInt(c.dataset.brazos || '0', 10);
+        const prof = c.dataset.prof === '1';
+        const peso = num(c.dataset.peso || '');
+
+        let ok = true;
+        if (precio != null && precio > precioMax) ok = false;
+        if (fRespaldo.value && respaldo !== fRespaldo.value) ok = false;
+        if (parseInt(fBrazos.value, 10) > brazos) ok = false;
+        if (fProf.checked && !prof) ok = false;
+        if (fPeso.checked && (peso == null || peso < 130)) ok = false;
+
+        c.style.display = ok ? '' : 'none';
+        if (ok) visibles++;
+      });
+
+      const orden = fOrden.value;
+      const visiblesArr = cards.filter((c) => c.style.display !== 'none');
+      const val = (c: HTMLElement, k: string) => num(c.dataset[k] || '');
+      visiblesArr.sort((a, b) => {
+        if (orden === 'precio-asc') return (val(a, 'precio') ?? Infinity) - (val(b, 'precio') ?? Infinity);
+        if (orden === 'precio-desc') return (val(b, 'precio') ?? -Infinity) - (val(a, 'precio') ?? -Infinity);
+        if (orden === 'peso-max') return (val(b, 'peso') ?? -Infinity) - (val(a, 'peso') ?? -Infinity);
+        return (val(b, 'valoracion') ?? 0) - (val(a, 'valoracion') ?? 0);
+      });
+      visiblesArr.forEach((c) => grid.appendChild(c));
+
+      if (nOut) nOut.textContent = String(visibles);
+      if (vacio) vacio.hidden = visibles > 0;
+    }
+
+    [fPrecio, fRespaldo, fBrazos, fProf, fPeso, fOrden].forEach((el) =>
+      el.addEventListener('input', aplicar)
+    );
+    aplicar();
+  }
+</script>
