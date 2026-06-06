@@ -24,4 +24,39 @@ const articulos = defineCollection({
   }),
 });
 
-export const collections = { articulos };
+const LUMBAR = ['fijo', 'presion', 'altura', 'dinamico', '5d'] as const;
+const REPOSABRAZOS = ['ninguno', '1d', '2d', '3d', '4d', 'abatibles'] as const;
+const RESPALDO = ['malla', 'espuma', 'mixto'] as const;
+
+const sillas = defineCollection({
+  type: 'data',
+  schema: z.object({
+    nombre: z.string(),
+    marca: z.string(),
+    imagen: z.string().optional(),
+    imagenAlt: z.string().optional(),
+    precioAprox: z.number().nullable(),
+    lumbar: z.enum(LUMBAR),
+    reposabrazos: z.enum(REPOSABRAZOS),
+    respaldo: z.enum(RESPALDO),
+    profundidadRegulable: z.boolean(),
+    pesoMaxKg: z.number().nullable(),
+    alturaAsientoMinCm: z.number().nullable(),
+    alturaAsientoMaxCm: z.number().nullable(),
+    reclinacionMaxGrados: z.number().nullable(),
+    garantiaAnios: z.number().nullable(),
+    valoracion: z.number().min(0).max(5),
+    puntosFuertes: z.array(z.string()).default([]),
+    puntosDebiles: z.array(z.string()).default([]),
+    idealPara: z.string().optional(),
+    amazon: z.object({
+      asin: z.string().optional(),
+      buscar: z.string().optional(),
+    }).optional(),
+    webOficial: z.string().url().nullable().default(null),
+    fuenteSpecs: z.string(),
+    verificadoEn: z.string(),
+  }),
+});
+
+export const collections = { articulos, sillas };

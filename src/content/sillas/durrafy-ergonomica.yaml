@@ -1,0 +1,29 @@
+nombre: "Durrafy Silla Ergonómica"
+marca: "Durrafy"
+imagen: "https://m.media-amazon.com/images/I/619GSz1-BML._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica Durrafy económica"
+precioAprox: 130
+lumbar: "presion"
+reposabrazos: "1d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 120
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: 2
+valoracion: 3.5
+puntosFuertes:
+  - "El precio más bajo de la comparativa"
+  - "Soporte lumbar y reposacabezas incluidos"
+puntosDebiles:
+  - "Lumbar no ajustable en altura, solo presión"
+  - "Materiales inferiores al tacto (según reseñas)"
+  - "Asiento estrecho para personas anchas"
+idealPara: "Presupuesto limitado a 130-140 €, silla de transición"
+amazon:
+  asin: "B0C3BZHVK8"
+  buscar: "Durrafy silla ergonómica"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es"
+verificadoEn: "2026-06-06"

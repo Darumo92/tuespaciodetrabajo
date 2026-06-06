@@ -1,0 +1,30 @@
+nombre: "Hbada Silla Ergonómica"
+marca: "Hbada"
+imagen: "https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica Hbada con reposapiés retráctil"
+precioAprox: 190
+lumbar: "fijo"
+reposabrazos: "1d"
+respaldo: "mixto"
+profundidadRegulable: false
+pesoMaxKg: 120
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: 2
+valoracion: 4
+puntosFuertes:
+  - "Reposapiés retráctil integrado"
+  - "Diseño discreto"
+  - "Malla transpirable en respaldo"
+puntosDebiles:
+  - "Soporte lumbar fijo (no ajustable en altura)"
+  - "Asiento de espuma, no malla completa"
+  - "Reposabrazos solo altura"
+idealPara: "Quien prioriza estética y reposapiés integrado"
+amazon:
+  asin: "B0CH7RBQQ7"
+  buscar: "Hbada silla ergonómica"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es"
+verificadoEn: "2026-06-06"

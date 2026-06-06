@@ -1,0 +1,30 @@
+nombre: "FlexiSpot C7 Lite"
+marca: "FlexiSpot"
+imagen: "https://m.media-amazon.com/images/I/41ie3wEJhPL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica FlexiSpot C7 Lite"
+precioAprox: 250
+lumbar: "5d"
+reposabrazos: "3d"
+respaldo: "mixto"
+profundidadRegulable: false
+pesoMaxKg: 130
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: null
+valoracion: 4.5
+puntosFuertes:
+  - "Soporte lumbar 5D"
+  - "Reposacabezas y reposabrazos 3D"
+  - "Cojín transpirable"
+  - "Base de aluminio robusta"
+puntosDebiles:
+  - "No es barata: compite en gama media"
+  - "Asiento firme para menos de 60 kg (según reseñas)"
+idealPara: "Muchos ajustes sin llegar a 300 €, prioridad transpiración"
+amazon:
+  asin: "B0F6XL3SFG"
+  buscar: "FlexiSpot C7 Lite"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es + web FlexiSpot"
+verificadoEn: "2026-06-06"

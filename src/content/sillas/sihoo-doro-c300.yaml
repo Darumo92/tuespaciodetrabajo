@@ -1,0 +1,30 @@
+nombre: "SIHOO Doro C300"
+marca: "SIHOO"
+imagen: "https://m.media-amazon.com/images/I/7194RcPKLOL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica SIHOO Doro C300"
+precioAprox: 320
+lumbar: "dinamico"
+reposabrazos: "3d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 150
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: 135
+garantiaAnios: 3
+valoracion: 4.5
+puntosFuertes:
+  - "Soporte lumbar dinámico autoajustable"
+  - "Malla BM densa que mantiene la forma"
+  - "Reposabrazos 3D"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Precio alto dentro de la gama"
+  - "Malla firme las primeras semanas"
+idealPara: "Jornada completa, máxima ergonomía sin precio premium"
+amazon:
+  asin: "B0C3T865C2"
+  buscar: "SIHOO Doro C300"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es + web SIHOO"
+verificadoEn: "2026-06-06"

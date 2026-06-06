@@ -1,0 +1,29 @@
+nombre: "SIHOO M102C"
+marca: "SIHOO"
+imagen: "https://m.media-amazon.com/images/I/31pKOaVpQiL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica SIHOO M102C con reposabrazos abatibles"
+precioAprox: 190
+lumbar: "altura"
+reposabrazos: "abatibles"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 125
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: 2
+valoracion: 4
+puntosFuertes:
+  - "Soporte lumbar ajustable"
+  - "Reposacabezas regulable"
+  - "Reposabrazos abatibles, útiles en espacios pequeños"
+puntosDebiles:
+  - "Menos historial de reseñas que la M18"
+  - "Ajustes por debajo de Doro C300 y C7 Lite"
+idealPara: "Primera silla ergonómica SIHOO por debajo de 200 €"
+amazon:
+  asin: "B0CLLRNFB8"
+  buscar: "SIHOO M102C"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es"
+verificadoEn: "2026-06-06"

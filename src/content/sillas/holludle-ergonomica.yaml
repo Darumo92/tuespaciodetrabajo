@@ -1,0 +1,29 @@
+nombre: "HOLLUDLE Silla Ergonómica"
+marca: "HOLLUDLE"
+imagen: "https://m.media-amazon.com/images/I/71Gt43giOPL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica HOLLUDLE con profundidad de asiento regulable"
+precioAprox: 210
+lumbar: "altura"
+reposabrazos: "abatibles"
+respaldo: "malla"
+profundidadRegulable: true
+pesoMaxKg: 125
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: 2
+valoracion: 4
+puntosFuertes:
+  - "Profundidad de asiento regulable (rara a este precio)"
+  - "Reposacabezas ajustable en altura y ángulo"
+  - "Soporte lumbar integrado"
+puntosDebiles:
+  - "Malla del respaldo algo fina (según reseñas)"
+  - "Instrucciones de montaje mejorables"
+idealPara: "Alturas fuera de la media (menos de 1,65 m o más de 1,85 m)"
+amazon:
+  asin: "B0BLNHPM3P"
+  buscar: "HOLLUDLE silla ergonómica"
+webOficial: null
+fuenteSpecs: "Ficha Amazon.es"
+verificadoEn: "2026-06-06"
