@@ -85,17 +85,21 @@ function numOrInf(n: number | null, dir: 'asc' | 'desc'): number {
   return dir === 'asc' ? Number.POSITIVE_INFINITY : Number.NEGATIVE_INFINITY;
 }
 
+function cmp(x: number, y: number): number {
+  return x === y ? 0 : x < y ? -1 : 1;
+}
+
 export function ordenarSillas(sillas: Silla[], orden: OrdenSillas): Silla[] {
   const copia = [...sillas];
   switch (orden) {
     case 'precio-asc':
-      return copia.sort((a, b) => numOrInf(a.precioAprox, 'asc') - numOrInf(b.precioAprox, 'asc'));
+      return copia.sort((a, b) => cmp(numOrInf(a.precioAprox, 'asc'), numOrInf(b.precioAprox, 'asc')));
     case 'precio-desc':
-      return copia.sort((a, b) => numOrInf(b.precioAprox, 'desc') - numOrInf(a.precioAprox, 'desc'));
+      return copia.sort((a, b) => cmp(numOrInf(b.precioAprox, 'desc'), numOrInf(a.precioAprox, 'desc')));
     case 'valoracion':
-      return copia.sort((a, b) => b.valoracion - a.valoracion);
+      return copia.sort((a, b) => cmp(b.valoracion, a.valoracion));
     case 'peso-max':
-      return copia.sort((a, b) => numOrInf(b.pesoMaxKg, 'desc') - numOrInf(a.pesoMaxKg, 'desc'));
+      return copia.sort((a, b) => cmp(numOrInf(b.pesoMaxKg, 'desc'), numOrInf(a.pesoMaxKg, 'desc')));
     default:
       return copia;
   }

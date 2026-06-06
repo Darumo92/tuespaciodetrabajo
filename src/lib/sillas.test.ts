@@ -77,4 +77,15 @@ describe('ordenarSillas', () => {
     ordenarSillas(FIXTURE, 'precio-asc');
     expect(FIXTURE).toEqual(copia);
   });
+  it('precio-asc no produce NaN con dos precios null', () => {
+    const conNulls: Silla[] = [
+      { ...FIXTURE[0], slug: 'x', precioAprox: null },
+      { ...FIXTURE[1], slug: 'y', precioAprox: null },
+      { ...FIXTURE[2], slug: 'z', precioAprox: 200 },
+    ];
+    const out = ordenarSillas(conNulls, 'precio-asc').map(s => s.slug);
+    expect(out[0]).toBe('z');
+    expect(out).toHaveLength(3);
+    expect(out.slice(1).sort()).toEqual(['x', 'y']);
+  });
 });
