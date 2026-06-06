@@ -1,0 +1,81 @@
+---
+import { type Silla } from '@/lib/sillas';
+
+interface Props { sillas: Silla[]; }
+const { sillas } = Astro.props;
+const sillasJson = JSON.stringify(sillas);
+---
+
+<section class="selector" data-sillas={sillasJson}>
+  <div class="selector-paso" data-paso="1">
+    <p class="selector-label">Paso 1 de 2</p>
+    <h2>¿Cuánto puedes gastar?</h2>
+    <div class="selector-opts">
+      <button data-k="presupuesto" data-v="bajo">Menos de 150 €</button>
+      <button data-k="presupuesto" data-v="medio">150 – 250 €</button>
+      <button data-k="presupuesto" data-v="alto">Más de 250 €</button>
+    </div>
+  </div>
+
+  <div class="selector-paso" data-paso="2" hidden>
+    <p class="selector-label">Paso 2 de 2</p>
+    <h2>¿Cuánto mides?</h2>
+    <div class="selector-opts">
+      <button data-k="altura" data-v="baja">Menos de 1,65 m</button>
+      <button data-k="altura" data-v="media">1,65 – 1,85 m</button>
+      <button data-k="altura" data-v="alta">Más de 1,85 m</button>
+    </div>
+  </div>
+
+  <div class="selector-resultado" data-paso="3" hidden>
+    <p class="selector-label">Tu recomendación</p>
+    <div id="selector-out"></div>
+    <button id="selector-reset" class="selector-reset">Empezar de nuevo</button>
+  </div>
+</section>
+
+<style>
+  .selector { border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.5rem; }
+  .selector-label { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; color: var(--color-text-muted); margin: 0 0 0.4rem; }
+  .selector-opts { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.8rem; }
+  .selector-opts button, .selector-reset { font-family: var(--font-sans); font-weight: 600; padding: 0.6rem 1.1rem; border-radius: var(--radius-full); border: 1px solid var(--color-border); background: transparent; cursor: pointer; transition: all var(--transition); }
+  .selector-opts button:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  .selector-reset { margin-top: 1rem; }
+  .selector-rec { background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 1rem; }
+  .selector-rec a { font-weight: 700; }
+</style>
+
+<script>
+  import { recomendarSilla, type Silla, type Presupuesto, type AlturaPerfil } from '@/lib/sillas';
+
+  const root = document.querySelector('.selector') as HTMLElement | null;
+  if (root) {
+    const sillas: Silla[] = JSON.parse(root.dataset.sillas || '[]');
+    const pasos = Array.from(root.querySelectorAll('.selector-paso, .selector-resultado')) as HTMLElement[];
+    const out = root.querySelector('#selector-out') as HTMLElement;
+    const reset = root.querySelector('#selector-reset') as HTMLButtonElement;
+    const sel: { presupuesto?: Presupuesto; altura?: AlturaPerfil } = {};
+
+    function mostrar(n: number) {
+      pasos.forEach((p) => { p.hidden = p.dataset.paso !== String(n); });
+    }
+
+    root.querySelectorAll('button[data-k]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const k = (btn as HTMLElement).dataset.k as 'presupuesto' | 'altura';
+        const v = (btn as HTMLElement).dataset.v as string;
+        (sel as Record<string, string>)[k] = v;
+        if (k === 'presupuesto') { mostrar(2); return; }
+        const r = recomendarSilla(sillas, { presupuesto: sel.presupuesto!, altura: sel.altura! });
+        if (r.silla) {
+          out.innerHTML = `<div class="selector-rec"><a href="/sillas/catalogo/${r.silla.slug}/">${r.silla.nombre}</a><p>${r.motivo}</p><p>~${r.silla.precioAprox ?? 'n/d'} € · ★ ${r.silla.valoracion.toFixed(1)}</p></div>`;
+        } else {
+          out.innerHTML = `<div class="selector-rec"><p>${r.motivo}</p><p><a href="/sillas/catalogo/">Ver el catálogo completo</a></p></div>`;
+        }
+        mostrar(3);
+      });
+    });
+
+    reset.addEventListener('click', () => { delete sel.presupuesto; delete sel.altura; mostrar(1); });
+  }
+</script>

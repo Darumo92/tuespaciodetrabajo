@@ -1,0 +1,22 @@
+---
+import Base from '@/layouts/Base.astro';
+import SelectorSillas from '@/components/SelectorSillas.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('sillas');
+const sillas = entries.map((e) => ({ slug: e.id.replace(/\.(yaml|yml|json)$/, ''), ...e.data }));
+
+const titulo = 'Selector de silla ergonómica: encuentra la tuya en 2 pasos | Tu Espacio de Trabajo';
+const descripcion = 'Responde 2 preguntas (presupuesto y altura) y te recomendamos la silla ergonómica del catálogo que mejor encaja, con el motivo basado en datos.';
+---
+
+<Base title={titulo} description={descripcion}>
+  <main class="container" style="padding: 2rem 0; max-width: 640px;">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/sillas/">Sillas</a> › <span>Selector</span>
+    </nav>
+    <h1>Encuentra tu silla en 2 pasos</h1>
+    <p>Te recomendamos una silla del <a href="/sillas/catalogo/">catálogo</a> según tu presupuesto y altura, explicándote por qué. Si prefieres comparar tú, usa el catálogo filtrable.</p>
+    <SelectorSillas sillas={sillas} />
+  </main>
+</Base>
