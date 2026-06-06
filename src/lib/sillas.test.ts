@@ -57,7 +57,7 @@ describe('filtrarSillas', () => {
   });
 });
 
-import { ordenarSillas } from './sillas';
+import { ordenarSillas, recomendarSilla } from './sillas';
 
 describe('ordenarSillas', () => {
   it('precio ascendente (null al final)', () => {
@@ -87,5 +87,26 @@ describe('ordenarSillas', () => {
     expect(out[0]).toBe('z');
     expect(out).toHaveLength(3);
     expect(out.slice(1).sort()).toEqual(['x', 'y']);
+  });
+});
+
+describe('recomendarSilla', () => {
+  it('presupuesto bajo elige la más barata válida', () => {
+    const r = recomendarSilla(FIXTURE, { presupuesto: 'bajo', altura: 'media' });
+    expect(r.silla?.slug).toBe('b');
+  });
+  it('altura fuera de media prioriza profundidad regulable', () => {
+    const r = recomendarSilla(FIXTURE, { presupuesto: 'medio', altura: 'baja' });
+    expect(r.silla?.slug).toBe('c');
+    expect(r.motivo).toMatch(/profundidad/i);
+  });
+  it('presupuesto alto con altura media elige la mejor valorada en rango', () => {
+    const r = recomendarSilla(FIXTURE, { presupuesto: 'alto', altura: 'media' });
+    expect(r.silla?.slug).toBe('a');
+  });
+  it('si ninguna entra en presupuesto devuelve null con motivo', () => {
+    const r = recomendarSilla([], { presupuesto: 'bajo', altura: 'media' });
+    expect(r.silla).toBeNull();
+    expect(r.motivo).toBeTruthy();
   });
 });

@@ -104,3 +104,49 @@ export function ordenarSillas(sillas: Silla[], orden: OrdenSillas): Silla[] {
       return copia;
   }
 }
+
+export type Presupuesto = 'bajo' | 'medio' | 'alto';
+export type AlturaPerfil = 'baja' | 'media' | 'alta';
+
+export interface CriteriosSelector {
+  presupuesto: Presupuesto;
+  altura: AlturaPerfil;
+}
+
+export interface Recomendacion {
+  silla: Silla | null;
+  motivo: string;
+}
+
+const TECHO_PRESUPUESTO: Record<Presupuesto, number> = {
+  bajo: 150,
+  medio: 250,
+  alto: Number.POSITIVE_INFINITY,
+};
+
+export function recomendarSilla(sillas: Silla[], c: CriteriosSelector): Recomendacion {
+  const techo = TECHO_PRESUPUESTO[c.presupuesto];
+  const enPresupuesto = sillas.filter(
+    (s) => s.precioAprox != null && s.precioAprox <= techo
+  );
+
+  if (enPresupuesto.length === 0) {
+    return { silla: null, motivo: 'No hay sillas dentro de ese presupuesto en el catálogo.' };
+  }
+
+  const alturaFueraDeMedia = c.altura === 'baja' || c.altura === 'alta';
+  if (alturaFueraDeMedia) {
+    const conProfundidad = enPresupuesto
+      .filter((s) => s.profundidadRegulable)
+      .sort((a, b) => b.valoracion - a.valoracion);
+    if (conProfundidad.length > 0) {
+      return {
+        silla: conProfundidad[0],
+        motivo: 'Tiene profundidad de asiento regulable, clave para tu altura.',
+      };
+    }
+  }
+
+  const mejor = [...enPresupuesto].sort((a, b) => b.valoracion - a.valoracion)[0];
+  return { silla: mejor, motivo: 'Es la mejor valorada dentro de tu presupuesto.' };
+}
