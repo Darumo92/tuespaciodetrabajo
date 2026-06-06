@@ -32,6 +32,7 @@ describe('reposabrazosNivel', () => {
     expect(reposabrazosNivel('3d')).toBe(3);
     expect(reposabrazosNivel('1d')).toBe(1);
     expect(reposabrazosNivel('abatibles')).toBe(2);
+    expect(reposabrazosNivel('fijo')).toBe(1);
     expect(reposabrazosNivel('ninguno')).toBe(0);
   });
 });

@@ -1,7 +1,7 @@
 export const AMAZON_TAG = 'tuespaciodet-21';
 
 export type Lumbar = 'fijo' | 'presion' | 'altura' | 'dinamico' | '5d';
-export type Reposabrazos = 'ninguno' | '1d' | '2d' | '3d' | '4d' | 'abatibles';
+export type Reposabrazos = 'ninguno' | 'fijo' | '1d' | '2d' | '3d' | '4d' | 'abatibles';
 export type Respaldo = 'malla' | 'espuma' | 'mixto';
 
 export interface Silla {
@@ -40,6 +40,7 @@ export interface FiltrosSillas {
 
 const NIVEL_REPOSABRAZOS: Record<Reposabrazos, number> = {
   ninguno: 0,
+  fijo: 1,
   '1d': 1,
   abatibles: 2,
   '2d': 2,

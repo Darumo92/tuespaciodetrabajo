@@ -25,7 +25,7 @@ const articulos = defineCollection({
 });
 
 const LUMBAR = ['fijo', 'presion', 'altura', 'dinamico', '5d'] as const;
-const REPOSABRAZOS = ['ninguno', '1d', '2d', '3d', '4d', 'abatibles'] as const;
+const REPOSABRAZOS = ['ninguno', 'fijo', '1d', '2d', '3d', '4d', 'abatibles'] as const;
 const RESPALDO = ['malla', 'espuma', 'mixto'] as const;
 
 const sillas = defineCollection({
