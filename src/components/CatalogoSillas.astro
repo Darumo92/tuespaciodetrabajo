@@ -9,8 +9,8 @@ const { sillas } = Astro.props;
 <section class="catalogo">
   <div class="catalogo-filtros">
     <label>Presupuesto máx (€)
-      <input type="range" id="f-precio" min="100" max="400" step="10" value="400" />
-      <output id="f-precio-out">400</output>
+      <input type="range" id="f-precio" min="50" max="2000" step="50" value="2000" />
+      <output id="f-precio-out">Sin límite</output>
     </label>
     <label>Respaldo
       <select id="f-respaldo">
@@ -94,7 +94,8 @@ const { sillas } = Astro.props;
 
     function aplicar() {
       const precioMax = parseFloat(fPrecio.value);
-      fPrecioOut.textContent = String(precioMax);
+      const sinLimite = precioMax >= parseFloat(fPrecio.max);
+      fPrecioOut.textContent = sinLimite ? 'Sin límite' : `${precioMax} €`;
       let visibles = 0;
 
       cards.forEach((c) => {
