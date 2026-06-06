@@ -1,0 +1,76 @@
+---
+import BotonPrecio from './BotonPrecio.astro';
+import { buildAmazonHref, type Silla } from '@/lib/sillas';
+import { getCollection } from 'astro:content';
+
+interface Props { slugs: string[]; }
+const { slugs } = Astro.props;
+
+const entries = await getCollection('sillas');
+const porSlug = new Map(entries.map((e) => [e.id.replace(/\.(yaml|yml|json)$/, ''), e.data]));
+const sillas: Silla[] = slugs
+  .map((slug) => { const data = porSlug.get(slug); return data ? { slug, ...data } : null; })
+  .filter((s): s is Silla => s !== null);
+
+const ETIQUETA_LUMBAR: Record<string, string> = { fijo: 'Fijo', presion: 'Presión', altura: 'Altura', dinamico: 'Dinámico', '5d': '5D' };
+const ETIQUETA_RESPALDO: Record<string, string> = { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla+cojín' };
+const fmt = (v: number | null, suf = '') => (v == null ? 'n/d' : `${v}${suf}`);
+
+const productSchemas = sillas.map((s) => {
+  const href = buildAmazonHref(s.amazon);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: s.nombre,
+    brand: { '@type': 'Brand', name: s.marca },
+    ...(s.imagen && { image: s.imagen }),
+    ...(s.precioAprox != null && {
+      offers: { '@type': 'Offer', priceCurrency: 'EUR', price: String(s.precioAprox), availability: 'https://schema.org/InStock', ...(href && { url: href }) },
+    }),
+  };
+});
+---
+
+{productSchemas.map((sch) => (
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(sch)} />
+))}
+
+<div class="tcdb-wrap">
+  <table class="tcdb">
+    <thead>
+      <tr><th>Modelo</th><th>Precio</th><th>Lumbar</th><th>Brazos</th><th>Respaldo</th><th>Peso máx</th><th>Garantía</th><th></th></tr>
+    </thead>
+    <tbody>
+      {sillas.map((s) => (
+        <tr>
+          <td data-th="Modelo"><a href={`/sillas/catalogo/${s.slug}/`}>{s.nombre}</a></td>
+          <td data-th="Precio">{s.precioAprox == null ? 'n/d' : `~${s.precioAprox} €`}</td>
+          <td data-th="Lumbar">{ETIQUETA_LUMBAR[s.lumbar] ?? s.lumbar}{s.profundidadRegulable ? ' +prof' : ''}</td>
+          <td data-th="Brazos">{s.reposabrazos}</td>
+          <td data-th="Respaldo">{ETIQUETA_RESPALDO[s.respaldo] ?? s.respaldo}</td>
+          <td data-th="Peso máx">{fmt(s.pesoMaxKg, ' kg')}</td>
+          <td data-th="Garantía">{s.garantiaAnios == null ? 'n/d' : `${s.garantiaAnios} años`}</td>
+          <td data-th=""><BotonPrecio amazon={s.amazon} webOficial={s.webOficial} nombre={s.nombre} /></td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <p class="tcdb-nota">Specs de fabricante y fichas de Amazon.es; "n/d" = sin dato verificado. <a href="/sillas/catalogo/">Filtra todo el catálogo</a> o usa el <a href="/sillas/selector/">selector</a>.</p>
+</div>
+
+<style>
+  .tcdb-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; }
+  .tcdb { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  .tcdb th, .tcdb td { padding: 0.6rem 0.7rem; border-bottom: 1px solid var(--color-border); text-align: left; white-space: nowrap; }
+  .tcdb thead th { color: var(--color-text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .tcdb td a { font-weight: 600; }
+  .tcdb-nota { font-size: 0.78rem; color: var(--color-text-muted); }
+  @media (max-width: 640px) {
+    .tcdb thead { display: none; }
+    .tcdb, .tcdb tbody, .tcdb tr, .tcdb td { display: block; width: 100%; }
+    .tcdb tr { border: 1px solid var(--color-border); border-radius: var(--radius-md); margin-bottom: 0.75rem; padding: 0.5rem; }
+    .tcdb td { border: none; display: flex; justify-content: space-between; gap: 1rem; }
+    .tcdb td::before { content: attr(data-th); font-weight: 600; color: var(--color-text-muted); }
+    .tcdb td[data-th=""]::before { content: ""; }
+  }
+</style>
