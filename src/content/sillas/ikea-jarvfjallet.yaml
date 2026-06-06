@@ -1,0 +1,31 @@
+nombre: "IKEA JÄRVFJÄLLET"
+marca: "IKEA"
+imagen: ""
+imagenAlt: "Silla de oficina ergonómica IKEA JÄRVFJÄLLET"
+precioAprox: 249
+lumbar: "altura"
+reposabrazos: "2d"
+respaldo: "espuma"
+profundidadRegulable: true
+pesoMaxKg: 110
+alturaAsientoMinCm: 45
+alturaAsientoMaxCm: 56
+reclinacionMaxGrados: null
+garantiaAnios: 10
+valoracion: 4.0
+puntosFuertes:
+  - "Soporte lumbar ajustable en altura"
+  - "Profundidad del asiento regulable"
+  - "Reposabrazos 2D (altura y anchura)"
+  - "10 años de garantía IKEA"
+  - "Precio medio con buenas prestaciones ergonómicas"
+puntosDebiles:
+  - "Respaldo tapizado (no malla), menos transpirable"
+  - "Sin ajuste de tensión de reclinación avanzado"
+  - "Limitada en personalización frente a sillas premium"
+idealPara: "Quienes buscan ergonomía básica buena en IKEA con más ajustes que la Markus"
+amazon:
+  buscar: "IKEA JÄRVFJÄLLET silla oficina"
+webOficial: null
+fuenteSpecs: "Web oficial IKEA España (ikea.com/es/en/p/jarvfjallet-office-chair-with-armrests-glose-black-80510639) — precio y especificaciones verificados"
+verificadoEn: "2026-06-06"

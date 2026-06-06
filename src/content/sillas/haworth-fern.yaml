@@ -1,0 +1,30 @@
+nombre: "Haworth Fern"
+marca: "Haworth"
+imagen: ""
+imagenAlt: "Silla ergonómica Haworth Fern malla"
+precioAprox: 970
+lumbar: "dinamico"
+reposabrazos: "4d"
+respaldo: "malla"
+profundidadRegulable: true
+pesoMaxKg: 150
+alturaAsientoMinCm: 42
+alturaAsientoMaxCm: 54
+reclinacionMaxGrados: null
+garantiaAnios: 10
+valoracion: 4.6
+puntosFuertes:
+  - "Respaldo de malla con tecnología que imita la columna vertebral y se adapta al movimiento"
+  - "Soporte lumbar dinámico integrado de serie"
+  - "Reposabrazos 4D con amplio rango de movimiento"
+  - "Profundidad de asiento regulable 88 mm"
+  - "5 posiciones de bloqueo del respaldo"
+  - "Diseño premiado, ampliamente recomendada en comunidades ergonómicas"
+puntosDebiles:
+  - "Precio premium (~970-1.400 € según configuración)"
+  - "Disponible principalmente por distribuidores especializados en España"
+  - "Sin datos de grados de reclinación máxima en ficha oficial"
+idealPara: "Profesionales que quieren malla de alta calidad con soporte lumbar dinámico al nivel Herman Miller pero algo más accesible"
+webOficial: "https://shopping.haworth.com/en-es/products/fern-office-chair"
+fuenteSpecs: "Haworth Store Internacional (shopping.haworth.com/en-es, precio €970 verificado) + store.haworth.com (dimensiones cm verificadas)"
+verificadoEn: "2026-06-06"

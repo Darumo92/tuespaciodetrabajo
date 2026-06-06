@@ -1,0 +1,32 @@
+nombre: "HÅG Capisco 8106"
+marca: "HÅG"
+imagen: ""
+imagenAlt: "Silla ergonómica HÅG Capisco 8106 tipo silla de montar"
+precioAprox: 945
+lumbar: "dinamico"
+reposabrazos: "2d"
+respaldo: "espuma"
+profundidadRegulable: true
+pesoMaxKg: 110
+alturaAsientoMinCm: 41
+alturaAsientoMaxCm: 55
+reclinacionMaxGrados: null
+garantiaAnios: 10
+valoracion: 4.5
+puntosFuertes:
+  - "Diseño de asiento tipo silla de montar: abre el ángulo de cadera y extiende la columna"
+  - "Compatible con escritorios de pie: tres alturas de cilindro disponibles (hasta 79 cm)"
+  - "Sistema HÅG inBalance®: mecanismo de basculación fluida y equilibrada"
+  - "Respaldo ajustable en altura para soporte lumbar en múltiples posiciones"
+  - "Profundidad de asiento regulable"
+  - "10 años de garantía"
+puntosDebiles:
+  - "Peso máximo 110 kg, inferior a otras premium"
+  - "El asiento tipo silla de montar requiere adaptación (semanas de ajuste postural)"
+  - "Sin reposacabezas de serie (opcional)"
+  - "Precio elevado (~945 € en la tienda oficial)"
+  - "No apta para quienes buscan reclinación pasiva"
+idealPara: "Usuarios de escritorios de pie, diseñadores que alternan posición y quienes prefieren postura activa"
+webOficial: "https://hag-office.com/products/design-hag-capisco-8106"
+fuenteSpecs: "Web oficial HÅG (hag-office.com/products/design-hag-capisco-8106 — precio EUR y specs verificados) + universalmedicalinc.com (alturas cilindro)"
+verificadoEn: "2026-06-06"

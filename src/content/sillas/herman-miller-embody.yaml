@@ -1,0 +1,31 @@
+nombre: "Herman Miller Embody"
+marca: "Herman Miller"
+imagen: ""
+imagenAlt: "Silla ergonómica Herman Miller Embody"
+precioAprox: 1824
+lumbar: "dinamico"
+reposabrazos: "2d"
+respaldo: "mixto"
+profundidadRegulable: true
+pesoMaxKg: 136
+alturaAsientoMinCm: 41
+alturaAsientoMaxCm: 52
+reclinacionMaxGrados: 18
+garantiaAnios: 12
+valoracion: 4.7
+puntosFuertes:
+  - "Soporte Pixelated™: matriz de polímero que se adapta dinámicamente a la espalda"
+  - "BackFit™: ajuste del ángulo completo del respaldo para alinear toda la columna"
+  - "Asiento de 4 capas con distribución inteligente de presión"
+  - "Diseñado con biomecánicos y fisioterapeutas"
+  - "Garantía 12 años, 3 turnos"
+  - "Referencia premium para trabajo creativo y largas jornadas"
+puntosDebiles:
+  - "El más caro de la comparativa (~1.824 €)"
+  - "Reclinación limitada a 18° (controlada por peso corporal)"
+  - "Reposabrazos solo 2D (altura y anchura), inferiores a otras premium"
+  - "Respaldo mixto (no malla completa) puede ser menos transpirable"
+idealPara: "Creativos y profesionales que buscan el máximo soporte adaptativo de respaldo sin importar el precio"
+webOficial: "https://esstore.hermanmiller.com/collections/embody-chairs"
+fuenteSpecs: "Web oficial Herman Miller (hermanmiller.com/products/seating/office-chairs/embody-chairs + specs PDF) + distribuidor España ofival.es (precio €1.824 verificado)"
+verificadoEn: "2026-06-06"

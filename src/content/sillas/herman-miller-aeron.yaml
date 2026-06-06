@@ -1,0 +1,31 @@
+nombre: "Herman Miller Aeron"
+marca: "Herman Miller"
+imagen: ""
+imagenAlt: "Silla ergonómica Herman Miller Aeron talla B"
+precioAprox: 1600
+lumbar: "dinamico"
+reposabrazos: "4d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 159
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: null
+garantiaAnios: 12
+valoracion: 4.8
+puntosFuertes:
+  - "Respaldo y asiento de malla 8Z Pellicle con zonas de soporte diferenciadas"
+  - "PostureFit SL: soporte sacro y lumbar simultáneo, único en el mercado"
+  - "Disponible en 3 tallas (A, B, C) para adaptarse a cada cuerpo"
+  - "Icono del diseño ergonómico, referencia absoluta en r/OfficeChairs"
+  - "Garantía 12 años, 3 turnos (uso 24/7)"
+  - "Excelente transpirabilidad de malla en climas cálidos"
+puntosDebiles:
+  - "Precio muy elevado (1.500-1.800 € nuevas en España)"
+  - "Sin ajuste de profundidad de asiento en modelos base"
+  - "Puede resultar incómoda para usuarios con mucho peso en la parte superior"
+  - "Requiere distribuidor oficial o tienda especializada"
+idealPara: "Profesionales que buscan la referencia absoluta en malla transpirable y soporte sacrolumbar"
+webOficial: "https://esstore.hermanmiller.com/collections/aeron-chairs"
+fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/aeron-chair/specs) + tienda España (esstore.hermanmiller.com) + ofival.es"
+verificadoEn: "2026-06-06"

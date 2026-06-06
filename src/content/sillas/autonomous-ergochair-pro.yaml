@@ -1,0 +1,30 @@
+nombre: "Autonomous ErgoChair Pro"
+marca: "Autonomous"
+imagen: ""
+imagenAlt: "Silla ergonómica Autonomous ErgoChair Pro"
+precioAprox: 499
+lumbar: "altura"
+reposabrazos: "4d"
+respaldo: "malla"
+profundidadRegulable: true
+pesoMaxKg: 136
+alturaAsientoMinCm: 47
+alturaAsientoMaxCm: 56
+reclinacionMaxGrados: 22
+garantiaAnios: null
+valoracion: 3.8
+puntosFuertes:
+  - "9 puntos de ajuste (altura asiento, profundidad, reposabrazos, lumbar, reposacabezas, tensión, reclinación)"
+  - "Lumbar ajustable en altura con rango de 15 cm"
+  - "Profundidad de asiento regulable"
+  - "Garantía de por vida en piezas estructurales"
+  - "Precio competitivo para la cantidad de ajustes"
+puntosDebiles:
+  - "Reclinación máxima de solo 22°, muy limitada"
+  - "Sin distribución en tiendas físicas en España"
+  - "Soporte postventa desde EE. UU., puede ser lento"
+  - "Comunidad r/OfficeChairs señala que la calidad de materiales no es del nivel premium"
+idealPara: "Quienes quieren muchos ajustes sin llegar al precio Steelcase/Herman Miller"
+webOficial: "https://www.autonomous.ai/office-chairs/ergonomic-chair"
+fuenteSpecs: "Web oficial Autonomous (autonomous.ai/office-chairs/ergonomic-chair) — especificaciones verificadas"
+verificadoEn: "2026-06-06"

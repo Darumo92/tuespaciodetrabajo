@@ -1,0 +1,32 @@
+nombre: "SIHOO M57"
+marca: "SIHOO"
+imagen: ""
+imagenAlt: "Silla ergonómica SIHOO M57 malla negra"
+precioAprox: 220
+lumbar: "altura"
+reposabrazos: "3d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 150
+alturaAsientoMinCm: 45
+alturaAsientoMaxCm: 55
+reclinacionMaxGrados: 126
+garantiaAnios: 3
+valoracion: 4.0
+puntosFuertes:
+  - "Soporte lumbar 2D (vertical y horizontal)"
+  - "Reposabrazos 3D con rotación de 34°"
+  - "Reposacabezas ajustable en altura y ángulo"
+  - "Respaldo de malla con forma de S integrada"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Sin profundidad de asiento regulable"
+  - "Solo 3 posiciones de reclinación (110°, 116°, 126°)"
+  - "Garantía de solo 3 años"
+  - "Precio puede variar mucho entre plataformas"
+idealPara: "Jornada completa en casa, buena relación calidad-precio sin llegar a gama alta"
+amazon:
+  buscar: "SIHOO M57 silla ergonómica"
+webOficial: null
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m57-2 + sihoooffice.com/products/m57) + Amazon.es + Idealo.es"
+verificadoEn: "2026-06-06"

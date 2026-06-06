@@ -1,0 +1,32 @@
+nombre: "SIHOO M18"
+marca: "SIHOO"
+imagen: ""
+imagenAlt: "Silla ergonómica SIHOO M18 respaldo alto malla"
+precioAprox: 160
+lumbar: "altura"
+reposabrazos: "1d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 150
+alturaAsientoMinCm: null
+alturaAsientoMaxCm: null
+reclinacionMaxGrados: 126
+garantiaAnios: 3
+valoracion: 3.8
+puntosFuertes:
+  - "Precio económico con respaldo alto de malla"
+  - "Soporte lumbar dual ajustable (vertical y horizontal)"
+  - "Reposacabezas ajustable en altura y ángulo"
+  - "Soporta hasta 150 kg"
+  - "Cojín de asiento con forma W para mayor soporte"
+puntosDebiles:
+  - "Reposabrazos solo con ajuste de altura (1D)"
+  - "Sin profundidad de asiento regulable"
+  - "Espuma del asiento puede ablandarse con el tiempo según reseñas"
+  - "Calidad de materiales inferior a la M57"
+idealPara: "Presupuesto de ~150-170 €, teletrabajo moderado sin exigir premium"
+amazon:
+  buscar: "SIHOO M18 silla ergonómica"
+webOficial: null
+fuenteSpecs: "Web oficial SIHOO (sihoooffice.com/products/m18-ergonomic-chair) + Amazon.es + Idealo.es"
+verificadoEn: "2026-06-06"

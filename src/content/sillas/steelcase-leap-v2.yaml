@@ -1,0 +1,31 @@
+nombre: "Steelcase Leap V2"
+marca: "Steelcase"
+imagen: ""
+imagenAlt: "Silla ergonómica Steelcase Leap V2"
+precioAprox: 1239
+lumbar: "altura"
+reposabrazos: "4d"
+respaldo: "espuma"
+profundidadRegulable: true
+pesoMaxKg: 150
+alturaAsientoMinCm: 41
+alturaAsientoMaxCm: 54
+reclinacionMaxGrados: 25
+garantiaAnios: 12
+valoracion: 4.8
+puntosFuertes:
+  - "Tecnología LiveBack™: respaldo superior e inferior independientes que siguen la columna"
+  - "Lumbar ajustable en altura y firmeza"
+  - "Reposabrazos 4D con ajuste de altura, anchura, profundidad y pivote"
+  - "Garantía de por vida en estructura + 12 años en mecanismos (uso 24/7)"
+  - "Referencia histórica de r/OfficeChairs para trabajo de jornada completa"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Precio elevado (~1.200 € nuevas en España)"
+  - "No disponible en tiendas físicas masivas; requiere distribuidor oficial"
+  - "Respaldo tapizado, menos transpirable que malla"
+  - "Reclinación máxima de 25° (5 posiciones), más conservadora que sillas gaming"
+idealPara: "Profesionales con jornada completa que priorizan ergonomía y durabilidad sobre el precio"
+webOficial: "https://es.steelcase.com/products/steelcase-leap"
+fuenteSpecs: "Web oficial Steelcase España (es.steelcase.com/products/steelcase-leap) — precio y specs verificados + seatedlab.com/steelcase-leap-review"
+verificadoEn: "2026-06-06"

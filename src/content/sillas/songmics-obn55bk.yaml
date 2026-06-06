@@ -1,0 +1,33 @@
+nombre: "SONGMICS OBN55BK"
+marca: "SONGMICS"
+imagen: ""
+imagenAlt: "Silla de oficina ergonómica SONGMICS OBN55BK negra"
+precioAprox: 90
+lumbar: "presion"
+reposabrazos: "1d"
+respaldo: "malla"
+profundidadRegulable: false
+pesoMaxKg: 120
+alturaAsientoMinCm: 44
+alturaAsientoMaxCm: 54
+reclinacionMaxGrados: 120
+garantiaAnios: null
+valoracion: 3.5
+puntosFuertes:
+  - "Precio muy competitivo (menos de 100 €)"
+  - "Respaldo de malla transpirable"
+  - "Reposacabezas y lumbar ajustables incluidos"
+  - "Tres posiciones de inclinación (90°, 105°, 120°)"
+  - "Disponible en Amazon.es con envío rápido"
+puntosDebiles:
+  - "Peso máximo de 120 kg, inferior a otras opciones"
+  - "Reposabrazos solo ajustables en altura"
+  - "Materiales de plástico de calidad básica"
+  - "Sin ajuste de profundidad de asiento"
+  - "Garantía no especificada oficialmente"
+idealPara: "Presupuesto muy ajustado (menos de 100 €), uso ocasional o segunda silla"
+amazon:
+  buscar: "SONGMICS OBN55BK silla oficina"
+webOficial: null
+fuenteSpecs: "Amazon.es ficha producto OBN55BK + allesopvoorraad.com (dimensiones verificadas)"
+verificadoEn: "2026-06-06"
