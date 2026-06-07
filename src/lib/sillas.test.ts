@@ -58,7 +58,8 @@ describe('filtrarSillas', () => {
   });
 });
 
-import { ordenarSillas, recomendarSilla } from './sillas';
+import { ordenarSillas, recomendarSilla, mediaEjesPresentes, notaGlobal } from './sillas';
+import type { Valoraciones } from './sillas';
 
 describe('ordenarSillas', () => {
   it('precio ascendente (null al final)', () => {
@@ -109,5 +110,35 @@ describe('recomendarSilla', () => {
     const r = recomendarSilla([], { presupuesto: 'bajo', altura: 'media' });
     expect(r.silla).toBeNull();
     expect(r.motivo).toBeTruthy();
+  });
+});
+
+const EJES_COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
+const EJES_PARCIALES: Valoraciones = { ergonomia: 9, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: 6 };
+const EJES_VACIOS: Valoraciones = { ergonomia: null, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: null };
+
+describe('mediaEjesPresentes', () => {
+  it('promedia solo los ejes con valor', () => {
+    expect(mediaEjesPresentes(EJES_COMPLETOS)).toBe(8); // (8+8+9+7+8)/5
+    expect(mediaEjesPresentes(EJES_PARCIALES)).toBe(7.5); // (9+6)/2
+  });
+  it('devuelve null si no hay ningún eje', () => {
+    expect(mediaEjesPresentes(EJES_VACIOS)).toBeNull();
+    expect(mediaEjesPresentes(undefined)).toBeNull();
+  });
+});
+
+describe('notaGlobal', () => {
+  it('usa la media de ejes presentes (redondeada a 1 decimal)', () => {
+    const s = { ...FIXTURE[0], valoraciones: EJES_PARCIALES };
+    expect(notaGlobal(s)).toBe(7.5);
+  });
+  it('cae a valoracion*2 si no hay ejes', () => {
+    const s = { ...FIXTURE[0], valoracion: 4.5, valoraciones: EJES_VACIOS };
+    expect(notaGlobal(s)).toBe(9); // 4.5 * 2
+  });
+  it('cae a valoracion*2 si valoraciones es undefined', () => {
+    const s = { ...FIXTURE[0], valoracion: 4 };
+    expect(notaGlobal(s)).toBe(8);
   });
 });

@@ -4,6 +4,14 @@ export type Lumbar = 'fijo' | 'presion' | 'altura' | 'dinamico' | '5d';
 export type Reposabrazos = 'ninguno' | 'fijo' | '1d' | '2d' | '3d' | '4d' | 'abatibles';
 export type Respaldo = 'malla' | 'espuma' | 'mixto';
 
+export interface Valoraciones {
+  ergonomia: number | null;
+  ajustabilidad: number | null;
+  materiales: number | null;
+  comodidad: number | null;
+  calidadPrecio: number | null;
+}
+
 export interface Silla {
   slug: string;
   nombre: string;
@@ -28,6 +36,17 @@ export interface Silla {
   webOficial?: string | null;
   fuenteSpecs?: string;
   verificadoEn?: string;
+  anchoCm?: number | null;
+  fondoCm?: number | null;
+  mecanismo?: string | null;
+  baseMaterial?: string | null;
+  certificacionBifma?: boolean | null;
+  pesoProductoKg?: number | null;
+  valoraciones?: Valoraciones;
+  veredicto?: string;
+  comunidad?: string;
+  paraQuienSi?: string[];
+  paraQuienNo?: string[];
 }
 
 export interface FiltrosSillas {
@@ -150,4 +169,20 @@ export function recomendarSilla(sillas: Silla[], c: CriteriosSelector): Recomend
 
   const mejor = [...enPresupuesto].sort((a, b) => b.valoracion - a.valoracion)[0];
   return { silla: mejor, motivo: 'Es la mejor valorada dentro de tu presupuesto.' };
+}
+
+export function mediaEjesPresentes(v?: Valoraciones): number | null {
+  if (!v) return null;
+  const vals = [v.ergonomia, v.ajustabilidad, v.materiales, v.comodidad, v.calidadPrecio]
+    .filter((n): n is number => n != null);
+  if (vals.length === 0) return null;
+  const media = vals.reduce((a, b) => a + b, 0) / vals.length;
+  return Math.round(media * 10) / 10;
+}
+
+export function notaGlobal(silla: Silla): number | null {
+  const media = mediaEjesPresentes(silla.valoraciones);
+  if (media != null) return media;
+  if (silla.valoracion != null) return Math.round(silla.valoracion * 2 * 10) / 10;
+  return null;
 }
