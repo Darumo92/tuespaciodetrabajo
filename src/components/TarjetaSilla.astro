@@ -1,0 +1,53 @@
+---
+import BotonPrecio from './BotonPrecio.astro';
+import ImagenSilla from './ImagenSilla.astro';
+import { notaGlobal, reposabrazosNivel, type Silla } from '@/lib/sillas';
+
+interface Props { silla: Silla; }
+const { silla: s } = Astro.props;
+const global = notaGlobal(s);
+const ETIQUETA_LUMBAR: Record<string, string> = { fijo: 'Lumbar fijo', presion: 'Lumbar presión', altura: 'Lumbar altura', dinamico: 'Lumbar dinámico', '5d': 'Lumbar 5D' };
+const chips = [
+  ETIQUETA_LUMBAR[s.lumbar] ?? s.lumbar,
+  ({ malla: 'Malla', espuma: 'Espuma', mixto: 'Malla+cojín' } as Record<string,string>)[s.respaldo] ?? s.respaldo,
+  s.pesoMaxKg == null ? null : `${s.pesoMaxKg} kg`,
+  s.garantiaAnios == null ? 'garantía n/d' : `${s.garantiaAnios} años`,
+];
+---
+<article class="card"
+  data-slug={s.slug}
+  data-precio={s.precioAprox ?? ''}
+  data-respaldo={s.respaldo}
+  data-brazos={reposabrazosNivel(s.reposabrazos)}
+  data-prof={s.profundidadRegulable ? '1' : '0'}
+  data-peso={s.pesoMaxKg ?? ''}
+  data-valoracion={s.valoracion}>
+  <label class="card-cmp"><input type="checkbox" class="cmp-chk" value={s.slug} /> comparar</label>
+  <ImagenSilla imagen={s.imagen} imagenAlt={s.imagenAlt} marca={s.marca} nombre={s.nombre} size={110} />
+  <div class="card-info">
+    <span class="card-brand">{s.marca}</span>
+    <a class="card-name" href={`/sillas/catalogo/${s.slug}/`}>{s.nombre}</a>
+    <p class="card-line">
+      {global != null && <span class="card-score">{global.toFixed(1)}/10</span>}
+      <span class="card-price">{s.precioAprox == null ? 'n/d' : `~${s.precioAprox} €`}</span>
+    </p>
+    <div class="card-chips">
+      {chips.filter((c): c is string => c != null).map((c) => <span class={`chip${c.includes('n/d') ? ' chip-nd' : ''}`}>{c}</span>)}
+    </div>
+    <BotonPrecio amazon={s.amazon} webOficial={s.webOficial} nombre={s.nombre} />
+  </div>
+</article>
+<style>
+  .card { position: relative; display: flex; gap: 1rem; align-items: flex-start; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; }
+  .card.cmp-sel { border-color: var(--color-primary); box-shadow: 0 0 0 2px #bfdbfe; }
+  .card-cmp { position: absolute; top: 0.6rem; right: 0.6rem; display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--color-text-muted); background: #fff; border: 1px solid var(--color-border); border-radius: 8px; padding: 0.2rem 0.5rem; cursor: pointer; }
+  .card-info { flex: 1; min-width: 0; }
+  .card-brand { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .card-name { font-family: var(--font-display); font-weight: 700; color: var(--color-text); text-decoration: none; display: block; margin: 0.05rem 0 0.3rem; }
+  .card-name:hover { color: var(--color-primary); }
+  .card-line { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
+  .card-score { background: var(--color-text); color: #fff; font-family: var(--font-display); font-size: 0.78rem; border-radius: 7px; padding: 0.1rem 0.45rem; }
+  .card-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
+  .chip { font-size: 0.7rem; background: var(--color-bg-muted); color: #3f3f46; border-radius: 6px; padding: 0.1rem 0.45rem; }
+  .chip-nd { color: var(--color-text-muted); font-style: italic; }
+</style>

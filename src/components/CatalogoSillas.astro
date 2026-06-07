@@ -1,5 +1,5 @@
 ---
-import BotonPrecio from './BotonPrecio.astro';
+import TarjetaSilla from './TarjetaSilla.astro';
 import { reposabrazosNivel, type Silla } from '@/lib/sillas';
 
 interface Props { sillas: Silla[]; }
@@ -39,47 +39,36 @@ const { sillas } = Astro.props;
     </label>
   </div>
 
-  <p class="catalogo-count"><span id="catalogo-n">{sillas.length}</span> sillas</p>
+  <p class="catalogo-count"><span id="catalogo-n">{sillas.length}</span> sillas · marca casillas para comparar</p>
 
   <div class="catalogo-grid" id="catalogo-grid">
-    {sillas.map((s) => (
-      <article class="catalogo-card"
-        data-precio={s.precioAprox ?? ''}
-        data-respaldo={s.respaldo}
-        data-brazos={reposabrazosNivel(s.reposabrazos)}
-        data-prof={s.profundidadRegulable ? '1' : '0'}
-        data-peso={s.pesoMaxKg ?? ''}
-        data-valoracion={s.valoracion}>
-        {s.imagen && <img src={s.imagen} alt={s.imagenAlt ?? s.nombre} width="120" height="120" loading="lazy" decoding="async" />}
-        <div class="catalogo-info">
-          <a class="catalogo-nombre" href={`/sillas/catalogo/${s.slug}/`}>{s.nombre}</a>
-          <p class="catalogo-meta">★ {s.valoracion.toFixed(1)} · {s.precioAprox == null ? 'n/d' : `~${s.precioAprox} €`} · {s.pesoMaxKg == null ? 'n/d' : `${s.pesoMaxKg} kg`}{s.profundidadRegulable ? ' · prof. regulable' : ''}</p>
-          <BotonPrecio amazon={s.amazon} webOficial={s.webOficial} nombre={s.nombre} />
-        </div>
-      </article>
-    ))}
+    {sillas.map((s) => <TarjetaSilla silla={s} />)}
   </div>
   <p class="catalogo-vacio" id="catalogo-vacio" hidden>Ninguna silla cumple esos filtros. Prueba a relajar alguno.</p>
 </section>
+
+<div class="cmp-bar" id="cmp-bar" hidden>
+  Has seleccionado <strong id="cmp-n">0</strong> sillas
+  <a id="cmp-go" href="/sillas/comparar/">Comparar ⚖️</a>
+  <button id="cmp-clear" type="button">limpiar</button>
+</div>
 
 <style>
   .catalogo-filtros { display: flex; flex-wrap: wrap; gap: 1rem; align-items: end; margin-bottom: 1.5rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--color-border); }
   .catalogo-filtros label { display: flex; flex-direction: column; font-size: 0.8rem; font-weight: 600; gap: 0.25rem; color: var(--color-text-muted); }
   .catalogo-check { flex-direction: row !important; align-items: center; gap: 0.4rem; }
   .catalogo-count { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem; }
-  .catalogo-grid { display: grid; gap: 1rem; }
-  .catalogo-card { display: flex; gap: 1rem; align-items: center; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; }
-  .catalogo-card img { object-fit: contain; background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 0.5rem; flex-shrink: 0; }
-  .catalogo-info { flex: 1; min-width: 0; }
-  .catalogo-nombre { font-family: var(--font-display); font-weight: 700; color: var(--color-text); text-decoration: none; }
-  .catalogo-nombre:hover { color: var(--color-primary); }
-  .catalogo-meta { font-size: 0.82rem; color: var(--color-text-muted); margin: 0.3rem 0 0.7rem; }
+  .catalogo-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+  .cmp-bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--color-text); color: #fff; display: flex; align-items: center; justify-content: center; gap: 1rem; padding: 0.85rem; font-size: 0.88rem; z-index: 50; }
+  .cmp-bar a { background: var(--color-secondary); color: #3a2a00; font-weight: 700; border-radius: 99px; padding: 0.5rem 1.25rem; text-decoration: none; }
+  .cmp-bar a[aria-disabled="true"] { opacity: 0.5; pointer-events: none; }
+  .cmp-bar button { background: transparent; color: #fff; border: 1px solid #555; border-radius: 8px; padding: 0.4rem 0.8rem; cursor: pointer; font: inherit; }
 </style>
 
 <script>
   const grid = document.getElementById('catalogo-grid');
   if (grid) {
-    const cards = Array.from(grid.querySelectorAll('.catalogo-card')) as HTMLElement[];
+    const cards = Array.from(grid.querySelectorAll('.card')) as HTMLElement[];
     const fPrecio = document.getElementById('f-precio') as HTMLInputElement;
     const fPrecioOut = document.getElementById('f-precio-out') as HTMLOutputElement;
     const fRespaldo = document.getElementById('f-respaldo') as HTMLSelectElement;
@@ -91,35 +80,31 @@ const { sillas } = Astro.props;
     const vacio = document.getElementById('catalogo-vacio');
 
     const num = (v: string) => (v === '' ? null : parseFloat(v));
+    const cmp = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
 
     function aplicar() {
       const precioMax = parseFloat(fPrecio.value);
       const sinLimite = precioMax >= parseFloat(fPrecio.max);
       fPrecioOut.textContent = sinLimite ? 'Sin límite' : `${precioMax} €`;
       let visibles = 0;
-
       cards.forEach((c) => {
         const precio = num(c.dataset.precio || '');
         const respaldo = c.dataset.respaldo || '';
         const brazos = parseInt(c.dataset.brazos || '0', 10);
         const prof = c.dataset.prof === '1';
         const peso = num(c.dataset.peso || '');
-
         let ok = true;
         if (precio != null && precio > precioMax) ok = false;
         if (fRespaldo.value && respaldo !== fRespaldo.value) ok = false;
         if (parseInt(fBrazos.value, 10) > brazos) ok = false;
         if (fProf.checked && !prof) ok = false;
         if (fPeso.checked && (peso == null || peso < 130)) ok = false;
-
         c.style.display = ok ? '' : 'none';
         if (ok) visibles++;
       });
-
       const orden = fOrden.value;
       const visiblesArr = cards.filter((c) => c.style.display !== 'none');
       const val = (c: HTMLElement, k: string) => num(c.dataset[k] || '');
-      const cmp = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
       visiblesArr.sort((a, b) => {
         if (orden === 'precio-asc') return cmp(val(a, 'precio') ?? Infinity, val(b, 'precio') ?? Infinity);
         if (orden === 'precio-desc') return cmp(val(b, 'precio') ?? -Infinity, val(a, 'precio') ?? -Infinity);
@@ -127,14 +112,42 @@ const { sillas } = Astro.props;
         return cmp(val(b, 'valoracion') ?? 0, val(a, 'valoracion') ?? 0);
       });
       visiblesArr.forEach((c) => grid.appendChild(c));
-
       if (nOut) nOut.textContent = String(visibles);
       if (vacio) vacio.hidden = visibles > 0;
     }
-
-    [fPrecio, fRespaldo, fBrazos, fProf, fPeso, fOrden].forEach((el) =>
-      el.addEventListener('input', aplicar)
-    );
+    [fPrecio, fRespaldo, fBrazos, fProf, fPeso, fOrden].forEach((el) => el.addEventListener('input', aplicar));
     aplicar();
+
+    // --- selección para comparar ---
+    const KEY = 'sillas-comparar';
+    const bar = document.getElementById('cmp-bar') as HTMLElement;
+    const nEl = document.getElementById('cmp-n') as HTMLElement;
+    const go = document.getElementById('cmp-go') as HTMLAnchorElement;
+    const clear = document.getElementById('cmp-clear') as HTMLButtonElement;
+    const checks = Array.from(grid.querySelectorAll('.cmp-chk')) as HTMLInputElement[];
+
+    const leer = (): string[] => { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch { return []; } };
+    const guardar = (a: string[]) => localStorage.setItem(KEY, JSON.stringify(a));
+
+    function pintar() {
+      const sel = leer();
+      checks.forEach((ch) => {
+        ch.checked = sel.includes(ch.value);
+        ch.closest('.card')?.classList.toggle('cmp-sel', ch.checked);
+      });
+      nEl.textContent = String(sel.length);
+      bar.hidden = sel.length === 0;
+      const ok = sel.length >= 2 && sel.length <= 4;
+      go.setAttribute('aria-disabled', ok ? 'false' : 'true');
+      go.href = ok ? `/sillas/comparar/?s=${sel.join(',')}` : '/sillas/comparar/';
+    }
+    checks.forEach((ch) => ch.addEventListener('change', () => {
+      let sel = leer();
+      if (ch.checked) { if (!sel.includes(ch.value)) { if (sel.length >= 4) { ch.checked = false; alert('Puedes comparar hasta 4 sillas.'); return; } sel.push(ch.value); } }
+      else { sel = sel.filter((s) => s !== ch.value); }
+      guardar(sel); pintar();
+    }));
+    clear.addEventListener('click', () => { guardar([]); pintar(); });
+    pintar();
   }
 </script>
