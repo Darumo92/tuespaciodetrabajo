@@ -186,3 +186,18 @@ export function notaGlobal(silla: Silla): number | null {
   if (silla.valoracion != null) return Math.round(silla.valoracion * 2 * 10) / 10;
   return null;
 }
+
+export type DireccionComparacion = 'mayor' | 'menor';
+
+export function ganadoresPorValor(
+  items: { slug: string; valor: number | null }[],
+  direccion: DireccionComparacion
+): string[] {
+  const conValor = items.filter((i): i is { slug: string; valor: number } => i.valor != null);
+  if (conValor.length === 0) return [];
+  const mejor = conValor.reduce(
+    (m, i) => (direccion === 'mayor' ? Math.max(m, i.valor) : Math.min(m, i.valor)),
+    conValor[0].valor
+  );
+  return conValor.filter((i) => i.valor === mejor).map((i) => i.slug);
+}

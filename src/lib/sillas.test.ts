@@ -58,7 +58,7 @@ describe('filtrarSillas', () => {
   });
 });
 
-import { ordenarSillas, recomendarSilla, mediaEjesPresentes, notaGlobal } from './sillas';
+import { ordenarSillas, recomendarSilla, mediaEjesPresentes, notaGlobal, ganadoresPorValor } from './sillas';
 import type { Valoraciones } from './sillas';
 
 describe('ordenarSillas', () => {
@@ -140,5 +140,27 @@ describe('notaGlobal', () => {
   it('cae a valoracion*2 si valoraciones es undefined', () => {
     const s = { ...FIXTURE[0], valoracion: 4 };
     expect(notaGlobal(s)).toBe(8);
+  });
+});
+
+describe('ganadoresPorValor', () => {
+  const items = [
+    { slug: 'a', valor: 320 },
+    { slug: 'b', valor: 130 },
+    { slug: 'c', valor: null },
+  ];
+  it('menor gana (precio), ignora null', () => {
+    expect(ganadoresPorValor(items, 'menor')).toEqual(['b']);
+  });
+  it('mayor gana', () => {
+    expect(ganadoresPorValor(items, 'mayor')).toEqual(['a']);
+  });
+  it('empate marca varios ganadores', () => {
+    const t = [{ slug: 'a', valor: 150 }, { slug: 'b', valor: 150 }, { slug: 'c', valor: 90 }];
+    expect(ganadoresPorValor(t, 'mayor')).toEqual(['a', 'b']);
+  });
+  it('todos null → sin ganadores', () => {
+    const n = [{ slug: 'a', valor: null }, { slug: 'b', valor: null }];
+    expect(ganadoresPorValor(n, 'menor')).toEqual([]);
   });
 });
