@@ -8,9 +8,9 @@ reposabrazos: "3d"
 respaldo: "malla"
 profundidadRegulable: false
 pesoMaxKg: 150
-alturaAsientoMinCm: null
-alturaAsientoMaxCm: null
-reclinacionMaxGrados: 135
+alturaAsientoMinCm: 44
+alturaAsientoMaxCm: 54
+reclinacionMaxGrados: 130
 garantiaAnios: 3
 valoracion: 4.5
 puntosFuertes:
@@ -26,5 +26,27 @@ amazon:
   asin: "B0C3T865C2"
   buscar: "SIHOO Doro C300"
 webOficial: null
-fuenteSpecs: "Ficha Amazon.es + web SIHOO"
+anchoCm: 51
+fondoCm: 43
+mecanismo: "inclinacion-sincronizada"
+baseMaterial: "aluminio"
+certificacionBifma: true
+pesoProductoKg: 23
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.5
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.5
+veredicto: "La C300 establece el estándar en gama media-alta: su lumbar dinámico elimina el ajuste manual y la malla BM aguanta años sin deformarse; el único pero real es su precio, que la pone cerca de sillas mucho más caras."
+comunidad: "Amplio consenso positivo en reseñas especializadas (Tom's Guide, Windows Central, Apple Insider): se la considera la mejor silla ergonómica por debajo de 400 € gracias al lumbar autoajustable. Crítica recurrente: reposabrazos fáciles de desplazar lateralmente por accidente."
+paraQuienSi:
+  - "Personas que pasan 6-10 h diarias sentadas y quieren lumbar sin ajuste manual"
+  - "Usuarios de hasta 185 cm que buscan malla transpirable todo el año"
+  - "Quien valora certificación BIFMA y base de aluminio a precio contenido"
+paraQuienNo:
+  - "Presupuesto por debajo de 280 €"
+  - "Usuarios de más de 190 cm (reposacabezas queda bajo)"
+  - "Quien necesita profundidad de asiento regulable"
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/doro-c300/) + sihoooffice.com/products/sihoo-doro-c300-ergonomic-office-chair + ralphsway.com/sihoo-doro-c300-review/ + tomsguide.com/reviews/sihoo-doro-c300 + appleinsider.com"
 verificadoEn: "2026-06-06"

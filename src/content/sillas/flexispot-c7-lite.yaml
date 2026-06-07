@@ -8,23 +8,46 @@ reposabrazos: "3d"
 respaldo: "mixto"
 profundidadRegulable: false
 pesoMaxKg: 130
-alturaAsientoMinCm: null
-alturaAsientoMaxCm: null
-reclinacionMaxGrados: null
-garantiaAnios: null
+alturaAsientoMinCm: 42
+alturaAsientoMaxCm: 44
+reclinacionMaxGrados: 128
+garantiaAnios: 3
 valoracion: 4.5
 puntosFuertes:
   - "Soporte lumbar 5D"
   - "Reposacabezas y reposabrazos 3D"
   - "Cojín transpirable"
-  - "Base de aluminio robusta"
+  - "Diseño compacto ideal para usuarios hasta 170 cm"
 puntosDebiles:
   - "No es barata: compite en gama media"
   - "Asiento firme para menos de 60 kg (según reseñas)"
-idealPara: "Muchos ajustes sin llegar a 300 €, prioridad transpiración"
+  - "Rango de altura de asiento muy estrecho (solo 2 cm)"
+idealPara: "Muchos ajustes sin llegar a 300 €, prioridad transpiración, talla S/M"
 amazon:
   asin: "B0F6XL3SFG"
   buscar: "FlexiSpot C7 Lite"
 webOficial: null
-fuenteSpecs: "Ficha Amazon.es + web FlexiSpot"
+anchoCm: 51
+fondoCm: 49
+mecanismo: "inclinacion-con-tension"
+baseMaterial: "nylon"
+certificacionBifma: null
+pesoProductoKg: 21
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.5
+  materiales: 7.5
+  comodidad: 8.0
+  calidadPrecio: 8.0
+veredicto: "La C7 Lite empaca un lumbar autoajustable de 5 ejes y reposabrazos 3D en un chasis compacto pensado para usuarios de talla S/M; su mayor debilidad es el estrecho rango de altura de asiento (solo ~2 cm de margen), lo que la hace inadecuada para personas altas."
+comunidad: "TechRadar la recomienda para usuarios hasta 170 cm y destaca la comodidad mantenida tras 64 días de prueba. La crítica más repetida es que el mecanismo de reclinación tiene muy poca resistencia y la ubicación del ajuste lumbar obliga a levantarse para alcanzarlo."
+paraQuienSi:
+  - "Usuarios de hasta 170 cm que buscan máxima ajustabilidad lumbar por debajo de 300 €"
+  - "Espacios donde la compacidad y el diseño moderno importan"
+  - "Quien alterna postura erguida con pausas reclinadas a lo largo del día"
+paraQuienNo:
+  - "Usuarios de más de 175 cm (altura de asiento insuficiente)"
+  - "Quienes prefieren resistencia firme en la reclinación"
+  - "Quien necesita base de aluminio o certificación BIFMA verificada"
+fuenteSpecs: "techradar.com/pro/flexispot-c7-lite-office-chair-review + relaxingrecliners.com/products/c7-lite + Amazon.es ficha B0F6XL3SFG + web FlexiSpot"
 verificadoEn: "2026-06-06"

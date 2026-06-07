@@ -7,11 +7,11 @@ lumbar: "altura"
 reposabrazos: "abatibles"
 respaldo: "malla"
 profundidadRegulable: false
-pesoMaxKg: 125
-alturaAsientoMinCm: null
-alturaAsientoMaxCm: null
-reclinacionMaxGrados: null
-garantiaAnios: 2
+pesoMaxKg: 150
+alturaAsientoMinCm: 45
+alturaAsientoMaxCm: 54
+reclinacionMaxGrados: 130
+garantiaAnios: 3
 valoracion: 4
 puntosFuertes:
   - "Soporte lumbar ajustable"
@@ -25,5 +25,27 @@ amazon:
   asin: "B0CLLRNFB8"
   buscar: "SIHOO M102C"
 webOficial: null
-fuenteSpecs: "Ficha Amazon.es"
+anchoCm: 52
+fondoCm: 48
+mecanismo: "inclinacion-con-tension"
+baseMaterial: "nylon"
+certificacionBifma: true
+pesoProductoKg: 14
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 7.5
+  materiales: 7.0
+  comodidad: 7.5
+  calidadPrecio: 8.5
+veredicto: "La M102C destaca por sus reposabrazos abatibles 3D y un lumbar independiente ajustable en 6 cm — inusual a este precio —; la malla es más fina que la de la M57 y la base es de nylon, pero para un primer salto a la ergonomía real por debajo de 200 € es una opción sólida."
+comunidad: "Reseñas en Amazon y sitios especializados (sihooreview.com) coinciden en que no cruje, el lumbar es efectivo y el montaje es sencillo. La crítica más habitual: la malla del respaldo es más blanda que en modelos superiores y los reposabrazos 3D tienen recorrido limitado."
+paraQuienSi:
+  - "Espacios pequeños donde importa poder abatir los reposabrazos"
+  - "Primera silla ergonómica con lumbar ajustable y 3D arms por debajo de 200 €"
+  - "Usuarios de 160-185 cm con jornadas de 4-7 h"
+paraQuienNo:
+  - "Quien busca malla de alta densidad para uso intensivo diario"
+  - "Usuarios que ya manejan presupuesto para la M57 o C300"
+  - "Necesidad de profundidad de asiento ajustable"
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m102/ + sihoooffice.com/products/sihoo-m102-ergonomic-office-chair + uk.sihoooffice.com/products/sihoo-m102-ergonomic-office-chair-next-level) + sihooreview.com/sihoo-m102c-office-chair + Amazon.co.uk/dp/B0CLLRNFB8"
 verificadoEn: "2026-06-06"

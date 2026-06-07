@@ -27,5 +27,29 @@ idealPara: "Quienes buscan ergonomía básica buena en IKEA con más ajustes que
 amazon:
   buscar: "IKEA JÄRVFJÄLLET silla oficina"
 webOficial: null
-fuenteSpecs: "Web oficial IKEA España (ikea.com/es/en/p/jarvfjallet-office-chair-with-armrests-glose-black-80510639) — precio y especificaciones verificados"
+anchoCm: 52
+fondoCm: 46
+mecanismo: "inclinación sincronizada con tensión automática por peso y bloqueo en 3 posiciones"
+baseMaterial: "aluminio con revestimiento epoxi/poliéster"
+certificacionBifma: true
+pesoProductoKg: 20.7
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 7
+  materiales: 6.5
+  comodidad: 6.5
+  calidadPrecio: 7.5
+veredicto: "La Järvfjället es la opción más ergonómica del catálogo IKEA: lumbar ajustable en altura, profundidad de asiento regulable y base de aluminio certificada EN 1335 + BIFMA. El asiento firme y la falta de malla son sus límites reales, pero para su precio de ~249 € ofrece más ajustes que muchas sillas del doble de coste."
+comunidad: "Bien considerada como paso intermedio entre la Markus y sillas premium. BTOD y Spacehop destacan el lumbar ajustable como ventaja diferencial sobre la Markus. La crítica más repetida: asiento demasiado duro para jornadas largas y reposabrazos de plástico duro. Buena calidad-precio, no un sustituto de sillas ergonómicas de oficina serias."
+paraQuienSi:
+  - "Usuarios IKEA que quieren más ajuste ergonómico que la Markus"
+  - "Teletrabajadores con presupuesto de 200-300 € que priorizan soporte lumbar ajustable"
+  - "Personas que combinan escritorio fijo y trabajo ocasional de pie"
+  - "Quienes prefieren disponibilidad inmediata en tienda IKEA España"
+paraQuienNo:
+  - "Usuarios que necesitan malla transpirable (respaldo tapizado)"
+  - "Personas con jornadas largas que requieren asiento muy acolchado"
+  - "Quienes superan los 110 kg de peso"
+  - "Compradores que comparan con sillas ergonómicas de gama media-alta (>400 €)"
+fuenteSpecs: "Web oficial IKEA España (ikea.com/es/es/p/jarvfjallet-silla-trabajo-con-reposabrazos-glose-negro-80510639 — anchoCm 52 cm, fondoCm 46 cm, peso 20.7 kg, base aluminio, EN 1335 + ANSI/BIFMA X5.1 verificados) + btod.com/blog/ikea-markus-vs-jarvfjallet (revisión editorial) + spacehop.com (review)"
 verificadoEn: "2026-06-06"

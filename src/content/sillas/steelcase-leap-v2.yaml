@@ -9,7 +9,7 @@ respaldo: "espuma"
 profundidadRegulable: true
 pesoMaxKg: 150
 alturaAsientoMinCm: 41
-alturaAsientoMaxCm: 54
+alturaAsientoMaxCm: 52
 reclinacionMaxGrados: 25
 garantiaAnios: 12
 valoracion: 4.8
@@ -27,5 +27,29 @@ puntosDebiles:
   - "Reclinación máxima de 25° (5 posiciones), más conservadora que sillas gaming"
 idealPara: "Profesionales con jornada completa que priorizan ergonomía y durabilidad sobre el precio"
 webOficial: "https://es.steelcase.com/products/steelcase-leap"
-fuenteSpecs: "Web oficial Steelcase España (es.steelcase.com/products/steelcase-leap) — precio y specs verificados + seatedlab.com/steelcase-leap-review"
+fuenteSpecs: "Web oficial Steelcase España (es.steelcase.com/products/steelcase-leap) + btod.com/steelcase-leap-v2 (dimensiones verificadas) + seatedlab.com/steelcase-leap-review + store.steelcase.com/seating/ergonomic-chairs/leap"
 verificadoEn: "2026-06-06"
+anchoCm: 49
+fondoCm: 40
+mecanismo: "Natural Glide System con LiveBack y 5 posiciones de inclinacion"
+baseMaterial: "nylon"
+certificacionBifma: true
+pesoProductoKg: 29.0
+valoraciones:
+  ergonomia: 9.4
+  ajustabilidad: 9.3
+  materiales: 8.8
+  comodidad: 9.2
+  calidadPrecio: 8.0
+veredicto: "La Leap V2 es la referencia clásica para trabajo de jornada completa: su lumbar ajustable en altura y firmeza combinado con LiveBack la convierte en la silla más adaptable del segmento premium tapizado, con una durabilidad probada de 15-20 años."
+comunidad: "La más recomendada en r/OfficeChairs para trabajo sedentario intenso; el mercado de segunda mano a través de Crandall se cita como la mejor relación calidad-precio del segmento."
+paraQuienSi:
+  - "Profesionales con 8+ horas diarias de trabajo sedentario intenso"
+  - "Usuarios que priorizan el ajuste lumbar preciso (altura y firmeza)"
+  - "Quienes buscan durabilidad contrastada de 15-20 años"
+  - "Compradores de segunda mano que quieren calidad premium a mitad de precio"
+paraQuienNo:
+  - "Usuarios en climas cálidos que prefieren malla transpirable"
+  - "Personas de complexión muy robusta (límite 150 kg frente a 181 kg de la Gesture)"
+  - "Quienes quieran los brazos más versátiles del mercado (Gesture los supera)"
+  - "Presupuestos por debajo de 1.000 € sin recurrir al mercado reacondicionado"

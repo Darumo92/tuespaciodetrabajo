@@ -11,7 +11,7 @@ pesoMaxKg: 120
 alturaAsientoMinCm: 44
 alturaAsientoMaxCm: 54
 reclinacionMaxGrados: 120
-garantiaAnios: null
+garantiaAnios: 2
 valoracion: 3.5
 puntosFuertes:
   - "Precio muy competitivo (menos de 100 €)"
@@ -24,10 +24,32 @@ puntosDebiles:
   - "Reposabrazos solo ajustables en altura"
   - "Materiales de plástico de calidad básica"
   - "Sin ajuste de profundidad de asiento"
-  - "Garantía no especificada oficialmente"
+  - "Sin certificación BIFMA (certificada TÜV SÜD EN 1335-2)"
 idealPara: "Presupuesto muy ajustado (menos de 100 €), uso ocasional o segunda silla"
 amazon:
   buscar: "SONGMICS OBN55BK silla oficina"
 webOficial: null
-fuenteSpecs: "Amazon.es ficha producto OBN55BK + allesopvoorraad.com (dimensiones verificadas)"
-verificadoEn: "2026-06-06"
+anchoCm: 52
+fondoCm: 50
+mecanismo: null
+baseMaterial: "nylon"
+certificacionBifma: false
+pesoProductoKg: 15.4
+valoraciones:
+  ergonomia: 5.5
+  ajustabilidad: 5.5
+  materiales: 5.5
+  comodidad: 5.5
+  calidadPrecio: 7
+veredicto: "Silla de entrada muy accesible con malla transpirable y ajuste de tres posiciones de reclinación; materiales y acabados básicos acordes al precio, sin ajuste de profundidad ni soporte lumbar en altura. Cumple bien para uso esporádico o como segunda silla."
+comunidad: "Reseñas polarizadas: satisfacción alta para uso ocasional o presupuesto muy ajustado; críticas frecuentes al plástico y la falta de ajuste fino. Certificada TÜV SÜD / EN 1335-2."
+paraQuienSi:
+  - "Presupuesto por debajo de 100 €"
+  - "Uso ocasional (menos de 4 horas diarias)"
+  - "Segunda silla o silla de invitados en home office"
+paraQuienNo:
+  - "Trabajo a tiempo completo (más de 6 horas/día)"
+  - "Usuarios que necesiten ajuste fino de lumbar o profundidad"
+  - "Personas que busquen durabilidad a largo plazo"
+fuenteSpecs: "Amazon.es ficha OBN55BK (B07ZCJVFDJ) · allesopvoorraad.com (reclinación, certificación TÜV) · vasbutor.hu (altura asiento 44-54 cm, peso 15,4 kg) · chairinstitute.com (garantía 30 meses)"
+verificadoEn: "2026-06-07"

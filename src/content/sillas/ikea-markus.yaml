@@ -28,5 +28,29 @@ idealPara: "Presupuesto ajustado, teletrabajo ligero o estudiantes que buscan ma
 amazon:
   buscar: "IKEA MARKUS silla oficina"
 webOficial: null
-fuenteSpecs: "Web oficial IKEA.es (ikea.com/es/es/p/markus-silla-trabajo) + especificaciones técnicas IKEA US"
+anchoCm: 53
+fondoCm: 47
+mecanismo: "inclinación sincronizada con tensión manual y bloqueo en 3 posiciones"
+baseMaterial: "aluminio con revestimiento epoxi/poliéster"
+certificacionBifma: true
+pesoProductoKg: 22.4
+valoraciones:
+  ergonomia: 6
+  ajustabilidad: 4.5
+  materiales: 7
+  comodidad: 7
+  calidadPrecio: 9
+veredicto: "La Markus es la silla de oficina de referencia en su precio: respaldo alto de malla, lumbar integrado, base de aluminio certificada y 10 años de garantía por ~159 €. Los ajustes son mínimos (solo altura de asiento e inclinación), pero para ese precio es simplemente imbatible como primera silla de home office."
+comunidad: "Icono de la comunidad de sillas de oficina a nivel mundial. En r/OfficeChairs aparece constantemente como la mejor opción de entrada y el estándar de comparación para el segmento budget. BTOD la valora por el reclinado suave y el asiento espacioso. Su punto débil más citado: el lumbar fijo no funciona para todos los torsos."
+paraQuienSi:
+  - "Primera silla de home office o estudiantes con presupuesto de hasta 200 €"
+  - "Jornadas de trabajo moderadas (4-6 horas diarias)"
+  - "Usuarios que priorizan el respaldo de malla transpirable"
+  - "Quienes valoran la disponibilidad inmediata y montaje sencillo en IKEA España"
+paraQuienNo:
+  - "Usuarios con problemas lumbares que necesitan soporte ajustable"
+  - "Personas que pasan más de 8 horas diarias sentadas"
+  - "Quienes miden más de 195 cm o tienen torso muy largo"
+  - "Compradores que necesitan ajustar la profundidad del asiento"
+fuenteSpecs: "Web oficial IKEA US (ikea.com/us/en/p/markus-office-chair-vissle-dark-gray-90289172 — anchoCm 53 cm, fondoCm 47 cm, peso 22.4 kg, base aluminio, EN 1335 + ANSI/BIFMA X5.1 verificados) + ikea.com/es/es/p/markus-silla-trabajo (precio y disponibilidad España) + btod.com/blog/ikea-markus-vs-jarvfjallet (revisión editorial)"
 verificadoEn: "2026-06-06"

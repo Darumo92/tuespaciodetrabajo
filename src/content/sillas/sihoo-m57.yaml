@@ -28,5 +28,27 @@ idealPara: "Jornada completa en casa, buena relación calidad-precio sin llegar 
 amazon:
   buscar: "SIHOO M57 silla ergonómica"
 webOficial: null
-fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m57-2 + sihoooffice.com/products/m57) + Amazon.es + Idealo.es"
+anchoCm: 51
+fondoCm: 46
+mecanismo: "inclinacion-3-posiciones"
+baseMaterial: "aluminio"
+certificacionBifma: true
+pesoProductoKg: 20
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 8.0
+  comodidad: 8.0
+  calidadPrecio: 8.5
+veredicto: "La M57 es una silla funcional y bien construida con base de aluminio y malla respirable; cumple en ergonomía básica, aunque carece del lumbar dinámico de la C300 y sus tres posiciones de reclinación resultan limitadas para quien busca flexibilidad real."
+comunidad: "TechRadar la califica de 'functional but unspectacular': buena calidad de materiales para el precio pero sin rasgos diferenciadores claros. Windows Central destaca la comodidad a largo plazo y la malla transpirable. Valoración general 4/5 en la mayoría de plataformas."
+paraQuienSi:
+  - "Usuarios que buscan base de aluminio y malla duradera por debajo de 250 €"
+  - "Jornadas de 6-8 h con necesidad de lumbar ajustable en altura"
+  - "Personas de entre 165-190 cm con buena postura habitual"
+paraQuienNo:
+  - "Quien necesita reclinación libre o más de 3 posiciones"
+  - "Usuarios muy bajos (<160 cm) o muy altos (>195 cm)"
+  - "Quien espera el nivel de ajustabilidad de la Doro C300"
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m57-2/ + sihoooffice.com/products/m57-ergonomic-chair) + techradar.com/reviews/sihoo-m57-review + windowscentral.com + Amazon.es + Idealo.es"
 verificadoEn: "2026-06-06"

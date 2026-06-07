@@ -26,5 +26,29 @@ puntosDebiles:
   - "Comunidad r/OfficeChairs señala que la calidad de materiales no es del nivel premium"
 idealPara: "Quienes quieren muchos ajustes sin llegar al precio Steelcase/Herman Miller"
 webOficial: "https://www.autonomous.ai/office-chairs/ergonomic-chair"
-fuenteSpecs: "Web oficial Autonomous (autonomous.ai/office-chairs/ergonomic-chair) — especificaciones verificadas"
+anchoCm: 48
+fondoCm: 48
+mecanismo: "mecanismo italiano Donati, inclinación sincronizada con 5 posiciones de bloqueo"
+baseMaterial: "aluminio reforzado (base 5 puntas)"
+certificacionBifma: null
+pesoProductoKg: 22
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 6.5
+  comodidad: 7
+  calidadPrecio: 7.5
+veredicto: "La ErgoChair Pro ofrece el mayor número de ajustes por euro en su rango de precio: 9 puntos de regulación incluyendo lumbar en altura y profundidad de asiento. La calidad de materiales es correcta pero no premium, y la reclinación de solo 22° limita el descanso. Una opción sólida para quienes priorizan ajustabilidad sobre lujo."
+comunidad: "Valoraciones divididas: Tom's Hardware la describe como 'buena pero no sobresaliente'; Tom's Guide y TechRadar la recomiendan para corrección postural y trabajo prolongado. El talón de Aquiles son los plásticos de la estructura y el soporte postventa lento desde EE. UU. Ausente en el top de r/OfficeChairs frente a Steelcase o HM."
+paraQuienSi:
+  - "Teletrabajadores con presupuesto de 400-550 € que quieren muchos ajustes"
+  - "Usuarios con dolor lumbar que necesitan soporte ajustable en altura"
+  - "Personas entre 160-190 cm con peso hasta 136 kg"
+  - "Quienes valoran la malla transpirable para climas cálidos"
+paraQuienNo:
+  - "Usuarios que quieren reclinarse más de 30° para descansar"
+  - "Quienes necesitan soporte postventa rápido en España"
+  - "Compradores que priorizan materiales premium o construcción duradera"
+  - "Usuarios que comparan con Steelcase Leap o Herman Miller en el mismo presupuesto ampliado"
+fuenteSpecs: "Web oficial Autonomous (autonomous.ai/office-chairs/ergonomic-chair — dimensiones, peso 22 kg/48.5 lbs, mecanismo Donati, capacidad 136 kg verificados) + autonomous.ai/ourblog/office-chair-dimensions-autonomous-chairs (conversión cm) + Tom's Hardware review + TechRadar review"
 verificadoEn: "2026-06-06"

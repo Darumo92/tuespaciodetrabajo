@@ -7,11 +7,11 @@ lumbar: "fijo"
 reposabrazos: "1d"
 respaldo: "mixto"
 profundidadRegulable: false
-pesoMaxKg: 120
+pesoMaxKg: 150
 alturaAsientoMinCm: null
 alturaAsientoMaxCm: null
-reclinacionMaxGrados: null
-garantiaAnios: 2
+reclinacionMaxGrados: 135
+garantiaAnios: 3
 valoracion: 4
 puntosFuertes:
   - "Reposapiés retráctil integrado"
@@ -26,5 +26,27 @@ amazon:
   asin: "B0CH7RBQQ7"
   buscar: "Hbada silla ergonómica"
 webOficial: null
-fuenteSpecs: "Ficha Amazon.es"
-verificadoEn: "2026-06-06"
+anchoCm: 48
+fondoCm: 43
+mecanismo: null
+baseMaterial: "nylon"
+certificacionBifma: true
+pesoProductoKg: 20
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 6.5
+  materiales: 6.5
+  comodidad: 7
+  calidadPrecio: 7.5
+veredicto: "Silla de presupuesto medio con reposapiés retráctil como diferencial claro; cojín de espuma con muelles cómodo pero sin la transpirabilidad de malla completa. Buena opción para jornadas moderadas si el reposapiés es una prioridad."
+comunidad: "Los usuarios valoran el reposapiés y la comodidad del cojín; las críticas se centran en el lumbar fijo y los reposabrazos limitados. Consenso positivo en Amazon.es para uso de 6-8 horas."
+paraQuienSi:
+  - "Quienes necesitan reposapiés integrado sin pagar precio premium"
+  - "Usuarios de estatura media (1,60–1,85 m)"
+  - "Trabajo de 6-8 horas con descansos regulares"
+paraQuienNo:
+  - "Personas que necesiten soporte lumbar ajustable en altura"
+  - "Usuarios que prefieren malla completa en climas cálidos"
+  - "Quienes superan los 150 kg de peso"
+fuenteSpecs: "Amazon.es ficha B0CH7RBQQ7 · yaxa.co (dimensiones, peso 20 kg) · newegg.com (BIFMA, inclinación 135°) · lacontradejaen.eldiario.es (garantía 3 años, SGS/TÜV) · hardwareyou.es"
+verificadoEn: "2026-06-07"

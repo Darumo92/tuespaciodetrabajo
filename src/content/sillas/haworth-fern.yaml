@@ -7,11 +7,11 @@ lumbar: "dinamico"
 reposabrazos: "4d"
 respaldo: "malla"
 profundidadRegulable: true
-pesoMaxKg: 150
+pesoMaxKg: 159
 alturaAsientoMinCm: 42
-alturaAsientoMaxCm: 54
+alturaAsientoMaxCm: 55
 reclinacionMaxGrados: null
-garantiaAnios: 10
+garantiaAnios: 12
 valoracion: 4.6
 puntosFuertes:
   - "Respaldo de malla con tecnología que imita la columna vertebral y se adapta al movimiento"
@@ -26,5 +26,29 @@ puntosDebiles:
   - "Sin datos de grados de reclinación máxima en ficha oficial"
 idealPara: "Profesionales que quieren malla de alta calidad con soporte lumbar dinámico al nivel Herman Miller pero algo más accesible"
 webOficial: "https://shopping.haworth.com/en-es/products/fern-office-chair"
-fuenteSpecs: "Haworth Store Internacional (shopping.haworth.com/en-es, precio €970 verificado) + store.haworth.com (dimensiones cm verificadas)"
+fuenteSpecs: "Haworth Store Internacional (shopping.haworth.com/en-es, precio €970 verificado) + store.haworth.com (dimensiones cm verificadas) + 2modern.com/products/fern-mesh-office-chair (peso 64-70 lbs confirmado) + haworth.com data sheet AP 2025"
 verificadoEn: "2026-06-06"
+anchoCm: 51
+fondoCm: 39
+mecanismo: "Wave Suspension System con 5 posiciones de bloqueo de respaldo"
+baseMaterial: "aluminio"
+certificacionBifma: true
+pesoProductoKg: 29.5
+valoraciones:
+  ergonomia: 9.1
+  ajustabilidad: 8.8
+  materiales: 9.3
+  comodidad: 8.9
+  calidadPrecio: 8.2
+veredicto: "La Fern es la alternativa de malla más convincente a la Aeron: su Wave Suspension System ofrece una adaptación dinámica real y la convierte en la mejor opción premium bajo los 1.000 € para usuarios que priorizan malla de alta calidad."
+comunidad: "Bien valorada en comunidades ergonómicas como alternativa seria a Herman Miller; su principal ventaja citada es la relación calidad-precio frente a Aeron, y su punto débil es la menor presencia en el mercado europeo de segunda mano."
+paraQuienSi:
+  - "Usuarios que buscan malla transpirable de alta calidad por menos de 1.000 €"
+  - "Profesionales que valoran el soporte lumbar dinámico integrado sin configuración"
+  - "Personas de hasta 159 kg que necesitan silla de alta capacidad en malla"
+  - "Quienes prefieren ensamblado americano con garantía de 12 años"
+paraQuienNo:
+  - "Usuarios que necesitan datos precisos de grados de reclinación"
+  - "Compradores que quieran acceso fácil de segunda mano en Europa"
+  - "Quienes priorizan los brazos más versátiles del mercado (Gesture los supera)"
+  - "Presupuestos por debajo de 900 € buscando malla premium"

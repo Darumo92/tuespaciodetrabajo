@@ -8,8 +8,8 @@ reposabrazos: "4d"
 respaldo: "malla"
 profundidadRegulable: false
 pesoMaxKg: 159
-alturaAsientoMinCm: null
-alturaAsientoMaxCm: null
+alturaAsientoMinCm: 41
+alturaAsientoMaxCm: 52
 reclinacionMaxGrados: null
 garantiaAnios: 12
 valoracion: 4.8
@@ -27,5 +27,29 @@ puntosDebiles:
   - "Requiere distribuidor oficial o tienda especializada"
 idealPara: "Profesionales que buscan la referencia absoluta en malla transpirable y soporte sacrolumbar"
 webOficial: "https://esstore.hermanmiller.com/collections/aeron-chairs"
-fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/aeron-chair/specs) + tienda España (esstore.hermanmiller.com) + ofival.es"
+fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/aeron-chair/specs) + tienda España (esstore.hermanmiller.com) + ofival.es + store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348 + dimensions.com/element/aeron-chair-b-size + seatedlab.com/herman-miller-aeron-review"
 verificadoEn: "2026-06-06"
+anchoCm: 52
+fondoCm: 43
+mecanismo: "Harmonic 2 Tilt"
+baseMaterial: "aluminio"
+certificacionBifma: true
+pesoProductoKg: 18.6
+valoraciones:
+  ergonomia: 9.5
+  ajustabilidad: 8.5
+  materiales: 9.5
+  comodidad: 9.0
+  calidadPrecio: 7.5
+veredicto: "La Aeron es la referencia mundial en sillas de malla: PostureFit SL y la suspensión 8Z Pellicle ofrecen un soporte sacrolumbar que no tiene equivalente, aunque su precio y la necesidad de elegir la talla correcta son barreras reales."
+comunidad: "r/OfficeChairs la señala como benchmark absoluto de ergonomía; el único consenso negativo consistente es elegir la talla equivocada o esperar un asiento blando como el de una silla gaming."
+paraQuienSi:
+  - "Usuarios que trabajan 8+ horas diarias y priorizan transpirabilidad"
+  - "Personas con problemas sacrolumbares que buscan soporte diferenciado"
+  - "Profesionales dispuestos a invertir en la referencia del sector"
+  - "Climas cálidos donde la malla marca la diferencia"
+paraQuienNo:
+  - "Usuarios que prefieren asientos tapizados o acolchados suaves"
+  - "Personas con complexión muy ancha (encajan mejor en talla C)"
+  - "Quienes necesitan ajuste de profundidad de asiento sin pagar extra"
+  - "Presupuestos por debajo de 1.400 €"

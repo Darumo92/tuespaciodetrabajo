@@ -27,5 +27,29 @@ puntosDebiles:
   - "Precisa distribución oficial; no en tiendas generalistas"
 idealPara: "Profesionales que trabajan con múltiples dispositivos (portátil, tablet, móvil) y hacen muchas videollamadas"
 webOficial: "https://www.steelcase.com/products/office-chairs/gesture/"
-fuenteSpecs: "Web oficial Steelcase (steelcase.com/products/office-chairs/gesture) + btod.com/blog/steelcase-gesture-chair-review (precio y specs)"
+fuenteSpecs: "Web oficial Steelcase (steelcase.com/products/office-chairs/gesture) + btod.com/blog/steelcase-gesture-chair-review + in.steelcase.com/products/gesture (dimensiones mm verificadas) + BIFMA cert PDF steelcase.com/content/uploads/sites/15/2015/06/AP_Gesture_Certification_BIFMA.pdf + seatedlab.com/steelcase-gesture-review"
 verificadoEn: "2026-06-06"
+anchoCm: 51
+fondoCm: 40
+mecanismo: "3D LiveBack con sincrono avanzado y 3 posiciones de bloqueo"
+baseMaterial: "aluminio"
+certificacionBifma: true
+pesoProductoKg: 26.4
+valoraciones:
+  ergonomia: 9.2
+  ajustabilidad: 9.5
+  materiales: 9.0
+  comodidad: 8.8
+  calidadPrecio: 7.5
+veredicto: "La Gesture es la silla más versátil del mercado premium: sus brazos 360° y el mecanismo 3D LiveBack la hacen ideal para quienes trabajan con múltiples dispositivos, aunque su respaldo tapizado la penaliza frente a mallas en verano."
+comunidad: "Consenso en r/OfficeChairs: primera opción para trabajo con tablet y móvil; la crítica recurrente es que el lumbar no es ajustable en altura y que calienta más que la Leap V2 para trabajo sedentario prolongado."
+paraQuienSi:
+  - "Usuarios que trabajan con ordenador, tablet y móvil alternando posturas"
+  - "Profesionales que hacen muchas videollamadas y se recuestan con frecuencia"
+  - "Personas de complexión robusta (hasta 181 kg de capacidad)"
+  - "Quienes valoran la mayor capacidad de ajuste de brazos del mercado"
+paraQuienNo:
+  - "Usuarios en climas cálidos que prefieren malla transpirable"
+  - "Quienes necesitan ajuste de altura del lumbar (la Gesture no lo tiene)"
+  - "Trabajo sedentario muy prolongado sin cambio de postura frecuente"
+  - "Presupuestos por debajo de 1.300 €"
