@@ -1,6 +1,9 @@
 ---
 import BotonPrecio from './BotonPrecio.astro';
-import type { Silla } from '@/lib/sillas';
+import ImagenSilla from './ImagenSilla.astro';
+import ValoracionEjes from './ValoracionEjes.astro';
+import ParaQuien from './ParaQuien.astro';
+import { notaGlobal, type Silla } from '@/lib/sillas';
 
 interface Props { silla: Silla; }
 const { silla } = Astro.props;
@@ -12,48 +15,79 @@ const ETIQUETA_LUMBAR: Record<string, string> = {
 const ETIQUETA_REPOSABRAZOS: Record<string, string> = {
   ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles',
 };
-const ETIQUETA_RESPALDO: Record<string, string> = {
-  malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín',
-};
+const ETIQUETA_RESPALDO: Record<string, string> = { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' };
 
-function fmt(v: number | null, sufijo = ''): string {
+function fmt(v: number | null | undefined, sufijo = ''): string {
   return v == null ? 'n/d' : `${v}${sufijo}`;
 }
+const dimensiones = (silla.anchoCm != null || silla.fondoCm != null)
+  ? `${fmt(silla.anchoCm)} × ${fmt(silla.fondoCm)} cm (an × fo)`
+  : 'n/d';
+const altura = (silla.alturaAsientoMinCm != null && silla.alturaAsientoMaxCm != null)
+  ? `${silla.alturaAsientoMinCm}–${silla.alturaAsientoMaxCm} cm` : 'n/d';
 
-const specs: { etiqueta: string; valor: string }[] = [
-  { etiqueta: 'Precio aprox.', valor: silla.precioAprox == null ? 'n/d' : `~${silla.precioAprox} €` },
-  { etiqueta: 'Soporte lumbar', valor: ETIQUETA_LUMBAR[silla.lumbar] ?? silla.lumbar },
-  { etiqueta: 'Reposabrazos', valor: ETIQUETA_REPOSABRAZOS[silla.reposabrazos] ?? silla.reposabrazos },
-  { etiqueta: 'Respaldo', valor: ETIQUETA_RESPALDO[silla.respaldo] ?? silla.respaldo },
-  { etiqueta: 'Profundidad regulable', valor: silla.profundidadRegulable ? 'Sí' : 'No' },
-  { etiqueta: 'Peso máximo', valor: fmt(silla.pesoMaxKg, ' kg') },
-  { etiqueta: 'Reclinación máx.', valor: fmt(silla.reclinacionMaxGrados, '°') },
-  { etiqueta: 'Garantía', valor: silla.garantiaAnios == null ? 'n/d' : `${silla.garantiaAnios} años` },
+const grupos: { titulo: string; filas: { etiqueta: string; valor: string }[] }[] = [
+  { titulo: 'Ergonomía y ajustes', filas: [
+    { etiqueta: 'Soporte lumbar', valor: ETIQUETA_LUMBAR[silla.lumbar] ?? silla.lumbar },
+    { etiqueta: 'Reposabrazos', valor: ETIQUETA_REPOSABRAZOS[silla.reposabrazos] ?? silla.reposabrazos },
+    { etiqueta: 'Profundidad de asiento regulable', valor: silla.profundidadRegulable ? 'Sí' : 'No' },
+    { etiqueta: 'Reclinación máx.', valor: fmt(silla.reclinacionMaxGrados, '°') },
+    { etiqueta: 'Mecanismo', valor: silla.mecanismo ?? 'n/d' },
+  ]},
+  { titulo: 'Construcción y materiales', filas: [
+    { etiqueta: 'Respaldo', valor: ETIQUETA_RESPALDO[silla.respaldo] ?? silla.respaldo },
+    { etiqueta: 'Base', valor: silla.baseMaterial ?? 'n/d' },
+    { etiqueta: 'Certificación BIFMA', valor: silla.certificacionBifma == null ? 'n/d' : (silla.certificacionBifma ? 'Sí' : 'No') },
+    { etiqueta: 'Peso máximo soportado', valor: fmt(silla.pesoMaxKg, ' kg') },
+    { etiqueta: 'Peso del producto', valor: fmt(silla.pesoProductoKg, ' kg') },
+  ]},
+  { titulo: 'Dimensiones y garantía', filas: [
+    { etiqueta: 'Altura del asiento', valor: altura },
+    { etiqueta: 'Dimensiones', valor: dimensiones },
+    { etiqueta: 'Garantía', valor: silla.garantiaAnios == null ? 'n/d' : `${silla.garantiaAnios} años` },
+  ]},
 ];
+const global = notaGlobal(silla);
 ---
 
 <article class="ficha">
   <header class="ficha-header">
-    {silla.imagen && (
-      <img src={silla.imagen} alt={silla.imagenAlt ?? silla.nombre} width="200" height="200" loading="lazy" decoding="async" />
-    )}
+    <ImagenSilla imagen={silla.imagen} imagenAlt={silla.imagenAlt} marca={silla.marca} nombre={silla.nombre} size={200} />
     <div>
       <p class="ficha-marca">{silla.marca}</p>
       <h1 class="ficha-nombre">{silla.nombre}</h1>
-      <p class="ficha-valoracion">★ {silla.valoracion.toFixed(1)} / 5</p>
+      <p class="ficha-precio">{silla.precioAprox == null ? 'Precio n/d' : `~${silla.precioAprox} €`}{global != null && <span class="ficha-nota">★ {global.toFixed(1)}/10</span>}</p>
       {silla.idealPara && <p class="ficha-ideal">Ideal para: {silla.idealPara}</p>}
       <BotonPrecio amazon={silla.amazon} webOficial={silla.webOficial} nombre={silla.nombre} />
     </div>
   </header>
 
+  <ValoracionEjes silla={silla} />
+
+  {silla.veredicto && (
+    <div class="ficha-veredicto"><strong>Veredicto.</strong> {silla.veredicto}</div>
+  )}
+
   <h2>Ficha técnica</h2>
-  <table class="ficha-specs">
-    <tbody>
-      {specs.map((s) => (
-        <tr><th scope="row">{s.etiqueta}</th><td>{s.valor}</td></tr>
-      ))}
-    </tbody>
-  </table>
+  {grupos.map((g) => (
+    <div class="ficha-grupo">
+      <h3>{g.titulo}</h3>
+      <table class="ficha-specs"><tbody>
+        {g.filas.map((f) => (
+          <tr><th scope="row">{f.etiqueta}</th><td class={f.valor === 'n/d' ? 'ficha-nd' : ''}>{f.valor}</td></tr>
+        ))}
+      </tbody></table>
+    </div>
+  ))}
+
+  {silla.comunidad && (
+    <>
+      <h2>Qué dice la comunidad</h2>
+      <p class="ficha-comunidad">{silla.comunidad}</p>
+    </>
+  )}
+
+  <ParaQuien si={silla.paraQuienSi ?? []} no={silla.paraQuienNo ?? []} />
 
   {silla.puntosFuertes.length > 0 && (
     <>
@@ -71,19 +105,25 @@ const specs: { etiqueta: string; valor: string }[] = [
   {(silla.fuenteSpecs || silla.verificadoEn) && (
     <p class="ficha-fuente">
       Datos: {silla.fuenteSpecs ?? 'n/d'}{silla.verificadoEn ? ` · verificado el ${silla.verificadoEn}` : ''}.
-      Los campos marcados como "n/d" no tienen dato verificado; verifica siempre la ficha del fabricante antes de comprar.
+      Las valoraciones por ejes son editoriales (basadas en specs + consenso de la comunidad). Los campos "n/d" no tienen dato verificado; verifica siempre la ficha del fabricante antes de comprar.
     </p>
   )}
 </article>
 
 <style>
-  .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 2rem; }
+  .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.5rem; }
   .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--color-text-muted); margin: 0; }
   .ficha-nombre { font-family: var(--font-display); margin: 0.2rem 0 0.5rem; }
-  .ficha-valoracion { color: var(--color-secondary); font-weight: 700; margin: 0 0 0.5rem; }
+  .ficha-precio { font-weight: 700; font-size: 1.1rem; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+  .ficha-nota { color: var(--color-secondary); font-size: 0.9rem; }
   .ficha-ideal { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 1rem; }
-  .ficha-specs { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; }
-  .ficha-specs th, .ficha-specs td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--color-border); }
-  .ficha-specs th { width: 45%; color: var(--color-text-muted); font-weight: 600; }
+  .ficha-veredicto { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius-md); padding: 0.9rem 1.1rem; font-size: 0.95rem; margin: 0 0 2rem; }
+  .ficha-grupo { margin-bottom: 1.5rem; }
+  .ficha-grupo h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
+  .ficha-specs { width: 100%; border-collapse: collapse; }
+  .ficha-specs th, .ficha-specs td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+  .ficha-specs th { width: 50%; color: var(--color-text-muted); font-weight: 600; }
+  .ficha-nd { color: var(--color-text-muted); font-style: italic; }
+  .ficha-comunidad { background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 1rem 1.1rem; font-size: 0.92rem; }
   .ficha-fuente { font-size: 0.8rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 2rem; }
 </style>

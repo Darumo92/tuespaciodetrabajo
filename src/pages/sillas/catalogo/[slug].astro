@@ -1,7 +1,7 @@
 ---
 import Base from '@/layouts/Base.astro';
 import FichaSilla from '@/components/FichaSilla.astro';
-import { buildAmazonHref } from '@/lib/sillas';
+import { buildAmazonHref, notaGlobal } from '@/lib/sillas';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -17,6 +17,7 @@ const titulo = `${silla.nombre}: ficha y specs | Tu Espacio de Trabajo`;
 const descripcion = `Ficha técnica de la ${silla.nombre}: soporte lumbar, reposabrazos, peso máximo, garantía y precio aproximado. Datos verificables, sin experiencia inventada.`;
 
 const amazonHref = buildAmazonHref(silla.amazon);
+const nota = notaGlobal(silla);
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -34,6 +35,14 @@ const productSchema = {
     },
   }),
 };
+const reviewSchema = nota == null ? null : {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  itemReviewed: { '@type': 'Product', name: silla.nombre, brand: { '@type': 'Brand', name: silla.marca } },
+  reviewRating: { '@type': 'Rating', ratingValue: String(nota), bestRating: '10', worstRating: '0' },
+  author: { '@type': 'Organization', name: 'Tu Espacio de Trabajo' },
+  ...(silla.veredicto && { reviewBody: silla.veredicto }),
+};
 ---
 
 <Base title={titulo} description={descripcion} image={silla.imagen}>
@@ -48,4 +57,5 @@ const productSchema = {
     </p>
   </main>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+  {reviewSchema && <script is:inline type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />}
 </Base>
