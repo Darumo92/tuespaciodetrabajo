@@ -1,0 +1,21 @@
+---
+import Base from '@/layouts/Base.astro';
+import ComparadorSillas from '@/components/ComparadorSillas.astro';
+import { getCollection } from 'astro:content';
+
+const entries = await getCollection('sillas');
+const sillas = entries.map((e) => ({ slug: e.id.replace(/\.(yaml|yml|json)$/, ''), ...e.data }));
+
+const titulo = 'Comparador de sillas ergonómicas | Tu Espacio de Trabajo';
+const descripcion = 'Compara hasta 4 sillas ergonómicas lado a lado: valoración por ejes, precio, garantía, ergonomía y construcción, resaltando la mejor opción de cada criterio.';
+---
+
+<Base title={titulo} description={descripcion} noindex={true}>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/sillas/">Sillas</a> › <a href="/sillas/catalogo/">Catálogo</a> › <span>Comparar</span>
+    </nav>
+    <h1>Comparativa de sillas</h1>
+    <ComparadorSillas sillas={sillas} />
+  </main>
+</Base>

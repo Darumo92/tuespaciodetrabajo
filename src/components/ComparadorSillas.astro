@@ -1,0 +1,130 @@
+---
+import { type Silla } from '@/lib/sillas';
+interface Props { sillas: Silla[]; }
+const { sillas } = Astro.props;
+const sillasJson = JSON.stringify(sillas);
+---
+<section class="cmp" data-sillas={sillasJson}>
+  <div id="cmp-out"></div>
+  <p id="cmp-empty" class="cmp-empty" hidden>Elige entre 2 y 4 sillas en el <a href="/sillas/catalogo/">catálogo</a> (marca las casillas "comparar") y vuelve aquí.</p>
+</section>
+
+<style>
+  .cmp-empty { color: var(--color-text-muted); }
+  .cmp-scroll { overflow-x: auto; }
+  .cmp-table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  .cmp-table td, .cmp-table th { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--color-border); text-align: left; font-size: 0.86rem; vertical-align: middle; }
+  .cmp-attr { color: var(--color-text-muted); font-weight: 600; font-size: 0.8rem; position: sticky; left: 0; background: #fff; width: 170px; }
+  .cmp-grp td { background: #fbfbfb; font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .cmp-head .cmp-photo { width: 84px; height: 84px; margin-bottom: 0.4rem; }
+  .cmp-brand { font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .cmp-name { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .cmp-name a { color: inherit; text-decoration: none; }
+  .cmp-global { font-family: var(--font-display); font-weight: 700; margin-top: 0.2rem; }
+  .cmp-global small { font-size: 0.6rem; color: var(--color-text-muted); font-weight: 500; }
+  .cmp-rm { font-size: 0.7rem; color: var(--color-text-muted); border: 1px solid var(--color-border); border-radius: 6px; padding: 0.1rem 0.4rem; background: none; cursor: pointer; margin-top: 0.3rem; }
+  .cmp-win { background: #ecfdf5; box-shadow: inset 3px 0 0 #16a34a; }
+  .cmp-wtag { font-size: 0.58rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-left: 0.3rem; }
+  .cmp-nd { color: var(--color-text-muted); font-style: italic; }
+  .cmp-bar2 { height: 7px; width: 64px; background: var(--color-bg-muted); border-radius: 99px; overflow: hidden; display: inline-block; vertical-align: middle; margin-right: 0.4rem; }
+  .cmp-bar2 i { display: block; height: 100%; background: linear-gradient(90deg, var(--color-primary), #60a5fa); }
+  .cmp-fb { width: 84px; height: 84px; background: var(--color-bg-muted); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 0.62rem; color: var(--color-text-muted); text-align: center; padding: 0.3rem; }
+  .cmp-cta { display: inline-block; background: var(--color-primary); color: #fff; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.9rem; border-radius: 8px; text-decoration: none; }
+  .cmp-legend { font-size: 0.76rem; color: var(--color-text-muted); margin-top: 0.8rem; }
+</style>
+
+<script>
+  import { ganadoresPorValor, notaGlobal, reposabrazosNivel, buildAmazonHref, type Silla } from '@/lib/sillas';
+
+  const root = document.querySelector('.cmp') as HTMLElement | null;
+  if (root) {
+    const todas: Silla[] = JSON.parse(root.dataset.sillas || '[]');
+    const out = root.querySelector('#cmp-out') as HTMLElement;
+    const empty = root.querySelector('#cmp-empty') as HTMLElement;
+
+    const ETI_LUMBAR: Record<string, string> = { fijo: 'Fijo', presion: 'Presión', altura: 'Altura', dinamico: 'Dinámico', '5d': '5D' };
+    const ETI_RESP: Record<string, string> = { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla+cojín' };
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
+
+    function slugsDeUrl(): string[] {
+      const p = new URLSearchParams(location.search).get('s') || '';
+      return p.split(',').map((x) => x.trim()).filter(Boolean).slice(0, 4);
+    }
+
+    const sel = slugsDeUrl()
+      .map((sl) => todas.find((t) => t.slug === sl))
+      .filter((s): s is Silla => s != null);
+
+    if (sel.length < 2) { empty.hidden = false; }
+    else {
+      // filas con dirección de "ganador"
+      const ejeFns: Record<string, (s: Silla) => number | null> = {
+        ergonomia: (s) => s.valoraciones?.ergonomia ?? null,
+        ajustabilidad: (s) => s.valoraciones?.ajustabilidad ?? null,
+        materiales: (s) => s.valoraciones?.materiales ?? null,
+        comodidad: (s) => s.valoraciones?.comodidad ?? null,
+        calidadPrecio: (s) => s.valoraciones?.calidadPrecio ?? null,
+      };
+      function barCell(v: number | null) {
+        if (v == null) return '<span class="cmp-nd">sin valorar</span>';
+        return `<span class="cmp-bar2"><i style="width:${v * 10}%"></i></span><b>${v.toFixed(1)}</b>`;
+      }
+      function ganBar(clave: string, dir: 'mayor' | 'menor', fn: (s: Silla) => number | null) {
+        return ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: fn(s) })), dir);
+      }
+
+      type Fila = { etiqueta: string; render: (s: Silla) => string; gan?: string[]; };
+      const filas: ({ grupo: string } | Fila)[] = [
+        { grupo: 'Valoración por ejes' },
+        { etiqueta: 'Ergonomía', render: (s) => barCell(ejeFns.ergonomia(s)), gan: ganBar('ergonomia', 'mayor', ejeFns.ergonomia) },
+        { etiqueta: 'Ajustabilidad', render: (s) => barCell(ejeFns.ajustabilidad(s)), gan: ganBar('ajustabilidad', 'mayor', ejeFns.ajustabilidad) },
+        { etiqueta: 'Materiales', render: (s) => barCell(ejeFns.materiales(s)), gan: ganBar('materiales', 'mayor', ejeFns.materiales) },
+        { etiqueta: 'Comodidad', render: (s) => barCell(ejeFns.comodidad(s)), gan: ganBar('comodidad', 'mayor', ejeFns.comodidad) },
+        { etiqueta: 'Calidad-precio', render: (s) => barCell(ejeFns.calidadPrecio(s)), gan: ganBar('calidadPrecio', 'mayor', ejeFns.calidadPrecio) },
+        { grupo: 'Precio y garantía' },
+        { etiqueta: 'Precio aprox.', render: (s) => s.precioAprox == null ? '<span class="cmp-nd">n/d</span>' : `~${s.precioAprox} €`, gan: ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: s.precioAprox })), 'menor') },
+        { etiqueta: 'Garantía', render: (s) => s.garantiaAnios == null ? '<span class="cmp-nd">n/d</span>' : `${s.garantiaAnios} años`, gan: ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: s.garantiaAnios })), 'mayor') },
+        { grupo: 'Ergonomía y ajustes' },
+        { etiqueta: 'Soporte lumbar', render: (s) => ETI_LUMBAR[s.lumbar] ?? s.lumbar },
+        { etiqueta: 'Reposabrazos', render: (s) => String(s.reposabrazos).toUpperCase(), gan: ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: reposabrazosNivel(s.reposabrazos) })), 'mayor') },
+        { etiqueta: 'Profundidad regulable', render: (s) => s.profundidadRegulable ? 'Sí' : 'No' },
+        { etiqueta: 'Reclinación máx.', render: (s) => s.reclinacionMaxGrados == null ? '<span class="cmp-nd">n/d</span>' : `${s.reclinacionMaxGrados}°`, gan: ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: s.reclinacionMaxGrados })), 'mayor') },
+        { grupo: 'Construcción' },
+        { etiqueta: 'Respaldo', render: (s) => ETI_RESP[s.respaldo] ?? s.respaldo },
+        { etiqueta: 'Peso máximo', render: (s) => s.pesoMaxKg == null ? '<span class="cmp-nd">n/d</span>' : `${s.pesoMaxKg} kg`, gan: ganadoresPorValor(sel.map((s) => ({ slug: s.slug, valor: s.pesoMaxKg })), 'mayor') },
+      ];
+
+      const head = sel.map((s) => {
+        const g = notaGlobal(s);
+        const href = buildAmazonHref(s.amazon) || s.webOficial || '';
+        const cta = href ? `<a class="cmp-cta" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener noreferrer">${buildAmazonHref(s.amazon) ? 'Ver precio' : 'Web oficial'}</a>` : '';
+        const img = (s.imagen && s.imagen.trim() !== '')
+          ? `<img class="cmp-photo" src="${esc(s.imagen)}" alt="${esc(s.imagenAlt || s.nombre)}" width="84" height="84" loading="lazy" style="object-fit:contain;background:var(--color-bg-muted);border-radius:var(--radius-md);padding:4px">`
+          : `<div class="cmp-fb">${esc(s.marca)}<br>${esc(s.nombre)}</div>`;
+        return `<td class="cmp-head">${img}<div class="cmp-brand">${esc(s.marca)}</div><div class="cmp-name"><a href="/sillas/catalogo/${esc(s.slug)}/">${esc(s.nombre)}</a></div>${g != null ? `<div class="cmp-global">${g.toFixed(1)}<small>/10</small></div>` : ''}<button class="cmp-rm" data-slug="${esc(s.slug)}">✕ quitar</button></td>`;
+      }).join('');
+
+      const body = filas.map((f) => {
+        if ('grupo' in f) return `<tr class="cmp-grp"><td class="cmp-attr">${esc(f.grupo)}</td>${sel.map(() => '<td></td>').join('')}</tr>`;
+        const cells = sel.map((s) => {
+          const win = f.gan?.includes(s.slug);
+          return `<td class="${win ? 'cmp-win' : ''}">${f.render(s)}${win ? '<span class="cmp-wtag">mejor</span>' : ''}</td>`;
+        }).join('');
+        return `<tr><td class="cmp-attr">${esc(f.etiqueta)}</td>${cells}</tr>`;
+      }).join('');
+
+      const ctas = sel.map((s) => {
+        const href = buildAmazonHref(s.amazon) || s.webOficial || '';
+        return `<td>${href ? `<a class="cmp-cta" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener noreferrer">${buildAmazonHref(s.amazon) ? 'Ver precio' : 'Web oficial'}</a>` : ''}</td>`;
+      }).join('');
+
+      out.innerHTML = `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><td class="cmp-attr"></td>${head}</tr></thead><tbody>${body}<tr><td class="cmp-attr"></td>${ctas}</tr></tbody></table></div><p class="cmp-legend">Celda resaltada = mejor valor de la fila. "n/d"/"sin valorar" no se considera ganador. Valoraciones por ejes editoriales.</p>`;
+
+      out.querySelectorAll('.cmp-rm').forEach((b) => b.addEventListener('click', () => {
+        const slug = (b as HTMLElement).dataset.slug;
+        const rest = sel.filter((s) => s.slug !== slug).map((s) => s.slug);
+        location.search = rest.length ? `?s=${rest.join(',')}` : '';
+      }));
+    }
+  }
+</script>
