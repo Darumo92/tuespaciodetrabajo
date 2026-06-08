@@ -115,6 +115,27 @@ const breadcrumbSchema = {
       <p>{info.intro}</p>
     </div>
 
+    {categoria === 'sillas' && (
+      <div class="cat-tools">
+        <h2 class="subcat-heading">
+          <span class="subcat-heading-icon" aria-hidden="true">🛠️</span>
+          Herramientas del catálogo
+        </h2>
+        <div class="cat-tools-grid">
+          <a class="cat-tool" href="/sillas/catalogo/">
+            <span class="cat-tool-ico" aria-hidden="true">📂</span>
+            <span class="cat-tool-tit">Catálogo filtrable</span>
+            <span class="cat-tool-desc">19 sillas con valoración por ejes. Filtra por precio, respaldo y reposabrazos, y marca 2-4 para compararlas.</span>
+          </a>
+          <a class="cat-tool" href="/sillas/selector/">
+            <span class="cat-tool-ico" aria-hidden="true">🎯</span>
+            <span class="cat-tool-tit">Selector guiado</span>
+            <span class="cat-tool-desc">Responde unas preguntas (presupuesto, altura, uso) y te recomendamos la silla del catálogo que mejor encaja.</span>
+          </a>
+        </div>
+      </div>
+    )}
+
     {articulosOrdenados.length > 0 ? (
       <>
         {/* Destacados */}
@@ -181,5 +202,45 @@ const breadcrumbSchema = {
   }
   .subcat-heading-icon {
     font-size: 1.2rem;
+  }
+
+  .cat-tools {
+    margin-bottom: 3rem;
+  }
+  .cat-tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  .cat-tool {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: inherit;
+    background: var(--color-bg);
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  .cat-tool:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+  .cat-tool-ico {
+    font-size: 1.6rem;
+  }
+  .cat-tool-tit {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--color-text);
+  }
+  .cat-tool-desc {
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
   }
 </style>
