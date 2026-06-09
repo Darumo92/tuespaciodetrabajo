@@ -14,9 +14,10 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 - [x] **Task 4** — `seleccionarParesVs` + `construirIndiceBusqueda` TDD. Suite 12/12.
 - [x] **Task 5** — Migración 19 sillas a `src/content/productos/`. Commit `db7da13`. Spec ✅ (fidelidad verbatim verificada en los 19, parse-compare vs `de550af`). Sin enums inventados. tramoPrecio correcto en los 19. precioMin/Max null (fuente solo tenía precioAprox puntual).
 
+- [x] **Task 6** — Componentes base (FallbackImagen, ImagenProducto, ValoracionEjes, ParaQuien). Commit `75836ae`. FallbackImagen/ParaQuien rescatados verbatim (`0f92c94`/`6b831d9`), props coinciden sin adaptación, build OK.
+
 ## Pendiente
 
-- [ ] Task 6 — Componentes base imagen/valoración (FallbackImagen, ImagenProducto, ValoracionEjes, ParaQuien).
 - [ ] Task 7 — Helpers de formato (TDD) + TarjetaProducto.
 - [ ] Task 8 — CatalogoProductos (filtros + orden + comparar).
 - [ ] Task 9 — FichaProducto + rutas catálogo (hub, tipo, ficha + Review schema).
