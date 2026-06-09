@@ -1,0 +1,62 @@
+tipo: "silla"
+nombre: "Autonomous ErgoChair Pro"
+marca: "Autonomous"
+imagen: ""
+imagenAlt: "Silla ergonómica Autonomous ErgoChair Pro"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 3.8
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 6.5
+  comodidad: 7
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.autonomous.ai/office-chairs/ergonomic-chair"
+idealPara: "Quienes quieren muchos ajustes sin llegar al precio Steelcase/Herman Miller"
+veredicto: "La ErgoChair Pro ofrece el mayor número de ajustes por euro en su rango de precio: 9 puntos de regulación incluyendo lumbar en altura y profundidad de asiento. La calidad de materiales es correcta pero no premium, y la reclinación de solo 22° limita el descanso. Una opción sólida para quienes priorizan ajustabilidad sobre lujo."
+comunidad: "Valoraciones divididas: Tom's Hardware la describe como 'buena pero no sobresaliente'; Tom's Guide y TechRadar la recomiendan para corrección postural y trabajo prolongado. El talón de Aquiles son los plásticos de la estructura y el soporte postventa lento desde EE. UU. Ausente en el top de r/OfficeChairs frente a Steelcase o HM."
+paraQuienSi:
+  - "Teletrabajadores con presupuesto de 400-550 € que quieren muchos ajustes"
+  - "Usuarios con dolor lumbar que necesitan soporte ajustable en altura"
+  - "Personas entre 160-190 cm con peso hasta 136 kg"
+  - "Quienes valoran la malla transpirable para climas cálidos"
+paraQuienNo:
+  - "Usuarios que quieren reclinarse más de 30° para descansar"
+  - "Quienes necesitan soporte postventa rápido en España"
+  - "Compradores que priorizan materiales premium o construcción duradera"
+  - "Usuarios que comparan con Steelcase Leap o Herman Miller en el mismo presupuesto ampliado"
+puntosFuertes:
+  - "9 puntos de ajuste (altura asiento, profundidad, reposabrazos, lumbar, reposacabezas, tensión, reclinación)"
+  - "Lumbar ajustable en altura con rango de 15 cm"
+  - "Profundidad de asiento regulable"
+  - "Garantía de por vida en piezas estructurales"
+  - "Precio competitivo para la cantidad de ajustes"
+puntosDebiles:
+  - "Reclinación máxima de solo 22°, muy limitada"
+  - "Sin distribución en tiendas físicas en España"
+  - "Soporte postventa desde EE. UU., puede ser lento"
+  - "Comunidad r/OfficeChairs señala que la calidad de materiales no es del nivel premium"
+fuenteSpecs: "Web oficial Autonomous (autonomous.ai/office-chairs/ergonomic-chair — dimensiones, peso 22 kg/48.5 lbs, mecanismo Donati, capacidad 136 kg verificados) + autonomous.ai/ourblog/office-chair-dimensions-autonomous-chairs (conversión cm) + Tom's Hardware review + TechRadar review"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 22
+  pesoMaxKg: 136
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 56
+  anchoCm: 48
+  fondoCm: 48
+  mecanismo: "mecanismo italiano Donati, inclinación sincronizada con 5 posiciones de bloqueo"
+  baseMaterial: "aluminio reforzado (base 5 puntas)"
+  certificacionBifma: null
+  pesoProductoKg: 22
+  garantiaAnios: null

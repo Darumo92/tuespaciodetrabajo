@@ -1,0 +1,57 @@
+tipo: "silla"
+nombre: "Hbada Silla Ergonómica"
+marca: "Hbada"
+imagen: "https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica Hbada con reposapiés retráctil"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 6.5
+  materiales: 6.5
+  comodidad: 7
+  calidadPrecio: 7.5
+amazon:
+  asin: "B0CH7RBQQ7"
+  buscar: "Hbada silla ergonómica"
+webOficial: null
+idealPara: "Quien prioriza estética y reposapiés integrado"
+veredicto: "Silla de presupuesto medio con reposapiés retráctil como diferencial claro; cojín de espuma con muelles cómodo pero sin la transpirabilidad de malla completa. Buena opción para jornadas moderadas si el reposapiés es una prioridad."
+comunidad: "Los usuarios valoran el reposapiés y la comodidad del cojín; las críticas se centran en el lumbar fijo y los reposabrazos limitados. Consenso positivo en Amazon.es para uso de 6-8 horas."
+paraQuienSi:
+  - "Quienes necesitan reposapiés integrado sin pagar precio premium"
+  - "Usuarios de estatura media (1,60–1,85 m)"
+  - "Trabajo de 6-8 horas con descansos regulares"
+paraQuienNo:
+  - "Personas que necesiten soporte lumbar ajustable en altura"
+  - "Usuarios que prefieren malla completa en climas cálidos"
+  - "Quienes superan los 150 kg de peso"
+puntosFuertes:
+  - "Reposapiés retráctil integrado"
+  - "Diseño discreto"
+  - "Malla transpirable en respaldo"
+puntosDebiles:
+  - "Soporte lumbar fijo (no ajustable en altura)"
+  - "Asiento de espuma, no malla completa"
+  - "Reposabrazos solo altura"
+fuenteSpecs: "Amazon.es ficha B0CH7RBQQ7 · yaxa.co (dimensiones, peso 20 kg) · newegg.com (BIFMA, inclinación 135°) · lacontradejaen.eldiario.es (garantía 3 años, SGS/TÜV) · hardwareyou.es"
+verificadoEn: "2026-06-07"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "mixto"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 150
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: 48
+  fondoCm: 43
+  mecanismo: null
+  baseMaterial: "nylon"
+  certificacionBifma: true
+  pesoProductoKg: 20
+  garantiaAnios: 3

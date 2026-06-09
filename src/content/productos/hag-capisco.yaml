@@ -1,0 +1,64 @@
+tipo: "silla"
+nombre: "HÅG Capisco 8106"
+marca: "HÅG"
+imagen: ""
+imagenAlt: "Silla ergonómica HÅG Capisco 8106 tipo silla de montar"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9
+  ajustabilidad: 7.5
+  materiales: 8.5
+  comodidad: 7
+  calidadPrecio: 6.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://hag-office.com/products/design-hag-capisco-8106"
+idealPara: "Usuarios de escritorios de pie, diseñadores que alternan posición y quienes prefieren postura activa"
+veredicto: "La Capisco no es una silla, es una filosofía: asiento en silla de montar, basculación inBalance® y compatibilidad total con escritorios elevables la convierten en la mejor opción para trabajo activo y postura dinámica. Requiere adaptación real y no da la comodidad pasiva de una silla convencional, pero para quien la adopta es insustituible."
+comunidad: "Silla de culto en r/OfficeChairs y entre ergónomos. El consenso es claro: no es para todo el mundo, pero quien trabaja en escritorio de pie o busca postura activa no vuelve atrás. Creative Bloq (8/10) y remotehomesolutions.com destacan la flexibilidad y construcción robusta; el precio y la curva de adaptación son los únicos frenos."
+paraQuienSi:
+  - "Usuarios con escritorio elevable que alternan sentado y de pie"
+  - "Diseñadores, creativos y profesionales que se mueven mucho en la silla"
+  - "Personas con problemas lumbares que buscan postura activa"
+  - "Quienes priorizan calidad de materiales y sostenibilidad (50% material reciclado)"
+paraQuienNo:
+  - "Usuarios que buscan reclinar y descansar pasivamente"
+  - "Quienes superan los 110 kg de peso"
+  - "Personas que necesitan reposacabezas integrado de serie"
+  - "Presupuestos por debajo de 900 €"
+puntosFuertes:
+  - "Diseño de asiento tipo silla de montar: abre el ángulo de cadera y extiende la columna"
+  - "Compatible con escritorios de pie: tres alturas de cilindro disponibles (hasta 79 cm)"
+  - "Sistema HÅG inBalance®: mecanismo de basculación fluida y equilibrada"
+  - "Respaldo ajustable en altura para soporte lumbar en múltiples posiciones"
+  - "Profundidad de asiento regulable"
+  - "10 años de garantía"
+puntosDebiles:
+  - "Peso máximo 110 kg, inferior a otras premium"
+  - "El asiento tipo silla de montar requiere adaptación (semanas de ajuste postural)"
+  - "Sin reposacabezas de serie (opcional)"
+  - "Precio elevado (~945 € en la tienda oficial)"
+  - "No apta para quienes buscan reclinación pasiva"
+fuenteSpecs: "Web oficial HÅG (hag-office.com/products/capisco-8106 — precio EUR, specs verificados) + back2.co.uk (peso 14 kg, fondoCm 37-46 cm) + ergonomika.es (anchoCm 47 cm confirmado) + store.flokk.com (certificación BIFMA descargable, mecanismo inBalance) + Flokk factsheet flokkplatformprod.blob.core.windows.net (EN1335 + ANSI/BIFMA X5.1, reclinación 15°, materiales, base aluminio Ø730 mm)"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 15
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 55
+  anchoCm: 47
+  fondoCm: 34
+  mecanismo: "HÅG inBalance® (basculación fluida y equilibrada, bloqueable en 2 posiciones)"
+  baseMaterial: "aluminio anodizado (Ø730 mm)"
+  certificacionBifma: true
+  pesoProductoKg: 14
+  garantiaAnios: 10

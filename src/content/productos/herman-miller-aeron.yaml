@@ -1,0 +1,63 @@
+tipo: "silla"
+nombre: "Herman Miller Aeron"
+marca: "Herman Miller"
+imagen: ""
+imagenAlt: "Silla ergonómica Herman Miller Aeron talla B"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.8
+valoraciones:
+  ergonomia: 9.5
+  ajustabilidad: 8.5
+  materiales: 9.5
+  comodidad: 9.0
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://esstore.hermanmiller.com/collections/aeron-chairs"
+idealPara: "Profesionales que buscan la referencia absoluta en malla transpirable y soporte sacrolumbar"
+veredicto: "La Aeron es la referencia mundial en sillas de malla: PostureFit SL y la suspensión 8Z Pellicle ofrecen un soporte sacrolumbar que no tiene equivalente, aunque su precio y la necesidad de elegir la talla correcta son barreras reales."
+comunidad: "r/OfficeChairs la señala como benchmark absoluto de ergonomía; el único consenso negativo consistente es elegir la talla equivocada o esperar un asiento blando como el de una silla gaming."
+paraQuienSi:
+  - "Usuarios que trabajan 8+ horas diarias y priorizan transpirabilidad"
+  - "Personas con problemas sacrolumbares que buscan soporte diferenciado"
+  - "Profesionales dispuestos a invertir en la referencia del sector"
+  - "Climas cálidos donde la malla marca la diferencia"
+paraQuienNo:
+  - "Usuarios que prefieren asientos tapizados o acolchados suaves"
+  - "Personas con complexión muy ancha (encajan mejor en talla C)"
+  - "Quienes necesitan ajuste de profundidad de asiento sin pagar extra"
+  - "Presupuestos por debajo de 1.400 €"
+puntosFuertes:
+  - "Respaldo y asiento de malla 8Z Pellicle con zonas de soporte diferenciadas"
+  - "PostureFit SL: soporte sacro y lumbar simultáneo, único en el mercado"
+  - "Disponible en 3 tallas (A, B, C) para adaptarse a cada cuerpo"
+  - "Icono del diseño ergonómico, referencia absoluta en r/OfficeChairs"
+  - "Garantía 12 años, 3 turnos (uso 24/7)"
+  - "Excelente transpirabilidad de malla en climas cálidos"
+puntosDebiles:
+  - "Precio muy elevado (1.500-1.800 € nuevas en España)"
+  - "Sin ajuste de profundidad de asiento en modelos base"
+  - "Puede resultar incómoda para usuarios con mucho peso en la parte superior"
+  - "Requiere distribuidor oficial o tienda especializada"
+fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/aeron-chair/specs) + tienda España (esstore.hermanmiller.com) + ofival.es + store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348 + dimensions.com/element/aeron-chair-b-size + seatedlab.com/herman-miller-aeron-review"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 159
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 52
+  anchoCm: 52
+  fondoCm: 43
+  mecanismo: "Harmonic 2 Tilt"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 18.6
+  garantiaAnios: 12

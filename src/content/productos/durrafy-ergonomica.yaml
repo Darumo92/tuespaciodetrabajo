@@ -1,0 +1,56 @@
+tipo: "silla"
+nombre: "Durrafy Silla Ergonómica"
+marca: "Durrafy"
+imagen: "https://m.media-amazon.com/images/I/619GSz1-BML._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica Durrafy económica"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: 3.5
+valoraciones:
+  ergonomia: 6
+  ajustabilidad: 6
+  materiales: 5.5
+  comodidad: 6
+  calidadPrecio: 7
+amazon:
+  asin: "B0C3BZHVK8"
+  buscar: "Durrafy silla ergonómica"
+webOficial: null
+idealPara: "Presupuesto limitado a 130-140 €, silla de transición"
+veredicto: "Silla ergonómica de entrada con malla transpirable, lumbar y reposacabezas ajustables a un precio asequible. Materiales percibidos como básicos en reseñas; cumple su función para jornadas cortas-medias y usuarios de 1,45–1,80 m."
+comunidad: "Bien valorada como silla de transición o primera silla ergonómica; críticas recurrentes a la rigidez del lumbar y la estrechez del asiento. La capacidad de 150 kg es el punto diferencial frente a rivales de precio similar."
+paraQuienSi:
+  - "Presupuesto limitado (menos de 140 €)"
+  - "Primera silla ergonómica o silla de transición"
+  - "Usuarios de entre 1,45 m y 1,80 m de estatura"
+paraQuienNo:
+  - "Personas de complexión ancha (asiento algo estrecho)"
+  - "Jornadas largas de más de 8 horas continuas"
+  - "Quienes valoren mucho la calidad de los materiales"
+puntosFuertes:
+  - "El precio más bajo de la comparativa"
+  - "Soporte lumbar y reposacabezas incluidos"
+puntosDebiles:
+  - "Lumbar no ajustable en altura, solo presión"
+  - "Materiales inferiores al tacto (según reseñas)"
+  - "Asiento estrecho para personas anchas"
+fuenteSpecs: "Amazon.es ficha B0C3BZHVK8 · ergonomicworkspace.co.uk (peso 15,8 kg, dimensiones) · sillaergonomicaonline.com/durrafy-d03 (altura asiento 45-55 cm) · hardwareyou.es (certificaciones BIFMA/SGS, base nylon)"
+verificadoEn: "2026-06-07"
+specs:
+  tipo: "silla"
+  lumbar: "presion"
+  respaldo: "malla"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 120
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 55
+  anchoCm: 54
+  fondoCm: 52
+  mecanismo: null
+  baseMaterial: "nylon"
+  certificacionBifma: true
+  pesoProductoKg: 15.8
+  garantiaAnios: 2

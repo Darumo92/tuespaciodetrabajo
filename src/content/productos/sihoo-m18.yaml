@@ -1,0 +1,60 @@
+tipo: "silla"
+nombre: "SIHOO M18"
+marca: "SIHOO"
+imagen: ""
+imagenAlt: "Silla ergonómica SIHOO M18 respaldo alto malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 3.8
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 7.0
+  materiales: 7.0
+  comodidad: 7.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "SIHOO M18 silla ergonómica"
+webOficial: null
+idealPara: "Presupuesto de ~150-170 €, teletrabajo moderado sin exigir premium"
+veredicto: "La M18 ofrece lumbar ajustable en dos ejes y cojín W cómodo a un precio de entrada que pocas rivales igualan; sus reposabrazos fijos y la base de nylon la alejan de la gama media, pero para uso de 4-6 h diarias representa una compra muy sólida."
+comunidad: "MMORPG.com le da 8/10 destacando el lumbar de cuatro vías y el cojín firme; TechGearLab la califica 66/100 señalando ruedas poco deslizantes y controles muy duros de operar. Consenso: mejor silla ergonómica de entrada por debajo de 200 €, con la advertencia de que los reposabrazos no se ajustan en anchura."
+paraQuienSi:
+  - "Presupuesto de 130-180 € que exige soporte lumbar real"
+  - "Personas con dolor lumbar puntual que necesitan ajuste vertical y horizontal"
+  - "Teletrabajadores de 4-6 h diarias sin grandes exigencias de ajustabilidad"
+paraQuienNo:
+  - "Usuarios que comparten la silla y necesitan reposabrazos 3D"
+  - "Jornadas de más de 8 h donde la espuma puede notarse con el tiempo"
+  - "Quienes buscan base de aluminio o certificación de gama alta"
+puntosFuertes:
+  - "Precio económico con respaldo alto de malla"
+  - "Soporte lumbar dual ajustable (vertical y horizontal)"
+  - "Reposacabezas ajustable en altura y ángulo"
+  - "Soporta hasta 150 kg"
+  - "Cojín de asiento con forma W para mayor soporte"
+puntosDebiles:
+  - "Reposabrazos solo con ajuste de altura (1D)"
+  - "Sin profundidad de asiento regulable"
+  - "Espuma del asiento puede ablandarse con el tiempo según reseñas"
+  - "Calidad de materiales inferior a la M57"
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m18/ + sihoooffice.com/products/m18-ergonomic-chair) + mmorpg.com/hardware-reviews/sihoo-m18-classic-office-chair-review + techgearlab.com/reviews + Amazon.es + Idealo.es"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 126
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 43
+  alturaAsientoMaxCm: 53
+  anchoCm: 51
+  fondoCm: 46
+  mecanismo: "inclinacion-con-tension"
+  baseMaterial: "nylon"
+  certificacionBifma: true
+  pesoProductoKg: 17
+  garantiaAnios: 3

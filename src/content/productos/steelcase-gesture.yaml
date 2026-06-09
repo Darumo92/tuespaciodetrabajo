@@ -1,0 +1,63 @@
+tipo: "silla"
+nombre: "Steelcase Gesture"
+marca: "Steelcase"
+imagen: ""
+imagenAlt: "Silla ergonómica Steelcase Gesture"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.7
+valoraciones:
+  ergonomia: 9.2
+  ajustabilidad: 9.5
+  materiales: 9.0
+  comodidad: 8.8
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.steelcase.com/products/office-chairs/gesture/"
+idealPara: "Profesionales que trabajan con múltiples dispositivos (portátil, tablet, móvil) y hacen muchas videollamadas"
+veredicto: "La Gesture es la silla más versátil del mercado premium: sus brazos 360° y el mecanismo 3D LiveBack la hacen ideal para quienes trabajan con múltiples dispositivos, aunque su respaldo tapizado la penaliza frente a mallas en verano."
+comunidad: "Consenso en r/OfficeChairs: primera opción para trabajo con tablet y móvil; la crítica recurrente es que el lumbar no es ajustable en altura y que calienta más que la Leap V2 para trabajo sedentario prolongado."
+paraQuienSi:
+  - "Usuarios que trabajan con ordenador, tablet y móvil alternando posturas"
+  - "Profesionales que hacen muchas videollamadas y se recuestan con frecuencia"
+  - "Personas de complexión robusta (hasta 181 kg de capacidad)"
+  - "Quienes valoran la mayor capacidad de ajuste de brazos del mercado"
+paraQuienNo:
+  - "Usuarios en climas cálidos que prefieren malla transpirable"
+  - "Quienes necesitan ajuste de altura del lumbar (la Gesture no lo tiene)"
+  - "Trabajo sedentario muy prolongado sin cambio de postura frecuente"
+  - "Presupuestos por debajo de 1.300 €"
+puntosFuertes:
+  - "Brazos 360° diseñados para postura frente a pantallas y dispositivos móviles"
+  - "Core Equalizer™: soporte lumbar dinámico que se adapta en todas las posiciones"
+  - "Mayor rango de anchura de brazos del mercado"
+  - "Garantía de por vida en estructura + 12 años en mecanismos (uso 24/7)"
+  - "Capacidad hasta 181 kg (400 lb)"
+  - "Especialmente valorada para usuarios de múltiples dispositivos y videollamadas"
+puntosDebiles:
+  - "El más caro de la gama Steelcase nueva (~1.500 €)"
+  - "Respaldo tapizado, menos transpirable que malla"
+  - "Brazo 360° puede desestabilizarse en uso intenso según algunas reseñas"
+  - "Precisa distribución oficial; no en tiendas generalistas"
+fuenteSpecs: "Web oficial Steelcase (steelcase.com/products/office-chairs/gesture) + btod.com/blog/steelcase-gesture-chair-review + in.steelcase.com/products/gesture (dimensiones mm verificadas) + BIFMA cert PDF steelcase.com/content/uploads/sites/15/2015/06/AP_Gesture_Certification_BIFMA.pdf + seatedlab.com/steelcase-gesture-review"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 181
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 53
+  anchoCm: 51
+  fondoCm: 40
+  mecanismo: "3D LiveBack con sincrono avanzado y 3 posiciones de bloqueo"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 26.4
+  garantiaAnios: 12

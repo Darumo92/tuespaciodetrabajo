@@ -1,0 +1,56 @@
+tipo: "silla"
+nombre: "HOLLUDLE Silla Ergonómica"
+marca: "HOLLUDLE"
+imagen: "https://m.media-amazon.com/images/I/71Gt43giOPL._AC_SL300_.jpg"
+imagenAlt: "Silla ergonómica HOLLUDLE con profundidad de asiento regulable"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 7.5
+  materiales: 6.5
+  comodidad: 6.5
+  calidadPrecio: 7
+amazon:
+  asin: "B0BLNHPM3P"
+  buscar: "HOLLUDLE silla ergonómica"
+webOficial: null
+idealPara: "Alturas fuera de la media (menos de 1,65 m o más de 1,85 m)"
+veredicto: "La diferencial más clara de este segmento de precio: profundidad de asiento regulable, reposabrazos 4D y lumbar ajustable en altura son inusuales en Amazon por debajo de 220 €. La malla del respaldo recibe críticas de ser algo fina; montaje confuso. Buena opción para usuarios con proporciones atípicas."
+comunidad: "Valoraciones generalmente positivas destacando la ajustabilidad; los detractores señalan la calidad de la malla y las instrucciones de montaje. Certificada EN1335 + BIFMA, garantía de 5 años excepcional para este segmento."
+paraQuienSi:
+  - "Usuarios con estatura por debajo de 1,65 m o por encima de 1,85 m"
+  - "Quienes necesiten profundidad de asiento ajustable"
+  - "Personas que valoren la ajustabilidad sobre los materiales premium"
+paraQuienNo:
+  - "Usuarios que prioricen la calidad táctil de la malla"
+  - "Quienes no quieran invertir tiempo en el montaje"
+  - "Presupuesto por debajo de 180 €"
+puntosFuertes:
+  - "Profundidad de asiento regulable (rara a este precio)"
+  - "Reposacabezas ajustable en altura y ángulo"
+  - "Soporte lumbar integrado"
+puntosDebiles:
+  - "Malla del respaldo algo fina (según reseñas)"
+  - "Instrucciones de montaje mejorables"
+fuenteSpecs: "Amazon.es ficha B0BLNHPM3P · holludleoffice.com (peso máx 150 kg, EN1335, BIFMA, garantía 5 años, base acero) · hagensieker.com (BIFMA x5.1) · búsqueda web (dimensiones 70,1 × 65 × 131 cm, peso 19,4 kg)"
+verificadoEn: "2026-06-07"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "abatibles"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 150
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: null
+  fondoCm: null
+  mecanismo: null
+  baseMaterial: "acero"
+  certificacionBifma: true
+  pesoProductoKg: 19.4
+  garantiaAnios: 5

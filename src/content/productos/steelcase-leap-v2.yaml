@@ -1,0 +1,63 @@
+tipo: "silla"
+nombre: "Steelcase Leap V2"
+marca: "Steelcase"
+imagen: ""
+imagenAlt: "Silla ergonómica Steelcase Leap V2"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.8
+valoraciones:
+  ergonomia: 9.4
+  ajustabilidad: 9.3
+  materiales: 8.8
+  comodidad: 9.2
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://es.steelcase.com/products/steelcase-leap"
+idealPara: "Profesionales con jornada completa que priorizan ergonomía y durabilidad sobre el precio"
+veredicto: "La Leap V2 es la referencia clásica para trabajo de jornada completa: su lumbar ajustable en altura y firmeza combinado con LiveBack la convierte en la silla más adaptable del segmento premium tapizado, con una durabilidad probada de 15-20 años."
+comunidad: "La más recomendada en r/OfficeChairs para trabajo sedentario intenso; el mercado de segunda mano a través de Crandall se cita como la mejor relación calidad-precio del segmento."
+paraQuienSi:
+  - "Profesionales con 8+ horas diarias de trabajo sedentario intenso"
+  - "Usuarios que priorizan el ajuste lumbar preciso (altura y firmeza)"
+  - "Quienes buscan durabilidad contrastada de 15-20 años"
+  - "Compradores de segunda mano que quieren calidad premium a mitad de precio"
+paraQuienNo:
+  - "Usuarios en climas cálidos que prefieren malla transpirable"
+  - "Personas de complexión muy robusta (límite 150 kg frente a 181 kg de la Gesture)"
+  - "Quienes quieran los brazos más versátiles del mercado (Gesture los supera)"
+  - "Presupuestos por debajo de 1.000 € sin recurrir al mercado reacondicionado"
+puntosFuertes:
+  - "Tecnología LiveBack™: respaldo superior e inferior independientes que siguen la columna"
+  - "Lumbar ajustable en altura y firmeza"
+  - "Reposabrazos 4D con ajuste de altura, anchura, profundidad y pivote"
+  - "Garantía de por vida en estructura + 12 años en mecanismos (uso 24/7)"
+  - "Referencia histórica de r/OfficeChairs para trabajo de jornada completa"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Precio elevado (~1.200 € nuevas en España)"
+  - "No disponible en tiendas físicas masivas; requiere distribuidor oficial"
+  - "Respaldo tapizado, menos transpirable que malla"
+  - "Reclinación máxima de 25° (5 posiciones), más conservadora que sillas gaming"
+fuenteSpecs: "Web oficial Steelcase España (es.steelcase.com/products/steelcase-leap) + btod.com/steelcase-leap-v2 (dimensiones verificadas) + seatedlab.com/steelcase-leap-review + store.steelcase.com/seating/ergonomic-chairs/leap"
+verificadoEn: "2026-06-06"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 25
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 52
+  anchoCm: 49
+  fondoCm: 40
+  mecanismo: "Natural Glide System con LiveBack y 5 posiciones de inclinacion"
+  baseMaterial: "nylon"
+  certificacionBifma: true
+  pesoProductoKg: 29.0
+  garantiaAnios: 12
