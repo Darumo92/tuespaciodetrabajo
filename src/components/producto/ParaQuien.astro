@@ -1,0 +1,29 @@
+---
+interface Props { si: string[]; no: string[]; }
+const { si, no } = Astro.props;
+---
+{(si.length > 0 || no.length > 0) && (
+  <div class="paraquien">
+    {si.length > 0 && (
+      <div class="pq-col pq-si">
+        <h3>Para quién sí</h3>
+        <ul>{si.map((x) => <li>{x}</li>)}</ul>
+      </div>
+    )}
+    {no.length > 0 && (
+      <div class="pq-col pq-no">
+        <h3>Para quién no</h3>
+        <ul>{no.map((x) => <li>{x}</li>)}</ul>
+      </div>
+    )}
+  </div>
+)}
+<style>
+  .paraquien { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1rem 0 2rem; }
+  .pq-col h3 { font-size: 0.85rem; margin-bottom: 0.5rem; }
+  .pq-col ul { list-style: none; padding: 0; margin: 0; font-size: 0.88rem; }
+  .pq-col li { padding: 0.25rem 0 0.25rem 1.3rem; position: relative; }
+  .pq-si li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
+  .pq-no li::before { content: "✕"; position: absolute; left: 0; color: #dc2626; font-weight: 700; }
+  @media (max-width: 560px) { .paraquien { grid-template-columns: 1fr; } }
+</style>

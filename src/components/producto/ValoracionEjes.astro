@@ -1,0 +1,42 @@
+---
+import { notaGlobal, type Producto } from '@/lib/productos';
+import { getTipoConfig } from '@/lib/tipos';
+interface Props { producto: Producto; }
+const { producto } = Astro.props;
+const cfg = getTipoConfig(producto.tipo);
+const v = producto.valoraciones as unknown as Record<string, number | null>;
+const ejes = (cfg?.ejes ?? []).map((e) => ({ etiqueta: e.etiqueta, valor: v?.[e.clave] ?? null }));
+const global = notaGlobal(producto);
+---
+<section class="vejes">
+  <div class="vejes-head">
+    <h2>Valoración por ejes</h2>
+    <span class="vejes-tag">editorial · specs + comunidad</span>
+  </div>
+  {global != null && (<p class="vejes-global"><strong>{global.toFixed(1)}</strong><span>/10 · nota global</span></p>)}
+  <div class="vejes-bars">
+    {ejes.map((e) => (
+      <div class={`vejes-row${e.valor == null ? ' vejes-nd' : ''}`}>
+        <span class="vejes-lbl">{e.etiqueta}</span>
+        <span class="vejes-track"><span class="vejes-fill" style={`width:${e.valor == null ? 100 : e.valor * 10}%`}></span></span>
+        <span class="vejes-val">{e.valor == null ? 'sin valorar' : e.valor.toFixed(1)}</span>
+      </div>
+    ))}
+  </div>
+</section>
+<style>
+  .vejes { margin: 1.5rem 0 2rem; }
+  .vejes-head { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; }
+  .vejes-head h2 { margin: 0; }
+  .vejes-tag { font-size: 0.62rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); background: var(--color-bg-muted); padding: 0.2rem 0.5rem; border-radius: 6px; }
+  .vejes-global { font-family: var(--font-display); margin: 0.5rem 0 1rem; }
+  .vejes-global strong { font-size: 1.4rem; }
+  .vejes-global span { color: var(--color-text-muted); font-size: 0.8rem; font-weight: 500; }
+  .vejes-bars { display: grid; gap: 0.7rem; max-width: 520px; }
+  .vejes-row { display: grid; grid-template-columns: 130px 1fr 70px; align-items: center; gap: 0.7rem; font-size: 0.85rem; }
+  .vejes-track { height: 9px; background: var(--color-bg-muted); border-radius: 99px; overflow: hidden; }
+  .vejes-fill { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--color-primary), #60a5fa); }
+  .vejes-val { font-weight: 700; font-size: 0.82rem; text-align: right; }
+  .vejes-nd .vejes-fill { background: repeating-linear-gradient(45deg, #e4e4e7, #e4e4e7 4px, #f4f4f5 4px, #f4f4f5 8px); }
+  .vejes-nd .vejes-val { color: var(--color-text-muted); font-weight: 500; font-size: 0.72rem; }
+</style>

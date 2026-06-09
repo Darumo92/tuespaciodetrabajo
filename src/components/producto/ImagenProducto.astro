@@ -1,0 +1,14 @@
+---
+import FallbackImagen from './FallbackImagen.astro';
+interface Props { imagen?: string; imagenAlt?: string; marca: string; nombre: string; size?: number; }
+const { imagen, imagenAlt, marca, nombre, size = 200 } = Astro.props;
+const tieneImagen = imagen != null && imagen.trim() !== '';
+---
+{tieneImagen ? (
+  <img src={imagen} alt={imagenAlt ?? nombre} width={size} height={size} loading="lazy" decoding="async" class="img-prod" />
+) : (
+  <FallbackImagen marca={marca} nombre={nombre} size={size} />
+)}
+<style>
+  .img-prod { object-fit: contain; background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 0.5rem; flex-shrink: 0; }
+</style>
