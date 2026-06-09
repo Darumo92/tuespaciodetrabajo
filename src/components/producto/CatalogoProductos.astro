@@ -1,0 +1,459 @@
+---
+import TarjetaProducto from './TarjetaProducto.astro';
+import type { Producto } from '@/lib/productos';
+
+interface Props {
+  productos: Producto[];
+  tipo: string;
+}
+
+const { productos, tipo } = Astro.props;
+---
+
+<section class="catalogo" data-catalogo-root data-tipo={tipo}>
+  <div class="catalogo-filtros" aria-label="Filtros de catálogo">
+    <label class="catalogo-field">
+      <span>Precio máximo</span>
+      <input type="range" class="f-precio" min="1" max="4" step="1" value="4" />
+      <output class="f-precio-out">Sin límite</output>
+    </label>
+
+    <label class="catalogo-field">
+      <span>Respaldo</span>
+      <select class="f-respaldo">
+        <option value="">Cualquiera</option>
+        <option value="malla">Malla</option>
+        <option value="espuma">Espuma</option>
+        <option value="mixto">Mixto</option>
+      </select>
+    </label>
+
+    <label class="catalogo-field">
+      <span>Reposabrazos mín.</span>
+      <select class="f-brazos">
+        <option value="0">Cualquiera</option>
+        <option value="2">2D o superior</option>
+        <option value="3">3D o superior</option>
+        <option value="4">4D</option>
+      </select>
+    </label>
+
+    <label class="catalogo-check">
+      <input type="checkbox" class="f-prof" />
+      <span>Profundidad regulable</span>
+    </label>
+
+    <label class="catalogo-check">
+      <input type="checkbox" class="f-peso" />
+      <span>Soporta 130 kg o más</span>
+    </label>
+
+    <label class="catalogo-field">
+      <span>Ordenar</span>
+      <select class="f-orden">
+        <option value="valoracion">Mejor valoradas</option>
+        <option value="precio-asc">Precio bajo a alto</option>
+        <option value="precio-desc">Precio alto a bajo</option>
+        <option value="peso-max">Mayor carga</option>
+      </select>
+    </label>
+  </div>
+
+  <p class="catalogo-count">
+    <span class="catalogo-n">{productos.length}</span>
+    <span>productos · marca entre 2 y 4 casillas para comparar</span>
+  </p>
+
+  <div class="catalogo-grid">
+    {productos.map((producto) => <TarjetaProducto producto={producto} />)}
+  </div>
+
+  <p class="catalogo-vacio" hidden>Ningún producto cumple esos filtros. Prueba a relajar alguno.</p>
+
+  <div class="cmp-bar" hidden>
+    <span class="cmp-status">
+      <strong class="cmp-n">0</strong>
+      <span class="cmp-copy">seleccionados</span>
+    </span>
+    <a class="cmp-go" href={`/comparar/${tipo}/`} aria-disabled="true">Comparar</a>
+    <button class="cmp-clear" type="button">Limpiar</button>
+  </div>
+</section>
+
+<style>
+  .catalogo {
+    position: relative;
+    padding-bottom: 4.5rem;
+  }
+
+  .catalogo-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: end;
+    margin-bottom: 1.35rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .catalogo-field,
+  .catalogo-check {
+    font-size: 0.82rem;
+    font-weight: 650;
+    color: var(--color-text-muted);
+  }
+
+  .catalogo-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.32rem;
+    min-width: min(100%, 11rem);
+  }
+
+  .catalogo-field input,
+  .catalogo-field select {
+    min-height: 2.35rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+
+  .catalogo-field select {
+    padding: 0 0.65rem;
+  }
+
+  .catalogo-field input[type='range'] {
+    min-height: 1.8rem;
+    accent-color: var(--color-primary);
+  }
+
+  .f-precio-out {
+    min-height: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-text);
+  }
+
+  .catalogo-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.35rem;
+  }
+
+  .catalogo-check input {
+    width: 1rem;
+    height: 1rem;
+    accent-color: var(--color-primary);
+  }
+
+  .catalogo-count {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin: 0 0 1rem;
+    font-size: 0.86rem;
+    color: var(--color-text-muted);
+  }
+
+  .catalogo-count .catalogo-n {
+    font-weight: 750;
+    color: var(--color-text);
+  }
+
+  .catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+    gap: 1rem;
+  }
+
+  .catalogo-vacio {
+    margin: 1.25rem 0 0;
+    padding: 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-muted);
+    color: var(--color-text-muted);
+  }
+
+  .cmp-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    padding: 0.78rem max(1rem, env(safe-area-inset-right)) calc(0.78rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+    background: var(--color-text);
+    color: #fff;
+    box-shadow: 0 -10px 24px rgb(0 0 0 / 0.16);
+  }
+
+  .cmp-status {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.32rem;
+    min-width: 0;
+    font-size: 0.88rem;
+  }
+
+  .cmp-status strong {
+    font-family: var(--font-display);
+    font-size: 1rem;
+  }
+
+  .cmp-go,
+  .cmp-clear {
+    min-height: 2.25rem;
+    border-radius: var(--radius-md);
+    padding: 0.48rem 0.9rem;
+    font: inherit;
+    font-weight: 750;
+    white-space: nowrap;
+  }
+
+  .cmp-go {
+    display: inline-flex;
+    align-items: center;
+    color: #3a2a00;
+    background: var(--color-secondary);
+    text-decoration: none;
+  }
+
+  .cmp-go[aria-disabled='true'] {
+    opacity: 0.55;
+    pointer-events: none;
+  }
+
+  .cmp-clear {
+    border: 1px solid rgb(255 255 255 / 0.35);
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .cmp-clear:hover,
+  .cmp-clear:focus-visible {
+    border-color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .catalogo {
+      padding-bottom: 8.5rem;
+    }
+
+    .cmp-bar {
+      bottom: calc(56px + env(safe-area-inset-bottom, 0px));
+      padding-bottom: 0.78rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .catalogo {
+      padding-bottom: 10.5rem;
+    }
+
+    .catalogo-field {
+      width: 100%;
+    }
+
+    .catalogo-check {
+      width: 100%;
+    }
+
+    .cmp-bar {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.55rem;
+    }
+
+    .cmp-status {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .cmp-go,
+    .cmp-clear {
+      flex: 1 1 8rem;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+</style>
+
+<script>
+  const roots = document.querySelectorAll<HTMLElement>('[data-catalogo-root]');
+
+  roots.forEach((root) => {
+    const tipo = root.dataset.tipo || '';
+    const grid = root.querySelector<HTMLElement>('.catalogo-grid');
+    if (!grid) return;
+
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.card'));
+    const fPrecio = root.querySelector<HTMLInputElement>('.f-precio');
+    const fPrecioOut = root.querySelector<HTMLOutputElement>('.f-precio-out');
+    const fRespaldo = root.querySelector<HTMLSelectElement>('.f-respaldo');
+    const fBrazos = root.querySelector<HTMLSelectElement>('.f-brazos');
+    const fProf = root.querySelector<HTMLInputElement>('.f-prof');
+    const fPeso = root.querySelector<HTMLInputElement>('.f-peso');
+    const fOrden = root.querySelector<HTMLSelectElement>('.f-orden');
+    const nOut = root.querySelector<HTMLElement>('.catalogo-n');
+    const vacio = root.querySelector<HTMLElement>('.catalogo-vacio');
+    const bar = root.querySelector<HTMLElement>('.cmp-bar');
+    const nEl = root.querySelector<HTMLElement>('.cmp-n');
+    const copyEl = root.querySelector<HTMLElement>('.cmp-copy');
+    const go = root.querySelector<HTMLAnchorElement>('.cmp-go');
+    const clear = root.querySelector<HTMLButtonElement>('.cmp-clear');
+
+    if (!fPrecio || !fPrecioOut || !fRespaldo || !fBrazos || !fProf || !fPeso || !fOrden) return;
+    if (!bar || !nEl || !copyEl || !go || !clear) return;
+
+    const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
+    const KEY = `comparar-${tipo}`;
+
+    const toNumber = (value: string | undefined): number | null => {
+      if (value == null || value === '') return null;
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : null;
+    };
+
+    const compare = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
+
+    const validSlugs = new Set(checks.map((check) => check.value));
+
+    const readStoredSelection = (): string[] => {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
+        if (!Array.isArray(parsed)) return [];
+        return parsed
+          .filter((value): value is string => typeof value === 'string')
+          .slice(0, 4);
+      } catch {
+        return [];
+      }
+    };
+
+    const readSelection = (): string[] => readStoredSelection().filter((slug) => validSlugs.has(slug));
+
+    const saveSelection = (selection: string[]) => {
+      const maxPreserved = Math.max(0, 4 - selection.length);
+      const preserved = readStoredSelection()
+        .filter((slug) => !validSlugs.has(slug))
+        .slice(0, maxPreserved);
+      localStorage.setItem(KEY, JSON.stringify([...preserved, ...selection].slice(0, 4)));
+    };
+
+    const renderCompare = () => {
+      const selection = readSelection();
+      if (selection.length > 4) saveSelection(selection.slice(0, 4));
+
+      checks.forEach((check) => {
+        const selected = selection.includes(check.value);
+        check.checked = selected;
+        check.closest('.card')?.classList.toggle('cmp-sel', selected);
+      });
+
+      nEl.textContent = String(selection.length);
+      copyEl.textContent = selection.length === 1 ? 'seleccionado' : 'seleccionados';
+      bar.hidden = selection.length === 0;
+
+      const canCompare = selection.length >= 2 && selection.length <= 4;
+      go.setAttribute('aria-disabled', canCompare ? 'false' : 'true');
+      if (canCompare) {
+        go.removeAttribute('tabindex');
+      } else {
+        go.setAttribute('tabindex', '-1');
+      }
+      go.href = canCompare ? `/comparar/${tipo}/?s=${selection.join(',')}` : `/comparar/${tipo}/`;
+    };
+
+    const applyFilters = () => {
+      const tramoMax = Number(fPrecio.value);
+      const sinLimite = tramoMax >= Number(fPrecio.max);
+      fPrecioOut.textContent = sinLimite ? 'Sin límite' : `Hasta ${'€'.repeat(tramoMax)}`;
+
+      let visibles = 0;
+      cards.forEach((card) => {
+        const tramo = toNumber(card.dataset.tramo);
+        const respaldo = card.dataset.respaldo || '';
+        const brazos = toNumber(card.dataset.brazos) ?? 0;
+        const prof = card.dataset.prof === '1';
+        const peso = toNumber(card.dataset.peso);
+        let visible = true;
+
+        if (tramo != null && tramo > tramoMax) visible = false;
+        if (fRespaldo.value && respaldo !== fRespaldo.value) visible = false;
+        if (Number(fBrazos.value) > brazos) visible = false;
+        if (fProf.checked && !prof) visible = false;
+        if (fPeso.checked && (peso == null || peso < 130)) visible = false;
+
+        card.hidden = !visible;
+        if (visible) visibles += 1;
+      });
+
+      const visibleCards = cards.filter((card) => !card.hidden);
+      const sortValue = (card: HTMLElement, key: string) => toNumber(card.dataset[key]);
+
+      visibleCards.sort((a, b) => {
+        if (fOrden.value === 'precio-asc') {
+          return compare(sortValue(a, 'tramo') ?? Infinity, sortValue(b, 'tramo') ?? Infinity);
+        }
+        if (fOrden.value === 'precio-desc') {
+          return compare(sortValue(b, 'tramo') ?? -Infinity, sortValue(a, 'tramo') ?? -Infinity);
+        }
+        if (fOrden.value === 'peso-max') {
+          return compare(sortValue(b, 'peso') ?? -Infinity, sortValue(a, 'peso') ?? -Infinity);
+        }
+        return compare(sortValue(b, 'valoracion') ?? 0, sortValue(a, 'valoracion') ?? 0);
+      });
+
+      visibleCards.forEach((card) => grid.appendChild(card));
+      if (nOut) nOut.textContent = String(visibles);
+      if (vacio) vacio.hidden = visibles > 0;
+    };
+
+    [fPrecio, fRespaldo, fBrazos, fProf, fPeso, fOrden].forEach((control) => {
+      control.addEventListener('input', applyFilters);
+      control.addEventListener('change', applyFilters);
+    });
+
+    checks.forEach((check) => {
+      check.addEventListener('change', () => {
+        let selection = readSelection();
+        if (check.checked) {
+          if (!selection.includes(check.value)) {
+            if (selection.length >= 4) {
+              check.checked = false;
+              check.setCustomValidity('Puedes comparar hasta 4 productos.');
+              check.reportValidity();
+              check.setCustomValidity('');
+              return;
+            }
+            selection.push(check.value);
+          }
+        } else {
+          selection = selection.filter((slug) => slug !== check.value);
+        }
+
+        saveSelection(selection);
+        renderCompare();
+      });
+    });
+
+    clear.addEventListener('click', () => {
+      saveSelection([]);
+      renderCompare();
+    });
+
+    go.addEventListener('click', (event) => {
+      if (go.getAttribute('aria-disabled') === 'true') event.preventDefault();
+    });
+
+    applyFilters();
+    renderCompare();
+  });
+</script>
