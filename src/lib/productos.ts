@@ -35,6 +35,8 @@ export interface Producto {
 }
 
 export type Direccion = 'mayor' | 'menor';
+export type ProductoAmazon = Producto['amazon'];
+export const AMAZON_TAG = 'tuespaciodet-21';
 
 export function mediaEjesPresentes(v?: Valoraciones): number | null {
   if (!v) return null;
@@ -73,6 +75,43 @@ export function getCampo(p: Producto, ruta: string): unknown {
     return undefined;
   }, p);
   return val === undefined ? null : val;
+}
+
+export function tramoTexto(tramo: number): string {
+  return '€'.repeat(Math.max(1, Math.min(4, tramo)));
+}
+
+export function formatoSpec(valor: unknown, formato?: string): string {
+  if (valor == null) return 'n/d';
+  if (formato === 'bool') return valor ? 'Sí' : 'No';
+  switch (formato) {
+    case 'kg': return `${valor} kg`;
+    case 'grados': return `${valor}°`;
+    case 'anios': return `${valor} años`;
+    case 'cm': return `${valor} cm`;
+    default: return String(valor);
+  }
+}
+
+const ETIQUETAS: Record<string, Record<string, string>> = {
+  lumbar: { fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura', dinamico: 'Dinámico autoajustable', '5d': '5D ajustable' },
+  reposabrazos: { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' },
+  respaldo: { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' },
+};
+
+export function etiquetaEnum(campo: string, valor: string): string {
+  return ETIQUETAS[campo]?.[valor] ?? valor;
+}
+
+export function reposabrazosNivel(v: string): number {
+  return ({ ninguno: 0, fijo: 1, '1d': 1, '2d': 2, '3d': 3, '4d': 4, abatibles: 2 } as Record<string, number>)[v] ?? 0;
+}
+
+export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
+  if (amazon?.asin) {
+    return `https://www.amazon.es/dp/${amazon.asin}?tag=${AMAZON_TAG}`;
+  }
+  return null;
 }
 
 export type ParVs = [string, string];
@@ -118,7 +157,7 @@ export function construirIndiceBusqueda(productos: Producto[], articulos: Articu
   }));
   const a: EntradaIndice[] = articulos.map((x) => ({
     entidad: 'articulo', slug: x.slug, titulo: x.titulo, sub: x.categoria, tipo: x.tipo,
-    url: `/${x.categoria}/${x.slug}/`,
+    url: x.tipo === 'informativo' ? `/guias/${x.slug}/` : `/${x.categoria}/${x.slug}/`,
   }));
   return [...p, ...a];
 }

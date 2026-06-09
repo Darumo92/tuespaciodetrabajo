@@ -1,5 +1,17 @@
 import { describe, it, expect } from 'vitest';
-import { mediaEjesPresentes, notaGlobal, ganadoresPorValor, getCampo, seleccionarParesVs, construirIndiceBusqueda } from './productos';
+import {
+  mediaEjesPresentes,
+  notaGlobal,
+  ganadoresPorValor,
+  getCampo,
+  seleccionarParesVs,
+  construirIndiceBusqueda,
+  formatoSpec,
+  tramoTexto,
+  etiquetaEnum,
+  reposabrazosNivel,
+  buildAmazonHref,
+} from './productos';
 import type { Producto, Valoraciones } from './productos';
 
 const COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
@@ -70,5 +82,52 @@ describe('construirIndiceBusqueda', () => {
     );
     expect(idx).toContainEqual(expect.objectContaining({ entidad: 'producto', slug: 'aeron', titulo: 'Aeron' }));
     expect(idx).toContainEqual(expect.objectContaining({ entidad: 'articulo', slug: 'guia' }));
+  });
+
+  it('enlaza artículos informativos a /guias/', () => {
+    const idx = construirIndiceBusqueda(
+      [],
+      [{ slug: 'ergonomia', titulo: 'Ergonomía', categoria: 'sillas', tipo: 'informativo' }]
+    );
+    expect(idx[0].url).toBe('/guias/ergonomia/');
+  });
+});
+
+describe('formatoSpec', () => {
+  it('n/d para null', () => { expect(formatoSpec(null, 'kg')).toBe('n/d'); });
+  it('n/d para booleano ausente', () => { expect(formatoSpec(null, 'bool')).toBe('n/d'); });
+  it('aplica sufijos', () => {
+    expect(formatoSpec(150, 'kg')).toBe('150 kg');
+    expect(formatoSpec(135, 'grados')).toBe('135°');
+    expect(formatoSpec(3, 'anios')).toBe('3 años');
+    expect(formatoSpec(48, 'cm')).toBe('48 cm');
+  });
+  it('bool', () => { expect(formatoSpec(true, 'bool')).toBe('Sí'); expect(formatoSpec(false, 'bool')).toBe('No'); });
+});
+
+describe('tramoTexto', () => {
+  it('símbolos €', () => { expect(tramoTexto(1)).toBe('€'); expect(tramoTexto(4)).toBe('€€€€'); });
+});
+
+describe('etiquetaEnum', () => {
+  it('traduce y cae al valor crudo', () => {
+    expect(etiquetaEnum('lumbar', 'dinamico')).toBe('Dinámico autoajustable');
+    expect(etiquetaEnum('respaldo', 'malla')).toBe('Malla');
+    expect(etiquetaEnum('lumbar', 'desconocido')).toBe('desconocido');
+  });
+});
+
+describe('reposabrazosNivel', () => {
+  it('mapea a nivel numérico', () => {
+    expect(reposabrazosNivel('3d')).toBe(3);
+    expect(reposabrazosNivel('ninguno')).toBe(0);
+  });
+});
+
+describe('buildAmazonHref', () => {
+  it('construye enlace afiliado solo con ASIN verificado', () => {
+    expect(buildAmazonHref({ asin: 'B0TEST1234', buscar: null })).toBe('https://www.amazon.es/dp/B0TEST1234?tag=tuespaciodet-21');
+    expect(buildAmazonHref({ asin: null, buscar: 'silla ergonomica' })).toBeNull();
+    expect(buildAmazonHref({ asin: null, buscar: null })).toBeNull();
   });
 });

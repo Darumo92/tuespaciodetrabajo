@@ -1,0 +1,64 @@
+---
+import StoreIcon from './StoreIcon.astro';
+import { buildAmazonHref, type ProductoAmazon } from '@/lib/productos';
+
+interface Props {
+  amazon?: ProductoAmazon;
+  webOficial?: string | null;
+  nombre: string;
+}
+
+const { amazon, webOficial, nombre } = Astro.props;
+const amazonHref = buildAmazonHref(amazon);
+---
+
+{amazonHref ? (
+  <a
+    href={amazonHref}
+    class="affiliate-button amazon"
+    target="_blank"
+    rel="sponsored nofollow noopener noreferrer"
+  >
+    <StoreIcon tienda="amazon" size={15} />
+    Ver precio en Amazon
+    <span class="sr-only">{`de ${nombre} (se abre en nueva pestaña)`}</span>
+  </a>
+) : webOficial ? (
+  <a
+    href={webOficial}
+    class="boton-web-oficial"
+    target="_blank"
+    rel="nofollow noopener noreferrer"
+  >
+    Ver en la web oficial
+    <span class="sr-only">{`de ${nombre} (se abre en nueva pestaña)`}</span>
+  </a>
+) : (
+  <span class="boton-sin-tienda">No disponible online actualmente</span>
+)}
+
+<style>
+  .boton-web-oficial {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.6rem 1.1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-dark);
+    color: var(--color-text);
+    text-decoration: none;
+    transition: border-color var(--transition);
+  }
+  .boton-web-oficial:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  .boton-sin-tienda {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+  }
+</style>

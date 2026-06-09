@@ -1,0 +1,68 @@
+---
+import BotonPrecio from '../BotonPrecio.astro';
+import ImagenProducto from './ImagenProducto.astro';
+import { notaGlobal, tramoTexto, etiquetaEnum, reposabrazosNivel, getCampo, type Producto } from '@/lib/productos';
+
+interface Props { producto: Producto; }
+
+const { producto: p } = Astro.props;
+const global = notaGlobal(p);
+const respaldo = getCampo(p, 'specs.respaldo') as string | null;
+const garantia = getCampo(p, 'specs.garantiaAnios') as number | null;
+const pesoMax = getCampo(p, 'specs.pesoMaxKg') as number | null;
+const lumbar = getCampo(p, 'specs.lumbar') as string | null;
+const reposabrazos = getCampo(p, 'specs.reposabrazos') as string | null;
+const chips = [
+  lumbar ? `Lumbar ${etiquetaEnum('lumbar', lumbar).toLowerCase()}` : null,
+  respaldo ? etiquetaEnum('respaldo', respaldo) : null,
+  pesoMax == null ? null : `${pesoMax} kg`,
+  garantia == null ? 'garantía n/d' : `${garantia} años`,
+].filter((c): c is string => c != null);
+---
+
+<article class="card"
+  data-slug={p.slug}
+  data-tramo={p.tramoPrecio}
+  data-respaldo={respaldo ?? ''}
+  data-brazos={reposabrazos ? reposabrazosNivel(reposabrazos) : 0}
+  data-prof={getCampo(p, 'specs.profundidadRegulable') ? '1' : '0'}
+  data-peso={pesoMax ?? ''}
+  data-valoracion={p.valoracion ?? 0}>
+  <label class="card-cmp">
+    <input type="checkbox" class="cmp-chk" value={p.slug} />
+    comparar <span class="sr-only">{p.nombre}</span>
+  </label>
+  <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={110} />
+  <div class="card-info">
+    <span class="card-brand">{p.marca}</span>
+    <a class="card-name" href={`/catalogo/${p.tipo}/${p.slug}/`}>{p.nombre}</a>
+    <p class="card-line">
+      {global != null && <span class="card-score">{global.toFixed(1)}/10</span>}
+      <span class="card-price">{tramoTexto(p.tramoPrecio)}</span>
+    </p>
+    <div class="card-chips">
+      {chips.map((c) => <span class={`chip${c.includes('n/d') ? ' chip-nd' : ''}`}>{c}</span>)}
+    </div>
+    <BotonPrecio amazon={p.amazon} webOficial={p.webOficial} nombre={p.nombre} />
+  </div>
+</article>
+
+<style>
+  .card { position: relative; display: flex; gap: 1rem; align-items: flex-start; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; background: var(--color-bg); }
+  .card.cmp-sel { border-color: var(--color-primary); box-shadow: 0 0 0 2px #bfdbfe; }
+  .card-cmp { position: absolute; top: 0.6rem; right: 0.6rem; display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--color-text-muted); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 0.2rem 0.5rem; cursor: pointer; }
+  .card-info { flex: 1; min-width: 0; }
+  .card-brand { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .card-name { font-family: var(--font-display); font-weight: 700; color: var(--color-text); text-decoration: none; display: block; margin: 0.05rem 0 0.3rem; }
+  .card-name:hover { color: var(--color-primary); }
+  .card-line { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
+  .card-score { background: var(--color-text); color: #fff; font-family: var(--font-display); font-size: 0.78rem; border-radius: 7px; padding: 0.1rem 0.45rem; }
+  .card-price { color: var(--color-secondary); }
+  .card-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
+  .chip { font-size: 0.7rem; background: var(--color-bg-muted); color: #3f3f46; border-radius: 6px; padding: 0.1rem 0.45rem; }
+  .chip-nd { color: var(--color-text-muted); font-style: italic; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+  }
+</style>
