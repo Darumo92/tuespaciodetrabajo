@@ -74,3 +74,51 @@ export function getCampo(p: Producto, ruta: string): unknown {
   }, p);
   return val === undefined ? null : val;
 }
+
+export type ParVs = [string, string];
+
+/**
+ * Empareja productos cuyo tramo de precio sea igual o adyacente (|Δtramo| <= 1),
+ * priorizando los mejor valorados. Devuelve pares [a,b] con a<b (orden alfabético)
+ * para URLs estables. Limita a `max` pares.
+ */
+export function seleccionarParesVs(productos: Producto[], max: number): ParVs[] {
+  const ordenados = [...productos].sort((a, b) => (b.valoracion ?? 0) - (a.valoracion ?? 0));
+  const pares: ParVs[] = [];
+  const vistos = new Set<string>();
+  for (let i = 0; i < ordenados.length; i++) {
+    for (let j = i + 1; j < ordenados.length; j++) {
+      if (pares.length >= max) return pares;
+      const a = ordenados[i], b = ordenados[j];
+      if (Math.abs(a.tramoPrecio - b.tramoPrecio) > 1) continue;
+      const [x, y] = a.slug < b.slug ? [a.slug, b.slug] : [b.slug, a.slug];
+      const clave = `${x}|${y}`;
+      if (vistos.has(clave)) continue;
+      vistos.add(clave);
+      pares.push([x, y]);
+    }
+  }
+  return pares;
+}
+
+export interface ArticuloLite { slug: string; titulo: string; categoria: string; tipo: string; }
+export interface EntradaIndice {
+  entidad: 'producto' | 'articulo';
+  slug: string;
+  titulo: string;
+  sub: string;
+  tipo: string;
+  url: string;
+}
+
+export function construirIndiceBusqueda(productos: Producto[], articulos: ArticuloLite[]): EntradaIndice[] {
+  const p: EntradaIndice[] = productos.map((x) => ({
+    entidad: 'producto', slug: x.slug, titulo: x.nombre, sub: x.marca, tipo: x.tipo,
+    url: `/catalogo/${x.tipo}/${x.slug}/`,
+  }));
+  const a: EntradaIndice[] = articulos.map((x) => ({
+    entidad: 'articulo', slug: x.slug, titulo: x.titulo, sub: x.categoria, tipo: x.tipo,
+    url: `/${x.categoria}/${x.slug}/`,
+  }));
+  return [...p, ...a];
+}

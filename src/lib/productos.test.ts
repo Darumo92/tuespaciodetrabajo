@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { mediaEjesPresentes, notaGlobal, ganadoresPorValor, getCampo } from './productos';
+import { mediaEjesPresentes, notaGlobal, ganadoresPorValor, getCampo, seleccionarParesVs, construirIndiceBusqueda } from './productos';
 import type { Producto, Valoraciones } from './productos';
 
 const COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
@@ -44,5 +44,31 @@ describe('getCampo', () => {
     expect(getCampo(base(), 'specs.garantiaAnios')).toBe(3);
     expect(getCampo(base({ tramoPrecio: 2 }), 'tramoPrecio')).toBe(2);
     expect(getCampo(base(), 'specs.inexistente')).toBeNull();
+  });
+});
+
+describe('seleccionarParesVs', () => {
+  const mk = (slug: string, tramo: number, val: number) => base({ slug, tramoPrecio: tramo, valoracion: val });
+  it('empareja productos de tramo igual o adyacente, orden alfabético estable', () => {
+    const ps = [mk('aeron', 4, 4.8), mk('leap', 4, 4.7), mk('markus', 1, 4.0)];
+    const pares = seleccionarParesVs(ps, 8);
+    expect(pares).toContainEqual(['aeron', 'leap']);
+    expect(pares.every(([a, b]) => a < b)).toBe(true);
+    expect(pares).not.toContainEqual(['aeron', 'markus']); // tramo 4 vs 1 → no
+  });
+  it('respeta el límite máximo de pares', () => {
+    const ps = Array.from({ length: 10 }, (_, i) => mk(`s${i}`, 2, 4));
+    expect(seleccionarParesVs(ps, 5).length).toBeLessThanOrEqual(5);
+  });
+});
+
+describe('construirIndiceBusqueda', () => {
+  it('incluye productos y artículos con su entidad', () => {
+    const idx = construirIndiceBusqueda(
+      [base({ slug: 'aeron', nombre: 'Aeron', marca: 'Herman Miller' })],
+      [{ slug: 'guia', titulo: 'Guía sillas', categoria: 'sillas', tipo: 'comparativa' }]
+    );
+    expect(idx).toContainEqual(expect.objectContaining({ entidad: 'producto', slug: 'aeron', titulo: 'Aeron' }));
+    expect(idx).toContainEqual(expect.objectContaining({ entidad: 'articulo', slug: 'guia' }));
   });
 });
