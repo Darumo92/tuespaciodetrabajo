@@ -16,10 +16,10 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 
 - [x] **Task 6** — Componentes base (FallbackImagen, ImagenProducto, ValoracionEjes, ParaQuien). Commit `75836ae`. FallbackImagen/ParaQuien rescatados verbatim (`0f92c94`/`6b831d9`), props coinciden sin adaptación, build OK.
 - [x] **Task 7** — Helpers de formato (TDD) + `TarjetaProducto`. Commit `f19b30b`. Suite `src/lib/productos.test.ts` 21/21, build OK. Añadido `BotonPrecio` genérico para resolver dependencia de `TarjetaProducto`. `buildAmazonHref` solo genera URL Amazon con ASIN verificado; `amazon.buscar` no produce `/s?k=` público por regla Amazon vigente. Calidad ✅ tras corregir URLs `/guias/` en índice, `formatoSpec(null, 'bool') => n/d` y label accesible de comparar.
+- [x] **Task 8** — `CatalogoProductos` (filtros + orden + comparar). Commit `f6023b6`. Spec ✅. Calidad ✅ tras ajustar barra de comparar sobre bottom nav móvil y merge robusto de `localStorage` para múltiples instancias del mismo tipo. Build OK; `public/_headers` sin cambios.
 
 ## Pendiente
 
-- [ ] Task 8 — CatalogoProductos (filtros + orden + comparar).
 - [ ] Task 9 — FichaProducto + rutas catálogo (hub, tipo, ficha + Review schema).
 - [ ] Task 10 — Comparador interactivo `/comparar/[tipo]/` (noindex).
 - [ ] Task 11 — Páginas "vs" estáticas `/comparar/[tipo]/[par]`.
