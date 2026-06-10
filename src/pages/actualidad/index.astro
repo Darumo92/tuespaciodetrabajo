@@ -1,0 +1,246 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const todos = await getCollection('articulos');
+const ordenados = [...todos].sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
+
+const TABS = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'noticia', label: 'Noticias' },
+  { id: 'comparativa', label: 'Comparativas' },
+  { id: 'informativo', label: 'Guías' },
+];
+
+const tipoLabels: Record<string, string> = {
+  noticia: 'Noticia',
+  comparativa: 'Comparativa',
+  informativo: 'Guía',
+};
+
+function getArticleUrl(articulo: (typeof ordenados)[number]) {
+  if (articulo.data.tipo === 'informativo') {
+    return `/guias/${articulo.slug}/`;
+  }
+
+  return `/${articulo.data.categoria}/${articulo.slug}/`;
+}
+
+function formatDate(fecha: Date) {
+  return fecha.toLocaleDateString('es-ES', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
+}
+---
+
+<Base
+  title="Actualidad y guías de home office | Tu Espacio de Trabajo"
+  description="Noticias, guías y análisis de equipamiento para teletrabajo: novedades, comparativas y consejos."
+>
+  <div class="container section actualidad-page">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="/">Inicio</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>Actualidad</span>
+    </nav>
+
+    <header class="actualidad-header">
+      <span class="section-eyebrow">Actualidad</span>
+      <h1>Actualidad y guías de home office</h1>
+      <p>Noticias, comparativas y consejos prácticos para mejorar tu equipo y tu espacio de teletrabajo.</p>
+    </header>
+
+    <div class="actualidad-tabs" id="actualidad-tabs" role="group" aria-label="Filtrar artículos por tipo">
+      {TABS.map((tab) => (
+        <button
+          class="actualidad-tab"
+          type="button"
+          data-tab={tab.id}
+          aria-pressed={tab.id === 'todos' ? 'true' : 'false'}
+        >
+          {tab.label}
+        </button>
+      ))}
+    </div>
+
+    <p class="actualidad-count" id="actualidad-count" aria-live="polite"></p>
+
+    <ol class="actualidad-list" id="actualidad-list">
+      {ordenados.map((articulo) => (
+        <li class="actualidad-item" data-tipo={articulo.data.tipo}>
+          <a href={getArticleUrl(articulo)}>
+            <span class="actualidad-meta">
+              <span>{tipoLabels[articulo.data.tipo] ?? articulo.data.tipo}</span>
+              <time datetime={articulo.data.fecha.toISOString().split('T')[0]}>{formatDate(articulo.data.fecha)}</time>
+            </span>
+            <span class="actualidad-title">{articulo.data.titulo}</span>
+            <span class="actualidad-excerpt">{articulo.data.descripcion}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </div>
+</Base>
+
+<script>
+  const tabs = document.getElementById('actualidad-tabs');
+  const items = Array.from(document.querySelectorAll<HTMLElement>('#actualidad-list .actualidad-item'));
+  const count = document.getElementById('actualidad-count');
+
+  function updateCount(visible: number) {
+    if (!count) return;
+    count.textContent = `Mostrando ${visible} de ${items.length} artículos`;
+  }
+
+  tabs?.addEventListener('click', (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('.actualidad-tab');
+    if (!button) return;
+
+    const activeTab = button.dataset.tab || 'todos';
+    tabs.querySelectorAll('.actualidad-tab').forEach((tab) => {
+      tab.setAttribute('aria-pressed', tab === button ? 'true' : 'false');
+    });
+
+    let visible = 0;
+    items.forEach((item) => {
+      const matches = activeTab === 'todos' || item.dataset.tipo === activeTab;
+      item.hidden = !matches;
+      if (matches) visible++;
+    });
+
+    updateCount(visible);
+  });
+
+  updateCount(items.length);
+</script>
+
+<style>
+  .actualidad-page {
+    max-width: 880px;
+  }
+
+  .actualidad-header {
+    margin: 1.5rem 0 2rem;
+  }
+
+  .actualidad-header h1 {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-bottom: 0.9rem;
+  }
+
+  .actualidad-header p {
+    max-width: 640px;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .actualidad-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .actualidad-tab {
+    min-height: 2.25rem;
+    padding: 0.45rem 0.9rem;
+    border: 1.5px solid var(--color-border);
+    border-radius: 99px;
+    background: var(--color-bg);
+    color: var(--color-text-muted);
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .actualidad-tab:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .actualidad-tab[aria-pressed="true"] {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: white;
+  }
+
+  .actualidad-count {
+    margin: 0 0 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .actualidad-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .actualidad-item a {
+    display: grid;
+    gap: 0.45rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--color-border);
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .actualidad-item a:hover .actualidad-title {
+    color: var(--color-primary);
+  }
+
+  .actualidad-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .actualidad-meta span::after {
+    content: "/";
+    margin-left: 0.45rem;
+    color: var(--color-border-dark);
+  }
+
+  .actualidad-title {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+    transition: color 0.2s;
+  }
+
+  .actualidad-excerpt {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .actualidad-page {
+      padding-block: 2.5rem;
+    }
+
+    .actualidad-header h1 {
+      font-size: 2rem;
+    }
+
+    .actualidad-item a {
+      padding: 1rem 0;
+    }
+  }
+</style>

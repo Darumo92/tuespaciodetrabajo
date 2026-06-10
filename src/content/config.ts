@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 
 const CATEGORIAS = ['sillas', 'escritorios', 'accesorios', 'ambiente', 'audio-video', 'guias'] as const;
-const TIPOS = ['comparativa', 'informativo'] as const;
+const TIPOS = ['comparativa', 'informativo', 'noticia'] as const;
 
 const articulos = defineCollection({
   type: 'content',
