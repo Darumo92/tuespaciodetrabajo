@@ -60,7 +60,7 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
                 href={link.href}
                 class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
                 style={`--item-color: var(--color-cat-${link.cat})`}
-                {...(currentPath.startsWith(link.href) ? { 'aria-current': 'page' } : {})}
+                {...(currentPath === link.href ? { 'aria-current': 'page' } : {})}
               >
                 <CategoryIcon categoria={link.cat} size={18} />
                 {link.label}
@@ -73,7 +73,7 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
                 href={link.href}
                 class={`nav-dropdown-item ${currentPath.startsWith(link.href) ? 'active' : ''}`}
                 style={`--item-color: var(--color-cat-${link.cat})`}
-                {...(currentPath.startsWith(link.href) ? { 'aria-current': 'page' } : {})}
+                {...(currentPath === link.href ? { 'aria-current': 'page' } : {})}
               >
                 <CategoryIcon categoria={link.cat} size={18} />
                 {link.label}
@@ -86,7 +86,7 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
           <a
             href={link.href}
             class={`nav-link ${currentPath.startsWith(link.href) ? 'active' : ''}`}
-            {...(currentPath.startsWith(link.href) ? { 'aria-current': 'page' } : {})}
+            {...(currentPath === link.href ? { 'aria-current': 'page' } : {})}
           >
             {link.label}
           </a>

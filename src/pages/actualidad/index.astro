@@ -65,7 +65,9 @@ function formatDate(fecha: Date) {
       ))}
     </div>
 
-    <p class="actualidad-count" id="actualidad-count" aria-live="polite"></p>
+    <p class="actualidad-count" id="actualidad-count" aria-live="polite">
+      Mostrando {ordenados.length} de {ordenados.length} artículos
+    </p>
 
     <ol class="actualidad-list" id="actualidad-list">
       {ordenados.map((articulo) => (
@@ -82,39 +84,37 @@ function formatDate(fecha: Date) {
       ))}
     </ol>
   </div>
+
+  <script>
+    const tabs = document.getElementById('actualidad-tabs');
+    const items = Array.from(document.querySelectorAll<HTMLElement>('#actualidad-list .actualidad-item'));
+    const count = document.getElementById('actualidad-count');
+
+    function updateCount(visible: number) {
+      if (!count) return;
+      count.textContent = `Mostrando ${visible} de ${items.length} artículos`;
+    }
+
+    tabs?.addEventListener('click', (event) => {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>('.actualidad-tab');
+      if (!button) return;
+
+      const activeTab = button.dataset.tab || 'todos';
+      tabs.querySelectorAll('.actualidad-tab').forEach((tab) => {
+        tab.setAttribute('aria-pressed', tab === button ? 'true' : 'false');
+      });
+
+      let visible = 0;
+      items.forEach((item) => {
+        const matches = activeTab === 'todos' || item.dataset.tipo === activeTab;
+        item.hidden = !matches;
+        if (matches) visible++;
+      });
+
+      updateCount(visible);
+    });
+  </script>
 </Base>
-
-<script>
-  const tabs = document.getElementById('actualidad-tabs');
-  const items = Array.from(document.querySelectorAll<HTMLElement>('#actualidad-list .actualidad-item'));
-  const count = document.getElementById('actualidad-count');
-
-  function updateCount(visible: number) {
-    if (!count) return;
-    count.textContent = `Mostrando ${visible} de ${items.length} artículos`;
-  }
-
-  tabs?.addEventListener('click', (event) => {
-    const button = (event.target as HTMLElement).closest<HTMLButtonElement>('.actualidad-tab');
-    if (!button) return;
-
-    const activeTab = button.dataset.tab || 'todos';
-    tabs.querySelectorAll('.actualidad-tab').forEach((tab) => {
-      tab.setAttribute('aria-pressed', tab === button ? 'true' : 'false');
-    });
-
-    let visible = 0;
-    items.forEach((item) => {
-      const matches = activeTab === 'todos' || item.dataset.tipo === activeTab;
-      item.hidden = !matches;
-      if (matches) visible++;
-    });
-
-    updateCount(visible);
-  });
-
-  updateCount(items.length);
-</script>
 
 <style>
   .actualidad-page {

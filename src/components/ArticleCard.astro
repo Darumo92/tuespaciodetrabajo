@@ -12,6 +12,9 @@ const Heading = `h${headingLevel}` as any;
 const { titulo, descripcion, categoria, fecha, actualizadoEn, imagen, tipo } = articulo.data;
 
 const esInformativo = tipo === 'informativo';
+const esNoticia = tipo === 'noticia';
+const tipoArticulo = tipo ?? 'comparativa';
+const badgeCategoria = esInformativo ? 'guias' : categoria;
 
 const categoriasInfo: Record<string, { nombre: string }> = {
   sillas: { nombre: 'Sillas' },
@@ -23,6 +26,8 @@ const categoriasInfo: Record<string, { nombre: string }> = {
 
 const info = esInformativo
   ? { nombre: 'Guías' }
+  : esNoticia
+    ? { nombre: 'Noticia' }
   : categoriasInfo[categoria];
 const url = esInformativo
   ? `/guias/${articulo.slug}/`
@@ -46,16 +51,16 @@ const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
 const esActualizado = !!actualizadoEn;
 ---
 
-<article class="article-card" data-tipo={esInformativo ? 'informativo' : 'comparativa'} style={`--card-accent: var(--color-cat-${esInformativo ? 'guias' : categoria})`}>
+<article class="article-card" data-tipo={tipoArticulo} style={`--card-accent: var(--color-cat-${badgeCategoria})`}>
   <a href={url} class="article-card-image" aria-hidden="true" tabindex="-1">
     {imagen ? (
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />
     ) : (
       <div class="article-card-image-placeholder" aria-hidden="true">
-        <CategoryIcon categoria={esInformativo ? 'guias' : categoria} size={48} />
+        <CategoryIcon categoria={badgeCategoria} size={48} />
       </div>
     )}
-    <span class={`article-card-category badge badge-${esInformativo ? 'guias' : categoria}`}>
+    <span class={`article-card-category badge badge-${badgeCategoria}`}>
       {info.nombre}
     </span>
   </a>

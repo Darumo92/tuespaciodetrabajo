@@ -48,18 +48,19 @@ const breadcrumbSchema = {
         <div class="tipo-filter" role="group" aria-label="Filtrar por tipo">
           <button class="tipo-filter-btn active" data-tipo="todos" aria-pressed="true">Todos</button>
           <button class="tipo-filter-btn" data-tipo="comparativa" aria-pressed="false">Comparativas</button>
+          <button class="tipo-filter-btn" data-tipo="noticia" aria-pressed="false">Noticias</button>
           <button class="tipo-filter-btn" data-tipo="informativo" aria-pressed="false">Guias</button>
         </div>
       </div>
       <div class="filter-group">
         <span class="filter-label">Categoria:</span>
         <div class="cat-filter" role="group" aria-label="Filtrar por categoria">
-          <button class="cat-filter-btn active" data-cat="todos">Todas</button>
-          <button class="cat-filter-btn" data-cat="sillas"><CategoryIcon categoria="sillas" size={14} /> Sillas</button>
-          <button class="cat-filter-btn" data-cat="escritorios"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</button>
-          <button class="cat-filter-btn" data-cat="accesorios"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</button>
-          <button class="cat-filter-btn" data-cat="ambiente"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</button>
-          <button class="cat-filter-btn" data-cat="audio-video"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</button>
+          <button class="cat-filter-btn active" data-cat="todos" aria-pressed="true">Todas</button>
+          <button class="cat-filter-btn" data-cat="sillas" aria-pressed="false"><CategoryIcon categoria="sillas" size={14} /> Sillas</button>
+          <button class="cat-filter-btn" data-cat="escritorios" aria-pressed="false"><CategoryIcon categoria="escritorios" size={14} /> Escritorios</button>
+          <button class="cat-filter-btn" data-cat="accesorios" aria-pressed="false"><CategoryIcon categoria="accesorios" size={14} /> Accesorios</button>
+          <button class="cat-filter-btn" data-cat="ambiente" aria-pressed="false"><CategoryIcon categoria="ambiente" size={14} /> Ambiente</button>
+          <button class="cat-filter-btn" data-cat="audio-video" aria-pressed="false"><CategoryIcon categoria="audio-video" size={14} /> Audio y Video</button>
         </div>
       </div>
       <p class="filter-count" id="filter-count"></p>
@@ -108,8 +109,12 @@ const breadcrumbSchema = {
     catBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         activeCat = (btn as HTMLElement).dataset.cat || 'todos';
-        catBtns.forEach(b => b.classList.remove('active'));
+        catBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         applyFilters();
       });
     });
@@ -117,8 +122,12 @@ const breadcrumbSchema = {
     tipoBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         activeTipo = (btn as HTMLElement).dataset.tipo || 'todos';
-        tipoBtns.forEach(b => b.classList.remove('active'));
+        tipoBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
         applyFilters();
       });
     });

@@ -32,11 +32,11 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
   - `public/_headers` revertido (postbuild CSP regen) en ambos commits.
 
 ## Pendiente
-- [ ] Task 13 — Blog actualidad `/actualidad/`.
-- [ ] Task 14 — Navegación (header, home) + redirects de rutas viejas.
-- [ ] Task 15 — Verificación final + pulido.
+- [x] **Task 13** — Blog actualidad `/actualidad/`. Commit `518b007`. Spec ✅. Calidad: issue crítico real corregido en pulido final (script de `/actualidad/` estaba fuera de `<Base>` y podía emitirse tras `</html>`); se movió dentro del layout y se renderiza contador inicial en servidor. También se preserva `noticia` como tipo propio en `ArticleCard` y `/articulos/` para evitar clasificar noticias como comparativas.
+- [x] **Task 14** — Navegación (header, home) + redirects de rutas viejas. Commit `660257b`. Spec ✅. Calidad: redirects dinámicos movidos a `public/_redirects` como 301 Cloudflare edge y eliminado bloque `redirects` de Astro para no generar meta-refresh legacy en static build. Se eliminó `SearchAction` duplicado en home porque `Base.astro` ya lo emite globalmente. `aria-current="page"` queda solo para coincidencias exactas.
+- [x] **Task 15** — Verificación final + pulido. Ajustes visuales finales: contraste del veredicto de ficha en dark mode; celdas ganadoras y badges `mejor` en comparador interactivo y páginas `vs`; CSS dinámico del comparador pasado a `:global(...)` porque se renderiza con `innerHTML`. Verificación final: `npx vitest run` 21/21, `npm run build` OK (88 páginas), 19 fichas, 16 páginas vs, `FAQPage=0`, `HowTo=0`, `Review=19`, `noindex=2` en `/comparar/silla/` + `/buscar/`, `noindex=0` en página `vs`, capturas Chromium desktop/mobile revisadas.
 
-> **Checkpoint sesión 2026-06-10 (Opus 4.8, subagent-driven).** Tasks 9-12 completadas hoy (12 de 15 = 80%). Working tree LIMPIO, todo commiteado. Parado a petición del usuario tras Task 12 para decidir si continúa en esta sesión u otra (otro PC). **Para retomar en otro PC: push de la rama primero** (`git push -u origin feat/catalogo-multicategoria`) — aún NO empujada. Reanudar desde Task 13 (plan líneas 1677+).
+> **Checkpoint sesión 2026-06-10 (subagent-driven).** Tasks 13-15 completadas hoy (15 de 15 = 100%). Rama `feat/catalogo-multicategoria` queda lista para push/review. **Para subir:** `git push -u origin feat/catalogo-multicategoria`.
 
 ## Notas para continuar
 

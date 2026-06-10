@@ -11,7 +11,13 @@
 /tags/* /  301
 
 # Catálogo de sillas legacy → catálogo multicategoría
+/sillas/catalogo /catalogo/silla/ 301
+/sillas/catalogo/ /catalogo/silla/ 301
 /sillas/catalogo/* /catalogo/silla/:splat 301
+/sillas/comparar /comparar/silla/ 301
+/sillas/comparar/ /comparar/silla/ 301
+/sillas/selector /catalogo/silla/ 301
+/sillas/selector/ /catalogo/silla/ 301
 
 # Trailing slash: URLs sin slash rastreadas por GSC → canónicas con slash
 /accesorios/mejor-raton-vertical-ergonomico /accesorios/mejor-raton-vertical-ergonomico/ 301

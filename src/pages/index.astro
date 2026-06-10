@@ -77,17 +77,6 @@ const itemListSchema = {
   })),
 };
 
-const websiteSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  url: `${siteUrl}/`,
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: `${siteUrl}/buscar/?q={search_term_string}`,
-    'query-input': 'required name=search_term_string',
-  },
-};
-
 const catColors: Record<string, string> = {
   sillas: '#2563eb',
   escritorios: '#f59e0b',
@@ -137,7 +126,6 @@ const categorias = [
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
-  <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} slot="head" />
   <!-- Hero -->
   <section class="hero">
     <div class="container">
