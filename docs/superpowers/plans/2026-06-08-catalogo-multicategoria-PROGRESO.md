@@ -22,8 +22,9 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 
 - [x] **Task 10** — Comparador interactivo `/comparar/[tipo]/` (noindex). Commit `0e963fd`. **FIX crítico aplicado:** plan importaba `buildAmazonHref` de `@/lib/sillas` (no existe en esta rama ni en `main`) → corregido a `@/lib/productos`. `grep -rn lib/sillas src/` vacío. Base.astro YA soportaba prop `noindex` (emite `<meta name=robots content="noindex, follow, ...">`) → sin tocar Base. Build OK 71 pp, `/comparar/silla/` con noindex. Spec ✅. Calidad ✅ (Approved; minors: doble `buildAmazonHref`, rama ENUM inalcanzable en comparador, `td` en thead sin `th scope` — todo heredado del plan, sin exploit XSS: slugs validados contra lista + `esc()` en todos los sinks). `public/_headers` revertido (postbuild CSP regen no determinista, no causado por comparador → script bundleado externo).
 
+- [x] **Task 11** — Páginas "vs" estáticas `/comparar/[tipo]/[par]` (indexables, pares curados). Commit `bcd9ef9`. **Adaptación:** `const MAX_PARES = 16` movido de scope módulo → dentro de `getStaticPaths` (Astro aísla el scope; build fallaba `MAX_PARES is not defined`). Behavior-preserving. Build OK 87 pp, 16 páginas vs `silla/*-vs-*`, noindex=0 (sí indexan). Spec ✅. Calidad ✅ (Approved; `set:html` seguro: campos de `comparador` numéricos/null editoriales, nunca string crudo → sin XSS; minors: rama ENUM dead, `paths: any[]`/cast/`cfg!` patrón estándar). `public/_headers` revertido (postbuild CSP regen, restaurado a `5a94b33`, sin pérdida; security-warning del subagente verificado falso-positivo: working tree limpio, `_headers`==HEAD).
+
 ## Pendiente
-- [ ] Task 11 — Páginas "vs" estáticas `/comparar/[tipo]/[par]`.
 - [ ] Task 12 — Buscador global `/buscar/` + índice JSON + SearchAction.
 - [ ] Task 13 — Blog actualidad `/actualidad/`.
 - [ ] Task 14 — Navegación (header, home) + redirects.
