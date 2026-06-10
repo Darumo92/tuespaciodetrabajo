@@ -39,6 +39,11 @@ const dateMap = buildDateMap();
 export default defineConfig({
   site: 'https://tuespaciodetrabajo.com',
   trailingSlash: 'always',
+  redirects: {
+    '/sillas/catalogo': '/catalogo/silla',
+    '/sillas/comparar': '/comparar/silla',
+    '/sillas/selector': '/catalogo/silla',
+  },
   integrations: [
     mdx(),
     sitemap({

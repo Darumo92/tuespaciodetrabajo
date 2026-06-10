@@ -17,6 +17,12 @@ const infoLinks = [
   { href: '/articulos/', label: 'Todos los artículos', cat: 'articulos' },
 ];
 
+const utilityLinks = [
+  { href: '/catalogo/', label: 'Catálogo' },
+  { href: '/buscar/', label: 'Buscar' },
+  { href: '/actualidad/', label: 'Actualidad' },
+];
+
 const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPath.startsWith(l.href));
 ---
 
@@ -76,14 +82,15 @@ const isSectionActive = [...comparativaLinks, ...infoLinks].some(l => currentPat
           </div>
         </div>
 
-        <a
-          href="/buscar/"
-          class={`nav-link nav-search ${currentPath === '/buscar/' ? 'active' : ''}`}
-          aria-label="Buscar artículos"
-          title="Buscar"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </a>
+        {utilityLinks.map(link => (
+          <a
+            href={link.href}
+            class={`nav-link ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+            {...(currentPath.startsWith(link.href) ? { 'aria-current': 'page' } : {})}
+          >
+            {link.label}
+          </a>
+        ))}
         <button
           class="theme-toggle"
           id="theme-toggle"
