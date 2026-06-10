@@ -201,7 +201,17 @@ const breadcrumbSchema = {
     contenido: string;
   }
 
+  interface Producto {
+    entidad: string;
+    slug: string;
+    titulo: string;
+    sub: string;
+    tipo: string;
+    url: string;
+  }
+
   let allArticles: Article[] = [];
+  let allProductos: Producto[] = [];
 
   const input = document.getElementById('search-input') as HTMLInputElement;
   const meta = document.getElementById('search-meta')!;
@@ -290,6 +300,25 @@ const breadcrumbSchema = {
     `;
   }
 
+  function renderProductoCard(p: Producto, query: string): string {
+    const tituloHtml = highlight(p.titulo, query);
+    const subHtml = highlight(p.sub, query);
+    return `
+      <article class="article-card">
+        <div class="article-card-body">
+          <div class="article-card-badges">
+            <span class="article-card-category badge badge-sillas">Producto</span>
+          </div>
+          <a href="${p.url}"><h3 class="article-card-title">${tituloHtml}</h3></a>
+          <p class="article-card-excerpt">${subHtml}</p>
+          <div class="article-card-meta">
+            <a href="${p.url}" class="article-card-link">Ver ficha →</a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
   function search(query: string) {
     const q = query.trim();
 
@@ -317,24 +346,40 @@ const breadcrumbSchema = {
       return aT - bT;
     });
 
+    const productResults = allProductos.filter(p =>
+      normalize(`${p.titulo} ${p.sub}`).includes(normQ)
+    );
+
+    const total = results.length + productResults.length;
+
     loadingState.style.display = 'none';
     emptyState.classList.add('search-state--hidden');
 
-    if (results.length === 0) {
+    if (total === 0) {
       noResultsState.classList.remove('search-state--hidden');
       resultsGrid.classList.add('search-results--hidden');
       meta.classList.add('search-meta--hidden');
     } else {
       noResultsState.classList.add('search-state--hidden');
-      resultsGrid.innerHTML = results.map(a => renderCard(a, q)).join('');
+      resultsGrid.innerHTML =
+        productResults.map(p => renderProductoCard(p, q)).join('') +
+        results.map(a => renderCard(a, q)).join('');
       resultsGrid.classList.remove('search-results--hidden');
-      meta.textContent = `${results.length} ${results.length === 1 ? 'resultado' : 'resultados'} para "${q}"`;
+      meta.textContent = `${total} ${total === 1 ? 'resultado' : 'resultados'} para "${q}"`;
       meta.classList.remove('search-meta--hidden');
     }
   }
 
   const urlQuery = new URLSearchParams(window.location.search).get('q');
   if (urlQuery) input.value = urlQuery;
+
+  fetch('/buscar-indice.json')
+    .then(r => r.json())
+    .then((data: Producto[]) => {
+      allProductos = data.filter(e => e.entidad === 'producto');
+      if (input.value.trim()) search(input.value);
+    })
+    .catch(() => { /* productos opcionales: no bloquear la búsqueda de artículos */ });
 
   fetch('/buscar.json')
     .then(r => r.json())
