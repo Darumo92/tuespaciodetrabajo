@@ -20,9 +20,9 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 
 - [x] **Task 9** — `FichaProducto` + rutas catálogo (hub `/catalogo/`, `/catalogo/[tipo]/`, ficha `/catalogo/[tipo]/[slug]` + Product/Review/BreadcrumbList JSON-LD). Commit `95871f5`. Verbatim del plan, 0 adaptaciones (Base.astro tiene `slot name="head"`). Build OK 70 pp, 19 fichas con Review schema, 0 FAQPage/HowTo. Spec ✅. Calidad ✅ (Approved; minors heredados del plan: `siteUrl` y regex slug duplicados, `as unknown as Producto[]` cast — no bloqueantes). `public/_headers` revertido (postbuild regen CSP) → fuera del commit; JSON-LD es `application/ld+json`, no lo gobierna `script-src`.
 
-## Pendiente
+- [x] **Task 10** — Comparador interactivo `/comparar/[tipo]/` (noindex). Commit `0e963fd`. **FIX crítico aplicado:** plan importaba `buildAmazonHref` de `@/lib/sillas` (no existe en esta rama ni en `main`) → corregido a `@/lib/productos`. `grep -rn lib/sillas src/` vacío. Base.astro YA soportaba prop `noindex` (emite `<meta name=robots content="noindex, follow, ...">`) → sin tocar Base. Build OK 71 pp, `/comparar/silla/` con noindex. Spec ✅. Calidad ✅ (Approved; minors: doble `buildAmazonHref`, rama ENUM inalcanzable en comparador, `td` en thead sin `th scope` — todo heredado del plan, sin exploit XSS: slugs validados contra lista + `esc()` en todos los sinks). `public/_headers` revertido (postbuild CSP regen no determinista, no causado por comparador → script bundleado externo).
 
-- [ ] Task 10 — Comparador interactivo `/comparar/[tipo]/` (noindex).
+## Pendiente
 - [ ] Task 11 — Páginas "vs" estáticas `/comparar/[tipo]/[par]`.
 - [ ] Task 12 — Buscador global `/buscar/` + índice JSON + SearchAction.
 - [ ] Task 13 — Blog actualidad `/actualidad/`.
