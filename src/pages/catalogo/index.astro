@@ -1,0 +1,36 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { TIPOS, TIPOS_CON_DATOS } from '@/lib/tipos';
+
+const productos = await getCollection('productos');
+const conteo = (tipo: string) => productos.filter((p) => p.data.tipo === tipo).length;
+const tarjetas = TIPOS_CON_DATOS.map((slug) => ({ cfg: TIPOS[slug], n: conteo(slug) }));
+const titulo = 'Catálogo de equipamiento para home office | Tu Espacio de Trabajo';
+const descripcion = 'Base de datos comparativa de equipamiento de home office: sillas ergonómicas y más, con specs verificadas, valoración por ejes y comparador.';
+---
+<Base title={titulo} description={descripcion}>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <span>Catálogo</span></nav>
+    <h1>Catálogo</h1>
+    <p class="cat-sub">Specs verificadas, valoración por ejes y comparador. Elige una categoría.</p>
+    <div class="cat-hub">
+      {tarjetas.map(({ cfg, n }) => (
+        <a class="cat-hub-card" href={`/catalogo/${cfg.slug}/`}>
+          <span class="cat-hub-ico" aria-hidden="true">{cfg.icono}</span>
+          <span class="cat-hub-tit">{cfg.labelPlural}</span>
+          <span class="cat-hub-n">{n} productos</span>
+        </a>
+      ))}
+    </div>
+  </main>
+</Base>
+<style>
+  .cat-sub { color: var(--color-text-muted); margin-bottom: 2rem; }
+  .cat-hub { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .cat-hub-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1.5rem; border: 1px solid var(--color-border); border-radius: var(--radius-lg); text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  .cat-hub-card:hover { border-color: var(--color-primary); transform: translateY(-2px); }
+  .cat-hub-ico { font-size: 2rem; }
+  .cat-hub-tit { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+  .cat-hub-n { color: var(--color-text-muted); font-size: 0.85rem; }
+</style>

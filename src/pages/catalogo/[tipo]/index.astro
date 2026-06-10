@@ -1,0 +1,29 @@
+---
+import Base from '@/layouts/Base.astro';
+import CatalogoProductos from '@/components/producto/CatalogoProductos.astro';
+import { getCollection } from 'astro:content';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
+import type { Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  return TIPOS_CON_DATOS.map((tipo) => ({ params: { tipo } }));
+}
+const { tipo } = Astro.params;
+const cfg = getTipoConfig(tipo as string)!;
+const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const itemList = {
+  '@context': 'https://schema.org', '@type': 'ItemList', name: `${cfg.labelPlural} para home office`,
+  numberOfItems: productos.length,
+  itemListElement: productos.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${siteUrl}/catalogo/${tipo}/${p.slug}/`, name: p.nombre })),
+};
+---
+<Base title={`${cfg.labelPlural} para home office | Catálogo`} description={`Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <a href="/catalogo/">Catálogo</a> › <span>{cfg.labelPlural}</span></nav>
+    <h1>{cfg.labelPlural}</h1>
+    <CatalogoProductos productos={productos} tipo={tipo as string} />
+  </main>
+</Base>

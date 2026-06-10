@@ -1,0 +1,79 @@
+---
+import BotonPrecio from '../BotonPrecio.astro';
+import ImagenProducto from './ImagenProducto.astro';
+import ValoracionEjes from './ValoracionEjes.astro';
+import ParaQuien from './ParaQuien.astro';
+import { notaGlobal, tramoTexto, formatoSpec, etiquetaEnum, getCampo, type Producto } from '@/lib/productos';
+import { getTipoConfig } from '@/lib/tipos';
+interface Props { producto: Producto; }
+const { producto: p } = Astro.props;
+const cfg = getTipoConfig(p.tipo);
+const global = notaGlobal(p);
+const ENUM_CAMPOS = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
+function render(campo: string, formato?: string): string {
+  const v = getCampo(p, campo);
+  if (ENUM_CAMPOS.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
+  return formatoSpec(v, formato);
+}
+const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
+  titulo: g.titulo,
+  filas: g.filas.map((f) => ({ etiqueta: f.etiqueta, valor: render(f.campo, f.formato) })),
+}));
+---
+<article class="ficha">
+  <header class="ficha-header">
+    <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={200} />
+    <div>
+      <p class="ficha-marca">{p.marca}</p>
+      <h1 class="ficha-nombre">{p.nombre}</h1>
+      <p class="ficha-precio">{tramoTexto(p.tramoPrecio)}{global != null && <span class="ficha-nota">★ {global.toFixed(1)}/10</span>}</p>
+      {p.idealPara && <p class="ficha-ideal">Ideal para: {p.idealPara}</p>}
+      <BotonPrecio amazon={p.amazon} webOficial={p.webOficial} nombre={p.nombre} />
+    </div>
+  </header>
+
+  <ValoracionEjes producto={p} />
+
+  {p.veredicto && <div class="ficha-veredicto"><strong>Veredicto.</strong> {p.veredicto}</div>}
+
+  <h2>Ficha técnica</h2>
+  {grupos.map((g) => (
+    <div class="ficha-grupo">
+      <h3>{g.titulo}</h3>
+      <table class="ficha-specs"><tbody>
+        {g.filas.map((f) => (
+          <tr><th scope="row">{f.etiqueta}</th><td class={f.valor === 'n/d' ? 'ficha-nd' : ''}>{f.valor}</td></tr>
+        ))}
+      </tbody></table>
+    </div>
+  ))}
+
+  {p.comunidad && (<><h2>Qué dice la comunidad</h2><p class="ficha-comunidad">{p.comunidad}</p></>)}
+
+  <ParaQuien si={p.paraQuienSi ?? []} no={p.paraQuienNo ?? []} />
+
+  {p.puntosFuertes.length > 0 && (<><h2>Lo que destaca</h2><ul>{p.puntosFuertes.map((x) => <li>{x}</li>)}</ul></>)}
+  {p.puntosDebiles.length > 0 && (<><h2>Lo que no convence</h2><ul>{p.puntosDebiles.map((x) => <li>{x}</li>)}</ul></>)}
+
+  <p class="ficha-fuente">
+    Datos: {p.fuenteSpecs}{p.verificadoEn ? ` · verificado el ${p.verificadoEn}` : ''}.
+    Las valoraciones por ejes son editoriales (specs + consenso de la comunidad). "n/d" = sin dato verificado; verifica la ficha del fabricante antes de comprar.
+  </p>
+</article>
+<style>
+  .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.5rem; }
+  .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--color-text-muted); margin: 0; }
+  .ficha-nombre { font-family: var(--font-display); margin: 0.2rem 0 0.5rem; }
+  .ficha-precio { font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; color: var(--color-secondary); }
+  .ficha-nota { color: var(--color-secondary); font-size: 0.9rem; }
+  .ficha-ideal { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 1rem; }
+  .ficha-veredicto { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: var(--radius-md); padding: 0.9rem 1.1rem; font-size: 0.95rem; margin: 0 0 2rem; }
+  .ficha-grupo { margin-bottom: 1.5rem; }
+  .ficha-grupo h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
+  .ficha-specs { width: 100%; border-collapse: collapse; }
+  .ficha-specs th, .ficha-specs td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--color-border); }
+  .ficha-specs th { width: 50%; color: var(--color-text-muted); font-weight: 600; }
+  .ficha-nd { color: var(--color-text-muted); font-style: italic; }
+  .ficha-comunidad { background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 1rem 1.1rem; font-size: 0.92rem; }
+  .ficha-fuente { font-size: 0.8rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 2rem; }
+</style>
