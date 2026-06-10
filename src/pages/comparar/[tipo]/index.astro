@@ -1,0 +1,22 @@
+---
+import Base from '@/layouts/Base.astro';
+import ComparadorProductos from '@/components/producto/ComparadorProductos.astro';
+import { getCollection } from 'astro:content';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
+import type { Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  return TIPOS_CON_DATOS.map((tipo) => ({ params: { tipo } }));
+}
+const { tipo } = Astro.params;
+const cfg = getTipoConfig(tipo as string)!;
+const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+---
+<Base title={`Comparador de ${cfg.labelPlural.toLowerCase()} | Tu Espacio de Trabajo`} description={`Compara ${cfg.labelPlural.toLowerCase()} lado a lado: valoración por ejes, precio y specs, resaltando la mejor de cada criterio.`} noindex={true}>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href="/catalogo/">Catálogo</a> › <a href={`/catalogo/${tipo}/`}>{cfg.labelPlural}</a> › <span>Comparar</span></nav>
+    <h1>Comparativa de {cfg.labelPlural.toLowerCase()}</h1>
+    <ComparadorProductos productos={productos} tipo={tipo as string} />
+  </main>
+</Base>

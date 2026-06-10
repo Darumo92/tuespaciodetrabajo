@@ -1,0 +1,85 @@
+---
+import { getTipoConfig } from '@/lib/tipos';
+import type { Producto } from '@/lib/productos';
+interface Props { productos: Producto[]; tipo: string; }
+const { productos, tipo } = Astro.props;
+const cfg = getTipoConfig(tipo)!;
+const datos = JSON.stringify({ productos, comparador: cfg.comparador });
+---
+<section class="cmp" data-json={datos} data-tipo={tipo}>
+  <div id="cmp-out"></div>
+  <p id="cmp-empty" class="cmp-empty" hidden>Elige entre 2 y 4 en el <a href={`/catalogo/${tipo}/`}>catálogo</a> (casillas "comparar") y vuelve aquí.</p>
+</section>
+<style>
+  .cmp-empty { color: var(--color-text-muted); }
+  .cmp-scroll { overflow-x: auto; }
+  .cmp-table { border-collapse: collapse; width: 100%; min-width: 640px; }
+  .cmp-table td, .cmp-table th { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--color-border); text-align: left; font-size: 0.86rem; vertical-align: middle; }
+  .cmp-attr { color: var(--color-text-muted); font-weight: 600; font-size: 0.8rem; position: sticky; left: 0; background: var(--color-bg); width: 180px; }
+  .cmp-grp td { background: var(--color-bg-muted); font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .cmp-name { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
+  .cmp-name a { color: inherit; text-decoration: none; }
+  .cmp-global { font-family: var(--font-display); font-weight: 700; margin-top: 0.2rem; }
+  .cmp-global small { font-size: 0.6rem; color: var(--color-text-muted); font-weight: 500; }
+  .cmp-rm { font-size: 0.7rem; color: var(--color-text-muted); border: 1px solid var(--color-border); border-radius: 6px; padding: 0.1rem 0.4rem; background: none; cursor: pointer; margin-top: 0.3rem; }
+  .cmp-win { background: #ecfdf5; box-shadow: inset 3px 0 0 #16a34a; }
+  .cmp-wtag { font-size: 0.58rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-left: 0.3rem; }
+  .cmp-nd { color: var(--color-text-muted); font-style: italic; }
+  .cmp-cta { display: inline-block; background: var(--color-primary); color: #fff; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.9rem; border-radius: 8px; text-decoration: none; }
+  .cmp-legend { font-size: 0.76rem; color: var(--color-text-muted); margin-top: 0.8rem; }
+</style>
+<script>
+  import { ganadoresPorValor, notaGlobal, formatoSpec, etiquetaEnum, tramoTexto, getCampo, buildAmazonHref, type Producto } from '@/lib/productos';
+
+  const root = document.querySelector('.cmp') as HTMLElement | null;
+  if (root) {
+    const { productos, comparador } = JSON.parse(root.dataset.json || '{"productos":[],"comparador":[]}') as {
+      productos: Producto[]; comparador: { campo: string; etiqueta: string; direccion?: 'mayor' | 'menor'; grupo: string }[];
+    };
+    const tipo = root.dataset.tipo || '';
+    const out = root.querySelector('#cmp-out') as HTMLElement;
+    const empty = root.querySelector('#cmp-empty') as HTMLElement;
+    const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
+    const ENUM = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
+
+    const slugs = (new URLSearchParams(location.search).get('s') || '').split(',').map((x) => x.trim()).filter(Boolean).slice(0, 4);
+    const sel = slugs.map((s) => productos.find((p) => p.slug === s)).filter((p): p is Producto => p != null);
+
+    if (sel.length < 2) { empty.hidden = false; }
+    else {
+      function celda(p: Producto, campo: string): string {
+        const v = getCampo(p, campo);
+        if (campo === 'tramoPrecio') return tramoTexto(Number(v));
+        if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
+        if (campo.startsWith('valoraciones.')) return v == null ? '<span class="cmp-nd">sin valorar</span>' : `<b>${Number(v).toFixed(1)}</b>`;
+        const fmt = campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
+        return v == null ? '<span class="cmp-nd">n/d</span>' : formatoSpec(v, fmt);
+      }
+      const head = sel.map((p) => {
+        const g = notaGlobal(p);
+        const href = buildAmazonHref(p.amazon) || p.webOficial || '';
+        const cta = href ? `<a class="cmp-cta" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener noreferrer">${buildAmazonHref(p.amazon) ? 'Ver precio' : 'Web oficial'}</a><br>` : '';
+        return `<td><div class="cmp-name"><a href="/catalogo/${tipo}/${esc(p.slug)}/">${esc(p.nombre)}</a></div>${g != null ? `<div class="cmp-global">${g.toFixed(1)}<small>/10</small></div>` : ''}${cta}<button class="cmp-rm" data-slug="${esc(p.slug)}">✕ quitar</button></td>`;
+      }).join('');
+
+      let lastGrupo = '';
+      const body = comparador.map((fila) => {
+        let pre = '';
+        if (fila.grupo !== lastGrupo) { lastGrupo = fila.grupo; pre = `<tr class="cmp-grp"><td class="cmp-attr">${esc(fila.grupo)}</td>${sel.map(() => '<td></td>').join('')}</tr>`; }
+        const gan = fila.direccion ? ganadoresPorValor(sel.map((p) => ({ slug: p.slug, valor: (getCampo(p, fila.campo) as number | null) })), fila.direccion) : [];
+        const cells = sel.map((p) => {
+          const win = gan.includes(p.slug);
+          return `<td class="${win ? 'cmp-win' : ''}">${celda(p, fila.campo)}${win ? '<span class="cmp-wtag">mejor</span>' : ''}</td>`;
+        }).join('');
+        return `${pre}<tr><td class="cmp-attr">${esc(fila.etiqueta)}</td>${cells}</tr>`;
+      }).join('');
+
+      out.innerHTML = `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><td class="cmp-attr"></td>${head}</tr></thead><tbody>${body}</tbody></table></div><p class="cmp-legend">Celda resaltada = mejor valor de la fila. "n/d"/"sin valorar" no gana. Valoraciones por ejes editoriales.</p>`;
+      out.querySelectorAll('.cmp-rm').forEach((b) => b.addEventListener('click', () => {
+        const slug = (b as HTMLElement).dataset.slug;
+        const rest = sel.filter((p) => p.slug !== slug).map((p) => p.slug);
+        location.search = rest.length ? `?s=${rest.join(',')}` : '';
+      }));
+    }
+  }
+</script>
