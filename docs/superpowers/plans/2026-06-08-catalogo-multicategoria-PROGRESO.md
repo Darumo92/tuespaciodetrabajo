@@ -18,9 +18,10 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 - [x] **Task 7** — Helpers de formato (TDD) + `TarjetaProducto`. Commit `f19b30b`. Suite `src/lib/productos.test.ts` 21/21, build OK. Añadido `BotonPrecio` genérico para resolver dependencia de `TarjetaProducto`. `buildAmazonHref` solo genera URL Amazon con ASIN verificado; `amazon.buscar` no produce `/s?k=` público por regla Amazon vigente. Calidad ✅ tras corregir URLs `/guias/` en índice, `formatoSpec(null, 'bool') => n/d` y label accesible de comparar.
 - [x] **Task 8** — `CatalogoProductos` (filtros + orden + comparar). Commit `f6023b6`. Spec ✅. Calidad ✅ tras ajustar barra de comparar sobre bottom nav móvil y merge robusto de `localStorage` para múltiples instancias del mismo tipo. Build OK; `public/_headers` sin cambios.
 
+- [x] **Task 9** — `FichaProducto` + rutas catálogo (hub `/catalogo/`, `/catalogo/[tipo]/`, ficha `/catalogo/[tipo]/[slug]` + Product/Review/BreadcrumbList JSON-LD). Commit `95871f5`. Verbatim del plan, 0 adaptaciones (Base.astro tiene `slot name="head"`). Build OK 70 pp, 19 fichas con Review schema, 0 FAQPage/HowTo. Spec ✅. Calidad ✅ (Approved; minors heredados del plan: `siteUrl` y regex slug duplicados, `as unknown as Producto[]` cast — no bloqueantes). `public/_headers` revertido (postbuild regen CSP) → fuera del commit; JSON-LD es `application/ld+json`, no lo gobierna `script-src`.
+
 ## Pendiente
 
-- [ ] Task 9 — FichaProducto + rutas catálogo (hub, tipo, ficha + Review schema).
 - [ ] Task 10 — Comparador interactivo `/comparar/[tipo]/` (noindex).
 - [ ] Task 11 — Páginas "vs" estáticas `/comparar/[tipo]/[par]`.
 - [ ] Task 12 — Buscador global `/buscar/` + índice JSON + SearchAction.
