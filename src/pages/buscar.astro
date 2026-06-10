@@ -309,10 +309,10 @@ const breadcrumbSchema = {
           <div class="article-card-badges">
             <span class="article-card-category badge badge-sillas">Producto</span>
           </div>
-          <a href="${p.url}"><h3 class="article-card-title">${tituloHtml}</h3></a>
+          <a href="${escapeHtml(p.url)}"><h3 class="article-card-title">${tituloHtml}</h3></a>
           <p class="article-card-excerpt">${subHtml}</p>
           <div class="article-card-meta">
-            <a href="${p.url}" class="article-card-link">Ver ficha →</a>
+            <a href="${escapeHtml(p.url)}" class="article-card-link">Ver ficha →</a>
           </div>
         </div>
       </article>
