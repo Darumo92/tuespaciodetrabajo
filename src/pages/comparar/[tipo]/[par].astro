@@ -1,0 +1,56 @@
+---
+import Base from '@/layouts/Base.astro';
+import TablaVs from '@/components/producto/TablaVs.astro';
+import { getCollection } from 'astro:content';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
+import { seleccionarParesVs, notaGlobal, type Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  const MAX_PARES = 16;
+  const paths: any[] = [];
+  for (const tipo of TIPOS_CON_DATOS) {
+    const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+    const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+    const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
+    for (const [a, b] of seleccionarParesVs(productos, MAX_PARES)) {
+      paths.push({ params: { tipo, par: `${a}-vs-${b}` }, props: { a: porSlug[a], b: porSlug[b] } });
+    }
+  }
+  return paths;
+}
+const { tipo } = Astro.params;
+const { a, b } = Astro.props as { a: Producto; b: Producto };
+const cfg = getTipoConfig(tipo as string)!;
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const ganadora = (notaGlobal(a) ?? 0) >= (notaGlobal(b) ?? 0) ? a : b;
+const titulo = `${a.nombre} vs ${b.nombre}: comparativa y cuál elegir`;
+const desc = `Comparamos ${a.nombre} y ${b.nombre} en ergonomía, materiales, precio y garantía. Tabla lado a lado y veredicto.`;
+const breadcrumb = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
+    { '@type': 'ListItem', position: 2, name: 'Catálogo', item: `${siteUrl}/catalogo/` },
+    { '@type': 'ListItem', position: 3, name: cfg.labelPlural, item: `${siteUrl}/catalogo/${tipo}/` },
+    { '@type': 'ListItem', position: 4, name: `${a.nombre} vs ${b.nombre}`, item: `${siteUrl}/comparar/${tipo}/${a.slug}-vs-${b.slug}/` },
+  ],
+};
+---
+<Base title={`${titulo} | Tu Espacio de Trabajo`} description={desc}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href="/catalogo/">Catálogo</a> › <a href={`/catalogo/${tipo}/`}>{cfg.labelPlural}</a> › <span>{a.nombre} vs {b.nombre}</span></nav>
+    <h1>{a.nombre} vs {b.nombre}</h1>
+    <p class="vs-intro">Comparativa lado a lado de dos {cfg.labelPlural.toLowerCase()} de gama similar. La celda verde marca el mejor valor de cada fila.</p>
+    <TablaVs a={a} b={b} tipo={tipo as string} />
+    <div class="vs-veredicto">
+      <h2>¿Cuál elegir?</h2>
+      <p>Por valoración global editorial, destaca <strong>{ganadora.nombre}</strong>. {a.veredicto ? `${a.nombre}: ${a.veredicto} ` : ''}{b.veredicto ? `${b.nombre}: ${b.veredicto}` : ''}</p>
+      <p class="vs-nota-honesta">Valoraciones editoriales (specs + consenso). Verifica precio y disponibilidad antes de comprar.</p>
+    </div>
+  </main>
+</Base>
+<style>
+  .vs-intro { color: var(--color-text-muted); margin-bottom: 1.5rem; }
+  .vs-veredicto { margin-top: 2rem; background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 1.25rem; }
+  .vs-veredicto h2 { margin-top: 0; }
+  .vs-nota-honesta { font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0; }
+</style>

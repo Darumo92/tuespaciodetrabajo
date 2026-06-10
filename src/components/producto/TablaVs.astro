@@ -1,0 +1,52 @@
+---
+import { notaGlobal, tramoTexto, formatoSpec, etiquetaEnum, ganadoresPorValor, getCampo, type Producto } from '@/lib/productos';
+import { getTipoConfig } from '@/lib/tipos';
+import BotonPrecio from '../BotonPrecio.astro';
+interface Props { a: Producto; b: Producto; tipo: string; }
+const { a, b, tipo } = Astro.props;
+const cfg = getTipoConfig(tipo)!;
+const sel = [a, b];
+const ENUM = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
+function celda(p: Producto, campo: string): string {
+  const v = getCampo(p, campo);
+  if (campo === 'tramoPrecio') return tramoTexto(Number(v));
+  if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
+  if (campo.startsWith('valoraciones.')) return v == null ? 'sin valorar' : Number(v).toFixed(1);
+  const fmt = campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
+  return formatoSpec(v, fmt);
+}
+let lastGrupo = '';
+const filas = cfg.comparador.map((f) => {
+  const grupo = f.grupo !== lastGrupo ? (lastGrupo = f.grupo, f.grupo) : null;
+  const gan = f.direccion ? ganadoresPorValor(sel.map((p) => ({ slug: p.slug, valor: getCampo(p, f.campo) as number | null })), f.direccion) : [];
+  return { grupo, etiqueta: f.etiqueta, a: celda(a, f.campo), b: celda(b, f.campo), ganaA: gan.includes(a.slug), ganaB: gan.includes(b.slug) };
+});
+const notaA = notaGlobal(a), notaB = notaGlobal(b);
+---
+<div class="vs-scroll">
+  <table class="vs-table">
+    <thead><tr><td></td>
+      <th><a href={`/catalogo/${tipo}/${a.slug}/`}>{a.nombre}</a>{notaA != null && <div class="vs-nota">★ {notaA.toFixed(1)}/10</div>}<BotonPrecio amazon={a.amazon} webOficial={a.webOficial} nombre={a.nombre} /></th>
+      <th><a href={`/catalogo/${tipo}/${b.slug}/`}>{b.nombre}</a>{notaB != null && <div class="vs-nota">★ {notaB.toFixed(1)}/10</div>}<BotonPrecio amazon={b.amazon} webOficial={b.webOficial} nombre={b.nombre} /></th>
+    </tr></thead>
+    <tbody>
+      {filas.map((f) => (<>
+        {f.grupo && <tr class="vs-grp"><td>{f.grupo}</td><td></td><td></td></tr>}
+        <tr><th scope="row">{f.etiqueta}</th>
+          <td class={f.ganaA ? 'vs-win' : ''} set:html={f.a + (f.ganaA ? ' <span class="vs-wtag">mejor</span>' : '')} />
+          <td class={f.ganaB ? 'vs-win' : ''} set:html={f.b + (f.ganaB ? ' <span class="vs-wtag">mejor</span>' : '')} />
+        </tr>
+      </>))}
+    </tbody>
+  </table>
+</div>
+<style>
+  .vs-scroll { overflow-x: auto; }
+  .vs-table { border-collapse: collapse; width: 100%; min-width: 520px; }
+  .vs-table th, .vs-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--color-border); text-align: left; font-size: 0.88rem; }
+  .vs-table thead a { font-family: var(--font-display); font-weight: 700; color: inherit; text-decoration: none; }
+  .vs-nota { color: var(--color-secondary); font-size: 0.8rem; margin: 0.2rem 0; }
+  .vs-grp td { background: var(--color-bg-muted); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); font-family: var(--font-display); }
+  .vs-win { background: #ecfdf5; box-shadow: inset 3px 0 0 #16a34a; }
+  .vs-wtag { font-size: 0.58rem; font-weight: 700; color: #16a34a; text-transform: uppercase; }
+</style>
