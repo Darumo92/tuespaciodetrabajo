@@ -24,14 +24,25 @@ Modo: subagent-driven-development. Commit + revisión (spec + calidad) por task.
 
 - [x] **Task 11** — Páginas "vs" estáticas `/comparar/[tipo]/[par]` (indexables, pares curados). Commit `bcd9ef9`. **Adaptación:** `const MAX_PARES = 16` movido de scope módulo → dentro de `getStaticPaths` (Astro aísla el scope; build fallaba `MAX_PARES is not defined`). Behavior-preserving. Build OK 87 pp, 16 páginas vs `silla/*-vs-*`, noindex=0 (sí indexan). Spec ✅. Calidad ✅ (Approved; `set:html` seguro: campos de `comparador` numéricos/null editoriales, nunca string crudo → sin XSS; minors: rama ENUM dead, `paths: any[]`/cast/`cfg!` patrón estándar). `public/_headers` revertido (postbuild CSP regen, restaurado a `5a94b33`, sin pérdida; security-warning del subagente verificado falso-positivo: working tree limpio, `_headers`==HEAD).
 
+- [x] **Task 12** — Buscador global `/buscar/` + índice JSON + SearchAction. Commits `1aaa76d` + fix `e40514b`. **Desviación justificada del plan literal (verificada en spec review):**
+  - Net-new: `src/pages/buscar-indice.json.ts` — endpoint que combina productos+articulos vía `construirIndiceBusqueda`. 49 entradas (19 productos + 30 articulos), campos `{entidad, slug, titulo, sub, tipo, url}`. Productos `e.id.replace(...)`; articulos `e.slug` (legacy, igual que resto del repo) + `{titulo, categoria, tipo}` (coinciden con `ArticuloLite`).
+  - `buscar.astro` YA existía (versión rica: noindex, `?q=` deeplink, debounce, búsqueda de artículos vía `/buscar.json`). **NO se sobrescribió** → extendido sin destruir para también hacer fetch de `/buscar-indice.json` y renderizar tarjetas de producto (degradación elegante: fallo del fetch de productos no bloquea búsqueda de artículos). Sigue noindex.
+  - `index.astro` **NO tocado**: `Base.astro` (líneas ~98-116) YA emite `WebSite`+`SearchAction` global en todas las páginas (target `/buscar/?q={search_term_string}`). Añadir el nodo del plan habría duplicado el schema. `dist/index.html` tiene exactamente 1 `WebSite`.
+  - Build OK 87 pp. Spec ✅ (goal logrado, desviaciones = juicio de ingeniería, no pereza). Calidad ✅ (Approved tras fix `e40514b`: `p.url` fetcheado se interpolaba crudo en `href` de `renderProductoCard` → envuelto en `escapeHtml`. Minors diferidos: badge hardcodeado `badge-sillas`/"Producto" sin usar `tipo`; nombre de interface `Producto` en cliente debería ser `EntradaIndice`).
+  - `public/_headers` revertido (postbuild CSP regen) en ambos commits.
+
 ## Pendiente
-- [ ] Task 12 — Buscador global `/buscar/` + índice JSON + SearchAction.
 - [ ] Task 13 — Blog actualidad `/actualidad/`.
-- [ ] Task 14 — Navegación (header, home) + redirects.
+- [ ] Task 14 — Navegación (header, home) + redirects de rutas viejas.
 - [ ] Task 15 — Verificación final + pulido.
+
+> **Checkpoint sesión 2026-06-10 (Opus 4.8, subagent-driven).** Tasks 9-12 completadas hoy (12 de 15 = 80%). Working tree LIMPIO, todo commiteado. Parado a petición del usuario tras Task 12 para decidir si continúa en esta sesión u otra (otro PC). **Para retomar en otro PC: push de la rama primero** (`git push -u origin feat/catalogo-multicategoria`) — aún NO empujada. Reanudar desde Task 13 (plan líneas 1677+).
 
 ## Notas para continuar
 
-- `buildAmazonHref` ya existe en `src/lib/productos.ts` desde Task 7. Para Tasks 10-11 reutilizarlo desde `@/lib/productos`; no importar `@/lib/sillas` (no existe en `main`) y no generar URLs Amazon de búsqueda `/s?k=` sin ASIN.
+- `buildAmazonHref` ya existe en `src/lib/productos.ts` desde Task 7. Reutilizar desde `@/lib/productos`; **no importar `@/lib/sillas`** (no existe en `main` ni en esta rama — el plan lo referencia erróneamente en Task 10) y no generar URLs Amazon de búsqueda `/s?k=` sin ASIN.
+- **Patrón `public/_headers` (Tasks 9-12):** el postbuild regenera hashes CSP de forma no determinista; NO es causado por las tasks (los `<script>` son módulos externos bundleados y el JSON-LD es `application/ld+json`, no gobernado por `script-src`). Se revierte con `git checkout public/_headers` antes de cada commit para mantenerlo fuera. Subagentes pueden disparar un security-warning por esto → es falso-positivo (restaura estado commiteado, sin pérdida).
+- **Astro 5 colecciones:** productos usan `e.id` (strip extensión `.ya?ml|json`); articulos usan `e.slug` (legacy). Seguir el patrón del resto del repo.
+- `Base.astro` tiene `<slot name="head">` para inyectar JSON-LD/meta, y prop `noindex` (emite `<meta name=robots content="noindex, follow, ...">`). Ya incluye `WebSite`+`SearchAction` global.
 - Hook `gateguard-fact-force` intercepta primer Write/Bash de cada subagente y del controlador; resuelto presentando facts.
 - Rescate de artefactos rama aparcada `feat/catalogo-sillas-db`: `0f92c94:src/components/FallbackImagen.astro`, `6b831d9:src/components/ParaQuien.astro` (Task 6).
