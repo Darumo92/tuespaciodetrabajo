@@ -1397,6 +1397,10 @@ a:hover {
   box-shadow: var(--shadow-lg);
 }
 
+.footer-back-top:active {
+  transform: scale(0.95);
+}
+
 @media (max-width: 768px) {
   .footer-back-top {
     bottom: 4.5rem;
