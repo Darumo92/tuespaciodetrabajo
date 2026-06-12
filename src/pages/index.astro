@@ -220,7 +220,7 @@ const categorias = [
           <h2 class="section-title">Las comparativas más completas</h2>
           <p class="section-subtitle">Análisis a fondo de sillas, escritorios y accesorios probados para teletrabajo</p>
         </div>
-        <div class="articles-grid reveal-group">
+        <div class="articles-grid">
           {pillars.map(articulo => (
             <ArticleCard articulo={articulo} />
           ))}
@@ -270,7 +270,7 @@ const categorias = [
           <h2 class="section-title reveal">Destacados</h2>
           <p class="section-subtitle reveal">Nuestros análisis más completos y populares</p>
         </div>
-        <div class="articles-grid reveal-group">
+        <div class="articles-grid">
           {destacados.map(articulo => (
             <ArticleCard articulo={articulo} />
           ))}
@@ -288,7 +288,7 @@ const categorias = [
           <h2 class="section-title reveal">Últimos análisis</h2>
           <p class="section-subtitle reveal">Los artículos más recientes del blog</p>
         </div>
-        <div class="articles-grid reveal-group">
+        <div class="articles-grid">
           {recientesSinDuplicar.map(articulo => (
             <ArticleCard articulo={articulo} />
           ))}
