@@ -65,7 +65,7 @@
 
   /* Tinta */
   --ink: #16181a;                         /* off-black, nunca #000 */
-  --ink-muted: oklch(0.45 0.006 250);     /* >=4.5:1 sobre --bg */
+  --ink-muted: oklch(0.43 0.008 250);     /* ~5:1 sobre --bg (WCAG AA) */
   --ink-light: oklch(0.56 0.006 250);     /* solo texto grande/decorativo */
 
   /* Acento único: verde abeto */
