@@ -1,0 +1,47 @@
+/* =========================================
+   MOTION PRIMITIVES (emil-design-eng)
+   GPU-only (transform/opacity). Reduced-motion safe.
+   ========================================= */
+
+:root {
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --dur-press: 140ms;
+  --dur-hover: 180ms;
+  --dur-reveal: 500ms;
+}
+
+/* Feedback táctil universal en pressables */
+button:active,
+.boton:active,
+a.boton:active,
+[role="button"]:active {
+  transform: scale(0.97);
+}
+
+/* Reveal-on-scroll: el contenido es visible por defecto;
+   solo se anima cuando el script ha marcado [data-reveal] Y no hay reduced-motion.
+   No se gatea la visibilidad del contenido en una clase (evita páginas en blanco). */
+@media (prefers-reduced-motion: no-preference) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity var(--dur-reveal) var(--ease-out),
+                transform var(--dur-reveal) var(--ease-out);
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

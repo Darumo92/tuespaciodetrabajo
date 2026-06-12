@@ -29,18 +29,16 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" id="meta-theme-color" />
+    <meta name="theme-color" content="#fafafa" id="meta-theme-color" />
     <meta name="color-scheme" content="light dark" />
     <meta name="robots" content={robotsContent} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Preload critical font (latin covers all Spanish chars) -->
-    <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
-
-    <!-- Display font for headings (self-hosted) -->
-    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <!-- Preload fuentes críticas self-hosted (latin cubre español base) -->
+    <link rel="preload" href="/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Preconnect for resources loaded on article pages -->
     <link rel="preconnect" href="https://m.media-amazon.com" crossorigin />

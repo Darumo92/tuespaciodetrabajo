@@ -2,169 +2,220 @@
    TU ESPACIO DE TRABAJO - Global Styles
    ========================================= */
 
-/* Self-hosted Inter - latin-ext (accented chars for Spanish) */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400 800;
-  font-display: swap;
-  src: url('/fonts/inter-latin-ext.woff2') format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
+@import './motion.css';
 
-/* Self-hosted Inter - latin */
+/* Self-hosted Schibsted Grotesk (display + UI) - latin */
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Schibsted Grotesk';
   font-style: normal;
   font-weight: 400 800;
   font-display: swap;
-  src: url('/fonts/inter-latin.woff2') format('woff2');
+  src: url('/fonts/schibsted-grotesk-latin-wght-normal.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-/* Self-hosted Space Grotesk - latin-ext */
+/* Self-hosted Schibsted Grotesk - latin-ext (acentos español) */
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'Schibsted Grotesk';
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 400 800;
   font-display: swap;
-  src: url('/fonts/space-grotesk-latin-ext.woff2') format('woff2');
+  src: url('/fonts/schibsted-grotesk-latin-ext-wght-normal.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
-/* Self-hosted Space Grotesk - latin */
+/* Self-hosted Source Serif 4 (lectura larga) - latin */
 @font-face {
-  font-family: 'Space Grotesk';
+  font-family: 'Source Serif 4';
   font-style: normal;
   font-weight: 400 700;
   font-display: swap;
-  src: url('/fonts/space-grotesk-latin.woff2') format('woff2');
+  src: url('/fonts/source-serif-4-latin-wght-normal.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Self-hosted Source Serif 4 - latin-ext */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-latin-ext-wght-normal.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* Self-hosted Source Serif 4 - italic (énfasis en prosa) */
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/source-serif-4-latin-wght-italic.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 :root {
-  /* --- Colors: Light Mode --- */
-  --color-bg: #fafafa;
-  --color-bg-card: #ffffff;
-  --color-bg-muted: #f4f4f5;
-  --color-bg-subtle: #e4e4e7;
+  /* === SISTEMA EDITORIAL — light === */
 
-  --color-text: #09090b;
-  --color-text-muted: #52525b;
-  --color-text-light: #71717a;
+  /* Superficies (papel off-white croma ~0, NO cream-IA) */
+  --bg: oklch(0.985 0.002 110);          /* #fafafa neutro */
+  --surface: #ffffff;
+  --surface-muted: oklch(0.965 0.003 110);
+  --surface-subtle: oklch(0.93 0.004 110);
 
-  --color-border: #e4e4e7;
-  --color-border-dark: #d4d4d8;
+  /* Tinta */
+  --ink: #16181a;                         /* off-black, nunca #000 */
+  --ink-muted: oklch(0.45 0.006 250);     /* >=4.5:1 sobre --bg */
+  --ink-light: oklch(0.56 0.006 250);     /* solo texto grande/decorativo */
 
-  --color-primary: #2563eb;
-  --color-primary-dark: #1d4ed8;
-  --color-primary-light: #60a5fa;
+  /* Acento único: verde abeto */
+  --accent: oklch(0.38 0.07 158);         /* ~#1f4d3a */
+  --accent-hover: oklch(0.32 0.07 158);
+  --accent-ink: var(--bg);                /* texto sobre acento */
 
-  --color-secondary: #f59e0b;
-  --color-secondary-text: #92400e;
+  /* Bordes hairline */
+  --border: oklch(0.90 0.004 110);
+  --border-strong: oklch(0.84 0.005 110);
 
-  --color-accent: #06b6d4;
+  /* Sombras mínimas tintadas (no negro puro) */
+  --shadow-sm: 0 1px 2px oklch(0.38 0.02 158 / 0.06);
+  --shadow-md: 0 2px 8px oklch(0.38 0.02 158 / 0.08);
+  --shadow-lg: 0 8px 24px oklch(0.38 0.02 158 / 0.10);
+  --shadow-xl: var(--shadow-lg);
 
-  --color-rose: #f43f5e;
-  --color-rose-dark: #e11d48;
-  --color-rose-light: #fb7185;
+  /* Una escala de radio */
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-full: 999px;
 
-  /* Category colors */
-  --color-cat-sillas: #2563eb;
-  --color-cat-escritorios: #f59e0b;
-  --color-cat-accesorios: #10b981;
-  --color-cat-ambiente: #ec4899;
-  --color-cat-audio-video: #8b5cf6;
-  --color-cat-guias: #f43f5e;
-  --color-cat-herramientas: #06b6d4;
-  --color-cat-articulos: #71717a;
+  /* Tipografía */
+  --font-display: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 
-  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.1);
-
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 22px;
-  --radius-2xl: 24px;
-  --radius-full: 99px;
-
-  /* Footer (light mode) */
-  --color-footer-bg: #18181b;
-  --color-footer-text: #a1a1aa;
-  --color-footer-heading: #fafafa;
-  --color-footer-link: #d4d4d8;
-  --color-footer-border: #27272a;
-
-  --header-height: 60px;
-  --transition: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-
-  /* Glass effects */
-  --glass-bg: rgba(255, 255, 255, 0.6);
-  --glass-bg-strong: rgba(255, 255, 255, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-blur: 20px;
-
+  /* Layout */
   --container-width: 1140px;
   --container-padding: 1.5rem;
+  --header-height: 64px;
+
+  /* === ALIAS LEGACY (se eliminan en Fase 6) ===
+     Mantienen vivos los componentes aún no migrados, ya re-tintados. */
+  --color-bg: var(--bg);
+  --color-bg-card: var(--surface);
+  --color-bg-muted: var(--surface-muted);
+  --color-bg-subtle: var(--surface-subtle);
+  --color-text: var(--ink);
+  --color-text-muted: var(--ink-muted);
+  --color-text-light: var(--ink-light);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-strong);
+
+  /* Antes azul/arcoíris: ahora TODO mapea al acento o neutro */
+  --color-primary: var(--accent);
+  --color-primary-dark: var(--accent-hover);
+  --color-primary-light: var(--accent);
+  --color-secondary: var(--accent);
+  --color-secondary-text: var(--accent);
+  --color-accent: var(--accent);
+  --color-rose: var(--accent);
+  --color-rose-dark: var(--accent-hover);
+  --color-rose-light: var(--accent);
+
+  /* Categorías: fin del arcoíris, todas neutro/acento */
+  --color-cat-sillas: var(--accent);
+  --color-cat-escritorios: var(--accent);
+  --color-cat-accesorios: var(--accent);
+  --color-cat-ambiente: var(--accent);
+  --color-cat-audio-video: var(--accent);
+  --color-cat-guias: var(--accent);
+  --color-cat-herramientas: var(--accent);
+  --color-cat-articulos: var(--ink-muted);
+
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius);
+  --radius-2xl: var(--radius);
+
+  /* Glass: neutralizado a superficie sólida (se retira por componente) */
+  --glass-bg: var(--surface);
+  --glass-bg-strong: var(--surface);
+  --glass-border: var(--border);
+  --glass-blur: 0px;
+
+  --color-footer-bg: #14171a;
+  --color-footer-text: oklch(0.72 0.006 250);
+  --color-footer-heading: var(--bg);
+  --color-footer-link: oklch(0.82 0.004 110);
+  --color-footer-border: oklch(0.30 0.006 250);
+
+  --transition: 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  --transition-slow: 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Dark mode */
+/* === SISTEMA EDITORIAL — dark (diseñado a mano) === */
 [data-theme="dark"] {
-  /* Backgrounds: layered zinc surfaces */
-  --color-bg: #09090b;
-  --color-bg-card: #18181b;
-  --color-bg-muted: #27272a;
-  --color-bg-subtle: #3f3f46;
+  --bg: oklch(0.18 0.004 160);            /* ~#131514 near-black */
+  --surface: oklch(0.21 0.005 160);
+  --surface-muted: oklch(0.25 0.005 160);
+  --surface-subtle: oklch(0.30 0.006 160);
 
-  /* Text */
-  --color-text: #fafafa;
-  --color-text-muted: #a1a1aa;
-  --color-text-light: #8b8b96;
+  --ink: oklch(0.95 0.003 110);           /* ~#f2f2f0 */
+  --ink-muted: oklch(0.72 0.006 250);
+  --ink-light: oklch(0.60 0.006 250);
 
-  /* Borders */
-  --color-border: #27272a;
-  --color-border-dark: #3f3f46;
+  /* Acento aclarado para AA sobre oscuro */
+  --accent: oklch(0.72 0.12 158);
+  --accent-hover: oklch(0.78 0.12 158);
+  --accent-ink: oklch(0.18 0.02 160);     /* tinta oscura sobre acento claro */
 
-  /* Primary: more vibrant in dark */
-  --color-primary: #3b82f6;
-  --color-primary-dark: #2563eb;
-  --color-primary-light: #93c5fd;
+  --border: oklch(0.30 0.006 160);
+  --border-strong: oklch(0.38 0.007 160);
 
-  --color-secondary: #fbbf24;
-  --color-secondary-text: #fde68a;
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.4);
+  --shadow-md: 0 2px 8px oklch(0 0 0 / 0.5);
+  --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.55);
+  --shadow-xl: var(--shadow-lg);
 
-  --color-accent: #22d3ee;
+  /* Alias legacy re-mapeados (heredan los nuevos de arriba) */
+  --color-bg: var(--bg);
+  --color-bg-card: var(--surface);
+  --color-bg-muted: var(--surface-muted);
+  --color-bg-subtle: var(--surface-subtle);
+  --color-text: var(--ink);
+  --color-text-muted: var(--ink-muted);
+  --color-text-light: var(--ink-light);
+  --color-border: var(--border);
+  --color-border-dark: var(--border-strong);
 
-  /* Rose: more vibrant in dark */
-  --color-rose: #fb7185;
-  --color-rose-dark: #f43f5e;
-  --color-rose-light: #fda4af;
+  --color-primary: var(--accent);
+  --color-primary-dark: var(--accent-hover);
+  --color-primary-light: var(--accent);
+  --color-secondary: var(--accent);
+  --color-secondary-text: var(--accent);
+  --color-accent: var(--accent);
+  --color-rose: var(--accent);
+  --color-rose-dark: var(--accent-hover);
+  --color-rose-light: var(--accent);
 
-  /* Footer */
-  --color-footer-bg: #09090b;
-  --color-footer-text: #a1a1aa;
-  --color-footer-heading: #fafafa;
-  --color-footer-link: #d4d4d8;
-  --color-footer-border: #27272a;
+  --color-cat-sillas: var(--accent);
+  --color-cat-escritorios: var(--accent);
+  --color-cat-accesorios: var(--accent);
+  --color-cat-ambiente: var(--accent);
+  --color-cat-audio-video: var(--accent);
+  --color-cat-guias: var(--accent);
+  --color-cat-herramientas: var(--accent);
+  --color-cat-articulos: var(--ink-muted);
 
-  /* Shadows: deeper in dark */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.5);
+  --glass-bg: var(--surface);
+  --glass-bg-strong: var(--surface);
+  --glass-border: var(--border);
+  --glass-blur: 0px;
 
-  /* Glass effects (dark) */
-  --glass-bg: rgba(24, 24, 27, 0.6);
-  --glass-bg-strong: rgba(24, 24, 27, 0.8);
-  --glass-border: rgba(255, 255, 255, 0.06);
-  --glass-blur: 20px;
+  --color-footer-bg: oklch(0.15 0.004 160);
+  --color-footer-text: var(--ink-muted);
+  --color-footer-heading: var(--ink);
+  --color-footer-link: oklch(0.82 0.004 110);
+  --color-footer-border: var(--border);
 }
 
 *,
