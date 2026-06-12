@@ -3,6 +3,7 @@ import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 
 const articulos = await getCollection('articulos');
 
@@ -29,6 +30,42 @@ const destacados = articulos
 const recientes = articulos
   .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime())
   .slice(0, 4);
+
+const ordenadosPorFecha = [...articulos].sort(
+  (a, b) => b.data.fecha.getTime() - a.data.fecha.getTime()
+);
+
+const nombresCategoria: Record<string, string> = {
+  sillas: 'Sillas',
+  escritorios: 'Escritorios',
+  accesorios: 'Accesorios',
+  ambiente: 'Ambiente',
+  'audio-video': 'Audio y vídeo',
+};
+
+const hrefDe = (a: CollectionEntry<'articulos'>) =>
+  a.data.tipo === 'informativo'
+    ? `/guias/${a.slug}/`
+    : `/${a.data.categoria}/${a.slug}/`;
+
+const categoriaNombre = (a: CollectionEntry<'articulos'>) =>
+  a.data.tipo === 'informativo'
+    ? 'Guía'
+    : a.data.tipo === 'noticia'
+      ? 'Actualidad'
+      : (nombresCategoria[a.data.categoria] ?? a.data.categoria);
+
+const fechaCorta = (a: CollectionEntry<'articulos'>) =>
+  (a.data.actualizadoEn || a.data.fecha).toLocaleDateString('es-ES', {
+    day: 'numeric',
+    month: 'short',
+  });
+
+// Últimas publicaciones para el índice editorial (excluye las comparativas pillar)
+const pillarSlugSet = new Set(pillars.map(a => a.slug));
+const ultimas = ordenadosPorFecha
+  .filter(a => !pillarSlugSet.has(a.slug))
+  .slice(0, 6);
 
 // Excluir pillars y destacados de recientes para evitar duplicados
 const pillarSet = new Set(pillars.map(a => a.slug));
@@ -126,25 +163,24 @@ const categorias = [
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />
-  <!-- Hero -->
-  <section class="hero">
+  <!-- Hero editorial asimétrico -->
+  <section class="home-hero">
     <div class="container">
-      <p class="hero-label">
-        <span class="hero-label-dot" aria-hidden="true"></span>
-        Guías y comparativas {new Date().getFullYear()}
-      </p>
-      <h1 class="hero-title">
-        Tu espacio de trabajo, analizado al detalle
-      </h1>
-      <p class="hero-subtitle">
-        Análisis independientes de sillas, escritorios y accesorios para teletrabajar desde casa con ergonomía real.
-      </p>
-      <div class="hero-cta">
-        <a href="/articulos/" class="hero-cta-btn hero-cta-primary">
-          Ver comparativas
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-        <a href="/guias/" class="hero-cta-btn hero-cta-secondary">Leer guías</a>
+      <div class="home-hero-grid">
+        <div class="home-hero-text">
+          <h1 class="home-hero-title">Pruebo el equipo de home office para que tú no te equivoques.</h1>
+          <p class="home-hero-sub">Llevo teletrabajando desde 2019. Comparo sillas, escritorios y accesorios con criterio técnico y muchas horas de uso real.</p>
+          <div class="home-hero-cta">
+            <a href="/articulos/" class="hero-cta-btn hero-cta-primary">
+              Ver comparativas
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="/sobre-mi/" class="hero-cta-btn hero-cta-secondary">Cómo lo pruebo</a>
+          </div>
+        </div>
+        <figure class="home-hero-figure">
+          <img src="/images/articulos/setup-home-office-escritorio-elevable.webp" alt="Escritorio elevable con monitor, silla ergonómica y accesorios en un home office real" width="800" height="600" fetchpriority="high" decoding="async" />
+        </figure>
       </div>
     </div>
   </section>
@@ -300,45 +336,71 @@ const categorias = [
 </Base>
 
 <style>
-  .section-home-catalogo {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
+  /* =======================================================
+     FASE 2 -- HOME EDITORIAL (CSS scoped)
+     ======================================================= */
 
-  .home-catalogo-cta {
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    padding: 1.75rem;
-    background: var(--color-bg-muted);
+  /* --- Hero asimétrico --- */
+  .home-hero {
+    border-bottom: 1px solid var(--border);
   }
-
-  .home-catalogo-cta h2 {
-    margin: 0.35rem 0 0.65rem;
+  .home-hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 4rem 0;
+  }
+  .home-hero-text {
+    max-width: 32rem;
+  }
+  .home-hero-title {
     font-family: var(--font-display);
-    font-size: 1.8rem;
-    line-height: 1.15;
+    font-size: clamp(2rem, 4.5vw, 3.25rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+    color: var(--ink);
+    margin: 0 0 1.1rem;
   }
-
-  .home-catalogo-cta p {
-    max-width: 650px;
-    color: var(--color-text-muted);
-    line-height: 1.65;
+  .home-hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink-muted);
+    max-width: 36ch;
+    margin: 0 0 1.75rem;
   }
-
-  .home-cta-row {
+  .home-hero-cta {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
-    margin-top: 1rem;
   }
-
-  @media (max-width: 520px) {
-    .home-catalogo-cta {
-      padding: 1.25rem;
+  .home-hero-figure {
+    margin: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+  }
+  .home-hero-figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  @media (max-width: 820px) {
+    .home-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      padding: 2.5rem 0 2rem;
     }
-
-    .home-catalogo-cta h2 {
-      font-size: 1.45rem;
+    .home-hero-figure {
+      order: -1;
+      aspect-ratio: 16 / 9;
+    }
+    .home-hero-text {
+      max-width: none;
     }
   }
 </style>
