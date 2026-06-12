@@ -349,10 +349,8 @@ a:hover {
 }
 
 .header {
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-bottom: 1px solid var(--glass-border);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -436,6 +434,44 @@ a:hover {
   border-radius: 1px;
 }
 
+/* Feedback táctil en enlaces de nav (los <button> ya lo tienen vía motion.css) */
+.nav-link {
+  transition: color var(--transition), background var(--transition), transform var(--dur-press) var(--ease-out);
+}
+.nav-link:active,
+.logo:active {
+  transform: scale(0.97);
+}
+
+/* Buscar: icono en desktop, etiqueta visible en móvil */
+.nav-search {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-search-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 768px) {
+  .nav-search-label {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -458,10 +494,8 @@ a:hover {
     top: 60px;
     left: 0;
     right: 0;
-    background: var(--glass-bg-strong);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    border-bottom: 1px solid var(--color-border);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
     flex-direction: column;
     padding: 1rem;
     gap: 0.25rem;
@@ -1516,9 +1550,9 @@ mark {
 
 button:focus-visible,
 .affiliate-button:focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
 }
 
 /* =========================================
@@ -1526,12 +1560,12 @@ button:focus-visible,
    ========================================= */
 
 [data-theme="dark"] .header {
-  background: rgba(9, 9, 11, 0.8);
-  border-bottom-color: rgba(255, 255, 255, 0.04);
+  background: var(--surface);
+  border-bottom-color: var(--border);
 }
 
 [data-theme="dark"] .nav {
-  background: var(--color-bg);
+  background: var(--surface);
 }
 
 
@@ -1599,20 +1633,6 @@ button:focus-visible,
   background: var(--color-bg-muted);
 }
 
-/* Header: search, hamburger, dropdown, theme icons */
-.nav-search {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem 0.6rem;
-  min-width: 44px;
-  min-height: 44px;
-}
-
-.nav-search svg {
-  flex-shrink: 0;
-}
-
 .hamburger-icon {
   display: flex;
   flex-direction: column;
@@ -1655,174 +1675,6 @@ button:focus-visible,
   display: block;
 }
 
-.nav-dropdown {
-  position: relative;
-}
-
-.nav-dropdown-trigger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: var(--font-sans);
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.nav-dropdown-arrow {
-  display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  color: var(--color-text-muted);
-}
-
-.nav-dropdown-menu {
-  position: absolute;
-  top: calc(100% + 0.5rem);
-  left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-xl);
-  min-width: 230px;
-  padding: 0.5rem;
-  z-index: 110;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.15s ease-out, transform 0.15s ease-out, visibility 0.15s;
-}
-
-.nav-dropdown-menu::before {
-  content: '';
-  position: absolute;
-  top: -6px;
-  left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 12px;
-  height: 12px;
-  background: var(--color-bg-card);
-  border-left: 1px solid var(--color-border);
-  border-top: 1px solid var(--color-border);
-}
-
-.nav-dropdown:hover .nav-dropdown-menu,
-.nav-dropdown-menu.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-  pointer-events: auto;
-}
-
-.nav-dropdown:hover .nav-dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-.nav-dropdown-heading {
-  font-size: 0.68rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-light);
-  padding: 0.5rem 0.85rem 0.25rem;
-}
-
-.nav-dropdown-divider {
-  height: 1px;
-  background: var(--color-border);
-  margin: 0.4rem 0.5rem;
-}
-
-.nav-dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 0.85rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--color-text);
-  text-decoration: none;
-  transition: all var(--transition);
-}
-
-.nav-dropdown-item:hover {
-  color: var(--item-color, var(--color-primary));
-  background: color-mix(in srgb, var(--item-color, var(--color-primary)) 8%, transparent);
-}
-
-.nav-dropdown-item:hover svg {
-  color: var(--item-color, var(--color-primary));
-}
-
-.nav-dropdown-item.active {
-  color: var(--color-primary);
-  font-weight: 600;
-  background: color-mix(in srgb, var(--color-primary) 8%, transparent);
-}
-
-@media (max-width: 768px) {
-  .nav-dropdown {
-    width: 100%;
-  }
-
-  .nav-dropdown-trigger {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    justify-content: space-between;
-  }
-
-  .nav-dropdown-menu {
-    position: static;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    padding: 0 0 0 0.5rem;
-    min-width: auto;
-    background: transparent;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-    transition: none;
-    display: none;
-  }
-
-  .nav-dropdown-menu::before {
-    display: none;
-  }
-
-  .nav-dropdown:hover .nav-dropdown-menu {
-    display: none;
-    transform: none;
-  }
-
-  .nav-dropdown .nav-dropdown-menu.open {
-    display: block;
-    transform: none;
-  }
-
-  .nav-dropdown-item {
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .nav-dropdown-heading {
-    padding: 0.5rem 1rem 0.25rem;
-  }
-
-  .nav-dropdown-divider {
-    margin: 0.4rem 1rem;
-  }
-
-  .nav-search {
-    justify-content: flex-start;
-    padding: 0.75rem 1rem;
-  }
-}
-
 .section-categories {
   background: var(--color-bg-muted);
   border-bottom: 1px solid var(--color-border);
@@ -1860,10 +1712,8 @@ button:focus-visible,
   right: 0;
   z-index: 100;
   display: none;
-  background: var(--glass-bg-strong);
-  backdrop-filter: blur(var(--glass-blur));
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  border-top: 1px solid var(--glass-border);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
   padding: 0.5rem 0;
   padding-bottom: env(safe-area-inset-bottom, 0);
   justify-content: space-around;
