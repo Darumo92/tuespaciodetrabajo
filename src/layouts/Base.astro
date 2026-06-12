@@ -167,6 +167,16 @@ const currentPath = Astro.url.pathname;
       })();
     </script>
 
+    <!-- Reveal-on-scroll editorial (data-reveal) — Fase 1 -->
+    <script>
+      import { initReveal } from '@/scripts/reveal';
+      const w = window as unknown as { __revealInit?: boolean };
+      if (!w.__revealInit) {
+        w.__revealInit = true;
+        initReveal();
+      }
+    </script>
+
     <!-- Microsoft Clarity: load only after cookie consent -->
     <script is:inline>
       (function() {
@@ -273,10 +283,8 @@ const currentPath = Astro.url.pathname;
         left: 0;
         right: 0;
         z-index: 200;
-        background: var(--glass-bg-strong);
-        backdrop-filter: blur(var(--glass-blur));
-        -webkit-backdrop-filter: blur(var(--glass-blur));
-        border-top: 1px solid var(--glass-border);
+        background: var(--surface);
+        border-top: 1px solid var(--border);
         box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         padding: 1rem 1.5rem;
       }
