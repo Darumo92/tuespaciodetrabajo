@@ -23,14 +23,6 @@ const pillars = pillarSlugs
   .map(slug => articulos.find(a => a.slug === slug))
   .filter((a): a is NonNullable<typeof a> => Boolean(a));
 
-const destacados = articulos
-  .filter(a => a.data.destacado)
-  .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
-
-const recientes = articulos
-  .sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime())
-  .slice(0, 4);
-
 const ordenadosPorFecha = [...articulos].sort(
   (a, b) => b.data.fecha.getTime() - a.data.fecha.getTime()
 );
@@ -67,11 +59,7 @@ const ultimas = ordenadosPorFecha
   .filter(a => !pillarSlugSet.has(a.slug))
   .slice(0, 6);
 
-// Excluir pillars y destacados de recientes para evitar duplicados
-const pillarSet = new Set(pillars.map(a => a.slug));
-const destacadoSlugs = new Set(destacados.map(a => a.slug));
-const recientesSinDuplicar = recientes.filter(a => !destacadoSlugs.has(a.slug) && !pillarSet.has(a.slug));
-const mostrarRecientes = recientesSinDuplicar.length > 0;
+const recientes = ordenadosPorFecha.slice(0, 6);
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
@@ -265,36 +253,18 @@ const categorias = [
     </div>
   </section>
 
-  <!-- Destacados -->
-  {destacados.length > 0 && (
-    <section class="section section--alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Selección del editor</span>
-          <h2 class="section-title reveal">Destacados</h2>
-          <p class="section-subtitle reveal">Nuestros análisis más completos y populares</p>
-        </div>
-        <div class="articles-grid">
-          {destacados.map(articulo => (
-            <ArticleCard articulo={articulo} />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- Articulos recientes (only if they add new content beyond destacados) -->
-  {mostrarRecientes && (
+  <!-- Últimas publicaciones (índice editorial de filas) -->
+  {ultimas.length > 0 && (
     <section class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">Recién publicado</span>
-          <h2 class="section-title reveal">Últimos análisis</h2>
-          <p class="section-subtitle reveal">Los artículos más recientes del blog</p>
-        </div>
-        <div class="articles-grid">
-          {recientesSinDuplicar.map(articulo => (
-            <ArticleCard articulo={articulo} />
+        <h2 class="section-title">Lo último que he publicado</h2>
+        <p class="section-subtitle">Guías y análisis recién salidos, ordenados por fecha.</p>
+        <div class="home-index">
+          {ultimas.map(a => (
+            <a href={hrefDe(a)} class="home-index-item">
+              <span class="home-index-title">{a.data.titulo}</span>
+              <span class="home-index-meta">{categoriaNombre(a)} · {fechaCorta(a)}</span>
+            </a>
           ))}
         </div>
       </div>
@@ -494,5 +464,58 @@ const categorias = [
   }
   .home-inline-link:active {
     transform: scale(0.98);
+  }
+
+  /* --- Índice editorial de filas --- */
+  .home-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--border);
+  }
+  .home-index-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--ink);
+    transition: padding-left var(--transition), color var(--transition);
+  }
+  .home-index-title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .home-index-meta {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .home-index-item:hover {
+    padding-left: 0.5rem;
+    color: var(--accent);
+  }
+  .home-index-item:hover .home-index-meta {
+    color: var(--ink-muted);
+  }
+  @media (min-width: 761px) {
+    .home-index-item:nth-child(odd) {
+      padding-right: 2rem;
+    }
+    .home-index-item:nth-child(even) {
+      padding-left: 2rem;
+      border-left: 1px solid var(--border);
+    }
+    .home-index-item:nth-child(even):hover {
+      padding-left: 2.5rem;
+    }
+  }
+  @media (max-width: 760px) {
+    .home-index {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
