@@ -49,9 +49,10 @@ const amazonHref = buildAmazonHref(amazon);
     border: 1px solid var(--color-border-dark);
     color: var(--color-text);
     text-decoration: none;
-    transition: border-color var(--transition);
+    transition: border-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out);
   }
   .boton-web-oficial:hover { border-color: var(--color-primary); color: var(--color-primary); }
+  .boton-web-oficial:active { transform: scale(0.97); }
   .boton-sin-tienda {
     font-size: 0.82rem;
     color: var(--color-text-muted);
