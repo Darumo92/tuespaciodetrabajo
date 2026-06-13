@@ -141,7 +141,7 @@ const categorias = [
   },
   {
     slug: 'guias',
-    nombre: 'Guias',
+    nombre: 'Guías',
     descripcion: 'Consejos de ergonomía, productividad y organización del home office',
     count: articulos.filter(a => a.data.tipo === 'informativo').length,
   },
@@ -224,7 +224,7 @@ const categorias = [
             <span class="home-bento-icon" aria-hidden="true"><CategoryIcon categoria={cat.slug} size={cat.slug === 'sillas' ? 36 : 26} /></span>
             <span class="home-bento-name">{cat.nombre}</span>
             {cat.slug === 'sillas' && <span class="home-bento-desc">{cat.descripcion}</span>}
-            <span class="home-bento-count">{cat.count > 0 ? `${cat.count} ${cat.count === 1 ? 'análisis' : 'análisis'}` : 'Próximamente'}</span>
+            <span class="home-bento-count">{cat.count > 0 ? `${cat.count} análisis` : 'Próximamente'}</span>
           </a>
         ))}
       </div>
