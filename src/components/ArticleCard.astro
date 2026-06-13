@@ -5,9 +5,10 @@ import CategoryIcon from './CategoryIcon.astro';
 interface Props {
   articulo: CollectionEntry<'articulos'>;
   headingLevel?: 2 | 3;
+  revealDelay?: number;
 }
 
-const { articulo, headingLevel = 3 } = Astro.props;
+const { articulo, headingLevel = 3, revealDelay = 0 } = Astro.props;
 const Heading = `h${headingLevel}` as any;
 const { titulo, descripcion, categoria, fecha, actualizadoEn, imagen, tipo } = articulo.data;
 
@@ -51,7 +52,7 @@ const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
 const esActualizado = !!actualizadoEn;
 ---
 
-<article class="article-card" data-reveal data-tipo={tipoArticulo} style={`--card-accent: var(--color-cat-${badgeCategoria})`}>
+<article class="article-card" data-reveal {...(revealDelay ? { 'data-reveal-delay': revealDelay } : {})} data-tipo={tipoArticulo} style={`--card-accent: var(--color-cat-${badgeCategoria})`}>
   <a href={url} class="article-card-image" aria-hidden="true" tabindex="-1">
     {imagen ? (
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />

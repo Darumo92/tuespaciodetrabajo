@@ -176,23 +176,6 @@ const categorias = [
     </div>
   </section>
 
-  <section class="section section-home-catalogo">
-    <div class="container">
-      <div class="home-catalogo-cta">
-        <span class="section-eyebrow">Catálogo</span>
-        <h2>Catálogo comparativo de equipamiento</h2>
-        <p>Specs verificadas, valoración por ejes y comparador lado a lado. Empezamos por sillas; más categorías en camino.</p>
-        <div class="home-cta-row">
-          <a class="hero-cta-btn hero-cta-primary" href="/catalogo/">
-            Explorar catálogo
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a class="hero-cta-btn hero-cta-secondary" href="/catalogo/silla/">Comparar sillas</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Trust strip -->
   <div class="trust-strip">
     <div class="container">
@@ -237,12 +220,13 @@ const categorias = [
       <div class="container">
         <div class="section-header">
           <span class="section-eyebrow">Comparativas</span>
-          <h2 class="section-title">Las comparativas más completas</h2>
-          <p class="section-subtitle">Análisis a fondo de sillas, escritorios y accesorios probados para teletrabajo</p>
+          <h2 class="section-title">Comparativas a fondo, no listas copiadas de Amazon.</h2>
+          <p class="section-subtitle">Pruebo, mido y comparo cada producto antes de recomendarlo. Empiezo por lo que más castiga la espalda: sillas y escritorios.</p>
+          <a href="/catalogo/" class="home-inline-link">Ver el catálogo comparativo</a>
         </div>
         <div class="articles-grid">
-          {pillars.map(articulo => (
-            <ArticleCard articulo={articulo} />
+          {pillars.map((articulo, i) => (
+            <ArticleCard articulo={articulo} revealDelay={i * 50} />
           ))}
         </div>
       </div>
@@ -491,5 +475,24 @@ const categorias = [
         "ambiente"
         "guias";
     }
+  }
+
+  /* --- Link inline editorial (comparativas, metodo) --- */
+  .home-inline-link {
+    display: inline-block;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+    transition: color var(--transition), transform var(--dur-press) var(--ease-out);
+  }
+  .home-inline-link:hover {
+    color: var(--accent-hover);
+  }
+  .home-inline-link:active {
+    transform: scale(0.98);
   }
 </style>
