@@ -114,15 +114,6 @@ const itemListSchema = {
   })),
 };
 
-const catColors: Record<string, string> = {
-  sillas: '#2563eb',
-  escritorios: '#f59e0b',
-  accesorios: '#10b981',
-  ambiente: '#ec4899',
-  'audio-video': '#8b5cf6',
-  guias: '#f43f5e',
-};
-
 const categorias = [
   {
     slug: 'sillas',
@@ -222,25 +213,18 @@ const categorias = [
     </div>
   </div>
 
-  <!-- Categorias -->
-  <section class="section section-categories">
+  <!-- Categorías (bento, celdas exactas, fondo diverso) -->
+  <section class="section home-bento-section">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Explora por categoría</h2>
-        <p class="section-subtitle">Encuentra exactamente lo que necesitas para tu home office</p>
-      </div>
-      <div class="categories-grid reveal-group">
+      <h2 class="section-title">Explora por categoría</h2>
+      <p class="section-subtitle">Sillas, escritorios y todo lo que toca tu cuerpo ocho horas al día.</p>
+      <div class="home-bento">
         {categorias.map(cat => (
-          <a href={`/${cat.slug}/`} class="category-card" style={`--cat-color: ${catColors[cat.slug] || '#2563eb'}`}>
-            <div class="category-card-glow" aria-hidden="true"></div>
-            <span class="category-icon" aria-hidden="true"><CategoryIcon categoria={cat.slug} size={28} /></span>
-            <h3 class="category-card-name">{cat.nombre}</h3>
-            <p class="category-card-desc">{cat.descripcion}</p>
-            {cat.count > 0 ? (
-              <span class="category-card-count">{cat.count} {cat.count === 1 ? 'artículo' : 'artículos'} →</span>
-            ) : (
-              <span class="category-card-count category-card-count--empty">Próximamente</span>
-            )}
+          <a href={`/${cat.slug}/`} class={`home-bento-cell home-bento-cell--${cat.slug}`} style={`grid-area: ${cat.slug};`}>
+            <span class="home-bento-icon" aria-hidden="true"><CategoryIcon categoria={cat.slug} size={cat.slug === 'sillas' ? 36 : 26} /></span>
+            <span class="home-bento-name">{cat.nombre}</span>
+            {cat.slug === 'sillas' && <span class="home-bento-desc">{cat.descripcion}</span>}
+            <span class="home-bento-count">{cat.count > 0 ? `${cat.count} ${cat.count === 1 ? 'análisis' : 'análisis'}` : 'Próximamente'}</span>
           </a>
         ))}
       </div>
@@ -401,6 +385,111 @@ const categorias = [
     }
     .home-hero-text {
       max-width: none;
+    }
+  }
+
+  /* --- Bento de categorías --- */
+  .home-bento {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "sillas escritorios ambiente"
+      "sillas accesorios  guias";
+  }
+  .home-bento-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    min-height: 150px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  }
+  .home-bento-cell:hover {
+    transform: translateY(-2px);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-md);
+  }
+  .home-bento-cell--escritorios,
+  .home-bento-cell--accesorios {
+    background: var(--surface-muted);
+  }
+  .home-bento-cell--guias {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-ink);
+  }
+  .home-bento-cell--guias .home-bento-icon,
+  .home-bento-cell--guias .home-bento-count {
+    color: var(--accent-ink);
+  }
+  .home-bento-cell--sillas {
+    position: relative;
+    overflow: hidden;
+    min-height: 312px;
+    color: #fff;
+    border-color: transparent;
+    background:
+      linear-gradient(180deg, rgba(20, 24, 22, 0.08) 0%, rgba(20, 24, 22, 0.84) 100%),
+      var(--surface-muted) url('/images/articulos/mejor-silla-ergonomica-calidad-precio.webp') center / cover no-repeat;
+  }
+  .home-bento-cell--sillas .home-bento-icon,
+  .home-bento-cell--sillas .home-bento-count {
+    color: #fff;
+  }
+  .home-bento-icon {
+    color: var(--accent);
+  }
+  .home-bento-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+  }
+  .home-bento-cell--sillas .home-bento-name {
+    font-size: 1.5rem;
+  }
+  .home-bento-desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    opacity: 0.92;
+    max-width: 32ch;
+  }
+  .home-bento-count {
+    margin-top: 0.15rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+  }
+  @media (max-width: 760px) {
+    .home-bento {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "sillas sillas"
+        "escritorios accesorios"
+        "ambiente guias";
+    }
+    .home-bento-cell--sillas {
+      min-height: 220px;
+    }
+  }
+  @media (max-width: 460px) {
+    .home-bento {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "sillas"
+        "escritorios"
+        "accesorios"
+        "ambiente"
+        "guias";
     }
   }
 </style>
