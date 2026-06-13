@@ -25,7 +25,7 @@ const {
   precio,
   enlaceAmazon,
   imagen,
-  etiqueta = 'Nuestra eleccion',
+  etiqueta = 'Nuestra elección',
 } = Astro.props;
 
 const normalizedAmazon = enlaceAmazon && enlaceAmazon.startsWith('/dp/')
@@ -70,7 +70,7 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
             rel="nofollow noopener noreferrer sponsored"
           >
             <StoreIcon tienda="amazon" size={15} />
-              Ver en Amazon — {precioAmazon}
+              Ver en Amazon · {precioAmazon}
             <span class="sr-only">(se abre en nueva pestaña)</span>
           </a>
         </div>
@@ -81,14 +81,13 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
 
 <style>
 .top-pick {
-  border: 2px solid var(--color-primary);
-  border-left: 6px solid var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-card));
-  border-radius: var(--radius-lg);
+  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 4%, var(--surface));
+  border-radius: var(--radius);
   padding: 2rem;
   margin: 2.5rem 0;
   position: relative;
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--dur-hover) var(--ease-out);
 }
 
 .top-pick:hover {
@@ -99,15 +98,14 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
   position: absolute;
   top: -0.8rem;
   left: 1.25rem;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #78350f;
+  background: var(--accent);
+  color: var(--accent-ink);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.3rem 0.9rem;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 .top-pick-body {
@@ -227,8 +225,8 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
 }
 
 :global([data-theme="dark"]) .top-pick {
-  background: color-mix(in srgb, var(--color-primary) 5%, var(--color-bg-card));
-  border-color: var(--color-primary);
+  background: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  border-color: var(--accent);
 }
 
 .sr-only {
