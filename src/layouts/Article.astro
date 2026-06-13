@@ -173,20 +173,9 @@ const breadcrumbSchema = {
       />
     )}
 
-    <aside class="trust-bar">
-      <div class="trust-item">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Análisis independiente
-      </div>
-      <div class="trust-item">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2v4"/><path d="m16.24 7.76-2.83 2.83"/><path d="M18 12h4"/><path d="m16.24 16.24-2.83-2.83"/><path d="M12 18v4"/><path d="m7.76 16.24 2.83-2.83"/><path d="M2 12h4"/><path d="m7.76 7.76 2.83 2.83"/></svg>
-        Productos probados
-      </div>
-      <div class="trust-item">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M21.5 2v6s-6-1-12 4c0 0-1-5-1-10 7.5 0 13 0 13 0z"/><path d="M2.5 22c2-2 8-6 9.5-9.5"/><path d="M10 15c-3 0-6 3-6 3"/></svg>
-        Actualizado regularmente
-      </div>
-    </aside>
+    <p class="trust-line">
+      Análisis independiente. Productos probados de primera mano y precios revisados con regularidad.
+    </p>
 
     {!esInformativo && (
       <div class="affiliate-disclaimer" role="note">
@@ -454,39 +443,12 @@ const breadcrumbSchema = {
       background: color-mix(in srgb, var(--color-primary) 8%, transparent);
     }
 
-    /* Trust bar */
-    .trust-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+    /* Trust line (editorial, sin iconos decorativos) */
+    .trust-line {
       margin: 1.25rem 0;
-    }
-    .trust-item,
-    .trust-badge {
-      font-size: 0.7rem;
-      font-weight: 600;
-      padding: 0.3rem 0.65rem;
-      border-radius: var(--radius-full);
-      background: var(--color-bg-muted);
-      border: 1px solid var(--color-border);
+      font-size: 0.85rem;
+      line-height: 1.6;
       color: var(--color-text-muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-    .trust-item svg,
-    .trust-badge svg {
-      flex-shrink: 0;
-    }
-    @media (max-width: 480px) {
-      .trust-bar {
-        gap: 0.375rem;
-      }
-      .trust-item,
-      .trust-badge {
-        font-size: 0.68rem;
-        padding: 0.25rem 0.55rem;
-      }
     }
 
     .article-author a {
