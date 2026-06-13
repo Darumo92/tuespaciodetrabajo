@@ -198,10 +198,7 @@ function starData(val: number) {
                 {p.revisado && <span>Revisado: {p.revisado}</span>}
               </p>
             )}
-            <div class={`comp-score-badge ${p.valoracion >= 4.5 ? 'comp-score-badge--excellent' : p.valoracion >= 3.5 ? 'comp-score-badge--good' : 'comp-score-badge--average'}`}>
-              <span class="comp-score-value">{p.valoracion.toFixed(1)}</span>
-              <span class="comp-score-label">{p.valoracion >= 4.5 ? 'Excelente' : p.valoracion >= 3.5 ? 'Muy bueno' : 'Bueno'}</span>
-            </div>
+
           </div>
         </div>
 
@@ -216,7 +213,7 @@ function starData(val: number) {
               rel="nofollow noopener noreferrer sponsored"
             >
               <StoreIcon tienda="amazon" size={15} />
-              Amazon — {p.precio}
+              Amazon · {p.precio}
               <span class="sr-only">(se abre en nueva pestaña)</span>
             </a>
           </div>
@@ -310,14 +307,6 @@ function starData(val: number) {
   background: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-card));
 }
 
-.comp-card--top::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 5%, transparent), transparent);
-  pointer-events: none;
-}
 
 .comp-card--top:hover {
   box-shadow: 0 4px 24px color-mix(in srgb, var(--color-primary) 15%, transparent);
@@ -327,15 +316,14 @@ function starData(val: number) {
   position: absolute;
   top: -0.7rem;
   left: 1.25rem;
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #78350f;
+  background: var(--accent);
+  color: var(--accent-ink);
   font-size: 0.72rem;
   font-weight: 700;
   padding: 0.35rem 1rem;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
 }
 
 /* --- Header: image + name/rating/price --- */
@@ -347,7 +335,7 @@ function starData(val: number) {
 
 .comp-img-wrap {
   flex-shrink: 0;
-  background: linear-gradient(135deg, var(--color-bg-muted), color-mix(in srgb, var(--color-primary) 4%, var(--color-bg-muted)));
+  background: var(--surface-muted);
   border-radius: var(--radius-lg);
   padding: 1rem;
   position: relative;
@@ -520,62 +508,7 @@ function starData(val: number) {
   border-width: 0;
 }
 
-/* Score badge */
-.comp-score-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-  border-radius: var(--radius-lg);
-  border: 2px solid currentColor;
-  flex-shrink: 0;
-  margin-top: 0.75rem;
-}
 
-.comp-score-badge--excellent {
-  background: color-mix(in srgb, #10b981 12%, transparent);
-  color: #047857;
-}
-
-.comp-score-badge--good {
-  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
-  color: var(--color-primary-dark);
-}
-
-.comp-score-badge--average {
-  background: color-mix(in srgb, var(--color-secondary) 12%, transparent);
-  color: #92400e;
-}
-
-:global([data-theme="dark"]) .comp-score-badge--excellent {
-  color: #34d399;
-}
-
-:global([data-theme="dark"]) .comp-score-badge--good {
-  color: var(--color-primary-light);
-}
-
-:global([data-theme="dark"]) .comp-score-badge--average {
-  color: #fbbf24;
-}
-
-.comp-score-value {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 700;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-}
-
-.comp-score-label {
-  font-size: 0.55rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-top: 0.15rem;
-}
 </style>
 
 <script>
