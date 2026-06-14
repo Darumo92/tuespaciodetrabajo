@@ -162,14 +162,14 @@ const breadcrumbSchema = {
   }
   .cat-filter-btn, .tipo-filter-btn {
     padding: 0.4rem 0.85rem;
-    border: 1.5px solid var(--color-border);
+    border: 1px solid var(--color-border);
     border-radius: 99px;
     background: var(--color-bg);
     color: var(--color-text-muted);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: border-color var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out), background-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out);
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -181,7 +181,7 @@ const breadcrumbSchema = {
   .cat-filter-btn.active, .tipo-filter-btn.active {
     background: var(--color-primary);
     border-color: var(--color-primary);
-    color: white;
+    color: var(--accent-ink);
   }
   .filter-count {
     font-size: 0.85rem;
