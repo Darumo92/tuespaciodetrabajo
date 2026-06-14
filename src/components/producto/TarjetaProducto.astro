@@ -49,17 +49,19 @@ const chips = [
 
 <style>
   .card { position: relative; display: flex; gap: 1rem; align-items: flex-start; border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1rem; background: var(--color-bg); }
-  .card.cmp-sel { border-color: var(--color-primary); box-shadow: 0 0 0 2px #bfdbfe; }
+  .card.cmp-sel { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 35%, transparent); }
   .card-cmp { position: absolute; top: 0.6rem; right: 0.6rem; display: flex; align-items: center; gap: 0.3rem; font-size: 0.72rem; color: var(--color-text-muted); background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px; padding: 0.2rem 0.5rem; cursor: pointer; }
+  .card-cmp { transition: border-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out); }
+  .card-cmp:active { transform: scale(0.97); }
   .card-info { flex: 1; min-width: 0; }
   .card-brand { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
   .card-name { font-family: var(--font-display); font-weight: 700; color: var(--color-text); text-decoration: none; display: block; margin: 0.05rem 0 0.3rem; }
   .card-name:hover { color: var(--color-primary); }
   .card-line { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
-  .card-score { background: var(--color-text); color: #fff; font-family: var(--font-display); font-size: 0.78rem; border-radius: 7px; padding: 0.1rem 0.45rem; }
+  .card-score { background: var(--color-text); color: var(--color-bg); font-family: var(--font-display); font-size: 0.78rem; border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .card-price { color: var(--color-secondary); }
   .card-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
-  .chip { font-size: 0.7rem; background: var(--color-bg-muted); color: #3f3f46; border-radius: 6px; padding: 0.1rem 0.45rem; }
+  .chip { font-size: 0.7rem; background: var(--color-bg-muted); color: var(--color-text); border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .chip-nd { color: var(--color-text-muted); font-style: italic; }
   .sr-only {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
