@@ -1142,7 +1142,7 @@ a:hover {
   border: none;
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--transition);
+  transition: background var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out);
   background: var(--color-primary);
   color: #fff;
 }
