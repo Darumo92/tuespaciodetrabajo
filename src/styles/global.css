@@ -586,7 +586,7 @@ a:hover {
   border-radius: var(--radius-full);
   text-decoration: none;
   border: 1.5px solid transparent;
-  transition: all var(--transition);
+  transition: background-color var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out);
 }
 
 .hero-cta-btn:active {
