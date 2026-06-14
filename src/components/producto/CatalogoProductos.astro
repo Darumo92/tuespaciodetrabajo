@@ -189,8 +189,8 @@ const { productos, tipo } = Astro.props;
     gap: 0.85rem;
     padding: 0.78rem max(1rem, env(safe-area-inset-right)) calc(0.78rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
     background: var(--color-text);
-    color: #fff;
-    box-shadow: 0 -10px 24px rgb(0 0 0 / 0.16);
+    color: var(--color-bg);
+    box-shadow: 0 -1px 0 var(--color-border-dark);
   }
 
   .cmp-status {
@@ -219,8 +219,8 @@ const { productos, tipo } = Astro.props;
   .cmp-go {
     display: inline-flex;
     align-items: center;
-    color: #3a2a00;
-    background: var(--color-secondary);
+    color: var(--accent-ink);
+    background: var(--accent);
     text-decoration: none;
   }
 
@@ -230,16 +230,22 @@ const { productos, tipo } = Astro.props;
   }
 
   .cmp-clear {
-    border: 1px solid rgb(255 255 255 / 0.35);
+    border: 1px solid color-mix(in srgb, var(--color-bg) 35%, transparent);
     background: transparent;
-    color: #fff;
+    color: var(--color-bg);
     cursor: pointer;
   }
 
   .cmp-clear:hover,
   .cmp-clear:focus-visible {
-    border-color: #fff;
+    border-color: var(--color-bg);
   }
+
+  .cmp-go,
+  .cmp-clear { transition: transform var(--dur-press) var(--ease-out); }
+
+  .cmp-go:active,
+  .cmp-clear:active { transform: scale(0.97); }
 
   @media (max-width: 768px) {
     .catalogo {
