@@ -23,10 +23,11 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
   .cmp :global(.cmp-global) { font-family: var(--font-display); font-weight: 700; margin-top: 0.2rem; }
   .cmp :global(.cmp-global small) { font-size: 0.6rem; color: var(--color-text-muted); font-weight: 500; }
   .cmp :global(.cmp-rm) { font-size: 0.7rem; color: var(--color-text-muted); border: 1px solid var(--color-border); border-radius: 6px; padding: 0.1rem 0.4rem; background: none; cursor: pointer; margin-top: 0.3rem; }
-  .cmp :global(.cmp-win) { background: color-mix(in srgb, #16a34a 14%, var(--color-bg-card)); box-shadow: inset 3px 0 0 #16a34a; color: var(--color-text); }
-  .cmp :global(.cmp-wtag) { display: inline-block; font-size: 0.58rem; font-weight: 700; color: #16a34a; text-transform: uppercase; margin-left: 0.35rem; }
+  .cmp :global(.cmp-win) { background: color-mix(in srgb, var(--accent) 8%, var(--color-bg-card)); color: var(--color-text); }
+  .cmp :global(.cmp-wtag) { display: inline-block; font-size: 0.58rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-left: 0.35rem; }
   .cmp :global(.cmp-nd) { color: var(--color-text-muted); font-style: italic; }
-  .cmp :global(.cmp-cta) { display: inline-block; background: var(--color-primary); color: #fff; font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.9rem; border-radius: 8px; text-decoration: none; }
+  .cmp :global(.cmp-cta) { display: inline-block; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.9rem; border-radius: var(--radius); text-decoration: none; transition: background var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out); }
+  .cmp :global(.cmp-cta:active) { transform: scale(0.97); }
   .cmp :global(.cmp-legend) { font-size: 0.76rem; color: var(--color-text-muted); margin-top: 0.8rem; }
 </style>
 <script>
