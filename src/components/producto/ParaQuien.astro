@@ -23,7 +23,7 @@ const { si, no } = Astro.props;
   .pq-col h3 { font-size: 0.85rem; margin-bottom: 0.5rem; }
   .pq-col ul { list-style: none; padding: 0; margin: 0; font-size: 0.88rem; }
   .pq-col li { padding: 0.25rem 0 0.25rem 1.3rem; position: relative; }
-  .pq-si li::before { content: "✓"; position: absolute; left: 0; color: #16a34a; font-weight: 700; }
-  .pq-no li::before { content: "✕"; position: absolute; left: 0; color: #dc2626; font-weight: 700; }
+  .pq-si li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .pq-no li::before { content: "✕"; position: absolute; left: 0; color: var(--color-text-muted); font-weight: 700; }
   @media (max-width: 560px) { .paraquien { grid-template-columns: 1fr; } }
 </style>
