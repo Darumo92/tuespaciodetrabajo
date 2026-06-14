@@ -14,11 +14,11 @@ const global = notaGlobal(producto);
     <span class="vejes-tag">editorial · specs + comunidad</span>
   </div>
   {global != null && (<p class="vejes-global"><strong>{global.toFixed(1)}</strong><span>/10 · nota global</span></p>)}
-  <div class="vejes-bars">
+  <div class="vejes-list">
     {ejes.map((e) => (
       <div class={`vejes-row${e.valor == null ? ' vejes-nd' : ''}`}>
         <span class="vejes-lbl">{e.etiqueta}</span>
-        <span class="vejes-track"><span class="vejes-fill" style={`width:${e.valor == null ? 100 : e.valor * 10}%`}></span></span>
+        <span class="vejes-bar" style={e.valor == null ? undefined : `--pct:${e.valor * 10}%`} aria-hidden="true"></span>
         <span class="vejes-val">{e.valor == null ? 'sin valorar' : e.valor.toFixed(1)}</span>
       </div>
     ))}
@@ -32,11 +32,13 @@ const global = notaGlobal(producto);
   .vejes-global { font-family: var(--font-display); margin: 0.5rem 0 1rem; }
   .vejes-global strong { font-size: 1.4rem; }
   .vejes-global span { color: var(--color-text-muted); font-size: 0.8rem; font-weight: 500; }
-  .vejes-bars { display: grid; gap: 0.7rem; max-width: 520px; }
-  .vejes-row { display: grid; grid-template-columns: 130px 1fr 70px; align-items: center; gap: 0.7rem; font-size: 0.85rem; }
-  .vejes-track { height: 9px; background: var(--color-bg-muted); border-radius: 99px; overflow: hidden; }
-  .vejes-fill { display: block; height: 100%; border-radius: 99px; background: linear-gradient(90deg, var(--color-primary), #60a5fa); }
-  .vejes-val { font-weight: 700; font-size: 0.82rem; text-align: right; }
-  .vejes-nd .vejes-fill { background: repeating-linear-gradient(45deg, #e4e4e7, #e4e4e7 4px, #f4f4f5 4px, #f4f4f5 8px); }
+  .vejes-list { display: grid; gap: 0.6rem; max-width: 520px; }
+  .vejes-row { display: grid; grid-template-columns: 130px 1fr 44px; align-items: center; gap: 0.85rem; font-size: 0.85rem; }
+  .vejes-lbl { color: var(--color-text-muted); }
+  .vejes-bar { position: relative; height: 2px; }
+  .vejes-bar::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: var(--pct, 0); background: var(--accent); }
+  .vejes-val { font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; text-align: right; font-variant-numeric: tabular-nums; }
+  .vejes-nd .vejes-bar { border-top: 1px dashed var(--color-border); }
+  .vejes-nd .vejes-bar::before { content: none; }
   .vejes-nd .vejes-val { color: var(--color-text-muted); font-weight: 500; font-size: 0.72rem; }
 </style>
