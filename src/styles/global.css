@@ -2214,7 +2214,7 @@ button:focus-visible,
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
-  transition: all 200ms;
+  transition: background-color 200ms var(--ease-out), color 200ms var(--ease-out), box-shadow 200ms var(--ease-out);
   flex-shrink: 0;
 }
 
@@ -2464,7 +2464,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   font-weight: 500;
   background: var(--color-bg);
   color: var(--color-text);
-  transition: all 180ms;
+  transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), color 180ms var(--ease-out), transform var(--dur-press) var(--ease-out);
   user-select: none;
 }
 
@@ -2484,6 +2484,8 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   outline-offset: 2px;
 }
 
+.ergo-chip:active > span { transform: scale(0.97); }
+
 /* ---------- Dolor chips (larger) ---------- */
 .ergo-dolor-grid {
   display: grid;
@@ -2500,7 +2502,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all 180ms;
+  transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), transform 180ms var(--ease-out);
   background: var(--color-bg);
 }
 
@@ -2514,6 +2516,8 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   border-color: var(--color-primary-light);
   transform: translateY(-1px);
 }
+
+.ergo-dolor-chip:active { transform: scale(0.98); }
 
 .ergo-dolor-chip.is-selected {
   border-color: var(--color-primary);
@@ -2675,7 +2679,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 180ms;
+  transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), border-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform var(--dur-press) var(--ease-out);
   background: transparent;
 }
 
@@ -2734,7 +2738,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   font-weight: 600;
   color: var(--color-text);
   cursor: pointer;
-  transition: all 180ms;
+  transition: background-color 180ms var(--ease-out), border-color 180ms var(--ease-out), color 180ms var(--ease-out);
 }
 
 .ergo-share-btn:hover {
@@ -3015,7 +3019,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: all 220ms;
+  transition: transform 220ms var(--ease-out), box-shadow 220ms var(--ease-out), border-color 220ms var(--ease-out);
   opacity: 0;
   animation: ergoReveal 500ms calc(var(--i) * 100ms + 400ms) cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
