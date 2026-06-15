@@ -91,7 +91,7 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
 }
 
 .top-pick:hover {
-  box-shadow: 0 12px 40px color-mix(in srgb, var(--color-primary) 15%, rgba(0, 0, 0, 0.1));
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--accent) 15%, rgba(0, 0, 0, 0.1));
 }
 
 .top-pick-badge {
@@ -117,8 +117,8 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
 
 .top-pick-img-wrap {
   flex-shrink: 0;
-  background: var(--color-bg-muted);
-  border-radius: var(--radius-md);
+  background: var(--surface-muted);
+  border-radius: var(--radius);
   padding: 0.75rem;
   display: flex;
   align-items: center;
@@ -141,13 +141,13 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
   font-family: var(--font-display);
   font-weight: 700;
   margin: 0 0 0.4rem;
-  color: var(--color-text);
+  color: var(--ink);
   letter-spacing: -0.02em;
 }
 
 .top-pick-desc {
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   margin: 0 0 0.6rem;
   line-height: 1.5;
 }
@@ -156,7 +156,7 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
   font-family: var(--font-display);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--accent);
   font-variant-numeric: tabular-nums;
   margin: 0 0 1rem;
   letter-spacing: -0.02em;
@@ -167,7 +167,7 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
   flex-wrap: wrap;
   gap: 0.5rem;
   align-items: center;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   font-size: 0.78rem;
   margin: -0.4rem 0 1rem;
 }
@@ -193,7 +193,7 @@ const revisado = formatAmazonLastChecked(enlaceAmazon);
   font-size: 0.88rem;
   padding: 0.65rem 1.2rem;
   font-weight: 700;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
 }
 
 @media (max-width: 540px) {

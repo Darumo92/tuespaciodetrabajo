@@ -232,13 +232,13 @@ function starData(val: number) {
   flex-wrap: wrap;
   margin-bottom: 1.5rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--border);
 }
 
 .comp-sort-label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   margin-right: 0.25rem;
 }
 
@@ -248,17 +248,17 @@ function starData(val: number) {
   font-weight: 600;
   padding: 0.5rem 1rem;
   border-radius: var(--radius-full);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--border);
   background: transparent;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   cursor: pointer;
   transition: border-color var(--transition), color var(--transition), background var(--transition), transform var(--dur-press) var(--ease-out);
 }
 
 .comp-sort-btn:hover {
-  border-color: var(--color-primary);
-  color: var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
 }
 
 .comp-sort-btn:active {
@@ -267,10 +267,10 @@ function starData(val: number) {
 
 .comp-sort-btn--active,
 .comp-sort-btn--active:hover {
-  background: var(--color-primary);
+  background: var(--accent);
   color: #fff;
-  border-color: var(--color-primary);
-  box-shadow: 0 4px 12px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 25%, transparent);
 }
 
 .comp-titulo {
@@ -289,27 +289,27 @@ function starData(val: number) {
 }
 
 .comp-card {
-  background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 1.5rem;
   position: relative;
   transition: border-color var(--transition), box-shadow var(--transition);
 }
 
 .comp-card:hover {
-  border-color: var(--color-border-dark);
+  border-color: var(--border-strong);
   box-shadow: var(--shadow-md);
 }
 
 .comp-card--top {
-  border: 2px solid var(--color-primary);
-  background: color-mix(in srgb, var(--color-primary) 3%, var(--color-bg-card));
+  border: 2px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 3%, var(--surface));
 }
 
 
 .comp-card--top:hover {
-  box-shadow: 0 4px 24px color-mix(in srgb, var(--color-primary) 15%, transparent);
+  box-shadow: 0 4px 24px color-mix(in srgb, var(--accent) 15%, transparent);
 }
 
 .comp-badge {
@@ -336,7 +336,7 @@ function starData(val: number) {
 .comp-img-wrap {
   flex-shrink: 0;
   background: var(--surface-muted);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   padding: 1rem;
   position: relative;
   overflow: hidden;
@@ -360,7 +360,7 @@ function starData(val: number) {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--ink);
   margin: 0 0 0.6rem;
   line-height: 1.3;
   letter-spacing: -0.02em;
@@ -386,25 +386,25 @@ function starData(val: number) {
 }
 
 .comp-star--full path {
-  fill: var(--color-secondary);
+  fill: var(--accent);
 }
 
 .comp-star--empty path {
-  fill: var(--color-border);
+  fill: var(--border);
 }
 
 .comp-star-empty-bg {
-  fill: var(--color-border);
+  fill: var(--border);
 }
 
 .comp-star-full-bg {
-  fill: var(--color-secondary);
+  fill: var(--accent);
 }
 
 .comp-rating-num {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   margin-left: 0.35rem;
 }
 
@@ -412,7 +412,7 @@ function starData(val: number) {
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.3rem;
-  color: var(--color-primary);
+  color: var(--accent);
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
@@ -421,7 +421,7 @@ function starData(val: number) {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   font-size: 0.76rem;
   margin: 0.35rem 0 0;
 }
@@ -439,11 +439,11 @@ function starData(val: number) {
 /* --- Description --- */
 .comp-desc {
   font-size: 0.88rem;
-  color: var(--color-text-muted);
+  color: var(--ink-muted);
   line-height: 1.6;
   margin: 1rem 0 0;
   padding-top: 0.875rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid var(--border);
 }
 
 /* --- Store buttons --- */
@@ -457,7 +457,7 @@ function starData(val: number) {
 .comp-stores .affiliate-button {
   font-size: 0.85rem;
   padding: 0.6rem 1.1rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius);
 }
 
 @media (max-width: 480px) {
