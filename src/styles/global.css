@@ -2975,6 +2975,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
 
 .ergo-tip--warn::before {
   background: #ef4444;
+  color: #fff;
   content: '!';
 }
 
