@@ -62,19 +62,19 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
 </article>
 <style>
   .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.5rem; }
-  .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--color-text-muted); margin: 0; }
+  .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--ink-muted); margin: 0; }
   .ficha-nombre { font-family: var(--font-display); margin: 0.2rem 0 0.5rem; }
-  .ficha-precio { font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; color: var(--color-secondary); }
-  .ficha-nota { color: var(--color-secondary); font-size: 0.9rem; }
-  .ficha-ideal { color: var(--color-text-muted); font-size: 0.9rem; margin: 0 0 1rem; }
-  .ficha-veredicto { background: color-mix(in srgb, var(--color-primary) 10%, var(--color-bg-card)); border: 1px solid color-mix(in srgb, var(--color-primary) 35%, var(--color-border)); color: var(--color-text); border-radius: var(--radius-md); padding: 0.9rem 1.1rem; font-size: 0.95rem; margin: 0 0 2rem; }
+  .ficha-precio { font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; color: var(--accent); }
+  .ficha-nota { color: var(--accent); font-size: 0.9rem; }
+  .ficha-ideal { color: var(--ink-muted); font-size: 0.9rem; margin: 0 0 1rem; }
+  .ficha-veredicto { background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border)); color: var(--ink); border-radius: var(--radius); padding: 0.9rem 1.1rem; font-size: 0.95rem; margin: 0 0 2rem; }
   .ficha-grupo { margin-bottom: 1.5rem; }
-  .ficha-grupo h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); margin-bottom: 0.4rem; }
+  .ficha-grupo h3 { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); margin-bottom: 0.4rem; }
   .ficha-specs { width: 100%; border-collapse: collapse; }
   .ficha-specs th, .ficha-specs td { text-align: left; padding: 0.5rem 0.75rem; }
-  .ficha-specs tr + tr th, .ficha-specs tr + tr td { border-top: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent); }
-  .ficha-specs th { width: 50%; color: var(--color-text-muted); font-weight: 600; }
-  .ficha-nd { color: var(--color-text-muted); font-style: italic; }
-  .ficha-comunidad { background: var(--color-bg-muted); border-radius: var(--radius-md); padding: 1rem 1.1rem; font-size: 0.92rem; }
-  .ficha-fuente { font-size: 0.8rem; color: var(--color-text-muted); border-top: 1px solid var(--color-border); padding-top: 1rem; margin-top: 2rem; }
+  .ficha-specs tr + tr th, .ficha-specs tr + tr td { border-top: 1px solid color-mix(in srgb, var(--border) 60%, transparent); }
+  .ficha-specs th { width: 50%; color: var(--ink-muted); font-weight: 600; }
+  .ficha-nd { color: var(--ink-muted); font-style: italic; }
+  .ficha-comunidad { background: var(--surface-muted); border-radius: var(--radius); padding: 1rem 1.1rem; font-size: 0.92rem; }
+  .ficha-fuente { font-size: 0.8rem; color: var(--ink-muted); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem; }
 </style>

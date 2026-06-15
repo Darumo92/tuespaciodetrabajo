@@ -8,9 +8,9 @@ const { marca, nombre, size = 200 } = Astro.props;
   <span class="fb-nota">sin imagen</span>
 </div>
 <style>
-  .fallback-img { width: var(--s); height: var(--s); background: var(--color-bg-muted); border-radius: var(--radius-md);
+  .fallback-img { width: var(--s); height: var(--s); background: var(--surface-muted); border-radius: var(--radius);
     display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem; text-align: center; padding: 0.6rem; flex-shrink: 0; }
-  .fb-marca { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
-  .fb-nombre { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--color-text); line-height: 1.15; }
-  .fb-nota { font-size: 0.62rem; color: var(--color-text-muted); opacity: 0.7; margin-top: 0.2rem; }
+  .fb-marca { font-family: var(--font-display); font-weight: 700; font-size: 0.8rem; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .fb-nombre { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--ink); line-height: 1.15; }
+  .fb-nota { font-size: 0.62rem; color: var(--ink-muted); opacity: 0.7; margin-top: 0.2rem; }
 </style>

@@ -11,24 +11,24 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
   <p id="cmp-empty" class="cmp-empty" hidden>Elige entre 2 y 4 en el <a href={`/catalogo/${tipo}/`}>catálogo</a> (casillas "comparar") y vuelve aquí.</p>
 </section>
 <style>
-  .cmp-empty { color: var(--color-text-muted); }
-  .cmp :global(.cmp-scroll) { overflow-x: auto; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-card); }
+  .cmp-empty { color: var(--ink-muted); }
+  .cmp :global(.cmp-scroll) { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
   .cmp :global(.cmp-table) { border-collapse: collapse; width: 100%; min-width: 640px; }
-  .cmp :global(.cmp-table td), .cmp :global(.cmp-table th) { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--color-border); text-align: left; font-size: 0.86rem; vertical-align: middle; }
-  .cmp :global(.cmp-table thead td) { background: var(--color-bg-muted); }
-  .cmp :global(.cmp-attr) { color: var(--color-text-muted); font-weight: 600; font-size: 0.8rem; position: sticky; left: 0; background: var(--color-bg); width: 180px; }
-  .cmp :global(.cmp-grp td) { background: var(--color-bg-muted); font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-muted); }
+  .cmp :global(.cmp-table td), .cmp :global(.cmp-table th) { padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--border); text-align: left; font-size: 0.86rem; vertical-align: middle; }
+  .cmp :global(.cmp-table thead td) { background: var(--surface-muted); }
+  .cmp :global(.cmp-attr) { color: var(--ink-muted); font-weight: 600; font-size: 0.8rem; position: sticky; left: 0; background: var(--bg); width: 180px; }
+  .cmp :global(.cmp-grp td) { background: var(--surface-muted); font-family: var(--font-display); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted); }
   .cmp :global(.cmp-name) { font-family: var(--font-display); font-weight: 700; font-size: 0.9rem; }
   .cmp :global(.cmp-name a) { color: inherit; text-decoration: none; }
   .cmp :global(.cmp-global) { font-family: var(--font-display); font-weight: 700; margin-top: 0.2rem; }
-  .cmp :global(.cmp-global small) { font-size: 0.6rem; color: var(--color-text-muted); font-weight: 500; }
-  .cmp :global(.cmp-rm) { font-size: 0.7rem; color: var(--color-text-muted); border: 1px solid var(--color-border); border-radius: 6px; padding: 0.1rem 0.4rem; background: none; cursor: pointer; margin-top: 0.3rem; }
-  .cmp :global(.cmp-win) { background: color-mix(in srgb, var(--accent) 8%, var(--color-bg-card)); color: var(--color-text); }
+  .cmp :global(.cmp-global small) { font-size: 0.6rem; color: var(--ink-muted); font-weight: 500; }
+  .cmp :global(.cmp-rm) { font-size: 0.7rem; color: var(--ink-muted); border: 1px solid var(--border); border-radius: 6px; padding: 0.1rem 0.4rem; background: none; cursor: pointer; margin-top: 0.3rem; }
+  .cmp :global(.cmp-win) { background: color-mix(in srgb, var(--accent) 8%, var(--surface)); color: var(--ink); }
   .cmp :global(.cmp-wtag) { display: inline-block; font-size: 0.58rem; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-left: 0.35rem; }
-  .cmp :global(.cmp-nd) { color: var(--color-text-muted); font-style: italic; }
+  .cmp :global(.cmp-nd) { color: var(--ink-muted); font-style: italic; }
   .cmp :global(.cmp-cta) { display: inline-block; background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 0.78rem; padding: 0.45rem 0.9rem; border-radius: var(--radius); text-decoration: none; transition: background var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out); }
   .cmp :global(.cmp-cta:active) { transform: scale(0.97); }
-  .cmp :global(.cmp-legend) { font-size: 0.76rem; color: var(--color-text-muted); margin-top: 0.8rem; }
+  .cmp :global(.cmp-legend) { font-size: 0.76rem; color: var(--ink-muted); margin-top: 0.8rem; }
 </style>
 <script>
   import { ganadoresPorValor, notaGlobal, formatoSpec, etiquetaEnum, tramoTexto, getCampo, buildAmazonHref, type Producto } from '@/lib/productos';
