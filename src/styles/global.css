@@ -1389,7 +1389,7 @@ a:hover {
   font-size: 1.1rem;
   text-decoration: none;
   z-index: 90;
-  transition: all var(--transition);
+  transition: transform var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out);
   box-shadow: var(--shadow-md);
 }
 
@@ -2731,7 +2731,7 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   gap: 0.4rem;
   padding: 0.5rem 0.85rem;
   background: var(--bg);
-  border: 1.5px solid var(--border);
+  border: 1px solid var(--border);
   border-radius: var(--radius-full);
   font-family: var(--font-sans);
   font-size: 0.85rem;
@@ -3106,7 +3106,6 @@ input[type="range"]:focus-visible::-webkit-slider-thumb {
   position: absolute;
   inset: 0;
   background: rgba(9, 9, 11, 0.55);
-  backdrop-filter: blur(4px);
 }
 
 .ergo-modal-panel {
