@@ -86,27 +86,27 @@ const breadcrumbSchema = {
     padding: 0.85rem 1.25rem 0.85rem 3rem;
     font-family: var(--font-sans);
     font-size: 1rem;
-    color: var(--color-text);
-    background: var(--color-bg-card);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
+    color: var(--ink);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
     outline: none;
     transition: border-color var(--transition), box-shadow var(--transition);
   }
 
   #search-input:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 15%, transparent);
   }
 
   #search-input::placeholder {
-    color: var(--color-text-light);
+    color: var(--ink-light);
   }
 
   .search-meta {
     margin-top: 0.5rem;
     font-size: 0.85rem;
-    color: var(--color-text-muted);
+    color: var(--ink-muted);
   }
 
   .search-state {
@@ -133,7 +133,7 @@ const breadcrumbSchema = {
   }
 
   .search-subtitle {
-    color: var(--color-text-muted);
+    color: var(--ink-muted);
     margin-bottom: 2rem;
   }
 
@@ -177,7 +177,7 @@ const breadcrumbSchema = {
   }
 
   .search-error {
-    color: var(--color-primary);
+    color: var(--accent);
   }
 </style>
 

@@ -333,8 +333,8 @@ const faqs = [
           <div class="ergo-figure-canvas" id="svg-stage" aria-hidden="true"></div>
           <p class="sr-only" id="fig-alt">Figura técnica con persona sentada, escritorio, silla y monitor. Altura asiento 44 cm, altura escritorio 67 cm, borde superior monitor 123 cm del suelo.</p>
           <div class="ergo-figure-legend" aria-hidden="true">
-            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--color-accent)"></span>Silla</span>
-            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--color-primary)"></span>Escritorio</span>
+            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--accent)"></span>Silla</span>
+            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--accent)"></span>Escritorio</span>
             <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:#10b981"></span>Zona segura</span>
           </div>
         </aside>
@@ -633,7 +633,7 @@ const faqs = [
                    i.silla === 'basica' ? 'Una silla básica de oficina sin regulación no aguanta bien 8h/día.' :
                    'Verifica que la tuya llegue a ' + m.asiento + ' cm y tenga soporte lumbar regulable.',
             categoria: 'Sillas',
-            color: 'var(--color-cat-sillas)',
+            color: 'var(--accent)',
           },
           escritorio: {
             titulo: i.usoPie !== 'sentado' ? 'Escritorio elevable eléctrico' : 'Escritorio de altura correcta (' + m.escritorio + ' cm)',
@@ -643,7 +643,7 @@ const faqs = [
                    i.usoPie !== 'sentado' ? 'Para alternar sentado y de pie necesitas rango ' + m.escritorio + '-' + m.escritorioPie + ' cm.' :
                    'Tu escritorio debe quedar a ' + m.escritorio + ' cm exactos para que los codos estén a 90-100°.',
             categoria: 'Escritorios',
-            color: 'var(--color-cat-escritorios)',
+            color: 'var(--accent)',
           },
           monitor: {
             titulo: i.monitor === 'laptop' ? 'Soporte portátil + monitor externo' : 'Soporte o brazo para monitor',
@@ -652,7 +652,7 @@ const faqs = [
                    i.dolor.has('cervical') ? 'Tu dolor cervical suele venir de pantalla baja. Borde superior del monitor a ' + m.topMonitor + ' cm del suelo.' :
                    'El borde superior del monitor debe quedar a ' + m.topMonitor + ' cm del suelo (altura de tus ojos).',
             categoria: 'Accesorios',
-            color: 'var(--color-cat-accesorios)',
+            color: 'var(--accent)',
           },
           accesorios: {
             titulo: i.dolor.has('muñecas') ? 'Ratón vertical y teclado ergonómico' : 'Lámpara de escritorio con iluminación lateral',
@@ -661,7 +661,7 @@ const faqs = [
                    i.dolor.has('ojos') ? 'Fatiga visual se reduce con iluminación lateral difusa que elimine reflejos en la pantalla.' :
                    'Iluminación lateral + ratón ergonómico completan el setup.',
             categoria: 'Accesorios',
-            color: 'var(--color-cat-accesorios)',
+            color: 'var(--accent)',
           },
         };
         prioridades.forEach(([key, weight], idx) => {
@@ -741,8 +741,8 @@ const faqs = [
         const monCx = deskBackX - 55;
         const monFrontX = monCx - monDepth / 2;
 
-        const C_SEAT = 'var(--color-accent)';
-        const C_DESK = 'var(--color-primary)';
+        const C_SEAT = 'var(--accent)';
+        const C_DESK = 'var(--accent)';
         const C_EYE = 'var(--ergo-pill-text-mono)';
         const C_SAFE = '#10b981';
 
@@ -783,7 +783,7 @@ const faqs = [
         const chairSVG = (() => {
           const seatW = 100;
           const seatX = chairCenterX - seatW / 2;
-          const A = 'var(--color-accent)';
+          const A = 'var(--accent)';
           if (i.silla === 'gaming') {
             const backTopY = seatY - 180;
             const backMidY = (backTopY + seatY) / 2;
@@ -859,7 +859,7 @@ const faqs = [
               <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY} L ${seatX + 16} ${backTopY + 2} L ${seatX + 16} ${seatY - 2} Z" fill="${A}" opacity="0.85"/>
               <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.95"/>
               <!-- hueco central típico -->
-              <rect x="${seatX + 8}" y="${seatY - 30}" width="6" height="22" rx="2" fill="var(--color-bg-card)" opacity="0.5"/>
+              <rect x="${seatX + 8}" y="${seatY - 30}" width="6" height="22" rx="2" fill="var(--surface)" opacity="0.5"/>
               <!-- reposabrazos fijo -->
               <rect x="${seatX + 48}" y="${seatY - 28}" width="24" height="5" rx="1" fill="${A}" opacity="0.75"/>
               <rect x="${seatX + 66}" y="${seatY - 24}" width="4" height="22" fill="${A}" opacity="0.75"/>
@@ -908,7 +908,7 @@ const faqs = [
               <rect x="${baseX + 8}" y="${baseY + 1.5}" width="${baseL - 42}" height="2" fill="var(--ergo-mon-border)" opacity="0.55"/>
               <rect x="${baseX + baseL - 32}" y="${baseY + 3}" width="24" height="2" rx="0.5" fill="var(--ergo-mon-border)" opacity="0.4"/>
               <path d="M ${hingeX + 2} ${hingeY + 1} L ${screenTopX + 2} ${screenTopY + 1} L ${screenTopX - 1} ${screenTopY - 1} L ${hingeX - 1} ${hingeY - 1} Z" fill="var(--ergo-mon-border)" opacity="0.92"/>
-              <path d="M ${hingeX - 2} ${hingeY - 1} L ${screenTopX - 2} ${screenTopY - 1} L ${screenTopX - 5} ${screenTopY + 1} L ${hingeX - 5} ${hingeY + 1} Z" fill="var(--color-primary)" opacity="0.6"/>
+              <path d="M ${hingeX - 2} ${hingeY - 1} L ${screenTopX - 2} ${screenTopY - 1} L ${screenTopX - 5} ${screenTopY + 1} L ${hingeX - 5} ${hingeY + 1} Z" fill="var(--accent)" opacity="0.6"/>
               <path d="M ${hingeX - 3} ${hingeY - 2} L ${(hingeX + screenTopX) / 2 - 4} ${(hingeY + screenTopY) / 2 - 2} L ${(hingeX + screenTopX) / 2 - 6} ${(hingeY + screenTopY) / 2} L ${hingeX - 5} ${hingeY} Z" fill="#ffffff" opacity="0.22"/>
               <line x1="${screenTopX + 6}" y1="${screenTopY - 2}" x2="${screenTopX + 6}" y2="${eyeY + 2}" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
               <text x="${screenTopX + 12}" y="${(screenTopY + eyeY) / 2}" font-size="9" fill="#ef4444" font-weight="700" font-family="var(--font-mono)">pantalla</text>
@@ -921,7 +921,7 @@ const faqs = [
           return `
             <rect x="${monX - 1}" y="${eyeY - 2}" width="${monDepth + 3}" height="${monHeightPx + 4}" rx="3" fill="var(--ergo-desk)" opacity="0.15"/>
             <rect x="${monX}" y="${eyeY}" width="${monDepth}" height="${monHeightPx}" rx="2.5" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.5"/>
-            <rect x="${monX + 1}" y="${eyeY + 2}" width="3.5" height="${monHeightPx - 4}" fill="var(--color-primary)" opacity="0.55"/>
+            <rect x="${monX + 1}" y="${eyeY + 2}" width="3.5" height="${monHeightPx - 4}" fill="var(--accent)" opacity="0.55"/>
             <rect x="${monX + 1}" y="${eyeY + monHeightPx * 0.12}" width="3.5" height="${monHeightPx * 0.18}" fill="#ffffff" opacity="0.3"/>
             <rect x="${monCx - 3.5}" y="${standNeckTopY}" width="7" height="${deskTopY - standNeckTopY - 2}" fill="var(--ergo-mon-border)" opacity="0.78"/>
             <ellipse cx="${monCx}" cy="${deskTopY - 3}" rx="${standBaseW / 2}" ry="4.5" fill="var(--ergo-mon-border)" opacity="0.55"/>
