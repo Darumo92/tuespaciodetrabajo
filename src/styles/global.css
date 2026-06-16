@@ -104,9 +104,6 @@
   --color-footer-heading: var(--bg);
   --color-footer-link: oklch(0.82 0.004 110);
   --color-footer-border: oklch(0.30 0.006 250);
-
-  --transition: 160ms cubic-bezier(0.23, 1, 0.32, 1);
-  --transition-slow: 400ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* === SISTEMA EDITORIAL — dark (diseñado a mano) === */
@@ -160,7 +157,7 @@ body {
   color: var(--ink);
   background-color: var(--bg);
   line-height: 1.65;
-  transition: background-color var(--transition-slow), color var(--transition-slow);
+  transition: background-color 400ms var(--ease-out), color 400ms var(--ease-out);
   overflow-x: hidden;
 }
 
@@ -277,7 +274,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 100;
-  transition: background-color var(--transition-slow), border-color var(--transition-slow);
+  transition: background-color 400ms var(--ease-out), border-color 400ms var(--ease-out);
   isolation: isolate;
 }
 
@@ -297,7 +294,7 @@ a:hover {
   font-weight: 700;
   color: var(--ink);
   letter-spacing: -0.03em;
-  transition: opacity var(--transition);
+  transition: opacity var(--dur-hover) var(--ease-out);
 }
 
 .logo:hover {
@@ -310,7 +307,7 @@ a:hover {
 }
 
 .logo-svg {
-  transition: opacity var(--transition);
+  transition: opacity var(--dur-hover) var(--ease-out);
 }
 
 .logo span {
@@ -331,7 +328,7 @@ a:hover {
   font-weight: 500;
   color: var(--ink-muted);
   text-decoration: none;
-  transition: color var(--transition), background var(--transition);
+  transition: color var(--dur-hover) var(--ease-out), background var(--dur-hover) var(--ease-out);
 }
 
 .nav-link:hover {
@@ -359,7 +356,7 @@ a:hover {
 
 /* Feedback táctil en enlaces de nav (los <button> ya lo tienen vía motion.css) */
 .nav-link {
-  transition: color var(--transition), background var(--transition), transform var(--dur-press) var(--ease-out);
+  transition: color var(--dur-hover) var(--ease-out), background var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out);
 }
 .nav-link:active,
 .logo:active {
@@ -531,7 +528,7 @@ a:hover {
 }
 
 .hero-cta-primary svg {
-  transition: transform var(--transition);
+  transition: transform var(--dur-hover) var(--ease-out);
 }
 
 .hero-cta-primary:hover svg {
@@ -630,7 +627,7 @@ a:hover {
   color: var(--ink);
   text-decoration: none;
   overflow: hidden;
-  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition: border-color var(--dur-hover) var(--ease-out), transform var(--dur-hover) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out);
 }
 
 .category-card:hover {
@@ -728,7 +725,7 @@ a:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--dur-hover) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out);
 }
 
 .article-card:hover {
@@ -849,7 +846,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  transition: gap var(--transition);
+  transition: gap var(--dur-hover) var(--ease-out);
 }
 
 .article-card:hover .article-card-link {
@@ -1002,7 +999,7 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
-  transition: color var(--transition);
+  transition: color var(--dur-hover) var(--ease-out);
 }
 
 .prose a:hover {
@@ -1229,7 +1226,7 @@ a:hover {
   font-size: 0.82rem;
   color: var(--color-footer-link);
   text-decoration: none;
-  transition: color var(--transition);
+  transition: color var(--dur-hover) var(--ease-out);
   position: relative;
   display: inline-block;
 }
@@ -1555,7 +1552,7 @@ button:focus-visible,
   justify-content: center;
   border-radius: var(--radius-sm);
   color: var(--ink);
-  transition: background var(--transition);
+  transition: background var(--dur-hover) var(--ease-out);
   line-height: 1;
 }
 
@@ -1575,7 +1572,7 @@ button:focus-visible,
   height: 2px;
   background: var(--ink);
   border-radius: 1px;
-  transition: transform var(--transition), opacity var(--transition);
+  transition: transform var(--dur-hover) var(--ease-out), opacity var(--dur-hover) var(--ease-out);
 }
 
 .nav-toggle[aria-expanded="true"] .hamburger-icon span:nth-child(1) {
@@ -1671,7 +1668,7 @@ button:focus-visible,
   font-weight: 500;
   min-width: 48px;
   padding: 0.25rem 0;
-  transition: color var(--transition);
+  transition: color var(--dur-hover) var(--ease-out);
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1778,7 +1775,7 @@ button:focus-visible,
   background: var(--bg);
   color: var(--ink-muted);
   cursor: pointer;
-  transition: background var(--transition), color var(--transition), border-color var(--transition);
+  transition: background var(--dur-hover) var(--ease-out), color var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out);
 }
 
 .filter-btn:hover {
@@ -1869,7 +1866,7 @@ button:focus-visible,
   border-radius: var(--radius);
   text-decoration: none;
   color: inherit;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--dur-hover) var(--ease-out), box-shadow var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out);
   position: relative;
   overflow: hidden;
 }

@@ -429,7 +429,7 @@ const breadcrumbSchema = {
       text-decoration: none;
       font-size: 0.88rem;
       line-height: 1.5;
-      transition: color var(--transition), background var(--transition);
+      transition: color var(--dur-hover) var(--ease-out), background var(--dur-hover) var(--ease-out);
       padding: 0.15rem 0.4rem;
       border-radius: 4px;
     }
@@ -541,7 +541,7 @@ const breadcrumbSchema = {
       border-radius: var(--radius);
       text-decoration: none;
       white-space: nowrap;
-      transition: background var(--transition);
+      transition: background var(--dur-hover) var(--ease-out);
     }
     .sticky-cta-btn:hover {
       background: var(--accent-hover);
