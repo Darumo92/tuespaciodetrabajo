@@ -52,7 +52,7 @@ const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
 const esActualizado = !!actualizadoEn;
 ---
 
-<article class="article-card" data-reveal {...(revealDelay ? { 'data-reveal-delay': revealDelay } : {})} data-tipo={tipoArticulo} style={`--card-accent: var(--color-cat-${badgeCategoria})`}>
+<article class="article-card" data-reveal {...(revealDelay ? { 'data-reveal-delay': revealDelay } : {})} data-tipo={tipoArticulo} style={`--card-accent: var(${badgeCategoria === 'articulos' ? '--ink-muted' : '--accent'})`}>
   <a href={url} class="article-card-image" aria-hidden="true" tabindex="-1">
     {imagen ? (
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />
