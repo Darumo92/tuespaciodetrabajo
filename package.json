@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "node scripts/optimize-images.mjs && astro build && node scripts/fix-sitemap-lastmod.mjs && node scripts/update-csp-hashes.mjs",
     "preview": "astro preview",
+    "test": "vitest run",
     "audit:amazon": "node scripts/audit-amazon-products.mjs",
     "update:amazon-cache": "node scripts/update-amazon-cache.mjs"
   },
@@ -15,5 +16,8 @@
     "@astrojs/sitemap": "^3.2.0",
     "astro": "^5.0.0",
     "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.9"
   }
 }

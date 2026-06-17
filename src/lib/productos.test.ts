@@ -11,8 +11,11 @@ import {
   etiquetaEnum,
   reposabrazosNivel,
   buildAmazonHref,
+  claveData,
+  valorComparacion,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
+import type { FiltroConfig } from './tipos';
 
 const COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
 const PARCIALES: Valoraciones = { ergonomia: 9, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: 6 };
@@ -129,5 +132,25 @@ describe('buildAmazonHref', () => {
     expect(buildAmazonHref({ asin: 'B0TEST1234', buscar: null })).toBe('https://www.amazon.es/dp/B0TEST1234?tag=tuespaciodet-21');
     expect(buildAmazonHref({ asin: null, buscar: 'silla ergonomica' })).toBeNull();
     expect(buildAmazonHref({ asin: null, buscar: null })).toBeNull();
+  });
+});
+
+describe('claveData', () => {
+  it('normaliza rutas a clave alfanumérica en minúsculas', () => {
+    expect(claveData('specs.pesoMaxKg')).toBe('pesomaxkg');
+    expect(claveData('tramoPrecio')).toBe('tramoprecio');
+    expect(claveData('valoracion')).toBe('valoracion');
+    expect(claveData('specs.profundidadRegulable')).toBe('profundidadregulable');
+  });
+});
+
+describe('valorComparacion: transform reposabrazosNivel', () => {
+  const filtro: FiltroConfig = {
+    id: 'brazos', etiqueta: '', control: 'select', comparacion: 'min',
+    campo: 'specs.reposabrazos', transform: 'reposabrazosNivel',
+  };
+  it('mapea el enum de reposabrazos a su nivel numérico', () => {
+    const p = { specs: { reposabrazos: '4d' } } as never;
+    expect(valorComparacion(p, filtro)).toBe('4');
   });
 });

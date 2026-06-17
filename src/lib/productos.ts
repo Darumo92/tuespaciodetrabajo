@@ -1,4 +1,4 @@
-import type { ClaveTipo } from './tipos';
+import type { ClaveTipo, FiltroConfig, TipoConfig } from './tipos';
 
 export interface Valoraciones {
   ergonomia: number | null;
@@ -105,6 +105,27 @@ export function etiquetaEnum(campo: string, valor: string): string {
 
 export function reposabrazosNivel(v: string): number {
   return ({ ninguno: 0, fijo: 1, '1d': 1, '2d': 2, '3d': 3, '4d': 4, abatibles: 2 } as Record<string, number>)[v] ?? 0;
+}
+
+const TRANSFORMS: Record<string, (v: unknown) => number> = {
+  reposabrazosNivel: (v) => reposabrazosNivel(String(v ?? '')),
+};
+
+/** 'specs.pesoMaxKg' -> 'pesomaxkg'. Namespace data-c-<clave> compartido por filtros y ordenaciones. */
+export function claveData(campo: string): string {
+  const segmento = campo.split('.').pop() ?? campo;
+  return segmento.toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+/** Valor comparable que la card debe emitir para un filtro (aplica transform / coercion bool). */
+export function valorComparacion(p: Producto, filtro: FiltroConfig): string {
+  const raw = getCampo(p, filtro.campo);
+  if (filtro.transform) {
+    const fn = TRANSFORMS[filtro.transform];
+    return fn ? String(fn(raw)) : '';
+  }
+  if (filtro.comparacion === 'check') return raw ? '1' : '0';
+  return raw == null ? '' : String(raw);
 }
 
 export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
