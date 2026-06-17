@@ -143,6 +143,31 @@ export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, stri
   return out;
 }
 
+function formatoChip(valor: unknown, formato?: string): string {
+  if (!formato) return String(valor);
+  if (formato.startsWith('enumLower:')) {
+    return etiquetaEnum(formato.slice('enumLower:'.length), String(valor)).toLowerCase();
+  }
+  if (formato.startsWith('enum:')) {
+    return etiquetaEnum(formato.slice('enum:'.length), String(valor));
+  }
+  return formatoSpec(valor, formato);
+}
+
+/** Chips de la card desde cfg.tarjetaChips. nd:true para el fallback de campos null con mostrarSiNulo. */
+export function construirChips(p: Producto, cfg: TipoConfig): { texto: string; nd: boolean }[] {
+  const out: { texto: string; nd: boolean }[] = [];
+  for (const chip of cfg.tarjetaChips) {
+    const raw = getCampo(p, chip.campo);
+    if (raw == null) {
+      if (chip.mostrarSiNulo) out.push({ texto: chip.mostrarSiNulo.etiqueta, nd: true });
+      continue;
+    }
+    out.push({ texto: (chip.prefijo ?? '') + formatoChip(raw, chip.formato), nd: false });
+  }
+  return out;
+}
+
 export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
   if (amazon?.asin) {
     return `https://www.amazon.es/dp/${amazon.asin}?tag=${AMAZON_TAG}`;

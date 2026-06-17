@@ -208,3 +208,22 @@ describe('valorComparacion: transform reposabrazosNivel', () => {
     expect(valorComparacion(p, filtro)).toBe('4');
   });
 });
+
+import { construirChips } from './productos';
+
+describe('construirChips: silla', () => {
+  const cfg = getTipoConfig('silla') as TipoConfig;
+
+  it('reproduce los chips actuales (lumbar/respaldo/peso/garantía)', () => {
+    const p = { specs: { tipo: 'silla', lumbar: '5d', respaldo: 'mixto', pesoMaxKg: 150, garantiaAnios: 5 } } as never;
+    const chips = construirChips(p, cfg);
+    expect(chips.map((c) => c.texto)).toEqual(['Lumbar 5d ajustable', 'Malla + cojín', '150 kg', '5 años']);
+    expect(chips.every((c) => !c.nd)).toBe(true);
+  });
+
+  it('garantía null muestra el fallback con nd:true', () => {
+    const p = { specs: { tipo: 'silla', lumbar: 'fijo', respaldo: 'malla', pesoMaxKg: 120, garantiaAnios: null } } as never;
+    const chips = construirChips(p, cfg);
+    expect(chips[chips.length - 1]).toEqual({ texto: 'garantía n/d', nd: true });
+  });
+});
