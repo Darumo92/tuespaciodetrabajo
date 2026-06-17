@@ -39,6 +39,7 @@ Thumbs.db
 
 # claude-environment skill copies (reproducible via setup.sh)
 claude-environment/skills/
+.github/skills/
 
 # Python
 __pycache__/

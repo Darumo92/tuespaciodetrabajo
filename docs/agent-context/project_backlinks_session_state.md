@@ -5,6 +5,103 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-17 - ajuste tactico Reddit ES
+
+Contexto operativo:
+- Usuario observa que los comentarios en ingles apenas reciben upvotes, mientras que en espanol hay mejor respuesta.
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `24`, total `25`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Ayer 2026-06-16 se publicaron 4 comentarios Reddit sin link; hoy conviene bajar volumen a 2 Reddit maximo, preferentemente ES, cortos y muy adaptados al hilo.
+- No disenar spam encubierto. Traduccion operativa: participar de forma natural, aportar algo concreto y evitar patrones promocionales o de farming evidente.
+
+Candidatos revisados para hoy:
+- Prioridad 1: `r/programacion` `1tz9iow` — OP 35 anos, IT desde 2013, consultora 3 anos, teletrabajo 100%, Java/Spring, lleva app sola con PM y cliente, sin subidas salvo bono, oferta por LinkedIn y miedo al mercado. Encaje fuerte con persona David/IT. Sin link.
+- Prioridad 2: `r/askspain` `1u4s7bm` — hilo activo sobre recoger muebles/objetos de la calle, 41 puntos, 98% upvoted. Encaja para comentario casual sobre mueble de despacho, revisar carcoma/chinches y no coger tapizados. Sin link.
+- Descartado para comentar hoy: `r/askspain` `1u7b3e5` sobre sacar 20.000 EUR en efectivo. Aunque tiene muchos comentarios, esta polarizado, baja aprobacion y toca tema legal/financiero; alto riesgo de downvotes.
+- Baja prioridad: `r/askspain` `1u1u251` sobre CGI. Antiguo, hilo ya contestado, encaje parcial pero menos ROI que `r/programacion`.
+
+Quora:
+- Si se hace Quora hoy, usar 1 respuesta ES como maximo. Mejor candidato ya confirmado: `https://es.quora.com/Si-trabajo-todo-el-d%C3%ADa-en-el-computador-vale-la-pena-comprarme-una-silla-gamer` -> `/guias/silla-gaming-vs-ergonomica/`.
+- Quora suma descubrimiento/crawl mas que karma Reddit; no mezclarlo con el objetivo principal de subir karma.
+- Correccion usuario: esa pregunta de Quora ya se habia respondido otro dia; hoy 2026-06-17 no se ha publicado nada en Quora. No volver a usar esa misma pregunta para evitar duplicado.
+- Correccion posterior usuario: tambien estan ya contestadas `https://es.quora.com/Cu%C3%A1l-es-la-posici%C3%B3n-ideal-para-sentarse-frente-a-la-computadora-al-trabajar` y `https://es.quora.com/Cu%C3%A1l-es-la-mejor-silla-para-oficina-ergon%C3%B3mica-para-alguien-que-se-dedica-al-desarrollo-de-software`. Evitar repetir.
+- Nueva via preferente para variar tema: preguntas de monitor/tamano/distancia, por ejemplo `https://es.quora.com/Qu%C3%A9-tama%C3%B1o-de-monitor-recomiendan-para-trabajar-dise%C3%B1o-y-jugar-casualmente-de-27-o-32-pulgadas` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+
+## Update 2026-06-16 - paquete Reddit + Quora de hoy
+
+Contexto operativo:
+- Tras revisar el proyecto Patas y Hogar, se adopta el metodo preferente `old.reddit.com` para Reddit. Documentado en `reference_reddit_karma_fetch.md` y `reference_reddit_thread_recon.md`.
+- `about.json` de Reddit para `Dear_Potato8535` con UA Safari devolvio pantalla `You've been blocked by network security`; no usarlo como fuente unica.
+- `old.reddit.com/user/Dear_Potato8535/` si funciono y confirmo karma: post `1`, comment `23`, total `24`.
+- `scripts/reddit_replies.py replies` fallo porque algunos RSS de hilos devolvieron XML vacio tras rate limit. Si falla de nuevo, usar revision manual de hilos con old.reddit.
+- RSS de subreddits consultados (`r/OfficeChairs`, `r/Ergonomics`, `r/homeoffice`, `r/StandingDesks`, `r/askspain`) quedo rate-limited con `HTTP 429 SIZE:0`; old.reddit si permitio listar y abrir hilos de `r/Ergonomics`.
+- Mantener **0 links en Reddit** hasta confirmacion de `total_karma >=50`.
+- Brave Search para Quora ES devolvio candidatos reales indexados:
+  - `https://es.quora.com/Si-trabajo-todo-el-d%C3%ADa-en-el-computador-vale-la-pena-comprarme-una-silla-gamer`
+  - `https://es.quora.com/Qu%C3%A9-diferencia-hay-entre-sillas-de-oficina-escritorio-y-ergon%C3%B3micas-Necesito-una-silla-para-teletrabajar-Os-pongo-un-enlace-donde-parecen-diferenciarlas-pero-no-me-queda-claro-cu%C3%A1l-es-para-trabajar-8`
+  - `https://es.quora.com/C%C3%B3mo-desarrollador-de-software-es-bueno-trabajar-de-pie-en-lugar-de-estar-sentado-todo-el-dia`
+  - `https://es.quora.com/A-qu%C3%A9-distancia-deber%C3%ADa-ubicarme-de-mi-monitor-de-24-pulgadas`
+
+Paquete generado:
+- `docs/SESION_4_REDDIT_QUORA_PAQUETE.md`
+
+Orden recomendado:
+- Usuario corrige criterio: se pueden hacer **3 comentarios Reddit/dia** como en Patas y Hogar. Objetivo real: farmear karma sin parecerlo; comentarios mas cortos y naturales, no chapas salvo encaje perfecto.
+- Hoy: publicar 3 comentarios Reddit sin link:
+  - `r/OfficeChairs` `1u78vrz` — back pain + standing desk.
+  - `r/OfficeChairs` `1u78lsy` — Libernovo Omni SE seat depth para 5'2.
+  - `r/StandingDesks` `1u6t07p` — como elegir standing desk que no tiemble.
+- Quora con link contextual a `/guias/silla-gaming-vs-ergonomica/` queda para mas tarde o manana si los 3 Reddit ya son suficiente volumen.
+- Backup: Reddit `r/Ergonomics` `1tvaf8e` para manana si no hay replies directas.
+- Descartado como principal `r/Ergonomics` `1u74oe0`: aunque abria por old.reddit, el OP parece validar producto concreto con "active support"/Lavenne R9 Pro y puede oler a promo.
+- `r/askspain` `1v6wh6n` queda como opcional no verificado porque `old.reddit` devolvio 404; publicar solo si el usuario confirma en navegador que sigue activo y que no se comento ya.
+
+Update post-publicacion 2026-06-16:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/` y RSS: comentarios visibles.
+- Karma visible en old.reddit tras publicacion: post `1`, comment `25`, total `26`. Subio desde total `24`, aunque no todos los votos/comentarios tienen por que reflejarse al instante.
+- Publicados SIN link:
+  - `r/Ergonomics` `1u74oe0` visible como `oryd2cb`: https://www.reddit.com/r/Ergonomics/comments/1u74oe0/i_dont_want_a_massage_chair_i_just_want_my_office/oryd2cb/
+  - `r/OfficeChairs` `1u78vrz` visible como `orygd2e`: https://www.reddit.com/r/OfficeChairs/comments/1u78vrz/8_hours_in_the_office_and_my_back_is_killing_me/orygd2e/
+  - `r/OfficeChairs` `1u78lsy` visible como `oryka2t`: https://www.reddit.com/r/OfficeChairs/comments/1u78lsy/libernovo_omni_se_45cm_or_48cm_for_someone_52_and/oryka2t/
+  - `r/StandingDesks` `1u6t07p` visible como `oryplpv`: https://www.reddit.com/r/StandingDesks/comments/1u6t07p/how_to_choose_a_standing_desk_that_doesnt_shake/oryplpv/
+- Nota: aunque el objetivo operativo era 3 comentarios/dia, hoy quedaron 4 porque tambien se publico el primer borrador anterior de `r/Ergonomics`. No publicar mas Reddit hoy; revisar replies manana.
+
+## Update 2026-06-14 — paquete Reddit + Quora preparado
+
+Contexto operativo:
+- Reddit RSS de comentarios de `Dear_Potato8535` devolvio `HTTP 429 SIZE:0` al consultarlo con UA Safari. No se pudo revisar replies ni karma desde entorno agente.
+- Ultimo karma manual vigente en contexto: `total_karma=24`. Mantener **0 links en Reddit** hasta confirmacion manual de `total_karma >=50`.
+- Reddit via web si permitio revisar hilos concretos:
+  - `r/askspain` `1u4t1km` — "Recomendacion Auriculares"; OP empieza a teletrabajar en informatica, cascos de diadema le molestan por orejas grandes y gafas, necesita Teams por cable + Discord/gaming inalambrico, presupuesto <=80 EUR. Comentario SIN link añadido como prioridad.
+  - `r/askspain` `1v6wh6n` — "Como introducirme en el mundo de la informatica/programacion/IA?"; OP quimico/doctorando en Madrid, pierde casi 3h/dia en transporte y busca via hacia teletrabajo. Se prepara comentario SIN link, usando autoridad real de David como ingeniero software.
+  - `r/OfficeChairs` `1u51gjm` — "office chair recommendation bad back"; OP 5'2, 115 lb, cirugia de columna/problemas de cadera, muchas horas sentada, no tolera superficies duras y quiere pies apoyados. Comentario SIN link añadido como prioridad.
+  - `r/Ergonomics` `1u2hdhe` — "5'1 (155cm) and struggling with comfort at desk"; OP 155 cm, escritorio 31", silla al minimo 18", pies cuelgan si sube silla y poco espacio para reposapies. Comentario SIN link añadido como prioridad.
+  - `r/Ergonomics` `1ts0svx` — "Budget standing desk converter recommendations?", 5d ago; OP trabaja/juega en el mismo escritorio, dolor cuello/espalda, decide Desky Zero.
+  - `r/Ergonomics` `1tvaf8e` — "Office Chair for great lumbar support in the $500-$700 range", 8d ago; OP 49 anos, fusion L4/L5, silla Walmart rota, 6' / 220 lb, triple monitor.
+- Quora ES: Brave Search `site:es.quora.com/` devolvio candidatos reales. Seleccionados para esta tanda:
+  - `https://es.quora.com/Qu%C3%A9-tan-cerca-del-monitor-deber%C3%ADa-sentarme` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`
+  - `https://es.quora.com/Cu%C3%A1l-es-la-posici%C3%B3n-ideal-para-sentarse-frente-a-la-computadora-al-trabajar` -> `/guias/ergonomia-teletrabajo-postura-correcta/`
+  - `https://es.quora.com/Es-buena-idea-utilizar-el-computador-estando-de-pie` -> sin link, para mantener ratio respuesta:link.
+- Pool Quora alternativo confirmado por subagente: `Cuál es la mejor postura para usar una computadora`, `Empecé a trabajar... dolía el cuello... collar`, `Cómo puedo saber si mi postura al sentarme...`, `Qué tan importante es la silla...`, `Qué le recomiendas a una persona 18 horas...`, `Cómo puedes saber si cualquier silla será buena...`. No usar todos en batch; cadencia max 3/semana.
+
+Paquete generado:
+- `docs/SESION_3_REDDIT_QUORA_PAQUETE.md`
+
+Notas de calidad:
+- Textos pasados por checklist humanizer: sin intros genericas, sin listas simetricas innecesarias, adaptados al OP/pregunta, con detalles concretos.
+- No usar claims antiguos/inventados de David. Especialmente: no afirmar uso propio de escritorio elevable; la persona actual indica escritorio fijo DIY.
+- Orden recomendado: espaciar 24h entre publicaciones y no publicar las 5 piezas seguidas.
+
+Update post-publicacion 2026-06-14:
+- Usuario confirma "todo comentado".
+- Verificacion RSS cuenta `Dear_Potato8535`: visibles 3/3 comentarios Reddit prioritarios:
+  - `r/askspain` `1u4t1km` visible como `ork2pb2`: https://www.reddit.com/r/askspain/comments/1u4t1km/recomendación_auriculares/ork2pb2/
+  - `r/OfficeChairs` `1u51gjm` visible como `ork68tg`: https://www.reddit.com/r/OfficeChairs/comments/1u51gjm/office_chair_recommendation_bad_back/ork68tg/
+  - `r/Ergonomics` `1u2hdhe` visible como `ork9tcf`: https://www.reddit.com/r/Ergonomics/comments/1u2hdhe/51_155cm_and_struggling_with_comfort_at_desk/ork9tcf/
+- Quora: publicacion confirmada manualmente por usuario, no verificable desde entorno agente por challenge/403. Pendiente si el usuario quiere registrar URLs exactas de answers.
+- Proxima accion: esperar replies/upvotes 24-48h antes de nuevos comentarios. Mantener Reddit sin links hasta confirmar `total_karma >=50`.
+
 ## Update Dia 28 (2026-06-01) — home recrawleada sin recovery + paquete Reddit sin link
 
 Contexto SEO del dia:

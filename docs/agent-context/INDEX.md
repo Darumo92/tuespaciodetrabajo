@@ -10,10 +10,10 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Article Checklists](reference_article_checklists.md) — Checklist obligatorio, 12 reglas anti-error, pre-publish checklist, humanización. **Cargar al crear/revisar artículos.**
 - [Amazon Rules](reference_amazon_rules.md) — Afiliación, comandos API, cadencia, reglas estrictas, imágenes. **Cargar al trabajar con productos/comparativas.**
 - [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Config para usar MCPs de Cloudflare, GA y GSC.
-- [Recon Reddit vía RSS](reference_reddit_thread_recon.md) — Método validado para listar hilos vivos r/*.
+- [Recon Reddit / old.reddit](reference_reddit_thread_recon.md) — Método validado para karma, hilos vivos, búsquedas y replies. Preferir old.reddit; RSS como fallback.
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/*.
 - [Workflow Quora ES](reference_quora_es_workflow.md) — Encontrar preguntas REALES vía Brave `site:es.quora.com/` (WebSearch inventa slugs; curl/WebFetch dan 403). Mapeo pregunta→artículo + patrón respuesta.
-- [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método curl + UA Safari para leer karma Reddit.
+- [Fetch karma Reddit](reference_reddit_karma_fetch.md) — Método old.reddit HTML para leer karma; about.json/RSS solo como fallback.
 - [Plan v2 DEPRECADO](reference_plan_v2.md) — OBSOLETO desde 06 may. Solo histórico.
 
 ## Estado de proyectos activos
