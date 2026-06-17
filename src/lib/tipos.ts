@@ -1,14 +1,38 @@
 export type ClaveTipo = 'silla';
 
 export interface EjeConfig { clave: string; etiqueta: string; }
+
+export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral';
+export type TransformId = 'reposabrazosNivel';
+export type FormatoSalida = 'tramoEuros';
+
 export interface FiltroConfig {
   id: string;
   etiqueta: string;
   control: 'rango' | 'select' | 'check';
+  comparacion: Comparacion;
   campo: string;
   opciones?: { valor: string; etiqueta: string }[];
   min?: number; max?: number; step?: number;
+  umbral?: number;
+  transform?: TransformId;
+  formatoSalida?: FormatoSalida;
 }
+
+export interface OrdenConfig {
+  id: string;
+  etiqueta: string;
+  campo: string;
+  direccion: 'asc' | 'desc';
+}
+
+export interface ChipConfig {
+  campo: string;
+  formato?: string;
+  prefijo?: string;
+  mostrarSiNulo?: { etiqueta: string };
+}
+
 export interface FilaComparador {
   campo: string;
   etiqueta: string;
@@ -24,6 +48,8 @@ export interface TipoConfig {
   icono: string;
   ejes: EjeConfig[];
   filtros: FiltroConfig[];
+  ordenaciones: OrdenConfig[];
+  tarjetaChips: ChipConfig[];
   comparador: FilaComparador[];
   fichaSpecs: GrupoSpecs[];
 }
@@ -41,10 +67,31 @@ const silla: TipoConfig = {
     { clave: 'calidadPrecio', etiqueta: 'Calidad-precio' },
   ],
   filtros: [
-    { id: 'precio', etiqueta: 'Tramo de precio máx', control: 'rango', campo: 'tramoPrecio', min: 1, max: 4, step: 1 },
-    { id: 'respaldo', etiqueta: 'Respaldo', control: 'select', campo: 'specs.respaldo',
-      opciones: [{ valor: 'malla', etiqueta: 'Malla' }, { valor: 'espuma', etiqueta: 'Espuma' }, { valor: 'mixto', etiqueta: 'Mixto' }] },
-    { id: 'prof', etiqueta: 'Profundidad regulable', control: 'check', campo: 'specs.profundidadRegulable' },
+    { id: 'precio', etiqueta: 'Precio máximo', control: 'rango', comparacion: 'max',
+      campo: 'tramoPrecio', min: 1, max: 4, step: 1, formatoSalida: 'tramoEuros' },
+    { id: 'respaldo', etiqueta: 'Respaldo', control: 'select', comparacion: 'igual', campo: 'specs.respaldo',
+      opciones: [{ valor: '', etiqueta: 'Cualquiera' }, { valor: 'malla', etiqueta: 'Malla' },
+        { valor: 'espuma', etiqueta: 'Espuma' }, { valor: 'mixto', etiqueta: 'Mixto' }] },
+    { id: 'brazos', etiqueta: 'Reposabrazos mín.', control: 'select', comparacion: 'min',
+      campo: 'specs.reposabrazos', transform: 'reposabrazosNivel',
+      opciones: [{ valor: '0', etiqueta: 'Cualquiera' }, { valor: '2', etiqueta: '2D o superior' },
+        { valor: '3', etiqueta: '3D o superior' }, { valor: '4', etiqueta: '4D' }] },
+    { id: 'prof', etiqueta: 'Profundidad regulable', control: 'check', comparacion: 'check',
+      campo: 'specs.profundidadRegulable' },
+    { id: 'peso', etiqueta: 'Soporta 130 kg o más', control: 'check', comparacion: 'umbral',
+      campo: 'specs.pesoMaxKg', umbral: 130 },
+  ],
+  ordenaciones: [
+    { id: 'valoracion', etiqueta: 'Mejor valoradas', campo: 'valoracion', direccion: 'desc' },
+    { id: 'precio-asc', etiqueta: 'Precio bajo a alto', campo: 'tramoPrecio', direccion: 'asc' },
+    { id: 'precio-desc', etiqueta: 'Precio alto a bajo', campo: 'tramoPrecio', direccion: 'desc' },
+    { id: 'peso-max', etiqueta: 'Mayor carga', campo: 'specs.pesoMaxKg', direccion: 'desc' },
+  ],
+  tarjetaChips: [
+    { campo: 'specs.lumbar', prefijo: 'Lumbar ', formato: 'enumLower:lumbar' },
+    { campo: 'specs.respaldo', formato: 'enum:respaldo' },
+    { campo: 'specs.pesoMaxKg', formato: 'kg' },
+    { campo: 'specs.garantiaAnios', formato: 'anios', mostrarSiNulo: { etiqueta: 'garantía n/d' } },
   ],
   comparador: [
     { grupo: 'Valoración por ejes', campo: 'valoraciones.ergonomia', etiqueta: 'Ergonomía', direccion: 'mayor' },
