@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Durrafy Silla Ergonómica"
 marca: "Durrafy"
-imagen: "https://m.media-amazon.com/images/I/619GSz1-BML._AC_SL300_.jpg"
+imagen: "/img/productos/durrafy-ergonomica.jpg"
 imagenAlt: "Silla ergonómica Durrafy económica"
 tramoPrecio: 1
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "HOLLUDLE Silla Ergonómica"
 marca: "HOLLUDLE"
-imagen: "https://m.media-amazon.com/images/I/71Gt43giOPL._AC_SL300_.jpg"
+imagen: "/img/productos/holludle-ergonomica.jpg"
 imagenAlt: "Silla ergonómica HOLLUDLE con profundidad de asiento regulable"
 tramoPrecio: 2
 precioMin: null

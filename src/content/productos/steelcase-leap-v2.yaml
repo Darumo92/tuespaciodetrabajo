@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Steelcase Leap V2"
 marca: "Steelcase"
-imagen: ""
+imagen: "/img/productos/steelcase-leap-v2.jpg"
 imagenAlt: "Silla ergonómica Steelcase Leap V2"
 tramoPrecio: 4
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Hbada Silla Ergonómica"
 marca: "Hbada"
-imagen: "https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL300_.jpg"
+imagen: "/img/productos/hbada-ergonomica.jpg"
 imagenAlt: "Silla ergonómica Hbada con reposapiés retráctil"
 tramoPrecio: 2
 precioMin: null

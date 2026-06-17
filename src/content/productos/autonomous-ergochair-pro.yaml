@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Autonomous ErgoChair Pro"
 marca: "Autonomous"
-imagen: ""
+imagen: "/img/productos/autonomous-ergochair-pro.webp"
 imagenAlt: "Silla ergonómica Autonomous ErgoChair Pro"
 tramoPrecio: 3
 precioMin: null

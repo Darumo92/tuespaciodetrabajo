@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "FlexiSpot C7 Lite"
 marca: "FlexiSpot"
-imagen: "https://m.media-amazon.com/images/I/41ie3wEJhPL._AC_SL300_.jpg"
+imagen: "/img/productos/flexispot-c7-lite.jpg"
 imagenAlt: "Silla ergonómica FlexiSpot C7 Lite"
 tramoPrecio: 2
 precioMin: null

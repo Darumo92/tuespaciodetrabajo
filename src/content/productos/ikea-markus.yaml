@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA MARKUS"
 marca: "IKEA"
-imagen: "https://www.ikea.com/es/es/images/products/markus-silla-trabajo-vissle-gris-oscuro__0728477_pe736538_s5.jpg"
+imagen: ""
 imagenAlt: "Silla de oficina IKEA MARKUS gris oscuro"
 tramoPrecio: 2
 precioMin: null
