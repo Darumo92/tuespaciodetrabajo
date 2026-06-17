@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "SIHOO M18"
 marca: "SIHOO"
-imagen: ""
+imagen: "/img/productos/sihoo-m18.jpg"
 imagenAlt: "Silla ergonómica SIHOO M18 respaldo alto malla"
 tramoPrecio: 2
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA MARKUS"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-markus.jpg"
 imagenAlt: "Silla de oficina IKEA MARKUS gris oscuro"
 tramoPrecio: 2
 precioMin: null

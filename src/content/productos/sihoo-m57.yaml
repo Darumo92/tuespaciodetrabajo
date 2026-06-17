@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "SIHOO M57"
 marca: "SIHOO"
-imagen: ""
+imagen: "/img/productos/sihoo-m57.jpg"
 imagenAlt: "Silla ergonómica SIHOO M57 malla negra"
 tramoPrecio: 2
 precioMin: null

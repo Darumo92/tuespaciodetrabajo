@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Herman Miller Embody"
 marca: "Herman Miller"
-imagen: ""
+imagen: "/img/productos/herman-miller-embody.jpg"
 imagenAlt: "Silla ergonómica Herman Miller Embody"
 tramoPrecio: 4
 precioMin: null

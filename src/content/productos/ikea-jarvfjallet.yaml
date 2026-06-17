@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA JÄRVFJÄLLET"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-jarvfjallet.jpg"
 imagenAlt: "Silla de oficina ergonómica IKEA JÄRVFJÄLLET"
 tramoPrecio: 2
 precioMin: null

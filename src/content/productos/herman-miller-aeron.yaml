@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Herman Miller Aeron"
 marca: "Herman Miller"
-imagen: ""
+imagen: "/img/productos/herman-miller-aeron.jpg"
 imagenAlt: "Silla ergonómica Herman Miller Aeron talla B"
 tramoPrecio: 4
 precioMin: null
