@@ -1,5 +1,7 @@
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
+import { getTipoConfig } from '@/lib/tipos';
+import { claveData } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 
 interface Props {
@@ -8,53 +10,47 @@ interface Props {
 }
 
 const { productos, tipo } = Astro.props;
+const cfg = getTipoConfig(tipo);
+const filtros = cfg?.filtros ?? [];
+const ordenaciones = cfg?.ordenaciones ?? [];
+
+const panelConfig = {
+  filtros: filtros.map((f) => ({
+    id: f.id, control: f.control, comparacion: f.comparacion, clave: claveData(f.campo),
+    umbral: f.umbral, formatoSalida: f.formatoSalida, max: f.max,
+  })),
+  ordenaciones: ordenaciones.map((o) => ({ id: o.id, clave: claveData(o.campo), direccion: o.direccion })),
+};
 ---
 
-<section class="catalogo" data-catalogo-root data-tipo={tipo}>
+<section class="catalogo" data-catalogo-root data-tipo={tipo} data-catalogo-config={JSON.stringify(panelConfig)}>
   <div class="catalogo-filtros" aria-label="Filtros de catálogo">
-    <label class="catalogo-field">
-      <span>Precio máximo</span>
-      <input type="range" class="f-precio" min="1" max="4" step="1" value="4" />
-      <output class="f-precio-out">Sin límite</output>
-    </label>
-
-    <label class="catalogo-field">
-      <span>Respaldo</span>
-      <select class="f-respaldo">
-        <option value="">Cualquiera</option>
-        <option value="malla">Malla</option>
-        <option value="espuma">Espuma</option>
-        <option value="mixto">Mixto</option>
-      </select>
-    </label>
-
-    <label class="catalogo-field">
-      <span>Reposabrazos mín.</span>
-      <select class="f-brazos">
-        <option value="0">Cualquiera</option>
-        <option value="2">2D o superior</option>
-        <option value="3">3D o superior</option>
-        <option value="4">4D</option>
-      </select>
-    </label>
-
-    <label class="catalogo-check">
-      <input type="checkbox" class="f-prof" />
-      <span>Profundidad regulable</span>
-    </label>
-
-    <label class="catalogo-check">
-      <input type="checkbox" class="f-peso" />
-      <span>Soporta 130 kg o más</span>
-    </label>
+    {filtros.map((f) => (
+      f.control === 'rango' ? (
+        <label class="catalogo-field">
+          <span>{f.etiqueta}</span>
+          <input type="range" data-filtro={f.id} min={f.min} max={f.max} step={f.step} value={f.max} />
+          <output class="catalogo-out" data-out={f.id}>Sin límite</output>
+        </label>
+      ) : f.control === 'select' ? (
+        <label class="catalogo-field">
+          <span>{f.etiqueta}</span>
+          <select data-filtro={f.id}>
+            {(f.opciones ?? []).map((o) => <option value={o.valor}>{o.etiqueta}</option>)}
+          </select>
+        </label>
+      ) : (
+        <label class="catalogo-check">
+          <input type="checkbox" data-filtro={f.id} />
+          <span>{f.etiqueta}</span>
+        </label>
+      )
+    ))}
 
     <label class="catalogo-field">
       <span>Ordenar</span>
-      <select class="f-orden">
-        <option value="valoracion">Mejor valoradas</option>
-        <option value="precio-asc">Precio bajo a alto</option>
-        <option value="precio-desc">Precio alto a bajo</option>
-        <option value="peso-max">Mayor carga</option>
+      <select data-orden>
+        {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
       </select>
     </label>
   </div>
@@ -129,7 +125,7 @@ const { productos, tipo } = Astro.props;
     accent-color: var(--accent);
   }
 
-  .f-precio-out {
+  .catalogo-out {
     min-height: 1rem;
     font-size: 0.75rem;
     color: var(--ink);
@@ -292,6 +288,9 @@ const { productos, tipo } = Astro.props;
 </style>
 
 <script>
+  type FiltroRT = { id: string; control: string; comparacion: string; clave: string; umbral?: number; formatoSalida?: string; max?: number };
+  type OrdenRT = { id: string; clave: string; direccion: 'asc' | 'desc' };
+
   const roots = document.querySelectorAll<HTMLElement>('[data-catalogo-root]');
 
   roots.forEach((root) => {
@@ -299,14 +298,17 @@ const { productos, tipo } = Astro.props;
     const grid = root.querySelector<HTMLElement>('.catalogo-grid');
     if (!grid) return;
 
+    let cfg: { filtros: FiltroRT[]; ordenaciones: OrdenRT[] };
+    try {
+      cfg = JSON.parse(root.dataset.catalogoConfig || '{"filtros":[],"ordenaciones":[]}');
+    } catch {
+      return;
+    }
+    const filtros = cfg.filtros || [];
+    const ordenaciones = cfg.ordenaciones || [];
+
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('.card'));
-    const fPrecio = root.querySelector<HTMLInputElement>('.f-precio');
-    const fPrecioOut = root.querySelector<HTMLOutputElement>('.f-precio-out');
-    const fRespaldo = root.querySelector<HTMLSelectElement>('.f-respaldo');
-    const fBrazos = root.querySelector<HTMLSelectElement>('.f-brazos');
-    const fProf = root.querySelector<HTMLInputElement>('.f-prof');
-    const fPeso = root.querySelector<HTMLInputElement>('.f-peso');
-    const fOrden = root.querySelector<HTMLSelectElement>('.f-orden');
+    const ordenSel = root.querySelector<HTMLSelectElement>('[data-orden]');
     const nOut = root.querySelector<HTMLElement>('.catalogo-n');
     const vacio = root.querySelector<HTMLElement>('.catalogo-vacio');
     const bar = root.querySelector<HTMLElement>('.cmp-bar');
@@ -315,11 +317,11 @@ const { productos, tipo } = Astro.props;
     const go = root.querySelector<HTMLAnchorElement>('.cmp-go');
     const clear = root.querySelector<HTMLButtonElement>('.cmp-clear');
 
-    if (!fPrecio || !fPrecioOut || !fRespaldo || !fBrazos || !fProf || !fPeso || !fOrden) return;
     if (!bar || !nEl || !copyEl || !go || !clear) return;
 
-    const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
-    const KEY = `comparar-${tipo}`;
+    const controlDe = (id: string) => root.querySelector<HTMLInputElement | HTMLSelectElement>(`[data-filtro="${id}"]`);
+    const dataKey = (clave: string) => 'c' + clave.charAt(0).toUpperCase() + clave.slice(1);
+    const readCard = (card: HTMLElement, clave: string) => card.dataset[dataKey(clave)];
 
     const toNumber = (value: string | undefined): number | null => {
       if (value == null || value === '') return null;
@@ -329,15 +331,15 @@ const { productos, tipo } = Astro.props;
 
     const compare = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
 
+    const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
+    const KEY = `comparar-${tipo}`;
     const validSlugs = new Set(checks.map((check) => check.value));
 
     const readStoredSelection = (): string[] => {
       try {
         const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
         if (!Array.isArray(parsed)) return [];
-        return parsed
-          .filter((value): value is string => typeof value === 'string')
-          .slice(0, 4);
+        return parsed.filter((value): value is string => typeof value === 'string').slice(0, 4);
       } catch {
         return [];
       }
@@ -347,9 +349,7 @@ const { productos, tipo } = Astro.props;
 
     const saveSelection = (selection: string[]) => {
       const maxPreserved = Math.max(0, 4 - selection.length);
-      const preserved = readStoredSelection()
-        .filter((slug) => !validSlugs.has(slug))
-        .slice(0, maxPreserved);
+      const preserved = readStoredSelection().filter((slug) => !validSlugs.has(slug)).slice(0, maxPreserved);
       localStorage.setItem(KEY, JSON.stringify([...preserved, ...selection].slice(0, 4)));
     };
 
@@ -377,55 +377,72 @@ const { productos, tipo } = Astro.props;
       go.href = canCompare ? `/comparar/${tipo}/?s=${selection.join(',')}` : `/comparar/${tipo}/`;
     };
 
+    const salidaRango = (f: FiltroRT, val: number): string => {
+      if (f.formatoSalida === 'tramoEuros') {
+        return val >= (f.max ?? Infinity) ? 'Sin límite' : `Hasta ${'€'.repeat(val)}`;
+      }
+      return String(val);
+    };
+
     const applyFilters = () => {
-      const tramoMax = Number(fPrecio.value);
-      const sinLimite = tramoMax >= Number(fPrecio.max);
-      fPrecioOut.textContent = sinLimite ? 'Sin límite' : `Hasta ${'€'.repeat(tramoMax)}`;
+      filtros.forEach((f) => {
+        if (f.control !== 'rango') return;
+        const ctrl = controlDe(f.id);
+        const out = root.querySelector<HTMLOutputElement>(`[data-out="${f.id}"]`);
+        if (ctrl && out) out.textContent = salidaRango(f, Number((ctrl as HTMLInputElement).value));
+      });
 
       let visibles = 0;
       cards.forEach((card) => {
-        const tramo = toNumber(card.dataset.tramo);
-        const respaldo = card.dataset.respaldo || '';
-        const brazos = toNumber(card.dataset.brazos) ?? 0;
-        const prof = card.dataset.prof === '1';
-        const peso = toNumber(card.dataset.peso);
         let visible = true;
-
-        if (tramo != null && tramo > tramoMax) visible = false;
-        if (fRespaldo.value && respaldo !== fRespaldo.value) visible = false;
-        if (Number(fBrazos.value) > brazos) visible = false;
-        if (fProf.checked && !prof) visible = false;
-        if (fPeso.checked && (peso == null || peso < 130)) visible = false;
-
+        for (const f of filtros) {
+          const ctrl = controlDe(f.id);
+          if (!ctrl) continue;
+          const cv = readCard(card, f.clave) ?? '';
+          if (f.comparacion === 'max') {
+            const n = toNumber(cv);
+            if (n != null && n > Number((ctrl as HTMLInputElement).value)) visible = false;
+          } else if (f.comparacion === 'igual') {
+            const sel = (ctrl as HTMLSelectElement).value;
+            if (sel && cv !== sel) visible = false;
+          } else if (f.comparacion === 'min') {
+            const n = toNumber(cv) ?? 0;
+            if (Number((ctrl as HTMLSelectElement).value) > n) visible = false;
+          } else if (f.comparacion === 'check') {
+            if ((ctrl as HTMLInputElement).checked && cv !== '1') visible = false;
+          } else if (f.comparacion === 'umbral') {
+            const n = toNumber(cv);
+            if ((ctrl as HTMLInputElement).checked && (n == null || n < (f.umbral ?? Infinity))) visible = false;
+          }
+        }
         card.hidden = !visible;
         if (visible) visibles += 1;
       });
 
-      const visibleCards = cards.filter((card) => !card.hidden);
-      const sortValue = (card: HTMLElement, key: string) => toNumber(card.dataset[key]);
+      const orden = ordenaciones.find((o) => o.id === ordenSel?.value) || ordenaciones[0];
+      if (orden) {
+        const worst = orden.direccion === 'asc' ? Infinity : -Infinity;
+        cards.filter((card) => !card.hidden).sort((a, b) => {
+          const x = toNumber(readCard(a, orden.clave)) ?? worst;
+          const y = toNumber(readCard(b, orden.clave)) ?? worst;
+          return orden.direccion === 'asc' ? compare(x, y) : compare(y, x);
+        }).forEach((card) => grid.appendChild(card));
+      }
 
-      visibleCards.sort((a, b) => {
-        if (fOrden.value === 'precio-asc') {
-          return compare(sortValue(a, 'tramo') ?? Infinity, sortValue(b, 'tramo') ?? Infinity);
-        }
-        if (fOrden.value === 'precio-desc') {
-          return compare(sortValue(b, 'tramo') ?? -Infinity, sortValue(a, 'tramo') ?? -Infinity);
-        }
-        if (fOrden.value === 'peso-max') {
-          return compare(sortValue(b, 'peso') ?? -Infinity, sortValue(a, 'peso') ?? -Infinity);
-        }
-        return compare(sortValue(b, 'valoracion') ?? 0, sortValue(a, 'valoracion') ?? 0);
-      });
-
-      visibleCards.forEach((card) => grid.appendChild(card));
       if (nOut) nOut.textContent = String(visibles);
       if (vacio) vacio.hidden = visibles > 0;
     };
 
-    [fPrecio, fRespaldo, fBrazos, fProf, fPeso, fOrden].forEach((control) => {
-      control.addEventListener('input', applyFilters);
-      control.addEventListener('change', applyFilters);
+    filtros.forEach((f) => {
+      const ctrl = controlDe(f.id);
+      if (!ctrl) return;
+      ctrl.addEventListener('input', applyFilters);
+      ctrl.addEventListener('change', applyFilters);
     });
+    if (ordenSel) {
+      ordenSel.addEventListener('input', applyFilters);
+      ordenSel.addEventListener('change', applyFilters);
+    }
 
     checks.forEach((check) => {
       check.addEventListener('change', () => {

@@ -1,33 +1,19 @@
 ---
 import BotonPrecio from '../BotonPrecio.astro';
 import ImagenProducto from './ImagenProducto.astro';
-import { notaGlobal, tramoTexto, etiquetaEnum, reposabrazosNivel, getCampo, type Producto } from '@/lib/productos';
+import { notaGlobal, tramoTexto, datosFiltrado, construirChips, type Producto } from '@/lib/productos';
+import { getTipoConfig } from '@/lib/tipos';
 
 interface Props { producto: Producto; }
 
 const { producto: p } = Astro.props;
 const global = notaGlobal(p);
-const respaldo = getCampo(p, 'specs.respaldo') as string | null;
-const garantia = getCampo(p, 'specs.garantiaAnios') as number | null;
-const pesoMax = getCampo(p, 'specs.pesoMaxKg') as number | null;
-const lumbar = getCampo(p, 'specs.lumbar') as string | null;
-const reposabrazos = getCampo(p, 'specs.reposabrazos') as string | null;
-const chips = [
-  lumbar ? `Lumbar ${etiquetaEnum('lumbar', lumbar).toLowerCase()}` : null,
-  respaldo ? etiquetaEnum('respaldo', respaldo) : null,
-  pesoMax == null ? null : `${pesoMax} kg`,
-  garantia == null ? 'garantía n/d' : `${garantia} años`,
-].filter((c): c is string => c != null);
+const cfg = getTipoConfig(p.tipo);
+const dataAttrs = cfg ? datosFiltrado(p, cfg) : {};
+const chips = cfg ? construirChips(p, cfg) : [];
 ---
 
-<article class="card"
-  data-slug={p.slug}
-  data-tramo={p.tramoPrecio}
-  data-respaldo={respaldo ?? ''}
-  data-brazos={reposabrazos ? reposabrazosNivel(reposabrazos) : 0}
-  data-prof={getCampo(p, 'specs.profundidadRegulable') ? '1' : '0'}
-  data-peso={pesoMax ?? ''}
-  data-valoracion={p.valoracion ?? 0}>
+<article class="card" data-slug={p.slug} {...dataAttrs}>
   <label class="card-cmp">
     <input type="checkbox" class="cmp-chk" value={p.slug} />
     comparar <span class="sr-only">{p.nombre}</span>
@@ -41,7 +27,7 @@ const chips = [
       <span class="card-price">{tramoTexto(p.tramoPrecio)}</span>
     </p>
     <div class="card-chips">
-      {chips.map((c) => <span class={`chip${c.includes('n/d') ? ' chip-nd' : ''}`}>{c}</span>)}
+      {chips.map((c) => <span class={`chip${c.nd ? ' chip-nd' : ''}`}>{c.texto}</span>)}
     </div>
     <BotonPrecio amazon={p.amazon} webOficial={p.webOficial} nombre={p.nombre} />
   </div>
