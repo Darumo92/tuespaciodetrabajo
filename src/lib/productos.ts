@@ -128,6 +128,21 @@ export function valorComparacion(p: Producto, filtro: FiltroConfig): string {
   return raw == null ? '' : String(raw);
 }
 
+/** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
+export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const f of cfg.filtros) {
+    out[`data-c-${claveData(f.campo)}`] = valorComparacion(p, f);
+  }
+  for (const o of cfg.ordenaciones) {
+    const key = `data-c-${claveData(o.campo)}`;
+    if (key in out) continue; // ya emitido por un filtro con el mismo campo
+    const raw = getCampo(p, o.campo);
+    out[key] = raw == null ? '' : String(raw);
+  }
+  return out;
+}
+
 export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
   if (amazon?.asin) {
     return `https://www.amazon.es/dp/${amazon.asin}?tag=${AMAZON_TAG}`;

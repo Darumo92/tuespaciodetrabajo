@@ -13,9 +13,12 @@ import {
   buildAmazonHref,
   claveData,
   valorComparacion,
+  datosFiltrado,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
 import type { FiltroConfig } from './tipos';
+import { getTipoConfig } from './tipos';
+import type { TipoConfig } from './tipos';
 
 const COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
 const PARCIALES: Valoraciones = { ergonomia: 9, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: 6 };
@@ -132,6 +135,57 @@ describe('buildAmazonHref', () => {
     expect(buildAmazonHref({ asin: 'B0TEST1234', buscar: null })).toBe('https://www.amazon.es/dp/B0TEST1234?tag=tuespaciodet-21');
     expect(buildAmazonHref({ asin: null, buscar: 'silla ergonomica' })).toBeNull();
     expect(buildAmazonHref({ asin: null, buscar: null })).toBeNull();
+  });
+});
+
+const productoSilla = {
+  slug: 'demo', tipo: 'silla', nombre: 'Demo', marca: 'X', imagen: '', imagenAlt: '',
+  tramoPrecio: 3, precioMin: null, precioMax: null, valoracion: 4.5,
+  valoraciones: { ergonomia: null, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: null },
+  amazon: { asin: null, buscar: null }, webOficial: null,
+  paraQuienSi: [], paraQuienNo: [], puntosFuertes: [], puntosDebiles: [], fuenteSpecs: '',
+  specs: { tipo: 'silla', respaldo: 'malla', reposabrazos: '3d', profundidadRegulable: true, pesoMaxKg: 150 },
+} as never;
+
+describe('datosFiltrado: silla', () => {
+  it('emite los 6 data-c-<clave> derivados de filtros y ordenaciones', () => {
+    const cfg = getTipoConfig('silla') as TipoConfig;
+    const d = datosFiltrado(productoSilla, cfg);
+    expect(d['data-c-tramoprecio']).toBe('3');
+    expect(d['data-c-respaldo']).toBe('malla');
+    expect(d['data-c-reposabrazos']).toBe('3'); // nivel de 3d
+    expect(d['data-c-profundidadregulable']).toBe('1');
+    expect(d['data-c-pesomaxkg']).toBe('150');
+    expect(d['data-c-valoracion']).toBe('4.5');
+    expect(Object.keys(d).length).toBe(6); // precio/peso comparten clave con sus ordenaciones
+  });
+});
+
+// Mock de categoría nueva: añadir un TipoConfig => la card y el filtrado funcionan sin tocar componentes.
+const escritorio: TipoConfig = {
+  slug: 'escritorio' as never, labelSingular: 'Escritorio', labelPlural: 'Escritorios', icono: '🖥️',
+  ejes: [],
+  filtros: [
+    { id: 'altura', etiqueta: 'Altura mín. máx', control: 'rango', comparacion: 'max', campo: 'specs.alturaMinCm', min: 60, max: 80, step: 1 },
+    { id: 'motor', etiqueta: 'Motorizado', control: 'check', comparacion: 'check', campo: 'specs.motorizado' },
+  ],
+  ordenaciones: [
+    { id: 'rango', etiqueta: 'Mayor recorrido', campo: 'specs.alturaMaxCm', direccion: 'desc' },
+  ],
+  tarjetaChips: [
+    { campo: 'specs.motorizado', formato: 'bool', prefijo: 'Motor: ' },
+  ],
+  comparador: [], fichaSpecs: [],
+};
+
+describe('datosFiltrado: categoría nueva (escritorio mock)', () => {
+  it('deriva data-c-* de la nueva config sin código específico', () => {
+    const p = { specs: { tipo: 'escritorio', alturaMinCm: 65, alturaMaxCm: 125, motorizado: true } } as never;
+    const d = datosFiltrado(p, escritorio);
+    expect(d['data-c-alturamincm']).toBe('65');
+    expect(d['data-c-motorizado']).toBe('1');
+    expect(d['data-c-alturamaxcm']).toBe('125');
+    expect(Object.keys(d).length).toBe(3);
   });
 });
 
