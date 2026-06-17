@@ -1,5 +1,4 @@
 ---
-import BotonPrecio from '../BotonPrecio.astro';
 import ImagenProducto from './ImagenProducto.astro';
 import { notaGlobal, tramoTexto, datosFiltrado, construirChips, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
@@ -29,7 +28,6 @@ const chips = cfg ? construirChips(p, cfg) : [];
     <div class="card-chips">
       {chips.map((c) => <span class={`chip${c.nd ? ' chip-nd' : ''}`}>{c.texto}</span>)}
     </div>
-    <BotonPrecio amazon={p.amazon} webOficial={p.webOficial} nombre={p.nombre} />
   </div>
 </article>
 
