@@ -146,6 +146,11 @@
   padding: 0;
 }
 
+/* El atributo [hidden] debe ganar a cualquier display de autor (tarjetas filtradas, barra de comparar) */
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 1rem);
