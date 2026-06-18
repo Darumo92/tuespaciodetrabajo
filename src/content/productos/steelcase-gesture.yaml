@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Steelcase Gesture"
 marca: "Steelcase"
-imagen: "/img/productos/steelcase-gesture.jpg"
+imagen: "/img/productos/steelcase-gesture.webp"
 imagenAlt: "Silla ergonómica Steelcase Gesture"
 tramoPrecio: 4
 precioMin: null
