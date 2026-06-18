@@ -5,10 +5,20 @@ const { imagen, imagenAlt, marca, nombre, size = 200 } = Astro.props;
 const tieneImagen = imagen != null && imagen.trim() !== '';
 ---
 {tieneImagen ? (
-  <img src={imagen} alt={imagenAlt ?? nombre} width={size} height={size} loading="lazy" decoding="async" class="img-prod" />
+  <img src={imagen} alt={imagenAlt ?? nombre} width={size} height={size} loading="lazy" decoding="async" class="img-prod" style={`--img-box:${size}px`} />
 ) : (
   <FallbackImagen marca={marca} nombre={nombre} size={size} />
 )}
 <style>
-  .img-prod { object-fit: contain; background: var(--surface-muted); border-radius: var(--radius); padding: 0.5rem; flex-shrink: 0; }
+  .img-prod {
+    width: var(--img-box, 200px);
+    height: var(--img-box, 200px);
+    max-width: 100%;
+    object-fit: contain;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    flex-shrink: 0;
+  }
 </style>

@@ -22,7 +22,7 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
 ---
 <article class="ficha">
   <header class="ficha-header">
-    <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={200} />
+    <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={360} />
     <div>
       <p class="ficha-marca">{p.marca}</p>
       <h1 class="ficha-nombre">{p.nombre}</h1>
@@ -62,6 +62,7 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
 </article>
 <style>
   .ficha-header { display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: flex-start; margin-bottom: 1.5rem; }
+  .ficha-header > div { flex: 1; min-width: min(100%, 17rem); }
   .ficha-marca { text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; color: var(--ink-muted); margin: 0; }
   .ficha-nombre { font-family: var(--font-display); margin: 0.2rem 0 0.5rem; }
   .ficha-precio { font-weight: 700; font-size: 1.2rem; margin: 0 0 0.5rem; display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; color: var(--accent); }
