@@ -32,6 +32,13 @@ const ejesValoracion = z.object({
   calidadPrecio: z.number().min(0).max(10).nullable().default(null),
 }).default({});
 
+const mercadoAmazon = z.object({
+  mercado: z.string(),
+  asin: z.string().nullable().default(null),
+  disponibilidad: z.enum(['available', 'unknown', 'unavailable']).default('unknown'),
+  verificadoEn: z.string().optional(),
+});
+
 const specsSilla = z.object({
   tipo: z.literal('silla'),
   lumbar: z.enum(['fijo', 'presion', 'altura', 'dinamico', '5d']),
@@ -49,6 +56,18 @@ const specsSilla = z.object({
   certificacionBifma: z.boolean().nullable().default(null),
   pesoProductoKg: z.number().nullable().default(null),
   garantiaAnios: z.number().nullable().default(null),
+  alturaRecomendadaMinCm: z.number().nullable().default(null),
+  alturaRecomendadaMaxCm: z.number().nullable().default(null),
+  anchoAsientoCm: z.number().nullable().default(null),
+  profundidadAsientoMinCm: z.number().nullable().default(null),
+  profundidadAsientoMaxCm: z.number().nullable().default(null),
+  alturaRespaldoCm: z.number().nullable().default(null),
+  reposacabezas: z.enum(['ninguno', 'fijo', 'ajustable']).nullable().default(null),
+  asientoMaterial: z.string().nullable().default(null),
+  ruedasSueloDuro: z.boolean().nullable().default(null),
+  certificacionEn1335: z.boolean().nullable().default(null),
+  montajeMinutos: z.number().nullable().default(null),
+  devolucionDias: z.number().nullable().default(null),
 });
 
 const productos = defineCollection({
@@ -68,6 +87,9 @@ const productos = defineCollection({
       asin: z.string().nullable().default(null),
       buscar: z.string().nullable().default(null),
     }).default({}),
+    amazonPrimaryMarket: z.string().default('ES'),
+    mercadosAmazon: z.array(mercadoAmazon).default([]),
+    oneLinkReady: z.boolean().default(false),
     webOficial: z.string().nullable().default(null),
     idealPara: z.string().optional(),
     veredicto: z.string().optional(),

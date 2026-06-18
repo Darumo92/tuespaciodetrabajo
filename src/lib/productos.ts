@@ -21,6 +21,14 @@ export interface Producto {
   valoracion: number | null;
   valoraciones: Valoraciones;
   amazon: { asin: string | null; buscar: string | null };
+  amazonPrimaryMarket?: string;
+  mercadosAmazon?: {
+    mercado: string;
+    asin: string | null;
+    disponibilidad: 'available' | 'unknown' | 'unavailable';
+    verificadoEn?: string;
+  }[];
+  oneLinkReady?: boolean;
   webOficial: string | null;
   idealPara?: string;
   veredicto?: string;

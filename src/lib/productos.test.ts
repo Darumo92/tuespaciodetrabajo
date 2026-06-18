@@ -209,12 +209,21 @@ const productoSilla = {
   tramoPrecio: 3, precioMin: null, precioMax: null, valoracion: 4.5,
   valoraciones: { ergonomia: null, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: null },
   amazon: { asin: null, buscar: null }, webOficial: null,
+  amazonPrimaryMarket: 'ES',
+  mercadosAmazon: [
+    { mercado: 'ES', asin: 'B000000001', disponibilidad: 'available', verificadoEn: '2026-06-18' },
+    { mercado: 'US', asin: 'B000000002', disponibilidad: 'available', verificadoEn: '2026-06-18' },
+  ],
+  oneLinkReady: true,
   paraQuienSi: [], paraQuienNo: [], puntosFuertes: [], puntosDebiles: [], fuenteSpecs: '',
-  specs: { tipo: 'silla', respaldo: 'malla', reposabrazos: '3d', profundidadRegulable: true, pesoMaxKg: 150 },
+  specs: {
+    tipo: 'silla', respaldo: 'malla', reposabrazos: '3d', profundidadRegulable: true, pesoMaxKg: 150,
+    alturaRecomendadaMinCm: 160, alturaRecomendadaMaxCm: 190, reposacabezas: 'ajustable', profundidadAsientoMaxCm: 48,
+  },
 } as never;
 
 describe('datosFiltrado: silla', () => {
-  it('emite los 6 data-c-<clave> derivados de filtros y ordenaciones', () => {
+  it('emite los data-c-<clave> derivados de filtros y ordenaciones', () => {
     const cfg = getTipoConfig('silla') as TipoConfig;
     const d = datosFiltrado(productoSilla, cfg);
     expect(d['data-c-tramoprecio']).toBe('3');
@@ -223,7 +232,18 @@ describe('datosFiltrado: silla', () => {
     expect(d['data-c-profundidadregulable']).toBe('1');
     expect(d['data-c-pesomaxkg']).toBe('150');
     expect(d['data-c-valoracion']).toBe('4.5');
-    expect(Object.keys(d).length).toBe(6); // precio/peso comparten clave con sus ordenaciones
+    expect(d['data-c-alturarecomendadamincm']).toBeDefined();
+    expect(d['data-c-alturarecomendadamaxcm']).toBeDefined();
+    expect(d['data-c-reposacabezas']).toBeDefined();
+    expect(Object.keys(d).length).toBe(9); // precio/peso comparten clave con sus ordenaciones
+  });
+});
+
+describe('productoSilla: campos de mercado Amazon/OneLink', () => {
+  it('preserva amazonPrimaryMarket, mercadosAmazon y oneLinkReady', () => {
+    expect(productoSilla.amazonPrimaryMarket).toBe('ES');
+    expect(productoSilla.mercadosAmazon?.map((m) => m.mercado)).toEqual(['ES', 'US']);
+    expect(productoSilla.oneLinkReady).toBe(true);
   });
 });
 
