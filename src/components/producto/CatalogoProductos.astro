@@ -29,7 +29,7 @@ const panelConfig = {
       f.control === 'rango' ? (
         <label class="catalogo-field">
           <span>{f.etiqueta}</span>
-          <input type="range" data-filtro={f.id} min={f.min} max={f.max} step={f.step} value={f.max} />
+          <input type="range" data-filtro={f.id} min={f.min} max={f.max} step={f.step} value={f.comparacion === 'min' ? f.min : f.max} />
           <output class="catalogo-out" data-out={f.id}>Sin límite</output>
         </label>
       ) : f.control === 'select' ? (
@@ -406,8 +406,8 @@ const panelConfig = {
             const sel = (ctrl as HTMLSelectElement).value;
             if (sel && cv !== sel) visible = false;
           } else if (f.comparacion === 'min') {
-            const n = toNumber(cv) ?? 0;
-            if (Number((ctrl as HTMLSelectElement).value) > n) visible = false;
+            const n = toNumber(cv);
+            if (n != null && Number((ctrl as HTMLSelectElement).value) > n) visible = false;
           } else if (f.comparacion === 'check') {
             if ((ctrl as HTMLInputElement).checked && cv !== '1') visible = false;
           } else if (f.comparacion === 'umbral') {
