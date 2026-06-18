@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Steelcase Series 1"
 marca: "Steelcase"
-imagen: ""
+imagen: "/img/productos/steelcase-series-1.webp"
 imagenAlt: "Silla ergonómica Steelcase Series 1 respaldo de malla"
 tramoPrecio: 3
 precioMin: null

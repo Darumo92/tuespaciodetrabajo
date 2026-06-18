@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA MATCHSPEL"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-matchspel.avif"
 imagenAlt: "Silla gaming IKEA MATCHSPEL respaldo de malla"
 tramoPrecio: 1
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "noblechairs HERO"
 marca: "noblechairs"
-imagen: ""
+imagen: "/img/productos/noblechairs-hero.jpg"
 imagenAlt: "Silla gaming noblechairs HERO con soporte lumbar integrado"
 tramoPrecio: 3
 precioMin: null

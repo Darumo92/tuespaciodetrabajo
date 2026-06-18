@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA LÅNGFJÄLL"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-langfjall.avif"
 imagenAlt: "Silla de trabajo IKEA LÅNGFJÄLL tapizada con respaldo medio"
 tramoPrecio: 2
 precioMin: null
