@@ -17,3 +17,15 @@
 - No afirmar disponibilidad global: registrar mercados concretos y fecha de verificacion.
 - No inventar ASINs por pais; OneLink solo se activa sobre enlaces Amazon verificables.
 - No afirmar "probada" salvo producto real del setup de David.
+
+## Auditoria catalogo actual (2026-06-18)
+
+19 sillas existentes auditadas e incorporadas al backlog con `estado=published`. Hallazgos:
+
+- Todas tienen `fuenteSpecs`, `comunidad` e imagen local presente (sin imagenes rotas).
+- **Sin ASIN, premium con CTA solo web oficial** (no OneLink directo): herman-miller-aeron, herman-miller-embody, steelcase-gesture, steelcase-leap-v2, hag-capisco, haworth-fern, autonomous-ergochair-pro.
+- **Sin ASIN pero con Amazon search como CTA** (OneLink sobre busqueda): ikea-markus, ikea-jarvfjallet, secretlab-titan-evo, sihoo-m18, sihoo-m57, songmics-obn55bk. Revisar que la busqueda no devuelva resultados irrelevantes (IKEA/Secretlab no se venden directos en Amazon).
+- **Con ASIN ES verificado**: durrafy, flexispot-c7-lite, hbada-ergonomica, holludle-ergonomica, sihoo-doro-c300, sihoo-m102c.
+- **Fichas pobres (muchos specs null)**: holludle-ergonomica (9 null), autonomous-ergochair-pro (6), hbada-ergonomica (6), secretlab-titan-evo (6).
+- **Incidencia a resolver**: hbada-ergonomica apunta a ASIN `B0CH7RBQQ7` (modelo P5 con lumbar/reposabrazos ajustables) pero las specs describen el modelo basico. Decidir: corregir specs a P5 o repuntar ASIN.
+- Ningun `asin_by_market` poblado todavia: cobertura multimercado pendiente de verificacion en Tasks 6-9.
