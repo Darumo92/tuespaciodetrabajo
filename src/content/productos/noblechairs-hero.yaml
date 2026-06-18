@@ -1,0 +1,66 @@
+tipo: "silla"
+nombre: "noblechairs HERO"
+marca: "noblechairs"
+imagen: ""
+imagenAlt: "Silla gaming noblechairs HERO con soporte lumbar integrado"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: "noblechairs HERO silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: true
+webOficial: "https://help.noblechairs.com/hc/en-us/articles/31062021686429-Which-noblechair-fits-my-height-weight"
+idealPara: "Personas altas o de complexión grande que usan una gaming para teletrabajar"
+veredicto: "La HERO es de las pocas gaming pensada de serie para cuerpos grandes: soporta 150 kg, está recomendada hasta 200 cm de estatura e integra un soporte lumbar ajustable de cuatro vías dentro del respaldo, sin cojines sueltos. A cambio, el acolchado es firme y, como toda gaming, prioriza el respaldo envolvente sobre la transpirabilidad de una malla."
+comunidad: "Reviews (Tom's Hardware, ChairsFX) la consideran una de las gaming más sólidas para uso prolongado por su lumbar integrado y su capacidad de carga; la crítica recurrente es que el acolchado resulta firme y que el calor se nota frente a una silla de malla."
+paraQuienSi:
+  - "Personas altas (hasta ~200 cm) o de peso alto (hasta 150 kg)"
+  - "Quien quiere lumbar integrado ajustable sin cojines sueltos"
+  - "Uso mixto teletrabajo y gaming con respaldo envolvente"
+paraQuienNo:
+  - "Quien prefiere malla transpirable en climas cálidos"
+  - "Quien busca acolchado blando"
+  - "Espacios muy pequeños (es una silla voluminosa)"
+puntosFuertes:
+  - "Soporta hasta 150 kg y recomendada hasta 200 cm de estatura"
+  - "Soporte lumbar de 4 vías integrado en el respaldo"
+  - "Reposabrazos 4D"
+  - "Base de aluminio resistente"
+  - "Reclinación del respaldo hasta 135°"
+puntosDebiles:
+  - "Acolchado firme, periodo de adaptación"
+  - "Menos transpirable que una silla de malla"
+  - "Garantía estándar de 2 años (inferior a las premium de oficina)"
+fuenteSpecs: "Centro de ayuda oficial noblechairs (help.noblechairs.com, guía altura/peso) + manual de usuario HERO (manua.ls/noblechairs/hero) + reviews Tom's Hardware y ChairsFX"
+verificadoEn: "2026-06-18"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 150
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "Balancín con bloqueo e inclinación"
+  baseMaterial: "aluminio"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 2
+  alturaRecomendadaMinCm: 150
+  alturaRecomendadaMaxCm: 200
+  reposacabezas: "ninguno"
+  asientoMaterial: "espuma fría"
