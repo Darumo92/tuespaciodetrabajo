@@ -52,8 +52,22 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
 
   <ParaQuien si={p.paraQuienSi ?? []} no={p.paraQuienNo ?? []} />
 
-  {p.puntosFuertes.length > 0 && (<><h2>Lo que destaca</h2><ul>{p.puntosFuertes.map((x) => <li>{x}</li>)}</ul></>)}
-  {p.puntosDebiles.length > 0 && (<><h2>Lo que no convence</h2><ul>{p.puntosDebiles.map((x) => <li>{x}</li>)}</ul></>)}
+  {(p.puntosFuertes.length > 0 || p.puntosDebiles.length > 0) && (
+    <div class="ficha-balance">
+      {p.puntosFuertes.length > 0 && (
+        <div class="balance-col balance-pro">
+          <h2>Lo que destaca</h2>
+          <ul>{p.puntosFuertes.map((x) => <li>{x}</li>)}</ul>
+        </div>
+      )}
+      {p.puntosDebiles.length > 0 && (
+        <div class="balance-col balance-con">
+          <h2>Lo que no convence</h2>
+          <ul>{p.puntosDebiles.map((x) => <li>{x}</li>)}</ul>
+        </div>
+      )}
+    </div>
+  )}
 
   <p class="ficha-fuente">
     Datos: {p.fuenteSpecs}{p.verificadoEn ? ` · verificado el ${p.verificadoEn}` : ''}.
@@ -77,5 +91,13 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
   .ficha-specs th { width: 50%; color: var(--ink-muted); font-weight: 600; }
   .ficha-nd { color: var(--ink-muted); font-style: italic; }
   .ficha-comunidad { background: var(--surface-muted); border-radius: var(--radius); padding: 1rem 1.1rem; font-size: 0.92rem; }
+  .ficha-balance { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+  .balance-col { border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem 1.15rem; background: var(--surface); }
+  .balance-col h2 { font-size: 0.95rem; margin: 0 0 0.6rem; }
+  .balance-col ul { list-style: none; padding: 0; margin: 0; }
+  .balance-col li { position: relative; padding: 0.3rem 0 0.3rem 1.4rem; font-size: 0.9rem; }
+  .balance-pro li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+  .balance-con li::before { content: "✕"; position: absolute; left: 0; color: var(--ink-muted); font-weight: 700; }
+  @media (max-width: 560px) { .ficha-balance { grid-template-columns: 1fr; } }
   .ficha-fuente { font-size: 0.8rem; color: var(--ink-muted); border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem; }
 </style>
