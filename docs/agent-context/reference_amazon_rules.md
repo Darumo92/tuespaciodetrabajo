@@ -27,7 +27,9 @@
 - Nunca incluir `?tag=tuespaciodet-21` en las URLs MDX — los componentes lo añaden solos
 - **Nunca usar links markdown a `/dp/ASIN`** (ej: `[Producto](/dp/ASIN)`) — da 404. Usar siempre `<AffiliateButton href="/dp/ASIN" tienda="amazon" texto="Ver Producto en Amazon" />`
 - **Props de AffiliateButton:** siempre `href` (no `enlace`), `tienda="amazon"` y `texto`
-- Usar URLs directas `/dp/ASIN` (no URLs de búsqueda `/s?k=`)
+- Usar URLs directas `/dp/ASIN` cuando el ASIN esté verificado.
+- Para productos sin ASIN verificado, el fallback comercial por defecto debe ser una búsqueda interna de Amazon.es (`https://www.amazon.es/s?k=<query>&tag=tuespaciodet-21`) desde los componentes, no desde markdown manual. Usar la web oficial solo como enlace secundario de referencia/fuente o cuando la búsqueda de Amazon sea claramente engañosa. Validar el formato con Amazon Associates antes de desplegarlo de forma masiva.
+- No usar Google u otros motores de búsqueda externos como fallback de afiliación: Amazon España excluye compras cuando el cliente llega a Amazon desde un motor de búsqueda externo.
 - Imágenes de producto: usar siempre `_AC_SL300_` en la URL, nunca `_AC_SL1500_`
 
 ## Imágenes de artículos
