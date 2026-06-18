@@ -19,6 +19,43 @@ amazon:
 webOficial: "https://esstore.hermanmiller.com/collections/aeron-chairs"
 idealPara: "Profesionales que buscan la referencia absoluta en malla transpirable y soporte sacrolumbar"
 veredicto: "La Aeron es la referencia mundial en sillas de malla: PostureFit SL y la suspensión 8Z Pellicle ofrecen un soporte sacrolumbar que no tiene equivalente, aunque su precio y la necesidad de elegir la talla correcta son barreras reales."
+resumenCompra:
+  mejorPara: "Jornadas largas en climas cálidos, usuarios que priorizan malla transpirable y soporte sacrolumbar."
+  evitarSi: "Prefieres asiento acolchado, necesitas profundidad de asiento regulable de serie o no tienes clara la talla."
+  alternativaDirecta: "Steelcase Leap V2 si buscas más ajustes en un respaldo tapizado."
+  decisionRapida: "La compraría si quieres una silla premium de malla y puedes elegir bien la talla; no es la opción más flexible por euro invertido."
+metodologia:
+  - "Se han ponderado specs oficiales, disponibilidad de tallas, garantía y ajustes críticos para jornada completa."
+  - "La valoración penaliza la ausencia de profundidad de asiento regulable y el coste de entrada frente a otras premium."
+  - "Las notas se apoyan en fuentes oficiales citadas en fuenteSpecs y en señales de comunidad ya recogidas en la ficha."
+scoreRationale:
+  ergonomia: "PostureFit SL y malla 8Z Pellicle justifican una nota muy alta en soporte y transpirabilidad."
+  ajustabilidad: "Buena configuración general, pero pierde puntos por no incluir profundidad de asiento regulable."
+  materiales: "Malla, estructura y garantía la sitúan entre las referencias premium."
+  comodidad: "Muy sólida para quien encaja en su talla, menos universal que una silla acolchada."
+  calidadPrecio: "El precio nuevo en España limita su valor relativo pese a la durabilidad."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Herman Miller Aeron specs"
+    url: "https://www.hermanmiller.com/products/seating/office-chairs/aeron-chairs/specs/"
+    fechaConsulta: "2026-06-06"
+  - tipo: "tienda"
+    nombre: "Herman Miller España Aeron"
+    url: "https://esstore.hermanmiller.com/collections/aeron-chairs"
+    fechaConsulta: "2026-06-06"
+  - tipo: "review"
+    nombre: "SeatedLab Herman Miller Aeron review"
+    url: "https://seatedlab.com/herman-miller-aeron-review/"
+    fechaConsulta: "2026-06-06"
+limitaciones:
+  - "Sin profundidad de asiento regulable en la configuración base."
+  - "La talla elegida condiciona mucho la comodidad."
+  - "Precio de entrada muy alto frente a alternativas reacondicionadas o de gama media."
+alternativas:
+  - slug: "steelcase-leap-v2"
+    motivo: "Más ajustes de asiento y respaldo tapizado para quien no quiere malla."
+  - slug: "sihoo-doro-c300"
+    motivo: "Opción bastante más barata con lumbar dinámico y malla."
 comunidad: "r/OfficeChairs la señala como benchmark absoluto de ergonomía; el único consenso negativo consistente es elegir la talla equivocada o esperar un asiento blando como el de una silla gaming."
 paraQuienSi:
   - "Usuarios que trabajan 8+ horas diarias y priorizan transpirabilidad"

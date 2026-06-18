@@ -1,0 +1,123 @@
+---
+import BotonPrecio from '../BotonPrecio.astro';
+import ImagenProducto from './ImagenProducto.astro';
+import { notaGlobal, tramoTexto, type Producto } from '@/lib/productos';
+
+interface Props { producto: Producto; }
+
+const { producto: p } = Astro.props;
+const global = notaGlobal(p);
+---
+
+<header class="ficha-hero">
+  <div class="ficha-hero-media">
+    <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={420} />
+  </div>
+  <div class="ficha-hero-copy">
+    <p class="ficha-marca">{p.marca}</p>
+    <h1 class="ficha-nombre">{p.nombre}</h1>
+    <div class="ficha-kpis">
+      <span class="ficha-precio">{tramoTexto(p.tramoPrecio)}</span>
+      {global != null && <span class="ficha-nota">{global.toFixed(1)}<small>/10</small></span>}
+      {p.verificadoEn && <span class="ficha-verificado">Verificado {p.verificadoEn}</span>}
+    </div>
+    {p.idealPara && <p class="ficha-ideal">Ideal para: {p.idealPara}</p>}
+    {p.resumenCompra?.decisionRapida && <p class="ficha-decision">{p.resumenCompra.decisionRapida}</p>}
+    <BotonPrecio amazon={p.amazon} webOficial={p.webOficial} nombre={p.nombre} marca={p.marca} />
+  </div>
+</header>
+
+<style>
+  .ficha-hero {
+    display: grid;
+    grid-template-columns: minmax(240px, 420px) minmax(0, 1fr);
+    gap: clamp(1.25rem, 4vw, 3rem);
+    align-items: start;
+    margin-bottom: 2rem;
+  }
+
+  .ficha-hero-media {
+    display: flex;
+    justify-content: center;
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: clamp(1rem, 3vw, 1.6rem);
+  }
+
+  .ficha-marca {
+    margin: 0;
+    color: var(--ink-muted);
+    font-size: 0.76rem;
+    font-weight: 750;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .ficha-nombre {
+    max-width: 780px;
+    margin: 0.25rem 0 0.8rem;
+    font-family: var(--font-display);
+    letter-spacing: 0;
+  }
+
+  .ficha-kpis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: center;
+    margin-bottom: 0.9rem;
+  }
+
+  .ficha-precio,
+  .ficha-nota,
+  .ficha-verificado {
+    display: inline-flex;
+    align-items: baseline;
+    min-height: 2rem;
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.6rem;
+    font-weight: 750;
+  }
+
+  .ficha-precio {
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+  }
+
+  .ficha-nota {
+    color: var(--bg);
+    background: var(--ink);
+    font-family: var(--font-display);
+  }
+
+  .ficha-nota small {
+    margin-left: 0.12rem;
+    font-size: 0.72rem;
+    opacity: 0.76;
+  }
+
+  .ficha-verificado {
+    color: var(--ink-muted);
+    border: 1px solid var(--border);
+    font-size: 0.78rem;
+  }
+
+  .ficha-ideal,
+  .ficha-decision {
+    max-width: 720px;
+    color: var(--ink-muted);
+    line-height: 1.65;
+  }
+
+  .ficha-decision {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  @media (max-width: 760px) {
+    .ficha-hero {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

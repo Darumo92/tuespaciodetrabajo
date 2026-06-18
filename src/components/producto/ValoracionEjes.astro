@@ -5,7 +5,12 @@ interface Props { producto: Producto; }
 const { producto } = Astro.props;
 const cfg = getTipoConfig(producto.tipo);
 const v = producto.valoraciones as unknown as Record<string, number | null>;
-const ejes = (cfg?.ejes ?? []).map((e) => ({ etiqueta: e.etiqueta, valor: v?.[e.clave] ?? null }));
+const rationale = producto.scoreRationale as Record<string, string | undefined> | undefined;
+const ejes = (cfg?.ejes ?? []).map((e) => ({
+  etiqueta: e.etiqueta,
+  valor: v?.[e.clave] ?? null,
+  rationale: rationale?.[e.clave],
+}));
 const global = notaGlobal(producto);
 ---
 <section class="vejes">
@@ -20,6 +25,7 @@ const global = notaGlobal(producto);
         <span class="vejes-lbl">{e.etiqueta}</span>
         <span class="vejes-bar" style={e.valor == null ? undefined : `--pct:${e.valor * 10}%`} aria-hidden="true"></span>
         <span class="vejes-val">{e.valor == null ? 'sin valorar' : e.valor.toFixed(1)}</span>
+        {e.rationale && <p class="vejes-rationale">{e.rationale}</p>}
       </div>
     ))}
   </div>
@@ -32,7 +38,7 @@ const global = notaGlobal(producto);
   .vejes-global { font-family: var(--font-display); margin: 0.5rem 0 1rem; }
   .vejes-global strong { font-size: 1.4rem; }
   .vejes-global span { color: var(--ink-muted); font-size: 0.8rem; font-weight: 500; }
-  .vejes-list { display: grid; gap: 0.6rem; max-width: 520px; }
+  .vejes-list { display: grid; gap: 0.6rem; max-width: 680px; }
   .vejes-row { display: grid; grid-template-columns: 130px 1fr 44px; align-items: center; gap: 0.85rem; font-size: 0.85rem; }
   .vejes-lbl { color: var(--ink-muted); }
   .vejes-bar { position: relative; height: 2px; }
@@ -41,4 +47,5 @@ const global = notaGlobal(producto);
   .vejes-nd .vejes-bar { border-top: 1px dashed var(--border); }
   .vejes-nd .vejes-bar::before { content: none; }
   .vejes-nd .vejes-val { color: var(--ink-muted); font-weight: 500; font-size: 0.72rem; }
+  .vejes-rationale { grid-column: 1 / -1; margin: -0.35rem 0 0; color: var(--ink-muted); font-size: 0.78rem; line-height: 1.45; }
 </style>

@@ -19,6 +19,43 @@ amazon:
 webOficial: "https://es.steelcase.com/products/steelcase-leap"
 idealPara: "Profesionales con jornada completa que priorizan ergonomía y durabilidad sobre el precio"
 veredicto: "La Leap V2 es la referencia clásica para trabajo de jornada completa: su lumbar ajustable en altura y firmeza combinado con LiveBack la convierte en la silla más adaptable del segmento premium tapizado, con una durabilidad probada de 15-20 años."
+resumenCompra:
+  mejorPara: "Jornada completa, usuarios que prefieren respaldo tapizado y ajustes finos de lumbar/asiento."
+  evitarSi: "Buscas máxima transpiración de malla o un precio de entrada contenido."
+  alternativaDirecta: "Herman Miller Aeron si quieres malla premium y soporte sacrolumbar diferenciado."
+  decisionRapida: "La pondría por delante de muchas premium si necesitas ajuste lumbar preciso y no te importa pagar por un diseño tapizado."
+metodologia:
+  - "Se han ponderado ergonomía de jornada completa, LiveBack, ajuste lumbar y profundidad de asiento."
+  - "La valoración distingue producto nuevo frente a la oportunidad del mercado reacondicionado citada en comunidad."
+  - "Specs y garantía se apoyan en fuentes oficiales y reviews técnicas ya recogidas en la ficha."
+scoreRationale:
+  ergonomia: "LiveBack y lumbar ajustable en altura/firmeza justifican la nota premium."
+  ajustabilidad: "Profundidad de asiento, brazos 4D y reclinación posicionan la Leap V2 muy arriba."
+  materiales: "Construcción premium y garantía sólida, aunque el respaldo tapizado transpira menos que la malla."
+  comodidad: "Muy adaptable para jornada completa si se prefiere espuma a malla."
+  calidadPrecio: "Nueva es cara; reacondicionada mejora mucho su ecuación de valor."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Steelcase España Leap"
+    url: "https://es.steelcase.com/products/steelcase-leap"
+    fechaConsulta: "2026-06-06"
+  - tipo: "tienda"
+    nombre: "Steelcase Store Leap"
+    url: "https://store.steelcase.com/seating/ergonomic-chairs/leap"
+    fechaConsulta: "2026-06-06"
+  - tipo: "review"
+    nombre: "SeatedLab Steelcase Leap review"
+    url: "https://seatedlab.com/steelcase-leap-review/"
+    fechaConsulta: "2026-06-06"
+limitaciones:
+  - "Respaldo tapizado menos transpirable que una silla de malla."
+  - "Precio nuevo elevado en España."
+  - "Reclinación más conservadora que opciones orientadas a descanso."
+alternativas:
+  - slug: "herman-miller-aeron"
+    motivo: "Mejor si priorizas malla y transpirabilidad."
+  - slug: "steelcase-gesture"
+    motivo: "Más interesante si los reposabrazos son la prioridad principal."
 comunidad: "La más recomendada en r/OfficeChairs para trabajo sedentario intenso; el mercado de segunda mano a través de Crandall se cita como la mejor relación calidad-precio del segmento."
 paraQuienSi:
   - "Profesionales con 8+ horas diarias de trabajo sedentario intenso"

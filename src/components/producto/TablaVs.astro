@@ -26,8 +26,8 @@ const notaA = notaGlobal(a), notaB = notaGlobal(b);
 <div class="vs-scroll">
   <table class="vs-table">
     <thead><tr><td></td>
-      <th><a href={`/catalogo/${tipo}/${a.slug}/`}>{a.nombre}</a>{notaA != null && <div class="vs-nota">★ {notaA.toFixed(1)}/10</div>}<BotonPrecio amazon={a.amazon} webOficial={a.webOficial} nombre={a.nombre} /></th>
-      <th><a href={`/catalogo/${tipo}/${b.slug}/`}>{b.nombre}</a>{notaB != null && <div class="vs-nota">★ {notaB.toFixed(1)}/10</div>}<BotonPrecio amazon={b.amazon} webOficial={b.webOficial} nombre={b.nombre} /></th>
+      <th><a href={`/catalogo/${tipo}/${a.slug}/`}>{a.nombre}</a>{notaA != null && <div class="vs-nota">★ {notaA.toFixed(1)}/10</div>}<BotonPrecio amazon={a.amazon} webOficial={a.webOficial} nombre={a.nombre} marca={a.marca} /></th>
+      <th><a href={`/catalogo/${tipo}/${b.slug}/`}>{b.nombre}</a>{notaB != null && <div class="vs-nota">★ {notaB.toFixed(1)}/10</div>}<BotonPrecio amazon={b.amazon} webOficial={b.webOficial} nombre={b.nombre} marca={b.marca} /></th>
     </tr></thead>
     <tbody>
       {filas.map((f) => (<>

@@ -1,0 +1,37 @@
+---
+import type { Producto } from '@/lib/productos';
+
+interface Props { producto: Producto; }
+
+const { producto: p } = Astro.props;
+---
+
+{p.metodologia?.length ? (
+  <section class="ficha-metodo" aria-labelledby="metodo-producto">
+    <h2 id="metodo-producto">Cómo se ha valorado</h2>
+    <ul>{p.metodologia.map((item) => <li>{item}</li>)}</ul>
+  </section>
+) : null}
+
+<style>
+  .ficha-metodo {
+    margin: 2rem 0;
+    padding: 1rem 1.15rem;
+    border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+  }
+
+  .ficha-metodo h2 {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+
+  .ficha-metodo ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  .ficha-metodo li + li {
+    margin-top: 0.35rem;
+  }
+</style>

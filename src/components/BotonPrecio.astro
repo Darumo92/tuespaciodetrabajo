@@ -1,58 +1,41 @@
 ---
 import StoreIcon from './StoreIcon.astro';
-import { buildAmazonHref, type ProductoAmazon } from '@/lib/productos';
+import { buildProductCta, type ProductoAmazon } from '@/lib/productos';
 
 interface Props {
   amazon?: ProductoAmazon;
   webOficial?: string | null;
   nombre: string;
+  marca?: string;
 }
 
-const { amazon, webOficial, nombre } = Astro.props;
-const amazonHref = buildAmazonHref(amazon);
+const { amazon, webOficial, nombre, marca } = Astro.props;
+const cta = buildProductCta({ amazon, webOficial, nombre, marca });
+const rel = cta.sponsored ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer';
 ---
 
-{amazonHref ? (
+{cta.href ? (
   <a
-    href={amazonHref}
-    class="affiliate-button amazon"
+    href={cta.href}
+    class={`affiliate-button ${cta.kind.startsWith('amazon') ? 'amazon' : ''} boton-precio boton-precio--${cta.kind}`}
     target="_blank"
-    rel="sponsored nofollow noopener noreferrer"
+    rel={rel}
+    data-cta-kind={cta.kind}
   >
-    <StoreIcon tienda="amazon" size={15} />
-    Ver precio en Amazon
-    <span class="sr-only">{`de ${nombre} (se abre en nueva pestaña)`}</span>
-  </a>
-) : webOficial ? (
-  <a
-    href={webOficial}
-    class="boton-web-oficial"
-    target="_blank"
-    rel="nofollow noopener noreferrer"
-  >
-    Ver en la web oficial
+    {cta.kind.startsWith('amazon') && <StoreIcon tienda="amazon" size={15} />}
+    {cta.label}
     <span class="sr-only">{`de ${nombre} (se abre en nueva pestaña)`}</span>
   </a>
 ) : (
-  <span class="boton-sin-tienda">No disponible online actualmente</span>
+  <span class="boton-sin-tienda">{cta.label}</span>
 )}
 
 <style>
-  .boton-web-oficial {
-    display: inline-flex;
+  .boton-precio {
+    min-height: 2.6rem;
     align-items: center;
-    gap: 0.4rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    padding: 0.6rem 1.1rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border-strong);
-    color: var(--ink);
-    text-decoration: none;
-    transition: border-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out);
+    justify-content: center;
   }
-  .boton-web-oficial:hover { border-color: var(--accent); color: var(--accent); }
-  .boton-web-oficial:active { transform: scale(0.97); }
   .boton-sin-tienda {
     font-size: 0.82rem;
     color: var(--ink-muted);

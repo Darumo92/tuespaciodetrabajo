@@ -1,6 +1,6 @@
 ---
 import ImagenProducto from './ImagenProducto.astro';
-import { notaGlobal, tramoTexto, datosFiltrado, construirChips, type Producto } from '@/lib/productos';
+import { notaGlobal, tramoTexto, datosFiltrado, construirChips, buildProductCta, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
 
 interface Props { producto: Producto; }
@@ -10,6 +10,12 @@ const global = notaGlobal(p);
 const cfg = getTipoConfig(p.tipo);
 const dataAttrs = cfg ? datosFiltrado(p, cfg) : {};
 const chips = cfg ? construirChips(p, cfg) : [];
+const cta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: p.nombre, marca: p.marca });
+const ctaLabel = cta.kind === 'amazon-product'
+  ? 'Amazon'
+  : cta.kind === 'amazon-search'
+    ? 'Búsqueda Amazon'
+    : 'Sin tienda';
 ---
 
 <article class="card" data-slug={p.slug} {...dataAttrs}>
@@ -24,6 +30,7 @@ const chips = cfg ? construirChips(p, cfg) : [];
     <p class="card-line">
       {global != null && <span class="card-score">{global.toFixed(1)}/10</span>}
       <span class="card-price">{tramoTexto(p.tramoPrecio)}</span>
+      <span class={`card-cta card-cta--${cta.kind}`}>{ctaLabel}</span>
     </p>
     <div class="card-chips">
       {chips.map((c) => <span class={`chip${c.nd ? ' chip-nd' : ''}`}>{c.texto}</span>)}
@@ -41,9 +48,22 @@ const chips = cfg ? construirChips(p, cfg) : [];
   .card-brand { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted); }
   .card-name { font-family: var(--font-display); font-weight: 700; color: var(--ink); text-decoration: none; display: block; margin: 0.05rem 0 0.3rem; }
   .card-name:hover { color: var(--accent); }
-  .card-line { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
+  .card-line { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
   .card-score { background: var(--ink); color: var(--bg); font-family: var(--font-display); font-size: 0.78rem; border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .card-price { color: var(--accent); }
+  .card-cta {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.08rem 0.42rem;
+    color: var(--ink-muted);
+    font-size: 0.68rem;
+    font-weight: 750;
+  }
+  .card-cta--amazon-product,
+  .card-cta--amazon-search {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    color: var(--accent);
+  }
   .card-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
   .chip { font-size: 0.7rem; background: var(--surface-muted); color: var(--ink); border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .chip-nd { color: var(--ink-muted); font-style: italic; }

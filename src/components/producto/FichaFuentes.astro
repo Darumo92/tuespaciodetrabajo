@@ -1,0 +1,51 @@
+---
+import type { Producto } from '@/lib/productos';
+
+interface Props { producto: Producto; }
+
+const { producto: p } = Astro.props;
+---
+
+{p.fuentes?.length ? (
+  <section class="ficha-fuentes" aria-labelledby="fuentes-producto">
+    <h2 id="fuentes-producto">Fuentes verificadas</h2>
+    <ul>
+      {p.fuentes.map((f) => (
+        <li>
+          <a href={f.url} target="_blank" rel="nofollow noopener noreferrer">{f.nombre}</a>
+          <span>{f.tipo} · consultado {f.fechaConsulta}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+) : null}
+
+<style>
+  .ficha-fuentes {
+    margin: 2rem 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .ficha-fuentes h2 {
+    font-size: 1rem;
+  }
+
+  .ficha-fuentes ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .ficha-fuentes li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 0.7rem;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--border) 55%, transparent);
+    font-size: 0.86rem;
+  }
+
+  .ficha-fuentes span {
+    color: var(--ink-muted);
+  }
+</style>

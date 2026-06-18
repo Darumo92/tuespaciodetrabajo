@@ -19,6 +19,43 @@ amazon:
 webOficial: null
 idealPara: "Jornada completa, máxima ergonomía sin precio premium"
 veredicto: "La C300 establece el estándar en gama media-alta: su lumbar dinámico elimina el ajuste manual y la malla BM aguanta años sin deformarse; el único pero real es su precio, que la pone cerca de sillas mucho más caras."
+resumenCompra:
+  mejorPara: "Quien quiere lumbar dinámico, malla y base de aluminio sin entrar en precios premium."
+  evitarSi: "Necesitas profundidad de asiento regulable o mides claramente por encima de 190 cm."
+  alternativaDirecta: "FlexiSpot C7 Lite si buscas más ajustes lumbares en una silla más compacta."
+  decisionRapida: "Es la silla de gama media que pondría primero para jornadas largas si el presupuesto admite pagar más que una silla básica."
+metodologia:
+  - "Se han contrastado specs oficiales, ASIN verificado y reseñas citadas en fuenteSpecs."
+  - "La nota prioriza lumbar dinámico, malla, base y límites de uso para jornada completa."
+  - "Se penaliza la falta de profundidad regulable y las críticas recurrentes sobre reposabrazos y talla alta."
+scoreRationale:
+  ergonomia: "El lumbar dinámico y respaldo de malla la sitúan por encima de la mayoría de sillas de gama media."
+  ajustabilidad: "Buena base de ajustes, aunque sin profundidad de asiento regulable."
+  materiales: "Malla densa, base de aluminio y certificación BIFMA declarada elevan la nota."
+  comodidad: "Firme al inicio, pero consistente para jornada completa según la ficha editorial."
+  calidadPrecio: "Muy competitiva si se compara con premium, menos barata que las opciones de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SIHOO Doro C300"
+    url: "https://www.sihoo.com/en/doro-c300/"
+    fechaConsulta: "2026-06-06"
+  - tipo: "review"
+    nombre: "Tom's Guide SIHOO Doro C300 review"
+    url: "https://www.tomsguide.com/reviews/sihoo-doro-c300"
+    fechaConsulta: "2026-06-06"
+  - tipo: "review"
+    nombre: "Ralph's Way SIHOO Doro C300 review"
+    url: "https://ralphsway.com/sihoo-doro-c300-review/"
+    fechaConsulta: "2026-06-06"
+limitaciones:
+  - "No tiene profundidad de asiento regulable."
+  - "Reposacabezas menos adecuado para usuarios muy altos."
+  - "Reposabrazos descritos como fáciles de mover lateralmente por accidente."
+alternativas:
+  - slug: "flexispot-c7-lite"
+    motivo: "Más compacta y con lumbar 5D, aunque menos adecuada para personas altas."
+  - slug: "ikea-markus"
+    motivo: "Mucho más barata si aceptas ajustes muy básicos."
 comunidad: "Amplio consenso positivo en reseñas especializadas (Tom's Guide, Windows Central, Apple Insider): se la considera la mejor silla ergonómica por debajo de 400 € gracias al lumbar autoajustable. Crítica recurrente: reposabrazos fáciles de desplazar lateralmente por accidente."
 paraQuienSi:
   - "Personas que pasan 6-10 h diarias sentadas y quieren lumbar sin ajuste manual"

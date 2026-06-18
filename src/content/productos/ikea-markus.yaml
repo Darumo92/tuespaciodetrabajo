@@ -19,6 +19,39 @@ amazon:
 webOficial: null
 idealPara: "Presupuesto ajustado, teletrabajo ligero o estudiantes que buscan malla a precio mínimo"
 veredicto: "La Markus es la silla de oficina de referencia en su precio: respaldo alto de malla, lumbar integrado, base de aluminio certificada y 10 años de garantía por ~159 €. Los ajustes son mínimos (solo altura de asiento e inclinación), pero para ese precio es simplemente imbatible como primera silla de home office."
+resumenCompra:
+  mejorPara: "Primera silla de home office, estudiantes y uso moderado con presupuesto ajustado."
+  evitarSi: "Necesitas soporte lumbar ajustable, reposabrazos regulables o trabajas sentado más de 8 horas al día."
+  alternativaDirecta: "SIHOO Doro C300 si quieres salto claro en ergonomía y ajustes."
+  decisionRapida: "La elegiría como compra de entrada por garantía y precio, no como solución ergonómica avanzada."
+metodologia:
+  - "Se han priorizado garantía, disponibilidad, specs oficiales y limitaciones de ajuste."
+  - "La valoración compara la MARKUS contra otras sillas de entrada, no contra modelos premium."
+  - "La ficha penaliza el lumbar fijo y la falta de ajustes críticos aunque mantenga una nota alta en calidad-precio."
+scoreRationale:
+  ergonomia: "Correcta para uso moderado, limitada por lumbar fijo y pocos ajustes."
+  ajustabilidad: "Solo cubre altura e inclinación básica frente a rivales con brazos y asiento regulables."
+  materiales: "La base de aluminio y garantía de 10 años mejoran su posición en gama de entrada."
+  comodidad: "Asiento espacioso y respaldo alto, pero no universal por el lumbar fijo."
+  calidadPrecio: "Su punto más fuerte: mucha silla útil por un presupuesto bajo."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA MARKUS ficha técnica"
+    url: "https://www.ikea.com/us/en/p/markus-office-chair-vissle-dark-gray-90289172/"
+    fechaConsulta: "2026-06-06"
+  - tipo: "review"
+    nombre: "BTOD IKEA MARKUS vs JÄRVFJÄLLET"
+    url: "https://www.btod.com/blog/ikea-markus-vs-jarvfjallet/"
+    fechaConsulta: "2026-06-06"
+limitaciones:
+  - "Lumbar fijo, sin regulación en altura o presión."
+  - "Reposabrazos fijos."
+  - "Sin profundidad de asiento regulable."
+alternativas:
+  - slug: "sihoo-doro-c300"
+    motivo: "Más ajustes y mejor soporte lumbar para jornadas largas."
+  - slug: "flexispot-c7-lite"
+    motivo: "Más regulación lumbar en una silla compacta de gama media."
 comunidad: "Icono de la comunidad de sillas de oficina a nivel mundial. En r/OfficeChairs aparece constantemente como la mejor opción de entrada y el estándar de comparación para el segmento budget. BTOD la valora por el reclinado suave y el asiento espacioso. Su punto débil más citado: el lumbar fijo no funciona para todos los torsos."
 paraQuienSi:
   - "Primera silla de home office o estudiantes con presupuesto de hasta 200 €"

@@ -24,6 +24,22 @@ export interface Producto {
   webOficial: string | null;
   idealPara?: string;
   veredicto?: string;
+  resumenCompra?: {
+    mejorPara?: string;
+    evitarSi?: string;
+    alternativaDirecta?: string;
+    decisionRapida?: string;
+  };
+  metodologia?: string[];
+  scoreRationale?: Partial<Record<keyof Valoraciones, string>>;
+  fuentes?: {
+    tipo: 'oficial' | 'review' | 'comunidad' | 'tienda' | 'manual';
+    nombre: string;
+    url: string;
+    fechaConsulta: string;
+  }[];
+  limitaciones?: string[];
+  alternativas?: { slug: string; motivo: string }[];
   comunidad?: string;
   paraQuienSi: string[];
   paraQuienNo: string[];
@@ -173,6 +189,56 @@ export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
     return `https://www.amazon.es/dp/${amazon.asin}?tag=${AMAZON_TAG}`;
   }
   return null;
+}
+
+export type ProductCtaKind = 'amazon-product' | 'amazon-search' | 'unavailable';
+
+export interface ProductCtaInput {
+  amazon?: ProductoAmazon;
+  webOficial?: string | null;
+  nombre: string;
+  marca?: string;
+  disableAmazonSearch?: boolean;
+}
+
+export interface ProductCta {
+  href: string | null;
+  label: string;
+  kind: ProductCtaKind;
+  sponsored: boolean;
+}
+
+export function buildAmazonSearchHref(query?: string | null): string | null {
+  const q = query?.trim();
+  if (!q) return null;
+  return `https://www.amazon.es/s?k=${encodeURIComponent(q)}&tag=${AMAZON_TAG}`;
+}
+
+function buildFallbackSearchQuery(marca: string | undefined, nombre: string): string {
+  const cleanMarca = marca?.trim();
+  const cleanNombre = nombre.trim();
+  if (!cleanMarca) return cleanNombre;
+  if (cleanNombre.toLocaleLowerCase().startsWith(cleanMarca.toLocaleLowerCase())) {
+    return cleanNombre;
+  }
+  return `${cleanMarca} ${cleanNombre}`.trim();
+}
+
+export function buildProductCta(input: ProductCtaInput): ProductCta {
+  const productHref = buildAmazonHref(input.amazon);
+  if (productHref) {
+    return { href: productHref, label: 'Ver precio en Amazon', kind: 'amazon-product', sponsored: true };
+  }
+
+  const fallbackQuery = buildFallbackSearchQuery(input.marca, input.nombre);
+  const searchHref = input.disableAmazonSearch
+    ? null
+    : buildAmazonSearchHref(input.amazon?.buscar || fallbackQuery);
+  if (searchHref) {
+    return { href: searchHref, label: 'Buscar en Amazon', kind: 'amazon-search', sponsored: true };
+  }
+
+  return { href: null, label: 'Sin tienda verificada', kind: 'unavailable', sponsored: false };
 }
 
 export type ParVs = [string, string];

@@ -31,7 +31,7 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
   .cmp :global(.cmp-legend) { font-size: 0.76rem; color: var(--ink-muted); margin-top: 0.8rem; }
 </style>
 <script>
-  import { ganadoresPorValor, notaGlobal, formatoSpec, etiquetaEnum, tramoTexto, getCampo, buildAmazonHref, type Producto } from '@/lib/productos';
+  import { ganadoresPorValor, notaGlobal, formatoSpec, etiquetaEnum, tramoTexto, getCampo, buildProductCta, type Producto } from '@/lib/productos';
 
   const root = document.querySelector('.cmp') as HTMLElement | null;
   if (root) {
@@ -59,8 +59,9 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
       }
       const head = sel.map((p) => {
         const g = notaGlobal(p);
-        const href = buildAmazonHref(p.amazon) || p.webOficial || '';
-        const cta = href ? `<a class="cmp-cta" href="${esc(href)}" target="_blank" rel="sponsored nofollow noopener noreferrer">${buildAmazonHref(p.amazon) ? 'Ver precio' : 'Web oficial'}</a><br>` : '';
+        const productCta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: p.nombre, marca: p.marca });
+        const rel = productCta.sponsored ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer';
+        const cta = productCta.href ? `<a class="cmp-cta" href="${esc(productCta.href)}" target="_blank" rel="${rel}">${esc(productCta.label)}</a><br>` : '';
         return `<td><div class="cmp-name"><a href="/catalogo/${tipo}/${esc(p.slug)}/">${esc(p.nombre)}</a></div>${g != null ? `<div class="cmp-global">${g.toFixed(1)}<small>/10</small></div>` : ''}${cta}<button class="cmp-rm" data-slug="${esc(p.slug)}">✕ quitar</button></td>`;
       }).join('');
 

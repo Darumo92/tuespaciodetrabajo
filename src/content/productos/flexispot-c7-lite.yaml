@@ -19,6 +19,39 @@ amazon:
 webOficial: null
 idealPara: "Muchos ajustes sin llegar a 300 €, prioridad transpiración, talla S/M"
 veredicto: "La C7 Lite empaca un lumbar autoajustable de 5 ejes y reposabrazos 3D en un chasis compacto pensado para usuarios de talla S/M; su mayor debilidad es el estrecho rango de altura de asiento (solo ~2 cm de margen), lo que la hace inadecuada para personas altas."
+resumenCompra:
+  mejorPara: "Usuarios de talla S/M que quieren muchos ajustes en una silla compacta de gama media."
+  evitarSi: "Mides más de 175 cm, necesitas asiento alto o quieres reclinación con mucha resistencia."
+  alternativaDirecta: "SIHOO Doro C300 si buscas una silla de malla más polivalente para jornadas largas."
+  decisionRapida: "Tiene sentido si encajas en su rango de talla; fuera de ahí, la altura limitada pesa demasiado."
+metodologia:
+  - "Se han usado specs de la ficha, ASIN verificado y reseñas citadas en fuenteSpecs."
+  - "La valoración premia lumbar 5D y ajustes por precio, pero penaliza rango de altura y talla objetivo."
+  - "No se asigna certificación BIFMA porque no está verificada en la ficha actual."
+scoreRationale:
+  ergonomia: "Lumbar 5D y respaldo mixto dan buena base si la talla encaja."
+  ajustabilidad: "Reposacabezas, brazos 3D y lumbar elevan la nota pese a no tener profundidad regulable."
+  materiales: "Correctos para gama media, sin certificación BIFMA verificada."
+  comodidad: "Depende mucho de altura y peso; la ficha recoge firmeza para usuarios ligeros."
+  calidadPrecio: "Buena relación por ajustes, con el límite de no servir para usuarios altos."
+fuentes:
+  - tipo: "review"
+    nombre: "TechRadar FlexiSpot C7 Lite review"
+    url: "https://www.techradar.com/pro/flexispot-c7-lite-office-chair-review"
+    fechaConsulta: "2026-06-06"
+  - tipo: "tienda"
+    nombre: "Relaxing Recliners FlexiSpot C7 Lite"
+    url: "https://relaxingrecliners.com/products/c7-lite"
+    fechaConsulta: "2026-06-06"
+limitaciones:
+  - "Rango de altura de asiento muy estrecho."
+  - "No recomendada para usuarios altos."
+  - "Certificación BIFMA no verificada en la ficha actual."
+alternativas:
+  - slug: "sihoo-doro-c300"
+    motivo: "Más polivalente para talla media-alta y jornadas largas."
+  - slug: "ikea-markus"
+    motivo: "Más barata si aceptas muchos menos ajustes."
 comunidad: "TechRadar la recomienda para usuarios hasta 170 cm y destaca la comodidad mantenida tras 64 días de prueba. La crítica más repetida es que el mecanismo de reclinación tiene muy poca resistencia y la ubicación del ajuste lumbar obliga a levantarse para alcanzarlo."
 paraQuienSi:
   - "Usuarios de hasta 170 cm que buscan máxima ajustabilidad lumbar por debajo de 300 €"

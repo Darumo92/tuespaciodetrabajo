@@ -11,6 +11,7 @@ import {
   etiquetaEnum,
   reposabrazosNivel,
   buildAmazonHref,
+  buildProductCta,
   claveData,
   valorComparacion,
   datosFiltrado,
@@ -135,6 +136,71 @@ describe('buildAmazonHref', () => {
     expect(buildAmazonHref({ asin: 'B0TEST1234', buscar: null })).toBe('https://www.amazon.es/dp/B0TEST1234?tag=tuespaciodet-21');
     expect(buildAmazonHref({ asin: null, buscar: 'silla ergonomica' })).toBeNull();
     expect(buildAmazonHref({ asin: null, buscar: null })).toBeNull();
+  });
+});
+
+describe('buildProductCta', () => {
+  it('prioriza ASIN verificado', () => {
+    expect(buildProductCta({
+      amazon: { asin: 'B0TEST1234', buscar: 'silla ergonomica' },
+      webOficial: 'https://example.com',
+      nombre: 'Demo',
+    })).toEqual({
+      href: 'https://www.amazon.es/dp/B0TEST1234?tag=tuespaciodet-21',
+      label: 'Ver precio en Amazon',
+      kind: 'amazon-product',
+      sponsored: true,
+    });
+  });
+
+  it('usa busqueda directa en Amazon cuando no hay ASIN pero si query', () => {
+    expect(buildProductCta({
+      amazon: { asin: null, buscar: 'IKEA MARKUS silla oficina' },
+      webOficial: null,
+      nombre: 'IKEA MARKUS',
+    })).toEqual({
+      href: 'https://www.amazon.es/s?k=IKEA%20MARKUS%20silla%20oficina&tag=tuespaciodet-21',
+      label: 'Buscar en Amazon',
+      kind: 'amazon-search',
+      sponsored: true,
+    });
+  });
+
+  it('genera busqueda Amazon desde nombre y marca si no hay query manual', () => {
+    expect(buildProductCta({
+      amazon: { asin: null, buscar: null },
+      webOficial: 'https://example.com/producto',
+      nombre: 'Aeron',
+      marca: 'Herman Miller',
+    })).toEqual({
+      href: 'https://www.amazon.es/s?k=Herman%20Miller%20Aeron&tag=tuespaciodet-21',
+      label: 'Buscar en Amazon',
+      kind: 'amazon-search',
+      sponsored: true,
+    });
+  });
+
+  it('no duplica la marca si el nombre ya la incluye', () => {
+    expect(buildProductCta({
+      amazon: { asin: null, buscar: null },
+      webOficial: null,
+      nombre: 'Herman Miller Aeron',
+      marca: 'Herman Miller',
+    }).href).toBe('https://www.amazon.es/s?k=Herman%20Miller%20Aeron&tag=tuespaciodet-21');
+  });
+
+  it('devuelve estado sin tienda si la busqueda Amazon esta desactivada', () => {
+    expect(buildProductCta({
+      amazon: { asin: null, buscar: null },
+      webOficial: null,
+      nombre: 'Sin destino',
+      disableAmazonSearch: true,
+    })).toEqual({
+      href: null,
+      label: 'Sin tienda verificada',
+      kind: 'unavailable',
+      sponsored: false,
+    });
   });
 });
 
