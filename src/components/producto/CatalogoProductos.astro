@@ -109,6 +109,8 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
           {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
         </select>
       </label>
+
+      <button class="cat-verres" type="button" data-ver-res>Ver <span data-ver-n>{productos.length}</span> resultados</button>
     </div>
   </div>
 
@@ -227,8 +229,9 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
 
   .catalogo-vacio { margin: 1.25rem 0 0; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted); color: var(--ink-muted); }
 
-  /* Botón móvil "Filtrar": oculto en escritorio */
+  /* Controles sólo móviles: ocultos en escritorio */
   .cat-mobtoggle { display: none; }
+  .cat-verres { display: none; }
   .cat-mobn {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: 1.2rem; height: 1.2rem; margin-left: 0.4rem; padding: 0 0.3rem;
@@ -256,15 +259,15 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       background: var(--bg); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
     }
     .cat-pills {
-      position: fixed; inset: 0; z-index: 60; display: none;
+      position: fixed; inset: 0; z-index: 300; display: none; /* por encima de .bottom-nav (z-index 200) */
       flex-direction: column; align-items: stretch; gap: 0.7rem;
       padding: 1.1rem; background: var(--bg); overflow-y: auto;
     }
     .cat-bar.is-open .cat-pills { display: flex; }
-    .cat-bar.is-open .cat-pills::after {
-      content: 'Ver resultados'; order: 99; position: sticky; bottom: 0;
-      margin-top: auto; padding: 0.8rem; text-align: center;
-      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font-weight: 750; cursor: pointer;
+    .cat-verres {
+      display: block; order: 99; position: sticky; bottom: 0;
+      margin-top: auto; min-height: 2.75rem; padding: 0.8rem; border: 0; text-align: center;
+      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font: inherit; font-weight: 750; cursor: pointer;
     }
     .cat-facet { width: 100%; }
     .cat-pill { width: 100%; justify-content: space-between; }
@@ -314,6 +317,8 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     const mobToggle = root.querySelector<HTMLButtonElement>('[data-mob-toggle]');
     const mobN = root.querySelector<HTMLElement>('[data-mob-n]');
     const bar = root.querySelector<HTMLElement>('.cat-bar');
+    const verResBtn = root.querySelector<HTMLButtonElement>('[data-ver-res]');
+    const verResN = root.querySelector<HTMLElement>('[data-ver-n]');
 
     const dataKey = (clave: string) => 'c' + clave.charAt(0).toUpperCase() + clave.slice(1);
     const readCard = (card: HTMLElement, clave: string) => card.dataset[dataKey(clave)];
@@ -396,6 +401,7 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       }
 
       if (nOut) nOut.textContent = String(visibles);
+      if (verResN) verResN.textContent = String(visibles);
       if (vacio) vacio.hidden = visibles > 0;
       renderEstado();
     };
@@ -548,13 +554,20 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     document.addEventListener('click', (e) => {
       if (!(e.target as HTMLElement).closest('.cat-facet')) cerrarPopovers();
     });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarPopovers(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      const abierta = root.querySelector<HTMLElement>('[data-pill-tipo="dropdown"][aria-expanded="true"]');
+      cerrarPopovers();
+      abierta?.focus();
+    });
 
     // ----- Búsqueda -----
-    busquedaInput?.addEventListener('input', () => {
-      busqueda = norm(busquedaInput.value);
+    const onBusqueda = () => {
+      busqueda = norm(busquedaInput?.value ?? '');
       applyFilters();
-    });
+    };
+    busquedaInput?.addEventListener('input', onBusqueda);
+    busquedaInput?.addEventListener('search', onBusqueda); // botón ✕ nativo de type=search
 
     // ----- Orden -----
     ordenSel?.addEventListener('change', applyFilters);
@@ -576,13 +589,10 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       const abierto = bar?.classList.toggle('is-open');
       mobToggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
     });
-    // Clic en el pseudo-botón "Ver resultados" (parte baja del drawer)
-    root.querySelector<HTMLElement>('.cat-pills')?.addEventListener('click', (e) => {
-      const pills = e.currentTarget as HTMLElement;
-      if (e.target === pills && bar?.classList.contains('is-open')) {
-        bar.classList.remove('is-open');
-        mobToggle?.setAttribute('aria-expanded', 'false');
-      }
+    // Botón "Ver N resultados": cierra el drawer móvil.
+    verResBtn?.addEventListener('click', () => {
+      bar?.classList.remove('is-open');
+      mobToggle?.setAttribute('aria-expanded', 'false');
     });
 
     // ===== Barra de comparación (igual que antes) =====
