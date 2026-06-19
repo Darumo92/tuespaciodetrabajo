@@ -313,3 +313,19 @@ describe('construirChips: silla', () => {
     expect(chips[chips.length - 1]).toEqual({ texto: 'garantía n/d', nd: true });
   });
 });
+
+import { pasaEn } from './productos';
+
+describe('pasaEn (comparación multi-select)', () => {
+  it('conjunto vacío no filtra (siempre visible)', () => {
+    expect(pasaEn('IKEA', [])).toBe(true);
+    expect(pasaEn('', [])).toBe(true);
+  });
+  it('visible si el valor está en el conjunto', () => {
+    expect(pasaEn('IKEA', ['IKEA', 'Steelcase'])).toBe(true);
+  });
+  it('oculto si el valor no está en el conjunto', () => {
+    expect(pasaEn('Hbada', ['IKEA', 'Steelcase'])).toBe(false);
+    expect(pasaEn('', ['IKEA'])).toBe(false);
+  });
+});

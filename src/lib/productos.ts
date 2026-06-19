@@ -152,6 +152,13 @@ export function valorComparacion(p: Producto, filtro: FiltroConfig): string {
   return raw == null ? '' : String(raw);
 }
 
+/** comparación 'en': la card es visible si su valor está en el conjunto seleccionado.
+ *  Conjunto vacío = sin filtrar (visible). */
+export function pasaEn(cardValue: string, seleccion: string[]): boolean {
+  if (seleccion.length === 0) return true;
+  return seleccion.includes(cardValue);
+}
+
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
 export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
   const out: Record<string, string> = {};

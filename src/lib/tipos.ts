@@ -2,7 +2,7 @@ export type ClaveTipo = 'silla';
 
 export interface EjeConfig { clave: string; etiqueta: string; }
 
-export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral';
+export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral' | 'en';
 export type TransformId = 'reposabrazosNivel';
 export type FormatoSalida = 'tramoEuros';
 
