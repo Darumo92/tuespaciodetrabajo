@@ -28,6 +28,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 27 may: karma Reddit 24; 3 comentarios de warmup sin link publicados y visibles en RSS.
 - [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar datos volátiles de Amazon del MDX.
 - [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos que requieren revisión editorial.
+- [Estado megarecopilación sillas](../research/sillas/ESTADO.md) — Handoff catálogo 100+ sillas (rama `feat/megarecopilacion-sillas`). Tasks 1-5 hechas, 24 sillas, piloto de 5; bloqueado por Amazon API (403) y SERP. **Leer para retomar el catálogo de sillas.**
 
 ## Persona y coherencia
 

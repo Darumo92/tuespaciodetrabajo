@@ -1,0 +1,64 @@
+tipo: "silla"
+nombre: "Steelcase Series 1"
+marca: "Steelcase"
+imagen: "/img/productos/steelcase-series-1.webp"
+imagenAlt: "Silla ergonómica Steelcase Series 1 respaldo de malla"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: "Steelcase Series 1 silla"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: true
+webOficial: "https://www.steelcase.com/products/office-chairs/steelcase-series-1/"
+idealPara: "Quien quiere ergonomía y garantía Steelcase sin llegar al precio de una Leap o Gesture"
+veredicto: "La Series 1 es la puerta de entrada al ecosistema Steelcase: respaldo de malla flexible, soporte lumbar ajustable y reposabrazos hasta 4D según configuración, con la misma garantía de 12 años de la gama alta. No iguala el ajuste fino de una Leap, pero ofrece durabilidad de oficina seria a un precio mucho más accesible."
+comunidad: "Reviews como SeatedLab y TechGearLab la sitúan como una de las mejores compras premium-accesibles: construcción de oficina real y garantía larga, con la crítica habitual de que el acolchado del asiento es algo firme y que los ajustes premium (4D, lumbar) encarecen la configuración."
+paraQuienSi:
+  - "Quien busca garantía y durabilidad de marca de oficina a precio medio"
+  - "Usuarios que valoran respaldo de malla transpirable con lumbar ajustable"
+  - "Jornadas largas donde importa más la fiabilidad que el lujo"
+paraQuienNo:
+  - "Quien quiere el ajuste sincronizado fino de una Leap V2 o Gesture"
+  - "Presupuestos por debajo de la gama media"
+  - "Quien prefiere asiento muy mullido"
+puntosFuertes:
+  - "Garantía de 12 años heredada de la gama alta Steelcase"
+  - "Respaldo de malla flexible con soporte lumbar ajustable"
+  - "Profundidad de asiento regulable"
+  - "Reposabrazos hasta 4D según configuración"
+  - "Soporta hasta 181 kg"
+puntosDebiles:
+  - "Los ajustes premium (4D, lumbar) suben el precio de la configuración"
+  - "Acolchado del asiento más firme que la media"
+  - "Sin reposacabezas en la configuración base"
+fuenteSpecs: "Web oficial Steelcase Series 1 (steelcase.com/products/office-chairs/steelcase-series-1) + guía de especificación Series 1 (steelcase.com/resources/documents/series-1-spec-guide) + reviews SeatedLab y TechGearLab"
+verificadoEn: "2026-06-18"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 181
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 55
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "Inclinación activada por peso"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: 12
+  reposacabezas: "ninguno"
+  profundidadAsientoMaxCm: 45

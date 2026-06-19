@@ -1,0 +1,64 @@
+tipo: "silla"
+nombre: "IKEA MATCHSPEL"
+marca: "IKEA"
+imagen: "/img/productos/ikea-matchspel.avif"
+imagenAlt: "Silla gaming IKEA MATCHSPEL respaldo de malla"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: "IKEA MATCHSPEL silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: true
+webOficial: "https://www.ikea.com/es/es/p/matchspel-silla-gaming-bomstad-gris-claro-90571528/"
+idealPara: "Teletrabajo y gaming con presupuesto ajustado que quiere respaldo de malla"
+veredicto: "La MATCHSPEL es la gaming-oficina barata de IKEA que mejor combina malla transpirable y tensión automática: el respaldo ajusta su resistencia según tu peso sin tocar mandos. No tiene la profundidad de ajuste de una ergonómica seria, pero por su precio ofrece transpirabilidad y soporte decentes para jornadas moderadas."
+comunidad: "Prensa española (Vida Extra, El Español) la destaca como una de las gaming económicas más cómodas por su malla y su tensión automática; el consenso la recomienda para uso moderado y advierte de que el acolchado y los ajustes son básicos frente a una ergonómica de gama media."
+paraQuienSi:
+  - "Presupuesto ajustado que quiere malla transpirable"
+  - "Teletrabajo y gaming de uso moderado"
+  - "Quien prefiere tensión automática a configurar mandos"
+paraQuienNo:
+  - "Quien necesita lumbar ajustable o profundidad de asiento regulable"
+  - "Personas que superan los 110 kg"
+  - "Jornadas muy largas con exigencia ergonómica alta"
+puntosFuertes:
+  - "Respaldo de malla transpirable"
+  - "Tensión automática que ajusta el respaldo según el peso"
+  - "Reposabrazos ajustables"
+  - "Precio de entrada muy contenido"
+puntosDebiles:
+  - "Soporta hasta 110 kg"
+  - "Soporte lumbar no ajustable"
+  - "Sin profundidad de asiento regulable"
+fuenteSpecs: "Web oficial IKEA MATCHSPEL (ikea.com/es ficha producto, peso probado 110 kg, asiento 47-59 cm, respaldo de malla con tensión automática)"
+verificadoEn: "2026-06-18"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "2d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 59
+  anchoCm: 66
+  fondoCm: 66
+  mecanismo: "Tensión automática por peso"
+  baseMaterial: null
+  certificacionBifma: null
+  pesoProductoKg: 18
+  garantiaAnios: null
+  anchoAsientoCm: 54
+  profundidadAsientoMaxCm: 48
+  reposacabezas: "ninguno"

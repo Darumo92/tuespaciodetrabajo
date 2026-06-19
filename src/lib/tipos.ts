@@ -2,7 +2,7 @@ export type ClaveTipo = 'silla';
 
 export interface EjeConfig { clave: string; etiqueta: string; }
 
-export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral';
+export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral' | 'en';
 export type TransformId = 'reposabrazosNivel';
 export type FormatoSalida = 'tramoEuros';
 
@@ -69,6 +69,7 @@ const silla: TipoConfig = {
   filtros: [
     { id: 'precio', etiqueta: 'Precio máximo', control: 'rango', comparacion: 'max',
       campo: 'tramoPrecio', min: 1, max: 4, step: 1, formatoSalida: 'tramoEuros' },
+    { id: 'marca', etiqueta: 'Marca', control: 'select', comparacion: 'en', campo: 'marca' },
     { id: 'respaldo', etiqueta: 'Respaldo', control: 'select', comparacion: 'igual', campo: 'specs.respaldo',
       opciones: [{ valor: '', etiqueta: 'Cualquiera' }, { valor: 'malla', etiqueta: 'Malla' },
         { valor: 'espuma', etiqueta: 'Espuma' }, { valor: 'mixto', etiqueta: 'Mixto' }] },
@@ -80,6 +81,12 @@ const silla: TipoConfig = {
       campo: 'specs.profundidadRegulable' },
     { id: 'peso', etiqueta: 'Soporta 130 kg o más', control: 'check', comparacion: 'umbral',
       campo: 'specs.pesoMaxKg', umbral: 130 },
+    { id: 'altura-min', etiqueta: 'Apta desde altura', control: 'rango', comparacion: 'max',
+      campo: 'specs.alturaRecomendadaMinCm', min: 150, max: 190, step: 5 },
+    { id: 'altura-max', etiqueta: 'Apta hasta altura', control: 'rango', comparacion: 'min',
+      campo: 'specs.alturaRecomendadaMaxCm', min: 160, max: 210, step: 5 },
+    { id: 'reposacabezas', etiqueta: 'Reposacabezas', control: 'select', comparacion: 'igual', campo: 'specs.reposacabezas',
+      opciones: [{ valor: '', etiqueta: 'Cualquiera' }, { valor: 'ajustable', etiqueta: 'Ajustable' }, { valor: 'fijo', etiqueta: 'Fijo' }, { valor: 'ninguno', etiqueta: 'Sin reposacabezas' }] },
   ],
   ordenaciones: [
     { id: 'valoracion', etiqueta: 'Mejor valoradas', campo: 'valoracion', direccion: 'desc' },
@@ -92,6 +99,8 @@ const silla: TipoConfig = {
     { campo: 'specs.respaldo', formato: 'enum:respaldo' },
     { campo: 'specs.pesoMaxKg', formato: 'kg' },
     { campo: 'specs.garantiaAnios', formato: 'anios', mostrarSiNulo: { etiqueta: 'garantía n/d' } },
+    { campo: 'specs.alturaRecomendadaMaxCm', formato: 'cm', prefijo: 'Hasta ' },
+    { campo: 'specs.profundidadAsientoMaxCm', formato: 'cm', prefijo: 'Asiento ' },
   ],
   comparador: [
     { grupo: 'Valoración por ejes', campo: 'valoraciones.ergonomia', etiqueta: 'Ergonomía', direccion: 'mayor' },

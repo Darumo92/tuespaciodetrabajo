@@ -1,0 +1,64 @@
+tipo: "silla"
+nombre: "IKEA LÅNGFJÄLL"
+marca: "IKEA"
+imagen: "/img/productos/ikea-langfjall.avif"
+imagenAlt: "Silla de trabajo IKEA LÅNGFJÄLL tapizada con respaldo medio"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: "IKEA LANGFJALL silla trabajo"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: true
+webOficial: "https://www.ikea.com/es/es/p/langfjall-silla-confidente-gunnared-beige-negro-s49177629/"
+idealPara: "Teletrabajo tapizado con estética cuidada y garantía larga de IKEA"
+veredicto: "La LÅNGFJÄLL es la silla de trabajo tapizada de IKEA con mejor equilibrio entre acabado y precio: respaldo con soporte lumbar, tensión de inclinación manual con bloqueo y 10 años de garantía. No es una ergonómica de ajuste fino, pero su acolchado, su estética y su garantía la hacen una compra sólida para jornadas moderadas en casa."
+comunidad: "Buen consenso entre usuarios de IKEA por relación calidad-precio, estética y la garantía de 10 años; las críticas habituales señalan que los ajustes son limitados (sin lumbar regulable ni profundidad de asiento) y que el respaldo es de altura media."
+paraQuienSi:
+  - "Quien quiere una silla de trabajo tapizada con buen acabado"
+  - "Teletrabajo moderado que valora estética y garantía"
+  - "Espacios donde una gaming voluminosa no encaja"
+paraQuienNo:
+  - "Quien necesita lumbar ajustable o profundidad de asiento regulable"
+  - "Personas que superan los 110 kg"
+  - "Quien busca respaldo alto con reposacabezas"
+puntosFuertes:
+  - "Garantía de 10 años de IKEA"
+  - "Respaldo tapizado con soporte lumbar"
+  - "Tensión de inclinación manual con bloqueo"
+  - "Ruedas que se bloquean cuando no se usa la silla"
+puntosDebiles:
+  - "Soporta hasta 110 kg"
+  - "Sin lumbar ajustable ni profundidad de asiento regulable"
+  - "Respaldo de altura media, sin reposacabezas"
+fuenteSpecs: "Web oficial IKEA LÅNGFJÄLL (ikea.com/es ficha producto, asiento 53x41 cm, altura 45-56 cm, garantía 10 años) + PDF sillas giratorias IKEA"
+verificadoEn: "2026-06-18"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 56
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "Inclinación con tensión manual y bloqueo"
+  baseMaterial: null
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 10
+  anchoAsientoCm: 53
+  profundidadAsientoMaxCm: 41
+  reposacabezas: "ninguno"

@@ -8,7 +8,8 @@
     "preview": "astro preview",
     "test": "vitest run",
     "audit:amazon": "node scripts/audit-amazon-products.mjs",
-    "update:amazon-cache": "node scripts/update-amazon-cache.mjs"
+    "update:amazon-cache": "node scripts/update-amazon-cache.mjs",
+    "validate:productos": "node scripts/validate-productos.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

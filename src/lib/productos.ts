@@ -21,6 +21,14 @@ export interface Producto {
   valoracion: number | null;
   valoraciones: Valoraciones;
   amazon: { asin: string | null; buscar: string | null };
+  amazonPrimaryMarket?: string;
+  mercadosAmazon?: {
+    mercado: string;
+    asin: string | null;
+    disponibilidad: 'available' | 'unknown' | 'unavailable';
+    verificadoEn?: string;
+  }[];
+  oneLinkReady?: boolean;
   webOficial: string | null;
   idealPara?: string;
   veredicto?: string;
@@ -142,6 +150,58 @@ export function valorComparacion(p: Producto, filtro: FiltroConfig): string {
   }
   if (filtro.comparacion === 'check') return raw ? '1' : '0';
   return raw == null ? '' : String(raw);
+}
+
+/** comparación 'en': la card es visible si su valor está en el conjunto seleccionado.
+ *  Conjunto vacío = sin filtrar (visible). */
+export function pasaEn(cardValue: string, seleccion: string[]): boolean {
+  if (seleccion.length === 0) return true;
+  return seleccion.includes(cardValue);
+}
+
+/** Marcas presentes en el catálogo con su conteo, ordenadas por nº desc y luego alfabético. */
+export function opcionesMarca(productos: Producto[]): { valor: string; n: number }[] {
+  const conteo = new Map<string, number>();
+  for (const p of productos) {
+    if (!p.marca) continue;
+    conteo.set(p.marca, (conteo.get(p.marca) ?? 0) + 1);
+  }
+  return [...conteo.entries()]
+    .map(([valor, n]) => ({ valor, n }))
+    .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor, 'es'));
+}
+
+/** Nº de productos con dato no nulo ni vacío para una ruta de campo. */
+export function cuentaConDato(productos: Producto[], campo: string): number {
+  return productos.reduce((acc, p) => {
+    const v = getCampo(p, campo);
+    return acc + (v != null && v !== '' ? 1 : 0);
+  }, 0);
+}
+
+/** Filtra los filtros a renderizar: oculta los que tienen < min productos con dato,
+ *  salvo los ids en siempreVisibles. */
+export function filtrosVisibles(
+  filtros: FiltroConfig[],
+  productos: Producto[],
+  min: number,
+  siempreVisibles: string[]
+): FiltroConfig[] {
+  return filtros.filter(
+    (f) => siempreVisibles.includes(f.id) || cuentaConDato(productos, f.campo) >= min
+  );
+}
+
+/** minúsculas + sin diacríticos + recortado, para comparar búsquedas. */
+export function normalizaTexto(s: string): string {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+}
+
+/** true si la query (normalizada) aparece como substring en alguno de los campos. Query vacía = true. */
+export function coincideBusqueda(query: string, ...campos: string[]): boolean {
+  const q = normalizaTexto(query);
+  if (!q) return true;
+  return campos.some((c) => normalizaTexto(c).includes(q));
 }
 
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */

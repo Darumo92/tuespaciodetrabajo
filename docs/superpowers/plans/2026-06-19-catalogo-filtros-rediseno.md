@@ -1,3 +1,384 @@
+# Rediseño de filtros del catálogo — Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Reemplazar la fila plana de filtros del catálogo por una barra superior con búsqueda por texto, píldoras con popovers, filtro de marca multi-select, chips de filtros activos y auto-ocultado de facetas sin datos, sin cambiar el schema ni romper tests/validate/build.
+
+**Architecture:** La lógica testeable (comparación `'en'`, opciones de marca, auto-ocultado, normalización de búsqueda) se extrae a funciones puras en `src/lib/productos.ts` con tests vitest. La capa visual se reescribe en `src/components/producto/CatalogoProductos.astro` (markup + CSS + script de módulo), reusando esas funciones y manteniendo intacta la barra de comparación. Verificación de integración por `npm run build` + Playwright.
+
+**Tech Stack:** Astro 5 (static), TypeScript, vitest, CSS plano con custom properties. Sin frameworks JS. CSP sin `unsafe-inline` (hashes regenerados en build).
+
+**Spec:** `docs/superpowers/specs/2026-06-19-catalogo-filtros-rediseno-design.md`
+
+**Rama:** `feat/megarecopilacion-sillas`. Commit por tarea (cohesionados a la feature; no mezclar cambios ajenos).
+
+---
+
+## Estructura de archivos
+
+- **Modificar** `src/lib/tipos.ts` — añadir `'en'` a `Comparacion`; añadir filtro `marca`.
+- **Modificar** `src/lib/productos.ts` — añadir `pasaEn`, `opcionesMarca`, `cuentaConDato`, `filtrosVisibles`, `normalizaTexto`, `coincideBusqueda`.
+- **Modificar** `src/lib/productos.test.ts` — tests de las nuevas funciones; actualizar el assert de longitud de `datosFiltrado`.
+- **Reescribir** `src/components/producto/CatalogoProductos.astro` — frontmatter, markup, CSS y script.
+
+Ningún cambio en `src/content/config.ts`, YAML de productos, `TarjetaProducto.astro`, ni en la barra de comparación.
+
+---
+
+### Task 1: Comparación `'en'` + predicado puro `pasaEn`
+
+**Files:**
+- Modify: `src/lib/tipos.ts:5`
+- Modify: `src/lib/productos.ts` (añadir export tras `valorComparacion`, ~línea 153)
+- Test: `src/lib/productos.test.ts`
+
+- [ ] **Step 1: Escribir el test que falla**
+
+Añadir al final de `src/lib/productos.test.ts`:
+
+```ts
+import { pasaEn } from './productos';
+
+describe('pasaEn (comparación multi-select)', () => {
+  it('conjunto vacío no filtra (siempre visible)', () => {
+    expect(pasaEn('IKEA', [])).toBe(true);
+    expect(pasaEn('', [])).toBe(true);
+  });
+  it('visible si el valor está en el conjunto', () => {
+    expect(pasaEn('IKEA', ['IKEA', 'Steelcase'])).toBe(true);
+  });
+  it('oculto si el valor no está en el conjunto', () => {
+    expect(pasaEn('Hbada', ['IKEA', 'Steelcase'])).toBe(false);
+    expect(pasaEn('', ['IKEA'])).toBe(false);
+  });
+});
+```
+
+- [ ] **Step 2: Ejecutar y verificar que falla**
+
+Run: `npx vitest run src/lib/productos.test.ts -t pasaEn`
+Expected: FAIL — `pasaEn is not a function` / import error.
+
+- [ ] **Step 3: Implementar**
+
+En `src/lib/tipos.ts` línea 5, cambiar:
+
+```ts
+export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral';
+```
+
+por:
+
+```ts
+export type Comparacion = 'max' | 'igual' | 'min' | 'check' | 'umbral' | 'en';
+```
+
+En `src/lib/productos.ts`, tras la función `valorComparacion` (~línea 153), añadir:
+
+```ts
+/** comparación 'en': la card es visible si su valor está en el conjunto seleccionado.
+ *  Conjunto vacío = sin filtrar (visible). */
+export function pasaEn(cardValue: string, seleccion: string[]): boolean {
+  if (seleccion.length === 0) return true;
+  return seleccion.includes(cardValue);
+}
+```
+
+- [ ] **Step 4: Ejecutar y verificar que pasa**
+
+Run: `npx vitest run src/lib/productos.test.ts -t pasaEn`
+Expected: PASS (3 tests).
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add src/lib/tipos.ts src/lib/productos.ts src/lib/productos.test.ts
+git commit -m "feat(catalogo): add 'en' comparison and pasaEn predicate
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 2: Filtro `marca` + `opcionesMarca`
+
+**Files:**
+- Modify: `src/lib/tipos.ts` (array `silla.filtros`, ~línea 69-89)
+- Modify: `src/lib/productos.ts` (añadir export `opcionesMarca`)
+- Test: `src/lib/productos.test.ts` (nuevo test + actualizar assert existente)
+
+- [ ] **Step 1: Escribir el test que falla**
+
+Añadir al final de `src/lib/productos.test.ts`:
+
+```ts
+import { opcionesMarca } from './productos';
+
+describe('opcionesMarca', () => {
+  it('cuenta por marca y ordena por nº desc, luego alfabético', () => {
+    const ps = [
+      base({ slug: 'a', marca: 'IKEA' }),
+      base({ slug: 'b', marca: 'IKEA' }),
+      base({ slug: 'c', marca: 'Steelcase' }),
+      base({ slug: 'd', marca: 'Hbada' }),
+    ];
+    expect(opcionesMarca(ps)).toEqual([
+      { valor: 'IKEA', n: 2 },
+      { valor: 'Hbada', n: 1 },
+      { valor: 'Steelcase', n: 1 },
+    ]);
+  });
+  it('ignora marca vacía', () => {
+    expect(opcionesMarca([base({ marca: '' })])).toEqual([]);
+  });
+});
+```
+
+- [ ] **Step 2: Ejecutar y verificar que falla**
+
+Run: `npx vitest run src/lib/productos.test.ts -t opcionesMarca`
+Expected: FAIL — `opcionesMarca is not a function`.
+
+- [ ] **Step 3: Implementar**
+
+En `src/lib/productos.ts`, tras `pasaEn`, añadir:
+
+```ts
+/** Marcas presentes en el catálogo con su conteo, ordenadas por nº desc y luego alfabético. */
+export function opcionesMarca(productos: Producto[]): { valor: string; n: number }[] {
+  const conteo = new Map<string, number>();
+  for (const p of productos) {
+    if (!p.marca) continue;
+    conteo.set(p.marca, (conteo.get(p.marca) ?? 0) + 1);
+  }
+  return [...conteo.entries()]
+    .map(([valor, n]) => ({ valor, n }))
+    .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor));
+}
+```
+
+En `src/lib/tipos.ts`, dentro de `silla.filtros`, insertar el filtro `marca` justo después del filtro `precio` (tras la línea que termina en `formatoSalida: 'tramoEuros' },`):
+
+```ts
+    { id: 'marca', etiqueta: 'Marca', control: 'select', comparacion: 'en', campo: 'marca' },
+```
+
+- [ ] **Step 4: Actualizar el assert de longitud que ahora rompe**
+
+El test `datosFiltrado: silla` ahora emite además `data-c-marca`. En `src/lib/productos.test.ts`, dentro de `describe('datosFiltrado: silla')`, añadir la aserción del nuevo campo y subir la longitud:
+
+```ts
+    expect(d['data-c-marca']).toBe('X'); // productoSilla.marca
+```
+
+y cambiar:
+
+```ts
+    expect(Object.keys(d).length).toBe(9); // precio/peso comparten clave con sus ordenaciones
+```
+
+por:
+
+```ts
+    expect(Object.keys(d).length).toBe(10); // +marca; precio/peso comparten clave con sus ordenaciones
+```
+
+- [ ] **Step 5: Ejecutar toda la suite**
+
+Run: `npm test`
+Expected: PASS — todos los tests verdes (los 33 previos + nuevos de Task 1 y 2).
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add src/lib/tipos.ts src/lib/productos.ts src/lib/productos.test.ts
+git commit -m "feat(catalogo): add brand facet (multi-select) and opcionesMarca
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 3: Auto-ocultado de facetas (`cuentaConDato` + `filtrosVisibles`)
+
+**Files:**
+- Modify: `src/lib/productos.ts`
+- Test: `src/lib/productos.test.ts`
+
+- [ ] **Step 1: Escribir el test que falla**
+
+Añadir al final de `src/lib/productos.test.ts`:
+
+```ts
+import { cuentaConDato, filtrosVisibles } from './productos';
+
+describe('cuentaConDato', () => {
+  it('cuenta productos con dato no nulo ni vacío', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', pesoMaxKg: 130 } as any }),
+      base({ specs: { tipo: 'silla', pesoMaxKg: null } as any }),
+      base({ specs: { tipo: 'silla' } as any }),
+    ];
+    expect(cuentaConDato(ps, 'specs.pesoMaxKg')).toBe(1);
+  });
+});
+
+describe('filtrosVisibles', () => {
+  const fEdad: FiltroConfig = { id: 'edad', etiqueta: '', control: 'select', comparacion: 'igual', campo: 'specs.edad' };
+  const fSiempre: FiltroConfig = { id: 'marca', etiqueta: '', control: 'select', comparacion: 'en', campo: 'marca' };
+  it('oculta facetas con menos de min datos, salvo las siempre visibles', () => {
+    const ps = [base({ specs: { tipo: 'silla', edad: 5 } as any }), base({ specs: { tipo: 'silla' } as any })];
+    const vis = filtrosVisibles([fEdad, fSiempre], ps, 3, ['marca']);
+    expect(vis.map((f) => f.id)).toEqual(['marca']); // edad tiene 1 dato (<3) → oculto; marca siempre
+  });
+  it('muestra facetas con suficientes datos', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', edad: 1 } as any }),
+      base({ specs: { tipo: 'silla', edad: 2 } as any }),
+      base({ specs: { tipo: 'silla', edad: 3 } as any }),
+    ];
+    const vis = filtrosVisibles([fEdad], ps, 3, []);
+    expect(vis.map((f) => f.id)).toEqual(['edad']);
+  });
+});
+```
+
+- [ ] **Step 2: Ejecutar y verificar que falla**
+
+Run: `npx vitest run src/lib/productos.test.ts -t filtrosVisibles`
+Expected: FAIL — funciones no definidas.
+
+- [ ] **Step 3: Implementar**
+
+En `src/lib/productos.ts`, tras `opcionesMarca`, añadir:
+
+```ts
+/** Nº de productos con dato no nulo ni vacío para una ruta de campo. */
+export function cuentaConDato(productos: Producto[], campo: string): number {
+  return productos.reduce((acc, p) => {
+    const v = getCampo(p, campo);
+    return acc + (v != null && v !== '' ? 1 : 0);
+  }, 0);
+}
+
+/** Filtra los filtros a renderizar: oculta los que tienen < min productos con dato,
+ *  salvo los ids en siempreVisibles. */
+export function filtrosVisibles(
+  filtros: FiltroConfig[],
+  productos: Producto[],
+  min: number,
+  siempreVisibles: string[]
+): FiltroConfig[] {
+  return filtros.filter(
+    (f) => siempreVisibles.includes(f.id) || cuentaConDato(productos, f.campo) >= min
+  );
+}
+```
+
+- [ ] **Step 4: Ejecutar y verificar que pasa**
+
+Run: `npx vitest run src/lib/productos.test.ts -t "filtrosVisibles|cuentaConDato"`
+Expected: PASS.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add src/lib/productos.ts src/lib/productos.test.ts
+git commit -m "feat(catalogo): auto-hide facets with insufficient data
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 4: Búsqueda (`normalizaTexto` + `coincideBusqueda`)
+
+**Files:**
+- Modify: `src/lib/productos.ts`
+- Test: `src/lib/productos.test.ts`
+
+- [ ] **Step 1: Escribir el test que falla**
+
+Añadir al final de `src/lib/productos.test.ts`:
+
+```ts
+import { normalizaTexto, coincideBusqueda } from './productos';
+
+describe('normalizaTexto', () => {
+  it('minúsculas, sin acentos, recortado', () => {
+    expect(normalizaTexto('  ERGONÓMICA  ')).toBe('ergonomica');
+    expect(normalizaTexto('Långfjäll')).toBe('langfjall');
+  });
+});
+
+describe('coincideBusqueda', () => {
+  it('query vacía siempre coincide', () => {
+    expect(coincideBusqueda('', 'Aeron', 'Herman Miller')).toBe(true);
+  });
+  it('coincide por substring sin acentos/mayúsculas', () => {
+    expect(coincideBusqueda('ikea', 'MATCHSPEL', 'IKEA')).toBe(true);
+    expect(coincideBusqueda('ergo', 'Silla Ergonómica', 'Hbada')).toBe(true);
+  });
+  it('no coincide si no está en ningún campo', () => {
+    expect(coincideBusqueda('steelcase', 'Aeron', 'Herman Miller')).toBe(false);
+  });
+});
+```
+
+- [ ] **Step 2: Ejecutar y verificar que falla**
+
+Run: `npx vitest run src/lib/productos.test.ts -t "normalizaTexto|coincideBusqueda"`
+Expected: FAIL — funciones no definidas.
+
+- [ ] **Step 3: Implementar**
+
+En `src/lib/productos.ts`, tras `filtrosVisibles`, añadir (el rango Unicode son los diacríticos combinantes U+0300–U+036F):
+
+```ts
+/** minúsculas + sin diacríticos + recortado, para comparar búsquedas. */
+export function normalizaTexto(s: string): string {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+}
+
+/** true si la query (normalizada) aparece como substring en alguno de los campos. Query vacía = true. */
+export function coincideBusqueda(query: string, ...campos: string[]): boolean {
+  const q = normalizaTexto(query);
+  if (!q) return true;
+  return campos.some((c) => normalizaTexto(c).includes(q));
+}
+```
+
+- [ ] **Step 4: Ejecutar toda la suite**
+
+Run: `npm test`
+Expected: PASS — todo verde.
+
+- [ ] **Step 5: Commit**
+
+```bash
+git add src/lib/productos.ts src/lib/productos.test.ts
+git commit -m "feat(catalogo): text search normalization helpers
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+```
+
+---
+
+### Task 5: Reescritura del componente `CatalogoProductos.astro`
+
+Una sola reescritura cohesiva (frontmatter + markup + CSS + script en el mismo archivo). Se verifica por build + Playwright (no unit; la lógica testeable ya vive en `productos.ts`).
+
+**Files:**
+- Rewrite: `src/components/producto/CatalogoProductos.astro`
+
+- [ ] **Step 1: Reescribir el archivo completo**
+
+Sustituir TODO el contenido de `src/components/producto/CatalogoProductos.astro` por el bloque de código de referencia que sigue. Notas de implementación:
+- El script reimplementa `norm` (paridad con `normalizaTexto`) y la lógica de comparación (paridad con `pasaEn` y las ramas existentes); es intencional para no introducir un import de módulo en el `<script>` del cliente. Las funciones puras de `productos.ts` cubren esa lógica con tests.
+- El rango Unicode `[̀-ͯ]` en `norm` son los diacríticos combinantes.
+- Ningún handler inline (`onclick=`): todos los listeners van por `addEventListener` para respetar la CSP.
+
+```astro
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
 import { getTipoConfig } from '@/lib/tipos';
@@ -109,8 +490,6 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
           {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
         </select>
       </label>
-
-      <button class="cat-verres" type="button" data-ver-res>Ver <span data-ver-n>{productos.length}</span> resultados</button>
     </div>
   </div>
 
@@ -229,9 +608,8 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
 
   .catalogo-vacio { margin: 1.25rem 0 0; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted); color: var(--ink-muted); }
 
-  /* Controles sólo móviles: ocultos en escritorio */
+  /* Botón móvil "Filtrar": oculto en escritorio */
   .cat-mobtoggle { display: none; }
-  .cat-verres { display: none; }
   .cat-mobn {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: 1.2rem; height: 1.2rem; margin-left: 0.4rem; padding: 0 0.3rem;
@@ -259,15 +637,15 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       background: var(--bg); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
     }
     .cat-pills {
-      position: fixed; inset: 0; z-index: 300; display: none; /* por encima de .bottom-nav (z-index 200) */
+      position: fixed; inset: 0; z-index: 60; display: none;
       flex-direction: column; align-items: stretch; gap: 0.7rem;
       padding: 1.1rem; background: var(--bg); overflow-y: auto;
     }
     .cat-bar.is-open .cat-pills { display: flex; }
-    .cat-verres {
-      display: block; order: 99; position: sticky; bottom: 0;
-      margin-top: auto; min-height: 2.75rem; padding: 0.8rem; border: 0; text-align: center;
-      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font: inherit; font-weight: 750; cursor: pointer;
+    .cat-bar.is-open .cat-pills::after {
+      content: 'Ver resultados'; order: 99; position: sticky; bottom: 0;
+      margin-top: auto; padding: 0.8rem; text-align: center;
+      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font-weight: 750; cursor: pointer;
     }
     .cat-facet { width: 100%; }
     .cat-pill { width: 100%; justify-content: space-between; }
@@ -317,8 +695,6 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     const mobToggle = root.querySelector<HTMLButtonElement>('[data-mob-toggle]');
     const mobN = root.querySelector<HTMLElement>('[data-mob-n]');
     const bar = root.querySelector<HTMLElement>('.cat-bar');
-    const verResBtn = root.querySelector<HTMLButtonElement>('[data-ver-res]');
-    const verResN = root.querySelector<HTMLElement>('[data-ver-n]');
 
     const dataKey = (clave: string) => 'c' + clave.charAt(0).toUpperCase() + clave.slice(1);
     const readCard = (card: HTMLElement, clave: string) => card.dataset[dataKey(clave)];
@@ -401,7 +777,6 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       }
 
       if (nOut) nOut.textContent = String(visibles);
-      if (verResN) verResN.textContent = String(visibles);
       if (vacio) vacio.hidden = visibles > 0;
       renderEstado();
     };
@@ -554,20 +929,13 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     document.addEventListener('click', (e) => {
       if (!(e.target as HTMLElement).closest('.cat-facet')) cerrarPopovers();
     });
-    document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Escape') return;
-      const abierta = root.querySelector<HTMLElement>('[data-pill-tipo="dropdown"][aria-expanded="true"]');
-      cerrarPopovers();
-      abierta?.focus();
-    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarPopovers(); });
 
     // ----- Búsqueda -----
-    const onBusqueda = () => {
-      busqueda = norm(busquedaInput?.value ?? '');
+    busquedaInput?.addEventListener('input', () => {
+      busqueda = norm(busquedaInput.value);
       applyFilters();
-    };
-    busquedaInput?.addEventListener('input', onBusqueda);
-    busquedaInput?.addEventListener('search', onBusqueda); // botón ✕ nativo de type=search
+    });
 
     // ----- Orden -----
     ordenSel?.addEventListener('change', applyFilters);
@@ -589,10 +957,13 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       const abierto = bar?.classList.toggle('is-open');
       mobToggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
     });
-    // Botón "Ver N resultados": cierra el drawer móvil.
-    verResBtn?.addEventListener('click', () => {
-      bar?.classList.remove('is-open');
-      mobToggle?.setAttribute('aria-expanded', 'false');
+    // Clic en el pseudo-botón "Ver resultados" (parte baja del drawer)
+    root.querySelector<HTMLElement>('.cat-pills')?.addEventListener('click', (e) => {
+      const pills = e.currentTarget as HTMLElement;
+      if (e.target === pills && bar?.classList.contains('is-open')) {
+        bar.classList.remove('is-open');
+        mobToggle?.setAttribute('aria-expanded', 'false');
+      }
     });
 
     // ===== Barra de comparación (igual que antes) =====
@@ -663,3 +1034,64 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     applyFilters();
   });
 </script>
+```
+
+- [ ] **Step 2: Type-check + build**
+
+Run: `npm run build`
+Expected: build OK, "93 page(s) built", y la línea "Updated CSP script-src". Sin errores de TypeScript.
+
+- [ ] **Step 3: Verificar que la carga no oculta cards (regresión 112b0d7)**
+
+Run: `npm run preview -- --port 4321` (en background), luego con Playwright navegar a `http://localhost:4321/catalogo/silla/` y comprobar:
+- `document.querySelectorAll('.card:not([hidden])').length` === nº total de sillas (24).
+- La píldora/popover de altura NO está presente (solo 1 silla con dato; auto-ocultada).
+
+- [ ] **Step 4: Verificación funcional (Playwright)**
+
+En `http://localhost:4321/catalogo/silla/`:
+- Escribir "ikea" en la búsqueda → solo cards IKEA visibles; chip «ikea» aparece.
+- Abrir popover "Precio", pulsar "€€" → cuenta baja, píldora muestra "Hasta €€", chip "Precio máximo: Hasta €€"; clic fuera cierra el popover; `Esc` también.
+- Abrir "Marca", marcar 2 marcas → 2 chips, contador correcto, píldora "Marca · 2".
+- Pulsar toggle "Soporta 130 kg o más" → aria-pressed=true, filtra.
+- "Limpiar todo" → 24 cards, sin chips, búsqueda vacía.
+- Resize a 390px: aparece botón "Filtrar (n)"; abre drawer; clic en zona inferior "Ver resultados" cierra.
+- Seleccionar 2 cards con "comparar" → cmp-bar aparece y "Comparar" se habilita.
+
+- [ ] **Step 5: Suite completa + validate**
+
+Run: `npm test && npm run validate:productos`
+Expected: tests verdes; "Productos revisados: 24 / OK".
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add src/components/producto/CatalogoProductos.astro public/_headers
+git commit -m "feat(catalogo): filter bar with search, brand multi-select and popovers
+
+Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
+```
+
+> Nota CSP: `npm run build` regenera los hashes en `public/_headers` y `dist/_headers`. Incluir `public/_headers` en el commit si cambió.
+
+---
+
+## Self-Review
+
+**Cobertura del spec:**
+- Patrón B (barra superior + popovers) → Task 5 markup/CSS. ✔
+- Búsqueda texto (nombre+marca, sin acentos) → Task 4 + `coincide` en script. ✔
+- Marca multi-select + comparación `'en'` → Tasks 1, 2. ✔
+- Auto-ocultar facetas <3 datos → Task 3 + frontmatter Task 5. ✔
+- Chips activos + limpiar todo → Task 5 script. ✔
+- Popover live-apply, uno a la vez, clic fuera + Esc, sin onclick inline → Task 5 script. ✔
+- Móvil drawer "Filtrar (n)" + "Ver resultados" → Task 5 CSS/script. ✔
+- A11y (aria-expanded/controls/pressed, aria-label chips, aria-live count) → Task 5 markup. ✔
+- No tocar cmp-bar/schema/TarjetaProducto → respetado. ✔
+- Verificación test/validate/build/Playwright → Task 5. ✔
+
+**Placeholder scan:** sin TBD/TODO; todo el código está completo.
+
+**Consistencia de tipos:** `pasaEn`, `opcionesMarca`, `cuentaConDato`, `filtrosVisibles`, `normalizaTexto`, `coincideBusqueda` con firmas idénticas entre definición (productos.ts) y uso (test/componente). El script reimplementa `norm`/`pasaFiltro` localmente (paridad con `normalizaTexto`/`pasaEn`; documentado en spec como "y/o el script"); las funciones de productos.ts cubren la lógica con tests.
+
+**Nota de riesgo:** si al ejecutar el auto-ocultado se esconde alguna faceta inesperada (p. ej. reposacabezas con <3 datos), es comportamiento correcto por diseño; reportar al usuario qué facetas quedaron ocultas para decidir si poblar specs (opción D).

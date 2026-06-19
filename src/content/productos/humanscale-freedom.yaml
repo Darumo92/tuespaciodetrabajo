@@ -1,0 +1,64 @@
+tipo: "silla"
+nombre: "Humanscale Freedom con reposacabezas"
+marca: "Humanscale"
+imagen: "/img/productos/humanscale-freedom.webp"
+imagenAlt: "Silla ergonómica Humanscale Freedom con reposacabezas"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.6
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: "Humanscale Freedom reposacabezas silla"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: true
+webOficial: "https://www.humanscale.com/products/seating/freedom-headrest-executive-chair/custom"
+idealPara: "Quien quiere una premium que se ajusta sola, sin palancas ni manuales"
+veredicto: "La Freedom fue la primera silla con reclinación activada por el peso del usuario: te recuestas y el respaldo y el reposacabezas te siguen sin tocar un solo mando. Esa simplicidad es su mayor virtud y también su límite; no hay ajuste lumbar discreto ni profundidad de asiento regulable, pero para quien odia configurar sillas es de lo más cómodo que existe, con 15 años de garantía."
+comunidad: "Consenso de reviews (BTOD, The Human Solution) muy positivo en comodidad inmediata y en el reposacabezas dinámico; las críticas apuntan a que el soporte lumbar no es regulable de forma independiente y a un precio claramente premium."
+paraQuienSi:
+  - "Quien quiere comodidad inmediata sin aprender a ajustar la silla"
+  - "Usuarios que cambian mucho de postura durante el día"
+  - "Quien valora reposacabezas que acompaña el movimiento"
+paraQuienNo:
+  - "Quien necesita soporte lumbar ajustable de forma independiente"
+  - "Quien busca profundidad de asiento regulable"
+  - "Presupuestos ajustados"
+puntosFuertes:
+  - "Reclinación activada por peso, sin palancas que ajustar"
+  - "Reposacabezas dinámico que sigue la postura"
+  - "Reposabrazos sincronizados ajustables con una mano"
+  - "Garantía de 15 años, uso 24/7"
+  - "Base de aluminio y construcción premium"
+puntosDebiles:
+  - "Sin ajuste lumbar independiente"
+  - "Sin profundidad de asiento regulable"
+  - "Precio de gama alta"
+fuenteSpecs: "Web oficial Humanscale Freedom con reposacabezas (humanscale.com/products/seating/freedom-headrest-executive-chair) + reviews BTOD y The Human Solution"
+verificadoEn: "2026-06-18"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 136
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 53
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "Reclinación activada por peso"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 17
+  garantiaAnios: 15
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma moldeada"

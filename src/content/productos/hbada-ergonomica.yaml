@@ -17,35 +17,36 @@ amazon:
   asin: "B0CH7RBQQ7"
   buscar: "Hbada silla ergonómica"
 webOficial: null
-idealPara: "Quien prioriza estética y reposapiés integrado"
-veredicto: "Silla de presupuesto medio con reposapiés retráctil como diferencial claro; cojín de espuma con muelles cómodo pero sin la transpirabilidad de malla completa. Buena opción para jornadas moderadas si el reposapiés es una prioridad."
-comunidad: "Los usuarios valoran el reposapiés y la comodidad del cojín; las críticas se centran en el lumbar fijo y los reposabrazos limitados. Consenso positivo en Amazon.es para uso de 6-8 horas."
+idealPara: "Quien prioriza reposapiés integrado y ajustes 2D a precio medio"
+veredicto: "El modelo P5 es una silla de presupuesto medio con reposapiés retráctil como diferencial claro, lumbar 2D y reposacabezas ajustable; respaldo de malla con asiento de espuma viscoelástica con muelles. Buena opción para jornadas moderadas si el reposapiés y los ajustes básicos son la prioridad."
+comunidad: "Los usuarios valoran el reposapiés, el lumbar ajustable y la comodidad del asiento; las críticas se centran en el rango de ajuste de los reposabrazos 2D y en la firmeza del cojín con el tiempo. Consenso positivo en Amazon.es para uso de 6-8 horas."
 paraQuienSi:
   - "Quienes necesitan reposapiés integrado sin pagar precio premium"
   - "Usuarios de estatura media (1,60–1,85 m)"
   - "Trabajo de 6-8 horas con descansos regulares"
 paraQuienNo:
-  - "Personas que necesiten soporte lumbar ajustable en altura"
-  - "Usuarios que prefieren malla completa en climas cálidos"
-  - "Quienes superan los 150 kg de peso"
+  - "Quienes necesitan reposabrazos 3D/4D o profundidad de asiento regulable"
+  - "Usuarios que prefieren malla completa en asiento y respaldo en climas cálidos"
+  - "Quienes superan los 136 kg de peso"
 puntosFuertes:
   - "Reposapiés retráctil integrado"
-  - "Diseño discreto"
-  - "Malla transpirable en respaldo"
+  - "Lumbar 2D ajustable (altura y profundidad)"
+  - "Reposacabezas ajustable en altura y giro hasta 40°"
+  - "Respaldo de malla transpirable"
 puntosDebiles:
-  - "Soporte lumbar fijo (no ajustable en altura)"
-  - "Asiento de espuma, no malla completa"
-  - "Reposabrazos solo altura"
-fuenteSpecs: "Amazon.es ficha B0CH7RBQQ7 · yaxa.co (dimensiones, peso 20 kg) · newegg.com (BIFMA, inclinación 135°) · lacontradejaen.eldiario.es (garantía 3 años, SGS/TÜV) · hardwareyou.es"
-verificadoEn: "2026-06-07"
+  - "Reposabrazos 2D (sin giro ni ajuste de profundidad como 3D/4D)"
+  - "Asiento de espuma con muelles, no malla completa"
+  - "Sin profundidad de asiento regulable"
+fuenteSpecs: "Web oficial Hbada P5 (hbada.com/products/hbada-p5-ergonomic-office-chair-with-footrest) · manual P5 (manuals.plus/asin/B0BWDQX8RH) · newegg.com (BIFMA, inclinación 135°, límite 300 lb) · Amazon.es ficha B0CH7RBQQ7"
+verificadoEn: "2026-06-18"
 specs:
   tipo: "silla"
-  lumbar: "fijo"
+  lumbar: "altura"
   respaldo: "mixto"
-  reposabrazos: "1d"
+  reposabrazos: "2d"
   profundidadRegulable: false
   reclinacionMaxGrados: 135
-  pesoMaxKg: 150
+  pesoMaxKg: 136
   alturaAsientoMinCm: null
   alturaAsientoMaxCm: null
   anchoCm: 48
@@ -55,3 +56,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 20
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma viscoelástica con muelles"

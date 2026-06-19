@@ -15,6 +15,12 @@ import {
   claveData,
   valorComparacion,
   datosFiltrado,
+  pasaEn,
+  opcionesMarca,
+  cuentaConDato,
+  filtrosVisibles,
+  normalizaTexto,
+  coincideBusqueda,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
 import type { FiltroConfig } from './tipos';
@@ -209,12 +215,21 @@ const productoSilla = {
   tramoPrecio: 3, precioMin: null, precioMax: null, valoracion: 4.5,
   valoraciones: { ergonomia: null, ajustabilidad: null, materiales: null, comodidad: null, calidadPrecio: null },
   amazon: { asin: null, buscar: null }, webOficial: null,
+  amazonPrimaryMarket: 'ES',
+  mercadosAmazon: [
+    { mercado: 'ES', asin: 'B000000001', disponibilidad: 'available', verificadoEn: '2026-06-18' },
+    { mercado: 'US', asin: 'B000000002', disponibilidad: 'available', verificadoEn: '2026-06-18' },
+  ],
+  oneLinkReady: true,
   paraQuienSi: [], paraQuienNo: [], puntosFuertes: [], puntosDebiles: [], fuenteSpecs: '',
-  specs: { tipo: 'silla', respaldo: 'malla', reposabrazos: '3d', profundidadRegulable: true, pesoMaxKg: 150 },
+  specs: {
+    tipo: 'silla', respaldo: 'malla', reposabrazos: '3d', profundidadRegulable: true, pesoMaxKg: 150,
+    alturaRecomendadaMinCm: 160, alturaRecomendadaMaxCm: 190, reposacabezas: 'ajustable', profundidadAsientoMaxCm: 48,
+  },
 } as never;
 
 describe('datosFiltrado: silla', () => {
-  it('emite los 6 data-c-<clave> derivados de filtros y ordenaciones', () => {
+  it('emite los data-c-<clave> derivados de filtros y ordenaciones', () => {
     const cfg = getTipoConfig('silla') as TipoConfig;
     const d = datosFiltrado(productoSilla, cfg);
     expect(d['data-c-tramoprecio']).toBe('3');
@@ -223,7 +238,19 @@ describe('datosFiltrado: silla', () => {
     expect(d['data-c-profundidadregulable']).toBe('1');
     expect(d['data-c-pesomaxkg']).toBe('150');
     expect(d['data-c-valoracion']).toBe('4.5');
-    expect(Object.keys(d).length).toBe(6); // precio/peso comparten clave con sus ordenaciones
+    expect(d['data-c-alturarecomendadamincm']).toBeDefined();
+    expect(d['data-c-alturarecomendadamaxcm']).toBeDefined();
+    expect(d['data-c-reposacabezas']).toBeDefined();
+    expect(d['data-c-marca']).toBe('X'); // productoSilla.marca
+    expect(Object.keys(d).length).toBe(10); // +marca; precio/peso comparten clave con sus ordenaciones
+  });
+});
+
+describe('productoSilla: campos de mercado Amazon/OneLink', () => {
+  it('preserva amazonPrimaryMarket, mercadosAmazon y oneLinkReady', () => {
+    expect(productoSilla.amazonPrimaryMarket).toBe('ES');
+    expect(productoSilla.mercadosAmazon?.map((m) => m.mercado)).toEqual(['ES', 'US']);
+    expect(productoSilla.oneLinkReady).toBe(true);
   });
 });
 
@@ -291,5 +318,88 @@ describe('construirChips: silla', () => {
     const p = { specs: { tipo: 'silla', lumbar: 'fijo', respaldo: 'malla', pesoMaxKg: 120, garantiaAnios: null } } as never;
     const chips = construirChips(p, cfg);
     expect(chips[chips.length - 1]).toEqual({ texto: 'garantía n/d', nd: true });
+  });
+});
+
+describe('pasaEn (comparación multi-select)', () => {
+  it('conjunto vacío no filtra (siempre visible)', () => {
+    expect(pasaEn('IKEA', [])).toBe(true);
+    expect(pasaEn('', [])).toBe(true);
+  });
+  it('visible si el valor está en el conjunto', () => {
+    expect(pasaEn('IKEA', ['IKEA', 'Steelcase'])).toBe(true);
+  });
+  it('oculto si el valor no está en el conjunto', () => {
+    expect(pasaEn('Hbada', ['IKEA', 'Steelcase'])).toBe(false);
+    expect(pasaEn('', ['IKEA'])).toBe(false);
+  });
+});
+
+describe('opcionesMarca', () => {
+  it('cuenta por marca y ordena por nº desc, luego alfabético', () => {
+    const ps = [
+      base({ slug: 'a', marca: 'IKEA' }),
+      base({ slug: 'b', marca: 'IKEA' }),
+      base({ slug: 'c', marca: 'Steelcase' }),
+      base({ slug: 'd', marca: 'Hbada' }),
+    ];
+    expect(opcionesMarca(ps)).toEqual([
+      { valor: 'IKEA', n: 2 },
+      { valor: 'Hbada', n: 1 },
+      { valor: 'Steelcase', n: 1 },
+    ]);
+  });
+  it('ignora marca vacía', () => {
+    expect(opcionesMarca([base({ marca: '' })])).toEqual([]);
+  });
+});
+
+describe('cuentaConDato', () => {
+  it('cuenta productos con dato no nulo ni vacío', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', pesoMaxKg: 130 } as any }),
+      base({ specs: { tipo: 'silla', pesoMaxKg: null } as any }),
+      base({ specs: { tipo: 'silla' } as any }),
+    ];
+    expect(cuentaConDato(ps, 'specs.pesoMaxKg')).toBe(1);
+  });
+});
+
+describe('filtrosVisibles', () => {
+  const fEdad: FiltroConfig = { id: 'edad', etiqueta: '', control: 'select', comparacion: 'igual', campo: 'specs.edad' };
+  const fSiempre: FiltroConfig = { id: 'marca', etiqueta: '', control: 'select', comparacion: 'en', campo: 'marca' };
+  it('oculta facetas con menos de min datos, salvo las siempre visibles', () => {
+    const ps = [base({ specs: { tipo: 'silla', edad: 5 } as any }), base({ specs: { tipo: 'silla' } as any })];
+    const vis = filtrosVisibles([fEdad, fSiempre], ps, 3, ['marca']);
+    expect(vis.map((f) => f.id)).toEqual(['marca']); // edad tiene 1 dato (<3) → oculto; marca siempre
+  });
+  it('muestra facetas con suficientes datos', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', edad: 1 } as any }),
+      base({ specs: { tipo: 'silla', edad: 2 } as any }),
+      base({ specs: { tipo: 'silla', edad: 3 } as any }),
+    ];
+    const vis = filtrosVisibles([fEdad], ps, 3, []);
+    expect(vis.map((f) => f.id)).toEqual(['edad']);
+  });
+});
+
+describe('normalizaTexto', () => {
+  it('minúsculas, sin acentos, recortado', () => {
+    expect(normalizaTexto('  ERGONÓMICA  ')).toBe('ergonomica');
+    expect(normalizaTexto('Långfjäll')).toBe('langfjall');
+  });
+});
+
+describe('coincideBusqueda', () => {
+  it('query vacía siempre coincide', () => {
+    expect(coincideBusqueda('', 'Aeron', 'Herman Miller')).toBe(true);
+  });
+  it('coincide por substring sin acentos/mayúsculas', () => {
+    expect(coincideBusqueda('ikea', 'MATCHSPEL', 'IKEA')).toBe(true);
+    expect(coincideBusqueda('ergo', 'Silla Ergonómica', 'Hbada')).toBe(true);
+  });
+  it('no coincide si no está en ningún campo', () => {
+    expect(coincideBusqueda('steelcase', 'Aeron', 'Herman Miller')).toBe(false);
   });
 });
