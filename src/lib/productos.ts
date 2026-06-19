@@ -159,6 +159,18 @@ export function pasaEn(cardValue: string, seleccion: string[]): boolean {
   return seleccion.includes(cardValue);
 }
 
+/** Marcas presentes en el catálogo con su conteo, ordenadas por nº desc y luego alfabético. */
+export function opcionesMarca(productos: Producto[]): { valor: string; n: number }[] {
+  const conteo = new Map<string, number>();
+  for (const p of productos) {
+    if (!p.marca) continue;
+    conteo.set(p.marca, (conteo.get(p.marca) ?? 0) + 1);
+  }
+  return [...conteo.entries()]
+    .map(([valor, n]) => ({ valor, n }))
+    .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor));
+}
+
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
 export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
   const out: Record<string, string> = {};

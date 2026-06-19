@@ -235,7 +235,8 @@ describe('datosFiltrado: silla', () => {
     expect(d['data-c-alturarecomendadamincm']).toBeDefined();
     expect(d['data-c-alturarecomendadamaxcm']).toBeDefined();
     expect(d['data-c-reposacabezas']).toBeDefined();
-    expect(Object.keys(d).length).toBe(9); // precio/peso comparten clave con sus ordenaciones
+    expect(d['data-c-marca']).toBe('X'); // productoSilla.marca
+    expect(Object.keys(d).length).toBe(10); // +marca; precio/peso comparten clave con sus ordenaciones
   });
 });
 
@@ -327,5 +328,26 @@ describe('pasaEn (comparación multi-select)', () => {
   it('oculto si el valor no está en el conjunto', () => {
     expect(pasaEn('Hbada', ['IKEA', 'Steelcase'])).toBe(false);
     expect(pasaEn('', ['IKEA'])).toBe(false);
+  });
+});
+
+import { opcionesMarca } from './productos';
+
+describe('opcionesMarca', () => {
+  it('cuenta por marca y ordena por nº desc, luego alfabético', () => {
+    const ps = [
+      base({ slug: 'a', marca: 'IKEA' }),
+      base({ slug: 'b', marca: 'IKEA' }),
+      base({ slug: 'c', marca: 'Steelcase' }),
+      base({ slug: 'd', marca: 'Hbada' }),
+    ];
+    expect(opcionesMarca(ps)).toEqual([
+      { valor: 'IKEA', n: 2 },
+      { valor: 'Hbada', n: 1 },
+      { valor: 'Steelcase', n: 1 },
+    ]);
+  });
+  it('ignora marca vacía', () => {
+    expect(opcionesMarca([base({ marca: '' })])).toEqual([]);
   });
 });
