@@ -351,3 +351,35 @@ describe('opcionesMarca', () => {
     expect(opcionesMarca([base({ marca: '' })])).toEqual([]);
   });
 });
+
+import { cuentaConDato, filtrosVisibles } from './productos';
+
+describe('cuentaConDato', () => {
+  it('cuenta productos con dato no nulo ni vacío', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', pesoMaxKg: 130 } as any }),
+      base({ specs: { tipo: 'silla', pesoMaxKg: null } as any }),
+      base({ specs: { tipo: 'silla' } as any }),
+    ];
+    expect(cuentaConDato(ps, 'specs.pesoMaxKg')).toBe(1);
+  });
+});
+
+describe('filtrosVisibles', () => {
+  const fEdad: FiltroConfig = { id: 'edad', etiqueta: '', control: 'select', comparacion: 'igual', campo: 'specs.edad' };
+  const fSiempre: FiltroConfig = { id: 'marca', etiqueta: '', control: 'select', comparacion: 'en', campo: 'marca' };
+  it('oculta facetas con menos de min datos, salvo las siempre visibles', () => {
+    const ps = [base({ specs: { tipo: 'silla', edad: 5 } as any }), base({ specs: { tipo: 'silla' } as any })];
+    const vis = filtrosVisibles([fEdad, fSiempre], ps, 3, ['marca']);
+    expect(vis.map((f) => f.id)).toEqual(['marca']); // edad tiene 1 dato (<3) → oculto; marca siempre
+  });
+  it('muestra facetas con suficientes datos', () => {
+    const ps = [
+      base({ specs: { tipo: 'silla', edad: 1 } as any }),
+      base({ specs: { tipo: 'silla', edad: 2 } as any }),
+      base({ specs: { tipo: 'silla', edad: 3 } as any }),
+    ];
+    const vis = filtrosVisibles([fEdad], ps, 3, []);
+    expect(vis.map((f) => f.id)).toEqual(['edad']);
+  });
+});

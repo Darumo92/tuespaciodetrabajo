@@ -171,6 +171,27 @@ export function opcionesMarca(productos: Producto[]): { valor: string; n: number
     .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor));
 }
 
+/** Nº de productos con dato no nulo ni vacío para una ruta de campo. */
+export function cuentaConDato(productos: Producto[], campo: string): number {
+  return productos.reduce((acc, p) => {
+    const v = getCampo(p, campo);
+    return acc + (v != null && v !== '' ? 1 : 0);
+  }, 0);
+}
+
+/** Filtra los filtros a renderizar: oculta los que tienen < min productos con dato,
+ *  salvo los ids en siempreVisibles. */
+export function filtrosVisibles(
+  filtros: FiltroConfig[],
+  productos: Producto[],
+  min: number,
+  siempreVisibles: string[]
+): FiltroConfig[] {
+  return filtros.filter(
+    (f) => siempreVisibles.includes(f.id) || cuentaConDato(productos, f.campo) >= min
+  );
+}
+
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
 export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
   const out: Record<string, string> = {};
