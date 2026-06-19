@@ -1,7 +1,7 @@
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
 import { getTipoConfig } from '@/lib/tipos';
-import { claveData } from '@/lib/productos';
+import { claveData, opcionesMarca, filtrosVisibles } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 
 interface Props {
@@ -11,53 +11,114 @@ interface Props {
 
 const { productos, tipo } = Astro.props;
 const cfg = getTipoConfig(tipo);
-const filtros = cfg?.filtros ?? [];
 const ordenaciones = cfg?.ordenaciones ?? [];
+
+// Auto-ocultado: una faceta sólo se muestra si >= MIN_DATOS_FACETA productos tienen ese dato.
+// precio y marca siempre visibles (datos presentes por definición).
+const MIN_DATOS_FACETA = 3;
+const SIEMPRE_VISIBLES = ['precio', 'marca'];
+const filtros = cfg ? filtrosVisibles(cfg.filtros, productos, MIN_DATOS_FACETA, SIEMPRE_VISIBLES) : [];
+
+// Opciones dinámicas de marca (no es un enum fijo).
+const marcas = opcionesMarca(productos);
+
+// Para facetas de rango: lista de valores discretos (segmentado).
+const valoresRango = (f: (typeof filtros)[number]) => {
+  const min = f.min ?? 0;
+  const max = f.max ?? min;
+  const step = f.step ?? 1;
+  const out: number[] = [];
+  for (let v = min; v <= max; v += step) out.push(v);
+  return out;
+};
+const etiquetaRango = (f: (typeof filtros)[number], v: number) =>
+  f.formatoSalida === 'tramoEuros' ? '€'.repeat(v) : String(v);
 
 const panelConfig = {
   filtros: filtros.map((f) => ({
     id: f.id, control: f.control, comparacion: f.comparacion, clave: claveData(f.campo),
-    umbral: f.umbral, formatoSalida: f.formatoSalida, max: f.max,
+    umbral: f.umbral, formatoSalida: f.formatoSalida, max: f.max, etiqueta: f.etiqueta,
   })),
   ordenaciones: ordenaciones.map((o) => ({ id: o.id, clave: claveData(o.campo), direccion: o.direccion })),
 };
+const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
 ---
 
 <section class="catalogo" data-catalogo-root data-tipo={tipo} data-catalogo-config={JSON.stringify(panelConfig)}>
-  <div class="catalogo-filtros" aria-label="Filtros de catálogo">
-    {filtros.map((f) => (
-      f.control === 'rango' ? (
-        <label class="catalogo-field">
-          <span>{f.etiqueta}</span>
-          <input type="range" data-filtro={f.id} min={f.min} max={f.max} step={f.step} value={f.comparacion === 'min' ? f.min : f.max} />
-          <output class="catalogo-out" data-out={f.id}>Sin límite</output>
-        </label>
-      ) : f.control === 'select' ? (
-        <label class="catalogo-field">
-          <span>{f.etiqueta}</span>
-          <select data-filtro={f.id}>
-            {(f.opciones ?? []).map((o) => <option value={o.valor}>{o.etiqueta}</option>)}
-          </select>
-        </label>
-      ) : (
-        <label class="catalogo-check">
-          <input type="checkbox" data-filtro={f.id} />
-          <span>{f.etiqueta}</span>
-        </label>
-      )
-    ))}
-
-    <label class="catalogo-field">
-      <span>Ordenar</span>
-      <select data-orden>
-        {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
-      </select>
-    </label>
+  <div class="cat-search">
+    <span class="cat-search-icon" aria-hidden="true">🔍</span>
+    <input type="search" class="cat-search-input" data-busqueda
+      placeholder="Buscar por nombre o marca…" aria-label="Buscar productos" autocomplete="off" />
   </div>
 
-  <p class="catalogo-count">
+  <div class="cat-bar">
+    <button class="cat-mobtoggle" type="button" data-mob-toggle aria-expanded="false">
+      Filtrar<span class="cat-mobn" data-mob-n hidden>0</span>
+    </button>
+
+    <div class="cat-pills" data-pills>
+      {filtros.map((f) => (
+        f.control === 'check' ? (
+          <button class="cat-pill cat-pill--toggle" type="button"
+            data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{f.etiqueta}</button>
+        ) : (
+          <div class="cat-facet" data-facet={f.id}>
+            <button class="cat-pill" type="button" data-pill={f.id} data-pill-tipo="dropdown"
+              aria-expanded="false" aria-controls={`pop-${f.id}`}>
+              <span class="cat-pill-label">{f.etiqueta}</span>
+              <span class="cat-pill-val" data-pill-val hidden></span>
+              <span class="cat-pill-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="cat-pop" id={`pop-${f.id}`} data-pop={f.id} role="group" aria-label={f.etiqueta} hidden>
+              {f.control === 'rango' ? (
+                <div class="cat-seg">
+                  {valoresRango(f).map((v) => (
+                    <button class="cat-seg-btn" type="button" data-opt={v}>{etiquetaRango(f, v)}</button>
+                  ))}
+                </div>
+              ) : f.id === 'marca' ? (
+                <ul class="cat-checks">
+                  {marcas.map((m) => (
+                    <li>
+                      <label class="cat-check">
+                        <input type="checkbox" data-opt={m.valor} />
+                        <span class="cat-check-txt">{m.valor}</span>
+                        <span class="cat-check-n">{m.n}</span>
+                      </label>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <div class="cat-opts">
+                  {(f.opciones ?? []).filter((o) => o.valor !== '' && o.valor !== '0').map((o) => (
+                    <button class="cat-opt" type="button" data-opt={o.valor}>{o.etiqueta}</button>
+                  ))}
+                </div>
+              )}
+              <div class="cat-pop-foot">
+                <button class="cat-pop-clear" type="button" data-pop-clear>Quitar</button>
+              </div>
+            </div>
+          </div>
+        )
+      ))}
+
+      <label class="cat-pill cat-pill--orden">
+        <span>Ordenar</span>
+        <select data-orden>
+          {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <div class="cat-chips" data-chips hidden>
+    <button class="cat-clear" type="button" data-clear-all>Limpiar todo</button>
+  </div>
+
+  <p class="catalogo-count" aria-live="polite">
     <span class="catalogo-n">{productos.length}</span>
-    <span>productos · marca entre 2 y 4 casillas para comparar</span>
+    <span>{labelPlural} · marca entre 2 y 4 casillas para comparar</span>
   </p>
 
   <div class="catalogo-grid">
@@ -77,218 +138,153 @@ const panelConfig = {
 </section>
 
 <style>
-  .catalogo {
-    position: relative;
-    padding-bottom: 4.5rem;
+  .catalogo { position: relative; padding-bottom: 4.5rem; }
+
+  /* Búsqueda */
+  .cat-search { position: relative; max-width: 22rem; margin-bottom: 1rem; }
+  .cat-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; opacity: 0.6; }
+  .cat-search-input {
+    width: 100%; min-height: 2.5rem; padding: 0 0.8rem 0 2.1rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--bg); color: var(--ink); font: inherit;
+  }
+  .cat-search-input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+
+  /* Barra de píldoras */
+  .cat-bar { margin-bottom: 0.9rem; }
+  .cat-pills { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+  .cat-facet { position: relative; }
+
+  .cat-pill {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    min-height: 2.3rem; padding: 0.35rem 0.85rem;
+    border: 1px solid var(--border); border-radius: 999px;
+    background: var(--bg); color: var(--ink);
+    font: inherit; font-size: 0.84rem; font-weight: 650; cursor: pointer;
+    transition: border-color var(--dur-hover) var(--ease-out), background var(--dur-hover) var(--ease-out);
+  }
+  .cat-pill:hover { border-color: var(--border-strong); }
+  .cat-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .cat-pill.is-active { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--bg)); color: var(--ink); }
+  .cat-pill--toggle[aria-pressed='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--bg)); }
+  .cat-pill-val { font-weight: 750; color: var(--accent); }
+  .cat-pill-caret { font-size: 0.7rem; opacity: 0.7; }
+
+  .cat-pill--orden { gap: 0.35rem; padding-right: 0.4rem; cursor: default; }
+  .cat-pill--orden span { color: var(--ink-muted); font-weight: 650; }
+  .cat-pill--orden select { border: 0; background: transparent; color: var(--ink); font: inherit; font-weight: 700; cursor: pointer; }
+  .cat-pill--orden select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Popover */
+  .cat-pop {
+    position: absolute; top: calc(100% + 0.4rem); left: 0; z-index: 30;
+    min-width: 12rem; max-width: 16rem; padding: 0.8rem;
+    border: 1px solid var(--border-strong); border-radius: var(--radius);
+    background: var(--bg); box-shadow: 0 10px 30px color-mix(in srgb, var(--ink) 18%, transparent);
+  }
+  .cat-seg { display: flex; gap: 0.3rem; }
+  .cat-seg-btn {
+    flex: 1; min-height: 2rem; padding: 0 0.4rem;
+    border: 1px solid var(--border); border-radius: var(--radius-sm);
+    background: var(--bg); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
+  }
+  .cat-seg-btn.is-on { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+
+  .cat-opts { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .cat-opt {
+    min-height: 2rem; padding: 0.3rem 0.7rem;
+    border: 1px solid var(--border); border-radius: 999px;
+    background: var(--bg); color: var(--ink); font: inherit; font-size: 0.82rem; font-weight: 650; cursor: pointer;
+  }
+  .cat-opt.is-on { border-color: var(--accent); background: var(--accent); color: var(--accent-ink); }
+
+  .cat-checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; max-height: 15rem; overflow-y: auto; }
+  .cat-check { display: flex; align-items: center; gap: 0.5rem; padding: 0.3rem 0.2rem; font-size: 0.84rem; cursor: pointer; }
+  .cat-check input { width: 1rem; height: 1rem; accent-color: var(--accent); }
+  .cat-check-txt { flex: 1; }
+  .cat-check-n { color: var(--ink-muted); font-size: 0.78rem; }
+
+  .cat-pop-foot { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
+  .cat-pop-clear { border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+
+  /* Chips activos */
+  .cat-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.9rem; }
+  .cat-chip {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    padding: 0.25rem 0.3rem 0.25rem 0.65rem;
+    border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
+    border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, var(--bg));
+    font-size: 0.78rem; font-weight: 650; color: var(--ink);
+  }
+  .cat-chip-x { display: inline-flex; align-items: center; justify-content: center; width: 1.1rem; height: 1.1rem; border: 0; border-radius: 999px; background: transparent; color: var(--ink-muted); font: inherit; cursor: pointer; }
+  .cat-chip-x:hover { color: var(--ink); }
+  .cat-clear { border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; margin-left: 0.2rem; }
+
+  .catalogo-count { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0 0 1rem; font-size: 0.86rem; color: var(--ink-muted); }
+  .catalogo-count .catalogo-n { font-weight: 750; color: var(--ink); }
+
+  .catalogo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 1rem; }
+
+  .catalogo-vacio { margin: 1.25rem 0 0; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted); color: var(--ink-muted); }
+
+  /* Botón móvil "Filtrar": oculto en escritorio */
+  .cat-mobtoggle { display: none; }
+  .cat-mobn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 1.2rem; height: 1.2rem; margin-left: 0.4rem; padding: 0 0.3rem;
+    border-radius: 999px; background: var(--accent); color: var(--accent-ink); font-size: 0.72rem; font-weight: 750;
   }
 
-  .catalogo-filtros {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.9rem;
-    align-items: end;
-    margin-bottom: 1.35rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid var(--border);
-  }
+  /* Barra de comparación (sin cambios) */
+  .cmp-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; align-items: center; justify-content: center; gap: 0.85rem; padding: 0.78rem max(1rem, env(safe-area-inset-right)) calc(0.78rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); background: var(--ink); color: var(--bg); box-shadow: 0 -1px 0 var(--border-strong); }
+  .cmp-status { display: inline-flex; align-items: baseline; gap: 0.32rem; min-width: 0; font-size: 0.88rem; }
+  .cmp-status strong { font-family: var(--font-display); font-size: 1rem; }
+  .cmp-go, .cmp-clear { min-height: 2.25rem; border-radius: var(--radius); padding: 0.48rem 0.9rem; font: inherit; font-weight: 750; white-space: nowrap; }
+  .cmp-go { display: inline-flex; align-items: center; color: var(--accent-ink); background: var(--accent); text-decoration: none; }
+  .cmp-go[aria-disabled='true'] { opacity: 0.55; pointer-events: none; }
+  .cmp-clear { border: 1px solid color-mix(in srgb, var(--bg) 35%, transparent); background: transparent; color: var(--bg); cursor: pointer; }
+  .cmp-clear:hover, .cmp-clear:focus-visible { border-color: var(--bg); }
+  .cmp-go, .cmp-clear { transition: transform var(--dur-press) var(--ease-out); }
+  .cmp-go:active, .cmp-clear:active { transform: scale(0.97); }
 
-  .catalogo-field,
-  .catalogo-check {
-    font-size: 0.82rem;
-    font-weight: 650;
-    color: var(--ink-muted);
-  }
-
-  .catalogo-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.32rem;
-    min-width: min(100%, 11rem);
-  }
-
-  .catalogo-field input,
-  .catalogo-field select {
-    min-height: 2.35rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--bg);
-    color: var(--ink);
-    font: inherit;
-  }
-
-  .catalogo-field select {
-    padding: 0 0.65rem;
-  }
-
-  .catalogo-field input[type='range'] {
-    min-height: 1.8rem;
-    accent-color: var(--accent);
-  }
-
-  .catalogo-out {
-    min-height: 1rem;
-    font-size: 0.75rem;
-    color: var(--ink);
-  }
-
-  .catalogo-check {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    min-height: 2.35rem;
-  }
-
-  .catalogo-check input {
-    width: 1rem;
-    height: 1rem;
-    accent-color: var(--accent);
-  }
-
-  .catalogo-count {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    margin: 0 0 1rem;
-    font-size: 0.86rem;
-    color: var(--ink-muted);
-  }
-
-  .catalogo-count .catalogo-n {
-    font-weight: 750;
-    color: var(--ink);
-  }
-
-  .catalogo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
-    gap: 1rem;
-  }
-
-  .catalogo-vacio {
-    margin: 1.25rem 0 0;
-    padding: 1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--surface-muted);
-    color: var(--ink-muted);
-  }
-
-  .cmp-bar {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.85rem;
-    padding: 0.78rem max(1rem, env(safe-area-inset-right)) calc(0.78rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
-    background: var(--ink);
-    color: var(--bg);
-    box-shadow: 0 -1px 0 var(--border-strong);
-  }
-
-  .cmp-status {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 0.32rem;
-    min-width: 0;
-    font-size: 0.88rem;
-  }
-
-  .cmp-status strong {
-    font-family: var(--font-display);
-    font-size: 1rem;
-  }
-
-  .cmp-go,
-  .cmp-clear {
-    min-height: 2.25rem;
-    border-radius: var(--radius);
-    padding: 0.48rem 0.9rem;
-    font: inherit;
-    font-weight: 750;
-    white-space: nowrap;
-  }
-
-  .cmp-go {
-    display: inline-flex;
-    align-items: center;
-    color: var(--accent-ink);
-    background: var(--accent);
-    text-decoration: none;
-  }
-
-  .cmp-go[aria-disabled='true'] {
-    opacity: 0.55;
-    pointer-events: none;
-  }
-
-  .cmp-clear {
-    border: 1px solid color-mix(in srgb, var(--bg) 35%, transparent);
-    background: transparent;
-    color: var(--bg);
-    cursor: pointer;
-  }
-
-  .cmp-clear:hover,
-  .cmp-clear:focus-visible {
-    border-color: var(--bg);
-  }
-
-  .cmp-go,
-  .cmp-clear { transition: transform var(--dur-press) var(--ease-out); }
-
-  .cmp-go:active,
-  .cmp-clear:active { transform: scale(0.97); }
-
+  /* Móvil: drawer de filtros */
   @media (max-width: 768px) {
-    .catalogo {
-      padding-bottom: 8.5rem;
+    .catalogo { padding-bottom: 8.5rem; }
+    .cat-mobtoggle {
+      display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.4rem 1rem;
+      border: 1px solid var(--border-strong); border-radius: var(--radius);
+      background: var(--bg); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
     }
-
-    .cmp-bar {
-      bottom: calc(56px + env(safe-area-inset-bottom, 0px));
-      padding-bottom: 0.78rem;
+    .cat-pills {
+      position: fixed; inset: 0; z-index: 60; display: none;
+      flex-direction: column; align-items: stretch; gap: 0.7rem;
+      padding: 1.1rem; background: var(--bg); overflow-y: auto;
     }
+    .cat-bar.is-open .cat-pills { display: flex; }
+    .cat-bar.is-open .cat-pills::after {
+      content: 'Ver resultados'; order: 99; position: sticky; bottom: 0;
+      margin-top: auto; padding: 0.8rem; text-align: center;
+      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font-weight: 750; cursor: pointer;
+    }
+    .cat-facet { width: 100%; }
+    .cat-pill { width: 100%; justify-content: space-between; }
+    .cat-pop { position: static; min-width: 0; max-width: none; box-shadow: none; border: 0; border-left: 2px solid var(--border); border-radius: 0; margin: 0.2rem 0 0.4rem 0.4rem; }
+    .cmp-bar { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); padding-bottom: 0.78rem; }
   }
 
   @media (max-width: 560px) {
-    .catalogo {
-      padding-bottom: 10.5rem;
-    }
-
-    .catalogo-field {
-      width: 100%;
-    }
-
-    .catalogo-check {
-      width: 100%;
-    }
-
-    .cmp-bar {
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 0.55rem;
-    }
-
-    .cmp-status {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .cmp-go,
-    .cmp-clear {
-      flex: 1 1 8rem;
-      justify-content: center;
-      text-align: center;
-    }
+    .catalogo { padding-bottom: 10.5rem; }
+    .cmp-bar { flex-wrap: wrap; justify-content: space-between; gap: 0.55rem; }
+    .cmp-status { width: 100%; justify-content: center; }
+    .cmp-go, .cmp-clear { flex: 1 1 8rem; justify-content: center; text-align: center; }
   }
 </style>
 
 <script>
-  type FiltroRT = { id: string; control: string; comparacion: string; clave: string; umbral?: number; formatoSalida?: string; max?: number };
+  type FiltroRT = {
+    id: string; control: string; comparacion: string; clave: string;
+    umbral?: number; formatoSalida?: string; max?: number; etiqueta: string;
+  };
   type OrdenRT = { id: string; clave: string; direccion: 'asc' | 'desc' };
 
   const roots = document.querySelectorAll<HTMLElement>('[data-catalogo-root]');
@@ -306,115 +302,85 @@ const panelConfig = {
     }
     const filtros = cfg.filtros || [];
     const ordenaciones = cfg.ordenaciones || [];
+    const filtroDe = (id: string) => filtros.find((f) => f.id === id);
 
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('.card'));
     const ordenSel = root.querySelector<HTMLSelectElement>('[data-orden]');
     const nOut = root.querySelector<HTMLElement>('.catalogo-n');
     const vacio = root.querySelector<HTMLElement>('.catalogo-vacio');
-    const bar = root.querySelector<HTMLElement>('.cmp-bar');
-    const nEl = root.querySelector<HTMLElement>('.cmp-n');
-    const copyEl = root.querySelector<HTMLElement>('.cmp-copy');
-    const go = root.querySelector<HTMLAnchorElement>('.cmp-go');
-    const clear = root.querySelector<HTMLButtonElement>('.cmp-clear');
+    const busquedaInput = root.querySelector<HTMLInputElement>('[data-busqueda]');
+    const chipsBox = root.querySelector<HTMLElement>('[data-chips]');
+    const clearAllBtn = root.querySelector<HTMLButtonElement>('[data-clear-all]');
+    const mobToggle = root.querySelector<HTMLButtonElement>('[data-mob-toggle]');
+    const mobN = root.querySelector<HTMLElement>('[data-mob-n]');
+    const bar = root.querySelector<HTMLElement>('.cat-bar');
 
-    if (!bar || !nEl || !copyEl || !go || !clear) return;
-
-    const controlDe = (id: string) => root.querySelector<HTMLInputElement | HTMLSelectElement>(`[data-filtro="${id}"]`);
     const dataKey = (clave: string) => 'c' + clave.charAt(0).toUpperCase() + clave.slice(1);
     const readCard = (card: HTMLElement, clave: string) => card.dataset[dataKey(clave)];
-
-    const toNumber = (value: string | undefined): number | null => {
-      if (value == null || value === '') return null;
-      const parsed = Number(value);
-      return Number.isFinite(parsed) ? parsed : null;
+    const toNumber = (v: string | undefined): number | null => {
+      if (v == null || v === '') return null;
+      const n = Number(v);
+      return Number.isFinite(n) ? n : null;
     };
-
+    const norm = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
     const compare = (x: number, y: number) => (x === y ? 0 : x < y ? -1 : 1);
 
-    const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
-    const KEY = `comparar-${tipo}`;
-    const validSlugs = new Set(checks.map((check) => check.value));
+    // Estado de filtros: id -> valor (number | string | string[] | true)
+    const estado: Record<string, number | string | string[] | true> = {};
+    let busqueda = '';
 
-    const readStoredSelection = (): string[] => {
-      try {
-        const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
-        if (!Array.isArray(parsed)) return [];
-        return parsed.filter((value): value is string => typeof value === 'string').slice(0, 4);
-      } catch {
-        return [];
+    const etiquetaValor = (f: FiltroRT, v: number | string | string[] | true): string => {
+      if (f.control === 'rango') {
+        const n = typeof v === 'number' ? v : Number(v);
+        const txt = f.formatoSalida === 'tramoEuros' ? '€'.repeat(n) : String(n);
+        return f.comparacion === 'min' ? `Desde ${txt}` : `Hasta ${txt}`;
       }
+      if (Array.isArray(v)) return `· ${v.length}`;
+      return String(v);
     };
 
-    const readSelection = (): string[] => readStoredSelection().filter((slug) => validSlugs.has(slug));
-
-    const saveSelection = (selection: string[]) => {
-      const maxPreserved = Math.max(0, 4 - selection.length);
-      const preserved = readStoredSelection().filter((slug) => !validSlugs.has(slug)).slice(0, maxPreserved);
-      localStorage.setItem(KEY, JSON.stringify([...preserved, ...selection].slice(0, 4)));
+    // ----- Búsqueda -----
+    const coincide = (card: HTMLElement): boolean => {
+      if (!busqueda) return true;
+      const nombre = card.querySelector('.card-name')?.textContent ?? '';
+      const marca = card.querySelector('.card-brand')?.textContent ?? '';
+      return norm(nombre).includes(busqueda) || norm(marca).includes(busqueda);
     };
 
-    const renderCompare = () => {
-      const selection = readSelection();
-      if (selection.length > 4) saveSelection(selection.slice(0, 4));
-
-      checks.forEach((check) => {
-        const selected = selection.includes(check.value);
-        check.checked = selected;
-        check.closest('.card')?.classList.toggle('cmp-sel', selected);
-      });
-
-      nEl.textContent = String(selection.length);
-      copyEl.textContent = selection.length === 1 ? 'seleccionado' : 'seleccionados';
-      bar.hidden = selection.length === 0;
-
-      const canCompare = selection.length >= 2 && selection.length <= 4;
-      go.setAttribute('aria-disabled', canCompare ? 'false' : 'true');
-      if (canCompare) {
-        go.removeAttribute('tabindex');
-      } else {
-        go.setAttribute('tabindex', '-1');
+    // ----- Aplicación de filtros -----
+    const pasaFiltro = (card: HTMLElement, f: FiltroRT): boolean => {
+      const sel = estado[f.id];
+      if (sel == null) return true;
+      const cv = readCard(card, f.clave) ?? '';
+      if (f.comparacion === 'max') {
+        const n = toNumber(cv);
+        return n == null || n <= Number(sel);
       }
-      go.href = canCompare ? `/comparar/${tipo}/?s=${selection.join(',')}` : `/comparar/${tipo}/`;
-    };
-
-    const salidaRango = (f: FiltroRT, val: number): string => {
-      if (f.formatoSalida === 'tramoEuros') {
-        return val >= (f.max ?? Infinity) ? 'Sin límite' : `Hasta ${'€'.repeat(val)}`;
+      if (f.comparacion === 'min') {
+        const n = toNumber(cv);
+        return n == null || Number(sel) <= n;
       }
-      return String(val);
+      if (f.comparacion === 'igual') {
+        return cv === String(sel);
+      }
+      if (f.comparacion === 'en') {
+        const arr = Array.isArray(sel) ? sel : [];
+        return arr.length === 0 || arr.includes(cv);
+      }
+      if (f.comparacion === 'check') {
+        return sel !== true || cv === '1';
+      }
+      if (f.comparacion === 'umbral') {
+        const n = toNumber(cv);
+        return sel !== true || (n != null && n >= (f.umbral ?? Infinity));
+      }
+      return true;
     };
 
     const applyFilters = () => {
-      filtros.forEach((f) => {
-        if (f.control !== 'rango') return;
-        const ctrl = controlDe(f.id);
-        const out = root.querySelector<HTMLOutputElement>(`[data-out="${f.id}"]`);
-        if (ctrl && out) out.textContent = salidaRango(f, Number((ctrl as HTMLInputElement).value));
-      });
-
       let visibles = 0;
       cards.forEach((card) => {
-        let visible = true;
-        for (const f of filtros) {
-          const ctrl = controlDe(f.id);
-          if (!ctrl) continue;
-          const cv = readCard(card, f.clave) ?? '';
-          if (f.comparacion === 'max') {
-            const n = toNumber(cv);
-            if (n != null && n > Number((ctrl as HTMLInputElement).value)) visible = false;
-          } else if (f.comparacion === 'igual') {
-            const sel = (ctrl as HTMLSelectElement).value;
-            if (sel && cv !== sel) visible = false;
-          } else if (f.comparacion === 'min') {
-            const n = toNumber(cv);
-            if (n != null && Number((ctrl as HTMLSelectElement).value) > n) visible = false;
-          } else if (f.comparacion === 'check') {
-            if ((ctrl as HTMLInputElement).checked && cv !== '1') visible = false;
-          } else if (f.comparacion === 'umbral') {
-            const n = toNumber(cv);
-            if ((ctrl as HTMLInputElement).checked && (n == null || n < (f.umbral ?? Infinity))) visible = false;
-          }
-        }
+        const visible = coincide(card) && filtros.every((f) => pasaFiltro(card, f));
         card.hidden = !visible;
         if (visible) visibles += 1;
       });
@@ -422,61 +388,268 @@ const panelConfig = {
       const orden = ordenaciones.find((o) => o.id === ordenSel?.value) || ordenaciones[0];
       if (orden) {
         const worst = orden.direccion === 'asc' ? Infinity : -Infinity;
-        cards.filter((card) => !card.hidden).sort((a, b) => {
+        cards.filter((c) => !c.hidden).sort((a, b) => {
           const x = toNumber(readCard(a, orden.clave)) ?? worst;
           const y = toNumber(readCard(b, orden.clave)) ?? worst;
           return orden.direccion === 'asc' ? compare(x, y) : compare(y, x);
-        }).forEach((card) => grid.appendChild(card));
+        }).forEach((c) => grid.appendChild(c));
       }
 
       if (nOut) nOut.textContent = String(visibles);
       if (vacio) vacio.hidden = visibles > 0;
+      renderEstado();
     };
 
-    filtros.forEach((f) => {
-      const ctrl = controlDe(f.id);
-      if (!ctrl) return;
-      ctrl.addEventListener('input', applyFilters);
-      ctrl.addEventListener('change', applyFilters);
-    });
-    if (ordenSel) {
-      ordenSel.addEventListener('input', applyFilters);
-      ordenSel.addEventListener('change', applyFilters);
-    }
+    // ----- Render del estado en píldoras y chips -----
+    const nActivos = () => Object.keys(estado).length + (busqueda ? 1 : 0);
 
-    checks.forEach((check) => {
-      check.addEventListener('change', () => {
-        let selection = readSelection();
-        if (check.checked) {
-          if (!selection.includes(check.value)) {
-            if (selection.length >= 4) {
-              check.checked = false;
-              check.setCustomValidity('Puedes comparar hasta 4 productos.');
-              check.reportValidity();
-              check.setCustomValidity('');
-              return;
-            }
-            selection.push(check.value);
-          }
+    const etiquetaOpcion = (filtroId: string, valor: string): string => {
+      const btn = root.querySelector<HTMLElement>(`[data-pop="${filtroId}"] [data-opt="${CSS.escape(valor)}"]`);
+      return btn?.textContent?.trim() || valor;
+    };
+
+    const renderEstado = () => {
+      // píldoras
+      filtros.forEach((f) => {
+        const pill = root.querySelector<HTMLElement>(`[data-pill="${f.id}"]`);
+        if (!pill) return;
+        const sel = estado[f.id];
+        const activo = sel != null && !(Array.isArray(sel) && sel.length === 0);
+        if (pill.dataset.pillTipo === 'toggle') {
+          pill.setAttribute('aria-pressed', activo ? 'true' : 'false');
         } else {
-          selection = selection.filter((slug) => slug !== check.value);
+          pill.classList.toggle('is-active', activo);
+          const valEl = pill.querySelector<HTMLElement>('[data-pill-val]');
+          if (valEl) {
+            if (activo) { valEl.textContent = etiquetaValor(f, sel as never); valEl.hidden = false; }
+            else { valEl.textContent = ''; valEl.hidden = true; }
+          }
         }
+      });
 
-        saveSelection(selection);
-        renderCompare();
+      // chips
+      if (chipsBox && clearAllBtn) {
+        chipsBox.querySelectorAll('.cat-chip').forEach((c) => c.remove());
+        const frag: HTMLElement[] = [];
+        const addChip = (etiqueta: string, onRemove: () => void) => {
+          const chip = document.createElement('span');
+          chip.className = 'cat-chip';
+          chip.append(document.createTextNode(etiqueta));
+          const x = document.createElement('button');
+          x.type = 'button'; x.className = 'cat-chip-x'; x.textContent = '✕';
+          x.setAttribute('aria-label', `Quitar filtro: ${etiqueta}`);
+          x.addEventListener('click', () => { onRemove(); applyFilters(); });
+          chip.append(x);
+          frag.push(chip);
+        };
+        if (busqueda && busquedaInput) {
+          addChip(`«${busquedaInput.value.trim()}»`, () => { busqueda = ''; busquedaInput.value = ''; });
+        }
+        filtros.forEach((f) => {
+          const sel = estado[f.id];
+          if (sel == null) return;
+          if (Array.isArray(sel)) {
+            sel.forEach((val) => addChip(val, () => {
+              const arr = (estado[f.id] as string[]).filter((x) => x !== val);
+              if (arr.length) estado[f.id] = arr; else delete estado[f.id];
+              syncControles(f.id);
+            }));
+          } else {
+            const etiqueta = f.control === 'rango' || f.comparacion === 'check' || f.comparacion === 'umbral'
+              ? `${f.etiqueta}: ${etiquetaValor(f, sel)}`
+              : etiquetaOpcion(f.id, String(sel));
+            addChip(etiqueta, () => { delete estado[f.id]; syncControles(f.id); });
+          }
+        });
+        frag.forEach((c) => chipsBox.insertBefore(c, clearAllBtn));
+        chipsBox.hidden = frag.length === 0;
+      }
+
+      // contador móvil
+      if (mobN) {
+        const n = nActivos();
+        mobN.textContent = String(n);
+        mobN.hidden = n === 0;
+      }
+    };
+
+    // Re-sincroniza los controles visuales de una faceta con el estado (tras quitar un chip).
+    const syncControles = (filtroId: string) => {
+      const pop = root.querySelector<HTMLElement>(`[data-pop="${filtroId}"]`);
+      if (!pop) return;
+      const sel = estado[filtroId];
+      pop.querySelectorAll<HTMLElement>('[data-opt]').forEach((el) => {
+        const val = el.dataset.opt ?? '';
+        let on = false;
+        if (Array.isArray(sel)) on = sel.includes(val);
+        else if (sel != null) on = String(sel) === val;
+        if (el instanceof HTMLInputElement) el.checked = on;
+        else el.classList.toggle('is-on', on);
+      });
+    };
+
+    // ----- Popovers -----
+    const cerrarPopovers = () => {
+      root.querySelectorAll<HTMLElement>('.cat-pop').forEach((p) => (p.hidden = true));
+      root.querySelectorAll<HTMLElement>('[data-pill-tipo="dropdown"]').forEach((b) => b.setAttribute('aria-expanded', 'false'));
+    };
+
+    root.querySelectorAll<HTMLButtonElement>('[data-pill]').forEach((pill) => {
+      const id = pill.dataset.pill || '';
+      const f = filtroDe(id);
+      if (!f) return;
+
+      if (pill.dataset.pillTipo === 'toggle') {
+        pill.addEventListener('click', () => {
+          if (estado[id]) delete estado[id]; else estado[id] = true;
+          applyFilters();
+        });
+        return;
+      }
+
+      const pop = root.querySelector<HTMLElement>(`#pop-${id}`);
+      pill.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const abierto = pill.getAttribute('aria-expanded') === 'true';
+        cerrarPopovers();
+        if (!abierto && pop) {
+          pop.hidden = false;
+          pill.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      pop?.querySelectorAll<HTMLElement>('[data-opt]').forEach((el) => {
+        const val = el.dataset.opt ?? '';
+        const handler = () => {
+          if (f.comparacion === 'en') {
+            const arr = Array.isArray(estado[id]) ? (estado[id] as string[]).slice() : [];
+            const idx = arr.indexOf(val);
+            if (idx >= 0) arr.splice(idx, 1); else arr.push(val);
+            if (arr.length) estado[id] = arr; else delete estado[id];
+          } else {
+            // segmentado / opción única: toggle
+            if (String(estado[id]) === val) delete estado[id];
+            else estado[id] = f.control === 'rango' ? Number(val) : val;
+          }
+          syncControles(id);
+          applyFilters();
+        };
+        if (el instanceof HTMLInputElement) el.addEventListener('change', handler);
+        else el.addEventListener('click', handler);
+      });
+
+      pop?.querySelector<HTMLButtonElement>('[data-pop-clear]')?.addEventListener('click', () => {
+        delete estado[id];
+        syncControles(id);
+        applyFilters();
       });
     });
 
-    clear.addEventListener('click', () => {
-      saveSelection([]);
-      renderCompare();
+    document.addEventListener('click', (e) => {
+      if (!(e.target as HTMLElement).closest('.cat-facet')) cerrarPopovers();
+    });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarPopovers(); });
+
+    // ----- Búsqueda -----
+    busquedaInput?.addEventListener('input', () => {
+      busqueda = norm(busquedaInput.value);
+      applyFilters();
     });
 
-    go.addEventListener('click', (event) => {
-      if (go.getAttribute('aria-disabled') === 'true') event.preventDefault();
+    // ----- Orden -----
+    ordenSel?.addEventListener('change', applyFilters);
+
+    // ----- Limpiar todo -----
+    clearAllBtn?.addEventListener('click', () => {
+      for (const k of Object.keys(estado)) delete estado[k];
+      busqueda = '';
+      if (busquedaInput) busquedaInput.value = '';
+      root.querySelectorAll<HTMLElement>('[data-opt]').forEach((el) => {
+        if (el instanceof HTMLInputElement) el.checked = false;
+        else el.classList.remove('is-on');
+      });
+      applyFilters();
     });
+
+    // ----- Drawer móvil -----
+    mobToggle?.addEventListener('click', () => {
+      const abierto = bar?.classList.toggle('is-open');
+      mobToggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+    });
+    // Clic en el pseudo-botón "Ver resultados" (parte baja del drawer)
+    root.querySelector<HTMLElement>('.cat-pills')?.addEventListener('click', (e) => {
+      const pills = e.currentTarget as HTMLElement;
+      if (e.target === pills && bar?.classList.contains('is-open')) {
+        bar.classList.remove('is-open');
+        mobToggle?.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // ===== Barra de comparación (igual que antes) =====
+    const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
+    const cmpBar = root.querySelector<HTMLElement>('.cmp-bar');
+    const nEl = root.querySelector<HTMLElement>('.cmp-n');
+    const copyEl = root.querySelector<HTMLElement>('.cmp-copy');
+    const go = root.querySelector<HTMLAnchorElement>('.cmp-go');
+    const clear = root.querySelector<HTMLButtonElement>('.cmp-clear');
+    if (cmpBar && nEl && copyEl && go && clear) {
+      const KEY = `comparar-${tipo}`;
+      const validSlugs = new Set(checks.map((c) => c.value));
+      const readStored = (): string[] => {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(KEY) || '[]');
+          if (!Array.isArray(parsed)) return [];
+          return parsed.filter((v): v is string => typeof v === 'string').slice(0, 4);
+        } catch { return []; }
+      };
+      const readSelection = (): string[] => readStored().filter((s) => validSlugs.has(s));
+      const saveSelection = (selection: string[]) => {
+        const maxPreserved = Math.max(0, 4 - selection.length);
+        const preserved = readStored().filter((s) => !validSlugs.has(s)).slice(0, maxPreserved);
+        localStorage.setItem(KEY, JSON.stringify([...preserved, ...selection].slice(0, 4)));
+      };
+      const renderCompare = () => {
+        const selection = readSelection();
+        if (selection.length > 4) saveSelection(selection.slice(0, 4));
+        checks.forEach((c) => {
+          const selected = selection.includes(c.value);
+          c.checked = selected;
+          c.closest('.card')?.classList.toggle('cmp-sel', selected);
+        });
+        nEl.textContent = String(selection.length);
+        copyEl.textContent = selection.length === 1 ? 'seleccionado' : 'seleccionados';
+        cmpBar.hidden = selection.length === 0;
+        const canCompare = selection.length >= 2 && selection.length <= 4;
+        go.setAttribute('aria-disabled', canCompare ? 'false' : 'true');
+        if (canCompare) go.removeAttribute('tabindex'); else go.setAttribute('tabindex', '-1');
+        go.href = canCompare ? `/comparar/${tipo}/?s=${selection.join(',')}` : `/comparar/${tipo}/`;
+      };
+      checks.forEach((check) => {
+        check.addEventListener('change', () => {
+          let selection = readSelection();
+          if (check.checked) {
+            if (!selection.includes(check.value)) {
+              if (selection.length >= 4) {
+                check.checked = false;
+                check.setCustomValidity('Puedes comparar hasta 4 productos.');
+                check.reportValidity();
+                check.setCustomValidity('');
+                return;
+              }
+              selection.push(check.value);
+            }
+          } else {
+            selection = selection.filter((s) => s !== check.value);
+          }
+          saveSelection(selection);
+          renderCompare();
+        });
+      });
+      clear.addEventListener('click', () => { saveSelection([]); renderCompare(); });
+      go.addEventListener('click', (event) => { if (go.getAttribute('aria-disabled') === 'true') event.preventDefault(); });
+      renderCompare();
+    }
 
     applyFilters();
-    renderCompare();
   });
 </script>
