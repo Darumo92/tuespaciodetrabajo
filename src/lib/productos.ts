@@ -168,7 +168,7 @@ export function opcionesMarca(productos: Producto[]): { valor: string; n: number
   }
   return [...conteo.entries()]
     .map(([valor, n]) => ({ valor, n }))
-    .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor));
+    .sort((a, b) => b.n - a.n || a.valor.localeCompare(b.valor, 'es'));
 }
 
 /** Nº de productos con dato no nulo ni vacío para una ruta de campo. */

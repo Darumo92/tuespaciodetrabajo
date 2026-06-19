@@ -15,6 +15,12 @@ import {
   claveData,
   valorComparacion,
   datosFiltrado,
+  pasaEn,
+  opcionesMarca,
+  cuentaConDato,
+  filtrosVisibles,
+  normalizaTexto,
+  coincideBusqueda,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
 import type { FiltroConfig } from './tipos';
@@ -315,8 +321,6 @@ describe('construirChips: silla', () => {
   });
 });
 
-import { pasaEn } from './productos';
-
 describe('pasaEn (comparación multi-select)', () => {
   it('conjunto vacío no filtra (siempre visible)', () => {
     expect(pasaEn('IKEA', [])).toBe(true);
@@ -330,8 +334,6 @@ describe('pasaEn (comparación multi-select)', () => {
     expect(pasaEn('', ['IKEA'])).toBe(false);
   });
 });
-
-import { opcionesMarca } from './productos';
 
 describe('opcionesMarca', () => {
   it('cuenta por marca y ordena por nº desc, luego alfabético', () => {
@@ -351,8 +353,6 @@ describe('opcionesMarca', () => {
     expect(opcionesMarca([base({ marca: '' })])).toEqual([]);
   });
 });
-
-import { cuentaConDato, filtrosVisibles } from './productos';
 
 describe('cuentaConDato', () => {
   it('cuenta productos con dato no nulo ni vacío', () => {
@@ -383,8 +383,6 @@ describe('filtrosVisibles', () => {
     expect(vis.map((f) => f.id)).toEqual(['edad']);
   });
 });
-
-import { normalizaTexto, coincideBusqueda } from './productos';
 
 describe('normalizaTexto', () => {
   it('minúsculas, sin acentos, recortado', () => {
