@@ -383,3 +383,25 @@ describe('filtrosVisibles', () => {
     expect(vis.map((f) => f.id)).toEqual(['edad']);
   });
 });
+
+import { normalizaTexto, coincideBusqueda } from './productos';
+
+describe('normalizaTexto', () => {
+  it('minúsculas, sin acentos, recortado', () => {
+    expect(normalizaTexto('  ERGONÓMICA  ')).toBe('ergonomica');
+    expect(normalizaTexto('Långfjäll')).toBe('langfjall');
+  });
+});
+
+describe('coincideBusqueda', () => {
+  it('query vacía siempre coincide', () => {
+    expect(coincideBusqueda('', 'Aeron', 'Herman Miller')).toBe(true);
+  });
+  it('coincide por substring sin acentos/mayúsculas', () => {
+    expect(coincideBusqueda('ikea', 'MATCHSPEL', 'IKEA')).toBe(true);
+    expect(coincideBusqueda('ergo', 'Silla Ergonómica', 'Hbada')).toBe(true);
+  });
+  it('no coincide si no está en ningún campo', () => {
+    expect(coincideBusqueda('steelcase', 'Aeron', 'Herman Miller')).toBe(false);
+  });
+});

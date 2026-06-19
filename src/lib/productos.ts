@@ -192,6 +192,18 @@ export function filtrosVisibles(
   );
 }
 
+/** minúsculas + sin diacríticos + recortado, para comparar búsquedas. */
+export function normalizaTexto(s: string): string {
+  return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+}
+
+/** true si la query (normalizada) aparece como substring en alguno de los campos. Query vacía = true. */
+export function coincideBusqueda(query: string, ...campos: string[]): boolean {
+  const q = normalizaTexto(query);
+  if (!q) return true;
+  return campos.some((c) => normalizaTexto(c).includes(q));
+}
+
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
 export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
   const out: Record<string, string> = {};
