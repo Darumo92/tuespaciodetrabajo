@@ -1,0 +1,99 @@
+tipo: "silla"
+nombre: "Herman Miller Sayl"
+marca: "Herman Miller"
+imagen: "/img/productos/herman-miller-sayl.jpg"
+imagenAlt: "Silla ergonómica Herman Miller Sayl con respaldo de suspensión"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 7.0
+  materiales: 8.5
+  comodidad: 8.0
+  calidadPrecio: 7.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/sayl-chair/2294.html"
+idealPara: "Quien quiere una Herman Miller con diseño icónico y respaldo de suspensión a un precio más contenido que la Aeron"
+veredicto: "La Sayl ofrece la garantía y el respaldo de suspensión 3D de Herman Miller en un diseño ligero de Yves Béhar. Es una entrada real al ecosistema premium, pero el soporte lumbar es opcional y modesto, y la configuración básica viene con muy pocos ajustes para lo que cuesta."
+resumenCompra:
+  mejorPara: "Quien valora diseño, garantía de 12 años y respaldo de suspensión sin pagar el precio de una Aeron."
+  evitarSi: "Necesitas lumbar potente de serie o reposacabezas, o buscas el máximo de ajustes por euro."
+  alternativaDirecta: "Steelcase Series 1 si prefieres más ajustes de serie a un precio parecido o menor."
+  decisionRapida: "La elegiría por el diseño, la suspensión y la garantía, asumiendo que el lumbar es discreto y que la versión bien equipada sube de precio."
+metodologia:
+  - "Se han contrastado specs de la web oficial y de la tienda oficial de Herman Miller con reseñas especializadas citadas en fuenteSpecs."
+  - "La nota pondera el respaldo de suspensión, la garantía de 12 años y la capacidad de carga, frente a la escasez de ajustes en la configuración básica."
+  - "Se penaliza el lumbar opcional y discreto y la ausencia de reposacabezas."
+scoreRationale:
+  ergonomia: "El respaldo de suspensión 3D con soporte sacral pasivo funciona bien, pero el lumbar es opcional y modesto."
+  ajustabilidad: "La versión básica trae reposabrazos fijos; los ajustes completos exigen subir de configuración y de precio."
+  materiales: "Construcción y respaldo de suspensión de calidad Herman Miller, prácticamente reciclables."
+  comodidad: "Cómoda para jornadas medias-largas, aunque sin el soporte lumbar diferenciado de la Aeron."
+  calidadPrecio: "Es la Herman Miller más accesible, pero la configuración útil sube y la deja en terreno premium."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Herman Miller Sayl product details"
+    url: "https://www.hermanmiller.com/products/seating/office-chairs/sayl-chairs/product-details/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "tienda"
+    nombre: "Herman Miller Store Sayl Chair"
+    url: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/sayl-chair/2294.html"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Creative Bloq Herman Miller Sayl review"
+    url: "https://www.creativebloq.com/tech/chairs-desks/herman-miller-sayl-review-this-is-a-brilliant-frustrating-chair"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "El soporte lumbar es opcional y se considera discreto frente al de otras Herman Miller."
+  - "No tiene reposacabezas."
+  - "La configuración básica trae reposabrazos fijos; los ajustes completos encarecen la silla."
+alternativas:
+  - slug: "herman-miller-aeron"
+    motivo: "Misma marca con soporte sacrolumbar PostureFit SL muy superior si el presupuesto da más."
+  - slug: "steelcase-series-1"
+    motivo: "Más ajustes de serie a un precio parecido o inferior."
+  - slug: "herman-miller-mirra-2"
+    motivo: "Otra Herman Miller de suspensión con respaldo TriFlex y más opciones de lumbar."
+comunidad: "Consenso de reseñas especializadas (Creative Bloq, TechRadar): se valora el diseño, la ligereza y la garantía, pero coinciden en que el lumbar es flojo si no se paga el extra y en que la falta de reposacabezas puede echar atrás a algunos. Se la ve como la puerta de entrada a Herman Miller más que como su silla más ergonómica."
+paraQuienSi:
+  - "Quien quiere una Herman Miller con diseño distintivo sin pagar lo que cuesta una Aeron"
+  - "Usuarios que valoran respaldo de suspensión transpirable y garantía de 12 años"
+  - "Espacios pequeños donde una silla ligera y compacta encaja mejor"
+paraQuienNo:
+  - "Quien necesita soporte lumbar firme de serie"
+  - "Usuarios que quieren reposacabezas"
+  - "Quien busca el máximo de ajustes por euro invertido"
+puntosFuertes:
+  - "Respaldo de suspensión 3D transpirable con soporte sacral pasivo"
+  - "Diseño icónico de Yves Béhar, ligero y compacto"
+  - "Garantía de 12 años de Herman Miller"
+  - "Soporta hasta 159 kg"
+  - "Materiales casi totalmente reciclables, sin PVC"
+puntosDebiles:
+  - "Lumbar opcional y considerado discreto"
+  - "Sin reposacabezas"
+  - "La configuración básica trae pocos ajustes; los completos suben el precio"
+fuenteSpecs: "Web oficial Herman Miller (hermanmiller.com/products/seating/office-chairs/sayl-chairs/product-details) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/sayl-chair/2294.html) + dimensions.com/element/sayl-task-chair + creativebloq.com Herman Miller Sayl review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "fijo"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 159
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: 62
+  fondoCm: 62
+  mecanismo: "inclinacion con tensor y limitador"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: 17
+  garantiaAnios: 12
+  reposacabezas: "ninguno"

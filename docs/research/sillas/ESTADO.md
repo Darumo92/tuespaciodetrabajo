@@ -6,7 +6,7 @@
 
 ## Resumen en una línea
 
-Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampliado de **19 → 24 sillas** con una oleada piloto de 5 fichas; el resto del research (100+ sillas) está pausado a la espera de datos de Amazon y de la señal de indexación.
+Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampliado de **19 → 31 sillas** (piloto de 5 + Oleada 1 de 7 premium, 2026-06-20); el resto del research (100+ sillas) está pausado a la espera de datos de Amazon y de la señal de indexación.
 
 ## Decisiones tomadas por el usuario
 
@@ -33,7 +33,7 @@ Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampl
 
 **Extra (no era Task):** fix del filtrado del catálogo que rompí en Task 3 (ver más abajo).
 
-## Catálogo actual: 24 sillas
+## Catálogo actual: 31 sillas
 
 - **19 originales** (auditadas, `published`).
 - **5 piloto nuevas** (specs oficiales verificadas, CTA = Amazon search fallback, sin ASIN):
@@ -100,3 +100,14 @@ f51797d chore: add product catalog validator
 403f079 docs: audit current chair catalog
 828287a docs: add chair research backlog
 ```
+
+## Oleada 1 — premium/oficina (2026-06-20)
+
+Plan: `docs/superpowers/plans/2026-06-20-ampliacion-catalogo-sillas-100-oleadas.md` (Task 1). Rama `feat/sillas-catalogo-100-oleadas`.
+
+7 fichas premium publicadas (specs oficiales verificadas, CTA = webOficial, sin ASIN; imágenes del usuario normalizadas a fondo blanco):
+- `herman-miller-sayl`, `herman-miller-mirra-2`, `herman-miller-cosm`, `steelcase-think`, `haworth-zody`, `humanscale-diffrient-smart`, `hag-sofi`.
+
+Backlog: estas 7 pasan candidate→published (quedan 17 candidatas del Bloque A). Catálogo: 24 → 31. Build 100 páginas, validate + tests verdes. Revisión spec + calidad pasada (fix: mirra-2 respaldo malla→mixto; pulido anti-AI-tells en 4 veredictos).
+
+Siguiente: Oleada 2 (gama media, Task 2).

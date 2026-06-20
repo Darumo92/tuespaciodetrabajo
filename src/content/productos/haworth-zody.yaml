@@ -1,0 +1,99 @@
+tipo: "silla"
+nombre: "Haworth Zody"
+marca: "Haworth"
+imagen: "/img/productos/haworth-zody.jpg"
+imagenAlt: "Silla ergonómica Haworth Zody con soporte lumbar PAL"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9.5
+  ajustabilidad: 9.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.haworth.com/products/zody-office-chair"
+idealPara: "Quien busca soporte lumbar avanzado y asimétrico, ideal para espaldas exigentes y jornadas largas"
+veredicto: "La Zody destaca por su sistema lumbar PAL, que permite regular cada lado de la espalda de forma independiente, algo poco común incluso en gama premium. Con reposabrazos 4D y respaldo de malla por zonas, queda como una de las sillas más completas para problemas de espalda; su precio premium y la necesidad de configurarla bien son sus principales frenos."
+resumenCompra:
+  mejorPara: "Quien necesita soporte lumbar fino y asimétrico, y valora reposabrazos 4D y malla por zonas."
+  evitarSi: "Quieres una silla plug and play sin ajustes o el presupuesto no llega a gama premium."
+  alternativaDirecta: "Haworth Fern si prefieres un respaldo que se flexiona en lugar del lumbar PAL regulable."
+  decisionRapida: "La elegiría sobre todo por el lumbar PAL si tengo molestias de espalda, asumiendo que hay que dedicar tiempo a ajustarla y que es premium."
+metodologia:
+  - "Se han contrastado las specs de la tienda oficial de Haworth con la web global y la comparativa oficial citada en fuenteSpecs."
+  - "La nota prioriza el sistema lumbar PAL asimétrico, los reposabrazos 4D y la malla por zonas."
+  - "Se penaliza el precio premium y la curva de configuración para sacarle todo el partido."
+scoreRationale:
+  ergonomia: "El lumbar PAL ajustable de forma independiente en cada lado es de lo más avanzado del mercado."
+  ajustabilidad: "Lumbar asimétrico, profundidad de asiento regulable, reposabrazos 4D y basculación de 3 puntos."
+  materiales: "Malla de suspensión por zonas, certificaciones ambientales y BIFMA, garantía de 12 años."
+  comodidad: "Muy buena cuando se configura bien, especialmente para espaldas exigentes."
+  calidadPrecio: "Conjunto muy completo, pero el precio la mantiene en terreno premium."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Haworth Store Zody Office Chair"
+    url: "https://store.haworth.com/products/zody-office-chair"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "Haworth Zody task chair"
+    url: "https://www.haworth.com/ap/en/products/office-chairs/zody-1.html"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "El lumbar PAL y el resto de ajustes requieren tiempo de configuración para aprovecharlos."
+  - "Con la opción de inclinacion frontal la capacidad de carga baja de 159 a 147 kg."
+  - "Precio claramente premium."
+alternativas:
+  - slug: "haworth-fern"
+    motivo: "Misma marca con respaldo Wave que se flexiona, si prefieres soporte automático al lumbar PAL."
+  - slug: "steelcase-leap-v2"
+    motivo: "Otra premium muy ajustable con respaldo tapizado y soporte lumbar regulable."
+  - slug: "herman-miller-aeron"
+    motivo: "Alternativa de malla con soporte sacrolumbar PostureFit SL si prefieres ese enfoque."
+comunidad: "La Zody es conocida en comunidades de ergonomía por su sistema lumbar PAL, que muchos consideran de los mejores para regular el soporte de cada lado de la espalda. El consenso positivo gira en torno a ese lumbar y a sus reposabrazos 4D; las pegas habituales son el precio y que hay que invertir tiempo en ajustarla para notar la diferencia."
+paraQuienSi:
+  - "Personas con molestias de espalda que necesitan soporte lumbar fino y por lados"
+  - "Usuarios que valoran reposabrazos 4D y malla de suspensión por zonas"
+  - "Quien busca certificaciones ambientales y garantía de 12 años"
+paraQuienNo:
+  - "Quien quiere una silla lista sin apenas ajustes"
+  - "Presupuestos por debajo de la gama premium"
+  - "Quien prefiere asiento tapizado muy acolchado"
+puntosFuertes:
+  - "Sistema lumbar PAL: ajuste asimétrico e independiente de cada lado de la espalda"
+  - "Reposabrazos 4D (altura, anchura, profundidad y pivote)"
+  - "Respaldo de malla de suspensión por zonas"
+  - "Profundidad de asiento regulable y basculación sincronizada de 3 puntos"
+  - "Certificaciones GREENGUARD Gold, Cradle to Cradle y BIFMA"
+  - "Garantía de 12 años, soporta hasta 159 kg"
+puntosDebiles:
+  - "Requiere tiempo de configuración para aprovechar el lumbar PAL"
+  - "Con inclinacion frontal opcional baja la capacidad de carga"
+  - "Precio premium"
+fuenteSpecs: "Tienda oficial Haworth (store.haworth.com/products/zody-office-chair) + web oficial (haworth.com/ap/en/products/office-chairs/zody-1.html) + comparativa oficial de asientos Haworth 2025"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "5d"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 159
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 53
+  anchoCm: 74
+  fondoCm: 74
+  mecanismo: "basculacion sincronizada de 3 puntos"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: 12
+  anchoAsientoCm: 50
+  profundidadAsientoMinCm: 43
+  profundidadAsientoMaxCm: 50
+  reposacabezas: "ninguno"

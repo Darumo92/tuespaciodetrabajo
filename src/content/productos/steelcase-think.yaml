@@ -1,0 +1,104 @@
+tipo: "silla"
+nombre: "Steelcase Think"
+marca: "Steelcase"
+imagen: "/img/productos/steelcase-think.webp"
+imagenAlt: "Silla ergonómica Steelcase Think con sistema LiveBack"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.5
+  materiales: 9.0
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://eu.steelcase.com/products/think"
+idealPara: "Quien quiere una Steelcase intuitiva, con ajuste por peso y respaldo que se adapta a la espalda sin complicaciones"
+veredicto: "La Think es la silla de Steelcase pensada para ajustarse sola: el sistema LiveBack se amolda a la columna y la basculación se activa con el peso del usuario. Trae lumbar regulable y reposabrazos 4D de serie, con garantía muy sólida; su límite es que el ajuste de reclinación es por posiciones, no continuo, y sigue siendo una silla de precio premium."
+resumenCompra:
+  mejorPara: "Quien quiere una premium intuitiva, con ajuste por peso, lumbar regulable y reposabrazos 4D de serie."
+  evitarSi: "Prefieres respaldo de malla transpirable o necesitas reclinación continua en lugar de por posiciones."
+  alternativaDirecta: "Steelcase Leap V2 si quieres más ajustes de respaldo de la misma marca."
+  decisionRapida: "La elegiría por su sencillez de uso, el ajuste por peso y la garantía, asumiendo que es premium y que el respaldo es tapizado, no de malla."
+metodologia:
+  - "Se han contrastado las specs de la tienda oficial de Steelcase Europa con la web global y reseñas citadas en fuenteSpecs."
+  - "La nota pondera el sistema LiveBack, el ajuste por peso, el lumbar regulable y los reposabrazos 4D de serie."
+  - "Se penaliza que la reclinación es por posiciones (4) y no continua, y el precio premium."
+scoreRationale:
+  ergonomia: "El sistema LiveBack se amolda a la columna y la basculación por peso ofrece soporte natural sin configurar."
+  ajustabilidad: "Lumbar regulable y reposabrazos 4D de serie, aunque la reclinación es por 4 posiciones, no continua."
+  materiales: "Construcción Steelcase muy duradera, fabricación europea y alto porcentaje reciclable."
+  comodidad: "Cómoda desde el inicio gracias al ajuste por peso, con respaldo tapizado en lugar de malla."
+  calidadPrecio: "Cara, pero la garantía y la durabilidad de Steelcase respaldan la inversión."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Steelcase Store Europa Think"
+    url: "https://eu.steelcase.com/products/think"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "Steelcase Think product page"
+    url: "https://www.steelcase.com/products/office-chairs/think/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Egyptian Workspace Steelcase Think review"
+    url: "https://www.goegyptian.com/learninghub/steelcase-think-chair-review"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "La reclinación se ajusta por 4 posiciones, no de forma continua."
+  - "El respaldo es tapizado; la versión de e-shop no incluye reposacabezas."
+  - "Precio claramente premium."
+alternativas:
+  - slug: "steelcase-leap-v2"
+    motivo: "Misma marca con más ajustes de respaldo (LiveBack más graduable) si buscas control fino."
+  - slug: "steelcase-gesture"
+    motivo: "Steelcase orientada a reposabrazos muy versátiles para dispositivos y posturas variadas."
+  - slug: "steelcase-series-1"
+    motivo: "Steelcase más económica si el presupuesto no llega a la Think."
+comunidad: "Reseñas especializadas y opiniones de usuarios valoran la Think por su sencillez: se ajusta sola al peso y el respaldo LiveBack se amolda bien. El consenso negativo más habitual es que la reclinación va por posiciones y no de forma continua, y que el respaldo tapizado transpira menos que una malla."
+paraQuienSi:
+  - "Quien quiere una premium que se ajuste sola al peso sin tocar palancas"
+  - "Usuarios que valoran lumbar regulable y reposabrazos 4D de serie"
+  - "Quien busca durabilidad y garantía muy amplia de Steelcase"
+paraQuienNo:
+  - "Quien prefiere respaldo de malla transpirable"
+  - "Usuarios que quieren reclinación continua en lugar de por posiciones"
+  - "Presupuestos por debajo de la gama premium"
+puntosFuertes:
+  - "Sistema LiveBack que se amolda a la curva de la columna"
+  - "Basculación activada por el peso del usuario, sin configurar"
+  - "Lumbar regulable en altura y reposabrazos 4D de serie"
+  - "Soporta hasta 150 kg"
+  - "Garantía amplia: estructura de por vida, mecanismos 12 años"
+  - "Fabricación europea, alto porcentaje reciclable"
+puntosDebiles:
+  - "Reclinación por 4 posiciones, no continua"
+  - "Respaldo tapizado, menos transpirable que una malla"
+  - "Precio premium"
+fuenteSpecs: "Tienda oficial Steelcase Europa (eu.steelcase.com/products/think) + web oficial (steelcase.com/products/office-chairs/think) + goegyptian.com/learninghub/steelcase-think-chair-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 52
+  anchoCm: 73
+  fondoCm: 58
+  mecanismo: "LiveBack con basculacion por peso"
+  baseMaterial: null
+  certificacionBifma: null
+  pesoProductoKg: 21
+  garantiaAnios: 12
+  anchoAsientoCm: 51
+  profundidadAsientoMinCm: 41
+  profundidadAsientoMaxCm: 47
+  alturaRespaldoCm: null
+  reposacabezas: "ninguno"

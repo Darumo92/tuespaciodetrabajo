@@ -1,0 +1,99 @@
+tipo: "silla"
+nombre: "HÅG SoFi"
+marca: "HÅG"
+imagen: "/img/productos/hag-sofi.jpg"
+imagenAlt: "Silla ergonómica HÅG SoFi con sistema inBalance"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://hag-office.com/products/hag-sofi-7500"
+idealPara: "Quien busca una silla nórdica que invita al movimiento constante, con foco en sentarse activo"
+veredicto: "La HÅG SoFi apuesta por el movimiento: su mecanismo inBalance acompaña al cuerpo hacia delante y hacia atrás para frenar la tendencia a quedarse estático, una seña de identidad de la marca noruega. Trae lumbar y profundidad de asiento regulables y unos reposabrazos SlideBack ingeniosos; sus límites son una capacidad de carga moderada (110 kg) y un precio premium."
+resumenCompra:
+  mejorPara: "Quien quiere sentarse de forma activa, con movimiento constante, lumbar y profundidad regulables."
+  evitarSi: "Pesas cerca o por encima de 110 kg, o prefieres una silla más estática y muy acolchada."
+  alternativaDirecta: "HÅG Capisco si quieres llevar el sentarse activo al extremo con su asiento tipo silla de montar."
+  decisionRapida: "La elegiría por su enfoque de movimiento y su lumbar regulable, vigilando el límite de 110 kg y el precio."
+metodologia:
+  - "Se han contrastado las specs de la web oficial HÅG (Flokk) y la ficha técnica oficial citada en fuenteSpecs."
+  - "La nota pondera el mecanismo inBalance, el lumbar y la profundidad de asiento regulables y los reposabrazos SlideBack."
+  - "Se penaliza la capacidad de carga moderada (110 kg) y el precio premium."
+scoreRationale:
+  ergonomia: "El mecanismo inBalance fomenta el movimiento natural y la postura activa, con lumbar regulable."
+  ajustabilidad: "Altura, profundidad de asiento y lumbar regulables, más reposabrazos SlideBack; sin reposabrazos 4D plenos."
+  materiales: "Respaldo de malla, base de aluminio de cinco estrellas y enfoque ambiental de Flokk."
+  comodidad: "Cómoda para quien busca moverse mientras trabaja, menos para quien quiere quietud."
+  calidadPrecio: "Buen conjunto y durabilidad, pero el límite de carga y el precio premium la condicionan."
+fuentes:
+  - tipo: "oficial"
+    nombre: "HÅG SoFi Mesh 7500"
+    url: "https://hag-office.com/products/hag-sofi-7500"
+    fechaConsulta: "2026-06-20"
+  - tipo: "manual"
+    nombre: "HÅG SoFi factsheet (Flokk)"
+    url: "https://flokkplatformprod.blob.core.windows.net/catalog/hag-sofi/HAG%20SoFi%20factsheet%20ENG%20Oct19.pdf"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Capacidad de carga moderada: 110 kg de máximo declarado."
+  - "Los reposabrazos SlideBack se mueven hacia atrás, pero no ofrecen ajuste 4D completo."
+  - "Precio premium y distribución por canal especializado."
+alternativas:
+  - slug: "hag-capisco"
+    motivo: "Misma marca con sentarse activo llevado al extremo y asiento tipo silla de montar."
+  - slug: "herman-miller-mirra-2"
+    motivo: "Premium dinámica con más capacidad de carga y reposabrazos 4D."
+  - slug: "haworth-zody"
+    motivo: "Si priorizas soporte lumbar regulable muy avanzado sobre el enfoque de movimiento."
+comunidad: "La SoFi tiene buena reputación entre quienes buscan sillas que inviten a moverse: el sistema inBalance y la filosofía de sentarse activo de HÅG son sus señas de identidad. El consenso de pegas se centra en la capacidad de carga moderada y en que es una silla de canal premium, no tan fácil de encontrar como las marcas más masivas."
+paraQuienSi:
+  - "Quien quiere sentarse de forma activa y moverse mientras trabaja"
+  - "Usuarios de hasta 110 kg que valoran lumbar y profundidad regulables"
+  - "Quien aprecia el diseño nórdico y el enfoque ambiental de Flokk"
+paraQuienNo:
+  - "Personas cercanas o por encima de 110 kg"
+  - "Quien prefiere una silla estática y muy acolchada"
+  - "Quien necesita reposabrazos 4D completos o reposacabezas de serie"
+puntosFuertes:
+  - "Mecanismo inBalance que acompaña el movimiento hacia delante y atrás"
+  - "Lumbar y profundidad de asiento regulables"
+  - "Reposabrazos SlideBack que permiten acercarse al escritorio"
+  - "Respaldo de malla transpirable y base de aluminio de cinco estrellas"
+  - "Garantía de 10 años en uso normal"
+puntosDebiles:
+  - "Capacidad de carga moderada (110 kg)"
+  - "Reposabrazos sin ajuste 4D completo"
+  - "Precio premium y canal especializado"
+fuenteSpecs: "Web oficial HÅG (hag-office.com/products/hag-sofi-7500) + ficha técnica oficial HÅG SoFi (Flokk)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "2d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 64
+  anchoCm: 71
+  fondoCm: 73
+  mecanismo: "HÅG inBalance"
+  baseMaterial: "aluminio"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 10
+  anchoAsientoCm: 45
+  profundidadAsientoMinCm: 39
+  profundidadAsientoMaxCm: 46
+  alturaRespaldoCm: 72
+  reposacabezas: "ninguno"
