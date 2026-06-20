@@ -33,7 +33,7 @@ Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampl
 
 **Extra (no era Task):** fix del filtrado del catálogo que rompí en Task 3 (ver más abajo).
 
-## Catálogo actual: 31 sillas
+## Catálogo actual: 39 sillas
 
 - **19 originales** (auditadas, `published`).
 - **5 piloto nuevas** (specs oficiales verificadas, CTA = Amazon search fallback, sin ASIN):
@@ -111,3 +111,13 @@ Plan: `docs/superpowers/plans/2026-06-20-ampliacion-catalogo-sillas-100-oleadas.
 Backlog: estas 7 pasan candidate→published (quedan 17 candidatas del Bloque A). Catálogo: 24 → 31. Build 100 páginas, validate + tests verdes. Revisión spec + calidad pasada (fix: mirra-2 respaldo malla→mixto; pulido anti-AI-tells en 4 veredictos).
 
 Siguiente: Oleada 2 (gama media, Task 2).
+
+## Oleada 2 — gama media (2026-06-20)
+
+Plan Task 2. 8 fichas publicadas (de 9 previstas): sihoo-doro-s300, flexispot-c7, flexispot-bs11-pro, hbada-e3 (E3 Pro), ticova-ergonomic, nouhaus-ergo3d, ergotopia-nextback, colamy-high-back (ATLAS). CTA = amazon.buscar (search fallback), sin ASIN.
+
+Baja: `songmics-obg-cloud` descartada (sin fuente oficial verificable de ese modelo) -> sigue como candidate.
+
+Imágenes del usuario normalizadas a fondo blanco (3 se rehicieron por venir con fondo negro/lifestyle). Catálogo 31 -> 39. Build 108 páginas, validate verde. Revisión spec + calidad pasada (pulido de calcos/redundancias en 4 veredictos).
+
+Quedan 9 candidatas del Bloque A (8 para Oleada 3 + songmics descartada). Siguiente: Oleada 3 (IKEA + gaming, Task 3).

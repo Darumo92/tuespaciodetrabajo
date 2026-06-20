@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "FlexiSpot C7"
+marca: "FlexiSpot"
+imagen: "/img/productos/flexispot-c7.png"
+imagenAlt: "Silla ergonómica FlexiSpot C7 respaldo de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.5
+  materiales: 8.0
+  comodidad: 8.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "FlexiSpot C7 silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es/silla-de-oficina-ergonomica-de-alta-calidad-c7"
+idealPara: "Teletrabajo de jornada completa con lumbar que se bloquea o se adapta solo"
+veredicto: "La C7 es la silla ergonómica que mejor resume la filosofía de FlexiSpot: lumbar que puedes fijar a una altura concreta o dejar que se adapte sola a la postura, reposabrazos 4D y diez años de garantía, algo poco habitual en este tramo de precio. Su asiento puede elegirse en malla o acolchado y soporta hasta 130 kg. Su precio es alto dentro de la gama media, pero la garantía de diez años y la lumbar regulable compensan esa inversión para jornadas largas."
+resumenCompra:
+  mejorPara: "Quien quiere lumbar regulable o autoadaptable, reposabrazos 4D y garantía muy larga."
+  evitarSi: "Buscas el precio mínimo o pesas claramente por encima de 130 kg."
+  alternativaDirecta: "FlexiSpot C7 Lite si prefieres una versión más compacta y económica de la misma familia."
+  decisionRapida: "Una apuesta segura de gama media para teletrabajo serio, sobre todo por la garantía de diez años."
+metodologia:
+  - "Specs contrastadas con la web oficial FlexiSpot (España y global) y reseñas especializadas."
+  - "La nota valora la regulación lumbar, los reposabrazos 4D y la garantía de diez años."
+  - "Se penaliza un precio que no es de entrada y la limitación de 130 kg frente a rivales que llegan a 150 kg."
+scoreRationale:
+  ergonomia: "Lumbar que se fija o se autoadapta y respaldo de malla cubren bien el apoyo lumbar durante la jornada."
+  ajustabilidad: "Reposabrazos 4D, altura de asiento, profundidad y reposacabezas regulable dan margen amplio."
+  materiales: "Malla transpirable, opción de asiento acolchado y certificación BIFMA, sin llegar al aluminio premium."
+  comodidad: "Asiento elegible en malla o espuma y respaldo que acompaña la espalda en jornadas largas."
+  calidadPrecio: "La garantía de diez años eleva mucho la relación calidad-precio dentro de la gama media."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FlexiSpot C7 (web oficial España)"
+    url: "https://www.flexispot.es/silla-de-oficina-ergonomica-de-alta-calidad-c7"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "FlexiSpot C7 (web oficial global)"
+    url: "https://www.flexispot.com/flexispot-best-ergonomic-office-chair-c7"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "TechSpot FlexiSpot C7 review"
+    url: "https://www.techspot.com/review/2757-flexispot-c7-ergonomic-chair/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Capacidad máxima de 130 kg, por debajo de rivales que llegan a 150 kg."
+  - "Precio por encima de las sillas de entrada de la misma marca."
+  - "Las fuentes oficiales no detallan certificación EN 1335."
+alternativas:
+  - slug: "flexispot-c7-lite"
+    motivo: "Versión más compacta y asequible de la misma familia."
+  - slug: "sihoo-doro-c300"
+    motivo: "Lumbar dinámica autoajustable y base de aluminio a precio similar."
+comunidad: "Las reseñas especializadas la valoran como una de las sillas de malla más completas de la gama media, con mención especial a la garantía de diez años y a la doble naturaleza de su lumbar, que se puede bloquear o dejar libre. La crítica más repetida es que el ensamblaje lleva su tiempo y que personas muy corpulentas se quedan cerca del límite de 130 kg."
+paraQuienSi:
+  - "Teletrabajadores de jornada completa que quieren lumbar regulable o autoadaptable"
+  - "Usuarios que valoran reposabrazos 4D y reposacabezas ajustable"
+  - "Quien da peso a una garantía larga, de diez años"
+paraQuienNo:
+  - "Presupuesto de silla de entrada"
+  - "Personas que superan los 130 kg"
+  - "Quien necesita certificación europea EN 1335 documentada"
+puntosFuertes:
+  - "Lumbar que se fija a una altura o se adapta sola a la postura"
+  - "Reposabrazos 4D y reposacabezas regulable"
+  - "Asiento elegible en malla o acolchado"
+  - "Garantía de diez años"
+puntosDebiles:
+  - "Capacidad máxima de 130 kg"
+  - "Precio por encima de la gama de entrada"
+fuenteSpecs: "Web oficial FlexiSpot ES (flexispot.es/silla-de-oficina-ergonomica-de-alta-calidad-c7) + flexispot.com/flexispot-best-ergonomic-office-chair-c7 + techspot.com/review/2757-flexispot-c7-ergonomic-chair"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 128
+  pesoMaxKg: 130
+  alturaAsientoMinCm: 47.5
+  alturaAsientoMaxCm: 56
+  anchoCm: 75
+  fondoCm: 75
+  mecanismo: "inclinacion-con-lumbar-adaptativa"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: 10
+  anchoAsientoCm: 52
+  profundidadAsientoMinCm: 44
+  profundidadAsientoMaxCm: 50
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

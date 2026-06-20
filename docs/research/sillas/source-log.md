@@ -40,3 +40,7 @@
 - HÅG SoFi: hag-office.com + ficha técnica Flokk (PDF).
 
 Sin ASIN (no se venden en Amazon ES): CTA = webOficial. Specs no confirmadas dejadas en null. verificadoEn 2026-06-20.
+
+## Oleada 2 gama media (2026-06-20)
+
+8 fichas con fuente oficial de fabricante: SIHOO (Doro S300), FlexiSpot (C7, BS11 Pro), Hbada (E3 Pro), Ticova, Nouhaus (Ergo3D), Ergotopia (NextBack, datasheet+manual PDF), COLAMY (ATLAS). Reseñas reconocidas donde aplica (TechSpot en C7). CTA = amazon.buscar; sin ASIN. Specs no confirmadas en null (p.ej. FlexiSpot BS11 Pro pesoMaxKg null por conflicto 350/130 kg). songmics-obg-cloud descartada por falta de fuente oficial.
