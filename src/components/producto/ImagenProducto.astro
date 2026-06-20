@@ -15,7 +15,10 @@ const tieneImagen = imagen != null && imagen.trim() !== '';
     height: var(--img-box, 200px);
     max-width: 100%;
     object-fit: contain;
-    background: var(--bg);
+    /* Las fotos de producto llevan lienzo blanco horneado: la caja va siempre
+       blanca para que las barras del letterbox se fundan con la foto en modo
+       claro y oscuro (si no, en oscuro las barras salen negras). */
+    background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius);
     flex-shrink: 0;

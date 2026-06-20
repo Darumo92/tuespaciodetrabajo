@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Branch Ergonomic Chair"
 marca: "Branch"
-imagen: ""
+imagen: "/img/productos/branch-ergonomic.jpg"
 imagenAlt: "Silla ergonómica Branch Ergonomic Chair con respaldo de malla"
 tramoPrecio: 2
 precioMin: null

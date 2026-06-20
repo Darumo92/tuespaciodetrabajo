@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Drift DR500"
 marca: "Drift"
-imagen: ""
+imagen: "/img/productos/drift-dr500.jpg"
 imagenAlt: "Silla gaming Drift DR500 con respaldo de cuero sintético"
 tramoPrecio: 2
 precioMin: null

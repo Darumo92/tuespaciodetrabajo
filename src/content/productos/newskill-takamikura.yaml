@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Newskill Takamikura V2"
 marca: "Newskill"
-imagen: ""
+imagen: "/img/productos/newskill-takamikura.jpg"
 imagenAlt: "Silla gaming Newskill Takamikura V2 con respaldo de tela transpirable"
 tramoPrecio: 2
 precioMin: null

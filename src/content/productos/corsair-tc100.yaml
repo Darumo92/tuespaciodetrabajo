@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Corsair TC100 Relaxed"
 marca: "Corsair"
-imagen: ""
+imagen: "/img/productos/corsair-tc100.jpg"
 imagenAlt: "Silla gaming Corsair TC100 Relaxed con respaldo de tela"
 tramoPrecio: 2
 precioMin: null
