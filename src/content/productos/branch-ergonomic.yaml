@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "Branch Ergonomic Chair"
+marca: "Branch"
+imagen: ""
+imagenAlt: "Silla ergonómica Branch Ergonomic Chair con respaldo de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 8
+  ajustabilidad: 8
+  materiales: 7.5
+  comodidad: 7.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.branchfurniture.com/products/ergonomic-chair"
+idealPara: "Teletrabajo con malla transpirable y muchos ajustes, en mercado estadounidense"
+veredicto: "La Branch Ergonomic Chair es una silla de oficina muy bien valorada en Estados Unidos por dar mucho ajuste por su precio: respaldo de malla de doble capa, lumbar regulable y desmontable, profundidad de asiento ajustable y reposabrazos regulables en altura y anchura, todo certificado BIFMA y con siete años de garantía. El gran problema para el comprador español es la disponibilidad: Branch vende y da soporte solo en Estados Unidos y Canadá, así que aquí no es una compra práctica salvo importación, y la garantía no cubre fuera de esa zona."
+resumenCompra:
+  mejorPara: "Quien compra en EE. UU. o Canadá y quiere malla con muchos ajustes a buen precio."
+  evitarSi: "Compras desde España o la Unión Europea: no hay venta ni garantía oficial."
+  alternativaDirecta: "SIHOO M18 si quieres una malla ergonómica asequible disponible en España."
+  decisionRapida: "Gran silla en su mercado, pero para España miraría una alternativa con venta y garantía locales."
+metodologia:
+  - "Specs tomadas de la web oficial de Branch y de una reseña independiente medida en laboratorio."
+  - "La nota valora la malla, los ajustes, la certificación BIFMA y la garantía de 7 años."
+  - "Se penaliza con fuerza la falta de disponibilidad y garantía fuera de EE. UU. y Canadá."
+scoreRationale:
+  ergonomia: "Malla de doble capa, lumbar regulable y profundidad de asiento ajustable."
+  ajustabilidad: "Siete puntos de ajuste, incluida profundidad y reposabrazos en altura y anchura."
+  materiales: "Malla transpirable y certificación BIFMA de uso comercial."
+  comodidad: "Buen apoyo y transpiración; el reposabrazos no ajusta profundidad ni ángulo."
+  calidadPrecio: "Muy buena en su mercado, pero condicionada por la disponibilidad fuera de EE. UU."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Branch Ergonomic Chair"
+    url: "https://www.branchfurniture.com/products/ergonomic-chair"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "TechGearLab Branch Ergonomic review"
+    url: "https://www.techgearlab.com/reviews/small-and-home-office/office-chair/branch-ergonomic"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Branch vende y da soporte solo en EE. UU. y Canadá: sin disponibilidad oficial en España ni la UE."
+  - "La garantía queda anulada para productos usados fuera de EE. UU. y Canadá."
+  - "Reposabrazos ajustables solo en altura y anchura, no en profundidad ni ángulo."
+alternativas:
+  - slug: "sihoo-m18"
+    motivo: "Malla ergonómica asequible con venta y garantía disponibles en España."
+  - slug: "ikea-flintan"
+    motivo: "Malla básica con garantía de IKEA si buscas una opción local muy económica."
+comunidad: "Buena reputación en reseñas estadounidenses como silla de malla con mucho ajuste por su precio, destacando la profundidad de asiento regulable y el lumbar ajustable, raros a este nivel. El punto flojo señalado de forma recurrente es que los reposabrazos no ajustan profundidad ni ángulo; y, de cara al comprador europeo, el problema añadido es que no se vende ni se da garantía fuera de Norteamérica."
+paraQuienSi:
+  - "Quien compra desde EE. UU. o Canadá y quiere malla con muchos ajustes"
+  - "Teletrabajo que valora profundidad de asiento y lumbar regulables"
+  - "Quien busca certificación BIFMA y garantía larga en su mercado"
+paraQuienNo:
+  - "Compradores desde España o la Unión Europea (sin venta ni garantía oficial)"
+  - "Quien necesita reposabrazos con ajuste de profundidad y ángulo"
+  - "Personas que superan los 125 kg"
+puntosFuertes:
+  - "Respaldo de malla de doble capa transpirable"
+  - "Lumbar regulable y desmontable"
+  - "Profundidad de asiento regulable"
+  - "Certificación BIFMA y 7 años de garantía"
+puntosDebiles:
+  - "Sin venta ni garantía oficial fuera de EE. UU. y Canadá"
+  - "Reposabrazos sin ajuste de profundidad ni ángulo"
+  - "Reclinación limitada (56°)"
+fuenteSpecs: "Web oficial Branch (Branch Ergonomic Chair: máx 275 lb/125 kg, reclinación 56°, malla doble capa, lumbar regulable, profundidad de asiento ajustable, BIFMA, garantía 7 años, venta solo EE. UU./Canadá) + TechGearLab (medidas: asiento 50,8 cm, 7 puntos de ajuste, montaje ~12 min)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "2d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 56
+  pesoMaxKg: 125
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: 66
+  fondoCm: 61
+  mecanismo: "Inclinación con ajuste de tensión y bloqueo"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: 16
+  garantiaAnios: 7
+  alturaRecomendadaMinCm: 157
+  alturaRecomendadaMaxCm: 188
+  anchoAsientoCm: 51
+  profundidadAsientoMaxCm: null
+  alturaRespaldoCm: null
+  montajeMinutos: 12
+  reposacabezas: "ninguno"
+  certificacionEn1335: null

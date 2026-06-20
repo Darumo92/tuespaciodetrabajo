@@ -1,0 +1,100 @@
+tipo: "silla"
+nombre: "IKEA HATTEFJÄLL"
+marca: "IKEA"
+imagen: ""
+imagenAlt: "Silla de trabajo IKEA HATTEFJÄLL tapizada con reposabrazos"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/hattefjall-silla-trabajo-con-reposabrazos-gunnared-beige-blanco-60538955/"
+idealPara: "Teletrabajo tapizado con lumbar regulable y estética de oficina cuidada"
+veredicto: "La HATTEFJÄLL es de las sillas de trabajo más completas del catálogo de IKEA: suma lumbar ajustable, respaldo con altura regulable en varias posiciones, reposabrazos 2D e inclinación sincronizada con bloqueo en tres posiciones, todo con la garantía de 10 años. El respaldo es tapizado en lugar de malla, así que en verano transpira menos, pero como silla de oficina tapizada con ajustes reales y buen acabado es una opción muy equilibrada para jornadas completas en casa."
+resumenCompra:
+  mejorPara: "Quien quiere una silla tapizada con lumbar regulable y respaldo ajustable en altura."
+  evitarSi: "Necesitas malla transpirable o profundidad de asiento regulable."
+  alternativaDirecta: "IKEA JÄRVFJÄLLET si prefieres respaldo de malla con más ajustes."
+  decisionRapida: "La silla tapizada de IKEA que pondría primero para teletrabajo si valoras lumbar y respaldo ajustables."
+metodologia:
+  - "Specs tomadas de la ficha oficial de IKEA España y del manual del producto."
+  - "La nota valora el lumbar regulable, el respaldo ajustable y la certificación frente al respaldo tapizado."
+  - "Se penaliza la falta de malla y de profundidad de asiento regulable."
+scoreRationale:
+  ergonomia: "Lumbar regulable y respaldo ajustable en altura la sitúan por encima de la media de IKEA."
+  ajustabilidad: "Altura de asiento, lumbar, respaldo y reposabrazos 2D; falta profundidad de asiento."
+  materiales: "Tapizado con espuma de buena densidad y estructura sólida."
+  comodidad: "Acolchado generoso, cómoda para jornada completa con respaldo tapizado."
+  calidadPrecio: "Buena dentro de la gama tapizada de IKEA por los ajustes que ofrece."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA HATTEFJÄLL silla de trabajo con reposabrazos"
+    url: "https://www.ikea.com/es/es/p/hattefjall-silla-trabajo-con-reposabrazos-gunnared-beige-blanco-60538955/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "manual"
+    nombre: "Manual IKEA HATTEFJÄLL"
+    url: "https://www.manualpdf.es/ikea/hattefjall/manual"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Soporta hasta 110 kg."
+  - "Respaldo tapizado, no de malla: transpira menos en verano."
+  - "Sin profundidad de asiento regulable."
+alternativas:
+  - slug: "ikea-jarvfjallet"
+    motivo: "Respaldo de malla con más ajustes si priorizas transpiración."
+  - slug: "ikea-langfjall"
+    motivo: "Más sencilla y económica si no necesitas lumbar ni respaldo regulables."
+comunidad: "Buen consenso entre usuarios de IKEA: se la valora como una de las sillas tapizadas más completas de la marca por el lumbar regulable y el respaldo ajustable en altura, además de la garantía de 10 años. Las críticas habituales señalan que el respaldo tapizado calienta más que una malla y que el límite de 110 kg deja fuera a usuarios más corpulentos."
+paraQuienSi:
+  - "Quien quiere una silla tapizada con lumbar regulable y respaldo ajustable"
+  - "Teletrabajo de jornada completa que valora acolchado y estética sobria"
+  - "Quien busca la garantía de 10 años de IKEA"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Personas que superan los 110 kg"
+  - "Quien necesita profundidad de asiento regulable"
+puntosFuertes:
+  - "Soporte lumbar ajustable"
+  - "Respaldo con altura regulable en varias posiciones"
+  - "Reposabrazos 2D (altura y anchura)"
+  - "Inclinación sincronizada con bloqueo en 3 posiciones"
+  - "Garantía de 10 años y certificación EN 1335 + BIFMA X5.1"
+puntosDebiles:
+  - "Respaldo tapizado, transpira menos que una malla"
+  - "Soporta hasta 110 kg"
+  - "Sin profundidad de asiento regulable"
+fuenteSpecs: "Web oficial IKEA España (ficha HATTEFJÄLL con reposabrazos: asiento 50x40 cm, altura 46-56 cm, máx 110 kg, garantía 10 años, EN 1335 + BIFMA X5.1) + manual del producto"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 46
+  alturaAsientoMaxCm: 56
+  anchoCm: 68
+  fondoCm: 68
+  mecanismo: "Inclinación sincronizada con tensión automática y bloqueo en 3 posiciones"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: 10
+  anchoAsientoCm: 50
+  profundidadAsientoMaxCm: 40
+  alturaRespaldoCm: null
+  reposacabezas: "ninguno"
+  certificacionEn1335: true

@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "Drift DR500"
+marca: "Drift"
+imagen: ""
+imagenAlt: "Silla gaming Drift DR500 con respaldo de cuero sintético"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 3.9
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 7.5
+  materiales: 7
+  comodidad: 7.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Drift DR500 silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.driftgaming.eu/products/dr500"
+idealPara: "Gaming de presupuesto contenido para usuarios altos con reposabrazos 4D"
+veredicto: "La DR500 es una de las gaming más conocidas de Drift y apunta sobre todo a usuarios de buena estatura: su respaldo es alto, soporta hasta 150 kg y monta reposabrazos 4D, cojines lumbar y cervical y un pistón de gas de clase 4. El acabado es de cuero sintético, así que transpira menos que una de tela o malla, y la reclinación llega hasta 135 grados, suficiente para reclinarse pero no para tumbarse del todo. Como gaming asequible y resistente para gente alta, cumple bien."
+resumenCompra:
+  mejorPara: "Usuarios altos que quieren gaming resistente con reposabrazos 4D a precio contenido."
+  evitarSi: "Mides menos de 1,75 m o necesitas malla o tela transpirable."
+  alternativaDirecta: "Newskill Takamikura si prefieres tela transpirable y reclinación a 180°."
+  decisionRapida: "La gaming asequible que recomendaría a una persona alta que quiere algo robusto sin gastar de más."
+metodologia:
+  - "Specs tomadas de la web oficial de Drift y de reseñas en castellano."
+  - "La nota valora la capacidad de 150 kg, los reposabrazos 4D y el respaldo alto."
+  - "Se penaliza el cuero sintético frente a tela o malla y la reclinación limitada a 135°."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical y respaldo alto, pero sin lumbar integrado regulable."
+  ajustabilidad: "Reposabrazos 4D, altura y reclinación hasta 135°; ajustes correctos."
+  materiales: "Cuero sintético sobre espuma moldeada y base metálica, resistente pero caluroso."
+  comodidad: "Buen apoyo para usuarios altos; firme y algo elevada para gente baja."
+  calidadPrecio: "Buena: robustez y 150 kg de carga a precio de gama media-baja."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Drift DR500"
+    url: "https://www.driftgaming.eu/products/dr500"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Profesional Review Drift DR500"
+    url: "https://www.profesionalreview.com/2020/10/01/drift-dr500-review/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Respaldo de cuero sintético, transpira menos que tela o malla."
+  - "Reclinación máxima de 135°, no se tumba del todo."
+  - "Pensada para usuarios a partir de 1,75 m; queda alta para gente baja."
+alternativas:
+  - slug: "newskill-takamikura"
+    motivo: "Tela transpirable y reclinación a 180° a precio similar."
+  - slug: "corsair-tc100"
+    motivo: "Asiento más ancho con opción de tela si prefieres no pasar calor."
+comunidad: "Reseñas en castellano la sitúan como una gaming sólida y asequible especialmente recomendada para personas altas, con buen apoyo y construcción resistente. Las críticas habituales apuntan a que el cuero sintético da calor, a que la silla queda alta para usuarios de menos de 1,80 m y a que el lumbar es de cojín, no integrado."
+paraQuienSi:
+  - "Usuarios altos a partir de 1,75 m"
+  - "Quien quiere gaming resistente hasta 150 kg con reposabrazos 4D"
+  - "Quien busca buen precio sin renunciar a robustez"
+paraQuienNo:
+  - "Personas de menos de 1,75 m (la silla queda alta)"
+  - "Quien necesita malla o tela transpirable"
+  - "Quien quiere reclinarse casi en horizontal"
+puntosFuertes:
+  - "Respaldo alto pensado para gente alta"
+  - "Soporta hasta 150 kg"
+  - "Reposabrazos 4D"
+  - "Cojines lumbar y cervical incluidos"
+  - "Pistón de gas de clase 4 y base metálica"
+puntosDebiles:
+  - "Respaldo de cuero sintético, calienta en verano"
+  - "Reclinación limitada a 135°"
+  - "Queda alta para usuarios bajos"
+fuenteSpecs: "Web oficial Drift (DR500: 70x126-136x55 cm, máx 150 kg, reclinación 90-135°, cuero sintético, espuma fría 65 kg/m³, reposabrazos 4D, gas clase 4, garantía 3 años, recomendada a partir de 1,75 m) + Profesional Review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "presion"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 150
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: 70
+  fondoCm: 55
+  mecanismo: "Reclinación de 90 a 135° con base giratoria de estrella metálica"
+  baseMaterial: "metal"
+  certificacionBifma: null
+  pesoProductoKg: 25
+  garantiaAnios: 3
+  alturaRecomendadaMinCm: 175
+  alturaRecomendadaMaxCm: null
+  anchoAsientoCm: null
+  profundidadAsientoMaxCm: null
+  alturaRespaldoCm: null
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

@@ -1,0 +1,98 @@
+tipo: "silla"
+nombre: "Corsair TC100 Relaxed"
+marca: "Corsair"
+imagen: ""
+imagenAlt: "Silla gaming Corsair TC100 Relaxed con respaldo de tela"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 7
+  materiales: 7.5
+  comodidad: 7.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Corsair TC100 Relaxed silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.corsair.com/ww/en/p/gaming-chairs/cf-9010051-ww/tc100-relaxed-gaming-chair-fabric-black-black-cf-9010051-ww"
+idealPara: "Gaming y trabajo de presupuesto contenido con asiento amplio y reclinación generosa"
+veredicto: "La TC100 Relaxed es la gaming de entrada de Corsair y juega bien sus cartas: asiento ancho y holgado, reclinación de 90 a 160 grados, cojines lumbar y cervical incluidos y la opción de elegir tela transpirable o cuero sintético. No tiene lumbar integrado regulable ni reposabrazos de gama alta, los suyos son 2D, pero como silla amplia y cómoda a precio asequible es una compra muy razonable. Recomendaría la versión de tela frente a la de cuero sintético si vas a pasar calor."
+resumenCompra:
+  mejorPara: "Quien busca una gaming amplia y cómoda a precio de entrada con buena reclinación."
+  evitarSi: "Necesitas lumbar integrado regulable o reposabrazos 4D."
+  alternativaDirecta: "Newskill Takamikura si quieres reposabrazos 4D y reclinación a 180° en precio similar."
+  decisionRapida: "La gaming asequible que pondría primero para quien quiere un asiento ancho sin gastar de más."
+metodologia:
+  - "Specs tomadas de la web oficial de Corsair (dimensiones, reclinación, materiales, garantía)."
+  - "La nota valora el asiento amplio, la reclinación y la opción de tela transpirable."
+  - "Se penaliza el lumbar de cojín no integrado y los reposabrazos 2D."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical, pero sin lumbar integrado regulable."
+  ajustabilidad: "Altura, reclinación 90-160° y reposabrazos 2D; ajustes correctos para su gama."
+  materiales: "Tela transpirable o cuero sintético sobre estructura de acero, sólida para el precio."
+  comodidad: "Asiento ancho y holgado, cómodo para sesiones largas."
+  calidadPrecio: "Muy buena: amplitud y reclinación generosa a precio de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Corsair TC100 Relaxed Gaming Chair"
+    url: "https://www.corsair.com/ww/en/p/gaming-chairs/cf-9010051-ww/tc100-relaxed-gaming-chair-fabric-black-black-cf-9010051-ww"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Soporte lumbar de cojín, no integrado regulable."
+  - "Reposabrazos 2D (arriba/abajo y dentro/fuera)."
+  - "Garantía de 2 años, por debajo de la media gaming."
+alternativas:
+  - slug: "newskill-takamikura"
+    motivo: "Reposabrazos 4D y reclinación a 180° en precio similar."
+  - slug: "ikea-styrspel"
+    motivo: "Malla transpirable con lumbar y reposacabezas ajustables si priorizas frescura."
+comunidad: "Buena valoración como gaming de entrada por su asiento ancho y la comodidad para usuarios de constitución media-grande, además de la opción de tela transpirable. Las críticas habituales señalan los reposabrazos 2D, el lumbar de cojín en lugar de integrado y una garantía de solo 2 años, corta frente a otras gaming."
+paraQuienSi:
+  - "Quien quiere una gaming amplia y cómoda a precio de entrada"
+  - "Usuarios de constitución media-grande hasta 188 cm y 120 kg"
+  - "Quien prefiere tela transpirable a cuero sintético"
+paraQuienNo:
+  - "Quien necesita lumbar integrado regulable"
+  - "Quien quiere reposabrazos 4D o construcción premium"
+  - "Personas que superan los 120 kg"
+puntosFuertes:
+  - "Asiento ancho y holgado (54 cm)"
+  - "Reclinación de 90 a 160°"
+  - "Cojines lumbar y cervical incluidos"
+  - "Disponible en tela transpirable o cuero sintético"
+  - "Pistón de gas de clase 4"
+puntosDebiles:
+  - "Soporte lumbar de cojín, no integrado regulable"
+  - "Reposabrazos 2D"
+  - "Garantía de solo 2 años"
+fuenteSpecs: "Web oficial Corsair (TC100 Relaxed: asiento 54x50 cm, altura 45-55 cm, reclinación 90-160°, máx 120 kg, altura recomendada hasta 188 cm, tela o cuero sintético, reposabrazos 2D, gas clase 4, garantía 2 años)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "presion"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 120
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 55
+  anchoCm: 54
+  fondoCm: 50
+  mecanismo: "Reclinación 90-160° con bloqueo de inclinación 0-10°"
+  baseMaterial: "nylon"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 2
+  alturaRecomendadaMinCm: null
+  alturaRecomendadaMaxCm: 188
+  anchoAsientoCm: 54
+  profundidadAsientoMaxCm: 50
+  alturaRespaldoCm: 80
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

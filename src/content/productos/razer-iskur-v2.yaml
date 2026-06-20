@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "Razer Iskur V2"
+marca: "Razer"
+imagen: ""
+imagenAlt: "Silla gaming Razer Iskur V2 con respaldo de cuero sintético"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.5
+  materiales: 8
+  comodidad: 8
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.razer.com/gaming-chairs/razer-iskur-v2"
+idealPara: "Gaming intensivo con lumbar adaptativo y reposabrazos 4D en formato premium"
+veredicto: "La Iskur V2 es la apuesta seria de Razer por la ergonomía: su gran baza es el soporte lumbar adaptativo de 6 grados, que se mueve con la espalda en lugar de ser un cojín fijo, acompañado de reposabrazos 4D y una construcción robusta para hasta 136 kg. El respaldo es de cuero sintético EPU, no de malla, así que en verano da más calor, y su precio la coloca en territorio premium frente a sillas de oficina con malla. Para quien quiere una gaming de gama alta con lumbar de verdad y estética Razer, cumple con nota."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming premium con lumbar adaptativo real y reposabrazos 4D."
+  evitarSi: "Necesitas malla transpirable o buscas el mejor precio por ergonomía."
+  alternativaDirecta: "Secretlab TITAN Evo si prefieres mayor reclinación y acabado igualmente premium."
+  decisionRapida: "La gaming que recomendaría a quien valora un lumbar que de verdad acompaña la espalda y no le importa pagar premium."
+metodologia:
+  - "Specs tomadas de la web oficial de Razer y de su soporte técnico."
+  - "La nota prioriza el lumbar adaptativo, los reposabrazos 4D y la capacidad de carga."
+  - "Se penaliza el respaldo de cuero sintético frente a la malla y el precio premium."
+scoreRationale:
+  ergonomia: "El lumbar adaptativo de 6 grados es lo mejor de la silla y la separa de las gaming corrientes."
+  ajustabilidad: "Reposabrazos 4D, altura, reclinación y lumbar ajustable cubren casi todo."
+  materiales: "Cuero sintético EPU de segunda generación robusto, pero menos fresco que la malla."
+  comodidad: "Buen apoyo y cojín cervical de memoria; firme al principio."
+  calidadPrecio: "Correcta pero ajustada: hay malla ergonómica por menos dinero."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Razer Iskur V2"
+    url: "https://www.razer.com/gaming-chairs/razer-iskur-v2"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "Razer Iskur V2 soporte y FAQ"
+    url: "https://mysupport.razer.com/app/answers/detail/a_id/13820/~/razer-iskur-v2-|-rz38-0490-support-&-faqs"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Respaldo de cuero sintético EPU, no de malla: transpira menos en verano."
+  - "Precio premium dentro de las sillas gaming."
+  - "Reclinación máxima en torno a 152°, menos tumbada que otras gaming."
+alternativas:
+  - slug: "secretlab-titan-evo"
+    motivo: "Mayor reclinación (165°) y construcción premium si buscas alternativa directa."
+  - slug: "noblechairs-hero"
+    motivo: "Gaming robusta para usuarios corpulentos si priorizas capacidad de carga."
+comunidad: "Buena acogida en reseñas de hardware: se destaca el lumbar adaptativo como la mejor solución integrada de su categoría y la construcción sólida para usuarios grandes. Las críticas recurrentes son las habituales de las gaming de cuero sintético, que el respaldo da calor en verano, y que el precio queda por encima de sillas de malla con ergonomía comparable."
+paraQuienSi:
+  - "Gamers que pasan muchas horas y quieren un lumbar que acompañe la espalda"
+  - "Usuarios de entre 160 y 200 cm dentro del límite de 136 kg"
+  - "Quien quiere estética y ecosistema Razer con ergonomía real"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Presupuestos ajustados que buscan máxima ergonomía por euro"
+  - "Quien quiere reclinarse casi en horizontal"
+puntosFuertes:
+  - "Soporte lumbar adaptativo HyperFlex de 6 grados de ajuste"
+  - "Reposabrazos 4D"
+  - "Soporta hasta 136 kg"
+  - "Cojín cervical de espuma viscoelástica incluido"
+  - "Garantía base de 3 años ampliable a 5 sin coste"
+puntosDebiles:
+  - "Respaldo de cuero sintético, calienta más en verano"
+  - "Precio premium"
+  - "Reclinación máxima limitada frente a otras gaming"
+fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-iskur-v2: asiento 40x45 cm, altura 43,5-53,5 cm, reclinación ~152°, máx 136 kg, altura recomendada 160-200 cm, cuero EPU, 4D, garantía 3 años) + soporte Razer"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 152
+  pesoMaxKg: 136
+  alturaAsientoMinCm: 44
+  alturaAsientoMaxCm: 54
+  anchoCm: 40
+  fondoCm: 45
+  mecanismo: "Reclinación con bloqueo y base giratoria 360°"
+  baseMaterial: null
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 3
+  alturaRecomendadaMinCm: 160
+  alturaRecomendadaMaxCm: 200
+  anchoAsientoCm: 40
+  profundidadAsientoMaxCm: 45
+  alturaRespaldoCm: 86
+  reposacabezas: "fijo"
+  certificacionEn1335: null

@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "IKEA STYRSPEL"
+marca: "IKEA"
+imagen: ""
+imagenAlt: "Silla gaming IKEA STYRSPEL con respaldo de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/styrspel-silla-gaming-gris-oscuro-gris-20522032/"
+idealPara: "Gaming y trabajo con malla transpirable y ajustes completos a precio contenido"
+veredicto: "La STYRSPEL es la apuesta gaming de IKEA y se desmarca de la mayoría de sillas del sector: en vez de respaldo tapizado que da calor, monta malla transpirable, y suma reposacabezas ajustable, lumbar regulable, reposabrazos 3D y profundidad de asiento regulable. Para alguien que alterna partidas largas y teletrabajo es una alternativa muy interesante a las gaming de cuero sintético, con la garantía de IKEA y certificación EN 1335 detrás. Pierde algo de la estética racing clásica, pero gana en frescura y ajustes."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming de malla transpirable con ajustes completos sin pagar premium."
+  evitarSi: "Buscas la estética racing de cuero sintético o reclinación muy tumbada para echar la siesta."
+  alternativaDirecta: "Secretlab TITAN Evo si prefieres construcción premium y mayor reclinación."
+  decisionRapida: "La gaming de malla que recomendaría a quien suda con las sillas de cuero sintético y quiere ajustes serios."
+metodologia:
+  - "Specs tomadas de la ficha oficial de IKEA (asiento, altura, peso máximo, ajustes)."
+  - "La nota valora la malla, el lumbar y reposacabezas regulables y la profundidad de asiento."
+  - "Se penaliza la falta de datos de reclinación máxima y de garantía concreta para gaming."
+scoreRationale:
+  ergonomia: "Malla, lumbar y reposacabezas ajustables y profundidad regulable: muy completa para gaming."
+  ajustabilidad: "Altura, lumbar, reposacabezas, reposabrazos 3D y profundidad de asiento."
+  materiales: "Respaldo de malla nylon transpirable, mejor que el cuero sintético en verano."
+  comodidad: "Buen apoyo postural; al ser malla, más fresca en sesiones largas."
+  calidadPrecio: "Competitiva frente a gaming tapizadas con menos ajustes."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA STYRSPEL silla gaming"
+    url: "https://www.ikea.com/es/es/p/styrspel-silla-gaming-gris-oscuro-gris-20522032/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Sin estética racing clásica de cuero sintético."
+  - "IKEA no detalla un ángulo de reclinación máximo concreto."
+  - "Soporta hasta 125 kg."
+alternativas:
+  - slug: "secretlab-titan-evo"
+    motivo: "Construcción premium y mayor reclinación si buscas gaming de gama alta."
+  - slug: "ikea-matchspel"
+    motivo: "Gaming de IKEA tapizada si prefieres acabado en piel sintética."
+comunidad: "Recepción positiva entre quienes buscan una gaming que no dé calor: se valora la malla transpirable y el conjunto de ajustes (lumbar, reposacabezas, reposabrazos 3D, profundidad de asiento) poco habitual a este precio. Las críticas apuntan a que pierde el aspecto racing que muchos asocian al gaming y a que el acolchado es más firme que en las sillas de cuero sintético."
+paraQuienSi:
+  - "Quien alterna gaming y teletrabajo y quiere malla transpirable"
+  - "Usuarios que sudan con las sillas gaming de cuero sintético"
+  - "Quien valora lumbar, reposacabezas y profundidad de asiento ajustables"
+paraQuienNo:
+  - "Quien busca la estética racing clásica de cuero sintético"
+  - "Personas que superan los 125 kg"
+  - "Quien quiere reclinarse casi en horizontal para descansar"
+puntosFuertes:
+  - "Respaldo de malla transpirable"
+  - "Lumbar y reposacabezas ajustables"
+  - "Reposabrazos 3D (altura, anchura y giro)"
+  - "Profundidad de asiento regulable"
+  - "Garantía de IKEA y certificación EN 1335 + BIFMA X5.1"
+puntosDebiles:
+  - "Sin la estética racing de cuero sintético"
+  - "IKEA no especifica reclinación máxima concreta"
+  - "Acolchado firme"
+fuenteSpecs: "Web oficial IKEA (ficha STYRSPEL: asiento 49,8x47 cm, altura 47,9-59,1 cm, máx 125 kg, malla nylon, reposabrazos 3D, lumbar y reposacabezas ajustables, profundidad regulable, EN 1335 + BIFMA X5.1)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 48
+  alturaAsientoMaxCm: 59
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "Inclinación sincronizada con tensión automática y bloqueo en 4 posiciones"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: null
+  anchoAsientoCm: 50
+  profundidadAsientoMaxCm: 47
+  alturaRespaldoCm: null
+  reposacabezas: "ajustable"
+  certificacionEn1335: true
