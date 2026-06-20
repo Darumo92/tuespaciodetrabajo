@@ -3,7 +3,7 @@ import Base from '@/layouts/Base.astro';
 import CatalogoProductos from '@/components/producto/CatalogoProductos.astro';
 import { getCollection } from 'astro:content';
 import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
-import type { Producto } from '@/lib/productos';
+import { seleccionarParesVs, type Producto } from '@/lib/productos';
 
 export async function getStaticPaths() {
   return TIPOS_CON_DATOS.map((tipo) => ({ params: { tipo } }));
@@ -18,6 +18,10 @@ const itemList = {
   numberOfItems: productos.length,
   itemListElement: productos.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${siteUrl}/catalogo/${tipo}/${p.slug}/`, name: p.nombre })),
 };
+// Enlaces a las comparativas prebuilt (mismo emparejamiento que comparar/[tipo]/[par]).
+// Da inlinks a páginas de comparación (evita orphans) y a las fichas de producto.
+const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
+const paresVs = seleccionarParesVs(productos, 16);
 ---
 <Base title={`${cfg.labelPlural} para home office | Catálogo`} description={`Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
@@ -25,5 +29,32 @@ const itemList = {
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <a href="/catalogo/">Catálogo</a> › <span>{cfg.labelPlural}</span></nav>
     <h1>{cfg.labelPlural}</h1>
     <CatalogoProductos productos={productos} tipo={tipo as string} />
+    {paresVs.length > 0 && (
+      <section class="comparativas-rel" aria-labelledby="comparativas-titulo">
+        <h2 id="comparativas-titulo">Comparativas {cfg.labelPlural.toLowerCase()}</h2>
+        <ul class="comparativas-lista">
+          {paresVs.map(([a, b]) => (
+            <li>
+              <a href={`/comparar/${tipo}/${a}-vs-${b}/`}>{porSlug[a]?.nombre} vs {porSlug[b]?.nombre}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
   </main>
 </Base>
+
+<style>
+  .comparativas-rel { margin-top: 3rem; }
+  .comparativas-rel h2 { margin-bottom: 1rem; }
+  .comparativas-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0.5rem 1.5rem;
+  }
+  .comparativas-lista a { color: var(--ink); }
+  .comparativas-lista a:hover { color: var(--accent, var(--ink)); }
+</style>

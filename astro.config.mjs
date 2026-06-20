@@ -49,6 +49,9 @@ export default defineConfig({
         !page.includes('/buscar/') &&
         !page.includes('/tags') &&
         !page.includes('/actualizaciones/') &&
+        // Excluye el hub del comparador (es noindex) sin tocar las páginas
+        // prebuilt /comparar/<tipo>/<a>-vs-<b>/, que sí deben indexarse.
+        !/\/comparar\/[^/]+\/$/.test(page) &&
         page !== 'https://tuespaciodetrabajo.com/audio-video/',
       serialize(item) {
         const lastmod = dateMap.get(item.url);

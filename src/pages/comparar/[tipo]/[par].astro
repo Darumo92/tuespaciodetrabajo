@@ -23,7 +23,7 @@ const { a, b } = Astro.props as { a: Producto; b: Producto };
 const cfg = getTipoConfig(tipo as string)!;
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const ganadora = (notaGlobal(a) ?? 0) >= (notaGlobal(b) ?? 0) ? a : b;
-const titulo = `${a.nombre} vs ${b.nombre}: comparativa y cuál elegir`;
+const titulo = `${a.nombre} vs ${b.nombre}: cuál elegir`;
 const desc = `Comparamos ${a.nombre} y ${b.nombre} en ergonomía, materiales, precio y garantía. Tabla lado a lado y veredicto.`;
 const breadcrumb = {
   '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
@@ -34,7 +34,7 @@ const breadcrumb = {
   ],
 };
 ---
-<Base title={`${titulo} | Tu Espacio de Trabajo`} description={desc}>
+<Base title={titulo} description={desc}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
   <main class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/catalogo/">Catálogo</a> › <a href={`/catalogo/${tipo}/`}>{cfg.labelPlural}</a> › <span>{a.nombre} vs {b.nombre}</span></nav>
