@@ -83,7 +83,7 @@ verificadoEn: "2026-06-20"
 specs:
   tipo: "silla"
   lumbar: "altura"
-  respaldo: "malla"
+  respaldo: "mixto"
   reposabrazos: "4d"
   profundidadRegulable: true
   reclinacionMaxGrados: null
