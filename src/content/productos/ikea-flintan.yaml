@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA FLINTAN"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-flintan.jpg"
 imagenAlt: "Silla de trabajo IKEA FLINTAN con respaldo de malla"
 tramoPrecio: 1
 precioMin: null

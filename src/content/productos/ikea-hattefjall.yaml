@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA HATTEFJÄLL"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-hattefjall.jpg"
 imagenAlt: "Silla de trabajo IKEA HATTEFJÄLL tapizada con reposabrazos"
 tramoPrecio: 2
 precioMin: null

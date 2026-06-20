@@ -33,7 +33,7 @@ Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampl
 
 **Extra (no era Task):** fix del filtrado del catálogo que rompí en Task 3 (ver más abajo).
 
-## Catálogo actual: 39 sillas
+## Catálogo actual: 47 sillas
 
 - **19 originales** (auditadas, `published`).
 - **5 piloto nuevas** (specs oficiales verificadas, CTA = Amazon search fallback, sin ASIN):
@@ -121,3 +121,19 @@ Baja: `songmics-obg-cloud` descartada (sin fuente oficial verificable de ese mod
 Imágenes del usuario normalizadas a fondo blanco (3 se rehicieron por venir con fondo negro/lifestyle). Catálogo 31 -> 39. Build 108 páginas, validate verde. Revisión spec + calidad pasada (pulido de calcos/redundancias en 4 veredictos).
 
 Quedan 9 candidatas del Bloque A (8 para Oleada 3 + songmics descartada). Siguiente: Oleada 3 (IKEA + gaming, Task 3).
+
+## Oleada 3 — IKEA + gaming (2026-06-20)
+
+Plan Task 3. 8 fichas publicadas: ikea-flintan, ikea-hattefjall, ikea-styrspel, razer-iskur-v2,
+corsair-tc100, newskill-takamikura (V2), drift-dr500, branch-ergonomic. IKEA con CTA webOficial;
+gaming con amazon.buscar o webOficial (Razer/Branch directos). Branch: solo EE.UU./Canadá, nota en limitaciones.
+
+Fix de datos: ikea-styrspel 110 kg (no 125). Pulido anti-AI-tells en los 8 veredictos.
+Incidencia de imágenes: las 3 IKEA llegaron en avif corrupto (verde en sips/QuickLook, bitstream no soportado
+en libheif); rehechas por el usuario en PNG y normalizadas a 800x800 blanco. Las otras 5, OK.
+
+Fix UI (aplica a todo el catálogo): ImagenProducto usa fondo de caja blanco fijo (antes var(--bg)) para que
+el letterbox no salga negro en modo oscuro.
+
+Catálogo 39 -> 47. Bloque A del backlog AGOTADO (solo queda songmics-obg-cloud descartada). Build 116 páginas.
+Siguiente: Oleada 4 = Bloque B (Task 4 research de marcas nuevas, luego producir).

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "IKEA STYRSPEL"
 marca: "IKEA"
-imagen: ""
+imagen: "/img/productos/ikea-styrspel.jpg"
 imagenAlt: "Silla gaming IKEA STYRSPEL con respaldo de malla"
 tramoPrecio: 2
 precioMin: null
