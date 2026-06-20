@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Hbada E3 Pro"
 marca: "Hbada"
-imagen: ""
+imagen: "/img/productos/hbada-e3.webp"
 imagenAlt: "Silla ergonómica Hbada E3 Pro respaldo de malla"
 tramoPrecio: 2
 precioMin: null

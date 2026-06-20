@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "FlexiSpot C7"
 marca: "FlexiSpot"
-imagen: ""
+imagen: "/img/productos/flexispot-c7.png"
 imagenAlt: "Silla ergonómica FlexiSpot C7 respaldo de malla"
 tramoPrecio: 2
 precioMin: null
