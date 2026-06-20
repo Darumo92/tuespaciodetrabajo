@@ -16,19 +16,6 @@ const breadcrumbSchema = {
   ],
 };
 
-const softwareAppSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SoftwareApplication',
-  name: 'Calculadora de ergonomía — Tu Espacio de Trabajo',
-  url: pageUrl,
-  applicationCategory: 'UtilityApplication',
-  operatingSystem: 'Web',
-  description: pageDescription,
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
-  author: { '@type': 'Person', name: 'David Rubio', url: `${siteUrl}/sobre-mi/`, sameAs: ['https://www.linkedin.com/in/david-rubio-mota/'] },
-  inLanguage: 'es',
-};
-
 const faqs = [
   {
     pregunta: '¿De dónde salen las fórmulas de la calculadora?',
@@ -64,7 +51,6 @@ const faqs = [
 
 <Base title={pageTitle} description={pageDescription} canonical={pageUrl} image="/images/og/calculadora-ergonomia.jpg">
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
-  <script type="application/ld+json" set:html={JSON.stringify(softwareAppSchema)} slot="head" />
 
   <div class="container ergo-page">
     <nav class="breadcrumb" aria-label="Migas de pan">

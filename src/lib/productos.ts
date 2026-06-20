@@ -301,6 +301,17 @@ export function buildProductCta(input: ProductCtaInput): ProductCta {
   return { href: null, label: 'Sin tienda verificada', kind: 'unavailable', sponsored: false };
 }
 
+/**
+ * Recorta un texto para usarlo como meta description, respetando el límite
+ * recomendado (~155 chars). Corta en el último espacio y añade elipsis.
+ */
+export function recortarMeta(texto: string, max = 155): string {
+  if (texto.length <= max) return texto;
+  const corte = texto.slice(0, max);
+  const ultimoEspacio = corte.lastIndexOf(' ');
+  return `${corte.slice(0, ultimoEspacio > 0 ? ultimoEspacio : max).trimEnd()}…`;
+}
+
 export type ParVs = [string, string];
 
 /**
