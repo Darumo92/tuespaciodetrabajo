@@ -1,0 +1,103 @@
+tipo: "silla"
+nombre: "Herman Miller Mirra 2"
+marca: "Herman Miller"
+imagen: ""
+imagenAlt: "Silla ergonómica Herman Miller Mirra 2 con respaldo TriFlex"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.5
+  materiales: 9.0
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/mirra-2-chair/1453.html"
+idealPara: "Quien quiere una Herman Miller dinámica y muy ajustable con respaldo de polímero que sigue el movimiento del cuerpo"
+veredicto: "La Mirra 2 es de las Herman Miller más equilibradas: respaldo TriFlex de polímero que se flexiona con el cuerpo, basculación Harmonic 2 y profundidad de asiento regulable de serie. Es muy ajustable y duradera, aunque su precio sigue siendo claramente premium y el respaldo de polímero gusta menos a quien busca malla tradicional."
+resumenCompra:
+  mejorPara: "Quien quiere una silla dinámica, muy ajustable y con profundidad de asiento regulable, dentro del catálogo Herman Miller."
+  evitarSi: "Prefieres malla tejida clásica o un asiento muy acolchado, o el presupuesto no llega a gama premium."
+  alternativaDirecta: "Herman Miller Aeron si priorizas malla y soporte sacrolumbar PostureFit SL."
+  decisionRapida: "La elegiría por su combinación de ajustes, profundidad regulable y garantía de 12 años, asumiendo el precio premium."
+metodologia:
+  - "Se han contrastado las specs oficiales de Herman Miller con la reseña de BTOD citada en fuenteSpecs."
+  - "La nota pondera la basculación Harmonic 2, la profundidad de asiento regulable y la garantía de 12 años."
+  - "Se penaliza el precio premium y que el respaldo de polímero no convence a quien busca malla tejida."
+scoreRationale:
+  ergonomia: "Respaldo TriFlex con zonas de flexión y basculación Harmonic 2 ofrecen soporte dinámico de alto nivel."
+  ajustabilidad: "Profundidad de asiento regulable de serie, lumbar opcional ajustable y reposabrazos totalmente regulables suben la nota."
+  materiales: "Construcción Herman Miller con respaldo de polímero duradero y garantía de 12 años."
+  comodidad: "Soporte dinámico muy sólido, aunque el respaldo de polímero divide frente a la malla."
+  calidadPrecio: "Durabilidad y ajustes excelentes, pero el precio la mantiene en terreno premium."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Herman Miller Mirra 2 specs"
+    url: "https://www.hermanmiller.com/products/seating/office-chairs/mirra-2-chair/specs/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "tienda"
+    nombre: "Herman Miller Store Mirra 2 Chair"
+    url: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/mirra-2-chair/1453.html"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "BTOD Herman Miller Mirra 2 review"
+    url: "https://www.btod.com/blog/herman-miller-mirra-2-review/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "El soporte lumbar ajustable es opcional, no viene en todas las configuraciones."
+  - "El respaldo de polímero TriFlex no convence a quien busca malla tejida tradicional."
+  - "Precio claramente premium frente a sillas de gama media."
+alternativas:
+  - slug: "herman-miller-aeron"
+    motivo: "Misma marca con malla 8Z Pellicle y soporte sacrolumbar PostureFit SL."
+  - slug: "herman-miller-sayl"
+    motivo: "Herman Miller más accesible si no necesitas tantos ajustes."
+  - slug: "steelcase-leap-v2"
+    motivo: "Respaldo tapizado y muchos ajustes si prefieres no usar polímero ni malla."
+comunidad: "Reseñas especializadas (BTOD) y consenso de usuarios la sitúan como una de las Herman Miller más versátiles por su respaldo dinámico y su profundidad de asiento regulable. La crítica más repetida es de gusto: el respaldo de polímero no es para todos y quien espera malla clásica puede sentirse decepcionado."
+paraQuienSi:
+  - "Usuarios que se mueven mucho y quieren un respaldo que siga el cuerpo"
+  - "Quien valora profundidad de asiento regulable de serie y reposabrazos totalmente ajustables"
+  - "Quien busca durabilidad y garantía de 12 años de Herman Miller"
+paraQuienNo:
+  - "Quien prefiere malla tejida clásica o asiento muy acolchado"
+  - "Presupuestos por debajo de la gama premium"
+  - "Quien quiere reposacabezas integrado"
+puntosFuertes:
+  - "Respaldo TriFlex de polímero que se flexiona por zonas con el cuerpo"
+  - "Basculación Harmonic 2 para movimiento natural y equilibrado"
+  - "Profundidad de asiento regulable de serie"
+  - "Reposabrazos totalmente ajustables (altura 6-11,5 pulgadas)"
+  - "Garantía de 12 años, 3 turnos"
+  - "Soporta hasta 159 kg"
+puntosDebiles:
+  - "Lumbar ajustable opcional, no en todas las configuraciones"
+  - "El respaldo de polímero divide frente a la malla tejida"
+  - "Precio premium"
+fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/mirra-2-chair/specs) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/mirra-2-chair/1453.html) + btod.com/blog/herman-miller-mirra-2-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: 159
+  alturaAsientoMinCm: 38
+  alturaAsientoMaxCm: 56
+  anchoCm: 67
+  fondoCm: 67
+  mecanismo: "Harmonic 2 Tilt"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: 19
+  garantiaAnios: 12
+  anchoAsientoCm: 49
+  profundidadAsientoMinCm: 41
+  profundidadAsientoMaxCm: 46
+  reposacabezas: "ninguno"

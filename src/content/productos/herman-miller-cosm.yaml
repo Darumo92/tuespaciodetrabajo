@@ -1,0 +1,103 @@
+tipo: "silla"
+nombre: "Herman Miller Cosm"
+marca: "Herman Miller"
+imagen: ""
+imagenAlt: "Silla ergonómica Herman Miller Cosm con basculación Auto-Harmonic"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 7.0
+  materiales: 9.0
+  comodidad: 9.0
+  calidadPrecio: 7.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/cosm-chair/2515454.html"
+idealPara: "Quien quiere sentarse y olvidarse de los ajustes: basculación automática y suspensión que se adapta sola al cuerpo"
+veredicto: "La Cosm apuesta por la sencillez: su basculación Auto-Harmonic y la suspensión Intercept se ajustan solas al peso del usuario, dando una sensación de ligereza muy comentada. A cambio renuncia a ajustes manuales como el lumbar regulable, así que quien quiera control fino se sentirá limitado pese al precio premium."
+resumenCompra:
+  mejorPara: "Quien prioriza comodidad inmediata sin tocar palancas y valora el diseño y los reposabrazos Leaf."
+  evitarSi: "Necesitas lumbar regulable manual o el máximo de ajustes individuales para tu postura."
+  alternativaDirecta: "Herman Miller Aeron si quieres soporte lumbar y sacro diferenciado y ajustable."
+  decisionRapida: "La elegiría por su comodidad sin configuración y su estética, asumiendo que renuncias a ajustes manuales finos."
+metodologia:
+  - "Se han contrastado las specs oficiales de Herman Miller y de su tienda con la reseña de BTOD citada en fuenteSpecs."
+  - "La nota pondera la basculación Auto-Harmonic, la suspensión Intercept y la comodidad inmediata sin ajustes."
+  - "Se penaliza la falta de lumbar regulable manual y de profundidad de asiento ajustable frente al precio premium."
+scoreRationale:
+  ergonomia: "La basculación Auto-Harmonic adapta el soporte al peso y postura, aunque sin lumbar ajustable manual."
+  ajustabilidad: "Filosofía de pocos ajustes manuales: pierde puntos frente a sillas premium muy regulables."
+  materiales: "Suspensión Intercept transpirable y construcción Herman Miller con garantía de 12 años."
+  comodidad: "Sensación de ligereza muy elogiada, cómoda desde el primer momento."
+  calidadPrecio: "Comodidad y materiales premium, pero los pocos ajustes la penalizan frente a su precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Herman Miller Cosm specs"
+    url: "https://www.hermanmiller.com/products/seating/office-chairs/cosm-chairs/specs/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "tienda"
+    nombre: "Herman Miller Store Cosm High Back Chair"
+    url: "https://store.hermanmiller.com/office-chairs-ergonomic-chairs/cosm-chair/2515454.html"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "BTOD Herman Miller High-Back Cosm review"
+    url: "https://www.btod.com/blog/herman-miller-cosm-review/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "No tiene soporte lumbar regulable manual: la sujeción depende de la basculación automática."
+  - "Sin profundidad de asiento regulable."
+  - "Filosofía de pocos ajustes individuales pese al precio premium."
+alternativas:
+  - slug: "herman-miller-aeron"
+    motivo: "Misma marca con soporte sacrolumbar PostureFit SL ajustable."
+  - slug: "herman-miller-mirra-2"
+    motivo: "Más ajustes manuales y profundidad de asiento regulable dentro del catálogo Herman Miller."
+  - slug: "humanscale-diffrient-smart"
+    motivo: "Otra silla de soporte automático sin palancas, bastante más económica."
+comunidad: "Reseñas especializadas (BTOD) y comentarios de usuarios destacan la sensación de ligereza y la comodidad inmediata de la Cosm, además de los reposabrazos Leaf. La crítica más repetida: al no tener lumbar regulable ni profundidad de asiento ajustable, quien busca control fino puede sentirla limitada para lo que cuesta."
+paraQuienSi:
+  - "Quien quiere sentarse y trabajar sin ajustar nada"
+  - "Usuarios que valoran comodidad inmediata, diseño y reposabrazos Leaf"
+  - "Quien busca suspensión transpirable de calidad premium con garantía de 12 años"
+paraQuienNo:
+  - "Quien necesita lumbar regulable manual"
+  - "Usuarios que quieren profundidad de asiento ajustable"
+  - "Quien busca el máximo de ajustes individuales por euro"
+puntosFuertes:
+  - "Basculación Auto-Harmonic que se ajusta sola al peso y la postura"
+  - "Suspensión Intercept transpirable y de tacto neutro"
+  - "Comodidad inmediata muy elogiada, sin necesidad de configurar"
+  - "Reposabrazos Leaf de diseño envolvente"
+  - "Garantía de 12 años, 3 turnos"
+  - "Disponible en respaldo bajo, medio y alto"
+puntosDebiles:
+  - "Sin lumbar regulable manual"
+  - "Sin profundidad de asiento regulable"
+  - "Pocos ajustes individuales para su precio premium"
+fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/cosm-chairs/specs) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/cosm-chair/2515454.html) + btod.com/blog/herman-miller-cosm-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "abatibles"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 159
+  alturaAsientoMinCm: 38
+  alturaAsientoMaxCm: 54
+  anchoCm: 68
+  fondoCm: 68
+  mecanismo: "Auto-Harmonic Tilt"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: null
+  garantiaAnios: 12
+  anchoAsientoCm: 52
+  profundidadAsientoMinCm: 40
+  profundidadAsientoMaxCm: 40
+  reposacabezas: "ninguno"

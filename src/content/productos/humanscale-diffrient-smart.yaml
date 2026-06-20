@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "Humanscale Diffrient Smart"
+marca: "Humanscale"
+imagen: ""
+imagenAlt: "Silla ergonómica Humanscale Diffrient Smart con malla form-sensing"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 7.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.humanscale.com/products/seating/diffrient-smart-task-office-chair/custom"
+idealPara: "Quien quiere una silla que se ajusta sola al cuerpo, sin palancas de tensión ni lumbar manual"
+veredicto: "La Diffrient Smart lleva al extremo la filosofía de Humanscale: una malla form-sensing que se amolda al cuerpo y una reclinación activada por el peso, sin palancas de tensión ni lumbar manual. Es comodísima de usar y casi no hay nada que configurar; su contrapartida es que quien quiere control fino de cada parámetro se encontrará con muy pocos ajustes para el precio."
+resumenCompra:
+  mejorPara: "Quien quiere comodidad sin configurar nada y valora la malla que se adapta al cuerpo y la garantía de 15 años."
+  evitarSi: "Necesitas lumbar regulable manual o muchos ajustes individuales, o el respaldo bajo no te basta."
+  alternativaDirecta: "Humanscale Freedom si quieres reposacabezas y el mismo enfoque sin palancas de la marca."
+  decisionRapida: "La elegiría por su comodidad sin ajustes y su garantía larga, asumiendo que renuncias a regulación fina."
+metodologia:
+  - "Se han contrastado las specs de la web oficial de Humanscale con la reseña de BTOD citada en fuenteSpecs."
+  - "La nota pondera la malla form-sensing, la reclinación por peso y la garantía de 15 años."
+  - "Se penaliza la ausencia de lumbar regulable manual y de ajustes individuales frente al precio."
+scoreRationale:
+  ergonomia: "La malla form-sensing y el soporte lumbar continuo automático funcionan bien para la mayoría de cuerpos."
+  ajustabilidad: "Filosofía de cero palancas: muy pocos ajustes manuales, lo que penaliza la nota."
+  materiales: "Malla tri-panel de calidad, soporte de aluminio y construcción duradera de Humanscale."
+  comodidad: "Muy cómoda desde el primer momento gracias al ajuste automático por peso."
+  calidadPrecio: "Comodidad y garantía excelentes, pero la falta de ajustes la penaliza para su precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Humanscale Diffrient Smart chair"
+    url: "https://www.humanscale.com/products/seating/diffrient-smart-task-office-chair/custom"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "BTOD Humanscale Diffrient Smart review"
+    url: "https://www.btod.com/blog/diffrient-smart-review/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "No tiene soporte lumbar regulable manual: depende de la malla form-sensing."
+  - "Muy pocos ajustes individuales por su filosofía de cero palancas."
+  - "Respaldo de altura media, sin reposacabezas en esta versión."
+alternativas:
+  - slug: "humanscale-freedom"
+    motivo: "Misma marca y filosofía sin palancas, con reposacabezas opcional."
+  - slug: "herman-miller-cosm"
+    motivo: "Otra silla de soporte automático sin ajustes manuales, de gama premium."
+  - slug: "herman-miller-aeron"
+    motivo: "Malla con soporte sacrolumbar PostureFit SL si prefieres ajuste manual."
+comunidad: "Reseñas especializadas (BTOD) y usuarios destacan lo cómoda que resulta la Diffrient Smart sin tener que tocar nada: la malla se adapta al cuerpo y la reclinación responde al peso. La crítica recurrente es que ese mismo enfoque deja sin lumbar manual ni ajustes finos, algo que no todo el mundo acepta a este precio."
+paraQuienSi:
+  - "Quien quiere sentarse y trabajar sin configurar nada"
+  - "Usuarios que valoran malla transpirable que se adapta al cuerpo"
+  - "Quien busca garantía muy larga (15 años) y soporta mucho peso"
+paraQuienNo:
+  - "Quien necesita lumbar regulable manual"
+  - "Usuarios que quieren muchos ajustes individuales"
+  - "Quien necesita reposacabezas o un respaldo más alto"
+puntosFuertes:
+  - "Malla tri-panel form-sensing que se adapta al cuerpo de cada usuario"
+  - "Reclinación activada por el peso, sin palancas de tensión"
+  - "18 grados de reclinación más 8 de inclinación del respaldo"
+  - "Soporta hasta 181 kg"
+  - "Garantía de 15 años, uso 24/7"
+  - "Reposabrazos disponibles fijos, ajustables o 4D"
+puntosDebiles:
+  - "Sin lumbar regulable manual"
+  - "Muy pocos ajustes individuales"
+  - "Sin reposacabezas en esta versión"
+fuenteSpecs: "Web oficial Humanscale (humanscale.com/products/seating/diffrient-smart-task-office-chair/custom) + btod.com/blog/diffrient-smart-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 18
+  pesoMaxKg: 181
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 58
+  anchoCm: 67
+  fondoCm: 66
+  mecanismo: "reclinacion activada por peso"
+  baseMaterial: "aluminio"
+  certificacionBifma: null
+  pesoProductoKg: 15
+  garantiaAnios: 15
+  reposacabezas: "ninguno"
