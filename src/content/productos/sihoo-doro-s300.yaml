@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "SIHOO Doro S300"
 marca: "SIHOO"
-imagen: ""
+imagen: "/img/productos/sihoo-doro-s300.jpg"
 imagenAlt: "Silla ergonómica SIHOO Doro S300 respaldo alto de malla"
 tramoPrecio: 2
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Ticova Ergonomic Office Chair"
 marca: "Ticova"
-imagen: ""
+imagen: "/img/productos/ticova-ergonomic.jpg"
 imagenAlt: "Silla ergonómica Ticova respaldo alto de malla con reposacabezas"
 tramoPrecio: 2
 precioMin: null

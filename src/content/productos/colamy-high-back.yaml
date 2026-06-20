@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "COLAMY ATLAS High Back"
 marca: "COLAMY"
-imagen: ""
+imagen: "/img/productos/colamy-high-back.webp"
 imagenAlt: "Silla ergonómica COLAMY ATLAS respaldo alto de malla con reposacabezas"
 tramoPrecio: 2
 precioMin: null

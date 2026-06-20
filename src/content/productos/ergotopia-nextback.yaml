@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Ergotopia NextBack"
 marca: "Ergotopia"
-imagen: ""
+imagen: "/img/productos/ergotopia-nextback.jpg"
 imagenAlt: "Silla ergonómica Ergotopia NextBack respaldo de malla con reposacabezas"
 tramoPrecio: 2
 precioMin: null
