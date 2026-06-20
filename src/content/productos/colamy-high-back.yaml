@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "COLAMY ATLAS High Back"
+marca: "COLAMY"
+imagen: ""
+imagenAlt: "Silla ergonómica COLAMY ATLAS respaldo alto de malla con reposacabezas"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.5
+  materiales: 8.0
+  comodidad: 8.0
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "COLAMY ATLAS silla ergonómica respaldo alto malla"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://colamyhome.com/products/colamy-atlas-ergonomic-high-back-mesh-office-chair-bifma-certified"
+idealPara: "Quien quiere respaldo alto de malla con reposabrazos 4D y certificación BIFMA a buen precio"
+veredicto: "La ATLAS de COLAMY es una silla de respaldo alto de malla con una dotación de ajustes notable para su precio: reposabrazos 4D, reposacabezas regulable que además rota, asiento con profundidad deslizante y cuatro posiciones de bloqueo de reclinación. Suma base de aluminio, certificación BIFMA y tres años de garantía. Es una compra muy equilibrada de gama media, con la malla del tejido tratada bajo estándar OEKO-TEX. Su capacidad de carga, de unos 136 kg, queda en la media."
+resumenCompra:
+  mejorPara: "Quien busca respaldo alto de malla, reposabrazos 4D y certificación BIFMA sin pagar precio premium."
+  evitarSi: "Necesitas una capacidad de carga muy elevada o un asiento acolchado de espuma."
+  alternativaDirecta: "Hbada E3 Pro si quieres todavía más ajustes de lumbar y reposacabezas."
+  decisionRapida: "Una gama media muy completa y certificada, fácil de recomendar para teletrabajo."
+metodologia:
+  - "Specs tomadas de la ficha oficial de COLAMY para el modelo ATLAS."
+  - "La nota prioriza los reposabrazos 4D, el asiento deslizante, la base de aluminio y la certificación BIFMA."
+  - "Se penaliza una capacidad de carga en la media y la ausencia de soporte lumbar dinámico."
+scoreRationale:
+  ergonomia: "Respaldo alto de malla con lumbar regulable y reposacabezas que rota cubren bien la postura."
+  ajustabilidad: "Reposabrazos 4D, profundidad de asiento deslizante y cuatro posiciones de reclinación dan buen margen."
+  materiales: "Malla con tejido elástico OEKO-TEX y base de aluminio elevan la calidad percibida."
+  comodidad: "Respaldo alto y reposacabezas orientable favorecen jornadas largas frente al ordenador."
+  calidadPrecio: "Dotación completa, base de aluminio y BIFMA a precio de gama media la hacen muy competitiva."
+fuentes:
+  - tipo: "oficial"
+    nombre: "COLAMY ATLAS Ergonomic High Back Mesh Office Chair (web oficial)"
+    url: "https://colamyhome.com/products/colamy-atlas-ergonomic-high-back-mesh-office-chair-bifma-certified"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "COLAMY ATLAS-01 Executive Mesh (web oficial)"
+    url: "https://colamyhome.com/products/colamy-atlas-01-executive-mesh-ergonomic-office-chair-bifma-certified"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Capacidad de carga de unos 136 kg, en la media de la categoría."
+  - "Lumbar regulable pero no dinámica autoajustable."
+  - "Las fuentes oficiales no documentan certificación EN 1335."
+alternativas:
+  - slug: "hbada-e3"
+    motivo: "Más ajustes de lumbar y reposacabezas si quieres afinar al detalle."
+  - slug: "nouhaus-ergo3d"
+    motivo: "Malla integral con lumbar dinámica de doble pieza a precio similar."
+comunidad: "El consenso valora la ATLAS como una silla de malla muy completa para su precio, con buena base de aluminio, reposabrazos 4D y la tranquilidad de la certificación BIFMA. Los matices habituales son que la lumbar es regulable pero no autoajustable y que la capacidad de carga se queda en la media."
+paraQuienSi:
+  - "Quien quiere respaldo alto de malla con reposabrazos 4D"
+  - "Usuarios que valoran asiento deslizante y reposacabezas que rota"
+  - "Quien da peso a la certificación BIFMA y a la base de aluminio"
+paraQuienNo:
+  - "Quien necesita una capacidad de carga muy elevada"
+  - "Quien busca lumbar dinámica autoajustable"
+  - "Quien prefiere un asiento acolchado de espuma"
+puntosFuertes:
+  - "Respaldo alto de malla con reposabrazos 4D"
+  - "Reposacabezas regulable que además rota"
+  - "Asiento con profundidad deslizante"
+  - "Base de aluminio y certificación BIFMA"
+  - "Cuatro posiciones de bloqueo de reclinación"
+puntosDebiles:
+  - "Lumbar regulable pero no dinámica autoajustable"
+  - "Capacidad de carga en la media (unos 136 kg)"
+fuenteSpecs: "Web oficial COLAMY (colamyhome.com/products/colamy-atlas-ergonomic-high-back-mesh-office-chair-bifma-certified) + colamyhome.com/products/colamy-atlas-01-executive-mesh-ergonomic-office-chair-bifma-certified"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 132
+  pesoMaxKg: 136
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 53
+  anchoCm: 71
+  fondoCm: 66
+  mecanismo: "inclinacion-bloqueable-multiposicion"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 22.5
+  garantiaAnios: 3
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

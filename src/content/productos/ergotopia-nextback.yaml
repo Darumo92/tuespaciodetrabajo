@@ -1,0 +1,97 @@
+tipo: "silla"
+nombre: "Ergotopia NextBack"
+marca: "Ergotopia"
+imagen: ""
+imagenAlt: "Silla ergonómica Ergotopia NextBack respaldo de malla con reposacabezas"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.0
+  materiales: 8.0
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "Ergotopia NextBack silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://info.ergotopia.de/anleitungen/Datenblatt-NextBack.pdf"
+idealPara: "Quien busca una silla alemana contra el dolor de espalda con mecanismo sincronizado"
+veredicto: "La NextBack es la propuesta de la marca alemana Ergotopia contra el dolor de espalda: mecanismo sincronizado que acompaña la inclinación de respaldo y asiento hasta 35 grados, lordosis integrada regulable en altura, asiento ajustable en altura y profundidad, y reposacabezas orientable. La fabricación es cuidada y la garantía generosa, de cinco años en la estructura. Su límite es una capacidad de carga de 125 kg y un precio de gama media que no compite con las opciones más baratas."
+resumenCompra:
+  mejorPara: "Quien quiere una silla bien construida contra el dolor de espalda con mecanismo sincronizado."
+  evitarSi: "Pesas por encima de 125 kg o buscas el precio mínimo."
+  alternativaDirecta: "FlexiSpot C7 si prefieres una lumbar que se fije a una altura o se adapte sola."
+  decisionRapida: "Buena elección de gama media si valoras el respaldo sincronizado y la garantía larga."
+metodologia:
+  - "Specs tomadas de la ficha técnica oficial de Ergotopia (datasheet en PDF)."
+  - "La nota prioriza el mecanismo sincronizado, la lordosis regulable y la garantía larga."
+  - "Se penaliza la capacidad de carga de 125 kg y el precio de gama media."
+scoreRationale:
+  ergonomia: "Mecanismo sincronizado hasta 35 grados y lordosis integrada regulable cuidan la postura."
+  ajustabilidad: "Altura y profundidad de asiento, reposabrazos en altura, ancho y ángulo y reposacabezas regulable."
+  materiales: "Respaldo de malla transpirable y fabricación alemana cuidada elevan la percepción de calidad."
+  comodidad: "El respaldo sincronizado acompaña el movimiento y favorece jornadas largas."
+  calidadPrecio: "La garantía de cinco años en estructura compensa un precio de gama media."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Ergotopia NextBack (ficha técnica oficial PDF)"
+    url: "https://info.ergotopia.de/anleitungen/Datenblatt-NextBack.pdf"
+    fechaConsulta: "2026-06-20"
+  - tipo: "manual"
+    nombre: "Ergotopia NextBack (manual oficial PDF)"
+    url: "https://info.ergotopia.de/anleitungen/nextback.pdf"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Capacidad de carga de 125 kg en la versión estándar."
+  - "Disponible en un único color (negro) según la ficha oficial."
+  - "Las fuentes oficiales no documentan certificación EN 1335 ni BIFMA en la ficha técnica."
+alternativas:
+  - slug: "flexispot-c7"
+    motivo: "Lumbar regulable o autoadaptable y garantía de diez años."
+  - slug: "sihoo-doro-c300"
+    motivo: "Lumbar dinámica autoajustable y base de aluminio a precio similar."
+comunidad: "En medios y tests alemanes la NextBack aparece bien valorada como silla contra el dolor de espalda, con elogios al mecanismo sincronizado y a la fabricación. Los avisos habituales son la capacidad de carga de 125 kg y un precio que la mantiene en la gama media."
+paraQuienSi:
+  - "Quien busca una silla bien construida contra el dolor de espalda"
+  - "Usuarios que valoran un mecanismo sincronizado hasta 35 grados"
+  - "Quien quiere lordosis regulable, asiento ajustable y reposacabezas orientable"
+paraQuienNo:
+  - "Personas por encima de 125 kg"
+  - "Presupuesto de silla de entrada"
+  - "Quien necesita certificación europea EN 1335 documentada"
+puntosFuertes:
+  - "Mecanismo sincronizado que acompaña la inclinación hasta 35 grados"
+  - "Lordosis integrada regulable en altura"
+  - "Asiento ajustable en altura y profundidad"
+  - "Reposacabezas regulable en altura y ángulo"
+  - "Garantía de cinco años en la estructura"
+puntosDebiles:
+  - "Capacidad de carga limitada a 125 kg"
+  - "Disponible en un único color"
+fuenteSpecs: "Ficha técnica oficial Ergotopia (info.ergotopia.de/anleitungen/Datenblatt-NextBack.pdf) + manual oficial (info.ergotopia.de/anleitungen/nextback.pdf)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 35
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 43
+  alturaAsientoMaxCm: 53
+  anchoCm: 69
+  fondoCm: 70
+  mecanismo: "sincronizado"
+  baseMaterial: null
+  certificacionBifma: null
+  pesoProductoKg: 23
+  garantiaAnios: 5
+  alturaRespaldoCm: 48
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

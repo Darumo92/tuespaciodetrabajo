@@ -1,0 +1,101 @@
+tipo: "silla"
+nombre: "Hbada E3 Pro"
+marca: "Hbada"
+imagen: ""
+imagenAlt: "Silla ergonómica Hbada E3 Pro respaldo de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 9.0
+  materiales: 8.0
+  comodidad: 8.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Hbada E3 Pro silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://hbada.com/products/hbada-e3-pro-ergonomic-office-chair"
+idealPara: "Quien busca el máximo de ajustes en gama media: lumbar de tres zonas y reposacabezas 4D"
+veredicto: "La E3 Pro es de las sillas más ajustables que encuentras en la gama media: lumbar adaptativa de tres zonas con seis niveles de altura, reposacabezas 4D, reposabrazos muy móviles y cinco posiciones de reclinación hasta 140 grados. Suma cinco años de garantía y un buen surtido de certificaciones. Para personas de 1,55 a 1,95 m que quieren afinar cada apoyo sin pagar precio premium, es una compra muy completa; su contra es una base de acero en lugar de aluminio y una malla que cuesta unas semanas en asentarse."
+resumenCompra:
+  mejorPara: "Quien quiere afinar lumbar, reposacabezas y reposabrazos al detalle sin entrar en precio premium."
+  evitarSi: "Buscas base de aluminio o el precio mínimo posible."
+  alternativaDirecta: "SIHOO Doro C300 si prefieres una lumbar dinámica que se ajusta sola sin tanto reglaje manual."
+  decisionRapida: "Si te gusta personalizar cada apoyo, es una de las gama media más versátiles."
+metodologia:
+  - "Specs tomadas de la web oficial Hbada para la E3 Pro y contrastadas con su tienda europea."
+  - "La nota prioriza la lumbar de tres zonas, el reposacabezas 4D y la amplitud de ajustes."
+  - "Se penaliza la base de acero frente a aluminio y la malla firme al inicio."
+scoreRationale:
+  ergonomia: "Lumbar adaptativa de tres zonas y reposacabezas 4D dan un apoyo muy completo de espalda y cervicales."
+  ajustabilidad: "Lumbar en seis niveles, reposacabezas 4D, reposabrazos muy móviles y profundidad de asiento regulable."
+  materiales: "Malla CloudMesh y estructura sólida, aunque la base es de acero y no de aluminio."
+  comodidad: "Cinco posiciones de reclinación hasta 140 grados y asiento amplio para jornadas largas."
+  calidadPrecio: "Cantidad de ajustes y cinco años de garantía a precio de gama media la hacen muy competitiva."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Hbada E3 Pro (web oficial)"
+    url: "https://hbada.com/products/hbada-e3-pro-ergonomic-office-chair"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "Hbada E3 Pro (tienda oficial Europa)"
+    url: "https://www.hbada.eu/products/hbada-e3-pro-ergonomic-office-chair-white"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Base de acero en lugar de aluminio."
+  - "La malla CloudMesh se nota firme las primeras semanas según el consenso."
+  - "Las fuentes oficiales no documentan certificación EN 1335."
+alternativas:
+  - slug: "sihoo-doro-c300"
+    motivo: "Lumbar dinámica autoajustable y base de aluminio a precio similar."
+  - slug: "flexispot-c7"
+    motivo: "Lumbar regulable y garantía de diez años con menos reglajes manuales."
+comunidad: "El consenso en reseñas y foros la sitúa entre las sillas más completas en ajustes de la gama media, con elogios al reposacabezas 4D y a la lumbar de tres zonas. La crítica más repetida es que la base es de acero y que la malla tarda unas semanas en perder firmeza inicial."
+paraQuienSi:
+  - "Personas de 1,55 a 1,95 m que quieren afinar cada apoyo"
+  - "Quien da valor a un reposacabezas 4D y a la lumbar de tres zonas"
+  - "Usuarios que buscan muchos ajustes con cinco años de garantía"
+paraQuienNo:
+  - "Quien prefiere base de aluminio"
+  - "Presupuesto de silla de entrada"
+  - "Quien quiere una lumbar que se ajuste sola sin reglaje manual"
+puntosFuertes:
+  - "Lumbar adaptativa de tres zonas con seis niveles de altura"
+  - "Reposacabezas 4D de doble eje"
+  - "Reposabrazos muy móviles y profundidad de asiento regulable"
+  - "Cinco posiciones de reclinación hasta 140 grados"
+  - "Cinco años de garantía"
+puntosDebiles:
+  - "Base de acero en lugar de aluminio"
+  - "Malla firme las primeras semanas"
+fuenteSpecs: "Web oficial Hbada (hbada.com/products/hbada-e3-pro-ergonomic-office-chair) + tienda oficial hbada.eu/products/hbada-e3-pro-ergonomic-office-chair-white"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 140
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 46
+  alturaAsientoMaxCm: 52
+  anchoCm: 70
+  fondoCm: 70
+  mecanismo: "inclinacion-bloqueable-multiposicion"
+  baseMaterial: "acero"
+  certificacionBifma: true
+  pesoProductoKg: 31
+  garantiaAnios: 5
+  alturaRecomendadaMinCm: 155
+  alturaRecomendadaMaxCm: 195
+  anchoAsientoCm: 51.5
+  profundidadAsientoMinCm: 45
+  profundidadAsientoMaxCm: 50
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

@@ -1,0 +1,105 @@
+tipo: "silla"
+nombre: "SIHOO Doro S300"
+marca: "SIHOO"
+imagen: ""
+imagenAlt: "Silla ergonómica SIHOO Doro S300 respaldo alto de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 9.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "SIHOO Doro S300 silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.sihoo.com/en/doro-s300/"
+idealPara: "Personas altas que quieren reclinación tipo cero gravedad y reposabrazos 6D"
+veredicto: "La Doro S300 es la versión grande y más ajustable de la familia Doro: respaldo alto regulable en cinco niveles, doble lumbar dinámica y reposabrazos 6D que pocas sillas de su precio ofrecen. Pensada para usuarios de hasta 1,90 m, su mecanismo de reclinación suave la acerca a la sensación de ingravidez sin saltar a la gama premium. El pero, como en casi toda la familia, es que no esconde un precio bajo."
+resumenCompra:
+  mejorPara: "Quien mide entre 1,70 y 1,90 m y busca respaldo alto, doble lumbar y reposabrazos 6D."
+  evitarSi: "Tu presupuesto es de silla de entrada o eres una persona de complexión menuda y baja."
+  alternativaDirecta: "SIHOO Doro C300 si no necesitas el respaldo extra alto ni los reposabrazos 6D."
+  decisionRapida: "Es la Doro que elegiría una persona alta que pasa muchas horas sentada y quiere reclinar a fondo."
+metodologia:
+  - "Specs tomadas de la ficha técnica oficial de SIHOO y la tienda oficial sihoooffice.com."
+  - "La nota prioriza la doble lumbar dinámica, los reposabrazos 6D y la adecuación a usuarios altos."
+  - "Se penaliza el precio dentro de la gama media y el peso elevado del conjunto."
+scoreRationale:
+  ergonomia: "Doble lumbar dinámica y respaldo alto regulable en cinco niveles cubren bien espalda y cervicales."
+  ajustabilidad: "Reposabrazos 6D, altura, profundidad y reclinación variable colocan la ajustabilidad muy arriba."
+  materiales: "Malla de terciopelo italiano con TPEE de DuPont, estructura de aluminio y base de aluminio."
+  comodidad: "Asiento con suspensión y reclinación suave pensada para jornadas largas."
+  calidadPrecio: "Competitiva frente a premium, pero claramente por encima de las sillas de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SIHOO Doro S300 (ficha técnica oficial)"
+    url: "https://www.sihoo.com/en/doro-s300/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "oficial"
+    nombre: "SIHOO Doro S300 (tienda oficial US)"
+    url: "https://sihoooffice.com/products/sihoo-doro-s300-gravity-defying-ergonomic-chair"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "GBAtemp SIHOO Doro S300 review"
+    url: "https://gbatemp.net/review/sihoo-doro-s300-ergonomic-chair.2535/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Precio por encima de las sillas de entrada de la marca."
+  - "Conjunto pesado (en torno a 26 kg) que complica el montaje en solitario."
+  - "Las fuentes oficiales no detallan certificación EN 1335 para el mercado europeo."
+alternativas:
+  - slug: "sihoo-doro-c300"
+    motivo: "Misma familia y lumbar dinámica, más compacta y algo más asequible."
+  - slug: "flexispot-c7"
+    motivo: "Reposabrazos 4D y reposacabezas también orientada a personas altas."
+comunidad: "Las reseñas especializadas la sitúan como una de las opciones más sólidas para usuarios altos por debajo de la gama premium, destacando la reclinación suave y los reposabrazos 6D. El consenso repite dos avisos: pesa bastante y su precio la aleja de las sillas baratas con las que a veces se compara."
+paraQuienSi:
+  - "Personas de 1,70 a 1,90 m que necesitan respaldo alto real"
+  - "Quien quiere reclinar a fondo con sensación de ingravidez"
+  - "Usuarios que valoran reposabrazos 6D y doble lumbar dinámica"
+paraQuienNo:
+  - "Presupuesto de silla de entrada"
+  - "Personas de complexión baja o menuda"
+  - "Quien busca el conjunto más ligero posible para montar solo"
+puntosFuertes:
+  - "Doble soporte lumbar dinámico con ángulo regulable"
+  - "Reposabrazos 6D coordinados"
+  - "Respaldo alto ajustable en cinco niveles para cervicales"
+  - "Estructura y base de aluminio"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Precio dentro de la gama media-alta"
+  - "Peso elevado del conjunto"
+fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/doro-s300/) + tienda oficial sihoooffice.com/products/sihoo-doro-s300-gravity-defying-ergonomic-chair + reseña gbatemp.net"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 49
+  alturaAsientoMaxCm: 57
+  anchoCm: 77
+  fondoCm: 76
+  mecanismo: "reclinacion-tipo-cero-gravedad"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 26
+  garantiaAnios: 3
+  alturaRecomendadaMinCm: 150
+  alturaRecomendadaMaxCm: 190
+  anchoAsientoCm: 51.5
+  profundidadAsientoMinCm: 40
+  profundidadAsientoMaxCm: 47
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

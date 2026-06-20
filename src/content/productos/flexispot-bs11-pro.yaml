@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "FlexiSpot BS11 Pro"
+marca: "FlexiSpot"
+imagen: ""
+imagenAlt: "Silla ergonómica FlexiSpot BS11 Pro respaldo de malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 7.5
+  comodidad: 8.0
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "FlexiSpot BS11 Pro silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://flexispot.co.uk/office-chair-bs11pro.html"
+idealPara: "Quien quiere lumbar dinámica que se adapta sola sin manipular un cojín"
+veredicto: "La BS11 Pro apuesta por una lumbar dinámica que se ajusta sola a la curva de la espalda en lugar de un cojín que haya que colocar a mano. Suma respaldo de malla elástica, reposabrazos regulables en altura, profundidad y rotación, y reposacabezas ajustable, todo a un precio de gama media. Es una opción sensata para teletrabajo, aunque las fichas oficiales y las reseñas no coinciden del todo en la capacidad máxima de carga, así que conviene confirmarlo antes de comprar si tu peso está en el límite."
+resumenCompra:
+  mejorPara: "Quien prefiere una lumbar que se adapta sola y no quiere lidiar con cojines lumbares."
+  evitarSi: "Necesitas un dato de carga máxima totalmente claro o buscas base de aluminio."
+  alternativaDirecta: "FlexiSpot C7 si quieres lumbar regulable a una altura fija y diez años de garantía."
+  decisionRapida: "Buena compra de gama media si te convence la lumbar autoadaptable y verificas la carga máxima."
+metodologia:
+  - "Specs tomadas de la web oficial FlexiSpot UK y de reseñas con tabla técnica detallada."
+  - "La nota valora la lumbar dinámica, la malla elástica y la regulación de reposabrazos y reposacabezas."
+  - "Se penaliza la base de nylon y la falta de un dato de carga máxima coherente entre fuentes."
+scoreRationale:
+  ergonomia: "Lumbar dinámica autoadaptable y malla elástica dan buen apoyo sin intervención manual."
+  ajustabilidad: "Reposabrazos en altura, profundidad y rotación más reposacabezas regulable cubren lo esencial."
+  materiales: "Malla elástica de nylon correcta, pero base de nylon en lugar de aluminio."
+  comodidad: "El respaldo se adapta a la espalda y el reposacabezas alivia las cervicales en jornadas largas."
+  calidadPrecio: "Equilibrada para gama media, con la lumbar dinámica como principal argumento."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FlexiSpot BS11 Pro (web oficial UK)"
+    url: "https://flexispot.co.uk/office-chair-bs11pro.html"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Basic Tutorials FlexiSpot BS11 Pro test"
+    url: "https://basic-tutorials.com/reviews/gadget-reviews/flexispot-backsupport-bs11-pro/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "PCGamesN FlexiSpot BS11 Pro review"
+    url: "https://www.pcgamesn.com/flexispot-bs11-pro-review"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Las fuentes no coinciden en la capacidad máxima de carga, así que se deja sin confirmar."
+  - "Base de nylon en lugar de aluminio."
+  - "Las fichas oficiales no documentan certificación BIFMA ni EN 1335."
+alternativas:
+  - slug: "flexispot-c7"
+    motivo: "Lumbar regulable a altura fija o autoadaptable y garantía de diez años."
+  - slug: "sihoo-m18"
+    motivo: "Más económica si te basta con lumbar ajustable y malla de respaldo alto."
+comunidad: "Las reseñas en medios europeos la describen como una silla de malla cómoda para teletrabajo cuyo punto fuerte es la lumbar que se adapta sola a la espalda. Aparecen avisos sobre cifras de carga máxima poco creíbles en algunas fichas comerciales, motivo por el que ese dato se deja sin confirmar aquí."
+paraQuienSi:
+  - "Quien prefiere una lumbar dinámica que se ajusta sola"
+  - "Teletrabajadores que quieren malla elástica y reposacabezas regulable"
+  - "Usuarios que valoran reposabrazos regulables en altura, profundidad y rotación"
+paraQuienNo:
+  - "Quien necesita un dato de carga máxima totalmente verificado"
+  - "Quien busca base de aluminio o certificación documentada"
+  - "Presupuesto de silla de entrada"
+puntosFuertes:
+  - "Lumbar dinámica que se adapta sola a la curva de la espalda"
+  - "Respaldo de malla elástica transpirable"
+  - "Reposabrazos regulables en altura, profundidad y rotación"
+  - "Reposacabezas ajustable en altura e inclinación"
+puntosDebiles:
+  - "Capacidad máxima de carga sin confirmar entre fuentes"
+  - "Base de nylon en lugar de aluminio"
+fuenteSpecs: "Web oficial FlexiSpot UK (flexispot.co.uk/office-chair-bs11pro.html) + basic-tutorials.com/reviews/gadget-reviews/flexispot-backsupport-bs11-pro + pcgamesn.com/flexispot-bs11-pro-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: null
+  pesoMaxKg: null
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 54
+  anchoCm: 52
+  fondoCm: 52
+  mecanismo: "inclinacion-con-lumbar-dinamica"
+  baseMaterial: "nylon"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 5
+  anchoAsientoCm: 52
+  profundidadAsientoMinCm: null
+  profundidadAsientoMaxCm: null
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

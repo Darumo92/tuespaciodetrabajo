@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "Nouhaus Ergo3D"
+marca: "Nouhaus"
+imagen: ""
+imagenAlt: "Silla ergonómica Nouhaus Ergo3D respaldo de malla con reposabrazos 4D"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.5
+  materiales: 8.0
+  comodidad: 8.0
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "Nouhaus Ergo3D silla ergonómica"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.nouhaus.com/products/ergo3d"
+idealPara: "Quien quiere malla integral, reposabrazos 4D y base de aluminio en gama media"
+veredicto: "La Ergo3D es una silla de malla integral con reposabrazos 4D, lumbar dinámica de doble pieza y base de aluminio, una combinación poco habitual en su tramo de precio. Monta en unos quince minutos y resulta muy ajustable. Sus puntos flojos son una garantía de un año, una capacidad de carga moderada y que las personas muy altas, por encima de 1,85 m, se quedan algo justas de respaldo."
+resumenCompra:
+  mejorPara: "Quien busca malla integral, reposabrazos 4D y base de aluminio sin pagar precio premium."
+  evitarSi: "Mides más de 1,85 m o necesitas garantía larga y carga elevada."
+  alternativaDirecta: "Ticova si prefieres un asiento de espuma mullida en lugar de malla integral."
+  decisionRapida: "Una gama media muy ajustable y bien construida si tu estatura no es muy alta."
+metodologia:
+  - "Specs tomadas de la web oficial Nouhaus y contrastadas con reseña especializada y ficha de distribuidor."
+  - "La nota valora la malla integral, los reposabrazos 4D y la base de aluminio."
+  - "Se penaliza la garantía de un año, la carga moderada y el ajuste justo para personas muy altas."
+scoreRationale:
+  ergonomia: "Lumbar dinámica de doble pieza y respaldo de malla integral dan buen apoyo a la espalda."
+  ajustabilidad: "Reposabrazos 4D, reposacabezas regulable y reclinación amplia ofrecen mucho margen."
+  materiales: "Malla elástica, base de aluminio y ruedas tipo blade elevan la calidad percibida."
+  comodidad: "Cómoda en jornadas largas, aunque el respaldo se queda justo para personas muy altas."
+  calidadPrecio: "Buena dotación por el precio, lastrada por la garantía corta."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Nouhaus Ergo3D (web oficial)"
+    url: "https://www.nouhaus.com/products/ergo3d"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Chairs Solution Nouhaus Ergo3D review"
+    url: "https://chairssolution.com/nouhaus-ergo3d-review-2025/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "tienda"
+    nombre: "Wayfair Nouhaus Ergo3D (ficha)"
+    url: "https://www.wayfair.com/furniture/pdp/nouhaus-inc-nouhaus-ergo3d-ergonomic-office-chair-lumbar-support-mesh-office-chair-with-4d-adjustable-armrest-adjustable-headrest-and-wheels-mesh-high-back-home-office-desk-chairs-nuha1004.html"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Garantía de un año, corta para la categoría."
+  - "Capacidad de carga de unos 125 kg, moderada frente a rivales que llegan más arriba."
+  - "El respaldo se queda justo para personas por encima de 1,85 m."
+alternativas:
+  - slug: "ticova-ergonomic"
+    motivo: "Asiento de espuma mullida si prefieres prescindir de la malla integral."
+  - slug: "sihoo-doro-c300"
+    motivo: "Lumbar dinámica autoajustable y mejor adecuación a personas altas."
+comunidad: "El consenso la describe como una silla de malla muy ajustable y bien acabada para su precio, con buena base de aluminio y reposabrazos 4D. Las críticas recurrentes son la garantía de un año y que personas por encima de 1,85 m notan el respaldo algo corto."
+paraQuienSi:
+  - "Quien quiere malla integral con reposabrazos 4D"
+  - "Usuarios que valoran base de aluminio y montaje rápido"
+  - "Personas de hasta 1,85 m que buscan mucha ajustabilidad"
+paraQuienNo:
+  - "Personas por encima de 1,85 m"
+  - "Quien necesita garantía larga y carga elevada"
+  - "Quien prefiere un asiento acolchado de espuma"
+puntosFuertes:
+  - "Respaldo de malla integral transpirable"
+  - "Reposabrazos 4D y reposacabezas regulable"
+  - "Lumbar dinámica de doble pieza"
+  - "Base de aluminio con ruedas tipo blade"
+  - "Montaje rápido, en torno a quince minutos"
+puntosDebiles:
+  - "Garantía de solo un año"
+  - "Respaldo justo para personas muy altas"
+fuenteSpecs: "Web oficial Nouhaus (nouhaus.com/products/ergo3d) + chairssolution.com/nouhaus-ergo3d-review-2025 + ficha wayfair.com (NUHA1004)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 57
+  anchoCm: 71
+  fondoCm: 69
+  mecanismo: "inclinacion-con-tension-regulable"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 21
+  garantiaAnios: 1
+  alturaRecomendadaMaxCm: 185
+  reposacabezas: "ajustable"
+  montajeMinutos: 15
+  certificacionEn1335: null

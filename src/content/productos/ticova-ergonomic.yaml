@@ -1,0 +1,100 @@
+tipo: "silla"
+nombre: "Ticova Ergonomic Office Chair"
+marca: "Ticova"
+imagen: ""
+imagenAlt: "Silla ergonómica Ticova respaldo alto de malla con reposacabezas"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 7.5
+  comodidad: 8.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Ticova silla ergonómica oficina respaldo alto"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://ticova.org/"
+idealPara: "Quien quiere asiento mullido con espuma de alta densidad y lumbar regulable"
+veredicto: "La Ticova destaca por su asiento: una espuma de alta densidad de unos 8 cm con forma de W y borde cascada que muchas reseñas citan como su mejor baza. Combina respaldo de malla, lumbar regulable en altura y profundidad, reposacabezas orientable y reposabrazos 3D de núcleo metálico. Es una opción muy cómoda para teletrabajo, con la pega de una garantía corta de un año y una capacidad de carga moderada frente a rivales que llegan más arriba."
+resumenCompra:
+  mejorPara: "Quien prioriza un asiento mullido y un buen apoyo lumbar regulable a precio contenido."
+  evitarSi: "Necesitas garantía larga o una capacidad de carga elevada."
+  alternativaDirecta: "Nouhaus Ergo3D si prefieres un asiento de malla integral en lugar de espuma."
+  decisionRapida: "Una de las más cómodas de su precio si valoras el asiento acolchado por encima de todo."
+metodologia:
+  - "Specs tomadas de la web oficial Ticova y de fichas de distribuidor con tabla técnica."
+  - "La nota prioriza el asiento de espuma de alta densidad y el apoyo lumbar regulable."
+  - "Se penaliza la garantía de un año y la capacidad de carga moderada."
+scoreRationale:
+  ergonomia: "Lumbar regulable en altura y profundidad más reposacabezas orientable cubren bien la postura."
+  ajustabilidad: "Ocho puntos de ajuste entre lumbar, reposacabezas, reposabrazos 3D y tensión de balanceo."
+  materiales: "Malla transpirable y reposabrazos de núcleo metálico, con marco de nylon PA."
+  comodidad: "El asiento de espuma de alta densidad con forma de W es su punto fuerte más citado."
+  calidadPrecio: "Mucho confort por el precio, aunque la garantía corta resta algo de tranquilidad."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Ticova (web oficial)"
+    url: "https://ticova.org/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "tienda"
+    nombre: "OfficeSource Ticova Ergonomic Office Chair (ficha técnica)"
+    url: "https://www.officesource.co.uk/ticova-ergonomic-office-chair-high-back-desk-chair-with-adjustable-lumbar-support/"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "GadgetReview Ticova Ergonomic Office Chair review"
+    url: "https://www.gadgetreview.com/ticova-ergonomic-office-chair-review"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Garantía de un año, corta para la categoría."
+  - "Capacidad de carga de 127 kg, moderada frente a rivales que llegan a 150 kg."
+  - "Las fuentes oficiales no documentan certificación BIFMA ni EN 1335."
+alternativas:
+  - slug: "nouhaus-ergo3d"
+    motivo: "Asiento de malla integral y reposabrazos 4D si prefieres prescindir de espuma."
+  - slug: "sihoo-m18"
+    motivo: "Más económica si te basta con malla y lumbar ajustable básica."
+comunidad: "Las reseñas coinciden en que su mejor argumento es el asiento acolchado, más mullido que el de muchas rivales de malla integral. Los avisos habituales son la garantía de un año y una capacidad de carga que se queda por debajo de las sillas que presumen de 150 kg."
+paraQuienSi:
+  - "Quien prefiere un asiento mullido de espuma a uno de malla"
+  - "Usuarios que quieren lumbar regulable en altura y profundidad"
+  - "Teletrabajadores que buscan confort a precio contenido"
+paraQuienNo:
+  - "Quien necesita garantía larga"
+  - "Personas cercanas o por encima de los 127 kg"
+  - "Quien exige certificación documentada"
+puntosFuertes:
+  - "Asiento de espuma de alta densidad con forma de W y borde cascada"
+  - "Lumbar regulable en altura y profundidad"
+  - "Reposacabezas orientable y reposabrazos 3D de núcleo metálico"
+  - "Respaldo de malla transpirable"
+puntosDebiles:
+  - "Garantía de solo un año"
+  - "Capacidad de carga moderada (127 kg)"
+fuenteSpecs: "Web oficial Ticova (ticova.org) + ficha officesource.co.uk/ticova-ergonomic-office-chair-high-back-desk-chair-with-adjustable-lumbar-support + gadgetreview.com/ticova-ergonomic-office-chair-review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "mixto"
+  reposabrazos: "3d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 130
+  pesoMaxKg: 127
+  alturaAsientoMinCm: null
+  alturaAsientoMaxCm: null
+  anchoCm: null
+  fondoCm: null
+  mecanismo: "inclinacion-con-tension-regulable"
+  baseMaterial: "nylon"
+  asientoMaterial: "espuma-alta-densidad"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 1
+  reposacabezas: "ajustable"
+  certificacionEn1335: null
