@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Steelcase Think"
 marca: "Steelcase"
-imagen: ""
+imagen: "/img/productos/steelcase-think.webp"
 imagenAlt: "Silla ergonómica Steelcase Think con sistema LiveBack"
 tramoPrecio: 4
 precioMin: null

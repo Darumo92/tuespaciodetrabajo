@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "HÅG SoFi"
 marca: "HÅG"
-imagen: ""
+imagen: "/img/productos/hag-sofi.jpg"
 imagenAlt: "Silla ergonómica HÅG SoFi con sistema inBalance"
 tramoPrecio: 4
 precioMin: null

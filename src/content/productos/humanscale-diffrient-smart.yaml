@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Humanscale Diffrient Smart"
 marca: "Humanscale"
-imagen: ""
+imagen: "/img/productos/humanscale-diffrient-smart.png"
 imagenAlt: "Silla ergonómica Humanscale Diffrient Smart con malla form-sensing"
 tramoPrecio: 4
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Haworth Zody"
 marca: "Haworth"
-imagen: ""
+imagen: "/img/productos/haworth-zody.jpg"
 imagenAlt: "Silla ergonómica Haworth Zody con soporte lumbar PAL"
 tramoPrecio: 4
 precioMin: null

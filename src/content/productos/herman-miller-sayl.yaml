@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Herman Miller Sayl"
 marca: "Herman Miller"
-imagen: ""
+imagen: "/img/productos/herman-miller-sayl.jpg"
 imagenAlt: "Silla ergonómica Herman Miller Sayl con respaldo de suspensión"
 tramoPrecio: 4
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Herman Miller Mirra 2"
 marca: "Herman Miller"
-imagen: ""
+imagen: "/img/productos/herman-miller-mirra-2.webp"
 imagenAlt: "Silla ergonómica Herman Miller Mirra 2 con respaldo TriFlex"
 tramoPrecio: 4
 precioMin: null

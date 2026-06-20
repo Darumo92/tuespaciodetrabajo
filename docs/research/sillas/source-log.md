@@ -29,3 +29,14 @@
 - **Fichas pobres (muchos specs null)**: holludle-ergonomica (9 null), autonomous-ergochair-pro (6), hbada-ergonomica (6), secretlab-titan-evo (6).
 - **Incidencia a resolver**: hbada-ergonomica apunta a ASIN `B0CH7RBQQ7` (modelo P5 con lumbar/reposabrazos ajustables) pero las specs describen el modelo basico. Decidir: corregir specs a P5 o repuntar ASIN.
 - Ningun `asin_by_market` poblado todavia: cobertura multimercado pendiente de verificacion en Tasks 6-9.
+
+## Oleada 1 premium (2026-06-20)
+
+7 fichas premium con fuente oficial de fabricante/tienda (jerarquía 1-2) + reseña reconocida donde aplica:
+- Herman Miller Sayl / Mirra 2 / Cosm: hermanmiller.com + store.hermanmiller.com (+ BTOD review en Cosm).
+- Steelcase Think: eu.steelcase.com/products/think.
+- Haworth Zody: store.haworth.com + haworth.com.
+- Humanscale Diffrient Smart: humanscale.com.
+- HÅG SoFi: hag-office.com + ficha técnica Flokk (PDF).
+
+Sin ASIN (no se venden en Amazon ES): CTA = webOficial. Specs no confirmadas dejadas en null. verificadoEn 2026-06-20.

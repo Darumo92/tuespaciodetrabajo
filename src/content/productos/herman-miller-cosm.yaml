@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Herman Miller Cosm"
 marca: "Herman Miller"
-imagen: ""
+imagen: "/img/productos/herman-miller-cosm.webp"
 imagenAlt: "Silla ergonómica Herman Miller Cosm con basculación Auto-Harmonic"
 tramoPrecio: 4
 precioMin: null
