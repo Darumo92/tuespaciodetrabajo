@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "Newskill Takamikura V2"
+marca: "Newskill"
+imagen: "/img/productos/newskill-takamikura.jpg"
+imagenAlt: "Silla gaming Newskill Takamikura V2 con respaldo de tela transpirable"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 7.5
+  materiales: 7.5
+  comodidad: 7.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Newskill Takamikura V2 silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.newskillgaming.com/es/newskill-takamikura-v2-blue"
+idealPara: "Gaming de presupuesto contenido con tela transpirable, reposabrazos 4D y reclinación a 180°"
+veredicto: "La Takamikura V2 equilibra precio y prestaciones mejor que la media de su tramo: monta tela transpirable en vez de cuero sintético, suma reposabrazos 4D, reclinación de 90 a 180 grados para tumbarse del todo y soporta hasta 150 kg, una capacidad alta para su categoría. No es una ergonómica de ajuste clínico y el lumbar va por cojín, no integrado, pero por lo que cuesta ofrece un conjunto de ajustes y una transpiración difíciles de igualar. Buena elección para quien busca gaming asequible sin pasar calor."
+resumenCompra:
+  mejorPara: "Quien quiere gaming con tela transpirable, 4D y reclinación a 180° gastando poco."
+  evitarSi: "Necesitas lumbar integrado regulable o construcción premium."
+  alternativaDirecta: "Corsair TC100 si prefieres asiento más ancho aunque con reposabrazos 2D."
+  decisionRapida: "La gaming asequible que recomendaría a quien suda con el cuero sintético y quiere reposabrazos 4D."
+metodologia:
+  - "Specs tomadas de la web oficial de Newskill (peso máx, reclinación, ajustes, materiales)."
+  - "La nota valora la tela transpirable, los reposabrazos 4D, la reclinación 180° y la carga de 150 kg."
+  - "Se penaliza el lumbar de cojín no integrado y la ausencia de profundidad de asiento regulable."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical y reclinación amplia, pero sin lumbar integrado regulable."
+  ajustabilidad: "Reposabrazos 4D, altura, reclinación 90-180°; muy completa para su precio."
+  materiales: "Tela transpirable y espuma moldeada en frío sobre estructura de acero."
+  comodidad: "Buen acolchado y transpiración; cómoda para sesiones largas."
+  calidadPrecio: "Excelente: ajustes y carga altos para un precio de gama media-baja."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Newskill Takamikura V2"
+    url: "https://www.newskillgaming.com/es/newskill-takamikura-v2-blue"
+    fechaConsulta: "2026-06-20"
+  - tipo: "review"
+    nombre: "Profesional Review Newskill Takamikura V2"
+    url: "https://www.profesionalreview.com/2023/10/23/newskill-takamikura-v2-review/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Soporte lumbar de cojín, no integrado regulable."
+  - "Sin profundidad de asiento regulable."
+  - "Altura recomendada hasta unos 190 cm."
+alternativas:
+  - slug: "corsair-tc100"
+    motivo: "Asiento más ancho a precio similar, aunque con reposabrazos 2D."
+  - slug: "drift-dr500"
+    motivo: "Gaming de cuero sintético para usuarios altos si prefieres ese acabado."
+comunidad: "Valorada como una de las mejores relaciones calidad-precio en gaming española: gusta la tela transpirable, los reposabrazos 4D y la reclinación hasta 180°, además de soportar 150 kg. Las críticas habituales apuntan a que el lumbar es de cojín y no integrado y a que, como toda gaming de este precio, no llega al ajuste fino de una silla de oficina ergonómica."
+paraQuienSi:
+  - "Quien quiere gaming transpirable con reposabrazos 4D a precio contenido"
+  - "Usuarios de hasta 190 cm y 150 kg"
+  - "Quien valora la reclinación hasta 180° para descansar"
+paraQuienNo:
+  - "Quien necesita lumbar integrado regulable"
+  - "Quien busca construcción premium o profundidad de asiento regulable"
+  - "Personas que superan los 150 kg"
+puntosFuertes:
+  - "Respaldo de tela transpirable"
+  - "Reposabrazos 4D"
+  - "Reclinación de 90 a 180°"
+  - "Soporta hasta 150 kg"
+  - "Cojines lumbar y cervical incluidos"
+puntosDebiles:
+  - "Soporte lumbar de cojín, no integrado regulable"
+  - "Sin profundidad de asiento regulable"
+  - "Acolchado firme al principio"
+fuenteSpecs: "Web oficial Newskill (Takamikura V2: asiento 55x55 cm, altura 47-54 cm, reclinación 90-180°, máx 150 kg, altura recomendada hasta 190 cm, tela transpirable, espuma fría 45 kg/m³, 4D, gas clase 4, garantía 3 años) + Profesional Review"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "presion"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 180
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 54
+  anchoCm: 55
+  fondoCm: 55
+  mecanismo: "Reclinación tipo mariposa de 90 a 180° con base giratoria"
+  baseMaterial: "acero"
+  certificacionBifma: null
+  pesoProductoKg: null
+  garantiaAnios: 3
+  alturaRecomendadaMinCm: null
+  alturaRecomendadaMaxCm: 190
+  anchoAsientoCm: 55
+  profundidadAsientoMaxCm: 55
+  alturaRespaldoCm: null
+  reposacabezas: "ajustable"
+  certificacionEn1335: null

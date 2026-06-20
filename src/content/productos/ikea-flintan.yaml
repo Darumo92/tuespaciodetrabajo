@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "IKEA FLINTAN"
+marca: "IKEA"
+imagen: "/img/productos/ikea-flintan.jpg"
+imagenAlt: "Silla de trabajo IKEA FLINTAN con respaldo de malla"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: 3.8
+valoraciones:
+  ergonomia: null
+  ajustabilidad: null
+  materiales: null
+  comodidad: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/flintan-silla-trabajo-con-reposabrazos-negro-s89424468/"
+idealPara: "Teletrabajo de presupuesto ajustado con respaldo de malla y garantía larga"
+veredicto: "La FLINTAN es la silla de malla más asequible de IKEA y resuelve lo básico sin pretensiones: respaldo transpirable, soporte lumbar fijo, tensión de inclinación automática según el peso y una funda de asiento lavable a máquina. No tiene lumbar regulable ni profundidad de asiento ajustable, así que no es una ergonómica fina, pero para jornadas moderadas y un precio de entrada, con sus 10 años de garantía y certificación EN 1335, es una compra muy sensata."
+resumenCompra:
+  mejorPara: "Quien busca respaldo de malla y garantía de IKEA gastando lo mínimo."
+  evitarSi: "Necesitas lumbar regulable, reposacabezas o pasas muchas horas con ajuste fino."
+  alternativaDirecta: "IKEA MARKUS si prefieres respaldo alto de malla por algo más de dinero."
+  decisionRapida: "La silla de malla básica que recomendaría para teletrabajo ocasional con presupuesto muy ajustado."
+metodologia:
+  - "Specs tomadas de la ficha oficial de IKEA España y del manual del producto."
+  - "La nota prioriza la malla, la garantía y la certificación frente a la falta de ajustes finos."
+  - "Se penaliza la ausencia de lumbar regulable, profundidad de asiento y reposacabezas."
+scoreRationale:
+  ergonomia: "Malla y soporte lumbar fijo dan lo justo para jornadas moderadas, sin ajuste fino."
+  ajustabilidad: "Altura de asiento y tensión automática, pero sin lumbar regulable ni profundidad."
+  materiales: "Malla de poliéster reciclado y estructura básica correcta para su precio."
+  comodidad: "Aceptable para uso medio; el asiento es algo justo en relleno."
+  calidadPrecio: "Muy competitiva: malla y 10 años de garantía a precio de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA FLINTAN silla de trabajo con reposabrazos"
+    url: "https://www.ikea.com/es/es/p/flintan-silla-trabajo-con-reposabrazos-negro-s89424468/"
+    fechaConsulta: "2026-06-20"
+limitaciones:
+  - "Soporta hasta 110 kg."
+  - "Soporte lumbar fijo, no regulable."
+  - "Sin profundidad de asiento regulable ni reposacabezas."
+alternativas:
+  - slug: "ikea-markus"
+    motivo: "Respaldo alto de malla con reposacabezas integrado por algo más de dinero."
+  - slug: "ikea-langfjall"
+    motivo: "Tapizada y con mejor acabado si no necesitas malla."
+comunidad: "Consenso de usuarios de IKEA como silla de malla barata y correcta para teletrabajo ligero, con la garantía de 10 años como gran punto a favor. Las críticas recurrentes apuntan a que el acolchado del asiento es escaso y a que, sin lumbar regulable, no convence para jornadas muy largas."
+paraQuienSi:
+  - "Quien quiere respaldo de malla transpirable gastando lo mínimo"
+  - "Teletrabajo ocasional o de pocas horas al día"
+  - "Quien valora la garantía de 10 años de IKEA"
+paraQuienNo:
+  - "Quien necesita lumbar regulable o profundidad de asiento ajustable"
+  - "Personas que superan los 110 kg"
+  - "Quien busca respaldo alto con reposacabezas"
+puntosFuertes:
+  - "Respaldo de malla transpirable"
+  - "Garantía de 10 años de IKEA"
+  - "Tensión de inclinación automática según el peso"
+  - "Funda de asiento desenfundable y lavable a máquina"
+  - "Certificación EN 1335 y BIFMA X5.1"
+puntosDebiles:
+  - "Soporte lumbar fijo, no regulable"
+  - "Sin profundidad de asiento regulable ni reposacabezas"
+  - "Acolchado del asiento escaso"
+fuenteSpecs: "Web oficial IKEA España (ficha FLINTAN con reposabrazos: asiento 46x49 cm, altura 45-58 cm, máx 110 kg, garantía 10 años, EN 1335 + BIFMA X5.1)"
+verificadoEn: "2026-06-20"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "1d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: null
+  pesoMaxKg: 110
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 58
+  anchoCm: 71
+  fondoCm: 71
+  mecanismo: "Inclinación sincronizada con tensión automática y bloqueo"
+  baseMaterial: null
+  certificacionBifma: true
+  pesoProductoKg: 16
+  garantiaAnios: 10
+  anchoAsientoCm: 46
+  profundidadAsientoMaxCm: 49
+  alturaRespaldoCm: null
+  reposacabezas: "ninguno"
+  certificacionEn1335: true

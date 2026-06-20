@@ -44,3 +44,9 @@ Sin ASIN (no se venden en Amazon ES): CTA = webOficial. Specs no confirmadas dej
 ## Oleada 2 gama media (2026-06-20)
 
 8 fichas con fuente oficial de fabricante: SIHOO (Doro S300), FlexiSpot (C7, BS11 Pro), Hbada (E3 Pro), Ticova, Nouhaus (Ergo3D), Ergotopia (NextBack, datasheet+manual PDF), COLAMY (ATLAS). Reseñas reconocidas donde aplica (TechSpot en C7). CTA = amazon.buscar; sin ASIN. Specs no confirmadas en null (p.ej. FlexiSpot BS11 Pro pesoMaxKg null por conflicto 350/130 kg). songmics-obg-cloud descartada por falta de fuente oficial.
+
+## Oleada 3 IKEA + gaming (2026-06-20)
+
+8 fichas con fuente oficial: IKEA (FLINTAN, HATTEFJALL, STYRSPEL) via ikea.com/es; Razer (Iskur V2),
+Corsair (TC100 Relaxed), Newskill (Takamikura V2), Drift (DR500), Branch (Ergonomic Chair, solo US/CA).
+IKEA sin Amazon (webOficial); gaming con amazon.buscar o webOficial. Specs no confirmadas en null.
