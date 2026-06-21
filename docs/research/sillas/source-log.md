@@ -50,3 +50,16 @@ Sin ASIN (no se venden en Amazon ES): CTA = webOficial. Specs no confirmadas dej
 8 fichas con fuente oficial: IKEA (FLINTAN, HATTEFJALL, STYRSPEL) via ikea.com/es; Razer (Iskur V2),
 Corsair (TC100 Relaxed), Newskill (Takamikura V2), Drift (DR500), Branch (Ergonomic Chair, solo US/CA).
 IKEA sin Amazon (webOficial); gaming con amazon.buscar o webOficial. Specs no confirmadas en null.
+
+## Research Bloque B (2026-06-21): 11 candidatas nuevas añadidas
+
+Bloque A agotado. Añadidas 11 candidatas con web oficial fetcheada y specs confirmadas (criterio: marca/modelo aún no en catálogo + fuente oficial localizable + amazon_query plausible):
+
+- Gaming: AndaSeat Kaiser 3 (andaseat.com) y Kaiser 3E, noblechairs ICON (noblechairs.com), Corsair T3 Rush Fabric (corsair.com), Razer Enki (razer.com, webOficial), DXRacer Master (dxracer.com).
+- Oficina/premium: Actiu TNK Flex (actiu.com, marca ES), Okamura Sylphy (okamura.com, premium JP, webOficial), Forma5 Dot.Pro (forma5.com, marca ES, webOficial).
+- Budget malla: Eureka Onyx (eurekaergonomic.com), Yaheetech Ergonomic Mesh (yaheetech.shop).
+
+Descartes:
+- KERDOM: kerdom.com solo vende movilidad/sillas de ruedas, sin web oficial de sillas de oficina; presencia 100% Amazon/retail. Sin fuente oficial localizable -> descartada (regla dura).
+- Interstuhl (EVERY/PURE) y Vitra Physix: producto AAA deseable pero web oficial devuelve 403 anti-bot a WebFetch; no fetcheable -> diferidas (reintentar con navegador/Playwright).
+- Mfavour (sin web oficial propia) y Eureka OC05 (modelo no localizable; sustituido por Onyx).
