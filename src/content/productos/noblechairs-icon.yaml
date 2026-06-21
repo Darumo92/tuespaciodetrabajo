@@ -1,0 +1,102 @@
+tipo: "silla"
+nombre: "noblechairs ICON"
+marca: "noblechairs"
+imagen: ""
+imagenAlt: "Silla gaming noblechairs ICON de cuero sintético con estética de oficina"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: "noblechairs ICON silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere una gaming de estética sobria, casi de oficina, con cuero sintético y espuma fría de calidad"
+veredicto: "La ICON es la gaming de noblechairs que más se aleja del aspecto de butaca de carreras: su diseño es sobrio, casi de despacho, y eso la hace encajar en un salón o una oficina sin desentonar. Por dentro cumple lo esperado en la gama: espuma fría firme, base de aluminio, reposabrazos 4D y certificación DIN EN 1335. El lumbar va por cojín, no integrado, así que el ajuste fino depende de colocarlo bien, y el reposabrazos lleva poco acolchado. Para quien busca una gaming elegante y bien construida que aguante muchas horas, es una compra sólida; quien quiera el máximo soporte lumbar regulable tendrá que mirar otras opciones."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming discreta y bien rematada con cuero sintético y espuma fría."
+  evitarSi: "Necesitas lumbar integrado regulable o eres de estatura baja."
+  alternativaDirecta: "noblechairs HERO si quieres más talla, más reclinación y lumbar integrado de la misma marca."
+  decisionRapida: "La gaming que recomendaría a quien valora una estética sobria y un acabado serio por encima del máximo ajuste lumbar."
+metodologia:
+  - "Specs tomadas de la web oficial de noblechairs y de su ficha tecnica."
+  - "La nota prioriza la calidad de materiales (espuma fría, aluminio), los reposabrazos 4D y la certificación EN 1335."
+  - "Se penaliza el lumbar por cojín (no integrado) y el escaso acolchado de los reposabrazos."
+scoreRationale:
+  ergonomia: "Buen soporte general, pero el lumbar va por cojín y no es regulable de forma integrada."
+  ajustabilidad: "Reposabrazos 4D, reclinación 90-135 grados y balanceo 11 grados cubren lo esencial."
+  materiales: "Espuma fría, base de aluminio y certificación DIN EN 1335 son lo mejor de la silla."
+  comodidad: "Asiento firme y cómodo para jornadas largas según reseñas, aunque los reposabrazos van justos de acolchado."
+  calidadPrecio: "Correcta: pagas por construcción y acabado, no por la mayor ergonomía regulable."
+fuentes:
+  - tipo: "oficial"
+    nombre: "noblechairs ICON Series (PU leather)"
+    url: "https://www.noblechairs.com/en-us/icon-series/gaming-chair-pu-leather"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Tech Advisor noblechairs Icon review"
+    url: "https://www.techadvisor.com/article/722674/noblechairs-icon-review.html"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "GamingScan noblechairs ICON review"
+    url: "https://www.gamingscan.com/noblechairs-icon-review/"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Lumbar por cojín, no integrado ni regulable de fábrica."
+  - "Reposabrazos con poco acolchado."
+  - "Más adecuada para usuarios de estatura media o baja según reseñas."
+alternativas:
+  - slug: "noblechairs-hero"
+    motivo: "Misma marca con más talla, más reclinación y lumbar integrado regulable."
+  - slug: "secretlab-titan-evo"
+    motivo: "Acabado premium con lumbar integrado y más opciones de talla."
+comunidad: "Consenso muy positivo en reseñas especializadas (Tech Advisor, GamingScan, TweakTown): se valora la comodidad para jornadas muy largas, el diseño sobrio menos llamativo que una racing y la calidad de construcción. Las críticas recurrentes son el escaso acolchado de los reposabrazos y que encaja mejor en personas de estatura media o baja que en las muy altas."
+paraQuienSi:
+  - "Quien quiere una gaming de aspecto sobrio que encaje en oficina o salón"
+  - "Usuarios de estatura media que pasan muchas horas sentados"
+  - "Quien valora espuma fría firme, base de aluminio y certificación EN 1335"
+paraQuienNo:
+  - "Quien necesita lumbar integrado regulable de fábrica"
+  - "Usuarios muy altos (la silla encaja mejor en tallas medias)"
+  - "Quien busca malla transpirable"
+puntosFuertes:
+  - "Espuma fría (cold foam) firme y duradera"
+  - "Base de aluminio"
+  - "Reposabrazos 4D"
+  - "Certificación DIN EN 1335"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Lumbar por cojín, no integrado ni regulable"
+  - "Reposabrazos con poco acolchado"
+  - "Respaldo de cuero sintético, transpira menos que la malla"
+fuenteSpecs: "Web oficial noblechairs (noblechairs.com/en-us/icon-series/gaming-chair-pu-leather: max 150 kg, respaldo 90-135 grados, balanceo 11 grados, reposabrazos 4D, base aluminio, espuma fría, asiento ancho interior 33 cm / exterior 52 cm, fondo 49 cm, altura asiento 47-57 cm, altura total 128-138 cm, pistón clase 4, certificación DIN EN 1335, peso 28 kg) + Tech Advisor + GamingScan"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 57
+  anchoCm: 52
+  fondoCm: 49
+  mecanismo: "Reclinación 90-135 grados con balanceo 11 grados y pistón clase 4"
+  baseMaterial: "aluminio"
+  pesoProductoKg: 28
+  anchoAsientoCm: 52
+  profundidadAsientoMaxCm: 49
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cuero sintético PU con espuma fría"
+  certificacionEn1335: true

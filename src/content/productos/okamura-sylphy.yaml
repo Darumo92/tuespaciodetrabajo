@@ -1,0 +1,90 @@
+tipo: "silla"
+nombre: "Okamura Sylphy"
+marca: "Okamura"
+imagen: ""
+imagenAlt: "Silla ergonómica Okamura Sylphy con respaldo de malla y curva en S"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.0
+  materiales: 9.0
+  comodidad: 9.0
+  calidadPrecio: 7.0
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.okamura.com/products/sylphy/"
+idealPara: "Quien busca una ergonómica premium japonesa con respaldo en curva S y soporte para distintas complexiones"
+veredicto: "La Sylphy es la ergonómica premium de Okamura, una marca japonesa con mucho prestigio en oficina de alto nivel. Su seña de identidad es el respaldo en curva S, que sostiene la zona lumbar y la dorsal con una línea pensada para acompañar la columna, y un mecanismo sincro que reclina hasta 23 grados con basculación frontal de 10 grados regulable con dial. El cojín de asiento es multidensidad, más blando delante y más firme detrás. No se vende en Amazon España y suele ir bajo pedido con plazos largos, así que es una compra de canal especializado más que de consumo, y el precio acompaña a esa categoría."
+resumenCompra:
+  mejorPara: "Quien quiere una ergonómica japonesa de alto nivel con respaldo en S y se adapta bien a distintas estaturas."
+  evitarSi: "Necesitas comprar rápido por Amazon o tienes un presupuesto contenido."
+  alternativaDirecta: "Herman Miller Aeron si prefieres una ergonómica premium con disponibilidad más amplia y soporte global."
+  decisionRapida: "Una opción premium muy seria si te atrae la escuela japonesa de ergonomía y aceptas un canal de compra menos directo."
+metodologia:
+  - "Specs tomadas de la web oficial de Okamura y de fichas de distribuidores oficiales."
+  - "La nota prioriza el diseño de respaldo en S, la calidad de materiales y la reclinación regulable."
+  - "Se penaliza la falta de capacidad de carga publicada y el canal de compra poco directo."
+scoreRationale:
+  ergonomia: "El respaldo en curva S y el cojín multidensidad la sitúan entre las ergonómicas premium."
+  ajustabilidad: "Reclinación de 23 grados con basculación frontal y dial, brazos 3D opcionales y lumbar opcional."
+  materiales: "Construcción japonesa de alto nivel, malla o tapizado y materiales reciclados."
+  comodidad: "Respaldo que se adapta a complexiones anchas y estrechas y cojín más blando delante."
+  calidadPrecio: "Calidad alta, pero el precio y el canal especializado bajan la relación frente a rivales más accesibles."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Okamura Sylphy (web oficial)"
+    url: "https://www.okamura.com/products/sylphy/"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Okamura Sylphy Task Chair (Think Furniture)"
+    url: "https://www.think-furniture.com/okamura-sylphy-task-chair/"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "No se vende en Amazon España: distribución por canal especializado, a menudo bajo pedido con plazos largos."
+  - "Okamura no publica de forma clara la capacidad de carga máxima ni los años de garantía para este modelo."
+  - "Cabecero y lumbar suelen ser accesorios opcionales."
+alternativas:
+  - slug: "herman-miller-aeron"
+    motivo: "Ergonómica premium con disponibilidad más amplia y soporte global si buscas alternativa directa."
+  - slug: "steelcase-leap-v2"
+    motivo: "Premium de oficina con profundidad de asiento regulable y red de distribución más accesible."
+comunidad: "Muy valorada entre quienes conocen la ergonomía japonesa de oficina: el respaldo en curva S y el ajuste a distintas complexiones se citan como sus puntos fuertes. El consenso es que compite en la liga de las premium, con la pega de un canal de compra poco directo fuera de Asia y poca información pública sobre carga máxima y garantía."
+paraQuienSi:
+  - "Quien busca una ergonómica premium japonesa con respaldo en S"
+  - "Usuarios de complexión ancha o estrecha que quieren un respaldo que se adapte"
+  - "Quien valora cojín multidensidad y materiales de alto nivel"
+paraQuienNo:
+  - "Presupuestos ajustados"
+  - "Quien quiere comprar y recibir rápido por Amazon"
+  - "Quien necesita una capacidad de carga máxima publicada y verificable"
+puntosFuertes:
+  - "Respaldo en curva S que acompaña la columna"
+  - "Reclinación de 23 grados con basculación frontal de 10 grados regulable con dial"
+  - "Cojín de asiento multidensidad (más blando delante, más firme detrás)"
+  - "Materiales de alto nivel con porcentaje reciclado"
+puntosDebiles:
+  - "No se vende en Amazon y suele ir bajo pedido"
+  - "Capacidad de carga y garantía no publicadas con claridad"
+fuenteSpecs: "Web oficial Okamura (okamura.com/products/sylphy) + Think Furniture (think-furniture.com/okamura-sylphy-task-chair): respaldo alto W648 x D574-624 x H960-1090 mm, asiento W460 x D410 mm, reclinación hasta 23 grados, basculación frontal 10 grados con dial, malla o tapizado, cojín multidensidad, brazos 3D/fijos/sin brazos, cabecero y lumbar opcionales, base resina o pulida, 30% materiales reciclados"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "3d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 23
+  anchoCm: 64.8
+  mecanismo: "Sincro con reclinación de 23 grados y basculación frontal de 10 grados regulable con dial"
+  baseMaterial: "resina o aluminio pulido"
+  anchoAsientoCm: 46
+  profundidadAsientoMinCm: 41
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cojin de espuma multidensidad"

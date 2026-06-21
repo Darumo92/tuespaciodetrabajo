@@ -1,0 +1,97 @@
+tipo: "silla"
+nombre: "AndaSeat Kaiser 3"
+marca: "AndaSeat"
+imagen: ""
+imagenAlt: "Silla gaming AndaSeat Kaiser 3 con reposabrazos magnéticos 4D"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8
+  ajustabilidad: 8.5
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "AndaSeat Kaiser 3 silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Gaming intensivo y usuarios corpulentos que quieren acolchado generoso y reposabrazos 4D magnéticos"
+veredicto: "La Kaiser 3 es de las gaming acolchadas mejor valoradas de su gama: ofrece reposabrazos 4D con superficies magnéticas intercambiables, lumbar integrado de 4 vías y un asiento amplio que sienta bien a usuarios grandes, sobre todo en la versión XL que aguanta hasta 180 kg. La construcción con base de aluminio en la XL transmite solidez y la garantía de cinco años da tranquilidad. El pero es el de casi todas las gaming de cuero: el respaldo no transpira como una malla y el cojín lumbar es firme al principio. Si buscas una gaming robusta y bien rematada sin entrar en precios de oficina premium, cumple de sobra."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming acolchada robusta con reposabrazos 4D y, si es corpulento, la versión XL."
+  evitarSi: "Necesitas malla transpirable para el verano o prefieres una ergonómica de oficina."
+  alternativaDirecta: "Secretlab TITAN Evo si quieres un acabado igual de premium con más opciones de talla."
+  decisionRapida: "La gaming acolchada que recomendaría a quien pasa muchas horas y valora un asiento amplio y bien construido."
+metodologia:
+  - "Specs tomadas de la web oficial de AndaSeat y de su soporte/manual."
+  - "La nota prioriza los reposabrazos 4D magnéticos, el lumbar integrado y la capacidad de carga en la versión XL."
+  - "Se penaliza el respaldo de cuero sintético frente a la malla y la firmeza inicial del acolchado."
+scoreRationale:
+  ergonomia: "Lumbar integrado de 4 vías y soporte amplio, aunque sin la adaptabilidad de un lumbar dinámico."
+  ajustabilidad: "Reposabrazos 4D, reclinación 155 grados, balanceo y cojín cervical magnético cubren casi todo."
+  materiales: "Cuero PVC premium, espuma moldeada y base de aluminio en la XL elevan la nota."
+  comodidad: "Asiento amplio y acolchado generoso, firme las primeras semanas según reseñas."
+  calidadPrecio: "Competitiva: mucha silla y garantía larga por un precio contenido dentro de la gama."
+fuentes:
+  - tipo: "oficial"
+    nombre: "AndaSeat Kaiser 3 Series"
+    url: "https://www.andaseat.com/products/andaseat-kaiser-3-series-premium-gaming-chair"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "TechRadar AndaSeat Kaiser 3 XL review"
+    url: "https://www.techradar.com/gaming/andaseat-kaiser-3-xl-review"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Tom's Hardware AndaSeat Kaiser 3 review"
+    url: "https://www.tomshardware.com/reviews/andaseat-kaiser-3-gaming-chair"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Respaldo de cuero sintético, no de malla: transpira menos en verano."
+  - "El cojín lumbar y el acolchado son firmes las primeras semanas."
+  - "La web oficial no detalla anchos y fondos exactos de asiento."
+alternativas:
+  - slug: "secretlab-titan-evo"
+    motivo: "Acabado igual de premium con tres tallas para ajustar mejor a la altura."
+  - slug: "noblechairs-hero"
+    motivo: "Otra gaming robusta pensada para usuarios corpulentos."
+comunidad: "Buena acogida en reseñas de hardware (Tom's Hardware, TechRadar, PC Gamer): se destaca el asiento amplio y cómodo, los reposabrazos 4D con topes magnéticos y la solidez de construcción, sobre todo en la XL para usuarios grandes. Las críticas recurrentes son las habituales de las gaming de cuero: que el respaldo da calor en verano y que el acolchado es firme al principio."
+paraQuienSi:
+  - "Gamers que pasan muchas horas y quieren un asiento amplio y bien acolchado"
+  - "Usuarios corpulentos, sobre todo con la versión XL (hasta 180 kg)"
+  - "Quien valora reposabrazos 4D y garantía larga sin pagar premium de oficina"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Quien prefiere una ergonómica de oficina con lumbar dinámico"
+  - "Personas menudas que pueden encontrar el asiento demasiado grande"
+puntosFuertes:
+  - "Reposabrazos 4D con superficies magnéticas intercambiables"
+  - "Lumbar integrado de 4 vías"
+  - "Versión XL soporta hasta 180 kg"
+  - "Cojín cervical de espuma magnético incluido"
+  - "Garantía de cinco años"
+puntosDebiles:
+  - "Respaldo de cuero sintético, calienta más en verano"
+  - "Acolchado firme las primeras semanas"
+  - "Web oficial parca en dimensiones exactas de asiento"
+fuenteSpecs: "Web oficial AndaSeat (andaseat.com/products/andaseat-kaiser-3-series: reclinación 155 grados + balanceo 15 grados, reposabrazos 4D magnéticos, lumbar integrado 4 vías, cojín cervical 20 cm, L <120 kg / XL 80-180 kg, altura L 150-190 cm / XL 181-210 cm, cuero PVC o lino, garantía 5 años) + TechRadar + Tom's Hardware (base aluminio en XL, hierro en L)"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 155
+  pesoMaxKg: 180
+  mecanismo: "Reclinación 155 grados con balanceo 15 grados y base giratoria 360"
+  baseMaterial: "aluminio"
+  garantiaAnios: 5
+  alturaRecomendadaMinCm: 181
+  alturaRecomendadaMaxCm: 210
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cuero PVC premium o lino"
