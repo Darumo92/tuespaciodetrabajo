@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Actiu TNK Flex"
 marca: "Actiu"
-imagen: ""
+imagen: "/img/productos/actiu-tnk-flex.jpg"
 imagenAlt: "Silla de oficina Actiu TNK Flex con respaldo flexible para uso intensivo"
 tramoPrecio: 4
 precioMin: null

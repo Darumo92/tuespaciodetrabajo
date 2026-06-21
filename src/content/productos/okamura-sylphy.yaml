@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Okamura Sylphy"
 marca: "Okamura"
-imagen: ""
+imagen: "/img/productos/okamura-sylphy.jpg"
 imagenAlt: "Silla ergonómica Okamura Sylphy con respaldo de malla y curva en S"
 tramoPrecio: 4
 precioMin: null

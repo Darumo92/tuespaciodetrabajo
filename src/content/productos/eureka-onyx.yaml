@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Eureka Ergonomic Onyx"
 marca: "Eureka Ergonomic"
-imagen: ""
+imagen: "/img/productos/eureka-onyx.jpg"
 imagenAlt: "Silla de oficina Eureka Ergonomic Onyx de malla con lumbar ajustable"
 tramoPrecio: 2
 precioMin: null

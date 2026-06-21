@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "AndaSeat Kaiser 3"
 marca: "AndaSeat"
-imagen: ""
+imagen: "/img/productos/andaseat-kaiser-3.jpg"
 imagenAlt: "Silla gaming AndaSeat Kaiser 3 con reposabrazos magnéticos 4D"
 tramoPrecio: 3
 precioMin: null

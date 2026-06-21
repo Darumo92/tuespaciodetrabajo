@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Razer Enki"
 marca: "Razer"
-imagen: ""
+imagen: "/img/productos/razer-enki.jpg"
 imagenAlt: "Silla gaming Razer Enki con asiento ancho y arcos de hombro extendidos"
 tramoPrecio: 3
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "noblechairs ICON"
 marca: "noblechairs"
-imagen: ""
+imagen: "/img/productos/noblechairs-icon.jpg"
 imagenAlt: "Silla gaming noblechairs ICON de cuero sintético con estética de oficina"
 tramoPrecio: 3
 precioMin: null

@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Forma5 Dot Pro"
 marca: "Forma5"
-imagen: ""
+imagen: "/img/productos/forma5-dot-pro.jpg"
 imagenAlt: "Silla de oficina Forma5 Dot Pro con respaldo alto de malla 3D"
 tramoPrecio: 3
 precioMin: null

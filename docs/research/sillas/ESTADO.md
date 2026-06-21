@@ -6,7 +6,7 @@
 
 ## Resumen en una línea
 
-Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampliado de **19 → 31 sillas** (piloto de 5 + Oleada 1 de 7 premium, 2026-06-20); el resto del research (100+ sillas) está pausado a la espera de datos de Amazon y de la señal de indexación.
+Infraestructura del catálogo terminada; catálogo en **57 sillas** tras oleadas 1-4 (oleada 4 = Bloque B, 2026-06-21). Bloque A agotado; Bloque B en marcha. Camino a 100+ por oleadas de ~10, con imágenes que sube el usuario. Plan vigente: `docs/superpowers/plans/2026-06-20-ampliacion-catalogo-sillas-100-oleadas.md`. Rama `feat/sillas-catalogo-100-oleadas`.
 
 ## Decisiones tomadas por el usuario
 
@@ -33,7 +33,7 @@ Infraestructura del catálogo (Tasks 1-5) terminada y verificada; catálogo ampl
 
 **Extra (no era Task):** fix del filtrado del catálogo que rompí en Task 3 (ver más abajo).
 
-## Catálogo actual: 47 sillas
+## Catálogo actual: 57 sillas (oleada 4 publicada 2026-06-21)
 
 - **19 originales** (auditadas, `published`).
 - **5 piloto nuevas** (specs oficiales verificadas, CTA = Amazon search fallback, sin ASIN):
@@ -137,3 +137,15 @@ el letterbox no salga negro en modo oscuro.
 
 Catálogo 39 -> 47. Bloque A del backlog AGOTADO (solo queda songmics-obg-cloud descartada). Build 116 páginas.
 Siguiente: Oleada 4 = Bloque B (Task 4 research de marcas nuevas, luego producir).
+
+## Oleada 4 — Bloque B (2026-06-21)
+
+Task 4 (research Bloque B) hecha: backlog +11 candidatas nuevas con web oficial fetcheada (AndaSeat Kaiser 3/3E, noblechairs ICON, Corsair T3 Rush, Razer Enki, DXRacer Master, Actiu TNK Flex, Okamura Sylphy, Forma5 Dot.Pro, Eureka Onyx, Yaheetech Mesh). Descartes: KERDOM (sin web oficial de sillas de oficina), Interstuhl/Vitra (403 anti-bot, diferidas), Mfavour, Eureka OC05.
+
+Oleada 4 (Task 5): 10 fichas publicadas con imagen (todas menos AndaSeat 3E, que sigue candidate). Producidas por 2 subagentes implementadores, revisadas en spec-compliance (enums, slugs de alternativas, CTA, sin ASIN, sin em-dash) y ortografía/humanización (las fichas venían sin tildes ni ñ: ~450 correcciones). CTA: amazon.buscar (gaming/budget) o webOficial (Razer Enki, Actiu, Okamura, Forma5). Specs solo de fuente oficial; estilo casa (campos sin dato se omiten). Imágenes del usuario normalizadas a 800x800 blanco (eureka-onyx llegó en gris, blanqueada; 3 webp -> jpg).
+
+Catálogo 47 -> 57. Build 126 páginas, validate (57) + test (45/45) verdes. Backlog: 10 candidate->published.
+
+Backlog Bloque B restante (candidate): andaseat-kaiser-3e + songmics-obg-cloud (descartada). Pistas sin verificar de un post de forocoches (oficina/gaming ES) pendientes de research: Eurotech Ergohuman, RH Logic 400, Nightingale/Biplax CXO, Steelcase Please, Herman Miller Celle, AKRacing, Sharkoon, RECARO, Backforce, Phoenix, Euromof, Biplax, Luyando, Vertagear, Maxnomic, Quersus.
+
+Siguiente: Oleada 5 (Task 6) = research nuevas candidatas (forocoches + Bloque B restante) y producir lote ~10. Al pasar de 50 fichas, considerar Task 11 (búsqueda+grupos de filtros del catálogo) como PLAN APARTE (es código).

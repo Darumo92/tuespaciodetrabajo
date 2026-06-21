@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "DXRacer Master"
 marca: "DXRacer"
-imagen: ""
+imagen: "/img/productos/dxracer-master.jpg"
 imagenAlt: "Silla gaming DXRacer Master con lumbar integrado 4D y estética ejecutiva"
 tramoPrecio: 3
 precioMin: null

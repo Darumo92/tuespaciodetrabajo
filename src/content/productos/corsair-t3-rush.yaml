@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Corsair T3 Rush (2023)"
 marca: "Corsair"
-imagen: ""
+imagen: "/img/productos/corsair-t3-rush.jpg"
 imagenAlt: "Silla gaming Corsair T3 Rush tapizada en tela transpirable"
 tramoPrecio: 3
 precioMin: null
