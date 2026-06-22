@@ -1,0 +1,81 @@
+tipo: "silla"
+nombre: "Diablo X-Player 2.0"
+marca: "Diablo Chairs"
+imagen: ""
+imagenAlt: "Silla gaming Diablo X-Player 2.0 con respaldo de tejido y malla"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Diablo X-Player 2.0 silla gaming"
+webOficial: null
+idealPara: "Quien quiere una gaming transpirable de tejido y malla con varias tallas"
+veredicto: "La X-Player 2.0 es la propuesta de Diablo para quien no soporta el cuero sintético en verano: combina tejido EcoFiber con una zona de malla Honeycomb que ventila de verdad. Suma reposabrazos 3D, cojines de espuma viscoelástica y se ofrece en tallas Small, Normal y King para afinar al cuerpo. Es muy popular en Amazon en España, aunque su disponibilidad por talla conviene mirarla antes de pulsar comprar."
+resumenCompra:
+  mejorPara: "Quien busca ventilación real gracias a la mezcla de tejido y malla."
+  evitarSi: "Prefieres el tacto y la estética del cuero sintético clásico."
+  alternativaDirecta: "Quersus Vaos 3 si quieres otra gaming con enfoque ergonómico cuidado."
+  decisionRapida: "La que pongo sobre la mesa cuando alguien quiere gaming fresca y con opción de talla, no una talla única para todos."
+metodologia:
+  - "Specs confirmadas en la página oficial de producto de Diablo Chairs."
+  - "La nota valora la transpirabilidad del tejido y la malla, los 3D y la oferta de tallas."
+  - "Se mantiene cautela con la altura de asiento y la garantía, no publicadas en la web."
+scoreRationale:
+  ergonomia: "Reclinación de 160 grados, cojines de espuma viscoelástica y reposabrazos 3D."
+  ajustabilidad: "Reposabrazos 3D y tres tallas para ajustar la silla al cuerpo del usuario."
+  materiales: "Tejido EcoFiber con malla Honeycomb y base metálica resistente."
+  comodidad: "Doble capa de espuma en el asiento y buena ventilación en el respaldo."
+  calidadPrecio: "Mucha silla por su precio, con la transpirabilidad como gran argumento."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Diablo X-Player 2.0"
+    url: "https://diablochairs.com/en/x-player"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "La web oficial no detalla recorrido de altura de asiento ni garantía."
+  - "La disponibilidad varía según la talla elegida."
+  - "El soporte lumbar es un cojín, no un mecanismo integrado regulable."
+alternativas:
+  - slug: "quersus-vaos-3"
+    motivo: "Gaming con enfoque ergonómico cuidado si quieres comparar acabados."
+  - slug: "sharkoon-skiller-sgs40"
+    motivo: "Otra gaming transpirable de tramo medio para contrastar precio."
+comunidad: "Diablo es una marca polaca muy presente en Amazon España, y la X-Player aparece a menudo entre las gaming recomendadas por su frescura. Quienes la prueban suelen alabar la combinación de tejido y malla frente al calor del cuero sintético y la posibilidad de elegir talla. El matiz habitual es que el soporte lumbar es un cojín y que la garantía conviene confirmarla con el vendedor."
+paraQuienSi:
+  - "Personas de 150 a 205 cm según la talla que elijan"
+  - "Quien pasa calor con las gaming de cuero y busca ventilación"
+  - "Usuarios de hasta 150 kg que quieren cojines viscoelásticos de serie"
+paraQuienNo:
+  - "Quien prefiere el tacto del cuero sintético"
+  - "Usuarios que exigen lumbar integrado regulable"
+  - "Quien quiere conocer la altura de asiento y la garantía de antemano"
+puntosFuertes:
+  - "Tejido EcoFiber con malla Honeycomb muy transpirable"
+  - "Reposabrazos 3D Armtech Hybrid"
+  - "Cojines de espuma viscoelástica incluidos"
+  - "Disponible en tallas Small, Normal y King"
+puntosDebiles:
+  - "Altura de asiento y garantía no publicadas en la web"
+  - "Lumbar mediante cojín, no integrado"
+fuenteSpecs: "Web oficial Diablo Chairs (diablochairs.com/en/x-player: tejido EcoFiber + malla Honeycomb, lumbar cojín memory foam, 3D Armtech Hybrid, reclinación 160 grados, máximo 150 kg, base metálica, asiento HR doble capa, cojines memory foam, tallas Small/Normal/King). Altura recomendada 150-205 cm según datos de catálogo."
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "mixto"
+  reposabrazos: "3d"
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 150
+  baseMaterial: "metal"
+  alturaRecomendadaMinCm: 150
+  alturaRecomendadaMaxCm: 205
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma HR doble capa"

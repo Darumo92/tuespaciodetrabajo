@@ -1,0 +1,81 @@
+tipo: "silla"
+nombre: "Genesis Nitro 950"
+marca: "Genesis"
+imagen: ""
+imagenAlt: "Silla gaming Genesis Nitro 950 con respaldo tapizado"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 7.5
+  materiales: 8.0
+  comodidad: 8.0
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Genesis Nitro 950 silla gaming"
+webOficial: null
+idealPara: "Usuarios corpulentos que quieren una gaming europea hasta 150 kg"
+veredicto: "La Nitro 950 es la baza de Genesis para quien necesita aguante: soporta hasta 150 kg, monta ruedas de 75 mm con freno y trae cojines de cabeza y lumbar de espuma viscoelástica. La marca es muy habitual en Amazon en España y eso facilita el servicio. El punto flojo es la información sobre los reposabrazos, que aquí tratamos de forma conservadora a la espera de confirmar su recorrido real."
+resumenCompra:
+  mejorPara: "Quien pesa cerca del límite habitual y busca una gaming con buena capacidad."
+  evitarSi: "Quieres reposabrazos de máximo recorrido garantizado de antemano."
+  alternativaDirecta: "Sharkoon Skiller SGS40 en su talla XL si priorizas otra opción de carga alta."
+  decisionRapida: "Mi recomendación cuando el peso del usuario manda y se quiere una marca conocida y fácil de encontrar."
+metodologia:
+  - "Datos tomados de la ficha de producto de Genesis y de la presencia de la marca en tiendas."
+  - "La nota premia la capacidad de 150 kg, las ruedas con freno y los cojines viscoelásticos."
+  - "Se mantiene cautela con el tipo de reposabrazos hasta confirmar su recorrido exacto."
+scoreRationale:
+  ergonomia: "Reclinación de 165 grados y cojines de cabeza y lumbar de espuma viscoelástica."
+  ajustabilidad: "Altura de asiento de 50 a 55 cm y mecanismo multiblock; reposabrazos por confirmar."
+  materiales: "Tapizado resistente, ruedas de 75 mm con freno y pistón clase 4."
+  comodidad: "Acolchado firme y memory foam en los cojines para sesiones largas."
+  calidadPrecio: "Buena capacidad de carga y disponibilidad por un precio de tramo medio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Genesis Nitro 950"
+    url: "https://genesis-zone.com/product/nitro-950"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "El tipo exacto de reposabrazos no se ha podido confirmar y se anota como 2D de forma conservadora."
+  - "Respaldo tapizado: menos ventilado que una malla."
+  - "Recorrido de altura de asiento corto, de 50 a 55 cm."
+alternativas:
+  - slug: "sharkoon-skiller-sgs40"
+    motivo: "Opción XL con buena capacidad si buscas otra gaming para pesos altos."
+  - slug: "noblechairs-hero"
+    motivo: "Gaming robusta de gama superior si subes presupuesto y priorizas carga."
+comunidad: "Genesis es una marca europea con fuerte presencia en el catálogo de Amazon España, lo que da tranquilidad de cara a envíos y posventa. De la Nitro 950 se valora la capacidad de hasta 150 kg y los cojines de espuma viscoelástica. La duda más repetida en reseñas es hasta qué punto los reposabrazos ofrecen recorrido suficiente, algo que conviene comprobar en la ficha del vendedor."
+paraQuienSi:
+  - "Usuarios de hasta 150 kg que necesitan margen de carga"
+  - "Quien quiere una marca disponible y conocida en Amazon España"
+  - "Personas que agradecen cojines de cabeza y lumbar de memory foam"
+paraQuienNo:
+  - "Quien necesita un recorrido de altura de asiento amplio"
+  - "Usuarios que exigen reposabrazos 4D confirmados"
+  - "Quien prefiere malla transpirable al tapizado"
+puntosFuertes:
+  - "Capacidad de hasta 150 kg"
+  - "Reclinación de 165 grados"
+  - "Ruedas de 75 mm con freno"
+  - "Cojines de cabeza y lumbar de espuma viscoelástica"
+puntosDebiles:
+  - "Tipo de reposabrazos sin confirmar"
+  - "Recorrido de altura de asiento corto"
+fuenteSpecs: "Web oficial Genesis (genesis-zone.com/product/nitro-950: respaldo tapizado, lumbar cojín memory foam, reclinación 165 grados, máximo 150 kg, altura asiento 50-55 cm, peso producto 24.5 kg, ruedas 75 mm con freno, mecanismo multiblock, gas clase 4, cojines de cabeza y lumbar memory foam)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  reclinacionMaxGrados: 165
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 50
+  alturaAsientoMaxCm: 55
+  mecanismo: "multiblock"
+  pesoProductoKg: 24.5
+  reposacabezas: "ajustable"

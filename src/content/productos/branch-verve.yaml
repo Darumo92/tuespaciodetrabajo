@@ -1,0 +1,84 @@
+tipo: "silla"
+nombre: "Branch Verve Chair"
+marca: "Branch"
+imagen: ""
+imagenAlt: "Silla de oficina Branch Verve con respaldo de punto 3D de colores"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 8.2
+  comodidad: 8.3
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.branchfurniture.com/products/verve-chair"
+idealPara: "Teletrabajo con estilo en Estados Unidos y Canadá, para quien quiere malla de colores certificada sin gastar de más"
+veredicto: "La Verve es la silla con más personalidad de Branch: respaldo de punto 3D transpirable en una paleta de colores poco habitual en oficina, con seis puntos de ajuste y certificación GREENGUARD Gold de bajas emisiones. Por dentro cumple lo esperable en su rango (lumbar regulable en altura, profundidad de asiento ajustable, BIFMA) y la garantía de 7 años es generosa para el precio. El gran pero para el público español es de logística: Branch solo vende y envía a Estados Unidos y Canadá, así que aquí solo llega vía importación."
+resumenCompra:
+  mejorPara: "Quien quiere una silla de oficina con diseño y malla certificada a precio medio en Norteamérica."
+  evitarSi: "Vives en España o la UE y no quieres lidiar con importación y aduanas."
+  alternativaDirecta: "Branch Ergonomic Chair de la misma marca si prefieres un enfoque más clásico y completo."
+  decisionRapida: "Bonita, transpirable y bien garantizada, pero solo tiene sentido si compras desde Estados Unidos o Canadá."
+metodologia:
+  - "Specs tomadas de la web oficial de Branch Furniture."
+  - "La nota prioriza la malla de punto 3D, los seis puntos de ajuste y las certificaciones."
+  - "Se penaliza con fuerza la disponibilidad limitada a Estados Unidos y Canadá."
+scoreRationale:
+  ergonomia: "Lumbar regulable en altura, profundidad de asiento ajustable y respaldo de punto que cede con la espalda."
+  ajustabilidad: "Seis puntos de ajuste, con reposabrazos regulables en altura, anchura y ángulo."
+  materiales: "Punto 3D transpirable, certificación BIFMA y GREENGUARD Gold de bajas emisiones."
+  comodidad: "El respaldo de punto y la inclinación con bloqueo favorecen jornadas de teletrabajo."
+  calidadPrecio: "Buen conjunto por unos 349 dólares, con la importación como sobrecoste fuera de Norteamérica."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Branch Verve Chair"
+    url: "https://www.branchfurniture.com/products/verve-chair"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Branch solo vende y envía a Estados Unidos y Canadá: no disponible en España ni en la UE salvo importación."
+  - "Inclinación de 20 grados con bloqueo, sin reclinación profunda tipo descanso."
+  - "Catálogo de colores enfocado al mercado norteamericano."
+alternativas:
+  - slug: "branch-ergonomic"
+    motivo: "La silla más completa y clásica de la misma marca si prefieres un enfoque ergonómico convencional."
+  - slug: "sihoo-doro-c300"
+    motivo: "Alternativa de malla con lumbar dinámico disponible en España, si lo tuyo es comprar sin importar."
+comunidad: "Branch es una marca estadounidense de mobiliario de oficina de venta directa que ha ganado tracción entre teletrabajadores por su relación calidad precio y su diseño. La Verve aparece en comparativas de sillas de gama media como una opción con carácter por su malla de colores y sus certificaciones de sostenibilidad. El comentario recurrente, y decisivo para el público europeo, es que la marca opera solo en Estados Unidos y Canadá, de modo que para España queda fuera de juego salvo que se asuma una importación."
+paraQuienSi:
+  - "Teletrabajadores en Estados Unidos o Canadá que quieren diseño y color"
+  - "Quien valora certificación GREENGUARD Gold y BIFMA a precio medio"
+  - "Usuarios de hasta 125 kg que buscan profundidad de asiento ajustable"
+paraQuienNo:
+  - "Compradores en España o la UE que no quieren importar"
+  - "Quien necesita reclinación profunda para descansar"
+  - "Usuarios por encima de 125 kg"
+puntosFuertes:
+  - "Respaldo de punto 3D transpirable con paleta de colores poco habitual"
+  - "Seis puntos de ajuste, con reposabrazos 3D en altura, anchura y ángulo"
+  - "Profundidad de asiento ajustable"
+  - "Certificación BIFMA y GREENGUARD Gold de bajas emisiones"
+  - "Garantía de 7 años"
+puntosDebiles:
+  - "Solo disponible en Estados Unidos y Canadá"
+  - "Inclinación limitada a 20 grados con bloqueo, sin reclinación profunda"
+fuenteSpecs: "Web oficial Branch Furniture (branchfurniture.com/products/verve-chair: respaldo de punto 3D transpirable, lumbar regulable en altura, profundidad de asiento ajustable, reposabrazos regulables en altura, anchura y ángulo con seis puntos de ajuste, inclinación de 20 grados con bloqueo, máx 125 kg / 275 lb, altura de asiento 41,6-52 cm / 16,4-20,5 in, peso del producto 18 kg / 40 lb, certificación BIFMA, certificación GREENGUARD Gold, garantía 7 años, envío solo a Estados Unidos y Canadá)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 20
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 41.6
+  alturaAsientoMaxCm: 52
+  mecanismo: "inclinacion-bloqueable"
+  certificacionBifma: true
+  pesoProductoKg: 18
+  garantiaAnios: 7
