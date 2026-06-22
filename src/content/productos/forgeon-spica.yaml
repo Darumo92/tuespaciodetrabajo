@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Forgeon Spica"
 marca: "Forgeon"
-imagen: ""
+imagen: "/img/productos/forgeon-spica.jpg"
 imagenAlt: "Silla gaming Forgeon Spica con tela transpirable y reposapiés retráctil"
 tramoPrecio: 2
 precioMin: null

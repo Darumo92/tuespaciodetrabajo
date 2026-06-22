@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Sedus black dot"
 marca: "Sedus"
-imagen: ""
+imagen: "/img/productos/sedus-black-dot.jpg"
 imagenAlt: "Silla de oficina alemana Sedus black dot con mecanismo dorsocinético"
 tramoPrecio: 4
 precioMin: null

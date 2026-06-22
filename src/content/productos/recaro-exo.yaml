@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "RECARO Exo"
 marca: "RECARO Gaming"
-imagen: ""
+imagen: "/img/productos/recaro-exo.jpg"
 imagenAlt: "Silla gaming ergonómica RECARO Exo de concha de asiento fabricada en Alemania"
 tramoPrecio: 4
 precioMin: null

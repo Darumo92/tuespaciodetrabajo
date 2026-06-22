@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Eurotech Ergohuman GEN2"
 marca: "Eurotech"
-imagen: ""
+imagen: "/img/productos/eurotech-ergohuman-gen2.jpg"
 imagenAlt: "Silla ergonómica de malla Eurotech Ergohuman GEN2 con reposacabezas ajustable"
 tramoPrecio: 3
 precioMin: null

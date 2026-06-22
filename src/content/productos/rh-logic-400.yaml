@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "RH Logic 400"
 marca: "RH"
-imagen: ""
+imagen: "/img/productos/rh-logic-400.jpg"
 imagenAlt: "Silla ergonómica escandinava RH Logic 400 de respaldo alto tapizado"
 tramoPrecio: 4
 precioMin: null

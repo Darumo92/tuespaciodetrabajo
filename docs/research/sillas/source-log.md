@@ -89,3 +89,5 @@ Diferidas (estado candidate, no producir esta oleada):
 - Backforce One Plus (backforce.gg, de Interstuhl): web devuelve HTTP 403 anti-bot; no fetcheable -> diferida (datos disponibles en Blue Angel pero pendiente de fuente oficial directa).
 
 CTA esperado: amazon.buscar para Ergohuman, Sharkoon, Vertagear, Trust (venta en Amazon ES); webOficial para RH Logic 400, Sedus, Giroflex, RECARO Exo, Quersus y Forgeon (contract/premium o exclusiva de tienda). Sin ASIN.
+
+Publicadas las 10 el 2026-06-22 con imagen del usuario (normalizadas a 800x800 fondo blanco; 4 webp y 1 png transparente convertidas a jpg). Catálogo 57 -> 67. Backlog: 10 candidate -> published.

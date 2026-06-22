@@ -6,7 +6,7 @@
 
 ## Resumen en una línea
 
-Infraestructura del catálogo terminada; catálogo en **57 sillas** tras oleadas 1-4 (oleada 4 = Bloque B, 2026-06-21). Bloque A agotado; Bloque B en marcha. Camino a 100+ por oleadas de ~10, con imágenes que sube el usuario. Plan vigente: `docs/superpowers/plans/2026-06-20-ampliacion-catalogo-sillas-100-oleadas.md`. Rama `feat/sillas-catalogo-100-oleadas`.
+Infraestructura del catálogo terminada; catálogo en **67 sillas** tras oleadas 1-5 (oleada 5 = marcas nuevas pista forocoches, 2026-06-22). Bloque A agotado; Bloque B en marcha. Camino a 100+ por oleadas de ~10, con imágenes que sube el usuario. Plan vigente: `docs/superpowers/plans/2026-06-20-ampliacion-catalogo-sillas-100-oleadas.md`. Rama `feat/sillas-catalogo-100-oleadas`.
 
 ## Decisiones tomadas por el usuario
 
@@ -33,7 +33,7 @@ Infraestructura del catálogo terminada; catálogo en **57 sillas** tras oleadas
 
 **Extra (no era Task):** fix del filtrado del catálogo que rompí en Task 3 (ver más abajo).
 
-## Catálogo actual: 57 sillas (oleada 4 publicada 2026-06-21)
+## Catálogo actual: 67 sillas (oleada 5 publicada 2026-06-22)
 
 - **19 originales** (auditadas, `published`).
 - **5 piloto nuevas** (specs oficiales verificadas, CTA = Amazon search fallback, sin ASIN):
@@ -148,4 +148,20 @@ Catálogo 47 -> 57. Build 126 páginas, validate (57) + test (45/45) verdes. Bac
 
 Backlog Bloque B restante (candidate): andaseat-kaiser-3e + songmics-obg-cloud (descartada). Pistas sin verificar de un post de forocoches (oficina/gaming ES) pendientes de research: Eurotech Ergohuman, RH Logic 400, Nightingale/Biplax CXO, Steelcase Please, Herman Miller Celle, AKRacing, Sharkoon, RECARO, Backforce, Phoenix, Euromof, Biplax, Luyando, Vertagear, Maxnomic, Quersus.
 
-Siguiente: Oleada 5 (Task 6) = research nuevas candidatas (forocoches + Bloque B restante) y producir lote ~10. Al pasar de 50 fichas, considerar Task 11 (búsqueda+grupos de filtros del catálogo) como PLAN APARTE (es código).
+Siguiente tras oleada 4: Oleada 5 (hecha, ver abajo).
+
+## Oleada 5 — marcas nuevas pista forocoches (2026-06-22)
+
+Task 6. Backlog sin candidatas frescas: research previo de marcas nuevas (pistas de un post de forocoches), +14 candidatas con web oficial fetcheada (10 producibles + 4 diferidas). Descartes/diferidas por no fetcheable o specs escasas: Wilkhahn AT (specs configurables escasas), Maxnomic OFC (specs escasas), AKRacing Masters Max (web 402 anti-bot), Backforce One Plus (web 403 anti-bot).
+
+10 fichas publicadas con imagen, fuente oficial fetcheada (2026-06-22), estilo casa (specs sin dato omitidas):
+- Oficina/premium: eurotech-ergohuman-gen2 (malla iconica, amazon.buscar), rh-logic-400 (Flokk 2PP, webOficial), sedus-black-dot (contract aleman dorsokinetic, webOficial), giroflex-353 (swivel suizo Automatic Move, webOficial).
+- Gaming: recaro-exo (concha ergo Made in Germany, webOficial), vertagear-sl5000 (racing aluminio, amazon.buscar), sharkoon-skiller-sgs40 (asiento XL EN1335, amazon.buscar), quersus-vaos-3 (europea LUMBFLEX, webOficial), forgeon-spica (marca PcComponentes, webOficial), trust-gxt-714-ruya (budget chasis FSC, amazon.buscar).
+
+CTA: amazon.buscar para las que se venden en Amazon ES; webOficial para contract/premium y exclusivas de tienda (Forgeon = PcComponentes). Sin ASIN. Revisado spec-compliance + humanizacion (rotos moldes calcados de decisionRapida/paraQuienNo/comunidad). Imágenes del usuario normalizadas a 800x800 fondo blanco (4 webp y 1 png transparente convertidas a jpg).
+
+Catálogo 57 -> 67. Build 141 páginas, validate (67) + test (45/45) verdes. Backlog: 10 candidate->published; quedan candidate andaseat-kaiser-3e, songmics (descartada) y las 4 diferidas de oleada 5.
+
+AVISO multi-PC: durante la sesión apareció en el árbol de trabajo un WIP grande de i18n (astro.config, components, src/i18n, [locale] pages, articulosI18n, config.ts, plan internacionalizacion) ajeno a esta oleada; NO se tocó ni se commiteó. El build regeneró public/_headers (CSP entrelazado con scripts i18n); dejado sin commitear.
+
+Siguiente: Oleada 6 (Task 7, lote ~10). Al estar muy por encima de 50 fichas, retomar Task 11 (búsqueda + grupos de filtros del catálogo) como PLAN APARTE (es código, no contenido).

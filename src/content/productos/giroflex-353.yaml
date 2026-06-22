@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Giroflex 353"
 marca: "Giroflex"
-imagen: ""
+imagen: "/img/productos/giroflex-353.jpg"
 imagenAlt: "Silla giratoria suiza Giroflex 353 con mecanismo Automatic Move"
 tramoPrecio: 3
 precioMin: null
