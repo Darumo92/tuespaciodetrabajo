@@ -1,0 +1,92 @@
+tipo: "silla"
+nombre: "Vertagear SL5000"
+marca: "Vertagear"
+imagen: ""
+imagenAlt: "Silla gaming Vertagear SL5000 con respaldo de polipiel y reposabrazos 4D"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 8
+  comodidad: 8
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: "Vertagear SL5000"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Gaming de gama alta con construcción de aluminio y garantía larga en el chasis"
+veredicto: "La SL5000 es la silla gaming racing con la que Vertagear apuesta por la durabilidad: base de aluminio de cinco radios, espuma UPHR de alta resiliencia y un chasis de acero con diez años de garantía, una cobertura poco habitual en esta categoría. El respaldo es de polipiel sobre espuma, no de malla, así que en verano calienta más, y conviene tener claro que esos diez años cubren el chasis, mientras que el resto de componentes quedan en dos años. Los reposabrazos 4D y los cojines lumbar y cervical de viscoelástica desmontables completan una propuesta sólida para quien busca una gaming bien construida y no le importa pagar por encima de la media."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming racing robusta de aluminio con garantía larga en el chasis."
+  evitarSi: "Necesitas malla transpirable o buscas el menor precio por ergonomía."
+  alternativaDirecta: "Secretlab TITAN Evo si prefieres más opciones de tallas y acabado premium."
+  decisionRapida: "Construcción de aluminio y diez años de garantía en el chasis justifican pagar algo por encima de la media."
+metodologia:
+  - "Specs tomadas de la web oficial de Vertagear."
+  - "La nota prioriza la construcción de aluminio, los reposabrazos 4D y la capacidad de carga."
+  - "Se penaliza el respaldo de polipiel frente a la malla y el precio por encima de la media."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical de viscoelástica desmontables, sin lumbar dinámico real."
+  ajustabilidad: "Reposabrazos 4D, altura regulable y reclinación hasta 140°."
+  materiales: "Base de aluminio, espuma UPHR y polipiel sobre chasis de acero con garantía de diez años."
+  comodidad: "Buen apoyo con espuma de alta resiliencia, firme al principio."
+  calidadPrecio: "Correcta dentro de la gama, aunque hay malla ergonómica por menos dinero."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Vertagear SL5000 Gaming Chair"
+    url: "https://www.vertagear.com/products/sl5000-gaming-chair"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Respaldo de polipiel sobre espuma, no de malla: transpira menos en verano."
+  - "La garantía de diez años cubre el chasis de acero; el resto de componentes, dos años."
+  - "Precio por encima de la media de las sillas gaming."
+alternativas:
+  - slug: "secretlab-titan-evo"
+    motivo: "Más opciones de tallas y acabado premium si buscas una alternativa directa."
+  - slug: "noblechairs-icon"
+    motivo: "Gaming de polipiel robusta con estética sobria si priorizas materiales."
+  - slug: "corsair-t3-rush"
+    motivo: "Gaming de tela más barata si el presupuesto es ajustado."
+comunidad: "Buena valoración general en reseñas de hardware: se destaca la construcción de aluminio, la estabilidad de la base y la garantía larga del chasis como puntos diferenciales frente a gaming de plástico. En el debe aparece lo de siempre con la polipiel, el calor en verano, y un precio que se va por encima de la media."
+paraQuienSi:
+  - "Gamers que quieren una silla racing bien construida en aluminio"
+  - "Usuarios de hasta 193 cm dentro del límite de 150 kg"
+  - "Quien valora una garantía de chasis larga y reposabrazos 4D"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Quien no quiere pagar de más por un extra de robustez que apenas exprimirá"
+  - "Quien espera que los diez años cubran toda la silla, no solo el chasis"
+puntosFuertes:
+  - "Base de aluminio de cinco radios"
+  - "Reposabrazos 4D"
+  - "Espuma UPHR de alta resiliencia"
+  - "Cojines lumbar y cervical de viscoelástica desmontables"
+  - "Garantía de diez años en el chasis de acero"
+puntosDebiles:
+  - "Respaldo de polipiel, calienta más en verano"
+  - "La garantía completa solo cubre dos años fuera del chasis"
+  - "Precio por encima de la media"
+fuenteSpecs: "Web oficial Vertagear (vertagear.com/products/sl5000-gaming-chair: polipiel sobre espuma UPHR, reclinación 140°, reposabrazos 4D, máx 150 kg, altura recomendada hasta 193 cm, asiento 57x48 cm, base de aluminio, ruedas Penta RS1 65 mm, pistón clase 4, peso 26 kg, garantía 10 años chasis)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 140
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 50
+  alturaAsientoMaxCm: 60
+  baseMaterial: "Aluminio"
+  pesoProductoKg: 26
+  garantiaAnios: 10
+  alturaRecomendadaMaxCm: 193
+  anchoAsientoCm: 57
+  profundidadAsientoMaxCm: 48
+  reposacabezas: "fijo"

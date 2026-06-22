@@ -1,0 +1,85 @@
+tipo: "silla"
+nombre: "RECARO Exo"
+marca: "RECARO Gaming"
+imagen: ""
+imagenAlt: "Silla gaming ergonómica RECARO Exo de concha de asiento fabricada en Alemania"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.8
+  ajustabilidad: 8.0
+  materiales: 9.0
+  comodidad: 8.8
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.recaro-gaming.com/en/recaro-exo/"
+idealPara: "Gaming de concha ergonómica fabricada en Alemania, para quien quiere postura firme y materiales de origen motorsport"
+veredicto: "La RECARO Exo no es una gaming racing reclinable al uso, sino una silla de concha de asiento ergonómica fabricada en Alemania que aplica el saber hacer de RECARO en motorsport. En lugar de tumbarse, ofrece cuatro posiciones de asiento preconfiguradas (Attack, Core Focus, Core Relax y Recharge), un respaldo de concha individualizable con espuma fría y tejidos transpirables, y un resalte antideslizamiento que evita escurrirse hacia delante. Lleva lumbar fijo integrado y reposabrazos 4D acolchados en el modelo base; las versiones FX y Platinum suben a 5D y base de aluminio. Es una compra premium para quien valora postura firme y construcción seria por encima de un reclinado profundo."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming de concha ergonómica con postura firme y materiales de motorsport."
+  evitarSi: "Buscas reclinarte casi en horizontal o quieres el precio más bajo."
+  alternativaDirecta: "Secretlab TITAN Evo si prefieres una gaming premium con reclinación profunda."
+  decisionRapida: "Postura firme y fabricación alemana antes que un reclinado profundo: ese es el trato de la Exo."
+metodologia:
+  - "Specs tomadas de la web oficial de RECARO Gaming."
+  - "La nota prioriza la concha ergonómica, las posiciones preconfiguradas y la fabricación alemana."
+  - "Se penaliza la ausencia de reclinado libre y el precio de tramo premium."
+scoreRationale:
+  ergonomia: "La concha individualizable y las cuatro posiciones preconfiguradas favorecen una postura firme y activa."
+  ajustabilidad: "Reposabrazos 4D y ajuste de la fuerza del resorte cubren lo esencial, sin reclinado libre."
+  materiales: "Espuma fría de origen motorsport, tejidos transpirables y fabricación alemana certificada."
+  comodidad: "El resalte antideslizamiento y el apoyo envolvente ayudan en sesiones largas."
+  calidadPrecio: "Premium justificado por construcción y procedencia más que por número de funciones."
+fuentes:
+  - tipo: "oficial"
+    nombre: "RECARO Exo"
+    url: "https://www.recaro-gaming.com/en/recaro-exo/"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "No tiene reclinado libre: ofrece cuatro posiciones de asiento preconfiguradas."
+  - "Lumbar fijo integrado en el respaldo, sin ajuste manual."
+  - "Precio de tramo premium; el modelo base lleva 4D y base de plástico reforzado."
+alternativas:
+  - slug: "secretlab-titan-evo"
+    motivo: "Gaming premium con reclinación profunda si buscas alternativa directa con más recline."
+  - slug: "noblechairs-icon"
+    motivo: "Gaming de piel premium y construcción robusta si priorizas acabado y carga."
+  - slug: "razer-iskur-v2"
+    motivo: "Gaming con lumbar adaptativo real si quieres ergonomía con ecosistema de marca."
+comunidad: "RECARO arrastra una reputación muy fuerte por sus asientos de automoción y motorsport, y la Exo se beneficia de esa imagen de calidad de materiales y fabricación alemana. Como producto de gaming es relativamente reciente y las reseñas independientes son menos numerosas que en marcas veteranas del sector; el consenso disponible destaca la calidad de construcción y el enfoque de postura firme, con el precio como principal pega frente a gaming más convencionales."
+paraQuienSi:
+  - "Gamers que prefieren postura firme y activa a tumbarse"
+  - "Quien valora materiales de origen motorsport y fabricación alemana"
+  - "Usuarios de entre 150 y 195 cm dentro del límite de 150 kg"
+paraQuienNo:
+  - "Quien quiere reclinarse casi en horizontal"
+  - "Usuarios que necesitan lumbar ajustable"
+  - "Quien busca una gaming barata para un uso ocasional"
+puntosFuertes:
+  - "Concha de asiento ergonómica individualizable fabricada en Alemania"
+  - "Cuatro posiciones de asiento preconfiguradas: Attack, Core Focus, Core Relax y Recharge"
+  - "Espuma fría de origen motorsport y tejidos transpirables"
+  - "Resalte antideslizamiento que evita escurrirse hacia delante"
+  - "Reposabrazos 4D acolchados (5D y base de aluminio en FX y Platinum)"
+  - "Soporta hasta 150 kg, certificación EN 1335, sello GS y garantía de 5 años"
+puntosDebiles:
+  - "Sin reclinado libre, solo posiciones preconfiguradas"
+  - "Lumbar fijo y precio de tramo premium"
+fuenteSpecs: "Web oficial RECARO Gaming (recaro-gaming.com/en/recaro-exo/: silla de concha de asiento ergonómica fabricada en Alemania, cuatro posiciones preconfiguradas Attack, Core Focus, Core Relax y Recharge, respaldo de concha individualizable con espuma fría de motorsport y tejidos transpirables, resalte antideslizamiento, lumbar fijo integrado, reposabrazos 4D acolchados con 5D y base de aluminio en FX y Platinum, altura de asiento ajustable con rueda de fuerza del resorte, máx 150 kg, altura recomendada 150-195 cm, base de plástico reforzado con fibra de vidrio en Exo y aluminio en FX y Platinum, certif. EN 1335, sello GS, Made in Germany, garantía 5 años)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  pesoMaxKg: 150
+  mecanismo: "Cuatro posiciones de asiento preconfiguradas con ajuste de la fuerza del resorte"
+  baseMaterial: "Plástico reforzado con fibra de vidrio"
+  garantiaAnios: 5
+  alturaRecomendadaMinCm: 150
+  alturaRecomendadaMaxCm: 195
+  certificacionEn1335: true

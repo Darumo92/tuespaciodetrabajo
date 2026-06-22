@@ -1,0 +1,85 @@
+tipo: "silla"
+nombre: "Sedus black dot"
+marca: "Sedus"
+imagen: ""
+imagenAlt: "Silla de oficina alemana Sedus black dot con mecanismo dorsocinético"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.8
+  ajustabilidad: 8.0
+  materiales: 9.0
+  comodidad: 8.8
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.sedus.com/en/products/chairs/black-dot"
+idealPara: "Oficina contract que prioriza durabilidad alemana y un mecanismo que acompaña el movimiento natural de la espalda"
+veredicto: "La Sedus black dot es una silla de oficina alemana de gama contract cuya seña de identidad es el mecanismo dorsocinético patentado: el respaldo va unido por una articulación flexible que cede 15 grados hacia atrás y 8 grados lateralmente, acompañando el movimiento natural del tronco. A eso suma el mecanismo Sedo-Lift III de elevación del asiento con suspensión, una construcción muy seria y certificación EN 1335-1:2023 Tipo A, entre otras (GS, GREENGUARD, AGR, Blue Angel). El modelo tapizado estándar lleva lumbar fijo; existe la variante black dot net de membrana de malla que añade lumbar ajustable en altura. Es una compra premium que se justifica por durabilidad y garantía más que por número de ajustes."
+resumenCompra:
+  mejorPara: "Quien quiere una silla de oficina alemana muy duradera con movimiento lateral del respaldo."
+  evitarSi: "Buscas muchos ajustes manuales o el mejor precio por ergonomía."
+  alternativaDirecta: "Steelcase Think si quieres contract premium con un mecanismo que también se adapta al usuario."
+  decisionRapida: "Una compra de empresa: durabilidad alemana y un respaldo que cede contigo, a cambio de renunciar a unos cuantos ajustes."
+metodologia:
+  - "Specs tomadas de la web oficial de Sedus."
+  - "La nota prioriza el mecanismo dorsocinético, el Sedo-Lift III y las certificaciones."
+  - "Se penaliza el precio premium y el lumbar fijo del modelo tapizado estándar."
+scoreRationale:
+  ergonomia: "El mecanismo dorsocinético con 15 grados atrás y 8 laterales acompaña el movimiento del tronco."
+  ajustabilidad: "Reposabrazos estándar de ajuste de altura y lumbar fijo en el modelo tapizado limitan algo el recorrido."
+  materiales: "Construcción alemana con base de aluminio y certificaciones de calidad y sostenibilidad."
+  comodidad: "El Sedo-Lift III con suspensión y el respaldo flexible favorecen jornadas largas."
+  calidadPrecio: "Premium justificado por durabilidad y garantía extendida del mecanismo."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Sedus black dot"
+    url: "https://www.sedus.com/en/products/chairs/black-dot"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "El modelo tapizado estándar lleva lumbar fijo; la variante net añade lumbar ajustable en altura."
+  - "Reposabrazos estándar solo ajustables en altura (opcionales 4D)."
+  - "Precio de tramo premium contract."
+alternativas:
+  - slug: "steelcase-think"
+    motivo: "Contract premium con mecanismo que se adapta al usuario si buscas alternativa directa."
+  - slug: "haworth-zody"
+    motivo: "Otra de oficina premium con soporte postural avalado por estudios."
+  - slug: "hag-sofi"
+    motivo: "Escandinava de movimiento si priorizas un respaldo activo a un precio algo menor."
+comunidad: "Sedus es un fabricante alemán de referencia en mobiliario de oficina contract, con muy buena reputación de durabilidad y calidad de fabricación en entornos profesionales europeos. La black dot se valora por su mecanismo dorsocinético y su construcción, aunque las reseñas de usuario final son menos numerosas que en marcas de consumo, ya que su canal principal es el de proyecto y empresa. El consenso disponible la sitúa como una silla seria y longeva, con el precio como principal barrera."
+paraQuienSi:
+  - "Empresas y particulares que buscan durabilidad alemana certificada"
+  - "Quien valora un respaldo que cede atrás y lateralmente con el cuerpo"
+  - "Usuarios que priorizan garantía larga sobre número de ajustes"
+paraQuienNo:
+  - "Quien quiere muchos ajustes manuales en el modelo base"
+  - "Quien mira sobre todo el precio y no la vida útil"
+  - "Quien necesita lumbar ajustable sin pasar a la variante net"
+puntosFuertes:
+  - "Mecanismo dorsocinético patentado, 15 grados atrás y 8 laterales"
+  - "Mecanismo Sedo-Lift III de elevación con suspensión"
+  - "Base de aluminio y construcción alemana duradera"
+  - "Certificación EN 1335-1:2023 Tipo A, además GS, GREENGUARD, AGR y Blue Angel"
+  - "Garantía de 5 años, con 30 años en el mecanismo Sedo-Lift"
+  - "Soporta hasta 130 kg (150 kg en la variante black dot 24)"
+puntosDebiles:
+  - "Lumbar fijo en el modelo tapizado estándar"
+  - "Precio de tramo premium"
+fuenteSpecs: "Web oficial Sedus (sedus.com/en/products/chairs/black-dot: mecanismo dorsocinético patentado con respaldo flexible 15 grados atrás y 8 laterales, mecanismo Sedo-Lift III de elevación con suspensión, respaldo tapizado en espuma con variante net de malla, reposabrazos estándar ajustables en altura y opcionales 4D, lumbar fijo en estándar y ajustable en altura en la variante net, altura asiento 420-530 mm, base de aluminio, máx 130 kg y 150 kg en la variante black dot 24, certif. EN 1335-1:2023 Tipo A, GS, GREENGUARD, AGR, Blue Angel, garantía 5 años y 30 años en el mecanismo Sedo-Lift)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "1d"
+  pesoMaxKg: 130
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 53
+  mecanismo: "Dorsocinético patentado con Sedo-Lift III de elevación y suspensión"
+  baseMaterial: "Aluminio"
+  garantiaAnios: 5
+  certificacionEn1335: true

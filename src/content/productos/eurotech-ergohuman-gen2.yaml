@@ -1,0 +1,90 @@
+tipo: "silla"
+nombre: "Eurotech Ergohuman GEN2"
+marca: "Eurotech"
+imagen: ""
+imagenAlt: "Silla ergonómica de malla Eurotech Ergohuman GEN2 con reposacabezas ajustable"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.8
+  ajustabilidad: 8.5
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Ergohuman silla ergonómica"
+webOficial: null
+idealPara: "Jornada completa en malla integral con reposacabezas ajustable, a un precio por debajo de las premium"
+veredicto: "La Ergohuman GEN2 es la malla ergonómica clásica que lleva años funcionando como alternativa a la Aeron por bastante menos dinero. Su gran baza es el panel lumbar dinámico de 6 vías que acompaña la zona lumbar en lugar de empujar con presión fija, sumado a malla integral en asiento, respaldo y reposacabezas, y reposabrazos 4D. No es la silla más fina de acabado ni la más moderna de estética, pero entrega ergonomía de malla completa con reposacabezas regulable que pocas rivales de su tramo ofrecen. La cobertura de por vida en piezas (5 años en tapicería) refuerza la sensación de compra a largo plazo."
+resumenCompra:
+  mejorPara: "Quien quiere malla integral con reposacabezas ajustable y lumbar dinámico sin pagar precio premium."
+  evitarSi: "Buscas un acabado contract muy refinado o pesas por encima de 125 kg."
+  alternativaDirecta: "Herman Miller Mirra 2 si prefieres marca premium con respaldo de malla y mejor acabado."
+  decisionRapida: "Malla integral con reposacabezas regulable por bastante menos de lo que cuesta una Aeron: ese es su argumento."
+metodologia:
+  - "Specs tomadas de la web oficial de Eurotech Seating y de ergohuman.com."
+  - "La nota prioriza el lumbar dinámico, la malla integral y los reposabrazos 4D."
+  - "Se penaliza la falta de garantía numérica unificada y el límite de carga de 125 kg."
+scoreRationale:
+  ergonomia: "Panel lumbar dinámico de 6 vías y malla integral la sitúan por encima de la media de su tramo."
+  ajustabilidad: "Reposabrazos 4D, reposacabezas ajustable y profundidad de asiento regulable cubren casi todo."
+  materiales: "Malla densa en asiento, respaldo y reposacabezas; acabado funcional más que premium."
+  comodidad: "Buen reparto de presión gracias a la malla y al lumbar que sigue la espalda."
+  calidadPrecio: "Muy competitiva como malla integral frente a alternativas premium más caras."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Eurotech Ergohuman GEN2 High All Mesh"
+    url: "https://eurotechseating.com/executive/ergohuman_gen2_high_all_mesh"
+    fechaConsulta: "2026-06-22"
+  - tipo: "oficial"
+    nombre: "Ergohuman web oficial"
+    url: "https://www.ergohuman.com/"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Límite de carga de 125 kg, ajustado para usuarios corpulentos."
+  - "Garantía no unificada en un número: cobertura de por vida en piezas y 5 años en tapicería."
+  - "Estética y acabado funcionales, lejos del refinamiento de una contract premium."
+alternativas:
+  - slug: "herman-miller-mirra-2"
+    motivo: "Marca premium con respaldo de malla y mejor acabado si subes presupuesto."
+  - slug: "sihoo-doro-c300"
+    motivo: "Malla con lumbar dinámico más económica si no necesitas reposacabezas en malla."
+  - slug: "steelcase-series-1"
+    motivo: "Silla de oficina equilibrada y de marca reconocida en un tramo similar."
+comunidad: "Modelo veterano con amplio recorrido en foros de oficina y ergonomía, donde se la cita de forma recurrente como la alternativa razonable a la Aeron por mucho menos dinero gracias a su malla integral y su reposacabezas ajustable. Las críticas habituales apuntan a un acabado plástico algo justo para el precio y a un montaje que conviene hacer con calma; el consenso es positivo en confort de malla para jornadas largas."
+paraQuienSi:
+  - "Personas que pasan 6-10 h sentadas y quieren malla integral transpirable"
+  - "Quien busca reposacabezas ajustable en malla, poco común en su tramo"
+  - "Usuarios que valoran lumbar dinámico que acompaña la espalda"
+paraQuienNo:
+  - "Usuarios de más de 125 kg"
+  - "Quien quiere un acabado contract muy refinado"
+  - "Compras de iniciación con el presupuesto muy corto"
+puntosFuertes:
+  - "Panel lumbar dinámico de 6 vías que sigue la zona lumbar"
+  - "Malla integral en asiento, respaldo y reposacabezas"
+  - "Reposacabezas ajustable en altura y con pivote"
+  - "Reposabrazos 4D ajustables en altura, profundidad y anchura"
+  - "Profundidad de asiento regulable"
+  - "Cobertura de por vida en piezas y 5 años en tapicería"
+puntosDebiles:
+  - "Límite de carga de 125 kg"
+  - "Acabado funcional, poco premium"
+fuenteSpecs: "Web oficial Eurotech Seating (eurotechseating.com/executive/ergohuman_gen2_high_all_mesh: malla integral, lumbar dinámico de 6 vías, reposacabezas ajustable con pivote, reposabrazos 4D, altura asiento 45-54 cm (17,83-21,38 pulgadas), ancho asiento 52 cm, profundidad máx 50 cm, profundidad regulable, máx 125 kg / 275 lb, mecanismo sincronizado con bloqueo en varias posiciones e inclinación frontal) + ergohuman.com"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 54
+  mecanismo: "Sincronizado con bloqueo de inclinación en varias posiciones e inclinación frontal"
+  anchoAsientoCm: 52
+  profundidadAsientoMaxCm: 50
+  reposacabezas: "ajustable"

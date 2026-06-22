@@ -1,0 +1,85 @@
+tipo: "silla"
+nombre: "Trust GXT 714 Ruya"
+marca: "Trust Gaming"
+imagen: ""
+imagenAlt: "Silla gaming Trust GXT 714 Ruya con chasis de madera certificada FSC y tejido transpirable"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 3.8
+valoraciones:
+  ergonomia: 6.5
+  ajustabilidad: 7
+  materiales: 7
+  comodidad: 7
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Trust GXT 714 Ruya"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Gaming de entrada con chasis de madera certificada FSC y tejido transpirable"
+veredicto: "La GXT 714 Ruya es la apuesta de Trust por una gaming asequible con un punto diferencial poco habitual: su chasis de madera cuenta con certificación FSC, un guiño a la sostenibilidad raro en esta gama. Combina respaldo de espuma de alta densidad con tejido transpirable y polipiel en laterales y trasera, asiento de espuma moldeada, reposabrazos 3D y función de inclinación con bloqueo. Es una silla de presupuesto ajustado, así que el soporte lumbar son cojines desmontables y los ajustes son los básicos. Para quien busca una gaming económica que transpire bien y con un componente sostenible, cumple sin pretensiones."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming económica transpirable con un punto sostenible."
+  evitarSi: "Necesitas reposabrazos 4D o un lumbar dinámico."
+  alternativaDirecta: "Corsair TC100 si prefieres una marca gaming consolidada al mismo precio."
+  decisionRapida: "Si quieres lo básico que transpire y cueste poco, sin pedirle más, cumple."
+metodologia:
+  - "Specs tomadas de la web oficial de Trust."
+  - "La nota prioriza el tejido transpirable, el chasis FSC y la relación calidad-precio."
+  - "Se penalizan los reposabrazos 3D y el soporte lumbar mediante cojín frente a opciones superiores."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical ajustables y desmontables, sin sistema dinámico."
+  ajustabilidad: "Reposabrazos 3D, altura regulable e inclinación con bloqueo."
+  materiales: "Espuma de alta densidad, tejido transpirable y chasis de madera certificada FSC."
+  comodidad: "Tejido fresco y espuma moldeada correctos para su precio."
+  calidadPrecio: "Muy ajustada: ofrece transpirabilidad y un extra sostenible a precio de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Trust GXT 714 Ruya Gaming Chair"
+    url: "https://www.trust.com/en/product/24908-gxt-714-ruya-gaming-chair-black"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Reposabrazos 3D, sin opción 4D."
+  - "Soporte lumbar mediante cojín desmontable, sin sistema dinámico."
+  - "Ajustes básicos propios de una gaming de entrada."
+alternativas:
+  - slug: "corsair-tc100"
+    motivo: "Gaming económica de marca consolidada como alternativa directa."
+  - slug: "drift-dr500"
+    motivo: "Gaming racing española a precio contenido si comparas opciones."
+  - slug: "ikea-styrspel"
+    motivo: "Gaming económica de IKEA si priorizas precio y disponibilidad."
+comunidad: "Acogida correcta para su gama en reseñas y opiniones: se valora el tejido transpirable, el precio ajustado y el detalle del chasis con certificación FSC como diferencial sostenible. Los reproches se ciñen a lo esperable en una gaming de entrada, reposabrazos solo 3D y ajustes justos."
+paraQuienSi:
+  - "Quien busca una gaming económica que transpire bien"
+  - "Usuarios de hasta 195 cm dentro del límite de 150 kg"
+  - "Quien valora un componente sostenible con la madera certificada FSC"
+paraQuienNo:
+  - "Quien necesita reposabrazos 4D o lumbar dinámico"
+  - "Quien quiere muchos ajustes finos de ergonomía"
+  - "Usuarios que buscan acabados premium"
+puntosFuertes:
+  - "Chasis de madera con certificación FSC"
+  - "Tejido transpirable con polipiel en laterales y trasera"
+  - "Reposabrazos 3D"
+  - "Cojines lumbar y cervical ajustables y desmontables"
+  - "Función de inclinación con bloqueo"
+puntosDebiles:
+  - "Reposabrazos 3D, sin opción 4D"
+  - "Soporte lumbar mediante cojín, sin sistema dinámico"
+  - "Ajustes básicos para su categoría"
+fuenteSpecs: "Web oficial Trust (trust.com/en/product/24908-gxt-714-ruya-gaming-chair-black: chasis de madera certificada FSC, respaldo de espuma de alta densidad con tejido transpirable y polipiel en laterales y trasera, asiento de espuma moldeada, reposabrazos 3D, cojines lumbar y cervical ajustables y desmontables, inclinación con bloqueo, pistón de gas clase 4 probado hasta 150 kg, altura recomendada hasta 195 cm, ancho de asiento 52 cm, dimensiones 71x75 cm, altura mínima 134 cm)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "mixto"
+  reposabrazos: "3d"
+  pesoMaxKg: 150
+  alturaRecomendadaMaxCm: 195
+  anchoAsientoCm: 52
+  reposacabezas: "fijo"
