@@ -1,0 +1,86 @@
+tipo: "silla"
+nombre: "Giroflex 353"
+marca: "Giroflex"
+imagen: "/img/productos/giroflex-353.jpg"
+imagenAlt: "Silla giratoria suiza Giroflex 353 con mecanismo Automatic Move"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.flokk.com/us/en-gb/products/giroflex-353"
+idealPara: "Quien quiere una silla giratoria de fabricación suiza que se autoajusta al peso, ideal para estaturas más bajas"
+veredicto: "La Giroflex 353 es una silla giratoria suiza diseñada por Paolo Fancelli cuya gran idea es el mecanismo Automatic Move, que se autoajusta al peso del usuario sin manivelas. El asiento tiene un perfil de dos zonas que envuelve la pelvis y evita deslizarse hacia delante, con el borde delantero ligeramente inclinado para descargar los muslos. Su rango de altura arranca bastante bajo, lo que la hace apta para personas de menor estatura, un punto fuerte poco habitual. El respaldo se ofrece en tejido de punto 3D o tapizado clásico. Suma fabricación suiza con certificación Cradle to Cradle y un Red Dot 2014. Es una compra sólida para quien valora autoajuste y procedencia sobre un exceso de palancas."
+resumenCompra:
+  mejorPara: "Quien quiere autoajuste al peso y un asiento bajo apto para estaturas menores."
+  evitarSi: "Necesitas reposabrazos de serie o muchos ajustes manuales documentados."
+  alternativaDirecta: "HAG SoFi si buscas otra giratoria de movimiento con procedencia escandinava."
+  decisionRapida: "Si necesitas que el asiento baje mucho y prefieres que la silla se ajuste sola, esta suiza encaja."
+metodologia:
+  - "Specs tomadas de la web oficial de Flokk."
+  - "La nota prioriza el mecanismo Automatic Move, el perfil de asiento de dos zonas y la altura baja."
+  - "Se penaliza la ausencia de reposabrazos de serie y de datos de lumbar y carga máxima."
+scoreRationale:
+  ergonomia: "El asiento de dos zonas que envuelve la pelvis y el Automatic Move reparten bien el apoyo."
+  ajustabilidad: "El autoajuste al peso simplifica el uso, aunque hay pocos ajustes manuales declarados."
+  materiales: "Fabricación suiza con tejido de punto 3D o tapizado y certificación Cradle to Cradle."
+  comodidad: "El borde delantero inclinado descarga los muslos y favorece estaturas menores."
+  calidadPrecio: "Equilibrada para una silla de procedencia suiza con autoajuste."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Giroflex 353 - Flokk"
+    url: "https://store.flokk.com/us/en-gb/products/giroflex-353"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Reposabrazos opcionales, no incluidos de serie en la información verificada."
+  - "No se especifican lumbar ni capacidad máxima de carga en la fuente consultada."
+  - "Pocos ajustes manuales: el grueso del trabajo lo hace el autoajuste."
+alternativas:
+  - slug: "hag-sofi"
+    motivo: "Otra giratoria de movimiento con procedencia escandinava si buscas alternativa directa."
+  - slug: "sedus-black-dot"
+    motivo: "Contract alemana con respaldo que acompaña el cuerpo si subes presupuesto."
+  - slug: "ikea-jarvfjallet"
+    motivo: "Opción de oficina más económica si priorizas el precio."
+comunidad: "Giroflex es una marca suiza con buena reputación de calidad y diseño en el segmento de oficina, ahora bajo el grupo Flokk. La 353 se reconoce por su diseño premiado (Red Dot 2014) y su mecanismo de autoajuste, aunque las reseñas públicas de usuario final son limitadas porque su canal principal es el contract y el de proyecto. El consenso disponible la describe como una silla bien construida y cómoda, especialmente valorada por quienes buscan un asiento bajo."
+paraQuienSi:
+  - "Personas de menor estatura que necesitan un asiento que baje mucho"
+  - "Quien prefiere autoajuste al peso a manejar muchas palancas"
+  - "Usuarios que valoran fabricación suiza y certificación de sostenibilidad"
+paraQuienNo:
+  - "Quien necesita reposabrazos de serie sin pagar opción"
+  - "Usuarios que quieren lumbar y ajustes manuales detallados"
+  - "Quien busca el precio más bajo posible"
+puntosFuertes:
+  - "Mecanismo Automatic Move que se autoajusta al peso del usuario"
+  - "Asiento de dos zonas que envuelve la pelvis y evita deslizarse"
+  - "Borde delantero inclinado que descarga los muslos"
+  - "Asiento bajo apto para personas de menor estatura"
+  - "Fabricación suiza con certificación Cradle to Cradle y Red Dot 2014"
+  - "Respaldo en tejido de punto 3D o tapizado clásico"
+puntosDebiles:
+  - "Reposabrazos opcionales, no de serie"
+  - "Datos de lumbar y carga máxima no especificados"
+fuenteSpecs: "Web oficial Flokk (store.flokk.com/us/en-gb/products/giroflex-353: diseño de Paolo Fancelli, mecanismo Automatic Move de autoajuste al peso, asiento de dos zonas que envuelve la pelvis con borde delantero inclinado, respaldo en tejido de punto 3D o tapizado, altura asiento 390-510 mm, ancho asiento 490 mm, profundidad asiento 380-440 mm, altura respaldo rango 59-65 cm, base de 5 radios en plástico negro, fabricación suiza con certificación Cradle to Cradle y Red Dot 2014)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "ninguno"
+  alturaAsientoMinCm: 39
+  alturaAsientoMaxCm: 51
+  baseMaterial: "Plástico"
+  mecanismo: "Automatic Move de autoajuste al peso del usuario"
+  anchoAsientoCm: 49
+  profundidadAsientoMinCm: 38
+  profundidadAsientoMaxCm: 44
+  alturaRespaldoCm: 62

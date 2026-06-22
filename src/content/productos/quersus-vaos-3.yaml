@@ -1,0 +1,89 @@
+tipo: "silla"
+nombre: "Quersus VAOS.3"
+marca: "Quersus"
+imagen: "/img/productos/quersus-vaos-3.jpg"
+imagenAlt: "Silla gaming Quersus VAOS.3 europea con respaldo ensanchado y reposabrazos 4D"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 8
+  comodidad: 8
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.quersus.com/vaos-3.html"
+idealPara: "Gaming europea con respaldo ensanchado y un amplio rango de alturas de usuario"
+veredicto: "La VAOS.3 es la evolución de Quersus hacia un asiento y respaldo más anchos que la VAOS.2, pensada para acomodar un rango de alturas muy amplio, de 157 a 205 cm. Apuesta por la construcción europea: espuma fría de tres capas, mecanismo OPTIMUS SYNCHRON con bloqueo en cinco posiciones y sistema antichoque, lumbar LUMBFLEX ajustable en dos direcciones y reposabrazos 4D con almohadillas reemplazables. El respaldo es de polipiel sobre espuma, no de malla, así que transpira menos en verano, y su precio la sitúa en territorio alto. Para quien busca una gaming europea bien rematada con un lumbar regulable de verdad, es una opción a tener en cuenta."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming europea con lumbar regulable y respaldo ensanchado."
+  evitarSi: "Necesitas malla transpirable o buscas el menor precio."
+  alternativaDirecta: "Noblechairs HERO si prefieres una gaming robusta para usuarios corpulentos."
+  decisionRapida: "Para alturas muy dispares y quien quiere acabado europeo con lumbar regulable, entra en la lista."
+metodologia:
+  - "Specs tomadas de la web oficial de Quersus."
+  - "La nota prioriza el lumbar LUMBFLEX ajustable, los reposabrazos 4D y el rango de alturas."
+  - "Se penaliza el respaldo de polipiel frente a la malla y el precio alto."
+scoreRationale:
+  ergonomia: "Lumbar LUMBFLEX ajustable en dos direcciones y respaldo ensanchado."
+  ajustabilidad: "Reposabrazos 4D, mecanismo OPTIMUS SYNCHRON con bloqueo en cinco posiciones y antichoque."
+  materiales: "Espuma fría de tres capas, estructura de acero y base de aluminio Q-FORTIS pintada."
+  comodidad: "Espuma fría y cojín cervical de viscoelástica para sesiones largas."
+  calidadPrecio: "Construcción europea cuidada, aunque a un precio alto."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Quersus VAOS.3"
+    url: "https://www.quersus.com/vaos-3.html"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Respaldo de polipiel sobre espuma, no de malla: transpira menos en verano."
+  - "Precio alto dentro de las sillas gaming."
+  - "Peso elevado, en torno a 33 kg."
+alternativas:
+  - slug: "noblechairs-hero"
+    motivo: "Gaming robusta para usuarios corpulentos si priorizas capacidad y soporte."
+  - slug: "secretlab-titan-evo"
+    motivo: "Gaming premium con más opciones de tallas como alternativa directa."
+  - slug: "dxracer-master"
+    motivo: "Gaming de gama alta con buena ergonomía si comparas opciones premium."
+comunidad: "Buena imagen en el nicho de gaming europeas de gama alta: se valora el rango de alturas tan amplio, la calidad de la espuma fría y el lumbar regulable como puntos a favor frente a las gaming racing genéricas. Como contrapartida se menciona el calor de la polipiel en verano y un precio que la aparta de los bolsillos ajustados."
+paraQuienSi:
+  - "Usuarios de entre 157 y 205 cm que necesitan un rango de alturas amplio"
+  - "Quien busca una gaming europea con lumbar ajustable de verdad"
+  - "Personas que valoran espuma fría y reposabrazos 4D con almohadillas reemplazables"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Quien quiere gastar lo mínimo en una silla"
+  - "Quien quiere una silla ligera y fácil de mover"
+puntosFuertes:
+  - "Respaldo y asiento ensanchados respecto a la VAOS.2"
+  - "Lumbar LUMBFLEX ajustable en dos direcciones"
+  - "Reposabrazos 4D con almohadillas reemplazables"
+  - "Mecanismo OPTIMUS SYNCHRON con bloqueo en cinco posiciones y antichoque"
+  - "Rango de alturas de usuario de 157 a 205 cm"
+puntosDebiles:
+  - "Respaldo de polipiel, calienta más en verano"
+  - "Precio alto"
+  - "Peso elevado"
+fuenteSpecs: "Web oficial Quersus (quersus.com/vaos-3.html: polipiel sobre espuma fría de tres capas, mecanismo OPTIMUS SYNCHRON con bloqueo en cinco posiciones y antichoque, reclinación 140°, reposabrazos 4D con almohadillas reemplazables, lumbar LUMBFLEX ajustable en dos direcciones, cojín cervical de viscoelástica, máx 150 kg, altura recomendada 157-205 cm, base de aluminio Q-FORTIS, estructura de acero, ruedas de poliuretano, peso 33 kg)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 140
+  pesoMaxKg: 150
+  mecanismo: "OPTIMUS SYNCHRON con bloqueo en cinco posiciones y antichoque"
+  baseMaterial: "Aluminio"
+  pesoProductoKg: 33
+  alturaRecomendadaMinCm: 157
+  alturaRecomendadaMaxCm: 205
+  reposacabezas: "fijo"

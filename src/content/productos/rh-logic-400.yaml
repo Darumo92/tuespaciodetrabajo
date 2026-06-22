@@ -1,0 +1,87 @@
+tipo: "silla"
+nombre: "RH Logic 400"
+marca: "RH"
+imagen: "/img/productos/rh-logic-400.jpg"
+imagenAlt: "Silla ergonómica escandinava RH Logic 400 de respaldo alto tapizado"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.5
+  materiales: 9.0
+  comodidad: 9.0
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://store.flokk.com/us/en-gb/products/rh-logic"
+idealPara: "Sentado activo en entornos profesionales que exigen postura y movimiento durante toda la jornada"
+veredicto: "La RH Logic 400 es una silla escandinava de gama contract construida alrededor de la filosofía 2PP de postura y movimiento, es decir, sentado activo en lugar de pasivo. Su respaldo alto tapizado en espuma, el lumbar ajustable en altura y una resistencia de inclinación que se regula al peso y la altura del usuario buscan que la espalda trabaje en lugar de quedar inmóvil. Suma certificaciones serias (EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD, Nordic Swan) que la avalan tanto en ergonomía como en sostenibilidad. Es una compra de tramo premium pensada para quien quiere una silla de proyecto duradera más que un capricho estético."
+resumenCompra:
+  mejorPara: "Profesionales que pasan toda la jornada sentados y quieren una silla de sentado activo certificada."
+  evitarSi: "Prefieres respaldo de malla o buscas la mejor relación precio por ergonomía."
+  alternativaDirecta: "Steelcase Leap v2 si quieres respaldo tapizado premium con más mecanismos de ajuste documentados."
+  decisionRapida: "Para quien antepone postura, movimiento y certificación al precio, pocas sillas de proyecto rinden igual."
+metodologia:
+  - "Specs tomadas de la web oficial de Flokk (factsheet RH Logic)."
+  - "La nota prioriza la filosofía 2PP de sentado activo, el lumbar regulable y las certificaciones."
+  - "Se penaliza el precio de tramo premium y el respaldo de espuma frente a la malla."
+scoreRationale:
+  ergonomia: "El enfoque 2PP de postura y movimiento con resistencia regulable al usuario es su mayor fortaleza."
+  ajustabilidad: "Altura de asiento, ángulo y altura de respaldo, deslizamiento y lumbar en altura cubren lo esencial."
+  materiales: "Construcción escandinava con respaldo tapizado y certificaciones de sostenibilidad."
+  comodidad: "Respaldo alto y resistencia ajustada al peso favorecen jornadas largas sin fatiga."
+  calidadPrecio: "Inversión de tramo premium justificada por durabilidad y certificación más que por precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "RH Logic (factsheet RH Logic 400) - Flokk"
+    url: "https://store.flokk.com/us/en-gb/products/rh-logic"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Precio de tramo premium contract."
+  - "Respaldo tapizado en espuma, sin opción de malla en este enfoque."
+  - "Garantía no especificada como número en la fuente consultada."
+alternativas:
+  - slug: "hag-capisco"
+    motivo: "Otra escandinava de sentado activo con un concepto de postura aún más radical."
+  - slug: "steelcase-leap-v2"
+    motivo: "Respaldo tapizado premium con amplio recorrido de ajustes si buscas alternativa directa."
+  - slug: "herman-miller-embody"
+    motivo: "Premium centrada en el movimiento de la columna si subes presupuesto."
+comunidad: "RH es una marca escandinava de prestigio dentro del segmento contract y de salud postural, con buena reputación en entornos de oficina profesionales europeos por su enfoque de sentado activo y su durabilidad. Los datos públicos de reseñas de usuario final son menos abundantes que en marcas de consumo masivo, ya que se vende sobre todo en canal de proyecto; el consenso disponible la sitúa como una silla seria y de gama alta, con el precio como principal freno."
+paraQuienSi:
+  - "Profesionales que pasan toda la jornada sentados y quieren sentado activo"
+  - "Quien valora certificaciones de ergonomía y sostenibilidad reconocidas"
+  - "Usuarios que prefieren respaldo alto tapizado a la malla"
+paraQuienNo:
+  - "Quien quiere respaldo de malla transpirable"
+  - "Quien necesita exprimir cada euro y no valora la certificación"
+  - "Quien prioriza estética llamativa sobre filosofía postural"
+puntosFuertes:
+  - "Filosofía 2PP de postura y movimiento para sentado activo"
+  - "Resistencia de inclinación regulable al peso y altura del usuario"
+  - "Lumbar ajustable en altura"
+  - "Respaldo alto de 62 cm con altura de respaldo regulable"
+  - "Deslizamiento del asiento y profundidad regulable"
+  - "Certificaciones EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD y Nordic Swan"
+puntosDebiles:
+  - "Precio de tramo premium"
+  - "Respaldo de espuma, sin variante de malla"
+fuenteSpecs: "Web oficial Flokk (store.flokk.com/us/en-gb/products/rh-logic, factsheet RH Logic 400: filosofía 2PP de sentado activo, respaldo tapizado, reposabrazos ajustables en altura y anchura, lumbar ajustable en altura, ajustes de altura de asiento, ángulo y altura de respaldo y deslizamiento, resistencia de inclinación regulable al usuario, altura asiento 410-530 mm, ancho asiento 457 mm, profundidad máx 465 mm con deslizamiento, altura respaldo 620 mm, peso producto 21,8 kg, certif. EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD, Nordic Swan)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  profundidadRegulable: true
+  alturaAsientoMinCm: 41
+  alturaAsientoMaxCm: 53
+  mecanismo: "Inclinación con resistencia regulable al peso y altura del usuario"
+  pesoProductoKg: 22
+  anchoAsientoCm: 46
+  profundidadAsientoMaxCm: 47
+  alturaRespaldoCm: 62
+  certificacionEn1335: true

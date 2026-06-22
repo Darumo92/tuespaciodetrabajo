@@ -1,0 +1,94 @@
+tipo: "silla"
+nombre: "Sharkoon Skiller SGS40"
+marca: "Sharkoon"
+imagen: "/img/productos/sharkoon-skiller-sgs40.jpg"
+imagenAlt: "Silla gaming Sharkoon Skiller SGS40 con asiento extra ancho y reposabrazos 4D"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 7.5
+  comodidad: 8
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Sharkoon Skiller SGS40"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Usuarios que buscan un asiento extra ancho con certificación EN 1335 a precio contenido"
+veredicto: "La Skiller SGS40 busca el confort en una gaming racing de precio razonable, y destaca por el asiento extra ancho de casi 60 cm y la espuma moldeada de alta densidad, además de una certificación EN 1335 y un pistón certificado que dan tranquilidad sobre la construcción. Suma mecanismo de balanceo con bloqueo, reposabrazos 4D y reclinación hasta 160°. El respaldo es de polipiel sobre espuma, con una variante en tejido más fresca, así que en verano conviene valorar la opción de tela. Para quien necesita más anchura de asiento de la habitual y no quiere pagar de más, es una compra sensata."
+resumenCompra:
+  mejorPara: "Quien necesita un asiento ancho y certificación EN 1335 sin gastar de más."
+  evitarSi: "Buscas malla transpirable o el menor peso posible."
+  alternativaDirecta: "Corsair T3 Rush si prefieres tela transpirable en lugar de polipiel."
+  decisionRapida: "Un asiento ancho y bien certificado por poco dinero: ese es el argumento de la SGS40."
+metodologia:
+  - "Specs tomadas de la web oficial de Sharkoon."
+  - "La nota prioriza la anchura del asiento, los reposabrazos 4D y las certificaciones."
+  - "Se penaliza el respaldo de polipiel frente a la malla en la versión estándar."
+scoreRationale:
+  ergonomia: "Cojines lumbar y cervical incluidos y mecanismo de balanceo, sin lumbar dinámico."
+  ajustabilidad: "Reposabrazos 4D, altura regulable, balanceo con bloqueo y reclinación hasta 160°."
+  materiales: "Espuma moldeada de alta densidad, base de aluminio y pistón certificado EN 16955."
+  comodidad: "Asiento extra ancho y espuma firme para jornadas largas."
+  calidadPrecio: "Muy competitiva por la anchura y las certificaciones a su precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Sharkoon Skiller SGS40"
+    url: "https://en.sharkoon.com/product/SGS40"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "La versión estándar usa polipiel; para más frescura hay variante en tejido."
+  - "Sin lumbar dinámico: el soporte lumbar es un cojín incluido."
+  - "No es de las gaming más ligeras."
+alternativas:
+  - slug: "corsair-t3-rush"
+    motivo: "Gaming de tela transpirable si prefieres más frescura que la polipiel."
+  - slug: "corsair-tc100"
+    motivo: "Gaming económica disponible en tela o cuero sintético si buscas precio."
+  - slug: "drift-dr500"
+    motivo: "Gaming racing española a precio contenido como alternativa directa."
+comunidad: "Valoración positiva en reseñas y tiendas: se destaca el asiento extra ancho, la sensación de robustez y las certificaciones EN como argumentos a su favor frente a gaming más básicas. Como pegas se repiten el calor de la polipiel en verano y un montaje que pide algo de paciencia."
+paraQuienSi:
+  - "Usuarios que necesitan un asiento más ancho de lo habitual"
+  - "Personas de hasta 200 cm dentro del límite de 150 kg"
+  - "Quien valora certificación EN 1335 y reposabrazos 4D a precio contenido"
+paraQuienNo:
+  - "Quien necesita malla transpirable para el verano"
+  - "Quien busca la silla gaming más ligera"
+  - "Quien quiere un lumbar dinámico en lugar de un cojín"
+puntosFuertes:
+  - "Asiento extra ancho de casi 60 cm"
+  - "Reposabrazos 4D con almohadilla amplia"
+  - "Mecanismo de balanceo con bloqueo y reclinación hasta 160°"
+  - "Certificación EN 1335 y pistón certificado EN 16955"
+  - "Cojines lumbar y cervical incluidos"
+puntosDebiles:
+  - "Respaldo de polipiel en la versión estándar, calienta más en verano"
+  - "Soporte lumbar mediante cojín, sin sistema dinámico"
+  - "Peso considerable"
+fuenteSpecs: "Web oficial Sharkoon (en.sharkoon.com/product/SGS40: polipiel sobre espuma de alta densidad 60-70 kg/m³, respaldo 90-160°, balanceo 0-14° con bloqueo, reposabrazos 4D 30,5-37,5 cm, máx 150 kg, altura recomendada hasta 200 cm, asiento 59,5x53 cm, altura asiento 51,5-59 cm, respaldo 86 cm, base de aluminio, pistón clase 4, peso 25 kg, EN 1335-1/2 y EN 16955)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 51
+  alturaAsientoMaxCm: 59
+  mecanismo: "Balanceo con bloqueo 0-14° y reclinación de respaldo"
+  baseMaterial: "Aluminio"
+  pesoProductoKg: 25
+  alturaRecomendadaMaxCm: 200
+  anchoAsientoCm: 59
+  profundidadAsientoMaxCm: 53
+  alturaRespaldoCm: 86
+  reposacabezas: "fijo"
+  certificacionEn1335: true

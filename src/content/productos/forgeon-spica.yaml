@@ -1,0 +1,89 @@
+tipo: "silla"
+nombre: "Forgeon Spica"
+marca: "Forgeon"
+imagen: "/img/productos/forgeon-spica.jpg"
+imagenAlt: "Silla gaming Forgeon Spica con tela transpirable y reposapiés retráctil"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 3.9
+valoraciones:
+  ergonomia: 7
+  ajustabilidad: 8
+  materiales: 7.5
+  comodidad: 7.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.pccomponentes.com/forgeon-spica-fabric-silla-gaming-tela-transpirable-negra"
+idealPara: "Gaming completa con reposapiés retráctil a precio contenido, exclusiva de PcComponentes"
+veredicto: "La Spica es la silla gaming de la marca propia de PcComponentes, y su gran reclamo es lo bien equipada que viene para su precio: reposabrazos 4D, reclinación hasta 180°, base reforzada de 350 mm con reposapiés retráctil y cojín cervical de viscoelástica con sujeción magnética. Está disponible en tela transpirable o polipiel, así que se puede elegir frescura o acabado clásico. El soporte lumbar es un cojín de espuma, no un sistema dinámico, y al ser exclusiva de PcComponentes solo se compra allí. Para quien quiere una gaming bien dotada y un extra poco habitual como el reposapiés a precio ajustado, es una compra muy razonable."
+resumenCompra:
+  mejorPara: "Quien busca una gaming muy equipada con reposapiés retráctil sin gastar de más."
+  evitarSi: "Quieres un lumbar dinámico o no compras en PcComponentes."
+  alternativaDirecta: "Corsair TC100 si prefieres una marca con distribución más amplia."
+  decisionRapida: "Reposabrazos 4D y hasta reposapiés por poco dinero, eso sí, solo si compras en PcComponentes."
+metodologia:
+  - "Specs tomadas de la ficha oficial en PcComponentes."
+  - "La nota prioriza los reposabrazos 4D, la reclinación amplia y el reposapiés retráctil."
+  - "Se penaliza el soporte lumbar mediante cojín y la exclusividad de canal de venta."
+scoreRationale:
+  ergonomia: "Cojín lumbar de espuma y cervical de viscoelástica magnético, sin lumbar dinámico."
+  ajustabilidad: "Reposabrazos 4D, reclinación hasta 180° y mecanismo tipo mariposa."
+  materiales: "Espuma moldeada de alta densidad, base metálica reforzada y opción de tela o polipiel."
+  comodidad: "Buen acolchado y reposapiés retráctil para descansar las piernas."
+  calidadPrecio: "Muy competitiva por el equipamiento que ofrece a su precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Forgeon Spica Fabric"
+    url: "https://www.pccomponentes.com/forgeon-spica-fabric-silla-gaming-tela-transpirable-negra"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Soporte lumbar mediante cojín de espuma, sin sistema dinámico."
+  - "Exclusiva de PcComponentes: no se vende en Amazon."
+  - "Versión en polipiel transpira menos que la de tela."
+alternativas:
+  - slug: "corsair-tc100"
+    motivo: "Gaming económica de marca con distribución amplia como alternativa directa."
+  - slug: "newskill-takamikura"
+    motivo: "Gaming española bien equipada si buscas una opción de su rango."
+  - slug: "drift-dr500"
+    motivo: "Gaming racing española a precio contenido si comparas opciones."
+comunidad: "Acogida favorable en reseñas y opiniones de la propia tienda: se valora el equipamiento por el precio, sobre todo el reposapiés retráctil y los reposabrazos 4D, poco habituales en su rango. Las críticas más repetidas son que el lumbar es solo un cojín y que, al ser exclusiva de PcComponentes, depende por completo de ese canal para compra y posventa."
+paraQuienSi:
+  - "Quien quiere una gaming muy equipada por poco dinero"
+  - "Usuarios que valoran un reposapiés retráctil integrado"
+  - "Quien prefiere elegir entre tela transpirable o polipiel"
+paraQuienNo:
+  - "Quien necesita un lumbar dinámico en lugar de un cojín"
+  - "Quien no quiere depender de un único canal de venta"
+  - "Quien busca una silla de malla integral"
+puntosFuertes:
+  - "Reposabrazos 4D"
+  - "Reclinación hasta 180°"
+  - "Base metálica reforzada de 350 mm con reposapiés retráctil"
+  - "Cojín cervical de viscoelástica con sujeción magnética"
+  - "Disponible en tela transpirable o polipiel"
+puntosDebiles:
+  - "Soporte lumbar mediante cojín de espuma, sin sistema dinámico"
+  - "Exclusiva de PcComponentes"
+  - "La versión en polipiel transpira menos"
+fuenteSpecs: "Ficha oficial PcComponentes (pccomponentes.com/forgeon-spica-fabric-silla-gaming-tela-transpirable-negra: tela transpirable o polipiel sobre espuma moldeada 50 kg/m³, reclinación 180°, reposabrazos 4D, cojín lumbar de espuma y cervical de memory foam magnético, máx 150 kg, asiento 56x46 cm, base metálica reforzada de 350 mm con reposapiés retráctil, pistón clase 4, ruedas de nylon 65 mm, mecanismo tipo mariposa, peso 24 kg, dimensiones 74x58x125-131 cm)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 180
+  pesoMaxKg: 150
+  mecanismo: "Tipo mariposa con reclinación de respaldo"
+  baseMaterial: "Metal"
+  pesoProductoKg: 24
+  anchoAsientoCm: 56
+  profundidadAsientoMaxCm: 46
+  reposacabezas: "fijo"
