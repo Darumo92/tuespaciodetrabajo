@@ -72,3 +72,20 @@ Descartes:
 - Budget malla: Eureka Onyx (eurekaergonomic.com), Yaheetech Ergonomic Mesh (yaheetech.shop + manuals.plus).
 
 CTA: gaming/budget Amazon ES por amazon.buscar; Razer Enki + contract/premium (Actiu, Okamura, Forma5) por webOficial. Sin ASIN. Specs solo de fuente oficial; fichas con specs no publicadas omiten el campo (estilo casa). Las premium con menos datos públicos (Okamura, Forma5) son las más justas en cobertura, comparables a herman-miller-sayl ya publicada. AndaSeat 3E queda candidate (producir tras Kaiser 3). Imágenes del usuario normalizadas a 800x800 fondo blanco (eureka-onyx llegó con fondo gris, blanqueada con floodfill; 3 webp convertidas a jpg).
+
+## Research oleada 5 (2026-06-22): 14 candidatas nuevas añadidas
+
+Backlog sin candidatas frescas (solo quedaba andaseat-kaiser-3e + songmics descartada). Research de marcas nuevas a partir de pistas de un post de forocoches (oficina/gaming ES), verificando web oficial fetcheable de cada una (criterio: marca/modelo no en catálogo + fuente oficial localizable + amazon_query plausible). 14 añadidas; 10 con specs suficientes para producir en oleada 5, 4 diferidas.
+
+Producibles (fuente oficial fetcheada y specs confirmadas):
+- Oficina/premium: Eurotech Ergohuman GEN2 (eurotechseating.com + ergohuman.com, malla iconica), RH Logic 400 (store.flokk.com + factsheet, escandinava 2PP), Sedus black dot (sedus.com, contract aleman dorsokinetic/Sedo-Lift), Giroflex 353 (store.flokk.com, swivel suizo Automatic Move).
+- Gaming premium: RECARO Exo (recaro-gaming.com, Made in Germany EN1335/GS), Vertagear SL5000 (vertagear.com, garantia chasis 10 anios).
+- Gaming budget/ES: Sharkoon Skiller SGS40 (en.sharkoon.com, asiento XL 150kg EN1335), Quersus VAOS.3 (quersus.com, OPTIMUS SYNCHRON lumbar 2D), Forgeon Spica (pccomponentes.com, marca PcComponentes muy buscada en ES), Trust GXT 714 Ruya (trust.com, chasis madera FSC 150kg).
+
+Diferidas (estado candidate, no producir esta oleada):
+- Wilkhahn AT 187/7 (wilkhahn.com): contract aleman Trimension deseable, pero la web da specs numericas escasas (producto muy configurable). Reintentar con brochure/PDF.
+- Maxnomic OFFICE-COMFORT (needforseat.com): ficha de producto con specs muy escasas; datos solo en pagina generica de gama.
+- AKRacing Masters Series Max (akracing.com): web devuelve HTTP 402 anti-bot a WebFetch; no fetcheable -> diferida.
+- Backforce One Plus (backforce.gg, de Interstuhl): web devuelve HTTP 403 anti-bot; no fetcheable -> diferida (datos disponibles en Blue Angel pero pendiente de fuente oficial directa).
+
+CTA esperado: amazon.buscar para Ergohuman, Sharkoon, Vertagear, Trust (venta en Amazon ES); webOficial para RH Logic 400, Sedus, Giroflex, RECARO Exo, Quersus y Forgeon (contract/premium o exclusiva de tienda). Sin ASIN.
