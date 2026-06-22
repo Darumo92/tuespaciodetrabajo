@@ -1,0 +1,98 @@
+tipo: "silla"
+nombre: "Eureka Ergonomic Onyx"
+marca: "Eureka Ergonomic"
+imagen: "/img/productos/eureka-onyx.jpg"
+imagenAlt: "Silla de oficina Eureka Ergonomic Onyx de malla con lumbar ajustable"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 7.0
+  materiales: 7.5
+  comodidad: 7.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "Eureka Ergonomic Onyx silla oficina malla"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Teletrabajo y oficina en casa con malla transpirable y lumbar ajustable a precio contenido"
+veredicto: "La Onyx es la silla de malla más comedida de Eureka Ergonomic, una marca conocida por mobiliario gaming y de oficina con buena presencia en Amazon. Es una silla limpia y minimalista de respaldo entero de malla, con lumbar ajustable en altura, reposabrazos abatibles para guardarla bajo la mesa y un balanceo de 15 grados. No busca competir con las premium: soporta hasta 125 kg, está recomendada para estaturas en torno a 1,55 a 1,75 m y sus reposabrazos abatibles no son regulables en más ejes. Para teletrabajo y uso diario sin pretensiones, cumple con una relación calidad precio sensata."
+resumenCompra:
+  mejorPara: "Quien quiere malla transpirable y lumbar ajustable para el día a día sin gastar de más."
+  evitarSi: "Mides bastante más de 1,75 m o necesitas reposabrazos multidireccionales y profundidad regulable."
+  alternativaDirecta: "Yaheetech malla de oficina si buscas algo aún más económico con cabecero."
+  decisionRapida: "Una compra lógica para escritorio en casa si priorizas malla y precio sobre máxima ajustabilidad."
+metodologia:
+  - "Specs tomadas de la web oficial de Eureka Ergonomic y de su ficha de producto."
+  - "La nota prioriza la malla transpirable, el lumbar ajustable y la relación calidad precio."
+  - "Se penaliza la capacidad de carga moderada, la estatura recomendada limitada y los reposabrazos solo abatibles."
+scoreRationale:
+  ergonomia: "Respaldo entero de malla con lumbar ajustable en altura, suficiente para uso diario."
+  ajustabilidad: "Altura, lumbar y balanceo de 15 grados, pero reposabrazos solo abatibles y sin profundidad regulable."
+  materiales: "Malla TPEE y poliéster con pistón de gas clase 4, correctos para la gama."
+  comodidad: "Balanceo de 15 grados y malla transpirable para jornadas de oficina ligeras a medias."
+  calidadPrecio: "Buena relación para una silla de malla de marca disponible en Amazon."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Eureka Ergonomic Onyx (web oficial)"
+    url: "https://eurekaergonomic.com/products/onyx-series-office-chair"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Eureka Ergonomic chair reviews (Autonomous)"
+    url: "https://www.autonomous.ai/ourblog/eureka-ergonomic-chair-reviews"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Capacidad máxima de 125 kg (275 lbs), moderada frente a sillas de uso intensivo."
+  - "Estatura recomendada en torno a 1,55 a 1,75 m: queda corta para personas muy altas."
+  - "Reposabrazos solo abatibles, no regulables en altura ni en otros ejes."
+alternativas:
+  - slug: "yaheetech-mesh-office"
+    motivo: "Más económica y con cabecero si buscas el mínimo coste en malla."
+  - slug: "sihoo-m18"
+    motivo: "Otra malla de oficina asequible si quieres más ajustes por un precio similar."
+comunidad: "Las sillas de malla de Eureka tienen una acogida correcta en reseñas y en Amazon: se valoran la malla transpirable, el lumbar ajustable y el precio, mientras que las críticas habituales apuntan a unos reposabrazos básicos y a una talla pensada para usuarios de estatura media. Es una silla de oficina en casa más que una silla profesional de jornada intensiva."
+paraQuienSi:
+  - "Teletrabajadores que quieren malla transpirable a precio contenido"
+  - "Usuarios de estatura media (en torno a 1,55 a 1,75 m) de hasta 125 kg"
+  - "Quien quiere reposabrazos abatibles para guardar la silla bajo la mesa"
+paraQuienNo:
+  - "Personas altas (por encima de 1,80 m)"
+  - "Usuarios por encima de 125 kg"
+  - "Quien necesita reposabrazos multidireccionales y profundidad de asiento regulable"
+puntosFuertes:
+  - "Respaldo entero de malla transpirable"
+  - "Lumbar ajustable en altura"
+  - "Reposabrazos abatibles para guardar bajo la mesa"
+  - "Buena relación calidad precio en Amazon"
+puntosDebiles:
+  - "Capacidad máxima moderada (125 kg)"
+  - "Reposabrazos solo abatibles, sin más regulación"
+fuenteSpecs: "Web oficial Eureka Ergonomic (eurekaergonomic.com/products/onyx-series-office-chair): respaldo malla TPEE/poliéster, lumbar ajustable en altura, reposabrazos abatibles (flip-up), balanceo 15 grados, máximo 275 lbs (125 kg), altura asiento 18,5-21,46 in (47-54,5 cm), fondo asiento 20,6 in (52 cm), ancho asiento 20,87 in (53 cm), dimensiones totales 25,63 D x 23,63 W x 39,37-43,37 H in, pistón de gas clase 4, peso producto 26,46 lbs (12 kg), estatura recomendada 5'1''-5'9'' (155-175 cm), BIFMA passed según fichas de la marca"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "malla"
+  reposabrazos: "abatibles"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 15
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 54.5
+  anchoCm: 60
+  fondoCm: 65
+  mecanismo: "Balanceo (rocking) de 15 grados"
+  certificacionBifma: true
+  pesoProductoKg: 12
+  alturaRecomendadaMinCm: 155
+  alturaRecomendadaMaxCm: 175
+  anchoAsientoCm: 53
+  profundidadAsientoMinCm: 52
+  profundidadAsientoMaxCm: 52
+  reposacabezas: "ninguno"
+  asientoMaterial: "Malla TPEE y poliester"

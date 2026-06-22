@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "Actiu TNK Flex"
+marca: "Actiu"
+imagen: "/img/productos/actiu-tnk-flex.jpg"
+imagenAlt: "Silla de oficina Actiu TNK Flex con respaldo flexible para uso intensivo"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 9.0
+  ajustabilidad: 8.5
+  materiales: 9.0
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.actiu.com/en/seats-contract/office-chairs/tnk-flex/"
+idealPara: "Puestos de oficina de uso intensivo 24h que priorizan ergonomía activa y fabricación europea"
+veredicto: "La TNK Flex es una silla de contract española pensada para uso intensivo de hasta 24 horas y usuarios de hasta 150 kg, y se nota en la construcción: marco de polipropileno con fibra de vidrio, asiento basculante 360 grados que acompaña el movimiento y mecanismo sincro de 4 posiciones de 0 a 30 grados con tensión regulable. No es una silla que compres en Amazon ni con specs de gaming llamativas, sino una herramienta de oficina con certificación de uso intensivo y diseño de Alegre Design. Su punto débil es el precio y que la configuración (brazos, base, cabecero) se elige por separado, así que la silla base puede quedarse algo justa de ajustes."
+resumenCompra:
+  mejorPara: "Empresas o particulares que quieren una silla de contract europea para jornadas largas y muchos años de uso."
+  evitarSi: "Buscas precio ajustado o comprar con un clic en Amazon."
+  alternativaDirecta: "Forma5 Dot Pro, otra silla de contract española de gama similar con respaldo de malla."
+  decisionRapida: "Si valoras fabricación europea certificada para uso intensivo y no te importa pagar gama alta, es una apuesta muy sólida."
+metodologia:
+  - "Specs tomadas de la web oficial de Actiu y de su ficha técnica oficial en PDF."
+  - "La nota prioriza la certificación de uso intensivo, la capacidad de carga y la calidad de fabricación."
+  - "Se penaliza el precio elevado y que varios ajustes dependen de la configuración elegida."
+scoreRationale:
+  ergonomia: "Asiento basculante 360 grados, respaldo flexible que acompaña la torsión y lumbar adaptable elevan la nota."
+  ajustabilidad: "Sincro de 4 posiciones, elevación guiada, brazos 3D y cabecero con inclinación, aunque algunos son opcionales."
+  materiales: "Marco de polipropileno con 30% fibra de vidrio, espuma PUR de densidad alta y base de aluminio o poliamida."
+  comodidad: "Asiento de espuma inyectada de 55-60 kg/m3 y respaldo flexible pensados para jornada completa."
+  calidadPrecio: "Calidad de contract real, pero el precio la deja lejos de las opciones de consumo."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Actiu TNK Flex (web oficial)"
+    url: "https://www.actiu.com/en/seats-contract/office-chairs/tnk-flex/"
+    fechaConsulta: "2026-06-21"
+  - tipo: "oficial"
+    nombre: "Actiu TNK Flex ficha técnica (PDF)"
+    url: "https://www.actiu.store/img/cms/pdf/sillas-oficina-tnk-flex-ficha-tecnica-es.pdf"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "No se vende en Amazon: distribución por canal de contract y distribuidores oficiales."
+  - "Brazos, base de aluminio y cabecero suelen ser configuración opcional con coste añadido."
+  - "Precio de gama alta frente a sillas de malla de consumo."
+alternativas:
+  - slug: "forma5-dot-pro"
+    motivo: "Otra silla de contract española de gama similar, con respaldo de malla 3D."
+  - slug: "steelcase-leap-v2"
+    motivo: "Referencia premium de oficina si priorizas profundidad de asiento regulable y soporte global."
+comunidad: "Reconocida en el sector del mobiliario de oficina europeo por su fabricación y por la certificación de uso intensivo. El consenso es que es una silla seria de contract más que un producto de consumo, con buena durabilidad y diseño premiado (Archiproducts, German Design Award), a cambio de un precio elevado y una compra menos directa que en marcas de Amazon."
+paraQuienSi:
+  - "Quien pasa muchas horas sentado y quiere una silla certificada para uso intensivo 24h"
+  - "Usuarios de hasta 150 kg que buscan construcción robusta"
+  - "Quien valora fabricación europea y diseño de autor"
+paraQuienNo:
+  - "Presupuestos ajustados"
+  - "Quien quiere comprar y recibir rápido por Amazon"
+  - "Quien prefiere una silla ya equipada sin elegir configuración"
+puntosFuertes:
+  - "Certificada para uso intensivo de hasta 24 horas y 150 kg"
+  - "Asiento basculante 360 grados que acompaña el movimiento"
+  - "Mecanismo sincro de 4 posiciones (0 a 30 grados) con tensión regulable"
+  - "Marco de polipropileno con 30% fibra de vidrio y base de aluminio opcional"
+puntosDebiles:
+  - "Precio de gama alta"
+  - "Varios ajustes (brazos, cabecero, base) son opcionales"
+fuenteSpecs: "Web oficial Actiu (actiu.com/en/seats-contract/office-chairs/tnk-flex) + ficha técnica PDF (actiu.store sillas-oficina-tnk-flex-ficha-tecnica-es.pdf): altura asiento 420-530 mm, ancho asiento 490 mm, fondo asiento 420-490 mm, ancho total 675 mm, sincro 4 posiciones 0-30 grados, tensión 50-120 kg, lumbar adaptable 25 mm, brazos 3D, base poliamida o aluminio diámetro 67,5 cm, cabecero con altura 50 mm e inclinación 20 grados, máximo 150 kg, uso 24h según UNE-EN 1335-1 y BS 5459-2"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "mixto"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 30
+  pesoMaxKg: 150
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 53
+  anchoCm: 67.5
+  fondoCm: 67.5
+  mecanismo: "Sincro de 4 posiciones (0 a 30 grados) con regulación de tensión y basculación 360 grados"
+  baseMaterial: "poliamida o aluminio"
+  anchoAsientoCm: 49
+  profundidadAsientoMinCm: 42
+  profundidadAsientoMaxCm: 49
+  reposacabezas: "ajustable"
+  asientoMaterial: "Espuma de poliuretano inyectada de 55-60 kg/m3"
+  certificacionEn1335: true

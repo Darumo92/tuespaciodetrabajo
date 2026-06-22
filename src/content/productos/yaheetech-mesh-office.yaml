@@ -1,0 +1,94 @@
+tipo: "silla"
+nombre: "Yaheetech Silla de Oficina Ergonomica de Malla"
+marca: "Yaheetech"
+imagen: "/img/productos/yaheetech-mesh-office.jpg"
+imagenAlt: "Silla de oficina Yaheetech de malla con respaldo alto y cabecero ajustable"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: 3.8
+valoraciones:
+  ergonomia: 7.0
+  ajustabilidad: 6.5
+  materiales: 6.5
+  comodidad: 7.0
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "Yaheetech silla oficina ergonomica malla"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Escritorio en casa con presupuesto ajustado que quiere malla, cabecero y respaldo alto"
+veredicto: "Esta Yaheetech de malla es una silla de oficina de entrada pensada para gastar poco: respaldo alto de malla de poliéster, cabecero acolchado ajustable, cojín lumbar móvil y reposabrazos abatibles 90 grados acolchados que dejan guardarla bajo la mesa. Soporta hasta 136 kg y tiene una función de balanceo. No es una silla de ergonomía avanzada (los ajustes son básicos y los materiales acompañan al precio), pero para un escritorio en casa o un puesto de uso ocasional ofrece más equipamiento del que cabría esperar por su coste. Es la típica compra sensata cuando el presupuesto manda."
+resumenCompra:
+  mejorPara: "Quien quiere una silla de malla con cabecero y respaldo alto gastando lo mínimo."
+  evitarSi: "Pasas muchas horas sentado y necesitas ergonomía real con lumbar y reposabrazos regulables."
+  alternativaDirecta: "Eureka Ergonomic Onyx si puedes subir algo el presupuesto por mejor lumbar."
+  decisionRapida: "Una opción lógica para un puesto secundario o para empezar sin gastar, asumiendo ajustes básicos."
+metodologia:
+  - "Specs tomadas de la web oficial de Yaheetech y de su ficha de producto."
+  - "La nota prioriza la relación calidad precio, la malla y el equipamiento (cabecero, lumbar) por su coste."
+  - "Se penaliza la ajustabilidad limitada, los materiales de gama de entrada y la falta de certificaciones publicadas para este modelo."
+scoreRationale:
+  ergonomia: "Respaldo alto de malla con cabecero y cojín lumbar móvil, suficiente para uso ligero."
+  ajustabilidad: "Altura y balanceo, reposabrazos abatibles 90 grados, pero pocos ejes de regulación."
+  materiales: "Malla de poliéster, base de plástico y estructura de contrachapado: correctos para el precio."
+  comodidad: "Cabecero y cojín lumbar mejoran el apoyo, aunque sin ajustes finos."
+  calidadPrecio: "Su punto fuerte: mucho equipamiento básico por muy poco dinero."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Yaheetech Ergonomic Mesh Office Chair (web oficial)"
+    url: "https://yaheetech.shop/products/yaheetech-ergonomic-mesh-office-chair"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Yaheetech Office Chair Instruction Manual (Manuals Plus)"
+    url: "https://manuals.plus/asin/B08863CKMF"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Ajustes básicos: sin lumbar regulable en altura ni reposabrazos multidireccionales."
+  - "Materiales de gama de entrada (base de plástico, estructura de contrachapado)."
+  - "Yaheetech no publica certificación BIFMA ni garantía clara para este modelo concreto."
+alternativas:
+  - slug: "eureka-onyx"
+    motivo: "Mejor lumbar ajustable y acabado por algo más de dinero."
+  - slug: "hbada-ergonomica"
+    motivo: "Otra malla económica con reposabrazos abatibles si buscas alternativa de bajo coste."
+comunidad: "Las sillas de oficina baratas de Yaheetech tienen una acogida correcta en Amazon para su precio: se valoran el respaldo de malla, el cabecero ajustable y lo completas que resultan por lo que cuestan, mientras que las críticas habituales apuntan a una durabilidad y unos materiales propios de la gama de entrada. Es una compra de presupuesto ajustado, no una silla para jornadas intensivas."
+paraQuienSi:
+  - "Quien tiene un presupuesto muy ajustado y quiere malla con cabecero"
+  - "Puestos secundarios o de uso ocasional"
+  - "Usuarios de hasta 136 kg que buscan reposabrazos abatibles"
+paraQuienNo:
+  - "Quien pasa la jornada completa sentado y necesita ergonomía avanzada"
+  - "Quien quiere lumbar y reposabrazos regulables con precision"
+  - "Quien busca materiales y durabilidad de gama media o alta"
+puntosFuertes:
+  - "Respaldo alto de malla de poliéster"
+  - "Cabecero acolchado ajustable y cojín lumbar móvil"
+  - "Reposabrazos abatibles 90 grados acolchados"
+  - "Soporta hasta 136 kg a precio muy bajo"
+puntosDebiles:
+  - "Ajustabilidad limitada"
+  - "Materiales y base de gama de entrada"
+fuenteSpecs: "Web oficial Yaheetech (yaheetech.shop/products/yaheetech-ergonomic-mesh-office-chair): respaldo alto de malla de poliéster, cabecero acolchado ajustable, cojín lumbar móvil, reposabrazos abatibles 90 grados acolchados, máximo 136 kg (300 lb), altura asiento 47,5-56,5 cm (18,7-22,2 in), fondo asiento 49,5 cm (19,5 in), ancho total 62 cm, fondo total 62 cm, altura total con cabecero 122-132 cm, base de plástico con ruedas de nylon, estructura de contrachapado, función de balanceo, peso producto 11,4 kg neto"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "abatibles"
+  profundidadRegulable: false
+  pesoMaxKg: 136
+  alturaAsientoMinCm: 47.5
+  alturaAsientoMaxCm: 56.5
+  anchoCm: 62
+  fondoCm: 62
+  mecanismo: "Funcion de balanceo (rocking)"
+  baseMaterial: "plastico"
+  pesoProductoKg: 11.4
+  profundidadAsientoMinCm: 49.5
+  profundidadAsientoMaxCm: 49.5
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cojin acolchado de espuma"

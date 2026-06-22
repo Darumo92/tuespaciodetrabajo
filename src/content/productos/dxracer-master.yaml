@@ -1,0 +1,107 @@
+tipo: "silla"
+nombre: "DXRacer Master"
+marca: "DXRacer"
+imagen: "/img/productos/dxracer-master.jpg"
+imagenAlt: "Silla gaming DXRacer Master con lumbar integrado 4D y estética ejecutiva"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 8
+  ajustabilidad: 8.5
+  materiales: 7.5
+  comodidad: 8
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: "DXRacer Master silla gaming"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere una gaming con lumbar integrado regulable de verdad y estética más ejecutiva que de carreras"
+veredicto: "La Master es la gaming con la que DXRacer intenta dar el salto a la ergonomía seria: lo mejor es su lumbar integrado 4D con seis niveles de ajuste, que se mueve en altura y profundidad en lugar de ser un simple cojín, acompañado de reposabrazos 4D y un pistón clase 4 certificado por SGS. La estética es más ejecutiva y discreta que la racing típica. Los peros pesan: la garantía es de solo dos años cuando la competencia da cinco, el precio es alto y el asiento es algo estrecho, así que no es la mejor para cuerpos anchos. Para quien busca lumbar regulable de verdad en formato gaming y no le importa la garantía corta, cumple."
+resumenCompra:
+  mejorPara: "Quien quiere lumbar integrado 4D regulable en una gaming de estética sobria."
+  evitarSi: "Buscas garantía larga, mejor precio o eres de complexión ancha."
+  alternativaDirecta: "Razer Iskur V2 si quieres lumbar adaptativo regulable con mejor garantía."
+  decisionRapida: "La gaming que recomendaría a quien valora el lumbar integrado regulable por encima de la garantía y el precio."
+metodologia:
+  - "Specs tomadas de la web oficial de DXRacer y completadas con la reseña de ChairsFX."
+  - "La nota prioriza el lumbar integrado 4D regulable, los reposabrazos 4D y el pistón clase 4 certificado."
+  - "Se penaliza la garantía de solo dos años, el precio alto y el asiento estrecho."
+scoreRationale:
+  ergonomia: "El lumbar integrado 4D con seis niveles es lo mejor de la silla y la separa de las gaming con cojín."
+  ajustabilidad: "Reposabrazos 4D, lumbar 4D y reclinación amplia cubren casi todo el ajuste fino."
+  materiales: "Cuero microfibra PU, pistón clase 4 certificado por SGS y base de aluminio; sin malla."
+  comodidad: "Buen soporte, aunque el asiento es algo estrecho para complexiones anchas."
+  calidadPrecio: "Justa: buena ergonomía, pero precio alto y garantía corta lastran la nota."
+fuentes:
+  - tipo: "oficial"
+    nombre: "DXRacer Master Series"
+    url: "https://www.dxracer.com/pages/gaming-chairs/master"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "ChairsFX DXRacer Master Modular review"
+    url: "https://chairsfx.com/gaming-chair-reviews/dxracer-master-modular/"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "PC Gamer DXRacer Master review"
+    url: "https://www.pcgamer.com/dxracer-master-review-gaming-chair/"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Garantía de solo dos años, por debajo de la competencia."
+  - "Asiento algo estrecho, menos adecuado para complexiones anchas."
+  - "La web oficial cita 90-135 grados de respaldo; las reseñas hablan de hasta 155 grados de reclinación total."
+alternativas:
+  - slug: "razer-iskur-v2"
+    motivo: "Lumbar adaptativo regulable y reposabrazos 4D con mejor garantía."
+  - slug: "secretlab-titan-evo"
+    motivo: "Acabado premium, más tallas y garantía más larga si buscas alternativa directa."
+comunidad: "Acogida mixta-positiva en reseñas (ChairsFX, PC Gamer, TechRadar): se valora el lumbar integrado 4D regulable, el diseño modular ampliable con accesorios y la estética ejecutiva. Las críticas recurrentes son la garantía corta de dos años frente a marcas que dan cinco, el precio alto y un asiento algo estrecho que no encaja bien en cuerpos anchos."
+paraQuienSi:
+  - "Quien quiere lumbar integrado 4D regulable en formato gaming"
+  - "Usuarios de entre 167 y 198 cm dentro del límite de peso"
+  - "Quien prefiere una estética ejecutiva y discreta a la racing"
+paraQuienNo:
+  - "Quien quiere garantía larga (cinco años)"
+  - "Personas de complexión ancha (asiento estrecho)"
+  - "Presupuestos ajustados que buscan mejor precio"
+puntosFuertes:
+  - "Lumbar integrado 4D con seis niveles de ajuste"
+  - "Reposabrazos 4D"
+  - "Pistón clase 4 certificado por SGS"
+  - "Diseño modular ampliable con accesorios"
+  - "Certificaciones SGS, BIFMA y TÜV"
+puntosDebiles:
+  - "Garantía de solo dos años"
+  - "Precio alto frente a la competencia"
+  - "Asiento estrecho, poco apto para complexiones anchas"
+fuenteSpecs: "Web oficial DXRacer (dxracer.com/pages/gaming-chairs/master: reposabrazos 4D, lumbar integrado 4D 6 niveles, balanceo 15 grados, pistón clase 4 certificado SGS, ruedas PU 3 pulgadas, certif SGS/BIFMA/TÜV) + ChairsFX (max 275 lbs ~125 kg, altura usuario 167-198 cm, altura asiento 19,75-22,75 pulgadas, asiento 15x19,5 pulgadas, respaldo 22x33 pulgadas, reclinación 155 grados, microfibra PU, garantía 2 años, peso ~29 kg)"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 155
+  pesoMaxKg: 125
+  alturaAsientoMinCm: 50
+  alturaAsientoMaxCm: 58
+  anchoCm: 38
+  fondoCm: 50
+  mecanismo: "Reclinación con balanceo 15 grados y pistón clase 4 certificado SGS"
+  baseMaterial: "aluminio"
+  certificacionBifma: true
+  pesoProductoKg: 29
+  garantiaAnios: 2
+  alturaRecomendadaMinCm: 167
+  alturaRecomendadaMaxCm: 198
+  anchoAsientoCm: 38
+  profundidadAsientoMaxCm: 50
+  alturaRespaldoCm: 84
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cuero microfibra PU"
+

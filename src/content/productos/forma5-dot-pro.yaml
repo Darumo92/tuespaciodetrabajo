@@ -1,0 +1,91 @@
+tipo: "silla"
+nombre: "Forma5 Dot Pro"
+marca: "Forma5"
+imagen: "/img/productos/forma5-dot-pro.jpg"
+imagenAlt: "Silla de oficina Forma5 Dot Pro con respaldo alto de malla 3D"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.5
+  ajustabilidad: 8.5
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://forma5.com/en/chairs/office-desk-chair/dot-pro/"
+idealPara: "Oficina de jornada completa con respaldo alto de malla y fabricación europea certificada"
+veredicto: "La Dot Pro es la silla operativa de gama media-alta de Forma5, fabricante español de mobiliario de oficina con buena reputación en contract. Combina respaldo alto de malla 3D con un asiento de espuma de poliuretano inyectada y un mecanismo Sincro Motion que regula 24 grados de respaldo y 10 grados de asiento, ajustándose de forma automática al peso del usuario entre 45 y 110 kg. Está bien dotada de certificaciones europeas (UNE-EN 1335, NF Environnement) y permite configurar brazos hasta 4D de aluminio, lumbar flexible opcional y cabecero. Como las otras de contract, no se compra de forma directa por Amazon España y la silla base puede ampliarse mucho con opcionales."
+resumenCompra:
+  mejorPara: "Quien quiere una silla de oficina europea certificada con respaldo de malla y mecanismo que se autorregula al peso."
+  evitarSi: "Buscas comprar rápido por Amazon o un precio de entrada de gama."
+  alternativaDirecta: "Actiu TNK Flex, otra silla de contract española, más orientada a uso intensivo 24h."
+  decisionRapida: "Una opción muy sólida si valoras fabricación europea y malla, y aceptas un canal de compra de contract."
+metodologia:
+  - "Specs tomadas de la web oficial de Forma5 y de fichas de distribuidores oficiales."
+  - "La nota prioriza el mecanismo autorregulable, la malla 3D y las certificaciones europeas."
+  - "Se penaliza la falta de capacidad de carga máxima publicada y el canal de compra poco directo."
+scoreRationale:
+  ergonomia: "Respaldo alto de malla 3D con mecanismo Sincro Motion que se autorregula al peso."
+  ajustabilidad: "Brazos hasta 4D, lumbar flexible opcional, deslizamiento de asiento y 4 posiciones de bloqueo."
+  materiales: "Malla 3D o Meci, asiento de poliuretano inyectado y fabricación europea certificada."
+  comodidad: "Asiento de espuma inyectada y respaldo flexible pensados para jornada continua."
+  calidadPrecio: "Buena para una silla de contract europea, aunque por encima de las opciones de consumo."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Forma5 Dot Pro (web oficial)"
+    url: "https://forma5.com/en/chairs/office-desk-chair/dot-pro/"
+    fechaConsulta: "2026-06-21"
+  - tipo: "review"
+    nombre: "Forma 5 Dot Pro Task Chair (Think Furniture)"
+    url: "https://www.think-furniture.com/forma-5-dot-pro-task-chair/"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "No se vende en Amazon España: distribución por canal de contract y distribuidores oficiales."
+  - "El mecanismo Sincro Motion autorregulable trabaja óptimo entre 45 y 110 kg."
+  - "Lumbar flexible, brazos avanzados y cabecero son opcionales con coste añadido."
+alternativas:
+  - slug: "actiu-tnk-flex"
+    motivo: "Otra silla de contract española, más orientada a uso intensivo 24h."
+  - slug: "steelcase-series-1"
+    motivo: "Silla de oficina de marca global con disponibilidad más amplia si buscas alternativa accesible."
+comunidad: "Bien considerada en el mercado de mobiliario de oficina europeo por su relación entre malla, fabricación española y certificaciones ambientales. El consenso es que es una silla operativa seria de contract, con la pega habitual del canal de compra menos directo y de que muchos ajustes dependen de la configuración elegida."
+paraQuienSi:
+  - "Quien pasa la jornada completa sentado y quiere respaldo alto de malla"
+  - "Usuarios entre 45 y 110 kg que se beneficien del mecanismo autorregulable"
+  - "Quien valora fabricación europea con certificaciones ambientales"
+paraQuienNo:
+  - "Quien quiere comprar y recibir rápido por Amazon"
+  - "Presupuestos de gama de entrada"
+  - "Usuarios muy pesados que necesiten un máximo de carga alto y verificado"
+puntosFuertes:
+  - "Respaldo alto de malla 3D"
+  - "Mecanismo Sincro Motion que se autorregula al peso (45 a 110 kg)"
+  - "Brazos configurables hasta 4D de aluminio y lumbar flexible opcional"
+  - "Certificaciones europeas (UNE-EN 1335, NF Environnement)"
+puntosDebiles:
+  - "No se vende en Amazon y va por canal de contract"
+  - "Capacidad de carga máxima no publicada con claridad (rango de uso 45 a 120 kg)"
+fuenteSpecs: "Web oficial Forma5 (forma5.com/en/chairs/office-desk-chair/dot-pro) + Think Furniture (think-furniture.com/forma-5-dot-pro-task-chair) + Posture People: respaldo alto malla 3D/Meci, asiento poliuretano inyectado, mecanismo Sincro Motion 24 grados respaldo y 10 grados asiento (autorregula 45-110 kg, uso 45-120 kg), 4 posiciones de bloqueo, fondo asiento 475 mm, altura total 1025-1155 mm, ancho 480-635 mm, brazos sin/fijos/1D/3D/4D, lumbar flexible opcional, cabecero tapizado o malla 3D, base poliamida 69 cm, certif UNE-EN 1335-1/2/3 y NF Environnement, diseñador Jorge Herrera"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "presion"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  profundidadRegulable: true
+  reclinacionMaxGrados: 24
+  fondoCm: 47.5
+  mecanismo: "Sincro Motion autorregulable al peso (24 grados respaldo, 10 grados asiento, 4 posiciones de bloqueo)"
+  baseMaterial: "poliamida"
+  profundidadAsientoMaxCm: 47.5
+  reposacabezas: "ajustable"
+  asientoMaterial: "Espuma de poliuretano inyectada tapizada"
+  ruedasSueloDuro: true
+  certificacionEn1335: true

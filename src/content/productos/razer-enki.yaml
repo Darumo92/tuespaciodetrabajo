@@ -1,0 +1,94 @@
+tipo: "silla"
+nombre: "Razer Enki"
+marca: "Razer"
+imagen: "/img/productos/razer-enki.jpg"
+imagenAlt: "Silla gaming Razer Enki con asiento ancho y arcos de hombro extendidos"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: 8
+  ajustabilidad: 7.5
+  materiales: 8
+  comodidad: 8.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.razer.com/gaming-chairs/razer-enki"
+idealPara: "Sesiones largas de gaming con un asiento ancho y arcos de hombro pensados para comodidad de día entero"
+veredicto: "La Enki es la apuesta de Razer por la comodidad de jornada larga: su asiento ultra ancho de 540 mm y los arcos de hombro extendidos a 110 grados reparten bien el peso y dejan moverse sin sentir los laterales clavándose. Lleva lumbar incorporado en el respaldo (en arco, no regulable por separado), cojín cervical de memoria y certificaciones BIFMA x5.1 y EN 1335-2, que no son habituales en una gaming. El reclinable llega hasta 152 grados y los reposabrazos se ajustan en altura, lateral y separación, aunque no son 4D completos. Para quien valora comodidad amplia y respaldo certificado, es una gaming sólida; quien quiera el máximo ajuste de reposabrazos o malla mirará otras."
+resumenCompra:
+  mejorPara: "Quien quiere un asiento ancho y cómodo para muchas horas con respaldo certificado."
+  evitarSi: "Necesitas reposabrazos 4D completos o malla transpirable."
+  alternativaDirecta: "Razer Iskur V2 si quieres lumbar adaptativo regulable y reposabrazos 4D de la misma marca."
+  decisionRapida: "La gaming que recomendaría a quien prioriza un asiento amplio y cómodo por encima del máximo ajuste fino."
+metodologia:
+  - "Specs tomadas de la web oficial de Razer y de su soporte."
+  - "La nota prioriza el asiento ancho, los arcos de hombro y las certificaciones BIFMA y EN 1335-2."
+  - "Se penaliza el lumbar en arco, no regulable por separado, y los reposabrazos no 4D."
+scoreRationale:
+  ergonomia: "Asiento ancho y arcos de hombro reparten bien el peso; el lumbar va en arco fijo en el respaldo."
+  ajustabilidad: "Reclinación hasta 152 grados y reposabrazos en altura, lateral y separación, pero no 4D completos."
+  materiales: "Cuero sintético de doble textura y certificaciones BIFMA x5.1 y EN 1335-2."
+  comodidad: "Uno de sus puntos fuertes: asiento amplio y mullido pensado para día entero."
+  calidadPrecio: "Correcta dentro de la gama; se paga la marca y el respaldo certificado."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Razer Enki"
+    url: "https://www.razer.com/gaming-chairs/razer-enki"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Lumbar en arco fijo en el respaldo, no regulable por separado."
+  - "Reposabrazos ajustables pero no 4D completos."
+  - "La web oficial no detalla peso máximo de usuario ni peso del producto."
+alternativas:
+  - slug: "razer-iskur-v2"
+    motivo: "Misma marca con lumbar adaptativo regulable y reposabrazos 4D."
+  - slug: "secretlab-titan-evo"
+    motivo: "Gaming premium con más ajuste y tallas si buscas alternativa directa."
+comunidad: "Buena valoración entre usuarios y reseñas de hardware: se destaca la comodidad del asiento ancho para sesiones largas y que las certificaciones BIFMA y EN 1335-2 le dan un plus poco común en gaming. Las críticas habituales son que el lumbar va en arco fijo y no se regula por separado, y que los reposabrazos, aunque ajustables, no llegan al 4D completo."
+paraQuienSi:
+  - "Gamers que pasan muchas horas y quieren un asiento ancho y cómodo"
+  - "Quien valora un respaldo con certificaciones BIFMA y EN 1335-2"
+  - "Usuarios que se mueven mucho y agradecen los arcos de hombro extendidos"
+paraQuienNo:
+  - "Quien necesita reposabrazos 4D completos"
+  - "Quien busca malla transpirable"
+  - "Quien quiere un lumbar regulable de forma independiente"
+puntosFuertes:
+  - "Asiento ultra ancho de 540 mm"
+  - "Arcos de hombro extendidos a 110 grados"
+  - "Certificaciones BIFMA x5.1 y EN 1335-2"
+  - "Cojín cervical de espuma de memoria incluido"
+  - "Garantía de 3 años ampliable a 5"
+puntosDebiles:
+  - "Lumbar en arco fijo, no regulable por separado"
+  - "Reposabrazos no 4D completos"
+  - "Respaldo de cuero sintético, transpira menos que la malla"
+fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-enki: asiento ancho 540 mm, fondo 525 mm, arcos hombro 110 grados, reclinación hasta 152 grados, altura asiento 445-545 mm, reposabrazos altura 125 mm y lateral 25 mm, separación 445-495 mm, respaldo 835 mm de alto y 500 mm de ancho, base 690 mm, cuero sintético doble textura, cojín cervical de memoria, certif BIFMA x5.1 y EN 1335-2, garantía 3 años ampliable a 5)"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 152
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 55
+  anchoCm: 54
+  fondoCm: 53
+  mecanismo: "Reclinación hasta 152 grados con inclinación reactiva del asiento y base giratoria 360"
+  certificacionBifma: true
+  garantiaAnios: 3
+  anchoAsientoCm: 54
+  profundidadAsientoMaxCm: 53
+  alturaRespaldoCm: 84
+  reposacabezas: "ajustable"
+  asientoMaterial: "Cuero sintético de doble textura"
+  certificacionEn1335: true

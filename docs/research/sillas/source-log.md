@@ -50,3 +50,25 @@ Sin ASIN (no se venden en Amazon ES): CTA = webOficial. Specs no confirmadas dej
 8 fichas con fuente oficial: IKEA (FLINTAN, HATTEFJALL, STYRSPEL) via ikea.com/es; Razer (Iskur V2),
 Corsair (TC100 Relaxed), Newskill (Takamikura V2), Drift (DR500), Branch (Ergonomic Chair, solo US/CA).
 IKEA sin Amazon (webOficial); gaming con amazon.buscar o webOficial. Specs no confirmadas en null.
+
+## Research Bloque B (2026-06-21): 11 candidatas nuevas añadidas
+
+Bloque A agotado. Añadidas 11 candidatas con web oficial fetcheada y specs confirmadas (criterio: marca/modelo aún no en catálogo + fuente oficial localizable + amazon_query plausible):
+
+- Gaming: AndaSeat Kaiser 3 (andaseat.com) y Kaiser 3E, noblechairs ICON (noblechairs.com), Corsair T3 Rush Fabric (corsair.com), Razer Enki (razer.com, webOficial), DXRacer Master (dxracer.com).
+- Oficina/premium: Actiu TNK Flex (actiu.com, marca ES), Okamura Sylphy (okamura.com, premium JP, webOficial), Forma5 Dot.Pro (forma5.com, marca ES, webOficial).
+- Budget malla: Eureka Onyx (eurekaergonomic.com), Yaheetech Ergonomic Mesh (yaheetech.shop).
+
+Descartes:
+- KERDOM: kerdom.com solo vende movilidad/sillas de ruedas, sin web oficial de sillas de oficina; presencia 100% Amazon/retail. Sin fuente oficial localizable -> descartada (regla dura).
+- Interstuhl (EVERY/PURE) y Vitra Physix: producto AAA deseable pero web oficial devuelve 403 anti-bot a WebFetch; no fetcheable -> diferidas (reintentar con navegador/Playwright).
+- Mfavour (sin web oficial propia) y Eureka OC05 (modelo no localizable; sustituido por Onyx).
+
+## Oleada 4 Bloque B (2026-06-21)
+
+10 fichas publicadas con fuente oficial fetcheada (jerarquía 1-2) + reseñas/comunidad donde aplica:
+- Gaming: AndaSeat Kaiser 3 (andaseat.com + TechRadar/Tom's Hardware), noblechairs ICON (noblechairs.com + Tech Advisor/GamingScan), Corsair T3 Rush Fabric (corsair.com), Razer Enki (razer.com, webOficial), DXRacer Master (dxracer.com + ChairsFX/PC Gamer).
+- Oficina/premium: Actiu TNK Flex (actiu.com + ficha técnica PDF oficial, marca ES), Okamura Sylphy (okamura.com + think-furniture, premium JP), Forma5 Dot.Pro (forma5.com + think-furniture, marca ES).
+- Budget malla: Eureka Onyx (eurekaergonomic.com), Yaheetech Ergonomic Mesh (yaheetech.shop + manuals.plus).
+
+CTA: gaming/budget Amazon ES por amazon.buscar; Razer Enki + contract/premium (Actiu, Okamura, Forma5) por webOficial. Sin ASIN. Specs solo de fuente oficial; fichas con specs no publicadas omiten el campo (estilo casa). Las premium con menos datos públicos (Okamura, Forma5) son las más justas en cobertura, comparables a herman-miller-sayl ya publicada. AndaSeat 3E queda candidate (producir tras Kaiser 3). Imágenes del usuario normalizadas a 800x800 fondo blanco (eureka-onyx llegó con fondo gris, blanqueada con floodfill; 3 webp convertidas a jpg).

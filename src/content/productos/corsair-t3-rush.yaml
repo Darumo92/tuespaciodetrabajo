@@ -1,0 +1,96 @@
+tipo: "silla"
+nombre: "Corsair T3 Rush (2023)"
+marca: "Corsair"
+imagen: "/img/productos/corsair-t3-rush.jpg"
+imagenAlt: "Silla gaming Corsair T3 Rush tapizada en tela transpirable"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.1
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 8
+  materiales: 8
+  comodidad: 8
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Corsair T3 Rush silla gaming tela"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere una gaming de tela transpirable, más fresca que el cuero, con reposabrazos 4D"
+veredicto: "La T3 Rush es la respuesta de Corsair a quien no quiere sudar sobre cuero sintético: su tapizado de tela suave transpira mejor y resulta más agradable en verano que las gaming de polipiel. Trae reposabrazos 4D, reclinación amplia hasta 160 grados y un pistón clase 4, lo básico bien resuelto. El soporte lumbar va por cojín de espuma viscoelástica, no integrado, así que el ajuste depende de colocarlo, y la garantía de dos años se queda corta frente a las marcas que dan cinco. Para quien busca una gaming cómoda, fresca y bien rematada sin pagar de más, es una opción muy razonable."
+resumenCompra:
+  mejorPara: "Quien quiere una gaming de tela transpirable con reposabrazos 4D y reclinación amplia."
+  evitarSi: "Mides más de 188 cm o quieres una garantía larga y lumbar integrado."
+  alternativaDirecta: "Corsair TC100 si buscas una gaming Corsair más económica con tela o polipiel."
+  decisionRapida: "La gaming que recomendaría a quien prioriza tela fresca y comodidad por encima de la máxima garantía."
+metodologia:
+  - "Specs tomadas de la web oficial de Corsair y de su ficha de producto."
+  - "La nota prioriza la tela transpirable, los reposabrazos 4D y la reclinación amplia."
+  - "Se penaliza el lumbar por cojín (no integrado) y la garantía de solo dos años."
+scoreRationale:
+  ergonomia: "Buen soporte general, pero el lumbar va por cojín de memoria, no integrado."
+  ajustabilidad: "Reposabrazos 4D, reclinación 90-160 grados, altura 48-58 cm y balanceo cubren lo esencial."
+  materiales: "Tela suave transpirable y pistón clase 4; base de nailon, no de aluminio."
+  comodidad: "Asiento cómodo y fresco, más agradable que el cuero en verano."
+  calidadPrecio: "Buena: tela de calidad y 4D a un precio contenido, aunque con garantía corta."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Corsair T3 Rush Fabric Gaming Chair (2023)"
+    url: "https://www.corsair.com/us/en/p/gaming-chairs/cf-9010057-ww/t3-rush-fabric-gaming-chair-2023-charcoal-cf-9010057-ww"
+    fechaConsulta: "2026-06-21"
+limitaciones:
+  - "Lumbar por cojín de memoria, no integrado."
+  - "Garantía de solo dos años, por debajo de la competencia."
+  - "Altura máxima de usuario recomendada de 188 cm."
+alternativas:
+  - slug: "corsair-tc100"
+    motivo: "Gaming Corsair más económica con opciones de tela o polipiel."
+  - slug: "razer-iskur-v2"
+    motivo: "Gaming premium con lumbar integrado adaptativo si quieres más ergonomía."
+comunidad: "Acogida positiva en reseñas y comunidad gamer: se valora la tela transpirable frente al cuero, la comodidad para sesiones largas y los reposabrazos 4D. Las críticas habituales son la garantía corta de dos años y que el lumbar va por cojín en lugar de integrado, además del límite de altura para usuarios muy altos."
+paraQuienSi:
+  - "Quien quiere una gaming fresca de tela en vez de cuero sintético"
+  - "Usuarios de hasta 188 cm y 120 kg"
+  - "Quien valora reposabrazos 4D y reclinación amplia a buen precio"
+paraQuienNo:
+  - "Personas de más de 188 cm"
+  - "Quien quiere garantía larga (cinco años) y lumbar integrado"
+  - "Quien prefiere malla a la tela"
+puntosFuertes:
+  - "Tapizado de tela suave transpirable"
+  - "Reposabrazos 4D"
+  - "Reclinación amplia 90-160 grados"
+  - "Pistón clase 4 y altura de asiento 48-58 cm"
+  - "Cojín lumbar de espuma viscoelástica incluido"
+puntosDebiles:
+  - "Garantía de solo dos años"
+  - "Lumbar por cojín, no integrado"
+  - "Base de nailon, no de aluminio"
+fuenteSpecs: "Web oficial Corsair (corsair.com T3 Rush Fabric 2023 CF-9010057-WW: max 120 kg, altura usuario hasta 188 cm, reclinación 90-160 grados, balanceo 0-10 grados, reposabrazos 4D, tela suave, lumbar cojín de memoria, base nailon, altura asiento 48-58 cm, asiento 49x54 cm, respaldo 85 cm, pistón clase 4, peso neto 21,3 kg, garantía 2 años)"
+verificadoEn: "2026-06-21"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  profundidadRegulable: false
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 120
+  alturaAsientoMinCm: 48
+  alturaAsientoMaxCm: 58
+  anchoCm: 54
+  fondoCm: 49
+  mecanismo: "Reclinación 90-160 grados con balanceo 0-10 grados y pistón clase 4"
+  baseMaterial: "nailon"
+  pesoProductoKg: 21
+  garantiaAnios: 2
+  alturaRecomendadaMaxCm: 188
+  anchoAsientoCm: 54
+  profundidadAsientoMaxCm: 49
+  alturaRespaldoCm: 85
+  reposacabezas: "ajustable"
+  asientoMaterial: "Tela suave transpirable"
