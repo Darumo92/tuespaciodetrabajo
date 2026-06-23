@@ -1,6 +1,6 @@
 ---
 import ImagenProducto from './ImagenProducto.astro';
-import { localizedProductName, notaGlobal, tramoTexto, datosFiltrado, construirChips, productPath, type Producto } from '@/lib/productos';
+import { localizedProductName, notaGlobal, tramoTexto, datosFiltrado, construirChips, productPath, textoBuscable, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
@@ -12,9 +12,10 @@ const cfg = getTipoConfig(p.tipo);
 const dataAttrs = cfg ? datosFiltrado(p, cfg) : {};
 const chips = cfg ? construirChips(p, cfg, locale) : [];
 const displayName = localizedProductName(p, locale);
+const buscable = textoBuscable(p);
 ---
 
-<article class="card" data-slug={p.slug} {...dataAttrs}>
+<article class="card" data-slug={p.slug} data-buscar={buscable} {...dataAttrs}>
   <label class="card-cmp">
     <input type="checkbox" class="cmp-chk" value={p.slug} />
     {locale === 'en' ? 'compare' : 'comparar'} <span class="sr-only">{displayName}</span>
