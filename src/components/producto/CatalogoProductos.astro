@@ -1,7 +1,7 @@
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
-import { getTipoConfig } from '@/lib/tipos';
-import { claveData, opcionesMarca, filtrosVisibles, comparePath, localizedTipoSlug } from '@/lib/productos';
+import { getTipoConfig, GRUPOS_FILTRO } from '@/lib/tipos';
+import { claveData, opcionesMarca, filtrosVisibles, agruparFiltros, comparePath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
@@ -21,6 +21,8 @@ const ordenaciones = cfg?.ordenaciones ?? [];
 const MIN_DATOS_FACETA = 3;
 const SIEMPRE_VISIBLES = ['precio', 'marca'];
 const filtros = cfg ? filtrosVisibles(cfg.filtros, productos, MIN_DATOS_FACETA, SIEMPRE_VISIBLES) : [];
+const { rapidos, grupos } = agruparFiltros(filtros, GRUPOS_FILTRO);
+const grupoLabel = (g: (typeof grupos)[number]) => (isEn ? g.etiquetaEn : g.etiqueta);
 
 // Opciones dinámicas de marca (no es un enum fijo).
 const marcas = opcionesMarca(productos);
@@ -89,7 +91,7 @@ const compareBase = comparePath(tipo, '', locale);
     </button>
 
     <div class="cat-pills" data-pills>
-      {filtros.map((f) => (
+      {rapidos.map((f) => (
         f.control === 'check' ? (
           <button class="cat-pill cat-pill--toggle" type="button"
             data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{tr(f.etiqueta)}</button>
@@ -134,6 +136,56 @@ const compareBase = comparePath(tipo, '', locale);
           </div>
         )
       ))}
+
+      {grupos.length > 0 && (
+        <button class="cat-pill cat-morebtn" type="button" data-more-toggle
+          aria-expanded="false" aria-controls="cat-morepanel">
+          {isEn ? 'More filters' : 'Más filtros'}<span class="cat-mobn" data-more-n hidden>0</span>
+        </button>
+      )}
+
+      <div class="cat-morepanel" id="cat-morepanel" data-more-panel hidden>
+        {grupos.map((g) => (
+          <details class="cat-group" open>
+            <summary class="cat-group-sum">{grupoLabel(g)}</summary>
+            <div class="cat-group-body">
+              {g.filtros.map((f) => (
+                f.control === 'check' ? (
+                  <button class="cat-pill cat-pill--toggle" type="button"
+                    data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{tr(f.etiqueta)}</button>
+                ) : (
+                  <div class="cat-facet" data-facet={f.id}>
+                    <button class="cat-pill" type="button" data-pill={f.id} data-pill-tipo="dropdown"
+                      aria-expanded="false" aria-controls={`pop-${f.id}`}>
+                      <span class="cat-pill-label">{tr(f.etiqueta)}</span>
+                      <span class="cat-pill-val" data-pill-val hidden></span>
+                      <span class="cat-pill-caret" aria-hidden="true">▾</span>
+                    </button>
+                    <div class="cat-pop" id={`pop-${f.id}`} data-pop={f.id} role="group" aria-label={tr(f.etiqueta)} hidden>
+                      {f.control === 'rango' ? (
+                        <div class="cat-seg">
+                          {valoresRango(f).map((v) => (
+                            <button class="cat-seg-btn" type="button" data-opt={v}>{etiquetaRango(f, v)}</button>
+                          ))}
+                        </div>
+                      ) : (
+                        <div class="cat-opts">
+                          {(f.opciones ?? []).filter((o) => o.valor !== '' && o.valor !== '0').map((o) => (
+                            <button class="cat-opt" type="button" data-opt={o.valor}>{tr(o.etiqueta)}</button>
+                          ))}
+                        </div>
+                      )}
+                      <div class="cat-pop-foot">
+                        <button class="cat-pop-clear" type="button" data-pop-clear>{isEn ? 'Remove' : 'Quitar'}</button>
+                      </div>
+                    </div>
+                  </div>
+                )
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
 
       <label class="cat-pill cat-pill--orden">
         <span>{isEn ? 'Sort' : 'Ordenar'}</span>
@@ -240,6 +292,19 @@ const compareBase = comparePath(tipo, '', locale);
 
   .cat-pop-foot { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
   .cat-pop-clear { border: 0; background: transparent; color: var(--accent); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
+
+  /* Panel "Más filtros" */
+  .cat-morebtn { gap: 0.4rem; }
+  .cat-morebtn[aria-expanded='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--bg)); }
+  .cat-morepanel {
+    flex-basis: 100%; order: 50; margin-top: 0.6rem; padding: 0.9rem;
+    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted);
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 0.8rem 1.2rem;
+  }
+  .cat-group { border: 0; }
+  .cat-group-sum { cursor: pointer; font-weight: 700; font-size: 0.86rem; padding: 0.2rem 0; }
+  .cat-group-sum:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .cat-group-body { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
 
   /* Chips activos */
   .cat-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-bottom: 0.9rem; }
@@ -511,6 +576,7 @@ const compareBase = comparePath(tipo, '', locale);
         mobN.textContent = String(n);
         mobN.hidden = n === 0;
       }
+      actualizarMoreN();
     };
 
     // Re-sincroniza los controles visuales de una faceta con el estado (tras quitar un chip).
@@ -635,6 +701,25 @@ const compareBase = comparePath(tipo, '', locale);
       bar?.classList.remove('is-open');
       mobToggle?.setAttribute('aria-expanded', 'false');
     });
+
+    // ----- Panel "Más filtros" -----
+    const moreToggle = root.querySelector<HTMLButtonElement>('[data-more-toggle]');
+    const morePanel = root.querySelector<HTMLElement>('[data-more-panel]');
+    const moreN = root.querySelector<HTMLElement>('[data-more-n]');
+    const idsPanel = new Set(
+      Array.from(root.querySelectorAll<HTMLElement>('[data-more-panel] [data-pill]')).map((b) => b.dataset.pill || '')
+    );
+    moreToggle?.addEventListener('click', () => {
+      const abierto = moreToggle.getAttribute('aria-expanded') === 'true';
+      moreToggle.setAttribute('aria-expanded', abierto ? 'false' : 'true');
+      if (morePanel) morePanel.hidden = abierto;
+    });
+    const actualizarMoreN = () => {
+      if (!moreN) return;
+      const n = Object.keys(estado).filter((id) => idsPanel.has(id)).length;
+      moreN.textContent = String(n);
+      moreN.hidden = n === 0;
+    };
 
     // ===== Barra de comparación (igual que antes) =====
     const checks = Array.from(grid.querySelectorAll<HTMLInputElement>('.cmp-chk'));
