@@ -1,4 +1,4 @@
-import type { ClaveTipo, FiltroConfig, TipoConfig } from './tipos';
+import type { ClaveTipo, FiltroConfig, GrupoFiltro, TipoConfig } from './tipos';
 import { buildAmazonSearchUrl, buildAmazonUrl } from '../i18n/amazon';
 import { DEFAULT_LOCALE, type Locale } from '../i18n/locales';
 import { localizedPath } from '../i18n/routes';
@@ -228,6 +228,24 @@ export function filtrosVisibles(
   return filtros.filter(
     (f) => siempreVisibles.includes(f.id) || cuentaConDato(productos, f.campo) >= min
   );
+}
+
+export interface GrupoFiltrosRender { id: string; etiqueta: string; etiquetaEn: string; filtros: FiltroConfig[]; }
+
+/** Reparte filtros (ya pasados por filtrosVisibles) en rápidos (sin grupo) y grupos.
+ *  Grupos en el orden de `grupos`; los vacíos se omiten. */
+export function agruparFiltros(
+  filtros: FiltroConfig[],
+  grupos: GrupoFiltro[]
+): { rapidos: FiltroConfig[]; grupos: GrupoFiltrosRender[] } {
+  const rapidos = filtros.filter((f) => !f.grupo);
+  const out: GrupoFiltrosRender[] = [];
+  for (const g of grupos) {
+    const fs = filtros.filter((f) => f.grupo === g.id);
+    if (fs.length === 0) continue;
+    out.push({ id: g.id, etiqueta: g.etiqueta, etiquetaEn: g.etiquetaEn, filtros: fs });
+  }
+  return { rapidos, grupos: out };
 }
 
 /** minúsculas + sin diacríticos + recortado, para comparar búsquedas. */

@@ -26,10 +26,11 @@ import {
   normalizaTexto,
   coincideBusqueda,
   textoBuscable,
+  agruparFiltros,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
 import type { FiltroConfig } from './tipos';
-import { getTipoConfig } from './tipos';
+import { getTipoConfig, GRUPOS_FILTRO } from './tipos';
 import type { TipoConfig } from './tipos';
 
 const COMPLETOS: Valoraciones = { ergonomia: 8, ajustabilidad: 8, materiales: 9, comodidad: 7, calidadPrecio: 8 };
@@ -465,5 +466,35 @@ describe('textoBuscable', () => {
   });
   it('sin acentos ni mayúsculas para comparar', () => {
     expect(textoBuscable({ nombre: 'Ergonómica', marca: 'Hbada', idealPara: 'Oficina' })).toBe('ergonomica hbada oficina');
+  });
+});
+
+describe('agruparFiltros', () => {
+  const mk = (id: string, grupo?: string): FiltroConfig =>
+    ({ id, etiqueta: id, control: 'select', comparacion: 'igual', campo: `specs.${id}`, grupo });
+
+  it('separa rápidos (sin grupo) de los agrupados', () => {
+    const { rapidos, grupos } = agruparFiltros(
+      [mk('precio'), mk('marca'), mk('respaldo', 'ergonomia')], GRUPOS_FILTRO);
+    expect(rapidos.map((f) => f.id)).toEqual(['precio', 'marca']);
+    expect(grupos.map((g) => g.id)).toEqual(['ergonomia']);
+    expect(grupos[0].filtros.map((f) => f.id)).toEqual(['respaldo']);
+  });
+
+  it('respeta el orden de GRUPOS_FILTRO', () => {
+    const { grupos } = agruparFiltros(
+      [mk('peso', 'resistencia'), mk('respaldo', 'ergonomia')], GRUPOS_FILTRO);
+    expect(grupos.map((g) => g.id)).toEqual(['ergonomia', 'resistencia']);
+  });
+
+  it('omite grupos sin filtros visibles', () => {
+    const { grupos } = agruparFiltros([mk('respaldo', 'ergonomia')], GRUPOS_FILTRO);
+    expect(grupos.map((g) => g.id)).toEqual(['ergonomia']);
+  });
+
+  it('expone etiqueta y etiquetaEn del grupo', () => {
+    const { grupos } = agruparFiltros([mk('respaldo', 'ergonomia')], GRUPOS_FILTRO);
+    expect(grupos[0].etiqueta).toBe('Ergonomía y ajustes');
+    expect(grupos[0].etiquetaEn).toBe('Ergonomics & adjustments');
   });
 });
