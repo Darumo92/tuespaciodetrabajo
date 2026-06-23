@@ -80,7 +80,7 @@ const compareBase = comparePath(tipo, '', locale);
   <div class="cat-search">
     <span class="cat-search-icon" aria-hidden="true">🔍</span>
     <input type="search" class="cat-search-input" data-busqueda
-      placeholder={isEn ? 'Search by name or brand…' : 'Buscar por nombre o marca…'} aria-label={isEn ? 'Search products' : 'Buscar productos'} autocomplete="off" />
+      placeholder={isEn ? 'Search by name, brand or use…' : 'Buscar por nombre, marca o uso…'} aria-label={isEn ? 'Search products' : 'Buscar productos'} autocomplete="off" />
   </div>
 
   <div class="cat-bar">
@@ -383,9 +383,7 @@ const compareBase = comparePath(tipo, '', locale);
     // ----- Búsqueda -----
     const coincide = (card: HTMLElement): boolean => {
       if (!busqueda) return true;
-      const nombre = card.querySelector('.card-name')?.textContent ?? '';
-      const marca = card.querySelector('.card-brand')?.textContent ?? '';
-      return norm(nombre).includes(busqueda) || norm(marca).includes(busqueda);
+      return (card.dataset.buscar ?? '').includes(busqueda);
     };
 
     // ----- Aplicación de filtros -----
@@ -597,13 +595,20 @@ const compareBase = comparePath(tipo, '', locale);
       abierta?.focus();
     });
 
-    // ----- Búsqueda -----
-    const onBusqueda = () => {
+    // ----- Búsqueda (con debounce) -----
+    let busquedaTimer: ReturnType<typeof setTimeout> | undefined;
+    const aplicarBusqueda = () => {
       busqueda = norm(busquedaInput?.value ?? '');
       applyFilters();
     };
-    busquedaInput?.addEventListener('input', onBusqueda);
-    busquedaInput?.addEventListener('search', onBusqueda); // botón ✕ nativo de type=search
+    busquedaInput?.addEventListener('input', () => {
+      clearTimeout(busquedaTimer);
+      busquedaTimer = setTimeout(aplicarBusqueda, 150);
+    });
+    busquedaInput?.addEventListener('search', () => { // botón ✕ nativo: inmediato
+      clearTimeout(busquedaTimer);
+      aplicarBusqueda();
+    });
 
     // ----- Orden -----
     ordenSel?.addEventListener('change', applyFilters);
