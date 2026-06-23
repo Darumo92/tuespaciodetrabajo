@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Diablo X-Player 2.0"
 marca: "Diablo Chairs"
-imagen: ""
+imagen: "/img/productos/diablo-x-player.jpg"
 imagenAlt: "Silla gaming Diablo X-Player 2.0 con respaldo de tejido y malla"
 tramoPrecio: 2
 precioMin: null

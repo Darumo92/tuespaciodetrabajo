@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Genesis Nitro 950"
 marca: "Genesis"
-imagen: ""
+imagen: "/img/productos/genesis-nitro-950.jpg"
 imagenAlt: "Silla gaming Genesis Nitro 950 con respaldo tapizado"
 tramoPrecio: 2
 precioMin: null

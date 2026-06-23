@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Branch Verve Chair"
 marca: "Branch"
-imagen: ""
+imagen: "/img/productos/branch-verve.jpg"
 imagenAlt: "Silla de oficina Branch Verve con respaldo de punto 3D de colores"
 tramoPrecio: 2
 precioMin: null

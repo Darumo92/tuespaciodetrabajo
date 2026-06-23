@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Sedus se:joy"
 marca: "Sedus"
-imagen: ""
+imagen: "/img/productos/sedus-se-joy.jpg"
 imagenAlt: "Silla de oficina alemana Sedus se:joy con membrana de tejido de punto autoajustable"
 tramoPrecio: 3
 precioMin: null

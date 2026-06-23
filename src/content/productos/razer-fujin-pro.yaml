@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Razer Fujin Pro"
 marca: "Razer"
-imagen: ""
+imagen: "/img/productos/razer-fujin-pro.jpg"
 imagenAlt: "Silla ergonómica Razer Fujin Pro de malla completa para gaming y oficina"
 tramoPrecio: 4
 precioMin: null

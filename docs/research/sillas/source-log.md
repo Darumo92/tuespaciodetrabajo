@@ -91,3 +91,14 @@ Diferidas (estado candidate, no producir esta oleada):
 CTA esperado: amazon.buscar para Ergohuman, Sharkoon, Vertagear, Trust (venta en Amazon ES); webOficial para RH Logic 400, Sedus, Giroflex, RECARO Exo, Quersus y Forgeon (contract/premium o exclusiva de tienda). Sin ASIN.
 
 Publicadas las 10 el 2026-06-22 con imagen del usuario (normalizadas a 800x800 fondo blanco; 4 webp y 1 png transparente convertidas a jpg). Catálogo 57 -> 67. Backlog: 10 candidate -> published.
+
+## Research oleada 6 (2026-06-23): 10 fichas (marcas nuevas + diferidas)
+
+Diferidas de oleada 5 reintentadas: andaseat-kaiser-3e producida (fuente oficial andaseat.com OK). AKRacing Masters Max (HTTP 402) y Backforce One Plus (HTTP 403) siguen con anti-bot; Playwright no disponible en este entorno ("chrome executable not found"); quedan candidate. Wilkhahn AT y Maxnomic OFC: webs oficiales con specs numéricas insuficientes; quedan candidate.
+
+9 candidatas nuevas con web oficial fetcheada y specs confirmadas:
+- Gaming marcas nuevas: Nitro Concepts S300 (nitro-concepts.com), Cougar Armor Elite (cougargaming.com), Genesis Nitro 950 (genesis-zone.com), Diablo X-Player 2.0 (diablochairs.com).
+- Marcas existentes, modelos nuevos: Corsair TC500 LUXE (corsair.com, tela premium 5D Omniflex), Razer Fujin Pro (razer.com, malla ergo full-mesh).
+- Oficina: Steelcase Please (steelcase.com + folleto EN, respaldo doble LTC2), Sedus se:joy (sedus.com, membrana de punto autoajustable), Branch Verve (branchfurniture.com, DTC, solo EE. UU./Canadá).
+
+CTA: amazon.buscar para Kaiser 3E, Nitro S300, Cougar, Genesis, Diablo y Corsair (venta en Amazon ES); webOficial para Razer Fujin Pro, Steelcase Please, Sedus se:joy y Branch Verve. Sin ASIN. Specs solo de fuente oficial (estilo casa). Publicadas las 10 el 2026-06-23 con imagen del usuario (normalizadas a 800x800 fondo blanco; webp/png/avif convertidas a jpg, sedus blanqueada con floodfill). Catálogo 67 -> 77.

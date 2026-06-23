@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Cougar Armor Elite"
 marca: "Cougar"
-imagen: ""
+imagen: "/img/productos/cougar-armor-elite.jpg"
 imagenAlt: "Silla gaming Cougar Armor Elite con respaldo de piel sintética"
 tramoPrecio: 2
 precioMin: null

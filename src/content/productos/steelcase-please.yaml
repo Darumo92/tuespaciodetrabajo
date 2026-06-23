@@ -1,7 +1,7 @@
 tipo: "silla"
 nombre: "Steelcase Please"
 marca: "Steelcase"
-imagen: ""
+imagen: "/img/productos/steelcase-please.jpg"
 imagenAlt: "Silla de oficina contract Steelcase Please con respaldo doble LTC2"
 tramoPrecio: 4
 precioMin: null
