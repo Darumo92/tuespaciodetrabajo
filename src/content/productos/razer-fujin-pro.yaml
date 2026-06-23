@@ -1,0 +1,84 @@
+tipo: "silla"
+nombre: "Razer Fujin Pro"
+marca: "Razer"
+imagen: "/img/productos/razer-fujin-pro.jpg"
+imagenAlt: "Silla ergonómica Razer Fujin Pro de malla completa para gaming y oficina"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.8
+  ajustabilidad: 9.0
+  materiales: 8.7
+  comodidad: 8.6
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.razer.com/gaming-chairs/razer-fujin-pro"
+idealPara: "Sesiones largas de gaming y oficina para quien quiere malla transpirable y no una butaca tipo racing"
+veredicto: "La Fujin Pro es la apuesta seria de Razer por la silla ergonómica de malla completa, lejos del clásico asiento racing acolchado de la marca. Respaldo de malla transpirable, lumbar 2D, brazos 4D y reposacabezas 3D dan un nivel de ajuste muy alto para uso prolongado. El matiz importante está en la garantía: la estructura, los mecanismos y los reposabrazos llegan hasta 5 años, pero la malla y el asiento solo cubren hasta 1 año, así que la pieza que más se desgasta es la que menos cobertura tiene."
+resumenCompra:
+  mejorPara: "Quien quiere full-mesh ergonómica de Razer para combinar gaming intenso y jornada de oficina."
+  evitarSi: "Buscas el tacto mullido de una silla racing o mides por debajo de 170 cm."
+  alternativaDirecta: "Eurotech Ergohuman Gen2 si quieres malla ergonómica probada al margen del mundo gaming."
+  decisionRapida: "La Razer pensada para horas y horas sentado, con malla y ajustes de verdad; solo vigila la garantía corta de la malla."
+metodologia:
+  - "Specs tomadas de la web oficial de Razer."
+  - "La nota prioriza la malla completa, el lumbar 2D y los brazos 4D para uso prolongado."
+  - "Se penaliza la garantía corta de malla y asiento y la falta de altura de asiento publicada."
+scoreRationale:
+  ergonomia: "Malla completa con lumbar 2D y reposacabezas 3D pensados para sostener la postura muchas horas."
+  ajustabilidad: "Lumbar en altura y profundidad, brazos 4D y cabezal 3D cubren casi todos los puntos de contacto."
+  materiales: "Malla de elastómero termoplástico y poliéster sobre estructura de aluminio."
+  comodidad: "Synchro-tilt con tensión regulable acompaña el cambio de postura entre trabajo y descanso."
+  calidadPrecio: "Premium para una marca gaming, con la garantía de la malla como punto débil del paquete."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Razer Fujin Pro"
+    url: "https://www.razer.com/gaming-chairs/razer-fujin-pro"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Garantía escalonada: hasta 5 años en estructura, mecanismos y reposabrazos, pero solo hasta 1 año en malla y asiento."
+  - "Altura recomendada a partir de 170 cm: queda grande para usuarios bajos."
+  - "Altura de asiento y ángulo exacto de reclinación no publicados por la marca."
+alternativas:
+  - slug: "eurotech-ergohuman-gen2"
+    motivo: "Malla ergonómica muy contrastada si prefieres dejar de lado la etiqueta gaming."
+  - slug: "razer-enki"
+    motivo: "La opción Razer más asequible si te vale una silla acolchada en vez de malla."
+  - slug: "noblechairs-hero"
+    motivo: "Alternativa gaming premium si prefieres asiento amplio tapizado a la malla completa."
+comunidad: "Razer entró tarde en las sillas ergonómicas de malla y la línea Fujin es su respuesta full-mesh frente a su histórico catálogo de butacas racing. La Fujin Pro se discute en foros de gaming y oficina como una de las pocas mallas premium de una marca de periféricos, con buena valoración de su sistema de ajustes. El reparo más citado por la comunidad es la garantía desigual: cinco años para la estructura, pero solo uno para la malla y el asiento, justo lo que más sufre con el uso diario."
+paraQuienSi:
+  - "Personas que combinan gaming largo con teletrabajo y quieren transpiración de malla"
+  - "Usuarios de 170 a 200 cm que buscan lumbar y reposacabezas ajustables"
+  - "Quien prefiere estructura de aluminio a las bases de plástico"
+paraQuienNo:
+  - "Quien quiere el acolchado envolvente de una silla racing"
+  - "Usuarios por debajo de 170 cm"
+  - "Quien da prioridad a una garantía larga también en la malla"
+puntosFuertes:
+  - "Respaldo de malla completa transpirable (elastómero termoplástico y poliéster)"
+  - "Lumbar 2D ajustable en altura y profundidad"
+  - "Reposabrazos 4D y reposacabezas 3D"
+  - "Estructura, brazos y base de aleación de aluminio"
+  - "Soporta hasta 136 kg"
+puntosDebiles:
+  - "Garantía de solo 1 año en malla y asiento frente a 5 años en estructura"
+  - "Pensada para 170 cm en adelante, poco margen para usuarios bajos"
+fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-fujin-pro: respaldo de malla de elastómero termoplástico y poliéster, lumbar 2D en altura y profundidad, reposabrazos 4D, reposacabezas 3D, máx 136 kg, altura recomendada 170-200 cm, estructura y base de aleación de aluminio, mecanismo synchro-tilt con tensión regulable, garantía hasta 5 años en estructura, mecanismos y reposabrazos y hasta 1 año en malla y asiento)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "malla"
+  reposabrazos: "4d"
+  pesoMaxKg: 136
+  mecanismo: "inclinacion-sincronizada"
+  baseMaterial: "aluminio"
+  garantiaAnios: 5
+  alturaRecomendadaMinCm: 170
+  alturaRecomendadaMaxCm: 200
+  reposacabezas: "ajustable"

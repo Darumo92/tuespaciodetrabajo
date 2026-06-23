@@ -1,0 +1,81 @@
+tipo: "silla"
+nombre: "Sedus se:joy"
+marca: "Sedus"
+imagen: "/img/productos/sedus-se-joy.jpg"
+imagenAlt: "Silla de oficina alemana Sedus se:joy con membrana de tejido de punto autoajustable"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.4
+  ajustabilidad: 7.0
+  materiales: 8.8
+  comodidad: 8.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.sedus.com/en/products/chairs/sejoy"
+idealPara: "Quien quiere una silla alemana minimalista que se adapta sola, sin palancas ni ajustes que tocar"
+veredicto: "La idea de la se:joy es renunciar a los ajustes: asiento y respaldo forman una sola estructura cubierta por una membrana de tejido de punto que cede y se adapta a cada cuerpo automáticamente, sin lumbar regulable ni mandos que aprender. Esa simplicidad es su gracia y a la vez su límite, porque si necesitas afinar un soporte concreto, aquí no vas a poder. Los reposabrazos no vienen de serie: son opcionales. A favor juega el sello Sedus, con balancín de suspensión y certificaciones de sobra."
+resumenCompra:
+  mejorPara: "Entornos y personas que quieren sentarse y olvidarse, con calidad alemana detrás."
+  evitarSi: "Te gusta afinar lumbar y reposabrazos a mano o mides en los extremos de la tabla."
+  alternativaDirecta: "Humanscale Diffrient Smart si buscas otra silla de filosofía autoajustable sin apenas mandos."
+  decisionRapida: "Una talla para casi todos: la pones y te sostiene, sin manual de instrucciones. Ese es el trato."
+metodologia:
+  - "Specs tomadas de la web oficial de Sedus."
+  - "La nota prioriza el concepto autoajustable, la membrana de punto y las certificaciones."
+  - "Se penaliza la ausencia de ajustes manuales y que los reposabrazos sean opcionales."
+scoreRationale:
+  ergonomia: "La membrana de punto en estructura única distribuye la presión de forma uniforme sin intervención del usuario."
+  ajustabilidad: "Casi nula por diseño: el atractivo es no tener que ajustar nada, pero penaliza a quien quiere control fino."
+  materiales: "Tejido de punto técnico y construcción Sedus con varias certificaciones."
+  comodidad: "El balancín con suspensión en profundidad acompaña el movimiento en jornadas medias."
+  calidadPrecio: "Razonable dentro de la gama por marca y acabados, aunque sin ajustes que justifiquen subir más."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Sedus se:joy"
+    url: "https://www.sedus.com/en/products/chairs/sejoy"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Sin ajustes manuales de lumbar: el soporte es automático y no regulable."
+  - "Los reposabrazos no vienen de serie, son una opción del modelo base."
+  - "Concepto de talla única: menos margen para usuarios en los extremos de peso o altura."
+alternativas:
+  - slug: "sedus-black-dot"
+    motivo: "La otra Sedus del catálogo, con mecanismo dorsocinético si quieres respaldo activo de la misma marca."
+  - slug: "humanscale-diffrient-smart"
+    motivo: "Filosofía autoajustable parecida, sin apenas mandos, si lo que buscas es simplicidad."
+comunidad: "Sedus es un fabricante alemán con larga reputación en mobiliario de oficina profesional. La se:joy se comenta sobre todo por su planteamiento minimalista, la membrana de punto que se adapta sola, y encaja en proyectos que buscan estética limpia y mantenimiento bajo. Al moverse en canal profesional, las opiniones de usuario final son escasas, pero la valoración general gira en torno a su comodidad inmediata sin curva de aprendizaje. La pega que más se repite es la falta de ajustes para quien quiere personalizar la postura."
+paraQuienSi:
+  - "Personas que no quieren aprender a regular una silla y prefieren que se adapte sola"
+  - "Oficinas que buscan estética minimalista y mantenimiento sencillo"
+  - "Usuarios de complexión media de hasta 130 kg en jornadas de intensidad moderada"
+paraQuienNo:
+  - "Quien necesita lumbar regulable o quiere afinar cada parámetro"
+  - "Quien da por hecho que los reposabrazos vienen incluidos"
+  - "Usuarios muy altos, muy bajos o por encima de 130 kg"
+puntosFuertes:
+  - "Membrana de tejido de punto que se adapta sola, sin ajustes"
+  - "Asiento y respaldo en una única estructura continua"
+  - "Mecanismo balancín con suspensión en profundidad e inclinación 4 grados adelante y 7 atrás"
+  - "Certificaciones DIN EN 1335, GS, GREENGUARD, AGR y Blue Angel"
+  - "Garantía de 5 años"
+puntosDebiles:
+  - "Sin ajustes manuales de lumbar ni soporte regulable"
+  - "Reposabrazos opcionales, no de serie"
+fuenteSpecs: "Web oficial Sedus (sedus.com/en/products/chairs/sejoy: asiento y respaldo en una sola estructura con membrana de tejido de punto autoajustable, reposabrazos opcionales, altura de asiento 390-510 mm, máx 130 kg, mecanismo balancín con suspensión en profundidad e inclinación 4 grados adelante y 7 atrás, certif. DIN EN 1335, GS, QUALITY OFFICE, GREENGUARD, AGR y Blue Angel, garantía 5 años)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "malla"
+  reposabrazos: "ninguno"
+  pesoMaxKg: 130
+  alturaAsientoMinCm: 39
+  alturaAsientoMaxCm: 51
+  mecanismo: "balancin-sincronizado"
+  garantiaAnios: 5
+  certificacionEn1335: true

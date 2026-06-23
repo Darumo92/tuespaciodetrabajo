@@ -1,0 +1,89 @@
+tipo: "silla"
+nombre: "Corsair TC500 LUXE"
+marca: "Corsair"
+imagen: "/img/productos/corsair-tc500-luxe.jpg"
+imagenAlt: "Silla gaming Corsair TC500 LUXE de tela premium con reposabrazos 5D Omniflex"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: 4.3
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 9.0
+  materiales: 8.3
+  comodidad: 8.5
+  calidadPrecio: 8.2
+amazon:
+  asin: null
+  buscar: "Corsair TC500 LUXE silla gaming"
+webOficial: "https://www.corsair.com/us/en/p/gaming-chairs/cf-9010066-ww/tc500-luxe-gaming-chair-shadow-cf-9010066-ww"
+idealPara: "Gaming de tela premium para quien quiere reclinarse a fondo y ajustar los brazos al milímetro"
+veredicto: "Donde la TC500 LUXE saca pecho es en los reposabrazos: el sistema 5D Omniflex se mueve en cinco direcciones (arriba/abajo, izquierda/derecha, adelante/atrás, giro y reverso), de los más versátiles que se ven en gaming. Súmale tela transpirable acolchada en lugar de polipiel y reclinación hasta 160 grados, y tienes una silla pensada para sesiones largas sin sudar la espalda. El pero llega en la letra pequeña: garantía de solo 2 años y lumbar de 4 vías que, aun siendo útil, no es un soporte ergonómico dinámico de gama alta."
+resumenCompra:
+  mejorPara: "Quien quiere gaming de tela transpirable y los reposabrazos más ajustables de su rango."
+  evitarSi: "Buscas malla ergonómica pura o una garantía larga al estilo contract."
+  alternativaDirecta: "Corsair T3 Rush si quieres la misma filosofía de tela a un precio algo más contenido."
+  decisionRapida: "Si los brazos de tu silla nunca quedan donde quieres, los 5D Omniflex de esta resuelven justo eso."
+metodologia:
+  - "Specs tomadas de la web oficial de Corsair."
+  - "La nota prioriza los reposabrazos 5D Omniflex, la tela transpirable y la reclinación a 160 grados."
+  - "Se penaliza la garantía de 2 años y un lumbar de 4 vías sin soporte dinámico."
+scoreRationale:
+  ergonomia: "Lumbar de 4 vías y respaldo de tela cumplen, sin llegar al soporte dinámico de una ergonómica de malla."
+  ajustabilidad: "Los reposabrazos 5D Omniflex y la reclinación 90-160 grados la sitúan entre las más ajustables del rango."
+  materiales: "Tela premium transpirable, estructura de acero y base metálica con acabado al horno."
+  comodidad: "Tela acolchada, reclinación profunda y cojín de memory foam favorecen sesiones largas."
+  calidadPrecio: "Buen conjunto de ajustes por el precio, con la garantía corta como contrapeso."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Corsair TC500 LUXE"
+    url: "https://www.corsair.com/us/en/p/gaming-chairs/cf-9010066-ww/tc500-luxe-gaming-chair-shadow-cf-9010066-ww"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Garantía de solo 2 años, corta frente a otras sillas de su precio."
+  - "Lumbar de 4 vías útil, pero sin soporte ergonómico dinámico."
+  - "Respaldo de tela: menos transpirable que una malla completa en climas calurosos."
+alternativas:
+  - slug: "corsair-t3-rush"
+    motivo: "La hermana de tela de Corsair, más contenida de precio si renuncias a los brazos 5D."
+  - slug: "secretlab-titan-evo"
+    motivo: "Gaming premium muy probada si prefieres una construcción referencia del sector."
+comunidad: "Corsair es marca conocida en periféricos y su gama de sillas gaming se mueve en el terreno de la tela transpirable frente a la polipiel habitual. La TC500 LUXE se comenta sobre todo por sus reposabrazos 5D Omniflex, que muchos usuarios destacan como su mejor baza, y por la comodidad de la tela en sesiones largas. La crítica que más aparece es la garantía de 2 años, más corta que la de varias rivales directas, y que el lumbar, aun ajustable, no compite con un soporte dinámico de malla."
+paraQuienSi:
+  - "Jugadores que pasan muchas horas y prefieren tela transpirable a la polipiel"
+  - "Quien quiere reposabrazos con recorrido completo en cinco direcciones"
+  - "Usuarios de hasta 188 cm y 120 kg que buscan reclinarse hasta 160 grados"
+paraQuienNo:
+  - "Quien busca soporte lumbar ergonómico dinámico de gama alta"
+  - "Quien quiere una garantía larga tipo contract"
+  - "Usuarios por encima de 120 kg o de 188 cm"
+puntosFuertes:
+  - "Reposabrazos 5D Omniflex (arriba/abajo, izquierda/derecha, adelante/atrás, giro y reverso)"
+  - "Tela premium transpirable acolchada en vez de polipiel"
+  - "Reclinación de 90 a 160 grados"
+  - "Estructura de acero y base metálica con acabado al horno"
+  - "Reposacabezas de memory foam desmontable y ajustable"
+puntosDebiles:
+  - "Garantía de solo 2 años"
+  - "Lumbar de 4 vías sin soporte dinámico"
+fuenteSpecs: "Web oficial Corsair (corsair.com/us/en/p/gaming-chairs/cf-9010066-ww: respaldo de tela premium transpirable acolchada, lumbar regulable de 4 vías, reposabrazos 5D Omniflex, reclinación 90-160 grados, máx 120 kg, altura recomendada hasta 188 cm, altura de asiento 42-52 cm, ancho de asiento 59 cm, profundidad de asiento 50 cm, altura de respaldo 80 cm, estructura de acero con base metálica acabada al horno, peso del producto 32 kg, reposacabezas de memory foam desmontable, garantía 2 años)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "altura"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 120
+  alturaAsientoMinCm: 42
+  alturaAsientoMaxCm: 52
+  mecanismo: "inclinacion-bloqueable"
+  baseMaterial: "acero"
+  pesoProductoKg: 32
+  garantiaAnios: 2
+  alturaRecomendadaMaxCm: 188
+  anchoAsientoCm: 59
+  profundidadAsientoMinCm: 50
+  profundidadAsientoMaxCm: 50
+  alturaRespaldoCm: 80
+  reposacabezas: "ajustable"

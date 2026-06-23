@@ -1,0 +1,83 @@
+tipo: "silla"
+nombre: "Nitro Concepts S300"
+marca: "Nitro Concepts"
+imagen: "/img/productos/nitro-concepts-s300.jpg"
+imagenAlt: "Silla gaming Nitro Concepts S300 tapizada en tela"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.4
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 8.5
+  comodidad: 8.5
+  calidadPrecio: 9.0
+amazon:
+  asin: null
+  buscar: "Nitro Concepts S300 silla gaming"
+webOficial: null
+idealPara: "Quien quiere una gaming de tela transpirable bien valorada sin gastar de más"
+veredicto: "Pocas sillas gaming de tela tienen tan buena fama de relación calidad precio como la S300 de Nitro Concepts. El tapizado de tela respira mucho mejor que el cuero sintético típico del segmento, el acolchado es generoso y el sistema H.E.A.T. evita que el asiento se caliente. No esperes un lumbar integrado regulable (viene con cojín), pero por lo que cuesta es de las apuestas más seguras."
+resumenCompra:
+  mejorPara: "Quien prioriza tela transpirable y comodidad por encima de la estética de cuero."
+  evitarSi: "Buscas un soporte lumbar integrado y regulable en altura."
+  alternativaDirecta: "Corsair T3 Rush si quieres otra gaming de tela en el mismo rango."
+  decisionRapida: "Cuando alguien me pide gaming de tela cómoda y duradera sin sorpresas, esta es la primera que nombro."
+metodologia:
+  - "Datos verificados en la ficha técnica oficial de Nitro Concepts."
+  - "La nota premia la tela transpirable, el acolchado y el equilibrio de precio."
+  - "Se descuenta por el lumbar de cojín y la ausencia de garantía publicada en la web."
+scoreRationale:
+  ergonomia: "Reclinación de 135 grados con balancín y cojines de apoyo, lumbar mediante cojín."
+  ajustabilidad: "Reposabrazos 3D y amplio recorrido de altura de asiento de 47 a 59 cm."
+  materiales: "Tela acolchada de calidad con núcleo de espuma fría y pistón de clase 4."
+  comodidad: "Asiento mullido y respaldo alto de 87 cm, agradable en sesiones largas."
+  calidadPrecio: "Referencia del segmento por lo que ofrece a su precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Nitro Concepts S300 Gaming Chair"
+    url: "https://www.nitro-concepts.com/en-us/chairs/s300-gaming-chair"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "El soporte lumbar es un cojín, no un mecanismo integrado regulable."
+  - "La web oficial no publica la duración de garantía."
+  - "Capacidad máxima de 135 kg, ajustada para usuarios muy corpulentos."
+alternativas:
+  - slug: "corsair-t3-rush"
+    motivo: "Otra gaming de tela transpirable en un rango de precio parecido."
+  - slug: "sharkoon-skiller-sgs40"
+    motivo: "Opción de tela con buena ventilación si quieres comparar precio."
+comunidad: "Es una de las sillas de tela con más recomendaciones en foros de PC y reseñas europeas, donde se destaca su transpirabilidad frente a las de cuero sintético y un montaje sencillo. Diseñada en Alemania por la casa de Caseking, suele señalarse que el cojín lumbar no sustituye a un lumbar integrado y que conviene confirmar la cobertura de garantía con el vendedor."
+paraQuienSi:
+  - "Quien suda con las gaming de cuero y prefiere tela que respire"
+  - "Usuarios que quieren acolchado generoso para muchas horas"
+  - "Personas que buscan una gaming sólida sin entrar en gama alta"
+paraQuienNo:
+  - "Quien pesa más de 135 kg"
+  - "Usuarios que exigen lumbar integrado regulable"
+  - "Quien quiere reclinación casi horizontal"
+puntosFuertes:
+  - "Tapizado de tela transpirable con sistema H.E.A.T."
+  - "Reposabrazos 3D"
+  - "Recorrido de altura amplio de 47 a 59 cm"
+  - "Respaldo alto de 87 cm con núcleo de espuma fría"
+puntosDebiles:
+  - "Lumbar mediante cojín, no integrado"
+  - "Garantía no publicada en la web oficial"
+fuenteSpecs: "Web oficial Nitro Concepts (nitro-concepts.com/en-us/chairs/s300-gaming-chair: tela acolchada, lumbar cojín, 3D, reclinación 135 grados, máximo 135 kg, altura asiento 47-59 cm, respaldo 87 cm, gas clase 4, ruedas 50 mm, peso 24.5 kg, sistema H.E.A.T., norma DIN EN 1335, diseño Alemania)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "3d"
+  reclinacionMaxGrados: 135
+  pesoMaxKg: 135
+  alturaAsientoMinCm: 47
+  alturaAsientoMaxCm: 59
+  mecanismo: "balancin"
+  pesoProductoKg: 24.5
+  alturaRespaldoCm: 87
+  reposacabezas: "fijo"
+  certificacionEn1335: true

@@ -165,3 +165,16 @@ Catálogo 57 -> 67. Build 141 páginas, validate (67) + test (45/45) verdes. Bac
 AVISO multi-PC: durante la sesión apareció en el árbol de trabajo un WIP grande de i18n (astro.config, components, src/i18n, [locale] pages, articulosI18n, config.ts, plan internacionalizacion) ajeno a esta oleada; NO se tocó ni se commiteó. El build regeneró public/_headers (CSP entrelazado con scripts i18n); dejado sin commitear.
 
 Siguiente: Oleada 6 (Task 7, lote ~10). Al estar muy por encima de 50 fichas, retomar Task 11 (búsqueda + grupos de filtros del catálogo) como PLAN APARTE (es código, no contenido).
+
+## Oleada 6 — marcas nuevas + diferidas (2026-06-23)
+
+Task 7. 10 fichas publicadas con imagen, fuente oficial fetcheada (2026-06-23), estilo casa (specs sin dato omitidas):
+- Gaming: andaseat-kaiser-3e (amazon.buscar), nitro-concepts-s300 (marca nueva), cougar-armor-elite (marca nueva), genesis-nitro-950 (marca nueva), diablo-x-player (marca nueva), corsair-tc500-luxe (5D Omniflex). Las seis con amazon.buscar.
+- Malla ergo: razer-fujin-pro (full-mesh premium, webOficial).
+- Oficina: steelcase-please (respaldo doble LTC2, webOficial), sedus-se-joy (membrana de punto, webOficial), branch-verve (DTC, solo EE. UU./Canadá, webOficial).
+
+4 marcas nuevas (Nitro Concepts, Cougar, Genesis, Diablo). Revisado spec-compliance + ortografía ES (fuenteSpecs gaming retildados) + humanización (moldes variados, sin calcos). Imágenes normalizadas a 800x800 fondo blanco (webp/png/avif -> jpg; sedus blanqueada por floodfill). Catálogo 67 -> 77. Build 188 páginas (incluye rutas i18n del WIP ajeno), validate (77) + test (51/51) verdes.
+
+Diferidas que siguen candidate: akracing-masters-max (402) y backforce-one-plus (403) anti-bot con Playwright no disponible; wilkhahn-at-187 y maxnomic-ofc con specs oficiales insuficientes. songmics descartada.
+
+Siguiente: Oleada 7 (lote ~10) o abordar Task 11 (búsqueda por texto + grupos de filtros del catálogo) como plan aparte de código.

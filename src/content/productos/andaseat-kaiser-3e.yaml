@@ -1,0 +1,84 @@
+tipo: "silla"
+nombre: "AndaSeat Kaiser 3E Series"
+marca: "AndaSeat"
+imagen: "/img/productos/andaseat-kaiser-3e.jpg"
+imagenAlt: "Silla gaming AndaSeat Kaiser 3E Series con respaldo tapizado"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.2
+valoraciones:
+  ergonomia: 8.0
+  ajustabilidad: 8.0
+  materiales: 8.0
+  comodidad: 8.0
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "AndaSeat Kaiser 3E silla gaming"
+webOficial: "https://www.andaseat.com/products/andaseat-kaiser-3e-series-ergonomic-office-gaming-chair"
+idealPara: "Quien quiere la base del Kaiser 3 a un precio más contenido"
+veredicto: "La Kaiser 3E es la versión recortada del Kaiser 3 de AndaSeat: mantiene el chasis robusto, la espuma fría densa y los reposabrazos 4D, pero rebaja materiales y extras para entrar en un tramo de precio más amable. El soporte lumbar es una curva integrada que acompaña bien sin ser regulable, y eso es justo lo que hay que asumir aquí. Si el Kaiser 3 se te va de presupuesto, esta E te da casi lo mismo donde importa."
+resumenCompra:
+  mejorPara: "Quien busca el chasis y los 4D del Kaiser pagando menos."
+  evitarSi: "Quieres un lumbar regulable de verdad y no una curva fija."
+  alternativaDirecta: "AndaSeat Kaiser 3 si prefieres el modelo completo con mejores acabados."
+  decisionRapida: "Mi opción cuando alguien quiere marca y construcción de gaming serio pero sin tocar el tramo alto de precio."
+metodologia:
+  - "Specs tomadas de la página oficial de producto de AndaSeat."
+  - "La nota valora chasis, reposabrazos 4D y reclinación frente a su precio de entrada."
+  - "Se descuenta por el lumbar no regulable y por el respaldo tapizado frente a malla."
+scoreRationale:
+  ergonomia: "Curva lumbar integrada en espuma fría y reclinación amplia, sin ajuste lumbar manual."
+  ajustabilidad: "Reposabrazos 4D completos y altura de asiento; le falta lumbar regulable."
+  materiales: "Espuma fría de 60 kg/m3 y tapizado resistente, base de hierro o aluminio según talla."
+  comodidad: "Asiento firme y profundo, cómodo para jornadas largas en tallas L y XL."
+  calidadPrecio: "Su mayor baza: construcción de gaming serio a precio de gama media."
+fuentes:
+  - tipo: "oficial"
+    nombre: "AndaSeat Kaiser 3E Series"
+    url: "https://www.andaseat.com/products/andaseat-kaiser-3e-series-ergonomic-office-gaming-chair"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "El soporte lumbar es una curva fija integrada, no regulable."
+  - "Respaldo tapizado en lugar de malla: transpira menos en verano."
+  - "Capacidad de carga limitada a 120 kg."
+alternativas:
+  - slug: "andaseat-kaiser-3"
+    motivo: "El modelo completo si quieres mejores materiales y la versión sin recortes."
+  - slug: "secretlab-titan-evo"
+    motivo: "Acabado más premium y mayor reclinación si subes de presupuesto."
+comunidad: "AndaSeat tiene buena reputación por la solidez de sus chasis, y la línea Kaiser 3 es de las más recomendadas en su rango. La 3E se entiende como la puerta de entrada a esa calidad. El reparo más mencionado es el lumbar no ajustable y que, como toda silla tapizada, da algo de calor en climas cálidos."
+paraQuienSi:
+  - "Personas de 155 a 210 cm según elijan talla L o XL"
+  - "Quien quiere reposabrazos 4D y reclinación de 155 grados sin pagar de más"
+  - "Usuarios que valoran un asiento firme y profundo para muchas horas"
+paraQuienNo:
+  - "Quien pesa por encima de 120 kg"
+  - "Usuarios que necesitan ajustar el lumbar a su gusto"
+  - "Quien prefiere malla transpirable al tapizado"
+puntosFuertes:
+  - "Reposabrazos 4D completos"
+  - "Espuma fría densa de 60 kg/m3 y asiento de 11 cm"
+  - "Reclinación de 155 grados más 15 de balanceo"
+  - "Garantía de 5 años"
+puntosDebiles:
+  - "Lumbar fijo, sin regulación"
+  - "Respaldo tapizado en vez de malla"
+fuenteSpecs: "Web oficial AndaSeat (andaseat.com/products/andaseat-kaiser-3e-series-ergonomic-office-gaming-chair: asiento L 50x51 cm / XL 52x54 cm, espuma fría 60 kg/m3, lumbar curva 4.8 cm, 4D, reclinación 155 grados + 15 balanceo, máximo 120 kg, gas SGS clase 4, base hierro L / aluminio XL, garantía 5 años, altura L 155-190 cm / XL 165-210 cm)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "4d"
+  reclinacionMaxGrados: 155
+  pesoMaxKg: 120
+  mecanismo: "balancin"
+  baseMaterial: "aluminio"
+  garantiaAnios: 5
+  alturaRecomendadaMinCm: 155
+  alturaRecomendadaMaxCm: 210
+  anchoAsientoCm: 54
+  profundidadAsientoMaxCm: 52
+  reposacabezas: "ajustable"

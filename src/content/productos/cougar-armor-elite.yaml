@@ -1,0 +1,81 @@
+tipo: "silla"
+nombre: "Cougar Armor Elite"
+marca: "Cougar"
+imagen: "/img/productos/cougar-armor-elite.jpg"
+imagenAlt: "Silla gaming Cougar Armor Elite con respaldo de piel sintética"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: 4.0
+valoraciones:
+  ergonomia: 7.5
+  ajustabilidad: 7.0
+  materiales: 8.0
+  comodidad: 7.5
+  calidadPrecio: 8.0
+amazon:
+  asin: null
+  buscar: "Cougar Armor Elite silla gaming"
+webOficial: null
+idealPara: "Gaming de entrada con estructura de acero y buena construcción"
+veredicto: "La Armor Elite apuesta por lo que mejor sabe hacer Cougar: una estructura de acero seria y una construcción que aguanta el trote. La piel sintética transpirable y los dos cojines (cervical y lumbar) cubren lo esperado en una gaming de tramo medio, aunque los reposabrazos se quedan en 2D y eso limita el ajuste fino. Buena compra para quien quiere robustez por encima de florituras."
+resumenCompra:
+  mejorPara: "Quien busca chasis de acero resistente sin pagar gama alta."
+  evitarSi: "Necesitas reposabrazos 3D o 4D para afinar la postura."
+  alternativaDirecta: "Sharkoon Skiller SGS40 si prefieres otra gaming de tramo medio con buena base."
+  decisionRapida: "La que sugiero a quien valora una construcción sólida y unos cojines de serie por encima de tener mil ajustes."
+metodologia:
+  - "Specs confirmadas en la ficha oficial de producto de Cougar."
+  - "La nota pondera la estructura de acero, la reclinación amplia y los cojines incluidos."
+  - "Se descuenta por los reposabrazos solo 2D y por datos de garantía no publicados."
+scoreRationale:
+  ergonomia: "Reclinación de 160 grados y cojines cervical y lumbar de serie."
+  ajustabilidad: "Altura y reclinación cubren lo básico, pero los reposabrazos son solo 2D."
+  materiales: "Estructura y base de acero con piel sintética transpirable de buen tacto."
+  comodidad: "Acolchado firme con los dos cojines como apoyo principal."
+  calidadPrecio: "Construcción seria por un precio de tramo medio razonable."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Cougar Armor Elite"
+    url: "https://cougargaming.com/products/chairs/armor-elite/"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Reposabrazos limitados a 2D."
+  - "La ficha oficial no detalla recorrido de altura de asiento ni garantía."
+  - "Respaldo de piel sintética: menos fresco que la malla."
+alternativas:
+  - slug: "sharkoon-skiller-sgs40"
+    motivo: "Otra gaming de tramo medio con base sólida si quieres comparar."
+  - slug: "trust-gxt-714-ruya"
+    motivo: "Alternativa de entrada algo más económica para gaming ocasional."
+comunidad: "Cougar arrastra fama de fabricar chasis duraderos, y la Armor Elite recoge esa percepción: se la suele describir como una silla que se siente firme y bien ensamblada. Lo que más se repite como limitación son los reposabrazos 2D, cortos de recorrido frente a rivales con 3D, y el calor propio de cualquier respaldo de piel sintética en verano."
+paraQuienSi:
+  - "Quien quiere una estructura de acero que inspire confianza"
+  - "Usuarios de hasta 120 kg que buscan reclinación amplia"
+  - "Quien agradece llevar cojín cervical y lumbar de serie"
+paraQuienNo:
+  - "Quien necesita reposabrazos 3D o 4D"
+  - "Usuarios que prefieren malla transpirable"
+  - "Quien quiere conocer la garantía exacta antes de comprar"
+puntosFuertes:
+  - "Estructura y base de acero"
+  - "Reclinación de 160 grados"
+  - "Cojines cervical y lumbar incluidos"
+  - "Pistón de gas clase 4"
+puntosDebiles:
+  - "Reposabrazos solo 2D"
+  - "Datos de altura de asiento y garantía no publicados"
+fuenteSpecs: "Web oficial Cougar (cougargaming.com/products/chairs/armor-elite/: piel sintética PVC transpirable, cojines de cabeza y lumbar, 2D, reclinación 160 grados, máximo 120 kg, gas clase 4, base y estructura de acero, peso producto 20 kg, dimensiones 690x665x1260 mm)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "fijo"
+  respaldo: "espuma"
+  reposabrazos: "2d"
+  reclinacionMaxGrados: 160
+  pesoMaxKg: 120
+  mecanismo: "balancin"
+  baseMaterial: "acero"
+  pesoProductoKg: 20
+  reposacabezas: "ajustable"
+  asientoMaterial: "piel sintetica PVC transpirable"

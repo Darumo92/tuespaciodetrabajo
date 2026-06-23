@@ -1,0 +1,90 @@
+tipo: "silla"
+nombre: "Steelcase Please"
+marca: "Steelcase"
+imagen: "/img/productos/steelcase-please.jpg"
+imagenAlt: "Silla de oficina contract Steelcase Please con respaldo doble LTC2"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: 4.5
+valoraciones:
+  ergonomia: 9.2
+  ajustabilidad: 8.8
+  materiales: 9.0
+  comodidad: 9.0
+  calidadPrecio: 7.0
+amazon:
+  asin: null
+  buscar: null
+webOficial: "https://www.steelcase.com/eu-en/products/office-chairs/please/"
+idealPara: "Oficina contract de gama alta para quien quiere que el respaldo sostenga lumbar y zona dorsal por separado"
+veredicto: "La Steelcase Please gira en torno a su respaldo doble con mecanismo patentado LTC2: en lugar de un único panel, dos secciones independientes sostienen la zona lumbar y la dorsal por separado, así cada parte de la espalda recibe su propia tensión. A eso suma asiento de profundidad regulable y reposabrazos muy completos. El pero es el de toda silla contract Steelcase: es una compra cara con respaldo tapizado en espuma (no malla), y la garantía premia sobre todo la estructura, no cada componente por igual."
+resumenCompra:
+  mejorPara: "Quien busca soporte lumbar y dorsal independientes con la fiabilidad contract de Steelcase."
+  evitarSi: "Prefieres respaldo de malla transpirable o no quieres entrar en precios premium."
+  alternativaDirecta: "Steelcase Leap V2 si quieres respaldo flexible regulable de la misma casa por algo menos."
+  decisionRapida: "Si la espalda te pide que lumbar y dorsal trabajen por separado, esta es la silla que lo hace de fábrica; el precio es el filtro."
+metodologia:
+  - "Specs tomadas de la web oficial de Steelcase y del folleto de producto."
+  - "La nota prioriza el respaldo doble LTC2, la profundidad de asiento regulable y los reposabrazos."
+  - "Se penaliza el precio premium y que el respaldo sea tapizado en espuma frente a la malla."
+scoreRationale:
+  ergonomia: "El respaldo doble LTC2 con lumbar y dorsal independientes es de lo más específico del mercado contract."
+  ajustabilidad: "Profundidad de asiento regulable y reposabrazos de altura, ángulo y profundidad cubren casi todo."
+  materiales: "Construcción Steelcase con 91,4 por ciento de materiales reciclables."
+  comodidad: "El doble respaldo reparte la presión a lo largo de la columna en jornadas largas."
+  calidadPrecio: "Premium contract: se paga por durabilidad y por el mecanismo patentado más que por ajustes."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Steelcase Please"
+    url: "https://www.steelcase.com/eu-en/products/office-chairs/please/"
+    fechaConsulta: "2026-06-22"
+  - tipo: "manual"
+    nombre: "Steelcase Please Brochure (EN)"
+    url: "https://www.steelcase.com/content/uploads/sites/10/2023/10/Steelcase-Please-Brochure-EN.pdf"
+    fechaConsulta: "2026-06-22"
+  - tipo: "tienda"
+    nombre: "Steelcase UK Store Please"
+    url: "https://uk.steelcase.com/products/please"
+    fechaConsulta: "2026-06-22"
+limitaciones:
+  - "Respaldo tapizado en espuma, no de malla: menos transpirable que una silla ventilada."
+  - "Garantía escalonada: estructura de por vida, mecanismos 12 años y tapicería 5 años."
+  - "Precio de tramo premium contract, fuera del alcance de la mayoría de presupuestos domésticos."
+alternativas:
+  - slug: "steelcase-leap-v2"
+    motivo: "Respaldo flexible regulable de la misma casa, algo más asequible y muy contrastado."
+  - slug: "steelcase-gesture"
+    motivo: "Steelcase contract centrada en brazos 360 grados si trabajas con varios dispositivos."
+comunidad: "Steelcase es una de las marcas de referencia en mobiliario de oficina contract, con muy buena reputación de durabilidad. La Please se reconoce por su respaldo doble LTC2, una solución poco habitual: cada sección del respaldo sostiene una región distinta de la espalda. Al ser una silla de canal profesional y proyecto, las reseñas de usuario final son menos numerosas que en marcas de consumo, pero el consenso disponible la sitúa como una opción seria y longeva. Conviene recordar la garantía escalonada: estructura de por vida, 12 años en mecanismos y 5 años en tapicería."
+paraQuienSi:
+  - "Personas que notan tensiones distintas en zona lumbar y dorsal y quieren ajustarlas por separado"
+  - "Empresas que priorizan durabilidad Steelcase y materiales reciclables"
+  - "Usuarios de entre 150 y 190 cm que quieren profundidad de asiento regulable"
+paraQuienNo:
+  - "Quien quiere respaldo de malla transpirable para verano"
+  - "Presupuestos ajustados que no llegan al tramo premium contract"
+  - "Quien mide claramente por encima de 190 cm"
+puntosFuertes:
+  - "Respaldo doble con mecanismo patentado LTC2: lumbar y dorsal independientes"
+  - "Profundidad de asiento regulable"
+  - "Reposabrazos de altura (11 posiciones), ángulo (4 posiciones) y profundidad (6 posiciones)"
+  - "91,4 por ciento de materiales reciclables"
+  - "Soporta hasta 150 kg"
+puntosDebiles:
+  - "Respaldo tapizado en espuma, sin opción de malla en este modelo"
+  - "Precio de tramo premium contract"
+fuenteSpecs: "Web oficial Steelcase (steelcase.com/eu-en/products/office-chairs/please/: respaldo doble LTC2 con secciones lumbar y dorsal independientes y tensión regulable, profundidad de asiento regulable, reposabrazos 3D de altura, ángulo y profundidad) + Steelcase Please Brochure EN (steelcase.com/content/uploads/sites/10/2023/10/Steelcase-Please-Brochure-EN.pdf) + uk.steelcase.com/products/please (máx 150 kg, altura recomendada 150-190 cm, peso del producto 27 kg, 91,4 por ciento reciclable, garantía estructura de por vida, mecanismos 12 años, tapicería 5 años)"
+verificadoEn: "2026-06-22"
+specs:
+  tipo: "silla"
+  lumbar: "dinamico"
+  respaldo: "espuma"
+  reposabrazos: "3d"
+  profundidadRegulable: true
+  pesoMaxKg: 150
+  mecanismo: "Respaldo doble patentado LTC2 con secciones lumbar y dorsal independientes"
+  pesoProductoKg: 27
+  garantiaAnios: 12
+  alturaRecomendadaMinCm: 150
+  alturaRecomendadaMaxCm: 190
