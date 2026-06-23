@@ -75,7 +75,7 @@ const bottomNavItems = locale === DEFAULT_LOCALE
       },
       {
         href: localizedPath(locale, ['sillas']),
-        active: currentPath.startsWith(localizedPath(locale, ['sillas'])),
+        active: currentPath.startsWith(localizedPath(locale, ['sillas'])) || currentPath.startsWith(localizedPath(locale, ['catalogo', 'silla'])),
         label: ui.categories.sillas,
         icon: 'chair',
       },

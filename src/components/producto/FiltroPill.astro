@@ -1,0 +1,78 @@
+---
+import type { FiltroConfig } from '@/lib/tipos';
+
+interface Props {
+  f: FiltroConfig;
+  tr: (value: string) => string;
+  marcas: { valor: string; n: number }[];
+  isEn: boolean;
+  removeText: string;
+}
+
+const { f, tr, marcas, isEn, removeText } = Astro.props;
+
+// Valores discretos de una faceta de rango (segmentado).
+const valoresRango = () => {
+  const min = f.min ?? 0;
+  const max = f.max ?? min;
+  const step = f.step ?? 1;
+  const out: number[] = [];
+  for (let v = min; v <= max; v += step) out.push(v);
+  return out;
+};
+const etiquetaRango = (v: number) =>
+  f.formatoSalida === 'tramoEuros' ? (isEn ? '$' : '€').repeat(v) : String(v);
+
+// Opciones de un multi-select (comparacion 'en'): marca usa el recuento dinámico;
+// cualquier otro filtro 'en' usa sus opciones declaradas.
+const opcionesCheck =
+  f.id === 'marca'
+    ? marcas.map((m) => ({ valor: m.valor, etiqueta: m.valor, n: m.n as number | undefined }))
+    : (f.opciones ?? [])
+        .filter((o) => o.valor !== '' && o.valor !== '0')
+        .map((o) => ({ valor: o.valor, etiqueta: tr(o.etiqueta), n: undefined as number | undefined }));
+---
+
+{f.control === 'check' ? (
+  <button class="cat-pill cat-pill--toggle" type="button"
+    data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{tr(f.etiqueta)}</button>
+) : (
+  <div class="cat-facet" data-facet={f.id}>
+    <button class="cat-pill" type="button" data-pill={f.id} data-pill-tipo="dropdown"
+      aria-expanded="false" aria-controls={`pop-${f.id}`}>
+      <span class="cat-pill-label">{tr(f.etiqueta)}</span>
+      <span class="cat-pill-val" data-pill-val hidden></span>
+      <span class="cat-pill-caret" aria-hidden="true">▾</span>
+    </button>
+    <div class="cat-pop" id={`pop-${f.id}`} data-pop={f.id} role="group" aria-label={tr(f.etiqueta)} hidden>
+      {f.control === 'rango' ? (
+        <div class="cat-seg">
+          {valoresRango().map((v) => (
+            <button class="cat-seg-btn" type="button" data-opt={v}>{etiquetaRango(v)}</button>
+          ))}
+        </div>
+      ) : f.comparacion === 'en' ? (
+        <ul class="cat-checks">
+          {opcionesCheck.map((o) => (
+            <li>
+              <label class="cat-check">
+                <input type="checkbox" data-opt={o.valor} />
+                <span class="cat-check-txt">{o.etiqueta}</span>
+                {o.n !== undefined && <span class="cat-check-n">{o.n}</span>}
+              </label>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="cat-opts">
+          {(f.opciones ?? []).filter((o) => o.valor !== '' && o.valor !== '0').map((o) => (
+            <button class="cat-opt" type="button" data-opt={o.valor}>{tr(o.etiqueta)}</button>
+          ))}
+        </div>
+      )}
+      <div class="cat-pop-foot">
+        <button class="cat-pop-clear" type="button" data-pop-clear>{removeText}</button>
+      </div>
+    </div>
+  </div>
+)}

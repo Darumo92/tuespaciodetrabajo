@@ -45,7 +45,7 @@ const itemList = {
   locale={locale}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <span>Chairs</span></nav>
     <h1>Ergonomic office chairs</h1>
     <p class="cat-intro">Use the filters to compare verified chair specs: backrest type, armrests, weight capacity, recommended user height and editorial scores.</p>
@@ -60,7 +60,7 @@ const itemList = {
         </ul>
       </section>
     )}
-  </main>
+  </div>
 </Base>
 <style>
   .cat-intro { color: var(--ink-muted); max-width: 760px; line-height: 1.65; }

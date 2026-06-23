@@ -61,8 +61,8 @@ const breadcrumb = {
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <a href="/catalogo/">Catálogo</a> › <a href={`/catalogo/${producto.tipo}/`}>{cfg.labelPlural}</a> › <span>{producto.nombre}</span></nav>
     <FichaProducto producto={producto} />
-  </main>
+  </div>
 </Base>

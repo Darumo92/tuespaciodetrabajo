@@ -274,7 +274,7 @@ export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, stri
   for (const o of cfg.ordenaciones) {
     const key = `data-c-${claveData(o.campo)}`;
     if (key in out) continue; // ya emitido por un filtro con el mismo campo
-    const raw = getCampo(p, o.campo);
+    const raw = o.campo === 'valoracion' ? notaGlobal(p) : getCampo(p, o.campo);
     out[key] = raw == null ? '' : String(raw);
   }
   return out;

@@ -289,12 +289,21 @@ describe('datosFiltrado: silla', () => {
     expect(d['data-c-reposabrazos']).toBe('3'); // nivel de 3d
     expect(d['data-c-profundidadregulable']).toBe('1');
     expect(d['data-c-pesomaxkg']).toBe('150');
-    expect(d['data-c-valoracion']).toBe('4.5');
+    expect(d['data-c-valoracion']).toBe('9');
     expect(d['data-c-alturarecomendadamincm']).toBeDefined();
     expect(d['data-c-alturarecomendadamaxcm']).toBeDefined();
     expect(d['data-c-reposacabezas']).toBeDefined();
     expect(d['data-c-marca']).toBe('X'); // productoSilla.marca
     expect(Object.keys(d).length).toBe(10); // +marca; precio/peso comparten clave con sus ordenaciones
+  });
+
+  it('ordena por la nota global visible cuando existen ejes detallados', () => {
+    const cfg = getTipoConfig('silla') as TipoConfig;
+    const d = datosFiltrado(base({
+      valoracion: 3,
+      valoraciones: { ergonomia: 9, ajustabilidad: 8, materiales: null, comodidad: null, calidadPrecio: null },
+    }), cfg);
+    expect(d['data-c-valoracion']).toBe('8.5');
   });
 });
 

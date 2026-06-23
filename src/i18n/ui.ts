@@ -48,6 +48,29 @@ type UiDictionary = {
     rating: string;
     unavailable: string;
   };
+  catalog: {
+    searchPlaceholder: string;
+    searchLabel: string;
+    filter: string;
+    filterPanel: string;
+    closeFilters: string;
+    moreFilters: string;
+    sort: string;
+    show: string;
+    results: string;
+    clearAll: string;
+    compareHint: string;
+    empty: string;
+    selected: string;
+    selectedSingular: string;
+    compare: string;
+    clear: string;
+    remove: string;
+    removeFilter: string;
+    from: string;
+    upTo: string;
+    maxCompareError: string;
+  };
   language: {
     label: string;
     selectorTitle: string;
@@ -134,6 +157,29 @@ export const UI = {
       priceDesc: 'Precio ↓',
       rating: 'Valoración',
       unavailable: 'Sin tienda verificada',
+    },
+    catalog: {
+      searchPlaceholder: 'Buscar por nombre, marca o uso...',
+      searchLabel: 'Buscar productos',
+      filter: 'Filtrar',
+      filterPanel: 'Filtros del catálogo',
+      closeFilters: 'Cerrar filtros',
+      moreFilters: 'Más filtros',
+      sort: 'Ordenar',
+      show: 'Ver',
+      results: 'resultados',
+      clearAll: 'Limpiar todo',
+      compareHint: 'marca entre 2 y 4 casillas para comparar',
+      empty: 'Ningún producto cumple esos filtros. Prueba a relajar alguno.',
+      selected: 'seleccionados',
+      selectedSingular: 'seleccionado',
+      compare: 'Comparar',
+      clear: 'Limpiar',
+      remove: 'Quitar',
+      removeFilter: 'Quitar filtro',
+      from: 'Desde',
+      upTo: 'Hasta',
+      maxCompareError: 'Puedes comparar hasta 4 productos.',
     },
     language: {
       label: 'Idioma',
@@ -223,6 +269,29 @@ export const UI = {
       priceDesc: 'Price ↓',
       rating: 'Rating',
       unavailable: 'No verified store',
+    },
+    catalog: {
+      searchPlaceholder: 'Search by name, brand or use...',
+      searchLabel: 'Search products',
+      filter: 'Filter',
+      filterPanel: 'Catalog filters',
+      closeFilters: 'Close filters',
+      moreFilters: 'More filters',
+      sort: 'Sort',
+      show: 'Show',
+      results: 'results',
+      clearAll: 'Clear all',
+      compareHint: 'select 2 to 4 boxes to compare',
+      empty: 'No products match those filters. Try relaxing one filter.',
+      selected: 'selected',
+      selectedSingular: 'selected',
+      compare: 'Compare',
+      clear: 'Clear',
+      remove: 'Remove',
+      removeFilter: 'Remove filter',
+      from: 'From',
+      upTo: 'Up to',
+      maxCompareError: 'You can compare up to 4 products.',
     },
     language: {
       label: 'Language',

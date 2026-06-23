@@ -15,6 +15,15 @@ const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
 const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const pagePath = catalogPath('es-ES', tipo as string);
+const isSilla = tipo === 'silla';
+const title = isSilla ? 'Catálogo de sillas ergonómicas para home office' : `${cfg.labelPlural} para home office | Catálogo`;
+const description = isSilla
+  ? 'Filtra sillas ergonómicas por marca, precio, respaldo, ajustes, carga máxima y puntuación editorial con specs verificadas.'
+  : `Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`;
+const heading = isSilla ? 'Sillas ergonómicas del catálogo' : cfg.labelPlural;
+const intro = isSilla
+  ? 'Filtra por marca, tramo de precio, respaldo, reposabrazos, profundidad regulable, altura recomendada y carga máxima. Todas las fichas usan datos verificables; cuando falta un dato aparece como n/d.'
+  : 'Filtra productos por specs verificadas, valoración por ejes y comparativas disponibles.';
 const alternates = buildAlternates({
   'es-ES': pagePath,
   en: catalogPath('en', tipo as string),
@@ -30,15 +39,16 @@ const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
 const paresVs = seleccionarParesVs(productos, 16);
 ---
 <Base
-  title={`${cfg.labelPlural} para home office | Catálogo`}
-  description={`Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`}
+  title={title}
+  description={description}
   canonical={absoluteUrl(pagePath)}
   alternates={alternates}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <a href="/catalogo/">Catálogo</a> › <span>{cfg.labelPlural}</span></nav>
-    <h1>{cfg.labelPlural}</h1>
+    <h1>{heading}</h1>
+    <p class="cat-intro">{intro}</p>
     <CatalogoProductos productos={productos} tipo={tipo as string} />
     {paresVs.length > 0 && (
       <section class="comparativas-rel" aria-labelledby="comparativas-titulo">
@@ -52,10 +62,11 @@ const paresVs = seleccionarParesVs(productos, 16);
         </ul>
       </section>
     )}
-  </main>
+  </div>
 </Base>
 
 <style>
+  .cat-intro { color: var(--ink-muted); max-width: 760px; line-height: 1.65; margin: 0 0 1.25rem; }
   .comparativas-rel { margin-top: 3rem; }
   .comparativas-rel h2 { margin-bottom: 1rem; }
   .comparativas-lista {

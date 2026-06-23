@@ -17,7 +17,7 @@ const alternates = buildAlternates({
 });
 ---
 <Base title={titulo} description={descripcion} canonical={absoluteUrl(pagePath)} alternates={alternates}>
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <span>Catálogo</span></nav>
     <h1>Catálogo</h1>
     <p class="cat-sub">Specs verificadas, valoración por ejes y comparador. Elige una categoría.</p>
@@ -30,7 +30,7 @@ const alternates = buildAlternates({
         </a>
       ))}
     </div>
-  </main>
+  </div>
 </Base>
 <style>
   .cat-sub { color: var(--ink-muted); margin-bottom: 2rem; }

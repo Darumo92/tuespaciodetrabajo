@@ -29,7 +29,7 @@ const alternates = buildAlternates({
   alternates={alternates}
   locale={locale}
 >
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Catalog</span></nav>
     <h1>Product catalog</h1>
     <p class="cat-sub">Verified specs, editorial scoring and comparison tools for home office equipment.</p>
@@ -42,7 +42,7 @@ const alternates = buildAlternates({
         </a>
       ))}
     </div>
-  </main>
+  </div>
 </Base>
 <style>
   .cat-sub { color: var(--ink-muted); margin-bottom: 2rem; }

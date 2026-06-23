@@ -61,8 +61,8 @@ const breadcrumb = {
 <Base title={meta.title} description={meta.description} canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
-  <main class="container" style="padding: 2rem 0;">
+  <div class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>{displayName}</span></nav>
     <FichaProducto producto={producto} locale={locale} />
-  </main>
+  </div>
 </Base>
