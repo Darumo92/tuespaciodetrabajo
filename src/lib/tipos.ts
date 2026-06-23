@@ -17,7 +17,15 @@ export interface FiltroConfig {
   umbral?: number;
   transform?: TransformId;
   formatoSalida?: FormatoSalida;
+  grupo?: string;
 }
+
+export interface GrupoFiltro { id: string; etiqueta: string; etiquetaEn: string; }
+export const GRUPOS_FILTRO: GrupoFiltro[] = [
+  { id: 'ergonomia',   etiqueta: 'Ergonomía y ajustes', etiquetaEn: 'Ergonomics & adjustments' },
+  { id: 'encaje',      etiqueta: 'Encaje corporal',     etiquetaEn: 'Body fit' },
+  { id: 'resistencia', etiqueta: 'Resistencia',         etiquetaEn: 'Load capacity' },
+];
 
 export interface OrdenConfig {
   id: string;
@@ -71,22 +79,22 @@ const silla: TipoConfig = {
     { id: 'precio', etiqueta: 'Precio máximo', control: 'rango', comparacion: 'max',
       campo: 'tramoPrecio', min: 1, max: 4, step: 1, formatoSalida: 'tramoEuros' },
     { id: 'marca', etiqueta: 'Marca', control: 'select', comparacion: 'en', campo: 'marca' },
-    { id: 'respaldo', etiqueta: 'Respaldo', control: 'select', comparacion: 'igual', campo: 'specs.respaldo',
+    { id: 'respaldo', etiqueta: 'Respaldo', control: 'select', comparacion: 'igual', campo: 'specs.respaldo', grupo: 'ergonomia',
       opciones: [{ valor: '', etiqueta: 'Cualquiera' }, { valor: 'malla', etiqueta: 'Malla' },
         { valor: 'espuma', etiqueta: 'Espuma' }, { valor: 'mixto', etiqueta: 'Mixto' }] },
     { id: 'brazos', etiqueta: 'Reposabrazos mín.', control: 'select', comparacion: 'min',
-      campo: 'specs.reposabrazos', transform: 'reposabrazosNivel',
+      campo: 'specs.reposabrazos', grupo: 'ergonomia', transform: 'reposabrazosNivel',
       opciones: [{ valor: '0', etiqueta: 'Cualquiera' }, { valor: '2', etiqueta: '2D o superior' },
         { valor: '3', etiqueta: '3D o superior' }, { valor: '4', etiqueta: '4D' }] },
     { id: 'prof', etiqueta: 'Profundidad regulable', control: 'check', comparacion: 'check',
-      campo: 'specs.profundidadRegulable' },
+      campo: 'specs.profundidadRegulable', grupo: 'ergonomia' },
     { id: 'peso', etiqueta: 'Soporta 130 kg o más', control: 'check', comparacion: 'umbral',
-      campo: 'specs.pesoMaxKg', umbral: 130 },
+      campo: 'specs.pesoMaxKg', grupo: 'resistencia', umbral: 130 },
     { id: 'altura-min', etiqueta: 'Apta desde altura', control: 'rango', comparacion: 'max',
-      campo: 'specs.alturaRecomendadaMinCm', min: 150, max: 190, step: 5 },
+      campo: 'specs.alturaRecomendadaMinCm', grupo: 'encaje', min: 150, max: 190, step: 5 },
     { id: 'altura-max', etiqueta: 'Apta hasta altura', control: 'rango', comparacion: 'min',
-      campo: 'specs.alturaRecomendadaMaxCm', min: 160, max: 210, step: 5 },
-    { id: 'reposacabezas', etiqueta: 'Reposacabezas', control: 'select', comparacion: 'igual', campo: 'specs.reposacabezas',
+      campo: 'specs.alturaRecomendadaMaxCm', grupo: 'encaje', min: 160, max: 210, step: 5 },
+    { id: 'reposacabezas', etiqueta: 'Reposacabezas', control: 'select', comparacion: 'igual', campo: 'specs.reposacabezas', grupo: 'ergonomia',
       opciones: [{ valor: '', etiqueta: 'Cualquiera' }, { valor: 'ajustable', etiqueta: 'Ajustable' }, { valor: 'fijo', etiqueta: 'Fijo' }, { valor: 'ninguno', etiqueta: 'Sin reposacabezas' }] },
   ],
   ordenaciones: [
