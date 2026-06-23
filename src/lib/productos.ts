@@ -242,6 +242,11 @@ export function coincideBusqueda(query: string, ...campos: string[]): boolean {
   return campos.some((c) => normalizaTexto(c).includes(q));
 }
 
+/** Texto normalizado buscable de un producto: nombre + marca + idealPara. */
+export function textoBuscable(p: Pick<Producto, 'nombre' | 'marca' | 'idealPara'>): string {
+  return normalizaTexto([p.nombre, p.marca, p.idealPara ?? ''].join(' ').replace(/\s+/g, ' '));
+}
+
 /** Mapa { 'data-c-<clave>': valor } para la card, sobre campos únicos de filtros y ordenaciones. */
 export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, string> {
   const out: Record<string, string> = {};

@@ -25,6 +25,7 @@ import {
   filtrosVisibles,
   normalizaTexto,
   coincideBusqueda,
+  textoBuscable,
 } from './productos';
 import type { Producto, Valoraciones } from './productos';
 import type { FiltroConfig } from './tipos';
@@ -451,5 +452,18 @@ describe('coincideBusqueda', () => {
   });
   it('no coincide si no está en ningún campo', () => {
     expect(coincideBusqueda('steelcase', 'Aeron', 'Herman Miller')).toBe(false);
+  });
+});
+
+describe('textoBuscable', () => {
+  it('concatena nombre, marca e idealPara normalizados', () => {
+    const s = textoBuscable({ nombre: 'Aeron', marca: 'Herman Miller', idealPara: 'Personas altas' });
+    expect(s).toBe('aeron herman miller personas altas');
+  });
+  it('tolera idealPara ausente', () => {
+    expect(textoBuscable({ nombre: 'Markus', marca: 'IKEA', idealPara: undefined })).toBe('markus ikea');
+  });
+  it('sin acentos ni mayúsculas para comparar', () => {
+    expect(textoBuscable({ nombre: 'Ergonómica', marca: 'Hbada', idealPara: 'Oficina' })).toBe('ergonomica hbada oficina');
   });
 });
