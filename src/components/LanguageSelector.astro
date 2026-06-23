@@ -1,6 +1,6 @@
 ---
-import { LOCALES, type Locale } from '@/i18n/locales';
-import type { AlternateLink } from '@/i18n/routes';
+import { LOCALES, READY_LOCALES, type Locale } from '@/i18n/locales';
+import { localizedPath, navigationHref, type AlternateLink } from '@/i18n/routes';
 import { t } from '@/i18n/ui';
 
 interface Props {
@@ -11,6 +11,11 @@ interface Props {
 const { locale, alternates = [] } = Astro.props;
 const ui = t(locale);
 const byHrefLang = new Map(alternates.map((item) => [item.hreflang, item.href]));
+const availableLocales = READY_LOCALES.map((code) => ({
+  code,
+  config: LOCALES[code],
+  href: navigationHref(byHrefLang.get(LOCALES[code].hreflang) ?? localizedPath(code)),
+}));
 ---
 
 <details class="language-selector">
@@ -19,15 +24,11 @@ const byHrefLang = new Map(alternates.map((item) => [item.hreflang, item.href]))
     <strong>{LOCALES[locale].nativeLabel}</strong>
   </summary>
   <div class="language-selector-menu">
-    {Object.entries(LOCALES).map(([code, cfg]) => {
-      const href = byHrefLang.get(cfg.hreflang);
-      if (!href) return null;
-      return (
-        <a href={href} lang={cfg.htmlLang} data-locale={code} class={code === locale ? 'is-active' : ''}>
-          {cfg.nativeLabel}
+    {availableLocales.map(({ code, config, href }) => (
+        <a href={href} lang={config.htmlLang} data-locale={code} class={code === locale ? 'is-active' : ''}>
+          {config.nativeLabel}
         </a>
-      );
-    })}
+    ))}
   </div>
 </details>
 

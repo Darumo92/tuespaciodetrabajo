@@ -1,10 +1,15 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { buildAlternates, localizedPath } from '@/i18n/routes';
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const pageUrl = `${siteUrl}/herramientas/calculadora-ergonomia/`;
 const pageTitle = 'Calculadora de ergonomía: altura silla y escritorio';
 const pageDescription = 'Calcula la altura exacta que necesitan tu silla, escritorio y monitor según tu estatura. Gratis, sin registro, con figura interactiva.';
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['herramientas', 'calculadora-ergonomia']),
+  en: localizedPath('en', ['tools', 'ergonomic-calculator']),
+});
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
@@ -49,7 +54,7 @@ const faqs = [
 
 ---
 
-<Base title={pageTitle} description={pageDescription} canonical={pageUrl} image="/images/og/calculadora-ergonomia.jpg">
+<Base title={pageTitle} description={pageDescription} canonical={pageUrl} alternates={alternates} image="/images/og/calculadora-ergonomia.jpg">
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 
   <div class="container ergo-page">

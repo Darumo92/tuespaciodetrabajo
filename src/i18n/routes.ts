@@ -17,6 +17,19 @@ export function absoluteUrl(pathname: string): string {
   return `${SITE_URL}${normalized}`;
 }
 
+export function navigationHref(href: string): string {
+  try {
+    const url = new URL(href);
+    if (url.origin === SITE_URL) {
+      return `${url.pathname}${url.search}${url.hash}`;
+    }
+  } catch {
+    return href;
+  }
+
+  return href;
+}
+
 export function localizedPath(locale: Locale, segments: string[] = []): string {
   const clean = segments.filter(Boolean).map((segment) => segment.replace(/^\/+|\/+$/g, ''));
   const prefix = localePrefix(locale).replace(/^\/+|\/+$/g, '');

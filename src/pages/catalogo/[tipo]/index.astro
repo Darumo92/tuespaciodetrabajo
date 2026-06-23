@@ -3,7 +3,8 @@ import Base from '@/layouts/Base.astro';
 import CatalogoProductos from '@/components/producto/CatalogoProductos.astro';
 import { getCollection } from 'astro:content';
 import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
-import { seleccionarParesVs, type Producto } from '@/lib/productos';
+import { catalogPath, seleccionarParesVs, type Producto } from '@/lib/productos';
+import { absoluteUrl, buildAlternates } from '@/i18n/routes';
 
 export async function getStaticPaths() {
   return TIPOS_CON_DATOS.map((tipo) => ({ params: { tipo } }));
@@ -13,6 +14,11 @@ const cfg = getTipoConfig(tipo as string)!;
 const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
 const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
 const siteUrl = 'https://tuespaciodetrabajo.com';
+const pagePath = catalogPath('es-ES', tipo as string);
+const alternates = buildAlternates({
+  'es-ES': pagePath,
+  en: catalogPath('en', tipo as string),
+});
 const itemList = {
   '@context': 'https://schema.org', '@type': 'ItemList', name: `${cfg.labelPlural} para home office`,
   numberOfItems: productos.length,
@@ -23,7 +29,12 @@ const itemList = {
 const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
 const paresVs = seleccionarParesVs(productos, 16);
 ---
-<Base title={`${cfg.labelPlural} para home office | Catálogo`} description={`Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`}>
+<Base
+  title={`${cfg.labelPlural} para home office | Catálogo`}
+  description={`Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} con specs verificadas y valoración por ejes.`}
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
   <main class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/">Inicio</a> › <a href="/catalogo/">Catálogo</a> › <span>{cfg.labelPlural}</span></nav>

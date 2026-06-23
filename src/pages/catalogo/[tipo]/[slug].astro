@@ -2,8 +2,9 @@
 import Base from '@/layouts/Base.astro';
 import FichaProducto from '@/components/producto/FichaProducto.astro';
 import { getCollection } from 'astro:content';
-import { notaGlobal, recortarMeta, type Producto } from '@/lib/productos';
+import { notaGlobal, productPath, recortarMeta, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
+import { absoluteUrl, buildAlternates } from '@/i18n/routes';
 
 export async function getStaticPaths() {
   const entries = await getCollection('productos');
@@ -16,6 +17,11 @@ const { producto } = Astro.props as { producto: Producto };
 const cfg = getTipoConfig(producto.tipo)!;
 const nota = notaGlobal(producto);
 const siteUrl = 'https://tuespaciodetrabajo.com';
+const pagePath = productPath(producto, 'es-ES');
+const alternates = buildAlternates({
+  'es-ES': pagePath,
+  en: productPath(producto, 'en'),
+});
 const productSchema = {
   '@context': 'https://schema.org',
   '@type': 'Product',
@@ -47,7 +53,12 @@ const breadcrumb = {
   ],
 };
 ---
-<Base title={`${producto.nombre} — análisis y specs | Tu Espacio de Trabajo`} description={producto.veredicto ? recortarMeta(producto.veredicto) : `Análisis de ${producto.nombre}: specs verificadas y valoración por ejes.`}>
+<Base
+  title={`${producto.nombre} — análisis y specs | Tu Espacio de Trabajo`}
+  description={producto.veredicto ? recortarMeta(producto.veredicto) : `Análisis de ${producto.nombre}: specs verificadas y valoración por ejes.`}
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
   <main class="container" style="padding: 2rem 0;">

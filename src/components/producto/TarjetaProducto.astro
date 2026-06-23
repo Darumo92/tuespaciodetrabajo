@@ -1,6 +1,6 @@
 ---
 import ImagenProducto from './ImagenProducto.astro';
-import { localizedProductName, notaGlobal, tramoTexto, datosFiltrado, construirChips, buildProductCta, productPath, type Producto } from '@/lib/productos';
+import { localizedProductName, notaGlobal, tramoTexto, datosFiltrado, construirChips, productPath, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
@@ -12,12 +12,6 @@ const cfg = getTipoConfig(p.tipo);
 const dataAttrs = cfg ? datosFiltrado(p, cfg) : {};
 const chips = cfg ? construirChips(p, cfg, locale) : [];
 const displayName = localizedProductName(p, locale);
-const cta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: displayName, marca: p.marca, locale });
-const ctaLabel = cta.kind === 'amazon-product'
-  ? 'Amazon'
-  : cta.kind === 'amazon-search'
-    ? (locale === 'en' ? 'Amazon search' : 'Búsqueda Amazon')
-    : (locale === 'en' ? 'No store' : 'Sin tienda');
 ---
 
 <article class="card" data-slug={p.slug} {...dataAttrs}>
@@ -32,7 +26,6 @@ const ctaLabel = cta.kind === 'amazon-product'
     <p class="card-line">
       {global != null && <span class="card-score">{global.toFixed(1)}/10</span>}
       <span class="card-price">{tramoTexto(p.tramoPrecio, locale)}</span>
-      <span class={`card-cta card-cta--${cta.kind}`}>{ctaLabel}</span>
     </p>
     <div class="card-chips">
       {chips.map((c) => <span class={`chip${c.nd ? ' chip-nd' : ''}`}>{c.texto}</span>)}
@@ -53,19 +46,6 @@ const ctaLabel = cta.kind === 'amazon-product'
   .card-line { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 0.5rem; font-weight: 700; font-size: 0.92rem; }
   .card-score { background: var(--ink); color: var(--bg); font-family: var(--font-display); font-size: 0.78rem; border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .card-price { color: var(--accent); }
-  .card-cta {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 0.08rem 0.42rem;
-    color: var(--ink-muted);
-    font-size: 0.68rem;
-    font-weight: 750;
-  }
-  .card-cta--amazon-product,
-  .card-cta--amazon-search {
-    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
-    color: var(--accent);
-  }
   .card-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.7rem; }
   .chip { font-size: 0.7rem; background: var(--surface-muted); color: var(--ink); border-radius: var(--radius-sm); padding: 0.1rem 0.45rem; }
   .chip-nd { color: var(--ink-muted); font-style: italic; }
