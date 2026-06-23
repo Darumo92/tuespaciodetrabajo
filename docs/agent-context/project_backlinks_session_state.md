@@ -5,6 +5,29 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-23 - paquete Reddit + Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `25`, total `26`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Busquedas ES en `r/askspain` y `r/programacion` sin candidato fuerte hoy; no forzar comentario en hilo lateral solo por idioma.
+- Reddit candidatos EN verificados con old.reddit y textos humanizados:
+  - `r/OfficeChairs` `1uctgmv` — OP con spondylolisthesis + bulge L5/S1, dolor fuerte, Aeron/Embody/LiberNovo no le encajan, presupuesto GBP 1.000. Comentario sin link, cauteloso con claims medicos.
+  - `r/StandingDesks` `1ucheh2` — setup WFH + gaming en esquina, duda entre L-shaped electric desk triple motor o modular. Comentario sin link recomendando modular.
+  - `r/OfficeChairs` `1ud6wjs` — OP 6'3, 160 lb, presupuesto <200 USD, Zody/Mirra 1 usados por 50 USD. Comentario sin link priorizando estado mecanico y Zody por seat depth.
+- Quora ES candidato nuevo para evitar repetir el del 2026-06-19 si ya se publico:
+  - `https://es.quora.com/Qu%C3%A9-es-mas-adecuado-para-trabajar-un-monitor-de-24-o-uno-de-27-Y-es-mejor-pantalla-curva-o-plana` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+
+Update post-publicacion 2026-06-23:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/`: visibles 3/3 comentarios Reddit.
+- Karma visible tras publicacion: post `1`, comment `25`, total `26` (sin cambio inmediato).
+- Publicados SIN link:
+  - `r/OfficeChairs` `1uctgmv` visible como `otaa48p`: https://www.reddit.com/r/OfficeChairs/comments/1uctgmv/need_suggestions_for_a_new_chair_lower_back_pain/otaa48p/
+  - `r/StandingDesks` `1ucheh2` visible como `otadibt`: https://www.reddit.com/r/StandingDesks/comments/1ucheh2/lshaped_electric_standing_desk_vs_modular_diy_w/otadibt/
+  - `r/OfficeChairs` `1ud6wjs` visible como `otahgr2`: https://www.reddit.com/r/OfficeChairs/comments/1ud6wjs/zody_mirra_1_or_alternative_under_150200/otahgr2/
+- Quora: publicacion confirmada manualmente por usuario; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de answer si el usuario la puede copiar desde Quora.
+
 ## Update 2026-06-17 - ajuste tactico Reddit ES
 
 Contexto operativo:
