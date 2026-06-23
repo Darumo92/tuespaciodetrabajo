@@ -1,0 +1,24 @@
+---
+import Base from '@/layouts/Base.astro';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+const { locale } = Astro.props as { locale: Locale };
+const pagePath = localizedPath(locale, ['news']);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['actualidad']),
+  [locale]: pagePath,
+});
+---
+<Base title="Home Office News | Tu Espacio de Trabajo" description="Updates and notes about home office products, ergonomics and remote-work equipment." canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale} noindex={true}>
+  <main class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>News</span></nav>
+    <h1>News</h1>
+    <p class="text-muted">English news coverage is not published yet. For now, use the evergreen guides and product catalog.</p>
+  </main>
+</Base>

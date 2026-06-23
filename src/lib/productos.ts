@@ -1,4 +1,8 @@
 import type { ClaveTipo, FiltroConfig, TipoConfig } from './tipos';
+import { buildAmazonSearchUrl, buildAmazonUrl } from '../i18n/amazon';
+import { DEFAULT_LOCALE, type Locale } from '../i18n/locales';
+import { localizedPath } from '../i18n/routes';
+import { t } from '../i18n/ui';
 
 export interface Valoraciones {
   ergonomia: number | null;
@@ -101,30 +105,64 @@ export function getCampo(p: Producto, ruta: string): unknown {
   return val === undefined ? null : val;
 }
 
-export function tramoTexto(tramo: number): string {
-  return '€'.repeat(Math.max(1, Math.min(4, tramo)));
+export function tramoTexto(tramo: number, locale: Locale = DEFAULT_LOCALE): string {
+  const symbol = locale === DEFAULT_LOCALE ? '€' : '$';
+  return symbol.repeat(Math.max(1, Math.min(4, tramo)));
 }
 
-export function formatoSpec(valor: unknown, formato?: string): string {
-  if (valor == null) return 'n/d';
-  if (formato === 'bool') return valor ? 'Sí' : 'No';
+export function formatoSpec(valor: unknown, formato?: string, locale: Locale = DEFAULT_LOCALE): string {
+  const isEnglish = locale === 'en';
+  if (valor == null) return isEnglish ? 'n/a' : 'n/d';
+  if (formato === 'bool') return valor ? (isEnglish ? 'Yes' : 'Sí') : 'No';
+  const rawText = String(valor);
+  const englishRaw: Record<string, string> = {
+    aluminio: 'aluminum',
+    plastico: 'plastic',
+    plástico: 'plastic',
+    acero: 'steel',
+    nylon: 'nylon',
+    poliamida: 'polyamide',
+    malla: 'mesh',
+    espuma: 'foam',
+    tapizado: 'upholstered',
+    sincro: 'synchro',
+    basculante: 'tilt',
+    multibloqueo: 'multi-lock',
+  };
   switch (formato) {
     case 'kg': return `${valor} kg`;
     case 'grados': return `${valor}°`;
-    case 'anios': return `${valor} años`;
+    case 'anios': return isEnglish ? `${valor} year${Number(valor) === 1 ? '' : 's'}` : `${valor} años`;
     case 'cm': return `${valor} cm`;
-    default: return String(valor);
+    default: return isEnglish ? englishRaw[rawText.toLowerCase()] ?? rawText : rawText;
   }
 }
 
-const ETIQUETAS: Record<string, Record<string, string>> = {
-  lumbar: { fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura', dinamico: 'Dinámico autoajustable', '5d': '5D ajustable' },
-  reposabrazos: { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' },
-  respaldo: { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' },
+const ETIQUETAS: Record<Locale | 'fallback', Record<string, Record<string, string>>> = {
+  'es-ES': {
+    lumbar: { fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura', dinamico: 'Dinámico autoajustable', '5d': '5D ajustable' },
+    reposabrazos: { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' },
+    respaldo: { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' },
+  },
+  en: {
+    lumbar: { fijo: 'Fixed', presion: 'Pressure-adjustable', altura: 'Height-adjustable', dinamico: 'Dynamic self-adjusting', '5d': 'Adjustable 5D' },
+    reposabrazos: { ninguno: 'None', fijo: 'Fixed', '1d': '1D height', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Flip-up' },
+    respaldo: { malla: 'Mesh', espuma: 'Foam', mixto: 'Mesh + cushion' },
+  },
+  'fr-FR': {},
+  'fr-CA': {},
+  'fr-BE': {},
+  'nl-NL': {},
+  'nl-BE': {},
+  'de-DE': {},
+  'it-IT': {},
+  'pl-PL': {},
+  'sv-SE': {},
+  fallback: {},
 };
 
-export function etiquetaEnum(campo: string, valor: string): string {
-  return ETIQUETAS[campo]?.[valor] ?? valor;
+export function etiquetaEnum(campo: string, valor: string, locale: Locale = DEFAULT_LOCALE): string {
+  return ETIQUETAS[locale]?.[campo]?.[valor] ?? ETIQUETAS[DEFAULT_LOCALE][campo]?.[valor] ?? valor;
 }
 
 export function reposabrazosNivel(v: string): number {
@@ -219,34 +257,35 @@ export function datosFiltrado(p: Producto, cfg: TipoConfig): Record<string, stri
   return out;
 }
 
-function formatoChip(valor: unknown, formato?: string): string {
+function formatoChip(valor: unknown, formato?: string, locale: Locale = DEFAULT_LOCALE): string {
   if (!formato) return String(valor);
   if (formato.startsWith('enumLower:')) {
-    return etiquetaEnum(formato.slice('enumLower:'.length), String(valor)).toLowerCase();
+    return etiquetaEnum(formato.slice('enumLower:'.length), String(valor), locale).toLowerCase();
   }
   if (formato.startsWith('enum:')) {
-    return etiquetaEnum(formato.slice('enum:'.length), String(valor));
+    return etiquetaEnum(formato.slice('enum:'.length), String(valor), locale);
   }
-  return formatoSpec(valor, formato);
+  return formatoSpec(valor, formato, locale);
 }
 
 /** Chips de la card desde cfg.tarjetaChips. nd:true para el fallback de campos null con mostrarSiNulo. */
-export function construirChips(p: Producto, cfg: TipoConfig): { texto: string; nd: boolean }[] {
+export function construirChips(p: Producto, cfg: TipoConfig, locale: Locale = DEFAULT_LOCALE): { texto: string; nd: boolean }[] {
   const out: { texto: string; nd: boolean }[] = [];
   for (const chip of cfg.tarjetaChips) {
     const raw = getCampo(p, chip.campo);
     if (raw == null) {
-      if (chip.mostrarSiNulo) out.push({ texto: chip.mostrarSiNulo.etiqueta, nd: true });
+      if (chip.mostrarSiNulo) out.push({ texto: locale === 'en' ? chip.mostrarSiNulo.etiquetaEn ?? 'n/a' : chip.mostrarSiNulo.etiqueta, nd: true });
       continue;
     }
-    out.push({ texto: (chip.prefijo ?? '') + formatoChip(raw, chip.formato), nd: false });
+    const prefix = locale === 'en' ? chip.prefijoEn ?? chip.prefijo ?? '' : chip.prefijo ?? '';
+    out.push({ texto: prefix + formatoChip(raw, chip.formato, locale), nd: false });
   }
   return out;
 }
 
-export function buildAmazonHref(amazon?: ProductoAmazon): string | null {
+export function buildAmazonHref(amazon?: ProductoAmazon, locale: Locale = DEFAULT_LOCALE): string | null {
   if (amazon?.asin) {
-    return `https://www.amazon.es/dp/${amazon.asin}?tag=${AMAZON_TAG}`;
+    return buildAmazonUrl({ href: `/dp/${amazon.asin}`, locale });
   }
   return null;
 }
@@ -259,6 +298,7 @@ export interface ProductCtaInput {
   nombre: string;
   marca?: string;
   disableAmazonSearch?: boolean;
+  locale?: Locale;
 }
 
 export interface ProductCta {
@@ -268,10 +308,10 @@ export interface ProductCta {
   sponsored: boolean;
 }
 
-export function buildAmazonSearchHref(query?: string | null): string | null {
+export function buildAmazonSearchHref(query?: string | null, locale: Locale = DEFAULT_LOCALE): string | null {
   const q = query?.trim();
   if (!q) return null;
-  return `https://www.amazon.es/s?k=${encodeURIComponent(q)}&tag=${AMAZON_TAG}`;
+  return buildAmazonSearchUrl({ query: q, locale });
 }
 
 function buildFallbackSearchQuery(marca: string | undefined, nombre: string): string {
@@ -285,20 +325,23 @@ function buildFallbackSearchQuery(marca: string | undefined, nombre: string): st
 }
 
 export function buildProductCta(input: ProductCtaInput): ProductCta {
-  const productHref = buildAmazonHref(input.amazon);
+  const locale = input.locale ?? DEFAULT_LOCALE;
+  const ui = t(locale);
+  const productHref = buildAmazonHref(input.amazon, locale);
   if (productHref) {
-    return { href: productHref, label: 'Ver precio en Amazon', kind: 'amazon-product', sponsored: true };
+    const label = locale === DEFAULT_LOCALE ? 'Ver precio en Amazon' : ui.commerce.viewOnAmazon;
+    return { href: productHref, label, kind: 'amazon-product', sponsored: true };
   }
 
   const fallbackQuery = buildFallbackSearchQuery(input.marca, input.nombre);
   const searchHref = input.disableAmazonSearch
     ? null
-    : buildAmazonSearchHref(input.amazon?.buscar || fallbackQuery);
+    : buildAmazonSearchHref(input.amazon?.buscar || fallbackQuery, locale);
   if (searchHref) {
-    return { href: searchHref, label: 'Buscar en Amazon', kind: 'amazon-search', sponsored: true };
+    return { href: searchHref, label: ui.commerce.searchAmazon, kind: 'amazon-search', sponsored: true };
   }
 
-  return { href: null, label: 'Sin tienda verificada', kind: 'unavailable', sponsored: false };
+  return { href: null, label: ui.commerce.unavailable, kind: 'unavailable', sponsored: false };
 }
 
 /**
@@ -348,14 +391,96 @@ export interface EntradaIndice {
   url: string;
 }
 
-export function construirIndiceBusqueda(productos: Producto[], articulos: ArticuloLite[]): EntradaIndice[] {
+export function localizedTipoSlug(tipo: string, locale: Locale = DEFAULT_LOCALE): string {
+  if (locale === 'en' && tipo === 'silla') return 'chairs';
+  return tipo;
+}
+
+export function sourceTipoSlug(localizedTipo: string, locale: Locale = DEFAULT_LOCALE): string {
+  if (locale === 'en' && localizedTipo === 'chairs') return 'silla';
+  return localizedTipo;
+}
+
+export function catalogPath(locale: Locale = DEFAULT_LOCALE, tipo?: string): string {
+  const base = locale === DEFAULT_LOCALE ? ['catalogo'] : ['catalog'];
+  return localizedPath(locale, tipo ? [...base, localizedTipoSlug(tipo, locale)] : base);
+}
+
+export function productPath(producto: Pick<Producto, 'tipo' | 'slug'>, locale: Locale = DEFAULT_LOCALE): string {
+  return localizedPath(locale, [
+    locale === DEFAULT_LOCALE ? 'catalogo' : 'catalog',
+    localizedTipoSlug(producto.tipo, locale),
+    producto.slug,
+  ]);
+}
+
+export function comparePath(tipo: string, par = '', locale: Locale = DEFAULT_LOCALE): string {
+  const segments = [
+    locale === DEFAULT_LOCALE ? 'comparar' : 'compare',
+    localizedTipoSlug(tipo, locale),
+    par,
+  ].filter(Boolean);
+  return localizedPath(locale, segments);
+}
+
+export function localizedProductName(p: Pick<Producto, 'nombre' | 'marca'>, locale: Locale = DEFAULT_LOCALE): string {
+  if (locale === DEFAULT_LOCALE) return p.nombre;
+  return p.nombre
+    .replace(/\bSilla de Oficina Ergonomica de Malla\b/gi, 'Mesh Ergonomic Office Chair')
+    .replace(/\bSilla de Oficina Ergonómica de Malla\b/gi, 'Mesh Ergonomic Office Chair')
+    .replace(/\bSilla de Oficina\b/gi, 'Office Chair')
+    .replace(/\bSilla Ergonómica\b/gi, 'Ergonomic Chair')
+    .replace(/\bSilla ergonómica\b/gi, 'Ergonomic Chair')
+    .replace(/\bcon reposacabezas\b/gi, 'with Headrest')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function productNameWithBrand(p: Producto, locale: Locale = DEFAULT_LOCALE): string {
+  const name = localizedProductName(p, locale);
+  return name.toLocaleLowerCase().startsWith(p.marca.toLocaleLowerCase()) ? name : `${p.marca} ${name}`;
+}
+
+export function localizedProductMeta(p: Producto, locale: Locale = DEFAULT_LOCALE): { title: string; description: string; h1: string } {
+  if (locale === DEFAULT_LOCALE) {
+    const description = p.veredicto ? recortarMeta(p.veredicto) : `Análisis de ${p.nombre}: specs verificadas y valoración por ejes.`;
+    return {
+      title: `${p.nombre} — análisis y specs | Tu Espacio de Trabajo`,
+      description,
+      h1: p.nombre,
+    };
+  }
+
+  const back = getCampo(p, 'specs.respaldo');
+  const arms = getCampo(p, 'specs.reposabrazos');
+  const maxWeight = getCampo(p, 'specs.pesoMaxKg');
+  const warranty = getCampo(p, 'specs.garantiaAnios');
+  const name = localizedProductName(p, locale);
+  const brandedName = productNameWithBrand(p, locale);
+  const bits = [
+    back ? `${etiquetaEnum('respaldo', String(back), locale).toLowerCase()} back` : null,
+    arms ? `${etiquetaEnum('reposabrazos', String(arms), locale)} armrests` : null,
+    maxWeight ? `supports ${maxWeight} kg` : null,
+    warranty ? `${warranty}-year warranty` : null,
+  ].filter(Boolean);
+  const detail = bits.length ? `: ${bits.join(', ')}` : '';
+  return {
+    title: `${name} Specs | Chair Database`,
+    description: recortarMeta(`${brandedName} review with verified specs${detail}. Compare ergonomics, adjustability, comfort and buying options.`),
+    h1: `${name} review and specs`,
+  };
+}
+
+export function construirIndiceBusqueda(productos: Producto[], articulos: ArticuloLite[], locale: Locale = DEFAULT_LOCALE): EntradaIndice[] {
   const p: EntradaIndice[] = productos.map((x) => ({
     entidad: 'producto', slug: x.slug, titulo: x.nombre, sub: x.marca, tipo: x.tipo,
-    url: `/catalogo/${x.tipo}/${x.slug}/`,
+    url: productPath(x, locale),
   }));
   const a: EntradaIndice[] = articulos.map((x) => ({
     entidad: 'articulo', slug: x.slug, titulo: x.titulo, sub: x.categoria, tipo: x.tipo,
-    url: x.tipo === 'informativo' ? `/guias/${x.slug}/` : `/${x.categoria}/${x.slug}/`,
+    url: x.tipo === 'informativo'
+      ? localizedPath(locale, [locale === DEFAULT_LOCALE ? 'guias' : 'guides', x.slug])
+      : localizedPath(locale, [x.categoria, x.slug]),
   }));
   return [...p, ...a];
 }

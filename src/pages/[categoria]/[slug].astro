@@ -1,6 +1,8 @@
 ---
 import Article from '@/layouts/Article.astro';
 import { getCollection } from 'astro:content';
+import { absoluteUrl, buildAlternates } from '@/i18n/routes';
+import { baseArticlePath, i18nArticlePath } from '@/i18n/content';
 
 export async function getStaticPaths() {
   const articulos = await getCollection('articulos', ({ data }) => data.tipo !== 'informativo');
@@ -14,9 +16,22 @@ export async function getStaticPaths() {
 }
 
 const { articulo } = Astro.props;
+const translations = await getCollection('articulosI18n', ({ data }) => data.translationOf === articulo.slug);
+const paths = translations.reduce(
+  (acc, translation) => ({
+    ...acc,
+    [translation.data.locale]: i18nArticlePath(translation),
+  }),
+  { 'es-ES': baseArticlePath(articulo) }
+);
+const alternates = buildAlternates(paths);
 const { Content } = await articulo.render();
 ---
 
-<Article articulo={articulo}>
+<Article
+  articulo={articulo}
+  canonical={absoluteUrl(baseArticlePath(articulo))}
+  alternates={alternates}
+>
   <Content />
 </Article>

@@ -4,13 +4,22 @@ import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/i18n/locales';
+import { articlePath, absoluteUrl, localizedPath, type AlternateLink } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
 
 interface Props {
-  articulo: CollectionEntry<'articulos'>;
+  articulo: CollectionEntry<'articulos'> | CollectionEntry<'articulosI18n'>;
+  locale?: Locale;
+  canonical?: string;
+  alternates?: AlternateLink[];
 }
 
-const { articulo } = Astro.props;
+const { articulo, locale = DEFAULT_LOCALE, canonical, alternates = [] } = Astro.props;
+const ui = t(locale);
 const { titulo, descripcion, categoria, fecha, actualizadoEn, tags, imagen, imagenAlt, faqs, tipo } = articulo.data;
+const categoriaSlug = 'categoriaSlug' in articulo.data ? articulo.data.categoriaSlug : categoria;
+const slug = 'translationOf' in articulo.data ? articulo.data.localizedSlug : articulo.slug;
 const esInformativo = tipo === 'informativo';
 const autor = articulo.data.autor || 'Tu Espacio de Trabajo';
 
@@ -25,7 +34,9 @@ const wordCount = articulo.body
 const minutosLectura = Math.max(1, Math.round(wordCount / 200));
 
 // Related articles: prioritize shared tags, then same category
-const allArticles = await getCollection('articulos', ({ slug }) => slug !== articulo.slug);
+const allArticles = locale === DEFAULT_LOCALE
+  ? await getCollection('articulos', ({ slug }) => slug !== articulo.slug)
+  : await getCollection('articulosI18n', ({ data }) => data.locale === locale && data.localizedSlug !== slug);
 const articleTags = new Set(tags || []);
 
 const scored = allArticles.map(a => {
@@ -46,24 +57,28 @@ const related = scored
   .map(s => s.article);
 
 const categoriasInfo: Record<string, { nombre: string }> = {
-  sillas: { nombre: 'Sillas' },
-  escritorios: { nombre: 'Escritorios' },
-  accesorios: { nombre: 'Accesorios' },
-  ambiente: { nombre: 'Ambiente' },
-  'audio-video': { nombre: 'Audio y Video' },
+  sillas: { nombre: ui.categories.sillas },
+  chairs: { nombre: ui.categories.sillas },
+  escritorios: { nombre: ui.categories.escritorios },
+  desks: { nombre: ui.categories.escritorios },
+  accesorios: { nombre: ui.categories.accesorios },
+  accessories: { nombre: ui.categories.accesorios },
+  ambiente: { nombre: ui.categories.ambiente },
+  workspace: { nombre: ui.categories.ambiente },
+  'audio-video': { nombre: ui.categories['audio-video'] },
 };
 
 const catInfo = esInformativo
-  ? { nombre: 'Guías' }
-  : categoriasInfo[categoria];
+  ? { nombre: ui.article.guides }
+  : categoriasInfo[categoriaSlug];
 
-const fechaFormateada = fecha.toLocaleDateString('es-ES', {
+const fechaFormateada = fecha.toLocaleDateString(LOCALES[locale].htmlLang, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
 
-const actualizadoFormateado = actualizadoEn?.toLocaleDateString('es-ES', {
+const actualizadoFormateado = actualizadoEn?.toLocaleDateString(LOCALES[locale].htmlLang, {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
@@ -71,7 +86,20 @@ const actualizadoFormateado = actualizadoEn?.toLocaleDateString('es-ES', {
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 
-const articleUrl = `${siteUrl}/${esInformativo ? 'guias' : categoria}/${articulo.slug}/`;
+const articleUrl = absoluteUrl(articlePath({
+  locale,
+  tipo: tipo ?? 'comparativa',
+  categoriaSlug,
+  slug,
+}));
+
+const homePath = articlePath({ locale, tipo: 'informativo', categoriaSlug: '', slug: '' }).replace(/\/(?:guias|guides)\/$/, '/');
+const categoryPath = articlePath({
+  locale,
+  tipo: esInformativo ? 'informativo' : 'comparativa',
+  categoriaSlug,
+  slug: '',
+});
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -86,17 +114,17 @@ const articleSchema = {
     '@id': articleUrl,
   },
   wordCount: wordCount,
-  inLanguage: 'es',
+  inLanguage: LOCALES[locale].hreflang,
   ...(tags && tags.length > 0 && { keywords: tags.join(', ') }),
   author: {
     '@type': 'Person',
     name: autor,
-    url: `${siteUrl}/sobre-mi/`,
+    url: locale === DEFAULT_LOCALE ? `${siteUrl}/sobre-mi/` : `${siteUrl}${localizedPath(locale, ['about'])}`,
     sameAs: ['https://www.linkedin.com/in/david-rubio-mota/'],
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Tu Espacio de Trabajo',
+    name: ui.siteName,
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
@@ -105,7 +133,7 @@ const articleSchema = {
   },
   isPartOf: {
     '@type': 'WebSite',
-    name: 'Tu Espacio de Trabajo',
+    name: ui.siteName,
     url: siteUrl,
   },
 };
@@ -114,14 +142,14 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Inicio', item: siteUrl },
-    { '@type': 'ListItem', position: 2, name: catInfo.nombre, item: `${siteUrl}/${esInformativo ? 'guias' : categoria}/` },
+    { '@type': 'ListItem', position: 1, name: ui.article.home, item: absoluteUrl(homePath) },
+    { '@type': 'ListItem', position: 2, name: catInfo.nombre, item: absoluteUrl(categoryPath) },
     { '@type': 'ListItem', position: 3, name: titulo, item: articleUrl },
   ],
 };
 ---
 
-<Base title={titulo} description={descripcion} image={imagen} ogType="article" publishedTime={fecha.toISOString()} modifiedTime={(actualizadoEn || fecha).toISOString()}>
+<Base title={titulo} description={descripcion} image={imagen} canonical={canonical || articleUrl} alternates={alternates} locale={locale} ogType="article" publishedTime={fecha.toISOString()} modifiedTime={(actualizadoEn || fecha).toISOString()}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   {imagen && <link rel="preload" as="image" href={imagen} slot="head" />}
@@ -131,31 +159,31 @@ const breadcrumbSchema = {
   </div>
 
   <article class="article-page">
-    <nav class="breadcrumb" aria-label="Migas de pan">
-      <a href="/">Inicio</a>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={homePath}>{ui.article.home}</a>
       <span class="breadcrumb-sep" aria-hidden="true">></span>
-      <a href={esInformativo ? '/guias/' : `/${categoria}/`}>{catInfo.nombre}</a>
+      <a href={categoryPath}>{catInfo.nombre}</a>
       <span class="breadcrumb-sep" aria-hidden="true">></span>
       <span>{titulo}</span>
     </nav>
 
     <header class="article-header">
       <span class="article-category-badge">
-        <CategoryIcon categoria={esInformativo ? 'guias' : categoria} size={16} /> {catInfo.nombre}
+        <CategoryIcon categoria={esInformativo ? 'guias' : categoriaSlug} size={16} /> {catInfo.nombre}
       </span>
 
       <h1 class="article-title">{titulo}</h1>
       <p class="article-description">{descripcion}</p>
 
       <div class="article-meta">
-        <span class="article-author">Por <a href="/sobre-mi/" rel="author">{autor}</a></span>
-        <time datetime={fecha.toISOString().split('T')[0]}>Publicado: {fechaFormateada}</time>
+        <span class="article-author">{ui.article.by} <a href={locale === DEFAULT_LOCALE ? '/sobre-mi/' : localizedPath(locale, ['about'])} rel="author">{autor}</a></span>
+        <time datetime={fecha.toISOString().split('T')[0]}>{ui.article.published}: {fechaFormateada}</time>
         {actualizadoFormateado && (
           <time datetime={(actualizadoEn as Date).toISOString().split('T')[0]} class="article-updated">
-            Actualizado: {actualizadoFormateado}
+            {ui.article.updated}: {actualizadoFormateado}
           </time>
         )}
-        <span>{minutosLectura} min lectura</span>
+        <span>{minutosLectura} {ui.article.minRead}</span>
       </div>
     </header>
 
@@ -174,22 +202,20 @@ const breadcrumbSchema = {
     )}
 
     <p class="trust-line">
-      Análisis independiente. Productos probados de primera mano y precios revisados con regularidad.
+      {ui.article.trustLine}
     </p>
 
     {!esInformativo && (
       <div class="affiliate-disclaimer" role="note">
         <span aria-hidden="true">i</span>
         <span>
-          Este artículo contiene enlaces de afiliados. Si compras a través de
-          ellos podemos recibir una pequeña comisión <strong>sin coste adicional
-          para ti</strong>.
+          {ui.article.affiliateDisclosure}
         </span>
       </div>
     )}
 
-    <nav class="toc" id="toc" aria-label="Tabla de contenidos" style="display:none;">
-      <p class="toc-title">En este artículo</p>
+    <nav class="toc" id="toc" aria-label={ui.article.toc} style="display:none;">
+      <p class="toc-title">{ui.article.toc}</p>
       <ol class="toc-list" id="toc-list"></ol>
     </nav>
 
@@ -199,7 +225,7 @@ const breadcrumbSchema = {
 
     {tags && tags.length > 0 && (
       <div class="article-tags-section">
-        <strong class="article-tags-label">Etiquetas:</strong>
+        <strong class="article-tags-label">{ui.article.tags}:</strong>
         <div class="article-tags-list">
           {tags.map(tag => (
             <span class="badge article-tag-badge">{tag}</span>
@@ -211,8 +237,12 @@ const breadcrumbSchema = {
     {faqs && faqs.length > 0 && (
       <section class="faq-section" aria-labelledby="faq-titulo">
         <div class="faq-header">
-          <h2 id="faq-titulo">Preguntas frecuentes</h2>
-          <p class="faq-subtitle">{faqs.length} preguntas sobre {titulo.toLowerCase().includes('mejor') ? titulo.replace(/^mejor\w*\s*/i, '') : titulo.toLowerCase()}</p>
+          <h2 id="faq-titulo">{ui.article.faqTitle}</h2>
+          <p class="faq-subtitle">
+            {locale === 'en'
+              ? `${faqs.length} questions about ${titulo.toLowerCase()}`
+              : `${faqs.length} preguntas sobre ${titulo.toLowerCase().includes('mejor') ? titulo.replace(/^mejor\w*\s*/i, '') : titulo.toLowerCase()}`}
+          </p>
         </div>
         <div class="faq-list">
           {faqs.map((f, i) => (
@@ -231,23 +261,23 @@ const breadcrumbSchema = {
     {related.length > 0 && (
       <section class="article-related-section">
         <h2 class="article-related-title">
-          Artículos relacionados
+          {ui.article.related}
         </h2>
         <div class="articles-grid">
           {related.map(a => (
-            <ArticleCard articulo={a} />
+            <ArticleCard articulo={a} locale={locale} />
           ))}
         </div>
         <div class="article-related-more">
-          <a href={esInformativo ? '/guias/' : `/${categoria}/`} class="affiliate-button article-related-btn">
-            Ver más en {catInfo.nombre} →
+          <a href={categoryPath} class="affiliate-button article-related-btn">
+            {ui.article.seeMoreIn} {catInfo.nombre} →
           </a>
         </div>
       </section>
     )}
 
     <div class="back-to-top-wrap">
-      <a href="#main-content" class="back-to-top-link">↑ Volver arriba</a>
+      <a href="#main-content" class="back-to-top-link">↑ {ui.article.backToTop}</a>
     </div>
   </article>
 
@@ -256,8 +286,8 @@ const breadcrumbSchema = {
       <div class="sticky-cta-inner">
         <span class="sticky-cta-name" id="sticky-cta-name"></span>
         <span class="sticky-cta-price" id="sticky-cta-price"></span>
-        <a href="#" class="sticky-cta-btn" id="sticky-cta-link" target="_blank" rel="nofollow noopener noreferrer sponsored">
-          Ver precio →
+        <a class="sticky-cta-btn" id="sticky-cta-link" href="#article-content">
+          {ui.commerce.viewPrice} →
         </a>
       </div>
     </div>
@@ -321,6 +351,8 @@ const breadcrumbSchema = {
       nameEl.textContent = name.length > 30 ? name.slice(0, 30) + '...' : name;
       priceEl.textContent = price;
       linkEl.href = firstLink.href;
+      linkEl.target = '_blank';
+      linkEl.rel = 'nofollow noopener noreferrer sponsored';
 
       const observer = new IntersectionObserver(
         ([entry]) => {

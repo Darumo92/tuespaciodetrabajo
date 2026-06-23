@@ -1,30 +1,39 @@
 ---
 import { notaGlobal, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
-interface Props { producto: Producto; }
-const { producto } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+interface Props { producto: Producto; locale?: Locale; }
+const { producto, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
 const cfg = getTipoConfig(producto.tipo);
 const v = producto.valoraciones as unknown as Record<string, number | null>;
 const rationale = producto.scoreRationale as Record<string, string | undefined> | undefined;
+const labels: Record<string, string> = isEn ? {
+  ergonomia: 'Ergonomics',
+  ajustabilidad: 'Adjustability',
+  materiales: 'Materials',
+  comodidad: 'Comfort',
+  calidadPrecio: 'Value',
+} : {};
 const ejes = (cfg?.ejes ?? []).map((e) => ({
-  etiqueta: e.etiqueta,
+  etiqueta: labels[e.clave] ?? e.etiqueta,
   valor: v?.[e.clave] ?? null,
-  rationale: rationale?.[e.clave],
+  rationale: isEn ? undefined : rationale?.[e.clave],
 }));
 const global = notaGlobal(producto);
 ---
 <section class="vejes">
   <div class="vejes-head">
-    <h2>Valoración por ejes</h2>
-    <span class="vejes-tag">editorial · specs + comunidad</span>
+    <h2>{isEn ? 'Category scores' : 'Valoración por ejes'}</h2>
+    <span class="vejes-tag">{isEn ? 'editorial · specs based' : 'editorial · specs + comunidad'}</span>
   </div>
-  {global != null && (<p class="vejes-global"><strong>{global.toFixed(1)}</strong><span>/10 · nota global</span></p>)}
+  {global != null && (<p class="vejes-global"><strong>{global.toFixed(1)}</strong><span>/10 · {isEn ? 'overall score' : 'nota global'}</span></p>)}
   <div class="vejes-list">
     {ejes.map((e) => (
       <div class={`vejes-row${e.valor == null ? ' vejes-nd' : ''}`}>
         <span class="vejes-lbl">{e.etiqueta}</span>
         <span class="vejes-bar" style={e.valor == null ? undefined : `--pct:${e.valor * 10}%`} aria-hidden="true"></span>
-        <span class="vejes-val">{e.valor == null ? 'sin valorar' : e.valor.toFixed(1)}</span>
+        <span class="vejes-val">{e.valor == null ? (isEn ? 'not rated' : 'sin valorar') : e.valor.toFixed(1)}</span>
         {e.rationale && <p class="vejes-rationale">{e.rationale}</p>}
       </div>
     ))}

@@ -1,6 +1,10 @@
 ---
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import LanguageSuggestion from '@/components/LanguageSuggestion.astro';
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/i18n/locales';
+import { t } from '@/i18n/ui';
+import { localizedPath, type AlternateLink } from '@/i18n/routes';
 import globalStyles from '@/styles/global.css?inline';
 
 interface Props {
@@ -8,6 +12,8 @@ interface Props {
   description: string;
   image?: string;
   canonical?: string;
+  alternates?: AlternateLink[];
+  locale?: Locale;
   ogType?: 'website' | 'article';
   publishedTime?: string;
   modifiedTime?: string;
@@ -15,17 +21,118 @@ interface Props {
   noindex?: boolean;
 }
 
-const { title, description, image, canonical, ogType = 'website', publishedTime, modifiedTime, robots, noindex = false } = Astro.props;
+const {
+  title,
+  description,
+  image,
+  canonical,
+  alternates = [],
+  locale = DEFAULT_LOCALE,
+  ogType = 'website',
+  publishedTime,
+  modifiedTime,
+  robots,
+  noindex = false,
+} = Astro.props;
 const robotsContent = robots ?? (noindex ? 'noindex, follow, max-image-preview:large' : 'max-image-preview:large');
+const localeConfig = LOCALES[locale];
+const ui = t(locale);
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const ogImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-default.jpg`;
 const canonicalUrl = canonical || Astro.url.href;
 const currentPath = Astro.url.pathname;
+const alternateLinks = alternates.length > 0
+  ? alternates
+  : [
+      { hreflang: localeConfig.hreflang, href: canonicalUrl },
+      { hreflang: 'x-default', href: canonicalUrl },
+    ];
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: ui.siteName,
+  url: siteUrl,
+  description,
+  inLanguage: localeConfig.hreflang,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${siteUrl}${localizedPath(locale, [locale === DEFAULT_LOCALE ? 'buscar' : 'search']).replace(/\/$/, '/') }?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const bottomNavItems = locale === DEFAULT_LOCALE
+  ? [
+      {
+        href: localizedPath(locale),
+        active: currentPath === localizedPath(locale),
+        label: ui.article.home,
+        icon: 'home',
+      },
+      {
+        href: localizedPath(locale, ['sillas']),
+        active: currentPath.startsWith(localizedPath(locale, ['sillas'])),
+        label: ui.categories.sillas,
+        icon: 'chair',
+      },
+      {
+        href: localizedPath(locale, ['escritorios']),
+        active: currentPath.startsWith(localizedPath(locale, ['escritorios'])),
+        label: ui.categories.escritorios,
+        icon: 'desk',
+      },
+      {
+        href: localizedPath(locale, [localeConfig.guideSegment]),
+        active: currentPath.startsWith(localizedPath(locale, [localeConfig.guideSegment])),
+        label: ui.article.guides,
+        icon: 'guide',
+      },
+      {
+        href: localizedPath(locale, ['buscar']),
+        active: currentPath.startsWith(localizedPath(locale, ['buscar']).replace(/\/$/, '')),
+        label: ui.nav.search,
+        icon: 'search',
+      },
+    ]
+  : [
+      {
+        href: localizedPath(locale),
+        active: currentPath === localizedPath(locale),
+        label: ui.article.home,
+        icon: 'home',
+      },
+      {
+        href: localizedPath(locale, ['catalog']),
+        active: currentPath.startsWith(localizedPath(locale, ['catalog'])),
+        label: ui.nav.catalog,
+        icon: 'chair',
+      },
+      {
+        href: localizedPath(locale, ['guides']),
+        active: currentPath.startsWith(localizedPath(locale, ['guides'])),
+        label: ui.article.guides,
+        icon: 'guide',
+      },
+      {
+        href: localizedPath(locale, ['search']),
+        active: currentPath.startsWith(localizedPath(locale, ['search'])),
+        label: ui.nav.search,
+        icon: 'search',
+      },
+    ];
+
+const cookiePolicyPath = locale === DEFAULT_LOCALE
+  ? localizedPath(DEFAULT_LOCALE, ['cookies'])
+  : localizedPath(locale, ['cookies']);
+const bottomNavLabel = locale === DEFAULT_LOCALE ? 'Navegación inferior' : 'Bottom navigation';
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang={localeConfig.htmlLang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +143,7 @@ const currentPath = Astro.url.pathname;
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
 
-    <!-- Preload fuentes críticas self-hosted (latin cubre español base) -->
+    <!-- Preload critical self-hosted fonts -->
     <link rel="preload" href="/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -54,7 +161,7 @@ const currentPath = Astro.url.pathname;
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    <link rel="alternate" type="application/rss+xml" title="Tu Espacio de Trabajo" href="/rss.xml" />
+    {locale === DEFAULT_LOCALE && <link rel="alternate" type="application/rss+xml" title="Tu Espacio de Trabajo" href="/rss.xml" />}
 
     <!-- Open Graph -->
     <meta property="og:type" content={ogType} />
@@ -66,8 +173,8 @@ const currentPath = Astro.url.pathname;
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="533" />
-    <meta property="og:locale" content="es_ES" />
-    <meta property="og:site_name" content="Tu Espacio de Trabajo" />
+    <meta property="og:locale" content={localeConfig.ogLocale} />
+    <meta property="og:site_name" content={ui.siteName} />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -75,9 +182,9 @@ const currentPath = Astro.url.pathname;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    <!-- SEO: alternate hreflang for Spanish content -->
-    <link rel="alternate" hreflang="es" href={canonicalUrl} />
-    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+    {alternateLinks.map((link) => (
+      <link rel="alternate" hreflang={link.hreflang} href={link.href} />
+    ))}
 
     <style set:html={globalStyles}></style>
 
@@ -94,57 +201,41 @@ const currentPath = Astro.url.pathname;
     </script>
 
     <!-- Schema.org -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Tu Espacio de Trabajo",
-        "url": "https://tuespaciodetrabajo.com",
-        "description": "Guías de compra y comparativas de productos de home office y ergonomía",
-        "inLanguage": "es",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://tuespaciodetrabajo.com/buscar/?q={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
     <slot name="head" />
   </head>
   <body>
-    <a href="#main-content" class="skip-link">Saltar al contenido</a>
-    <Header />
+    <a href="#main-content" class="skip-link">{ui.skipToContent}</a>
+    <Header locale={locale} alternates={alternateLinks} />
+    <LanguageSuggestion locale={locale} alternates={alternateLinks} />
     <main id="main-content">
       <slot />
     </main>
-    <Footer />
+    <Footer locale={locale} />
 
     <!-- Mobile bottom navigation -->
-    <nav class="bottom-nav" aria-label="Navegación rápida">
-      <a href="/" class={`bottom-nav-item ${currentPath === '/' ? 'bottom-nav-active' : ''}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
-        <span>Inicio</span>
-      </a>
-      <a href="/sillas/" class={`bottom-nav-item ${currentPath.startsWith('/sillas') ? 'bottom-nav-active' : ''}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"/><path d="M5 15v4"/><path d="M19 15v4"/><path d="M9 11v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"/></svg>
-        <span>Sillas</span>
-      </a>
-      <a href="/escritorios/" class={`bottom-nav-item ${currentPath.startsWith('/escritorios') ? 'bottom-nav-active' : ''}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="4" rx="1"/><path d="M4 11v8"/><path d="M20 11v8"/><path d="M12 11v4"/></svg>
-        <span>Escritorios</span>
-      </a>
-      <a href="/guias/" class={`bottom-nav-item ${currentPath.startsWith('/guias') ? 'bottom-nav-active' : ''}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></svg>
-        <span>Guias</span>
-      </a>
-      <a href="/buscar/" class={`bottom-nav-item ${currentPath.startsWith('/buscar') ? 'bottom-nav-active' : ''}`}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
-        <span>Buscar</span>
-      </a>
+    <nav class="bottom-nav" aria-label={bottomNavLabel}>
+      {bottomNavItems.map(item => (
+        <a href={item.href} class={`bottom-nav-item ${item.active ? 'bottom-nav-active' : ''}`}>
+          {item.icon === 'home' && (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+          )}
+          {item.icon === 'chair' && (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2z"/><path d="M5 15v4"/><path d="M19 15v4"/><path d="M9 11v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"/></svg>
+          )}
+          {item.icon === 'desk' && (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="4" rx="1"/><path d="M4 11v8"/><path d="M20 11v8"/><path d="M12 11v4"/></svg>
+          )}
+          {item.icon === 'guide' && (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0"/><path d="M3 6l0 13"/><path d="M12 6l0 13"/><path d="M21 6l0 13"/></svg>
+          )}
+          {item.icon === 'search' && (
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+          )}
+          <span>{item.label}</span>
+        </a>
+      ))}
     </nav>
 
     <!-- Scroll reveal observer -->
@@ -238,7 +329,7 @@ const currentPath = Astro.url.pathname;
           if (href.includes('amazon.')) tienda = 'amazon';
           if (typeof gtag === 'function') {
             gtag('event', 'affiliate_click', {
-              event_category: 'afiliados',
+              event_category: 'affiliate',
               event_label: tienda,
               link_url: href,
               page_path: window.location.pathname
@@ -249,12 +340,12 @@ const currentPath = Astro.url.pathname;
     </script>
 
     <!-- Cookie consent banner (RGPD) -->
-    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Consentimiento de cookies" style="display:none;">
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label={ui.cookies.label} style="display:none;">
       <div class="cookie-banner-inner">
-        <p>Usamos cookies analíticas (Google Analytics) para mejorar la web. <a href="/cookies/">Política de cookies</a>.</p>
+        <p>{ui.cookies.text} <a href={cookiePolicyPath}>{ui.cookies.policy}</a>.</p>
         <div class="cookie-banner-actions">
-          <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Aceptar</button>
-          <button id="cookie-reject" class="cookie-btn cookie-btn-reject">Rechazar</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn-accept">{ui.cookies.accept}</button>
+          <button id="cookie-reject" class="cookie-btn cookie-btn-reject">{ui.cookies.reject}</button>
         </div>
       </div>
     </div>

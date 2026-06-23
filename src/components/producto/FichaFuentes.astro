@@ -1,19 +1,39 @@
 ---
 import type { Producto } from '@/lib/productos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
-interface Props { producto: Producto; }
+interface Props { producto: Producto; locale?: Locale; }
 
-const { producto: p } = Astro.props;
+const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
+const typeLabel: Record<string, string> = {
+  oficial: 'official source',
+  review: 'review',
+  comunidad: 'community source',
+  tienda: 'retailer',
+  manual: 'manual check',
+};
+const sourceLabel = (url: string, fallback: string) => {
+  if (!isEn) return fallback;
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return 'Verified source';
+  }
+};
+const sourceMeta = (tipo: string, fecha: string) => isEn
+  ? `${typeLabel[tipo] ?? 'source'} · checked ${fecha}`
+  : `${tipo} · consultado ${fecha}`;
 ---
 
 {p.fuentes?.length ? (
   <section class="ficha-fuentes" aria-labelledby="fuentes-producto">
-    <h2 id="fuentes-producto">Fuentes verificadas</h2>
+    <h2 id="fuentes-producto">{isEn ? 'Verified sources' : 'Fuentes verificadas'}</h2>
     <ul>
       {p.fuentes.map((f) => (
         <li>
-          <a href={f.url} target="_blank" rel="nofollow noopener noreferrer">{f.nombre}</a>
-          <span>{f.tipo} · consultado {f.fechaConsulta}</span>
+          <a href={f.url} target="_blank" rel="nofollow noopener noreferrer">{sourceLabel(f.url, f.nombre)}</a>
+          <span>{sourceMeta(f.tipo, f.fechaConsulta)}</span>
         </li>
       ))}
     </ul>

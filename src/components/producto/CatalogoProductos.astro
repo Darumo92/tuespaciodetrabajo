@@ -1,15 +1,18 @@
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
 import { getTipoConfig } from '@/lib/tipos';
-import { claveData, opcionesMarca, filtrosVisibles } from '@/lib/productos';
+import { claveData, opcionesMarca, filtrosVisibles, comparePath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
 interface Props {
   productos: Producto[];
   tipo: string;
+  locale?: Locale;
 }
 
-const { productos, tipo } = Astro.props;
+const { productos, tipo, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
 const cfg = getTipoConfig(tipo);
 const ordenaciones = cfg?.ordenaciones ?? [];
 
@@ -32,44 +35,73 @@ const valoresRango = (f: (typeof filtros)[number]) => {
   return out;
 };
 const etiquetaRango = (f: (typeof filtros)[number], v: number) =>
-  f.formatoSalida === 'tramoEuros' ? '€'.repeat(v) : String(v);
+  f.formatoSalida === 'tramoEuros' ? (isEn ? '$' : '€').repeat(v) : String(v);
+
+const labelMap: Record<string, string> = {
+  'Precio máximo': 'Max price tier',
+  'Marca': 'Brand',
+  'Respaldo': 'Backrest',
+  'Reposabrazos mín.': 'Minimum armrests',
+  'Profundidad regulable': 'Adjustable seat depth',
+  'Soporta 130 kg o más': 'Supports 130 kg+',
+  'Apta desde altura': 'Fits from height',
+  'Apta hasta altura': 'Fits up to height',
+  'Reposacabezas': 'Headrest',
+  'Mejor valoradas': 'Top rated',
+  'Precio bajo a alto': 'Price low to high',
+  'Precio alto a bajo': 'Price high to low',
+  'Mayor carga': 'Highest weight capacity',
+  'Cualquiera': 'Any',
+  'Malla': 'Mesh',
+  'Espuma': 'Foam',
+  'Mixto': 'Mixed',
+  '2D o superior': '2D or better',
+  '3D o superior': '3D or better',
+  '4D': '4D',
+  'Ajustable': 'Adjustable',
+  'Fijo': 'Fixed',
+  'Sin reposacabezas': 'No headrest',
+};
+const tr = (value: string) => isEn ? labelMap[value] ?? value : value;
 
 const panelConfig = {
   filtros: filtros.map((f) => ({
     id: f.id, control: f.control, comparacion: f.comparacion, clave: claveData(f.campo),
-    umbral: f.umbral, formatoSalida: f.formatoSalida, max: f.max, etiqueta: f.etiqueta,
+    umbral: f.umbral, formatoSalida: f.formatoSalida, max: f.max, etiqueta: tr(f.etiqueta),
   })),
   ordenaciones: ordenaciones.map((o) => ({ id: o.id, clave: claveData(o.campo), direccion: o.direccion })),
 };
-const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
+const labelPlural = isEn ? 'chairs' : (cfg?.labelPlural ?? 'productos').toLowerCase();
+const typeSlug = localizedTipoSlug(tipo, locale);
+const compareBase = comparePath(tipo, '', locale);
 ---
 
-<section class="catalogo" data-catalogo-root data-tipo={tipo} data-catalogo-config={JSON.stringify(panelConfig)}>
+<section class="catalogo" data-catalogo-root data-tipo={typeSlug} data-catalogo-config={JSON.stringify(panelConfig)} data-locale={locale} data-compare-base={compareBase}>
   <div class="cat-search">
     <span class="cat-search-icon" aria-hidden="true">🔍</span>
     <input type="search" class="cat-search-input" data-busqueda
-      placeholder="Buscar por nombre o marca…" aria-label="Buscar productos" autocomplete="off" />
+      placeholder={isEn ? 'Search by name or brand…' : 'Buscar por nombre o marca…'} aria-label={isEn ? 'Search products' : 'Buscar productos'} autocomplete="off" />
   </div>
 
   <div class="cat-bar">
     <button class="cat-mobtoggle" type="button" data-mob-toggle aria-expanded="false">
-      Filtrar<span class="cat-mobn" data-mob-n hidden>0</span>
+      {isEn ? 'Filter' : 'Filtrar'}<span class="cat-mobn" data-mob-n hidden>0</span>
     </button>
 
     <div class="cat-pills" data-pills>
       {filtros.map((f) => (
         f.control === 'check' ? (
           <button class="cat-pill cat-pill--toggle" type="button"
-            data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{f.etiqueta}</button>
+            data-pill={f.id} data-pill-tipo="toggle" aria-pressed="false">{tr(f.etiqueta)}</button>
         ) : (
           <div class="cat-facet" data-facet={f.id}>
             <button class="cat-pill" type="button" data-pill={f.id} data-pill-tipo="dropdown"
               aria-expanded="false" aria-controls={`pop-${f.id}`}>
-              <span class="cat-pill-label">{f.etiqueta}</span>
+              <span class="cat-pill-label">{tr(f.etiqueta)}</span>
               <span class="cat-pill-val" data-pill-val hidden></span>
               <span class="cat-pill-caret" aria-hidden="true">▾</span>
             </button>
-            <div class="cat-pop" id={`pop-${f.id}`} data-pop={f.id} role="group" aria-label={f.etiqueta} hidden>
+            <div class="cat-pop" id={`pop-${f.id}`} data-pop={f.id} role="group" aria-label={tr(f.etiqueta)} hidden>
               {f.control === 'rango' ? (
                 <div class="cat-seg">
                   {valoresRango(f).map((v) => (
@@ -91,12 +123,12 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
               ) : (
                 <div class="cat-opts">
                   {(f.opciones ?? []).filter((o) => o.valor !== '' && o.valor !== '0').map((o) => (
-                    <button class="cat-opt" type="button" data-opt={o.valor}>{o.etiqueta}</button>
+                    <button class="cat-opt" type="button" data-opt={o.valor}>{tr(o.etiqueta)}</button>
                   ))}
                 </div>
               )}
               <div class="cat-pop-foot">
-                <button class="cat-pop-clear" type="button" data-pop-clear>Quitar</button>
+                <button class="cat-pop-clear" type="button" data-pop-clear>{isEn ? 'Remove' : 'Quitar'}</button>
               </div>
             </div>
           </div>
@@ -104,38 +136,38 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
       ))}
 
       <label class="cat-pill cat-pill--orden">
-        <span>Ordenar</span>
+        <span>{isEn ? 'Sort' : 'Ordenar'}</span>
         <select data-orden>
-          {ordenaciones.map((o) => <option value={o.id}>{o.etiqueta}</option>)}
+          {ordenaciones.map((o) => <option value={o.id}>{tr(o.etiqueta)}</option>)}
         </select>
       </label>
 
-      <button class="cat-verres" type="button" data-ver-res>Ver <span data-ver-n>{productos.length}</span> resultados</button>
+      <button class="cat-verres" type="button" data-ver-res>{isEn ? 'Show' : 'Ver'} <span data-ver-n>{productos.length}</span> {isEn ? 'results' : 'resultados'}</button>
     </div>
   </div>
 
   <div class="cat-chips" data-chips hidden>
-    <button class="cat-clear" type="button" data-clear-all>Limpiar todo</button>
+    <button class="cat-clear" type="button" data-clear-all>{isEn ? 'Clear all' : 'Limpiar todo'}</button>
   </div>
 
   <p class="catalogo-count" aria-live="polite">
     <span class="catalogo-n">{productos.length}</span>
-    <span>{labelPlural} · marca entre 2 y 4 casillas para comparar</span>
+    <span>{isEn ? `${labelPlural} · select 2 to 4 boxes to compare` : `${labelPlural} · marca entre 2 y 4 casillas para comparar`}</span>
   </p>
 
   <div class="catalogo-grid">
-    {productos.map((producto) => <TarjetaProducto producto={producto} />)}
+    {productos.map((producto) => <TarjetaProducto producto={producto} locale={locale} />)}
   </div>
 
-  <p class="catalogo-vacio" hidden>Ningún producto cumple esos filtros. Prueba a relajar alguno.</p>
+  <p class="catalogo-vacio" hidden>{isEn ? 'No products match those filters. Try relaxing one filter.' : 'Ningún producto cumple esos filtros. Prueba a relajar alguno.'}</p>
 
   <div class="cmp-bar" hidden>
     <span class="cmp-status">
       <strong class="cmp-n">0</strong>
-      <span class="cmp-copy">seleccionados</span>
+      <span class="cmp-copy">{isEn ? 'selected' : 'seleccionados'}</span>
     </span>
-    <a class="cmp-go" href={`/comparar/${tipo}/`} aria-disabled="true">Comparar</a>
-    <button class="cmp-clear" type="button">Limpiar</button>
+    <a class="cmp-go" href={compareBase} aria-disabled="true">{isEn ? 'Compare' : 'Comparar'}</a>
+    <button class="cmp-clear" type="button">{isEn ? 'Clear' : 'Limpiar'}</button>
   </div>
 </section>
 
@@ -294,6 +326,9 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
 
   roots.forEach((root) => {
     const tipo = root.dataset.tipo || '';
+    const locale = root.dataset.locale || 'es-ES';
+    const isEn = locale === 'en';
+    const compareBase = root.dataset.compareBase || `/comparar/${tipo}/`;
     const grid = root.querySelector<HTMLElement>('.catalogo-grid');
     if (!grid) return;
 
@@ -337,7 +372,8 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
     const etiquetaValor = (f: FiltroRT, v: number | string | string[] | true): string => {
       if (f.control === 'rango') {
         const n = typeof v === 'number' ? v : Number(v);
-        const txt = f.formatoSalida === 'tramoEuros' ? '€'.repeat(n) : String(n);
+        const txt = f.formatoSalida === 'tramoEuros' ? (isEn ? '$' : '€').repeat(n) : String(n);
+        if (isEn) return f.comparacion === 'min' ? `From ${txt}` : `Up to ${txt}`;
         return f.comparacion === 'min' ? `Desde ${txt}` : `Hasta ${txt}`;
       }
       if (Array.isArray(v)) return `· ${v.length}`;
@@ -443,7 +479,7 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
           chip.append(document.createTextNode(etiqueta));
           const x = document.createElement('button');
           x.type = 'button'; x.className = 'cat-chip-x'; x.textContent = '✕';
-          x.setAttribute('aria-label', `Quitar filtro: ${etiqueta}`);
+          x.setAttribute('aria-label', isEn ? `Remove filter: ${etiqueta}` : `Quitar filtro: ${etiqueta}`);
           x.addEventListener('click', () => { onRemove(); applyFilters(); });
           chip.append(x);
           frag.push(chip);
@@ -627,12 +663,14 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
           c.closest('.card')?.classList.toggle('cmp-sel', selected);
         });
         nEl.textContent = String(selection.length);
-        copyEl.textContent = selection.length === 1 ? 'seleccionado' : 'seleccionados';
+        copyEl.textContent = isEn
+          ? (selection.length === 1 ? 'selected' : 'selected')
+          : (selection.length === 1 ? 'seleccionado' : 'seleccionados');
         cmpBar.hidden = selection.length === 0;
         const canCompare = selection.length >= 2 && selection.length <= 4;
         go.setAttribute('aria-disabled', canCompare ? 'false' : 'true');
         if (canCompare) go.removeAttribute('tabindex'); else go.setAttribute('tabindex', '-1');
-        go.href = canCompare ? `/comparar/${tipo}/?s=${selection.join(',')}` : `/comparar/${tipo}/`;
+        go.href = canCompare ? `${compareBase}?s=${selection.join(',')}` : compareBase;
       };
       checks.forEach((check) => {
         check.addEventListener('change', () => {
@@ -641,7 +679,7 @@ const labelPlural = (cfg?.labelPlural ?? 'productos').toLowerCase();
             if (!selection.includes(check.value)) {
               if (selection.length >= 4) {
                 check.checked = false;
-                check.setCustomValidity('Puedes comparar hasta 4 productos.');
+                check.setCustomValidity(isEn ? 'You can compare up to 4 products.' : 'Puedes comparar hasta 4 productos.');
                 check.reportValidity();
                 check.setCustomValidity('');
                 return;

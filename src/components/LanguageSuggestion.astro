@@ -1,0 +1,116 @@
+---
+import type { Locale } from '@/i18n/locales';
+import { localizedPath, type AlternateLink } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
+
+interface Props {
+  locale: Locale;
+  alternates?: AlternateLink[];
+}
+
+const { locale, alternates = [] } = Astro.props;
+const ui = t(locale);
+const fallbackHref = alternates.find((item) => item.hreflang !== 'x-default' && item.hreflang !== locale)?.href ?? localizedPath(locale);
+---
+
+<div
+  class="language-suggestion"
+  data-language-suggestion
+  hidden
+  data-current-locale={locale}
+  data-alternates={JSON.stringify(alternates)}
+>
+  <p data-language-suggestion-text>{ui.language.suggestion}</p>
+  <a href={fallbackHref} data-language-suggestion-link>{ui.language.switchTo}</a>
+  <button type="button" data-language-suggestion-close>{ui.language.stayHere}</button>
+</div>
+
+<script is:inline>
+  (function() {
+    var root = document.querySelector('[data-language-suggestion]');
+    if (!root) return;
+    if (localStorage.getItem('preferred-locale')) return;
+
+    var current = root.getAttribute('data-current-locale');
+    var alternates = JSON.parse(root.getAttribute('data-alternates') || '[]');
+    var langs = navigator.languages || [navigator.language].filter(Boolean);
+    var target = null;
+
+    for (var i = 0; i < langs.length; i++) {
+      var lang = String(langs[i]).toLowerCase();
+      if (lang.indexOf('en') === 0) target = alternates.find(function(a) { return a.hreflang === 'en'; });
+      else if (lang.indexOf('es') === 0) target = alternates.find(function(a) { return a.hreflang === 'es-ES'; });
+      if (target) break;
+    }
+
+    if (!target || target.hreflang === current) return;
+
+    var link = root.querySelector('[data-language-suggestion-link]');
+    var close = root.querySelector('[data-language-suggestion-close]');
+    if (!link || !close) return;
+
+    link.href = target.href;
+    link.addEventListener('click', function() {
+      localStorage.setItem('preferred-locale', target.hreflang);
+    });
+    close.addEventListener('click', function() {
+      localStorage.setItem('preferred-locale', current || 'es-ES');
+      root.setAttribute('hidden', '');
+    });
+    root.removeAttribute('hidden');
+  })();
+</script>
+
+<style>
+  .language-suggestion {
+    position: fixed;
+    right: 1rem;
+    bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+    z-index: 210;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    max-width: min(92vw, 34rem);
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+  }
+
+  .language-suggestion p {
+    margin: 0;
+    color: var(--ink);
+    font-size: 0.86rem;
+  }
+
+  .language-suggestion a,
+  .language-suggestion button {
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 750;
+    white-space: nowrap;
+  }
+
+  .language-suggestion a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .language-suggestion button {
+    border: 0;
+    background: transparent;
+    color: var(--ink-muted);
+    cursor: pointer;
+  }
+
+  @media (max-width: 640px) {
+    .language-suggestion {
+      left: 1rem;
+      right: 1rem;
+      bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+</style>

@@ -1,0 +1,71 @@
+---
+import Base from '@/layouts/Base.astro';
+import TablaVs from '@/components/producto/TablaVs.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, pathLocaleSegment } from '@/i18n/routes';
+import { TIPOS_CON_DATOS } from '@/lib/tipos';
+import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, notaGlobal, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  const paths: any[] = [];
+  for (const locale of READY_LOCALES.filter(locale => locale !== 'es-ES')) {
+    for (const tipo of TIPOS_CON_DATOS) {
+      const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+      const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+      const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
+      for (const [a, b] of seleccionarParesVs(productos, 16)) {
+        paths.push({
+          params: { locale: pathLocaleSegment(locale), tipo: localizedTipoSlug(tipo, locale), par: `${a}-vs-${b}` },
+          props: { locale, tipo, a: porSlug[a], b: porSlug[b] },
+        });
+      }
+    }
+  }
+  return paths;
+}
+
+const { locale, tipo: tipoParam, a, b } = Astro.props as { locale: Locale; tipo: string; a: Producto; b: Producto };
+const tipo = sourceTipoSlug(tipoParam, locale);
+const ganadora = (notaGlobal(a) ?? 0) >= (notaGlobal(b) ?? 0) ? a : b;
+const aName = localizedProductName(a, locale);
+const bName = localizedProductName(b, locale);
+const winnerName = localizedProductName(ganadora, locale);
+const par = `${a.slug}-vs-${b.slug}`;
+const pagePath = comparePath(tipo, par, locale);
+const alternates = buildAlternates({
+  'es-ES': comparePath(tipo, par, 'es-ES'),
+  [locale]: pagePath,
+});
+const title = `${aName} vs ${bName} | Chair Specs`;
+const description = `Compare ${aName} and ${bName}: ergonomics, adjustability, materials, price tier and verified chair specs side by side.`;
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Catalog', item: absoluteUrl(catalogPath(locale)) },
+    { '@type': 'ListItem', position: 2, name: 'Chairs', item: absoluteUrl(catalogPath(locale, tipo)) },
+    { '@type': 'ListItem', position: 3, name: `${aName} vs ${bName}`, item: absoluteUrl(pagePath) },
+  ],
+};
+---
+<Base title={title} description={description} canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>{aName} vs {bName}</span></nav>
+    <h1>{aName} vs {bName}</h1>
+    <p class="vs-intro">Side-by-side comparison of two ergonomic office chairs in a similar buying context. Highlighted cells show the better value for each row.</p>
+    <TablaVs a={a} b={b} tipo={tipo} locale={locale} />
+    <div class="vs-veredicto">
+      <h2>Which one should you choose?</h2>
+      <p>Based on the current editorial score, <strong>{winnerName}</strong> is the stronger pick. Use the table above to check whether that matches your body size, support needs and budget.</p>
+      <p class="vs-nota-honesta">Scores are editorial and based on verified specs. Always confirm current price, stock and return policy before buying.</p>
+    </div>
+  </main>
+</Base>
+<style>
+  .vs-intro { color: var(--ink-muted); margin-bottom: 1.5rem; }
+  .vs-veredicto { margin-top: 2rem; background: var(--surface-muted); border-radius: var(--radius); padding: 1.25rem; }
+  .vs-veredicto h2 { margin-top: 0; }
+  .vs-nota-honesta { font-size: 0.8rem; color: var(--ink-muted); margin-bottom: 0; }
+</style>

@@ -1,40 +1,61 @@
 ---
-import { notaGlobal, tramoTexto, formatoSpec, etiquetaEnum, ganadoresPorValor, getCampo, type Producto } from '@/lib/productos';
+import { localizedProductName, notaGlobal, tramoTexto, formatoSpec, etiquetaEnum, ganadoresPorValor, getCampo, productPath, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
 import BotonPrecio from '../BotonPrecio.astro';
-interface Props { a: Producto; b: Producto; tipo: string; }
-const { a, b, tipo } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+interface Props { a: Producto; b: Producto; tipo: string; locale?: Locale; }
+const { a, b, tipo, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
 const cfg = getTipoConfig(tipo)!;
 const sel = [a, b];
 const ENUM = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
 function celda(p: Producto, campo: string): string {
   const v = getCampo(p, campo);
-  if (campo === 'tramoPrecio') return tramoTexto(Number(v));
-  if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
-  if (campo.startsWith('valoraciones.')) return v == null ? 'sin valorar' : Number(v).toFixed(1);
+  if (campo === 'tramoPrecio') return tramoTexto(Number(v), locale);
+  if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v, locale);
+  if (campo.startsWith('valoraciones.')) return v == null ? (isEn ? 'not rated' : 'sin valorar') : Number(v).toFixed(1);
   const fmt = campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
-  return formatoSpec(v, fmt);
+  return formatoSpec(v, fmt, locale);
 }
 let lastGrupo = '';
+const groupMap: Record<string, string> = {
+  'Valoración por ejes': 'Category scores',
+  'Precio y garantía': 'Price and warranty',
+  'Construcción': 'Build',
+};
+const labelMap: Record<string, string> = {
+  'Ergonomía': 'Ergonomics',
+  'Ajustabilidad': 'Adjustability',
+  'Materiales': 'Materials',
+  'Comodidad': 'Comfort',
+  'Calidad-precio': 'Value',
+  'Tramo de precio': 'Price tier',
+  'Garantía (años)': 'Warranty',
+  'Peso máximo (kg)': 'Max supported weight',
+  'Reclinación máx (°)': 'Max recline',
+};
 const filas = cfg.comparador.map((f) => {
-  const grupo = f.grupo !== lastGrupo ? (lastGrupo = f.grupo, f.grupo) : null;
+  const rawGrupo = isEn ? groupMap[f.grupo] ?? f.grupo : f.grupo;
+  const grupo = rawGrupo !== lastGrupo ? (lastGrupo = rawGrupo, rawGrupo) : null;
   const gan = f.direccion ? ganadoresPorValor(sel.map((p) => ({ slug: p.slug, valor: getCampo(p, f.campo) as number | null })), f.direccion) : [];
-  return { grupo, etiqueta: f.etiqueta, a: celda(a, f.campo), b: celda(b, f.campo), ganaA: gan.includes(a.slug), ganaB: gan.includes(b.slug) };
+  return { grupo, etiqueta: isEn ? labelMap[f.etiqueta] ?? f.etiqueta : f.etiqueta, a: celda(a, f.campo), b: celda(b, f.campo), ganaA: gan.includes(a.slug), ganaB: gan.includes(b.slug) };
 });
 const notaA = notaGlobal(a), notaB = notaGlobal(b);
+const aName = localizedProductName(a, locale);
+const bName = localizedProductName(b, locale);
 ---
 <div class="vs-scroll">
   <table class="vs-table">
     <thead><tr><td></td>
-      <th><a href={`/catalogo/${tipo}/${a.slug}/`}>{a.nombre}</a>{notaA != null && <div class="vs-nota">★ {notaA.toFixed(1)}/10</div>}<BotonPrecio amazon={a.amazon} webOficial={a.webOficial} nombre={a.nombre} marca={a.marca} /></th>
-      <th><a href={`/catalogo/${tipo}/${b.slug}/`}>{b.nombre}</a>{notaB != null && <div class="vs-nota">★ {notaB.toFixed(1)}/10</div>}<BotonPrecio amazon={b.amazon} webOficial={b.webOficial} nombre={b.nombre} marca={b.marca} /></th>
+      <th><a href={productPath(a, locale)}>{aName}</a>{notaA != null && <div class="vs-nota">★ {notaA.toFixed(1)}/10</div>}<BotonPrecio amazon={a.amazon} webOficial={a.webOficial} nombre={aName} marca={a.marca} locale={locale} /></th>
+      <th><a href={productPath(b, locale)}>{bName}</a>{notaB != null && <div class="vs-nota">★ {notaB.toFixed(1)}/10</div>}<BotonPrecio amazon={b.amazon} webOficial={b.webOficial} nombre={bName} marca={b.marca} locale={locale} /></th>
     </tr></thead>
     <tbody>
       {filas.map((f) => (<>
         {f.grupo && <tr class="vs-grp"><td>{f.grupo}</td><td></td><td></td></tr>}
         <tr><th scope="row">{f.etiqueta}</th>
-          <td class={f.ganaA ? 'vs-win' : ''} set:html={f.a + (f.ganaA ? ' <span class="vs-wtag">mejor</span>' : '')} />
-          <td class={f.ganaB ? 'vs-win' : ''} set:html={f.b + (f.ganaB ? ' <span class="vs-wtag">mejor</span>' : '')} />
+          <td class={f.ganaA ? 'vs-win' : ''} set:html={f.a + (f.ganaA ? ` <span class="vs-wtag">${isEn ? 'best' : 'mejor'}</span>` : '')} />
+          <td class={f.ganaB ? 'vs-win' : ''} set:html={f.b + (f.ganaB ? ` <span class="vs-wtag">${isEn ? 'best' : 'mejor'}</span>` : '')} />
         </tr>
       </>))}
     </tbody>

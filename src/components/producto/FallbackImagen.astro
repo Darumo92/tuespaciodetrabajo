@@ -1,11 +1,15 @@
 ---
-interface Props { marca: string; nombre: string; size?: number; }
-const { marca, nombre, size = 200 } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+
+interface Props { marca: string; nombre: string; size?: number; locale?: Locale; }
+const { marca, nombre, size = 200, locale = DEFAULT_LOCALE } = Astro.props;
+const fallbackText = locale === 'en' ? 'no image' : 'sin imagen';
+const fallbackLabel = locale === 'en' ? 'no image available' : 'sin imagen disponible';
 ---
-<div class="fallback-img" style={`--s:${size}px`} role="img" aria-label={`${marca} ${nombre} (sin imagen disponible)`}>
+<div class="fallback-img" style={`--s:${size}px`} role="img" aria-label={`${marca} ${nombre} (${fallbackLabel})`}>
   <span class="fb-marca">{marca}</span>
   <span class="fb-nombre">{nombre}</span>
-  <span class="fb-nota">sin imagen</span>
+  <span class="fb-nota">{fallbackText}</span>
 </div>
 <style>
   .fallback-img { width: var(--s); height: var(--s); background: var(--surface-muted); border-radius: var(--radius);

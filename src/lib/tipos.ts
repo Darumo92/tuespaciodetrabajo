@@ -30,7 +30,8 @@ export interface ChipConfig {
   campo: string;
   formato?: string;
   prefijo?: string;
-  mostrarSiNulo?: { etiqueta: string };
+  prefijoEn?: string;
+  mostrarSiNulo?: { etiqueta: string; etiquetaEn?: string };
 }
 
 export interface FilaComparador {
@@ -95,12 +96,12 @@ const silla: TipoConfig = {
     { id: 'peso-max', etiqueta: 'Mayor carga', campo: 'specs.pesoMaxKg', direccion: 'desc' },
   ],
   tarjetaChips: [
-    { campo: 'specs.lumbar', prefijo: 'Lumbar ', formato: 'enumLower:lumbar' },
+    { campo: 'specs.lumbar', prefijo: 'Lumbar ', prefijoEn: 'Lumbar ', formato: 'enumLower:lumbar' },
     { campo: 'specs.respaldo', formato: 'enum:respaldo' },
     { campo: 'specs.pesoMaxKg', formato: 'kg' },
-    { campo: 'specs.garantiaAnios', formato: 'anios', mostrarSiNulo: { etiqueta: 'garantía n/d' } },
-    { campo: 'specs.alturaRecomendadaMaxCm', formato: 'cm', prefijo: 'Hasta ' },
-    { campo: 'specs.profundidadAsientoMaxCm', formato: 'cm', prefijo: 'Asiento ' },
+    { campo: 'specs.garantiaAnios', formato: 'anios', mostrarSiNulo: { etiqueta: 'garantía n/d', etiquetaEn: 'warranty n/a' } },
+    { campo: 'specs.alturaRecomendadaMaxCm', formato: 'cm', prefijo: 'Hasta ', prefijoEn: 'Up to ' },
+    { campo: 'specs.profundidadAsientoMaxCm', formato: 'cm', prefijo: 'Asiento ', prefijoEn: 'Seat ' },
   ],
   comparador: [
     { grupo: 'Valoración por ejes', campo: 'valoraciones.ergonomia', etiqueta: 'Ergonomía', direccion: 'mayor' },

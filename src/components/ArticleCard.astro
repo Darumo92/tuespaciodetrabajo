@@ -1,38 +1,59 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import CategoryIcon from './CategoryIcon.astro';
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/i18n/locales';
+import { articlePath } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
 
 interface Props {
-  articulo: CollectionEntry<'articulos'>;
+  articulo: CollectionEntry<'articulos'> | CollectionEntry<'articulosI18n'>;
   headingLevel?: 2 | 3;
   revealDelay?: number;
+  locale?: Locale;
 }
 
-const { articulo, headingLevel = 3, revealDelay = 0 } = Astro.props;
+const { articulo, headingLevel = 3, revealDelay = 0, locale = DEFAULT_LOCALE } = Astro.props;
 const Heading = `h${headingLevel}` as any;
+const ui = t(locale);
 const { titulo, descripcion, categoria, fecha, actualizadoEn, imagen, tipo } = articulo.data;
+const categoriaSlug = 'categoriaSlug' in articulo.data ? articulo.data.categoriaSlug : categoria;
+const slug = 'translationOf' in articulo.data ? articulo.data.localizedSlug : articulo.slug;
 
 const esInformativo = tipo === 'informativo';
 const esNoticia = tipo === 'noticia';
 const tipoArticulo = tipo ?? 'comparativa';
-const badgeCategoria = esInformativo ? 'guias' : categoria;
+const dataTipo = locale === 'en'
+  ? tipoArticulo === 'comparativa'
+    ? 'comparison'
+    : tipoArticulo === 'informativo'
+      ? 'guide'
+      : 'news'
+  : tipoArticulo;
+const badgeCategoria = esInformativo ? 'guias' : categoriaSlug;
 
 const categoriasInfo: Record<string, { nombre: string }> = {
-  sillas: { nombre: 'Sillas' },
-  escritorios: { nombre: 'Escritorios' },
-  accesorios: { nombre: 'Accesorios' },
-  ambiente: { nombre: 'Ambiente' },
-  'audio-video': { nombre: 'Audio y Video' },
+  sillas: { nombre: ui.categories.sillas },
+  chairs: { nombre: ui.categories.sillas },
+  escritorios: { nombre: ui.categories.escritorios },
+  desks: { nombre: ui.categories.escritorios },
+  accesorios: { nombre: ui.categories.accesorios },
+  accessories: { nombre: ui.categories.accesorios },
+  ambiente: { nombre: ui.categories.ambiente },
+  workspace: { nombre: ui.categories.ambiente },
+  'audio-video': { nombre: ui.categories['audio-video'] },
 };
 
 const info = esInformativo
-  ? { nombre: 'Guías' }
+  ? { nombre: ui.article.guides }
   : esNoticia
-    ? { nombre: 'Noticia' }
-  : categoriasInfo[categoria];
-const url = esInformativo
-  ? `/guias/${articulo.slug}/`
-  : `/${categoria}/${articulo.slug}/`;
+    ? { nombre: ui.nav.news }
+  : categoriasInfo[categoriaSlug];
+const url = articlePath({
+  locale,
+  tipo: tipoArticulo,
+  categoriaSlug,
+  slug,
+});
 
 const wordCount = articulo.body
   .replace(/^---[\s\S]*?---/, '')
@@ -44,7 +65,7 @@ const wordCount = articulo.body
 const minutosLectura = Math.max(1, Math.round(wordCount / 200));
 
 const fechaMostrar = actualizadoEn || fecha;
-const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
+const fechaFormateada = fechaMostrar.toLocaleDateString(LOCALES[locale].htmlLang, {
   year: 'numeric',
   month: 'short',
   day: 'numeric',
@@ -52,7 +73,7 @@ const fechaFormateada = fechaMostrar.toLocaleDateString('es-ES', {
 const esActualizado = !!actualizadoEn;
 ---
 
-<article class="article-card" data-reveal {...(revealDelay ? { 'data-reveal-delay': revealDelay } : {})} data-tipo={tipoArticulo} style={`--card-accent: var(${badgeCategoria === 'articulos' ? '--ink-muted' : '--accent'})`}>
+<article class="article-card" data-reveal {...(revealDelay ? { 'data-reveal-delay': revealDelay } : {})} data-tipo={dataTipo} style={`--card-accent: var(${badgeCategoria === 'articulos' ? '--ink-muted' : '--accent'})`}>
   <a href={url} class="article-card-image" aria-hidden="true" tabindex="-1">
     {imagen ? (
       <img src={imagen} alt={titulo} width="400" height="225" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 400px" fetchpriority="low" />
@@ -75,10 +96,10 @@ const esActualizado = !!actualizadoEn;
 
     <div class="article-card-meta">
       <time datetime={fechaMostrar.toISOString().split('T')[0]}>
-        {esActualizado ? `Actualizado: ${fechaFormateada}` : fechaFormateada}
+        {esActualizado ? `${ui.article.updated}: ${fechaFormateada}` : fechaFormateada}
       </time>
-      <span class="article-card-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="vertical-align:-2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {minutosLectura} min</span>
-      <a href={url} class="article-card-link" aria-label={`Leer más sobre ${titulo}`}>Leer más →</a>
+      <span class="article-card-reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" style="vertical-align:-2px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> {minutosLectura} {ui.article.minRead.replace(' lectura', '').replace(' read', '')}</span>
+      <a href={url} class="article-card-link" aria-label={`${ui.article.seeMoreIn} ${titulo}`}>{locale === 'en' ? 'Read more' : 'Leer más'} →</a>
     </div>
   </div>
 </article>

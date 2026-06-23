@@ -1,0 +1,68 @@
+---
+import Base from '@/layouts/Base.astro';
+import FichaProducto from '@/components/producto/FichaProducto.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+import { catalogPath, localizedProductMeta, localizedProductName, localizedTipoSlug, notaGlobal, productPath, sourceTipoSlug, type Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('productos');
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .flatMap(locale => entries.map((e) => {
+      const slug = e.id.replace(/\.(ya?ml|json)$/, '');
+      return {
+        params: { locale: pathLocaleSegment(locale), tipo: localizedTipoSlug(e.data.tipo, locale), slug },
+        props: { locale, producto: { slug, ...e.data } },
+      };
+    }));
+}
+
+const { locale, producto } = Astro.props as { locale: Locale; producto: Producto };
+const tipo = sourceTipoSlug(producto.tipo, locale);
+const meta = localizedProductMeta(producto, locale);
+const displayName = localizedProductName(producto, locale);
+const nota = notaGlobal(producto);
+const pagePath = productPath(producto, locale);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['catalogo', producto.tipo, producto.slug]),
+  [locale]: pagePath,
+});
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: displayName,
+  brand: { '@type': 'Brand', name: producto.marca },
+  ...(producto.imagen ? { image: `${siteUrl}${producto.imagen}` } : {}),
+  description: meta.description,
+  review: {
+    '@type': 'Review',
+    author: { '@type': 'Person', name: 'David Rubio Mota' },
+    publisher: { '@type': 'Organization', name: 'Tu Espacio de Trabajo' },
+    reviewBody: meta.description,
+    ...(nota == null ? {} : {
+      reviewRating: { '@type': 'Rating', ratingValue: String(nota), bestRating: '10', worstRating: '0' },
+    }),
+  },
+};
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl(localizedPath(locale)) },
+    { '@type': 'ListItem', position: 2, name: 'Catalog', item: absoluteUrl(catalogPath(locale)) },
+    { '@type': 'ListItem', position: 3, name: 'Chairs', item: absoluteUrl(catalogPath(locale, tipo)) },
+    { '@type': 'ListItem', position: 4, name: displayName, item: absoluteUrl(pagePath) },
+  ],
+};
+---
+<Base title={meta.title} description={meta.description} canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale}>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>{displayName}</span></nav>
+    <FichaProducto producto={producto} locale={locale} />
+  </main>
+</Base>

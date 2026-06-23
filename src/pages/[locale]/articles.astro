@@ -1,0 +1,39 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const articles = await getCollection('articulosI18n', ({ data }) => data.locale === locale);
+const ordered = articles.sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
+const pagePath = localizedPath(locale, ['articles']);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['articulos']),
+  [locale]: pagePath,
+});
+---
+<Base
+  title="All Home Office Articles | Tu Espacio de Trabajo"
+  description="Browse every English home office guide, ergonomic chair comparison and workspace buying guide published on Tu Espacio de Trabajo."
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+  locale={locale}
+>
+  <main class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Articles</span></nav>
+    <h1>All articles</h1>
+    <p class="page-intro">{ordered.length} English guides and comparisons for better home office decisions.</p>
+    <div class="articles-grid">
+      {ordered.map((article) => <ArticleCard articulo={article} locale={locale} />)}
+    </div>
+  </main>
+</Base>
+<style>.page-intro { color: var(--ink-muted); margin-bottom: 2rem; }</style>

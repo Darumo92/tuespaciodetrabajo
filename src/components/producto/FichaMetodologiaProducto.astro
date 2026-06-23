@@ -1,15 +1,24 @@
 ---
 import type { Producto } from '@/lib/productos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
-interface Props { producto: Producto; }
+interface Props { producto: Producto; locale?: Locale; }
 
-const { producto: p } = Astro.props;
+const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
+const items = isEn
+  ? [
+      'Scores are based on verified specifications, category fit and editorial weighting for remote-work use.',
+      'Product pages avoid unverified price claims; always check current price and availability before buying.',
+      'English product profiles use structured verified data unless a fully edited product review is available.',
+    ]
+  : p.metodologia ?? [];
 ---
 
-{p.metodologia?.length ? (
+{items.length ? (
   <section class="ficha-metodo" aria-labelledby="metodo-producto">
-    <h2 id="metodo-producto">Cómo se ha valorado</h2>
-    <ul>{p.metodologia.map((item) => <li>{item}</li>)}</ul>
+    <h2 id="metodo-producto">{isEn ? 'How this product is assessed' : 'Cómo se ha valorado'}</h2>
+    <ul>{items.map((item) => <li>{item}</li>)}</ul>
   </section>
 ) : null}
 

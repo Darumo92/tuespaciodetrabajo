@@ -1,0 +1,61 @@
+---
+import Base from '@/layouts/Base.astro';
+import ComparadorProductos from '@/components/producto/ComparadorProductos.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+import { TIPOS_CON_DATOS } from '@/lib/tipos';
+import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .flatMap(locale => TIPOS_CON_DATOS.map((tipo) => ({
+      params: { locale: pathLocaleSegment(locale), tipo: localizedTipoSlug(tipo, locale) },
+      props: { locale, tipo },
+    })));
+}
+
+const { locale, tipo: tipoParam } = Astro.props as { locale: Locale; tipo: string };
+const tipo = sourceTipoSlug(tipoParam, locale);
+const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
+const paresVs = seleccionarParesVs(productos, 16);
+const pagePath = comparePath(tipo, '', locale);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['comparar', tipo]),
+  [locale]: pagePath,
+});
+---
+<Base
+  title="Office Chair Comparison Tool | Tu Espacio de Trabajo"
+  description="Compare ergonomic office chairs side by side using verified specs, editorial scores, price tiers and adjustment data."
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+  locale={locale}
+  noindex={true}
+>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>Compare</span></nav>
+    <h1>Compare ergonomic office chairs</h1>
+    <p class="cmp-intro">Choose two to four chairs from the catalog and compare the specs that matter for long home-office sessions.</p>
+    <ComparadorProductos productos={productos} tipo={tipo} locale={locale} />
+    {paresVs.length > 0 && (
+      <section class="comparativas-prebuilt" aria-labelledby="prebuilt-titulo">
+        <h2 id="prebuilt-titulo">Popular chair comparisons</h2>
+        <ul class="comparativas-lista">
+          {paresVs.map(([a, b]) => (
+            <li><a href={comparePath(tipo, `${a}-vs-${b}`, locale)}>{porSlug[a] ? localizedProductName(porSlug[a], locale) : a} vs {porSlug[b] ? localizedProductName(porSlug[b], locale) : b}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </main>
+</Base>
+<style>
+  .cmp-intro { color: var(--ink-muted); max-width: 760px; line-height: 1.65; }
+  .comparativas-prebuilt { margin-top: 3rem; }
+  .comparativas-prebuilt h2 { margin-bottom: 1rem; }
+  .comparativas-lista { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.5rem 1.5rem; }
+</style>

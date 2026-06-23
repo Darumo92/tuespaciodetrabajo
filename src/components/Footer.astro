@@ -1,12 +1,62 @@
 ---
 import LogoIcon from './LogoIcon.astro';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+import { localizedPath } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
 
-const categorias = [
-  { href: '/sillas/', label: 'Sillas' },
-  { href: '/escritorios/', label: 'Escritorios' },
-  { href: '/accesorios/', label: 'Accesorios' },
-  { href: '/ambiente/', label: 'Ambiente' },
-];
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = DEFAULT_LOCALE } = Astro.props;
+const ui = t(locale);
+
+const categorias = locale === DEFAULT_LOCALE
+  ? [
+      { href: localizedPath(locale, ['sillas']), label: ui.categories.sillas },
+      { href: localizedPath(locale, ['escritorios']), label: ui.categories.escritorios },
+      { href: localizedPath(locale, ['accesorios']), label: ui.categories.accesorios },
+      { href: localizedPath(locale, ['ambiente']), label: ui.categories.ambiente },
+    ]
+  : [
+      { href: localizedPath(locale, ['chairs']), label: ui.categories.sillas },
+      { href: localizedPath(locale, ['desks']), label: ui.categories.escritorios },
+      { href: localizedPath(locale, ['accessories']), label: ui.categories.accesorios },
+      { href: localizedPath(locale, ['workspace']), label: ui.categories.ambiente },
+      { href: localizedPath(locale, ['audio-video']), label: ui.categories['audio-video'] },
+    ];
+
+const exploreLinks = locale === DEFAULT_LOCALE
+  ? [
+      { href: localizedPath(locale, ['guias']), label: ui.nav.guides },
+      { href: localizedPath(locale, ['herramientas']), label: ui.nav.tools },
+      { href: localizedPath(locale, ['articulos']), label: ui.footer.allArticles },
+      { href: localizedPath(locale, ['sobre-mi']), label: ui.footer.about },
+      { href: localizedPath(locale, ['metodologia-editorial']), label: ui.footer.editorialMethod },
+      { href: localizedPath(locale, ['como-probamos-productos']), label: ui.footer.testingMethod },
+    ]
+  : [
+      { href: localizedPath(locale, ['catalog']), label: ui.nav.catalog },
+      { href: localizedPath(locale, ['guides']), label: ui.nav.guides },
+      { href: localizedPath(locale, ['articles']), label: ui.footer.allArticles },
+      { href: localizedPath(locale, ['search']), label: ui.nav.search },
+      { href: localizedPath(locale, ['tools']), label: ui.nav.tools },
+      { href: localizedPath(locale, ['about']), label: ui.footer.about },
+      { href: localizedPath(locale, ['editorial-methodology']), label: ui.footer.editorialMethod },
+      { href: localizedPath(locale, ['how-we-test-products']), label: ui.footer.testingMethod },
+    ];
+
+const legalLinks = locale === DEFAULT_LOCALE
+  ? [
+      { href: localizedPath(locale, ['politica-privacidad']), label: ui.footer.privacy },
+      { href: localizedPath(locale, ['aviso-legal']), label: ui.footer.legalNotice },
+      { href: localizedPath(locale, ['cookies']), label: ui.footer.cookies },
+    ]
+  : [
+      { href: localizedPath(locale, ['privacy-policy']), label: ui.footer.privacy },
+      { href: localizedPath(locale, ['legal-notice']), label: ui.footer.legalNotice },
+      { href: localizedPath(locale, ['cookies']), label: ui.footer.cookies },
+    ];
 
 const year = new Date().getFullYear();
 ---
@@ -15,18 +65,19 @@ const year = new Date().getFullYear();
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="logo footer-logo">
+        <a href={localizedPath(locale)} class="logo footer-logo">
           <LogoIcon size={28} />
           Tu Espacio de <span class="footer-logo-accent">Trabajo</span>
         </a>
         <p class="footer-brand-text">
-          Guias de compra y comparativas de productos para tu home office.
-          Análisis honestos para ayudarte a crear el espacio de trabajo perfecto.
+          {locale === 'en'
+            ? 'Buying guides and product comparisons for a healthier home office.'
+            : 'Guías de compra y comparativas de productos para tu home office.'}
         </p>
       </div>
 
-      <nav class="footer-col" aria-label="Categorias">
-        <p class="footer-heading">Categorias</p>
+      <nav class="footer-col" aria-label={ui.footer.categories}>
+        <p class="footer-heading">{ui.footer.categories}</p>
         <ul class="footer-links" role="list">
           {categorias.map(c => (
             <li><a href={c.href}>{c.label}</a></li>
@@ -34,38 +85,32 @@ const year = new Date().getFullYear();
         </ul>
       </nav>
 
-      <nav class="footer-col" aria-label="Explorar">
-        <p class="footer-heading">Explorar</p>
+      <nav class="footer-col" aria-label={ui.footer.explore}>
+        <p class="footer-heading">{ui.footer.explore}</p>
         <ul class="footer-links" role="list">
-          <li><a href="/guias/">Guías</a></li>
-          <li><a href="/herramientas/">Herramientas</a></li>
-          <li><a href="/articulos/">Todos los artículos</a></li>
-          <li><a href="/sobre-mi/">Sobre mí</a></li>
-          <li><a href="/metodologia-editorial/">Metodología editorial</a></li>
-          <li><a href="/como-probamos-productos/">Cómo probamos productos</a></li>
+          {exploreLinks.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
         </ul>
       </nav>
 
-      <nav class="footer-col" aria-label="Informacion legal">
-        <p class="footer-heading">Legal</p>
+      <nav class="footer-col" aria-label={ui.footer.legal}>
+        <p class="footer-heading">{ui.footer.legal}</p>
         <ul class="footer-links" role="list">
-          <li><a href="/politica-privacidad/">Privacidad</a></li>
-          <li><a href="/aviso-legal/">Aviso legal</a></li>
-          <li><a href="/cookies/">Cookies</a></li>
+          {legalLinks.map(link => (
+            <li><a href={link.href}>{link.label}</a></li>
+          ))}
         </ul>
       </nav>
     </div>
 
     <div class="footer-affiliate-notice">
-      <strong>Aviso de afiliados:</strong> tuespaciodetrabajo.com participa en el
-      Programa de Afiliados de Amazon EU. Cuando compras a través de nuestros enlaces
-      podemos recibir una comisión sin coste adicional para ti. No aceptamos pagos
-      por colocar productos en una posición concreta.
+      {ui.footer.affiliateNotice}
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {year} tuespaciodetrabajo.com &middot; Todos los derechos reservados</p>
+      <p>&copy; {year} tuespaciodetrabajo.com &middot; {ui.footer.rights}</p>
     </div>
   </div>
 </footer>
-<a href="#" class="footer-back-top" aria-label="Volver arriba">↑</a>
+<a href="#main-content" class="footer-back-top" aria-label={ui.article.backToTop}>↑</a>

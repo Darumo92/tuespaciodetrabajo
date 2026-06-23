@@ -1,0 +1,39 @@
+---
+import Article from '@/layouts/Article.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, pathLocaleSegment } from '@/i18n/routes';
+import { baseArticlePath, i18nArticlePath } from '@/i18n/content';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articulosI18n', ({ data }) => data.tipo === 'informativo');
+  return articles
+    .filter(article => READY_LOCALES.includes(article.data.locale as Locale))
+    .map(article => ({
+      params: {
+        locale: pathLocaleSegment(article.data.locale as Locale),
+        slug: article.data.localizedSlug,
+      },
+      props: { articulo: article, locale: article.data.locale as Locale },
+    }));
+}
+
+const { articulo, locale } = Astro.props as { articulo: Awaited<ReturnType<typeof getCollection<'articulosI18n'>>>[number]; locale: Locale };
+const originals = await getCollection('articulos');
+const original = originals.find(article => article.slug === articulo.data.translationOf);
+const paths = {
+  ...(original ? { 'es-ES': baseArticlePath(original) } : {}),
+  [locale]: i18nArticlePath(articulo),
+};
+const alternates = buildAlternates(paths);
+const { Content } = await articulo.render();
+---
+
+<Article
+  articulo={articulo}
+  locale={locale}
+  canonical={absoluteUrl(i18nArticlePath(articulo))}
+  alternates={alternates}
+>
+  <Content />
+</Article>

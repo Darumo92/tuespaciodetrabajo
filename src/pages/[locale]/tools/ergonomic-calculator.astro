@@ -1,0 +1,1454 @@
+---
+import Base from '@/layouts/Base.astro';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const pagePath = localizedPath(locale, ['tools', 'ergonomic-calculator']);
+const pageUrl = absoluteUrl(pagePath);
+const pageTitle = 'Ergonomic calculator: chair and desk height';
+const pageDescription = 'Calculate the exact chair, desk and monitor height for your body. Free, no signup, with an interactive figure.';
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['herramientas', 'calculadora-ergonomia']),
+  [locale]: pagePath,
+});
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl(localizedPath(locale)) },
+    { '@type': 'ListItem', position: 2, name: 'Tools', item: absoluteUrl(localizedPath(locale, ['tools'])) },
+    { '@type': 'ListItem', position: 3, name: 'Ergonomic calculator', item: pageUrl },
+  ],
+};
+
+const faqs = [
+  {
+    pregunta: 'Where do the calculator formulas come from?',
+    respuesta: 'They are based on standard anthropometric data from ISO 7250 and the DINED database (TU Delft), cross-checked with Cornell University Ergonomics Lab and Humanscale guidance. The coefficients (seat height = body height x 0.253, desk height = body height x 0.384, top monitor edge = body height x 0.703) are P50 values for the adult European population. The calculator adjusts for gender, age range and specific scenarios using Human Factors and Ergonomics Society guidance.',
+  },
+  {
+    pregunta: 'Why do you ask for gender and age?',
+    respuesta: 'Because leg-to-torso proportions vary between men and women, which slightly changes ideal seat height. From around age 60, lumbar stiffness makes a more open backrest angle advisable and the monitor may need to sit a little higher because of presbyopia. These are small adjustments, but they matter if you work eight hours a day.',
+  },
+  {
+    pregunta: 'What is the ergonomic score for my current setup?',
+    respuesta: 'It is a number from 0 to 100 that estimates how ergonomic your current workstation is, based on the chair, monitor, seated hours and pain areas you report. Above 70, the setup is reasonable; between 40 and 70, it has important issues; below 40, it is likely contributing to accumulated discomfort. It is not medical advice, but it tells you where to start.',
+  },
+  {
+    pregunta: 'Do I need a standing desk to sit correctly?',
+    respuesta: 'No. If your fixed desk has a reasonable height (72-75 cm), you can compensate with your chair and a footrest. An electric standing desk is most useful if you are under 162 cm, over 185 cm, or want to alternate between sitting and standing. For heights outside the common range, it is often the most comfortable solution.',
+  },
+  {
+    pregunta: 'Why does monitor distance depend on screen size?',
+    respuesta: 'The larger the monitor, the farther away it needs to be so you can see the full screen without moving your head. A 24-inch monitor usually works well at 60-75 cm; a 32-inch monitor tends to need 80-95 cm. Too close strains the eyes; too far away makes you lean forward.',
+  },
+  {
+    pregunta: 'Can I share my result with someone?',
+    respuesta: 'Yes. On the results screen you will see a Share button that copies a link with your answers preloaded. Send it to a partner, a teammate or save it in your notes, and opening that link will show the same result without filling everything in again.',
+  },
+  {
+    pregunta: 'Does the calculator work if I only use a laptop?',
+    respuesta: 'Yes, with an important caveat. If you work only on a laptop, either the screen is too low or the keyboard is too high. The practical recommendation is to use a laptop stand that raises the screen to eye level and add an external keyboard and mouse. The calculator will show the correct external keyboard height and mark a laptop stand as a priority.',
+  },
+];
+
+---
+
+<Base title={pageTitle} description={pageDescription} canonical={pageUrl} alternates={alternates} locale={locale} image="/images/og/calculadora-ergonomia.jpg">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+
+  <div class="container ergo-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href={localizedPath(locale, ['tools'])}>Tools</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Ergonomic calculator</span>
+    </nav>
+
+    <header class="ergo-header">
+      <span class="ergo-eyebrow">Tool · ISO 7250 · Free</span>
+      <h1>Ergonomic calculator</h1>
+      <p class="ergo-lead">
+        In three steps I will calculate the exact chair, desk and monitor height for your body and
+        the way you work. Includes a technical figure, a score for your current setup and
+        recommendations prioritized by your discomfort areas.
+      </p>
+    </header>
+
+    <section id="ergo-app" class="ergo-app" data-step="1" aria-label="Interactive ergonomic calculator">
+      <!-- Progress -->
+      <div class="ergo-progress-wrapper">
+        <div
+          class="ergo-progress"
+          role="progressbar"
+          aria-label="Ergonomic calculator progress"
+          aria-valuemin="0"
+          aria-valuemax="3"
+          aria-valuenow="0"
+          aria-valuetext="Step 1 of 3: your details"
+          id="ergo-progress"
+        >
+          <div class="ergo-progress-bar"></div>
+        </div>
+        <ol class="ergo-progress-steps" aria-hidden="true">
+          <li data-step="1" class="is-active"><span class="ergo-step-dot">1</span><span class="ergo-step-label">You</span></li>
+          <li data-step="2"><span class="ergo-step-dot">2</span><span class="ergo-step-label">Setup</span></li>
+          <li data-step="3"><span class="ergo-step-dot">3</span><span class="ergo-step-label">Pain</span></li>
+          <li data-step="4"><span class="ergo-step-dot">✓</span><span class="ergo-step-label">Result</span></li>
+        </ol>
+      </div>
+
+      <div class="ergo-stage">
+        <!-- Panel input izquierda -->
+        <div class="ergo-panel-input">
+          <!-- STEP 1: Tus datos -->
+          <section class="ergo-step is-active" data-panel="1" aria-labelledby="step-1-title">
+            <h2 id="step-1-title" class="ergo-step-title">Tell me about you</h2>
+            <p class="ergo-step-sub">Height is enough. Gender and age make the result more precise.</p>
+
+            <div class="ergo-field">
+              <div class="ergo-field-head">
+                <label for="inp-estatura">Your height</label>
+                <output class="ergo-field-value" id="out-estatura" for="inp-estatura"><span id="out-estatura-val">175</span><span class="ergo-unit"> cm</span></output>
+              </div>
+              <input
+                type="range"
+                id="inp-estatura"
+                name="estatura"
+                min="140"
+                max="210"
+                step="1"
+                value="175"
+                aria-describedby="estatura-hint"
+              />
+              <div class="ergo-slider-ticks" aria-hidden="true">
+                <span>140</span><span>160</span><span>175</span><span>190</span><span>210</span>
+              </div>
+              <input type="number" id="inp-estatura-num" min="140" max="210" step="1" value="175" class="ergo-field-num" aria-label="Height in centimeters (number)" />
+              <span class="ergo-field-hint" id="estatura-hint">Drag the slider or type the number.</span>
+            </div>
+
+            <fieldset class="ergo-field">
+              <legend>Gender</legend>
+              <div class="ergo-radio-grid">
+                <label class="ergo-chip">
+                  <input type="radio" name="genero" value="h" checked />
+                  <span>Man</span>
+                </label>
+                <label class="ergo-chip">
+                  <input type="radio" name="genero" value="m" />
+                  <span>Woman</span>
+                </label>
+                <label class="ergo-chip">
+                  <input type="radio" name="genero" value="x" />
+                  <span>Prefer not to say</span>
+                </label>
+              </div>
+              <span class="ergo-field-hint">Leg-to-torso proportions vary. This slightly adjusts seat height.</span>
+            </fieldset>
+
+            <fieldset class="ergo-field">
+              <legend>Age range</legend>
+              <div class="ergo-radio-grid">
+                <label class="ergo-chip">
+                  <input type="radio" name="edad" value="<30" />
+                  <span>Under 30</span>
+                </label>
+                <label class="ergo-chip">
+                  <input type="radio" name="edad" value="30-45" checked />
+                  <span>30-45</span>
+                </label>
+                <label class="ergo-chip">
+                  <input type="radio" name="edad" value="45-60" />
+                  <span>45-60</span>
+                </label>
+                <label class="ergo-chip">
+                  <input type="radio" name="edad" value=">60" />
+                  <span>Over 60</span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- STEP 2: Tu setup -->
+          <section class="ergo-step" data-panel="2" aria-labelledby="step-2-title" hidden>
+            <h2 id="step-2-title" class="ergo-step-title">Your current setup</h2>
+            <p class="ergo-step-sub">This lets me calculate your score and prioritize what to change first.</p>
+
+            <fieldset class="ergo-field">
+              <legend>Main monitor</legend>
+              <div class="ergo-radio-grid ergo-radio-grid--compact">
+                <label class="ergo-chip"><input type="radio" name="monitor" value="22" /><span>22"</span></label>
+                <label class="ergo-chip"><input type="radio" name="monitor" value="24" checked /><span>24"</span></label>
+                <label class="ergo-chip"><input type="radio" name="monitor" value="27" /><span>27"</span></label>
+                <label class="ergo-chip"><input type="radio" name="monitor" value="32" /><span>32"</span></label>
+                <label class="ergo-chip"><input type="radio" name="monitor" value="34" /><span>34" ultra</span></label>
+                <label class="ergo-chip"><input type="radio" name="monitor" value="laptop" /><span>Laptop only</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="ergo-field">
+              <legend>What chair do you use?</legend>
+              <div class="ergo-radio-grid">
+                <label class="ergo-chip"><input type="radio" name="silla" value="ergo" checked /><span>Ergonomic (adjustable lumbar support)</span></label>
+                <label class="ergo-chip"><input type="radio" name="silla" value="gaming" /><span>Gaming</span></label>
+                <label class="ergo-chip"><input type="radio" name="silla" value="basica" /><span>Basic office chair</span></label>
+                <label class="ergo-chip"><input type="radio" name="silla" value="ninguna" /><span>Dining chair or similar</span></label>
+              </div>
+            </fieldset>
+
+            <div class="ergo-field">
+              <div class="ergo-field-head">
+                <label for="inp-horas">Hours seated per day</label>
+                <output class="ergo-field-value" id="out-horas" for="inp-horas"><span id="out-horas-val">8</span><span class="ergo-unit"> h</span></output>
+              </div>
+              <input type="range" id="inp-horas" name="horas" min="1" max="14" step="1" value="8" />
+              <div class="ergo-slider-ticks" aria-hidden="true">
+                <span>1</span><span>4</span><span>8</span><span>12</span><span>14</span>
+              </div>
+            </div>
+
+            <fieldset class="ergo-field">
+              <legend>Do you also work standing?</legend>
+              <div class="ergo-radio-grid">
+                <label class="ergo-chip"><input type="radio" name="usoPie" value="sentado" checked /><span>Always seated</span></label>
+                <label class="ergo-chip"><input type="radio" name="usoPie" value="alternar" /><span>I alternate</span></label>
+                <label class="ergo-chip"><input type="radio" name="usoPie" value="pie" /><span>Mostly standing</span></label>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- STEP 3: Dolor -->
+          <section class="ergo-step" data-panel="3" aria-labelledby="step-3-title" hidden>
+            <h2 id="step-3-title" class="ergo-step-title">Where do you feel discomfort?</h2>
+            <p class="ergo-step-sub">Select every area that applies. I adjust recommendations based on what hurts.</p>
+
+            <fieldset class="ergo-field">
+              <legend class="sr-only">Pain areas</legend>
+              <div class="ergo-dolor-grid">
+                <label class="ergo-dolor-chip" data-dolor="lumbar">
+                  <input type="checkbox" name="dolor" value="lumbar" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18"/><path d="M7 8c0-3 2-5 5-5s5 2 5 5"/><path d="M7 16c0 3 2 5 5 5s5-2 5-5"/></svg>
+                  <span class="ergo-dolor-label">Lower back</span>
+                  <span class="ergo-dolor-desc">Lumbar area</span>
+                </label>
+                <label class="ergo-dolor-chip" data-dolor="cervical">
+                  <input type="checkbox" name="dolor" value="cervical" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="3"/><path d="M9 8v5a3 3 0 0 0 3 3h0a3 3 0 0 0 3-3V8"/></svg>
+                  <span class="ergo-dolor-label">Neck</span>
+                  <span class="ergo-dolor-desc">Neck and traps</span>
+                </label>
+                <label class="ergo-dolor-chip" data-dolor="hombros">
+                  <input type="checkbox" name="dolor" value="hombros" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 18 0"/><path d="M6 12v5"/><path d="M18 12v5"/></svg>
+                  <span class="ergo-dolor-label">Shoulders</span>
+                  <span class="ergo-dolor-desc">Upper-back tension</span>
+                </label>
+                <label class="ergo-dolor-chip" data-dolor="muñecas">
+                  <input type="checkbox" name="dolor" value="muñecas" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v7"/><path d="M16 3v7"/><path d="M7 10h10l-1 8a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3z"/></svg>
+                  <span class="ergo-dolor-label">Wrists</span>
+                  <span class="ergo-dolor-desc">Carpal tunnel, tendinitis</span>
+                </label>
+                <label class="ergo-dolor-chip" data-dolor="ojos">
+                  <input type="checkbox" name="dolor" value="ojos" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                  <span class="ergo-dolor-label">Eyes</span>
+                  <span class="ergo-dolor-desc">Eye strain</span>
+                </label>
+                <label class="ergo-dolor-chip ergo-dolor-chip--none" data-dolor="ninguno">
+                  <input type="checkbox" name="dolor" value="ninguno" />
+                  <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                  <span class="ergo-dolor-label">None</span>
+                  <span class="ergo-dolor-desc">I feel fine</span>
+                </label>
+              </div>
+              <span class="ergo-field-hint">Optional. If you select pain areas, recommendations are prioritized.</span>
+            </fieldset>
+          </section>
+
+          <!-- STEP 4: Results -->
+          <section class="ergo-step ergo-step--results" data-panel="4" aria-labelledby="step-4-title" hidden>
+            <div class="ergo-results-head">
+              <h2 id="step-4-title" class="ergo-step-title">Your ideal workstation</h2>
+              <button type="button" class="ergo-share-btn" id="btn-share" aria-label="Share result">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98"/><path d="M15.41 6.51l-6.82 3.98"/></svg>
+                <span>Share</span>
+              </button>
+            </div>
+
+            <!-- Score card -->
+            <div class="ergo-score-card" id="score-card" data-color="green">
+              <div class="ergo-score-ring" aria-hidden="true">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="currentColor" stroke-width="10" opacity="0.1"/>
+                  <circle cx="60" cy="60" r="52" fill="none" stroke-width="10" stroke-linecap="round" transform="rotate(-90 60 60)" id="ring-fill" stroke-dasharray="327" stroke-dashoffset="327"/>
+                </svg>
+                <div class="ergo-score-ring-center">
+                  <div class="ergo-score-num" id="score-num">·</div>
+                  <div class="ergo-score-denom">out of 100</div>
+                </div>
+              </div>
+              <div class="ergo-score-body">
+                <span class="ergo-score-badge" id="score-badge">·</span>
+                <h3 class="ergo-score-title" id="score-title">Calculating your setup...</h3>
+                <p class="ergo-score-desc" id="score-desc">Score based on your chair, monitor, seated hours and reported discomfort.</p>
+              </div>
+            </div>
+
+            <!-- Resumen calculado -->
+            <p class="ergo-results-sub" id="result-sub"></p>
+
+            <!-- Measures -->
+            <div class="ergo-measures" id="result-measures"></div>
+
+            <!-- Tips -->
+            <div class="ergo-tips" id="result-tips"></div>
+
+            <!-- CTAs -->
+            <div class="ergo-ctas-block" id="result-ctas-block">
+              <h3 class="ergo-ctas-title">Your roadmap</h3>
+              <p class="ergo-ctas-intro" id="ctas-intro">Ordered by what will have the biggest impact in your case.</p>
+              <ol class="ergo-ctas-list" id="result-ctas"></ol>
+            </div>
+          </section>
+        </div>
+
+        <!-- Panel figura derecha -->
+        <aside class="ergo-panel-figure" aria-labelledby="fig-head-label">
+          <div class="ergo-figure-head">
+            <span class="ergo-figure-label" id="fig-head-label">Side view · scale 1:X</span>
+            <span class="ergo-figure-dims" id="fig-dims">175 cm · 24"</span>
+          </div>
+          <div class="ergo-figure-canvas" id="svg-stage" aria-hidden="true"></div>
+          <p class="sr-only" id="fig-alt">Technical figure with a seated person, desk, chair and monitor. Seat height 44 cm, desk height 67 cm, top monitor edge 123 cm from the floor.</p>
+          <div class="ergo-figure-legend" aria-hidden="true">
+            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--accent)"></span>Chair</span>
+            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:var(--accent)"></span>Desk</span>
+            <span class="ergo-legend-item"><span class="ergo-legend-dot" style="background:#10b981"></span>Safe zone</span>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Controls -->
+      <div class="ergo-controls">
+        <button type="button" class="ergo-btn ergo-btn-secondary" id="btn-back" hidden>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span>Back</span>
+        </button>
+        <button type="button" class="ergo-btn ergo-btn-primary" id="btn-next">
+          <span id="btn-next-label">Next</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <!-- Live region -->
+      <div class="sr-only" role="status" aria-live="polite" aria-atomic="true" id="live-region"></div>
+
+      <!-- Share modal -->
+      <div class="ergo-modal" id="share-modal" hidden role="dialog" aria-modal="true" aria-labelledby="share-title">
+        <div class="ergo-modal-backdrop" data-close-modal></div>
+        <div class="ergo-modal-panel">
+          <h3 id="share-title">Your share link</h3>
+          <p>Send this link to someone and they will see your same result without filling anything in.</p>
+          <input type="text" id="share-input" readonly class="ergo-share-input" aria-label="Your result URL" />
+          <div class="ergo-modal-actions">
+            <button type="button" class="ergo-btn ergo-btn-primary" id="btn-copy-share">Copy link</button>
+            <button type="button" class="ergo-btn ergo-btn-secondary" data-close-modal>Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- noscript fallback -->
+      <noscript>
+        <div class="ergo-noscript">
+          <p>This calculator needs JavaScript enabled. If you cannot enable it, read the <a href="/en/guides/correct-desk-and-chair-height/">correct desk and chair height guide</a> with height tables.</p>
+        </div>
+      </noscript>
+    </section>
+
+    <!-- Contenido largo SEO -->
+    <section class="ergo-content">
+      <h2>The science behind the calculator, and why "72-75 cm is fine" is not enough</h2>
+      <p>
+        For years, the standard desk height in Europe has been 72-75 cm. That figure comes from
+        the 50th percentile of the adult European population: it works reasonably well if you are
+        between 170 and 180 cm tall. But the real height distribution has long tails, with many
+        people below 165 cm and above 185 cm. For them, the "standard height" is often the quiet
+        cause of chronic neck and lower-back tension.
+      </p>
+      <p>
+        This calculator uses anthropometric coefficients from <strong>ISO 7250-2:2017</strong>
+        (basic human body measurements for technological design), cross-checked with the DINED
+        database from TU Delft and recommendations from the <a href="https://ergo.human.cornell.edu/" rel="nofollow noopener" target="_blank">Cornell University Ergonomics Lab</a>.
+        For an adult European user, the P50 coefficients are:
+      </p>
+      <ul>
+        <li><strong>Popliteal height</strong> (chair seat height) = body height x 0.253</li>
+        <li><strong>Seated elbow height</strong> = body height x 0.131 (added to seat height to calculate desk height)</li>
+        <li><strong>Seated eye height</strong> = body height x 0.450 (added to seat height to calculate the top monitor edge)</li>
+        <li><strong>Buttock-popliteal depth</strong> (seat depth) = body height x 0.282 - 3 cm</li>
+      </ul>
+      <p>
+        Women tend to have a slightly shorter torso proportionally, so the calculator subtracts
+        1 cm from seat height when you choose the female option. From around age 60, it is often
+        useful to raise the monitor by 2-3 cm and open the backrest angle to 100-105 degrees.
+        These are small changes, but if you sit for eight hours a day, they can be the difference
+        between finishing work comfortably or with pain.
+      </p>
+
+      <h2>How to read your ergonomic score</h2>
+      <p>
+        The score for your current setup (0-100) is not a medical assessment. It is an estimate
+        based on your chair, monitor, seated hours and existing discomfort. Use these ranges:
+      </p>
+      <ul>
+        <li><strong>80-100 (green):</strong> your setup is reasonable. Fine-tuning chair and monitor height can take it above 95.</li>
+        <li><strong>60-79 (light amber):</strong> there is clear room for improvement. A focused 100-200 EUR investment can usually move you into the green range.</li>
+        <li><strong>40-59 (dark amber):</strong> your setup is taking a toll. If you do not have pain yet, it is likely coming.</li>
+        <li><strong>0-39 (red):</strong> high-risk setup. If you will keep working remotely for 5+ hours a day, an ergonomic chair and monitor support are not optional.</li>
+      </ul>
+
+      <h2>What to do with the recommendations</h2>
+      <p>
+        The calculator prioritizes based on where you feel pain. If you select <strong>neck pain</strong>,
+        raising the monitor usually comes first. If you select <strong>lower-back pain</strong>,
+        the chair and lumbar support move up. If you select <strong>wrist pain</strong>, accessories
+        such as a vertical mouse, wrist rest and ergonomic keyboard are prioritized. If you select
+        <strong>eye strain</strong>, monitor support and anti-glare desk lighting become more important.
+      </p>
+      <p>
+        If you do not select any pain area, the order is based on distance from the ideal setup:
+        the biggest mismatch goes first. Recommendations link to comparisons with real products
+        and Amazon.es affiliate links.
+      </p>
+
+      <h2>Special cases the calculator flags</h2>
+
+      <h3>If you are under 163 cm</h3>
+      <p>
+        A standard desk is often too high, which makes you lift your shoulders. A realistic fix is
+        a <strong>footrest</strong> plus raising the chair, or switching to a <a href="/en/desks/best-electric-standing-desks/">standing desk</a>
+        that can go down to around 60 cm. My wife is 162 cm tall, and the difference between our
+        old 74 cm shared desk and her new 66 cm desk was immediate: her upper-back tension dropped
+        within a week.
+      </p>
+
+      <h3>If you are over 185 cm</h3>
+      <p>
+        A standard desk can be too low, making you lean forward. If a standing desk does not fit
+        the budget, <strong>8-10 cm leg risers</strong> can work, with a small tradeoff in visual
+        stability. I am 186 cm tall and work comfortably with a FlexiSpot E7 at 76 cm seated and
+        116 cm standing.
+      </p>
+
+      <h3>If you work only on a laptop</h3>
+      <p>
+        A laptop cannot be at the correct height for both eyes and hands at the same time. Raise
+        it and the keyboard is too high; lower it and the screen is too low. The only real fix is
+        a <strong>laptop stand</strong> that raises the screen to eye level, plus an external
+        <a href="/en/accessories/best-ergonomic-keyboards/">keyboard</a> and mouse. The calculator
+        detects this and marks it as a priority.
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="faq-list">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.pregunta}</summary>
+            <p>{f.respuesta}</p>
+          </details>
+        ))}
+      </div>
+
+      <h2>Related articles</h2>
+      <ul class="related-links">
+        <li><a href="/en/guides/correct-desk-and-chair-height/">Correct desk and chair height for home working</a></li>
+        <li><a href="/en/guides/how-to-set-up-an-ergonomic-home-office/">How to set up an ergonomic home office</a></li>
+        <li><a href="/en/guides/back-pain-working-from-home/">Back pain when working from home: practical fixes</a></li>
+        <li><a href="/en/guides/neck-pain-computer-work/">Neck pain from computer work: causes and fixes</a></li>
+        <li><a href="/en/guides/how-to-adjust-office-chair/">How to adjust an office chair properly</a></li>
+        <li><a href="/en/guides/are-standing-desks-worth-it/">Are standing desks worth it for remote work?</a></li>
+      </ul>
+    </section>
+  </div>
+
+  <script is:inline define:vars={{ pageUrl }}>
+    (function ErgoApp() {
+      'use strict';
+
+      // ===== Constants =====
+      const COEF = {
+        asiento: 0.253,
+        codoSentado: 0.131,
+        ojoSentado: 0.450,
+        profundidad: 0.282,
+      };
+      const MONITOR_DIST = {
+        '22': [50, 65], '24': [60, 75], '27': [70, 85],
+        '32': [80, 95], '34': [85, 100], 'laptop': [50, 65],
+      };
+
+      // ===== State =====
+      const S = {
+        step: 1,
+        inputs: {
+          estatura: 175,
+          genero: 'h',
+          edad: '30-45',
+          monitor: '24',
+          silla: 'ergo',
+          horas: 8,
+          usoPie: 'sentado',
+          dolor: new Set(),
+        },
+        computed: null,
+        hydrated: false,
+      };
+
+      // ===== DOM refs =====
+      const $ = (id) => document.getElementById(id);
+      const $$ = (sel, root = document) => root.querySelectorAll(sel);
+      const app = $('ergo-app');
+      const panels = $$('.ergo-step');
+      const progressSteps = $$('.ergo-progress-steps li');
+      const btnNext = $('btn-next');
+      const btnBack = $('btn-back');
+      const btnNextLabel = $('btn-next-label');
+      const liveRegion = $('live-region');
+      const svgStage = $('svg-stage');
+      const outEstaturaVal = $('out-estatura-val');
+      const inpEstatura = $('inp-estatura');
+      const inpEstaturaNum = $('inp-estatura-num');
+      const outHorasVal = $('out-horas-val');
+      const inpHoras = $('inp-horas');
+      const figDims = $('fig-dims');
+      const figAlt = $('fig-alt');
+      const shareModal = $('share-modal');
+      const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const DOLOR_VALID = ['lumbar', 'cervical', 'hombros', 'muñecas', 'ojos', 'ninguno'];
+
+      // ===== Calc =====
+      function clampEstatura(v) { return Math.max(140, Math.min(210, v | 0)); }
+
+      function calcMeasures(i) {
+        const h = i.estatura;
+        let asiento = h * COEF.asiento;
+        if (i.genero === 'm') asiento -= 1;
+        if (i.edad === '>60') asiento -= 1.5;
+        const escritorio = asiento + h * COEF.codoSentado;
+        const escritorioPie = h * 0.63;
+        let topMonitor = asiento + h * COEF.ojoSentado;
+        if (i.edad === '>60') topMonitor += 2;
+        const profundidad = h * COEF.profundidad - 3;
+        const dist = MONITOR_DIST[i.monitor] || [60, 75];
+        return {
+          asiento: Math.round(asiento),
+          escritorio: Math.round(escritorio),
+          escritorioPie: Math.round(escritorioPie),
+          topMonitor: Math.round(topMonitor),
+          distMin: Math.max(50, Math.min(95, dist[0])),
+          distMax: Math.max(50, Math.min(100, dist[1])),
+          profundidad: Math.round(profundidad),
+        };
+      }
+
+      function calcScore(i) {
+        let s = 100;
+        if (i.silla === 'basica') s -= 18;
+        if (i.silla === 'gaming') s -= 12;
+        if (i.silla === 'ninguna') s -= 30;
+        if (i.horas >= 6 && i.silla !== 'ergo') s -= 8;
+        if (i.horas >= 10) s -= 6;
+        if (i.monitor === 'laptop') s -= 18;
+        if (i.estatura < 162 || i.estatura > 188) s -= 8;
+        if (i.dolor.has('lumbar')) s -= 12;
+        if (i.dolor.has('cervical')) s -= 10;
+        if (i.dolor.has('hombros')) s -= 6;
+        if (i.dolor.has('muñecas')) s -= 6;
+        if (i.dolor.has('ojos')) s -= 6;
+        s = Math.max(8, Math.min(100, s));
+        const color = s < 40 ? 'red' : s < 70 ? 'amber' : s < 85 ? 'greenLight' : 'green';
+        const badge = s < 40 ? 'Risk' : s < 70 ? 'Needs work' : s < 85 ? 'Acceptable' : 'Excellent';
+        const title = s < 40 ? 'High-risk setup'
+                    : s < 70 ? 'Clear room for improvement'
+                    : s < 85 ? 'Reasonable baseline'
+                    : 'Excellent setup';
+        const desc = s < 40 ? 'If you keep working here for 5+ hours a day, it will likely take a toll. Prioritize the recommendations.'
+                   : s < 70 ? 'A focused 100-250 EUR investment can raise your score by 15-25 points within weeks.'
+                   : s < 85 ? 'It works well. Fine-tuning chair and monitor height can move you into the optimal range.'
+                   : 'Well-sized setup. Keep it, take active breaks every 45 minutes, and you are in good shape.';
+        return { value: s, color, badge, title, desc };
+      }
+
+      function calcPriorities(i) {
+        const w = { silla: 0, escritorio: 0, monitor: 0, accesorios: 0 };
+        if (i.dolor.has('lumbar')) w.silla += 4;
+        if (i.dolor.has('cervical')) { w.monitor += 4; w.escritorio += 1; }
+        if (i.dolor.has('hombros')) { w.monitor += 2; w.escritorio += 1; }
+        if (i.dolor.has('ojos')) { w.monitor += 3; w.accesorios += 2; }
+        if (i.dolor.has('muñecas')) w.accesorios += 4;
+        if (i.silla !== 'ergo') w.silla += 2;
+        if (i.monitor === 'laptop') { w.monitor += 3; w.accesorios += 1; }
+        if (i.estatura < 162 || i.estatura > 188) w.escritorio += 2;
+        if (i.usoPie !== 'sentado') w.escritorio += 2;
+        return Object.entries(w).sort((a, b) => b[1] - a[1]);
+      }
+
+      function buildTips(m, i) {
+        const tips = [];
+        if (i.estatura < 163) tips.push({ type: 'warn', txt: 'At your height, a fixed 72-75 cm desk is <strong>too high</strong>. A footrest and raising the chair partially compensate; ideally, use a standing desk that can go down to ' + m.escritorio + ' cm.' });
+        if (i.estatura > 188) tips.push({ type: 'warn', txt: 'At your height, a fixed 72-75 cm desk is <strong>too low</strong>. You need a standing desk, or leg risers, that reaches ' + m.escritorio + ' cm when seated.' });
+        if (i.monitor === 'laptop') tips.push({ type: 'warn', txt: 'Working only on a laptop forces a compromise: either the screen is right and the keyboard is wrong, or the other way around. <strong>Laptop stand + external keyboard</strong> is the real fix.' });
+        if (i.usoPie !== 'sentado') tips.push({ type: 'info', txt: 'To work standing, your desk needs to reach <strong>' + m.escritorioPie + ' cm</strong>: only standing desks usually go that high.' });
+        if (i.horas >= 10) tips.push({ type: 'warn', txt: 'More than 10 hours seated per day. Add active breaks every 45-50 minutes: <strong>movement matters more than any chair</strong>.' });
+        if (i.silla === 'gaming') tips.push({ type: 'info', txt: 'Gaming chairs support a gaming posture, but real lumbar support is often limited. If you feel lower-back pain, consider changing chairs.' });
+        if (i.silla === 'ninguna') tips.push({ type: 'warn', txt: 'A dining chair has no lumbar support or meaningful adjustments. No stretching routine will compensate for eight hours there.' });
+        if (i.dolor.has('cervical') && i.monitor === 'laptop') tips.push({ type: 'warn', txt: 'Neck pain + laptop without an external monitor is a direct cause. Raising the screen to eye level removes most neck strain.' });
+        if (i.dolor.has('muñecas') && !i.dolor.has('ninguno')) tips.push({ type: 'info', txt: 'For wrist pain: keep elbows around 90-100 degrees, keyboard and mouse close to the body, and consider a <strong>vertical mouse</strong>.' });
+        return tips;
+      }
+
+      function buildCTAs(prioridades, m, i) {
+        const ctas = [];
+        const cats = {
+          silla: {
+            titulo: 'Ergonomic chair adjustable to ' + m.asiento + ' cm',
+            href: i.dolor.has('lumbar') || i.silla === 'ninguna' ? '/en/chairs/best-ergonomic-office-chairs/' : '/en/chairs/best-office-chairs-under-200/',
+            razon: i.dolor.has('lumbar') ? 'Your lower-back pain is directly related to a chair without enough support.' :
+                   i.silla === 'ninguna' ? 'A dining chair or similar is not viable for remote work.' :
+                   i.silla === 'basica' ? 'A basic office chair without proper adjustment does not hold up well for 8h/day.' :
+                   'Check that your chair reaches ' + m.asiento + ' cm and has adjustable lumbar support.',
+            categoria: 'Chairs',
+            color: 'var(--accent)',
+          },
+          escritorio: {
+            titulo: i.usoPie !== 'sentado' ? 'Electric standing desk' : 'Correct-height desk (' + m.escritorio + ' cm)',
+            href: '/en/desks/best-electric-standing-desks/',
+            razon: i.estatura < 163 ? 'At your height (' + i.estatura + ' cm), a standard fixed desk is too high.' :
+                   i.estatura > 188 ? 'At your height (' + i.estatura + ' cm), a standard fixed desk is too low.' :
+                   i.usoPie !== 'sentado' ? 'To alternate between sitting and standing, you need a ' + m.escritorio + '-' + m.escritorioPie + ' cm range.' :
+                   'Your desk should be exactly ' + m.escritorio + ' cm so your elbows sit around 90-100 degrees.',
+            categoria: 'Desks',
+            color: 'var(--accent)',
+          },
+          monitor: {
+            titulo: i.monitor === 'laptop' ? 'Laptop stand + external monitor' : 'Monitor stand or monitor arm',
+            href: i.monitor === 'laptop' ? '/en/accessories/best-monitors-for-working-from-home/' : '/en/accessories/best-monitor-arms/',
+            razon: i.monitor === 'laptop' ? 'Working only on a laptop strains your neck all day. The fix is a stand plus an external keyboard.' :
+                   i.dolor.has('cervical') ? 'Neck pain often comes from a low screen. Put the top monitor edge at ' + m.topMonitor + ' cm from the floor.' :
+                   'The top monitor edge should sit at ' + m.topMonitor + ' cm from the floor, roughly at eye level.',
+            categoria: 'Accessories',
+            color: 'var(--accent)',
+          },
+          accesorios: {
+            titulo: i.dolor.has('muñecas') ? 'Vertical mouse and ergonomic keyboard' : 'Desk lamp with side lighting',
+            href: i.dolor.has('muñecas') ? '/en/accessories/best-vertical-ergonomic-mice/' : '/en/workspace/best-led-desk-lamps/',
+            razon: i.dolor.has('muñecas') ? 'For wrists: a vertical mouse reduces forearm pronation, and an ergonomic keyboard separates the hands.' :
+                   i.dolor.has('ojos') ? 'Eye strain improves with diffuse side lighting that reduces screen glare.' :
+                   'Side lighting plus an ergonomic mouse completes the setup.',
+            categoria: 'Accessories',
+            color: 'var(--accent)',
+          },
+        };
+        prioridades.forEach(([key, weight], idx) => {
+          if (weight === 0 && idx > 1) return;
+          ctas.push({ ...cats[key], prioridad: idx + 1 });
+        });
+        return ctas.slice(0, 4);
+      }
+
+      // ===== Render figura SVG — plano técnico blueprint =====
+      function renderFigure() {
+        const m = calcMeasures(S.inputs);
+        const i = S.inputs;
+        const SCALE = 2.4;
+        const VBW = 820, VBH = 560;
+        const floorY = 500;
+
+        // Layout (persona pegada a la mesa para antebrazo realista)
+        const chairCenterX = 290;
+        const deskFrontX = 305;
+        const deskDepth = 240;
+        const deskBackX = deskFrontX + deskDepth;
+        const deskTopY = floorY - m.escritorio * SCALE;
+        const seatY = floorY - m.asiento * SCALE;
+        const eyeY = floorY - m.topMonitor * SCALE;
+
+        // Rails (dimensión vertical izquierda)
+        const railMonitor = 38;
+        const railDesk = 104;
+        const railAsiento = 170;
+        const gridStartX = railAsiento + 34;
+
+        figDims.textContent = i.estatura + ' cm · ' + (i.monitor === 'laptop' ? 'laptop' : i.monitor === '34' ? '34" ultra' : i.monitor + '"');
+        if (figAlt) {
+          const chairDesc = { ergo: 'an ergonomic chair', gaming: 'a gaming chair', basica: 'a basic office chair', ninguna: 'a dining chair' }[i.silla];
+          figAlt.textContent = 'Technical drawing with a ' + i.estatura + ' cm person seated on ' + chairDesc + '. Seat ' + m.asiento + ' cm, desk ' + m.escritorio + ' cm, top monitor edge ' + m.topMonitor + ' cm from the floor, eye-to-screen distance ' + m.distMin + '-' + m.distMax + ' cm.';
+        }
+
+        // === Persona ===
+        const hipX = chairCenterX;
+        const hipY = seatY - 4;
+        const headR = Math.round(i.estatura * SCALE * 0.037);
+        const headCx = hipX;
+        const headCy = eyeY;
+        const neckLen = Math.round(headR * 0.9);
+        const neckTopY = headCy + headR;
+        const shoulderX = hipX;
+        const shoulderY = neckTopY + neckLen;
+        const torsoH = Math.max(40, hipY - shoulderY);
+
+        // Teclado/ratón
+        const kbdX = deskFrontX + 28;
+        const kbdW = 100;
+        const kbdY = deskTopY - 8;
+        const kbdH = 8;
+        const mouseCx = kbdX + kbdW + 22;
+
+        // Brazo (codo pegado al torso, antebrazo horizontal ~90°)
+        const wristX = kbdX + kbdW * 0.5;
+        const wristY = kbdY - 1;
+        const shoulderJointX = shoulderX + 14;
+        const shoulderJointY = shoulderY + 10;
+        const elbowX = shoulderJointX + 6;
+        const elbowY = deskTopY + 2;
+
+        // Piernas
+        const thighL = i.estatura * SCALE * 0.245;
+        const kneeX = hipX + thighL;
+        const kneeY = seatY + 4;
+        const ankleY = floorY - 5;
+        const toeX = kneeX + 28;
+
+        // Monitor
+        const monHeightCm = { '22': 29, '24': 33, '27': 37, '32': 43, '34': 38, 'laptop': 22 };
+        const monHeightPx = monHeightCm[i.monitor] * SCALE;
+        const monDepth = 11;
+        const monCx = deskBackX - 55;
+        const monFrontX = monCx - monDepth / 2;
+
+        const C_SEAT = 'var(--accent)';
+        const C_DESK = 'var(--accent)';
+        const C_EYE = 'var(--ergo-pill-text-mono)';
+        const C_SAFE = '#10b981';
+
+        // ===== Helpers cota =====
+        function dimVertical(railX, targetY, extTargetX, value, color) {
+          const midY = (floorY + targetY) / 2;
+          const pillW = 62, pillH = 24;
+          const pillTop = midY - pillH / 2;
+          const pillBot = midY + pillH / 2;
+          return `
+            <g style="color:${color}">
+              <line x1="${railX}" y1="${floorY}" x2="${railX}" y2="${pillBot}" stroke="${color}" stroke-width="1.4" marker-start="url(#arrDown)"/>
+              <line x1="${railX}" y1="${pillTop}" x2="${railX}" y2="${targetY}" stroke="${color}" stroke-width="1.4" marker-end="url(#arrUp)"/>
+              <line x1="${railX - 8}" y1="${floorY}" x2="${railX + 8}" y2="${floorY}" stroke="${color}" stroke-width="1.4"/>
+              <line x1="${railX}" y1="${targetY}" x2="${extTargetX}" y2="${targetY}" stroke="${color}" stroke-width="0.75" stroke-dasharray="3,3" opacity="0.65"/>
+              <rect x="${railX - pillW / 2}" y="${pillTop}" width="${pillW}" height="${pillH}" rx="12" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.6"/>
+              <text x="${railX}" y="${midY + 5}" font-size="14" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${value} cm</text>
+            </g>
+          `;
+        }
+
+        function dimHorizontal(y, x1, x2, label, color) {
+          const midX = (x1 + x2) / 2;
+          const pillW = 88, pillH = 24;
+          return `
+            <g style="color:${color}">
+              <line x1="${x1}" y1="${y}" x2="${midX - pillW / 2}" y2="${y}" stroke="${color}" stroke-width="1.4" marker-start="url(#arrLeft)"/>
+              <line x1="${midX + pillW / 2}" y1="${y}" x2="${x2}" y2="${y}" stroke="${color}" stroke-width="1.4" marker-end="url(#arrRight)"/>
+              <line x1="${x1}" y1="${y - 6}" x2="${x1}" y2="${y + 6}" stroke="${color}" stroke-width="1.4"/>
+              <line x1="${x2}" y1="${y - 6}" x2="${x2}" y2="${y + 6}" stroke="${color}" stroke-width="1.4"/>
+              <rect x="${midX - pillW / 2}" y="${y - pillH / 2}" width="${pillW}" height="${pillH}" rx="12" fill="var(--ergo-pill-bg)" stroke="${color}" stroke-width="1.6"/>
+              <text x="${midX}" y="${y + 5}" font-size="13" font-weight="700" fill="${color}" text-anchor="middle" font-family="var(--font-mono)" font-variant-numeric="tabular-nums">${label}</text>
+            </g>
+          `;
+        }
+
+        // ===== Silla =====
+        const chairSVG = (() => {
+          const seatW = 100;
+          const seatX = chairCenterX - seatW / 2;
+          const A = 'var(--accent)';
+          if (i.silla === 'gaming') {
+            const backTopY = seatY - 180;
+            const backMidY = (backTopY + seatY) / 2;
+            return `
+              <!-- reposacabezas (cojín separado) -->
+              <ellipse cx="${seatX + 5}" cy="${backTopY - 14}" rx="15" ry="11" fill="${A}" opacity="0.92"/>
+              <ellipse cx="${seatX + 6}" cy="${backTopY - 14}" rx="10" ry="7" fill="${A}" opacity="0.55"/>
+              <rect x="${seatX + 3}" y="${backTopY - 4}" width="4" height="10" fill="${A}" opacity="0.8"/>
+              <!-- respaldo alto (curvatura gaming con alas) -->
+              <path d="M ${seatX + 4} ${backTopY} Q ${seatX - 8} ${backMidY} ${seatX - 2} ${seatY - 2} L ${seatX + 20} ${seatY - 2} L ${seatX + 20} ${backTopY + 8} Z" fill="${A}" opacity="0.88"/>
+              <!-- alas laterales del respaldo -->
+              <path d="M ${seatX + 4} ${backTopY + 4} Q ${seatX - 12} ${backTopY + 40} ${seatX - 4} ${backTopY + 60}" stroke="${A}" stroke-width="3" fill="none" opacity="0.7"/>
+              <!-- cojín lumbar -->
+              <ellipse cx="${seatX - 3}" cy="${seatY - 85}" rx="9" ry="26" fill="${A}" opacity="0.55"/>
+              <!-- líneas costuras -->
+              <path d="M ${seatX + 10} ${seatY - 14} Q ${seatX} ${backMidY} ${seatX + 10} ${backTopY + 8}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
+              <!-- asiento -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="14" rx="3" fill="${A}" opacity="0.95"/>
+              <!-- costura frontal asiento -->
+              <line x1="${seatX + 5}" y1="${seatY + 2}" x2="${seatX + seatW - 5}" y2="${seatY + 2}" stroke="${A}" stroke-width="0.75" opacity="0.3"/>
+              <!-- reposabrazos con acolchado -->
+              <rect x="${seatX + 48}" y="${seatY - 44}" width="34" height="8" rx="3" fill="${A}" opacity="0.8"/>
+              <rect x="${seatX + 74}" y="${seatY - 36}" width="6" height="34" fill="${A}" opacity="0.75"/>
+              <!-- pistón gas -->
+              <rect x="${chairCenterX - 4}" y="${seatY + 10}" width="8" height="${floorY - seatY - 24}" fill="${A}" opacity="0.78"/>
+              <!-- base 5 patas -->
+              <path d="M ${chairCenterX - 46} ${floorY - 10} L ${chairCenterX + 46} ${floorY - 10} L ${chairCenterX + 40} ${floorY - 2} L ${chairCenterX - 40} ${floorY - 2} Z" fill="${A}" opacity="0.8"/>
+              <circle cx="${chairCenterX - 34}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
+              <circle cx="${chairCenterX + 34}" cy="${floorY - 2}" r="4.5" fill="${A}"/>
+            `;
+          }
+          if (i.silla === 'ergo') {
+            const backTopY = seatY - 130;
+            const headrestCx = seatX + 4;
+            const headrestCy = backTopY - 20;
+            const backMidY = (backTopY + seatY) / 2;
+            return `
+              <!-- reposacabezas regulable (malla separada) -->
+              <rect x="${seatX + 3}" y="${backTopY - 10}" width="3" height="14" fill="${A}" opacity="0.85"/>
+              <ellipse cx="${headrestCx}" cy="${headrestCy}" rx="14" ry="12" fill="${A}" opacity="0.35"/>
+              <ellipse cx="${headrestCx}" cy="${headrestCy}" rx="14" ry="12" stroke="${A}" stroke-width="2" fill="none" opacity="0.95"/>
+              <path d="M ${headrestCx - 10} ${headrestCy - 4} Q ${headrestCx - 2} ${headrestCy - 10} ${headrestCx + 10} ${headrestCy - 2}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
+              <!-- respaldo malla con curvatura lumbar marcada -->
+              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 10} ${backMidY} ${seatX + 2} ${backTopY} L ${seatX + 20} ${backTopY + 2} L ${seatX + 20} ${seatY - 4} Z" fill="${A}" opacity="0.32"/>
+              <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 10} ${backMidY} ${seatX + 2} ${backTopY}" stroke="${A}" stroke-width="2.5" fill="none" opacity="0.95"/>
+              <!-- marco estructural respaldo -->
+              <path d="M ${seatX + 20} ${seatY - 4} L ${seatX + 20} ${backTopY + 2}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <!-- malla líneas -->
+              <path d="M ${seatX + 10} ${seatY - 10} Q ${seatX - 2} ${backMidY} ${seatX + 10} ${backTopY + 4}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.45"/>
+              <path d="M ${seatX + 15} ${seatY - 14} Q ${seatX + 5} ${backMidY} ${seatX + 15} ${backTopY + 6}" stroke="${A}" stroke-width="0.5" fill="none" opacity="0.3"/>
+              <!-- soporte lumbar regulable -->
+              <ellipse cx="${seatX - 3}" cy="${seatY - 44}" rx="6" ry="14" fill="${A}" opacity="0.8"/>
+              <!-- asiento con acolchado -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="12" rx="3" fill="${A}" opacity="0.95"/>
+              <rect x="${seatX + 5}" y="${seatY + 4}" width="${seatW - 10}" height="3" rx="1" fill="${A}" opacity="0.4"/>
+              <!-- reposabrazos 4D -->
+              <rect x="${seatX + 48}" y="${seatY - 34}" width="32" height="6" rx="2.5" fill="${A}" opacity="0.75"/>
+              <rect x="${seatX + 74}" y="${seatY - 30}" width="5" height="28" fill="${A}" opacity="0.75"/>
+              <!-- pistón gas -->
+              <rect x="${chairCenterX - 3}" y="${seatY + 8}" width="6" height="${floorY - seatY - 22}" fill="${A}" opacity="0.78"/>
+              <!-- base aluminio pulido -->
+              <path d="M ${chairCenterX - 42} ${floorY - 9} L ${chairCenterX + 42} ${floorY - 9} L ${chairCenterX + 36} ${floorY - 2} L ${chairCenterX - 36} ${floorY - 2} Z" fill="${A}" opacity="0.78"/>
+              <circle cx="${chairCenterX - 32}" cy="${floorY - 2}" r="4" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 2}" r="4" fill="${A}"/>
+              <circle cx="${chairCenterX + 32}" cy="${floorY - 2}" r="4" fill="${A}"/>
+            `;
+          }
+          if (i.silla === 'basica') {
+            const backTopY = seatY - 85;
+            return `
+              <!-- respaldo plástico básico -->
+              <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY} L ${seatX + 16} ${backTopY + 2} L ${seatX + 16} ${seatY - 2} Z" fill="${A}" opacity="0.85"/>
+              <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.95"/>
+              <!-- hueco central típico -->
+              <rect x="${seatX + 8}" y="${seatY - 30}" width="6" height="22" rx="2" fill="var(--surface)" opacity="0.5"/>
+              <!-- reposabrazos fijo -->
+              <rect x="${seatX + 48}" y="${seatY - 28}" width="24" height="5" rx="1" fill="${A}" opacity="0.75"/>
+              <rect x="${seatX + 66}" y="${seatY - 24}" width="4" height="22" fill="${A}" opacity="0.75"/>
+              <!-- asiento simple -->
+              <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="9" rx="2" fill="${A}" opacity="0.95"/>
+              <!-- pistón -->
+              <rect x="${chairCenterX - 3}" y="${seatY + 5}" width="5" height="${floorY - seatY - 20}" fill="${A}" opacity="0.72"/>
+              <!-- base simple (menos patas) -->
+              <path d="M ${chairCenterX - 32} ${floorY - 7} L ${chairCenterX + 32} ${floorY - 7} L ${chairCenterX + 28} ${floorY - 1} L ${chairCenterX - 28} ${floorY - 1} Z" fill="${A}" opacity="0.72"/>
+              <circle cx="${chairCenterX - 24}" cy="${floorY - 1}" r="3" fill="${A}"/>
+              <circle cx="${chairCenterX}" cy="${floorY - 1}" r="3" fill="${A}"/>
+              <circle cx="${chairCenterX + 24}" cy="${floorY - 1}" r="3" fill="${A}"/>
+            `;
+          }
+          // comedor
+          const backTopY = seatY - 68;
+          const woodC = '#8b6f47';
+          const woodSeat = '#a0845c';
+          return `
+            <rect x="${seatX + 2}" y="${backTopY}" width="5" height="${seatY - backTopY}" fill="${woodC}" opacity="0.95"/>
+            <rect x="${seatX - 2}" y="${backTopY}" width="20" height="6" fill="${woodC}" opacity="0.95"/>
+            <rect x="${seatX - 2}" y="${backTopY + 22}" width="20" height="4" fill="${woodC}" opacity="0.85"/>
+            <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="6" fill="${woodSeat}"/>
+            <line x1="${seatX + 3}" y1="${seatY + 2}" x2="${seatX + 3}" y2="${floorY - 1}" stroke="${woodC}" stroke-width="3.5" opacity="0.95"/>
+            <line x1="${seatX + seatW - 3}" y1="${seatY + 2}" x2="${seatX + seatW - 3}" y2="${floorY - 1}" stroke="${woodC}" stroke-width="3.5" opacity="0.95"/>
+            <line x1="${seatX + 32}" y1="${seatY + 2}" x2="${seatX + 32}" y2="${floorY - 1}" stroke="${woodC}" stroke-width="2.5" opacity="0.55"/>
+            <line x1="${seatX + 3}" y1="${floorY - 18}" x2="${seatX + seatW - 3}" y2="${floorY - 18}" stroke="${woodC}" stroke-width="2" opacity="0.7"/>
+          `;
+        })();
+
+        // ===== Monitor (vista lateral) =====
+        const monitorSVG = (() => {
+          if (i.monitor === 'laptop') {
+            const baseL = 95, baseH = 6;
+            const baseX = deskBackX - baseL - 20;
+            const baseY = deskTopY - baseH;
+            const hingeX = baseX + baseL - 6;
+            const hingeY = baseY;
+            const lidH = 24 * SCALE;
+            const lidLeanX = lidH * 0.22;
+            const screenTopX = hingeX + lidLeanX;
+            const screenTopY = hingeY - lidH;
+            const bezel = 3;
+            return `
+              <rect x="${baseX}" y="${baseY}" width="${baseL}" height="${baseH}" rx="1.5" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.25"/>
+              <rect x="${baseX + 8}" y="${baseY + 1.5}" width="${baseL - 42}" height="2" fill="var(--ergo-mon-border)" opacity="0.55"/>
+              <rect x="${baseX + baseL - 32}" y="${baseY + 3}" width="24" height="2" rx="0.5" fill="var(--ergo-mon-border)" opacity="0.4"/>
+              <path d="M ${hingeX + 2} ${hingeY + 1} L ${screenTopX + 2} ${screenTopY + 1} L ${screenTopX - 1} ${screenTopY - 1} L ${hingeX - 1} ${hingeY - 1} Z" fill="var(--ergo-mon-border)" opacity="0.92"/>
+              <path d="M ${hingeX - 2} ${hingeY - 1} L ${screenTopX - 2} ${screenTopY - 1} L ${screenTopX - 5} ${screenTopY + 1} L ${hingeX - 5} ${hingeY + 1} Z" fill="var(--accent)" opacity="0.6"/>
+              <path d="M ${hingeX - 3} ${hingeY - 2} L ${(hingeX + screenTopX) / 2 - 4} ${(hingeY + screenTopY) / 2 - 2} L ${(hingeX + screenTopX) / 2 - 6} ${(hingeY + screenTopY) / 2} L ${hingeX - 5} ${hingeY} Z" fill="#ffffff" opacity="0.22"/>
+              <line x1="${screenTopX + 6}" y1="${screenTopY - 2}" x2="${screenTopX + 6}" y2="${eyeY + 2}" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,3" opacity="0.7"/>
+              <text x="${screenTopX + 12}" y="${(screenTopY + eyeY) / 2}" font-size="9" fill="#ef4444" font-weight="700" font-family="var(--font-mono)">screen</text>
+              <text x="${screenTopX + 12}" y="${(screenTopY + eyeY) / 2 + 11}" font-size="9" fill="#ef4444" font-weight="700" font-family="var(--font-mono)">too low</text>
+            `;
+          }
+          const standNeckTopY = eyeY + monHeightPx;
+          const standBaseW = i.monitor === '34' ? 100 : 70;
+          const monX = monCx - monDepth / 2;
+          return `
+            <rect x="${monX - 1}" y="${eyeY - 2}" width="${monDepth + 3}" height="${monHeightPx + 4}" rx="3" fill="var(--ergo-desk)" opacity="0.15"/>
+            <rect x="${monX}" y="${eyeY}" width="${monDepth}" height="${monHeightPx}" rx="2.5" fill="var(--ergo-mon-bezel)" stroke="var(--ergo-mon-border)" stroke-width="1.5"/>
+            <rect x="${monX + 1}" y="${eyeY + 2}" width="3.5" height="${monHeightPx - 4}" fill="var(--accent)" opacity="0.55"/>
+            <rect x="${monX + 1}" y="${eyeY + monHeightPx * 0.12}" width="3.5" height="${monHeightPx * 0.18}" fill="#ffffff" opacity="0.3"/>
+            <rect x="${monCx - 3.5}" y="${standNeckTopY}" width="7" height="${deskTopY - standNeckTopY - 2}" fill="var(--ergo-mon-border)" opacity="0.78"/>
+            <ellipse cx="${monCx}" cy="${deskTopY - 3}" rx="${standBaseW / 2}" ry="4.5" fill="var(--ergo-mon-border)" opacity="0.55"/>
+            <rect x="${monCx - standBaseW / 2}" y="${deskTopY - 5.5}" width="${standBaseW}" height="3.5" rx="1.75" fill="var(--ergo-mon-border)" opacity="0.3"/>
+            ${i.monitor === '34' ? `<text x="${monCx - 32}" y="${eyeY - 10}" font-size="10" font-weight="700" fill="var(--ergo-pill-text-mono)" font-family="var(--font-mono)" letter-spacing="0.5">34" ULTRAWIDE</text>` : ''}
+          `;
+        })();
+
+        // ===== Persona silueta =====
+        const personSVG = `
+          <g class="ergo-person">
+            <path d="M ${hipX - 18} ${shoulderY + 4}
+                     Q ${hipX - 18} ${shoulderY - 2} ${hipX - 14} ${shoulderY - 4}
+                     L ${hipX - 6} ${shoulderY - headR * 0.25}
+                     Q ${hipX - headR - 1} ${headCy + headR * 0.65} ${hipX - headR - 1} ${headCy}
+                     A ${headR + 1} ${headR + 1} 0 1 1 ${hipX + headR + 1} ${headCy}
+                     Q ${hipX + headR + 1} ${headCy + headR * 0.65} ${hipX + 6} ${shoulderY - headR * 0.25}
+                     L ${hipX + 14} ${shoulderY - 4}
+                     Q ${hipX + 18} ${shoulderY - 2} ${hipX + 18} ${shoulderY + 4}
+                     L ${hipX + 18} ${hipY}
+                     L ${hipX - 18} ${hipY} Z"
+                  fill="var(--ergo-person-torso)" opacity="0.96"/>
+            <path d="M ${hipX} ${hipY - 6} Q ${hipX - 3} ${(hipY + shoulderY) / 2} ${hipX} ${shoulderY + 4}"
+                  stroke="var(--ergo-pill-bg)" stroke-width="0.75" fill="none" opacity="0.35"/>
+          </g>
+
+          <line x1="${shoulderJointX}" y1="${shoulderJointY}" x2="${elbowX}" y2="${elbowY}" stroke="var(--ergo-person-limb)" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="${elbowX}" cy="${elbowY}" r="4.5" fill="var(--ergo-person-arm-fore)"/>
+          <line x1="${elbowX}" y1="${elbowY}" x2="${wristX}" y2="${wristY}" stroke="var(--ergo-person-arm-fore)" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="${wristX + 8}" cy="${wristY + 1}" rx="7" ry="3.5" fill="var(--ergo-person-arm-fore)"/>
+
+          <line x1="${hipX + 4}" y1="${hipY + 3}" x2="${kneeX}" y2="${kneeY}" stroke="var(--ergo-person-limb)" stroke-width="13" stroke-linecap="round"/>
+          <circle cx="${kneeX}" cy="${kneeY}" r="5" fill="var(--ergo-person-leg-fore)"/>
+          <line x1="${kneeX - 2}" y1="${kneeY}" x2="${kneeX - 6}" y2="${ankleY}" stroke="var(--ergo-person-leg-fore)" stroke-width="11" stroke-linecap="round"/>
+          <path d="M ${kneeX - 14} ${ankleY + 2} L ${toeX} ${floorY - 3} L ${toeX + 2} ${floorY} L ${kneeX - 16} ${floorY} Z" fill="var(--ergo-person-leg-fore)"/>
+        `;
+
+        // ===== Ángulos =====
+        const anglesSVG = `
+          <path d="M ${kneeX - 2} ${kneeY + 16} A 16 16 0 0 0 ${kneeX - 18} ${kneeY}" stroke="#10b981" stroke-width="2.25" fill="none"/>
+          <rect x="${kneeX - 58}" y="${kneeY + 22}" width="42" height="22" rx="11" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="1.75"/>
+          <text x="${kneeX - 37}" y="${kneeY + 38}" font-size="13" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">90°</text>
+
+          <path d="M ${elbowX - 14} ${elbowY} A 14 14 0 0 1 ${elbowX} ${elbowY - 14}" stroke="#10b981" stroke-width="2.25" fill="none"/>
+          <rect x="${elbowX + 8}" y="${elbowY - 40}" width="44" height="22" rx="11" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="1.75"/>
+          <text x="${elbowX + 30}" y="${elbowY - 24}" font-size="13" fill="#10b981" font-weight="800" font-family="var(--font-mono)" text-anchor="middle">90°</text>
+        `;
+
+        // ===== Regla cm (left edge) =====
+        const ruler = (() => {
+          let r = `<rect x="8" y="0" width="10" height="${VBH}" fill="var(--ergo-blueprint-strong)" opacity="0.35"/>`;
+          for (let cm = 0; cm <= 220; cm += 10) {
+            const y = floorY - cm * SCALE;
+            if (y < 12 || y > floorY + 2) continue;
+            const major = cm % 50 === 0;
+            const len = major ? 10 : 5;
+            r += `<line x1="18" y1="${y}" x2="${18 + len}" y2="${y}" stroke="var(--ergo-person-limb)" stroke-width="${major ? 1.25 : 0.65}" opacity="${major ? 0.85 : 0.45}"/>`;
+            if (major && cm > 0) {
+              r += `<text x="${18 + len + 2}" y="${y + 3}" font-size="9" fill="var(--ergo-person-limb)" font-family="var(--font-mono)" opacity="0.85">${cm}</text>`;
+            }
+          }
+          r += `<text x="13" y="${floorY + 18}" font-size="8" fill="var(--ergo-person-limb)" font-family="var(--font-mono)" text-anchor="middle" opacity="0.65" letter-spacing="1">CM</text>`;
+          return r;
+        })();
+
+        // ===== Safe zones =====
+        const safeSeat = `<rect x="${chairCenterX - 64}" y="${seatY - 5}" width="128" height="10" fill="${C_SAFE}" opacity="0.2"/>`;
+        const safeDesk = `<rect x="${deskFrontX - 2}" y="${deskTopY - 5}" width="${deskDepth + 4}" height="10" fill="${C_SAFE}" opacity="0.18"/>`;
+
+        // ===== Dim lines =====
+        const dims = `
+          ${dimVertical(railMonitor, eyeY, monCx - 4, m.topMonitor, C_EYE)}
+          ${dimVertical(railDesk, deskTopY - 4, deskFrontX, m.escritorio, C_DESK)}
+          ${dimVertical(railAsiento, seatY, chairCenterX - 52, m.asiento, C_SEAT)}
+        `;
+
+        const monDistDim = i.monitor === 'laptop' ? '' : dimHorizontal(eyeY - 34, hipX + headR + 4, monFrontX - 3, m.distMin + '-' + m.distMax + ' cm', C_EYE);
+
+        const eyeGuide = `<line x1="${railMonitor + 30}" y1="${eyeY}" x2="${monFrontX - 3}" y2="${eyeY}" stroke="#10b981" stroke-width="0.75" stroke-dasharray="4,4" opacity="0.5"/>`;
+
+        const svg = `<svg viewBox="0 0 ${VBW} ${VBH}" xmlns="http://www.w3.org/2000/svg" role="img" class="ergo-svg" preserveAspectRatio="xMidYMax meet">
+          <defs>
+            <linearGradient id="ergo-bg" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="var(--ergo-bg-top)"/>
+              <stop offset="100%" stop-color="var(--ergo-bg-bot)"/>
+            </linearGradient>
+            <pattern id="grid-minor" width="24" height="24" patternUnits="userSpaceOnUse">
+              <path d="M 24 0 L 0 0 0 24" fill="none" stroke="var(--ergo-blueprint-strong)" stroke-width="0.5" opacity="0.7"/>
+            </pattern>
+            <pattern id="grid-major" width="120" height="120" patternUnits="userSpaceOnUse">
+              <path d="M 120 0 L 0 0 0 120" fill="none" stroke="var(--ergo-blueprint-strong)" stroke-width="1" opacity="0.85"/>
+            </pattern>
+            <marker id="arrUp" viewBox="0 0 10 10" refX="5" refY="0" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 10 L 5 0 L 10 10 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrDown" viewBox="0 0 10 10" refX="5" refY="10" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 5 10 L 10 0 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrLeft" viewBox="0 0 10 10" refX="0" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 10 0 L 0 5 L 10 10 Z" fill="currentColor"/>
+            </marker>
+            <marker id="arrRight" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 Z" fill="currentColor"/>
+            </marker>
+          </defs>
+
+          <rect width="${VBW}" height="${VBH}" fill="url(#ergo-bg)"/>
+          <rect x="${gridStartX}" y="0" width="${VBW - gridStartX}" height="${VBH}" fill="url(#grid-minor)"/>
+          <rect x="${gridStartX}" y="0" width="${VBW - gridStartX}" height="${VBH}" fill="url(#grid-major)"/>
+
+          ${ruler}
+
+          ${safeSeat}
+          ${safeDesk}
+
+          <!-- Suelo -->
+          <line x1="${gridStartX}" y1="${floorY}" x2="${VBW - 10}" y2="${floorY}" stroke="var(--ergo-floor)" stroke-width="2.5" stroke-linecap="round"/>
+          <g opacity="0.5">
+            ${Array.from({ length: 14 }, (_, k) => {
+              const x = gridStartX + 8 + k * 48;
+              if (x > VBW - 20) return '';
+              return `<line x1="${x}" y1="${floorY + 3}" x2="${x + 10}" y2="${floorY + 10}" stroke="var(--ergo-floor)" stroke-width="1"/>`;
+            }).join('')}
+          </g>
+
+          <!-- Escritorio -->
+          <ellipse cx="${deskFrontX + deskDepth / 2}" cy="${floorY + 1}" rx="${deskDepth / 2 + 8}" ry="3" fill="var(--ergo-desk)" opacity="0.18"/>
+          <rect x="${deskFrontX}" y="${deskTopY - 8}" width="${deskDepth}" height="10" rx="1.5" fill="var(--ergo-desk)"/>
+          <rect x="${deskFrontX}" y="${deskTopY + 1}" width="${deskDepth}" height="2" fill="var(--ergo-desk)" opacity="0.6"/>
+          <line x1="${deskFrontX}" y1="${deskTopY - 8}" x2="${deskFrontX}" y2="${deskTopY + 1}" stroke="var(--ergo-desk)" stroke-width="2" opacity="0.85"/>
+          <rect x="${deskFrontX + 30}" y="${deskTopY + 4}" width="${deskDepth - 60}" height="${(floorY - deskTopY) * 0.5}" fill="var(--ergo-desk)" opacity="0.12"/>
+          <rect x="${deskFrontX + 8}" y="${deskTopY + 4}" width="7" height="${floorY - deskTopY - 6}" fill="var(--ergo-desk)" opacity="0.9"/>
+          <rect x="${deskFrontX + deskDepth - 15}" y="${deskTopY + 4}" width="7" height="${floorY - deskTopY - 6}" fill="var(--ergo-desk)" opacity="0.95"/>
+          <rect x="${deskFrontX + 2}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
+          <rect x="${deskFrontX + deskDepth - 21}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
+
+          <!-- Teclado + ratón -->
+          <rect x="${kbdX}" y="${kbdY}" width="${kbdW}" height="${kbdH}" rx="1.5" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>
+          <rect x="${kbdX}" y="${kbdY + kbdH - 1}" width="${kbdW}" height="1" fill="var(--ergo-desk)" opacity="0.5"/>
+          <path d="M ${mouseCx - 10} ${deskTopY} Q ${mouseCx} ${deskTopY - 7} ${mouseCx + 10} ${deskTopY} Z" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>
+
+          ${chairSVG}
+          ${personSVG}
+          ${monitorSVG}
+          ${eyeGuide}
+          ${anglesSVG}
+          ${monDistDim}
+          ${dims}
+        </svg>`;
+
+        svgStage.innerHTML = svg;
+      }
+
+      function renderFigureDebounced() {
+        if (renderFigureDebounced._t) cancelAnimationFrame(renderFigureDebounced._t);
+        renderFigureDebounced._t = requestAnimationFrame(renderFigure);
+      }
+
+      // ===== Render progress =====
+      function renderProgress() {
+        const pct = ((S.step - 1) / 3) * 100;
+        app.dataset.step = S.step;
+        document.documentElement.style.setProperty('--ergo-progress', pct + '%');
+        const pb = $('ergo-progress');
+        pb.setAttribute('aria-valuenow', Math.min(3, S.step - 1));
+        pb.setAttribute('aria-valuetext', 'Step ' + (S.step <= 3 ? S.step : 3) + ' of 3' + (S.step === 4 ? ' completed' : ''));
+        progressSteps.forEach((el) => {
+          const n = +el.dataset.step;
+          el.classList.toggle('is-active', n === S.step);
+          el.classList.toggle('is-done', n < S.step);
+        });
+      }
+
+      function renderControls() {
+        btnBack.hidden = S.step === 1;
+        btnNext.hidden = false;
+        if (S.step === 1) btnNextLabel.textContent = 'Next';
+        else if (S.step === 2) btnNextLabel.textContent = 'Next';
+        else if (S.step === 3) btnNextLabel.textContent = 'Calculate result';
+        else {
+          btnNextLabel.textContent = 'Start again';
+        }
+      }
+
+      function showPanel(n) {
+        panels.forEach((p) => {
+          const pn = +p.dataset.panel;
+          if (pn === n) {
+            p.hidden = false;
+            requestAnimationFrame(() => p.classList.add('is-active'));
+          } else {
+            p.classList.remove('is-active');
+            p.hidden = true;
+          }
+        });
+      }
+
+      function focusFirstIn(panel) {
+        const first = panel.querySelector('input, button, [tabindex]:not([tabindex="-1"])');
+        if (first && typeof first.focus === 'function') first.focus({ preventScroll: true });
+      }
+
+      function announce(msg) {
+        liveRegion.textContent = '';
+        setTimeout(() => { liveRegion.textContent = msg; }, 50);
+      }
+
+      // ===== Compute + render results =====
+      function computeAndRender() {
+        const m = calcMeasures(S.inputs);
+        const score = calcScore(S.inputs);
+        const pri = calcPriorities(S.inputs);
+        const tips = buildTips(m, S.inputs);
+        const ctas = buildCTAs(pri, m, S.inputs);
+        S.computed = { m, score, pri, tips, ctas };
+
+        // Sub text
+        $('result-sub').innerHTML = 'Calculated for <strong>' + S.inputs.estatura + ' cm</strong>, monitor <strong>' + (S.inputs.monitor === 'laptop' ? 'laptop' : S.inputs.monitor + '"') + '</strong>, <strong>' + S.inputs.horas + 'h/day</strong>. Based on ISO 7250 (±2 cm depending on personal proportions).';
+
+        // Score card
+        const scoreCard = $('score-card');
+        scoreCard.dataset.color = score.color;
+        $('score-badge').textContent = score.badge;
+        $('score-title').textContent = score.title;
+        $('score-desc').textContent = score.desc;
+        animateCount($('score-num'), 0, score.value, 900);
+        const ringLen = 2 * Math.PI * 52;
+        const ringFill = $('ring-fill');
+        ringFill.style.strokeDasharray = ringLen;
+        ringFill.style.strokeDashoffset = ringLen - (score.value / 100) * ringLen;
+
+        // Measures
+        const measHtml = [
+          ['Seat height', m.asiento, 'cm', 'From the floor to the seat edge'],
+          ['Desk height', m.escritorio, 'cm', 'Seated, elbows at 90-100 degrees'],
+          ...(S.inputs.usoPie !== 'sentado' ? [['Desk height (standing)', m.escritorioPie, 'cm', 'For standing work']] : []),
+          ['Top monitor edge', m.topMonitor, 'cm', 'From the floor to the top of the screen'],
+          ['Eye-to-monitor distance', m.distMin + '-' + m.distMax, 'cm', 'From your eyes to the screen'],
+          ['Seat depth', m.profundidad, 'cm', '2-4 fingers between knee and seat edge'],
+        ];
+        $('result-measures').innerHTML = measHtml.map((r, i) => `
+          <div class="ergo-measure" style="--i:${i}">
+            <div class="ergo-measure-label">${r[0]}</div>
+            <div class="ergo-measure-value">${r[1]}<span class="ergo-measure-unit"> ${r[2]}</span></div>
+            <div class="ergo-measure-hint">${r[3]}</div>
+          </div>
+        `).join('');
+
+        // Tips
+        if (tips.length === 0) {
+          $('result-tips').innerHTML = '';
+        } else {
+          $('result-tips').innerHTML = `
+            <h3 class="ergo-tips-title">Avisos para tu caso</h3>
+            <ul class="ergo-tips-list">
+              ${tips.map((t) => `<li class="ergo-tip ergo-tip--${t.type}"><span class="sr-only">${t.type === 'warn' ? 'Aviso: ' : 'Consejo: '}</span>${t.txt}</li>`).join('')}
+            </ul>`;
+        }
+
+        // CTAs
+        $('result-ctas').innerHTML = ctas.map((c, idx) => `
+          <li class="ergo-cta" style="--cta-color: ${c.color}; --i:${idx}">
+            <span class="ergo-cta-num" aria-hidden="true">${idx + 1}</span>
+            <div class="ergo-cta-body">
+              <span class="ergo-cta-cat">${c.categoria}</span>
+              <h4 class="ergo-cta-title">${c.titulo}</h4>
+              <p class="ergo-cta-razon">${c.razon}</p>
+              <a class="ergo-cta-link" href="${c.href}">Ver comparativa <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+        `).join('');
+
+        announce('Resultado calculado. Tu score: ' + score.value + ' de 100, ' + score.tag + '.');
+        persistURL();
+      }
+
+      function animateCount(el, from, to, ms) {
+        if (prefersReduced) { el.textContent = to; return; }
+        const start = performance.now();
+        const step = (now) => {
+          const t = Math.min(1, (now - start) / ms);
+          const eased = 1 - Math.pow(1 - t, 3);
+          el.textContent = Math.round(from + (to - from) * eased);
+          if (t < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      }
+
+      // ===== Navigation =====
+      function goTo(n) {
+        if (n < 1 || n > 4) return;
+        S.step = n;
+        showPanel(n);
+        renderProgress();
+        renderControls();
+        const panel = document.querySelector('[data-panel="' + n + '"]');
+        focusFirstIn(panel);
+        announce('Step ' + (n <= 3 ? n + ' of 3' : 'result'));
+        if (n === 4) computeAndRender();
+      }
+
+      btnNext.addEventListener('click', () => {
+        if (S.step === 4) { resetAll(); return; }
+        goTo(S.step + 1);
+      });
+      btnBack.addEventListener('click', () => { if (S.step > 1) goTo(S.step - 1); });
+
+      // Progress clickable
+      progressSteps.forEach((el) => {
+        el.addEventListener('click', () => {
+          const n = +el.dataset.step;
+          if (n <= S.step || n === S.step + 1) goTo(n);
+        });
+        el.setAttribute('role', 'button');
+        el.setAttribute('tabindex', '0');
+        el.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.click(); }
+        });
+      });
+
+      // ===== Input listeners =====
+      inpEstatura.addEventListener('input', () => {
+        const v = clampEstatura(+inpEstatura.value);
+        S.inputs.estatura = v;
+        outEstaturaVal.textContent = v;
+        inpEstaturaNum.value = v;
+        renderFigureDebounced();
+      });
+      inpEstaturaNum.addEventListener('input', () => {
+        const v = clampEstatura(+inpEstaturaNum.value || 175);
+        S.inputs.estatura = v;
+        inpEstatura.value = v;
+        outEstaturaVal.textContent = v;
+        renderFigureDebounced();
+      });
+      inpHoras.addEventListener('input', () => {
+        const v = +inpHoras.value;
+        S.inputs.horas = v;
+        outHorasVal.textContent = v;
+      });
+
+      document.querySelectorAll('input[name="genero"]').forEach((el) => {
+        el.addEventListener('change', () => { S.inputs.genero = el.value; renderFigureDebounced(); });
+      });
+      document.querySelectorAll('input[name="edad"]').forEach((el) => {
+        el.addEventListener('change', () => { S.inputs.edad = el.value; renderFigureDebounced(); });
+      });
+      document.querySelectorAll('input[name="monitor"]').forEach((el) => {
+        el.addEventListener('change', () => { S.inputs.monitor = el.value; renderFigureDebounced(); });
+      });
+      document.querySelectorAll('input[name="silla"]').forEach((el) => {
+        el.addEventListener('change', () => { S.inputs.silla = el.value; renderFigureDebounced(); });
+      });
+      document.querySelectorAll('input[name="usoPie"]').forEach((el) => {
+        el.addEventListener('change', () => { S.inputs.usoPie = el.value; renderFigureDebounced(); });
+      });
+
+      // Dolor multiselect with exclusive "ninguno"
+      document.querySelectorAll('input[name="dolor"]').forEach((cb) => {
+        cb.addEventListener('change', () => {
+          if (cb.checked && cb.value === 'ninguno') {
+            document.querySelectorAll('input[name="dolor"]').forEach((o) => { if (o !== cb) { o.checked = false; S.inputs.dolor.delete(o.value); } });
+            S.inputs.dolor.clear();
+            S.inputs.dolor.add('ninguno');
+          } else if (cb.checked) {
+            const nn = document.querySelector('input[name="dolor"][value="ninguno"]');
+            if (nn && nn.checked) { nn.checked = false; S.inputs.dolor.delete('ninguno'); }
+            S.inputs.dolor.add(cb.value);
+          } else {
+            S.inputs.dolor.delete(cb.value);
+          }
+          cb.closest('.ergo-dolor-chip').classList.toggle('is-selected', cb.checked);
+        });
+      });
+
+      // ===== Share =====
+      function persistURL() {
+        try {
+          const p = new URLSearchParams();
+          p.set('h', S.inputs.estatura);
+          p.set('g', S.inputs.genero);
+          p.set('e', S.inputs.edad);
+          p.set('m', S.inputs.monitor);
+          p.set('s', S.inputs.silla);
+          p.set('hr', S.inputs.horas);
+          p.set('u', S.inputs.usoPie);
+          if (S.inputs.dolor.size) p.set('d', [...S.inputs.dolor].join(','));
+          const url = location.pathname + '?' + p + '#resultado';
+          history.replaceState(null, '', url);
+        } catch (_) {}
+      }
+
+      function hydrateFromURL() {
+        const p = new URLSearchParams(location.search);
+        if (!p.has('h')) return false;
+        const h = clampEstatura(+p.get('h'));
+        if (!h) return false;
+        S.inputs.estatura = h;
+        S.inputs.genero = ['h', 'm', 'x'].includes(p.get('g')) ? p.get('g') : 'h';
+        S.inputs.edad = ['<30', '30-45', '45-60', '>60'].includes(p.get('e')) ? p.get('e') : '30-45';
+        S.inputs.monitor = ['22', '24', '27', '32', '34', 'laptop'].includes(p.get('m')) ? p.get('m') : '24';
+        S.inputs.silla = ['ergo', 'gaming', 'basica', 'ninguna'].includes(p.get('s')) ? p.get('s') : 'ergo';
+        S.inputs.horas = Math.max(1, Math.min(14, +p.get('hr') || 8));
+        S.inputs.usoPie = ['sentado', 'alternar', 'pie'].includes(p.get('u')) ? p.get('u') : 'sentado';
+        if (p.has('d')) p.get('d').split(',').filter((x) => DOLOR_VALID.includes(x)).forEach((x) => S.inputs.dolor.add(x));
+        // Apply to DOM
+        inpEstatura.value = h; inpEstaturaNum.value = h; outEstaturaVal.textContent = h;
+        document.querySelector('input[name="genero"][value="' + S.inputs.genero + '"]').checked = true;
+        document.querySelector('input[name="edad"][value="' + S.inputs.edad + '"]').checked = true;
+        document.querySelector('input[name="monitor"][value="' + S.inputs.monitor + '"]').checked = true;
+        document.querySelector('input[name="silla"][value="' + S.inputs.silla + '"]').checked = true;
+        inpHoras.value = S.inputs.horas; outHorasVal.textContent = S.inputs.horas;
+        document.querySelector('input[name="usoPie"][value="' + S.inputs.usoPie + '"]').checked = true;
+        S.inputs.dolor.forEach((d) => {
+          const el = document.querySelector('input[name="dolor"][value="' + d + '"]');
+          if (el) { el.checked = true; el.closest('.ergo-dolor-chip').classList.add('is-selected'); }
+        });
+        S.hydrated = true;
+        return true;
+      }
+
+      $('btn-share').addEventListener('click', () => {
+        persistURL();
+        const url = location.origin + location.pathname + location.search;
+        const inp = $('share-input');
+        inp.value = url;
+        shareModal.hidden = false;
+        requestAnimationFrame(() => {
+          shareModal.classList.add('is-open');
+          $('btn-copy-share').focus();
+        });
+      });
+
+      document.querySelectorAll('[data-close-modal]').forEach((el) => {
+        el.addEventListener('click', () => {
+          shareModal.classList.remove('is-open');
+          setTimeout(() => { shareModal.hidden = true; $('btn-share').focus(); }, 200);
+        });
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !shareModal.hidden) {
+          shareModal.classList.remove('is-open');
+          setTimeout(() => { shareModal.hidden = true; $('btn-share').focus(); }, 200);
+        }
+      });
+
+      $('btn-copy-share').addEventListener('click', async () => {
+        const inp = $('share-input');
+        try {
+          await navigator.clipboard.writeText(inp.value);
+          const btn = $('btn-copy-share');
+          const orig = btn.textContent;
+          btn.textContent = 'Copied!';
+          setTimeout(() => { btn.textContent = orig; }, 1800);
+        } catch (_) {
+          inp.select();
+          document.execCommand && document.execCommand('copy');
+        }
+      });
+
+      function resetAll() {
+        // Reset state to defaults
+        S.inputs.estatura = 175;
+        S.inputs.genero = 'h';
+        S.inputs.edad = '30-45';
+        S.inputs.monitor = '24';
+        S.inputs.silla = 'ergo';
+        S.inputs.horas = 8;
+        S.inputs.usoPie = 'sentado';
+        S.inputs.dolor.clear();
+        // Reset DOM
+        inpEstatura.value = 175;
+        inpEstaturaNum.value = 175;
+        outEstaturaVal.textContent = 175;
+        inpHoras.value = 8;
+        outHorasVal.textContent = 8;
+        const setChecked = (name, val) => {
+          const el = document.querySelector('input[name="' + name + '"][value="' + val + '"]');
+          if (el) el.checked = true;
+        };
+        setChecked('genero', 'h');
+        setChecked('edad', '30-45');
+        setChecked('monitor', '24');
+        setChecked('silla', 'ergo');
+        setChecked('usoPie', 'sentado');
+        document.querySelectorAll('input[name="dolor"]').forEach((el) => {
+          el.checked = false;
+          el.closest('.ergo-dolor-chip').classList.remove('is-selected');
+        });
+        history.replaceState(null, '', location.pathname);
+        renderFigure();
+        goTo(1);
+      }
+
+      // ===== popstate =====
+      window.addEventListener('popstate', () => {
+        if (hydrateFromURL()) { goTo(4); }
+        else { goTo(1); }
+      });
+
+      // ===== Modal focus trap =====
+      shareModal.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab' || shareModal.hidden) return;
+        const focusables = shareModal.querySelectorAll('button, input, [tabindex]:not([tabindex="-1"])');
+        if (!focusables.length) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      });
+
+      // ===== Bootstrap =====
+      renderProgress();
+      renderControls();
+      if (hydrateFromURL()) {
+        goTo(4);
+      } else {
+        renderFigure();
+      }
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'calc_ergo_loaded', { event_category: 'herramientas' });
+      }
+    })();
+  </script>
+</Base>

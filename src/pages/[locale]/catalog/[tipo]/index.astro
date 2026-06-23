@@ -1,0 +1,72 @@
+---
+import Base from '@/layouts/Base.astro';
+import CatalogoProductos from '@/components/producto/CatalogoProductos.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
+import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .flatMap(locale => TIPOS_CON_DATOS.map((tipo) => ({
+      params: { locale: pathLocaleSegment(locale), tipo: localizedTipoSlug(tipo, locale) },
+      props: { locale, tipo },
+    })));
+}
+
+const { locale, tipo: tipoParam } = Astro.props as { locale: Locale; tipo: string };
+const tipo = sourceTipoSlug(tipoParam, locale);
+const cfg = getTipoConfig(tipo)!;
+const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
+const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
+const siteUrl = 'https://tuespaciodetrabajo.com';
+const pagePath = catalogPath(locale, tipo);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['catalogo', tipo]),
+  [locale]: pagePath,
+});
+const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
+const paresVs = seleccionarParesVs(productos, 16);
+const itemList = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Ergonomic office chairs for home offices',
+  numberOfItems: productos.length,
+  itemListElement: productos.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${siteUrl}${catalogPath(locale, tipo)}${p.slug}/`, name: localizedProductName(p, locale) })),
+};
+---
+<Base
+  title="Ergonomic Office Chairs | Product Catalog"
+  description="Compare ergonomic office chairs with verified specs, editorial scores, price tiers and side-by-side product comparisons."
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+  locale={locale}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <span>Chairs</span></nav>
+    <h1>Ergonomic office chairs</h1>
+    <p class="cat-intro">Use the filters to compare verified chair specs: backrest type, armrests, weight capacity, recommended user height and editorial scores.</p>
+    <CatalogoProductos productos={productos} tipo={tipo} locale={locale} />
+    {paresVs.length > 0 && (
+      <section class="comparativas-rel" aria-labelledby="comparativas-titulo">
+        <h2 id="comparativas-titulo">Popular chair comparisons</h2>
+        <ul class="comparativas-lista">
+          {paresVs.map(([a, b]) => (
+            <li><a href={comparePath(tipo, `${a}-vs-${b}`, locale)}>{porSlug[a] ? localizedProductName(porSlug[a], locale) : a} vs {porSlug[b] ? localizedProductName(porSlug[b], locale) : b}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </main>
+</Base>
+<style>
+  .cat-intro { color: var(--ink-muted); max-width: 760px; line-height: 1.65; }
+  .comparativas-rel { margin-top: 3rem; }
+  .comparativas-rel h2 { margin-bottom: 1rem; }
+  .comparativas-lista { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0.5rem 1.5rem; }
+  .comparativas-lista a { color: var(--ink); }
+  .comparativas-lista a:hover { color: var(--accent, var(--ink)); }
+</style>

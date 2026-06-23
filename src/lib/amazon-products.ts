@@ -1,4 +1,5 @@
 import amazonProducts from '@/data/amazon-products.json';
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/i18n/locales';
 
 export interface CachedAmazonProduct {
   asin: string;
@@ -60,7 +61,7 @@ export function isAmazonProductAvailable(urlOrAsin?: string | null): boolean | n
   return typeof available === 'boolean' ? available : null;
 }
 
-export function formatAmazonLastChecked(urlOrAsin?: string | null): string | null {
+export function formatAmazonLastChecked(urlOrAsin?: string | null, locale: Locale = DEFAULT_LOCALE): string | null {
   const product = getCachedAmazonProduct(urlOrAsin);
   if (!product) return null;
 
@@ -70,7 +71,7 @@ export function formatAmazonLastChecked(urlOrAsin?: string | null): string | nul
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return null;
 
-  return new Intl.DateTimeFormat('es-ES', {
+  return new Intl.DateTimeFormat(LOCALES[locale].htmlLang, {
     day: '2-digit',
     month: '2-digit',
     year: 'numeric',

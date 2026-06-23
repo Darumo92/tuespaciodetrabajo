@@ -1,0 +1,79 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['about']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['sobre-mi']),
+  en: localizedPath(locale, ['about']),
+});
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'David Rubio Mota',
+  alternateName: 'David Rubio',
+  url: canonical,
+  jobTitle: 'Software engineer and founder of Tu Espacio de Trabajo',
+  description: 'Software engineer working remotely since 2019. David writes practical home office and ergonomics guides from a real remote-work setup.',
+  sameAs: ['https://www.linkedin.com/in/david-rubio-mota/'],
+};
+---
+
+<Base
+  title="About David Rubio | Tu Espacio de Trabajo"
+  description="About David Rubio, the software engineer behind Tu Espacio de Trabajo and its practical home office buying guides."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
+
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>About</span>
+    </nav>
+
+    <h1>About David Rubio</h1>
+    <p>
+      I am David Rubio Mota, a software engineer based near Barcelona, and I have worked remotely since 2019.
+      Tu Espacio de Trabajo is where I publish practical home office guides: chairs, desks, monitors,
+      lighting, accessories and ergonomics for people who spend real workdays at a desk.
+    </p>
+    <p>
+      My perspective is practical rather than medical. I compare product specs, read buyer feedback,
+      use my own setup as a reference point and explain clearly when a recommendation is based on direct
+      experience versus research.
+    </p>
+
+    <h2>My real setup</h2>
+    <ul>
+      <li>Chair: Herman Miller Aeron.</li>
+      <li>Desk: fixed wooden desktop with IKEA legs.</li>
+      <li>Displays: two 27-inch monitors.</li>
+      <li>Keyboard: Keychron Q1 Max.</li>
+      <li>Mouse: Lamzu Maya X 8K.</li>
+      <li>Headphones: Beyerdynamic DT770 Pro.</li>
+    </ul>
+
+    <h2>How the site is funded</h2>
+    <p>
+      Tu Espacio de Trabajo uses Amazon affiliate links. As an Amazon Associate, we earn from qualifying
+      purchases at no extra cost to you. Product placement is not sold, and affiliate links do not decide
+      the ranking of a recommendation.
+    </p>
+
+    <p>
+      You can read the full process in the <a href={localizedPath(locale, ['editorial-methodology'])}>editorial methodology</a>
+      and <a href={localizedPath(locale, ['how-we-test-products'])}>how we evaluate products</a> pages.
+    </p>
+  </article>
+</Base>
+

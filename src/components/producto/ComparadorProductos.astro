@@ -1,14 +1,61 @@
 ---
 import { getTipoConfig } from '@/lib/tipos';
+import { catalogPath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
-interface Props { productos: Producto[]; tipo: string; }
-const { productos, tipo } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+interface Props { productos: Producto[]; tipo: string; locale?: Locale; }
+const { productos, tipo, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
 const cfg = getTipoConfig(tipo)!;
-const datos = JSON.stringify({ productos, comparador: cfg.comparador });
+const labelMap: Record<string, string> = {
+  'Valoración por ejes': 'Category scores',
+  'Precio y garantía': 'Price and warranty',
+  'Construcción': 'Build',
+  'Ergonomía': 'Ergonomics',
+  'Ajustabilidad': 'Adjustability',
+  'Materiales': 'Materials',
+  'Comodidad': 'Comfort',
+  'Calidad-precio': 'Value',
+  'Tramo de precio': 'Price tier',
+  'Garantía (años)': 'Warranty',
+  'Peso máximo (kg)': 'Max supported weight',
+  'Reclinación máx (°)': 'Max recline',
+};
+const comparador = cfg.comparador.map((fila) => ({
+  ...fila,
+  grupo: isEn ? labelMap[fila.grupo] ?? fila.grupo : fila.grupo,
+  etiqueta: isEn ? labelMap[fila.etiqueta] ?? fila.etiqueta : fila.etiqueta,
+}));
+const productosRuntime = isEn
+  ? productos.map((p) => ({
+      slug: p.slug,
+      tipo: p.tipo,
+      nombre: p.nombre,
+      marca: p.marca,
+      tramoPrecio: p.tramoPrecio,
+      valoracion: p.valoracion,
+      valoraciones: p.valoraciones,
+      amazon: p.amazon,
+      webOficial: p.webOficial,
+      specs: p.specs,
+    }))
+  : productos;
+const datos = JSON.stringify({
+  productos: productosRuntime,
+  comparador,
+  locale,
+  catalogBase: catalogPath(locale, tipo),
+  productBase: catalogPath(locale, tipo),
+  typeSlug: localizedTipoSlug(tipo, locale),
+});
 ---
-<section class="cmp" data-json={datos} data-tipo={tipo}>
+<section class="cmp" data-json={datos} data-tipo={localizedTipoSlug(tipo, locale)}>
   <div id="cmp-out"></div>
-  <p id="cmp-empty" class="cmp-empty" hidden>Elige entre 2 y 4 en el <a href={`/catalogo/${tipo}/`}>catálogo</a> (casillas "comparar") y vuelve aquí.</p>
+  <p id="cmp-empty" class="cmp-empty" hidden>
+    {isEn ? 'Choose 2 to 4 products in the ' : 'Elige entre 2 y 4 en el '}
+    <a href={catalogPath(locale, tipo)}>{isEn ? 'catalog' : 'catálogo'}</a>
+    {isEn ? ' using the compare boxes, then come back here.' : ' (casillas "comparar") y vuelve aquí.'}
+  </p>
 </section>
 <style>
   .cmp-empty { color: var(--ink-muted); }
@@ -35,10 +82,12 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
 
   const root = document.querySelector('.cmp') as HTMLElement | null;
   if (root) {
-    const { productos, comparador } = JSON.parse(root.dataset.json || '{"productos":[],"comparador":[]}') as {
-      productos: Producto[]; comparador: { campo: string; etiqueta: string; direccion?: 'mayor' | 'menor'; grupo: string }[];
+    const { productos, comparador, locale, productBase } = JSON.parse(root.dataset.json || '{"productos":[],"comparador":[]}') as {
+      productos: Producto[]; comparador: { campo: string; etiqueta: string; direccion?: 'mayor' | 'menor'; grupo: string }[]; locale?: 'es-ES' | 'en'; productBase?: string;
     };
-    const tipo = root.dataset.tipo || '';
+    const currentLocale = locale || 'es-ES';
+    const isEn = currentLocale === 'en';
+    const productUrl = (slug: string) => `${productBase || `/catalogo/${root.dataset.tipo || ''}/`}${slug}/`;
     const out = root.querySelector('#cmp-out') as HTMLElement;
     const empty = root.querySelector('#cmp-empty') as HTMLElement;
     const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c] as string));
@@ -51,18 +100,18 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
     else {
       function celda(p: Producto, campo: string): string {
         const v = getCampo(p, campo);
-        if (campo === 'tramoPrecio') return tramoTexto(Number(v));
-        if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
-        if (campo.startsWith('valoraciones.')) return v == null ? '<span class="cmp-nd">sin valorar</span>' : `<b>${Number(v).toFixed(1)}</b>`;
+        if (campo === 'tramoPrecio') return tramoTexto(Number(v), currentLocale);
+        if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v, currentLocale);
+        if (campo.startsWith('valoraciones.')) return v == null ? `<span class="cmp-nd">${isEn ? 'not rated' : 'sin valorar'}</span>` : `<b>${Number(v).toFixed(1)}</b>`;
         const fmt = campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
-        return v == null ? '<span class="cmp-nd">n/d</span>' : formatoSpec(v, fmt);
+        return v == null ? `<span class="cmp-nd">${isEn ? 'n/a' : 'n/d'}</span>` : formatoSpec(v, fmt, currentLocale);
       }
       const head = sel.map((p) => {
         const g = notaGlobal(p);
-        const productCta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: p.nombre, marca: p.marca });
+        const productCta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: p.nombre, marca: p.marca, locale: currentLocale });
         const rel = productCta.sponsored ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer';
         const cta = productCta.href ? `<a class="cmp-cta" href="${esc(productCta.href)}" target="_blank" rel="${rel}">${esc(productCta.label)}</a><br>` : '';
-        return `<td><div class="cmp-name"><a href="/catalogo/${tipo}/${esc(p.slug)}/">${esc(p.nombre)}</a></div>${g != null ? `<div class="cmp-global">${g.toFixed(1)}<small>/10</small></div>` : ''}${cta}<button class="cmp-rm" data-slug="${esc(p.slug)}">✕ quitar</button></td>`;
+        return `<td><div class="cmp-name"><a href="${productUrl(esc(p.slug))}">${esc(p.nombre)}</a></div>${g != null ? `<div class="cmp-global">${g.toFixed(1)}<small>/10</small></div>` : ''}${cta}<button class="cmp-rm" data-slug="${esc(p.slug)}">✕ ${isEn ? 'remove' : 'quitar'}</button></td>`;
       }).join('');
 
       let lastGrupo = '';
@@ -72,12 +121,12 @@ const datos = JSON.stringify({ productos, comparador: cfg.comparador });
         const gan = fila.direccion ? ganadoresPorValor(sel.map((p) => ({ slug: p.slug, valor: (getCampo(p, fila.campo) as number | null) })), fila.direccion) : [];
         const cells = sel.map((p) => {
           const win = gan.includes(p.slug);
-          return `<td class="${win ? 'cmp-win' : ''}">${celda(p, fila.campo)}${win ? '<span class="cmp-wtag">mejor</span>' : ''}</td>`;
+          return `<td class="${win ? 'cmp-win' : ''}">${celda(p, fila.campo)}${win ? `<span class="cmp-wtag">${isEn ? 'best' : 'mejor'}</span>` : ''}</td>`;
         }).join('');
         return `${pre}<tr><td class="cmp-attr">${esc(fila.etiqueta)}</td>${cells}</tr>`;
       }).join('');
 
-      out.innerHTML = `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><td class="cmp-attr"></td>${head}</tr></thead><tbody>${body}</tbody></table></div><p class="cmp-legend">Celda resaltada = mejor valor de la fila. "n/d"/"sin valorar" no gana. Valoraciones por ejes editoriales.</p>`;
+      out.innerHTML = `<div class="cmp-scroll"><table class="cmp-table"><thead><tr><td class="cmp-attr"></td>${head}</tr></thead><tbody>${body}</tbody></table></div><p class="cmp-legend">${isEn ? 'Highlighted cell = best value in that row. "n/a"/"not rated" cannot win. Scores are editorial.' : 'Celda resaltada = mejor valor de la fila. "n/d"/"sin valorar" no gana. Valoraciones por ejes editoriales.'}</p>`;
       out.querySelectorAll('.cmp-rm').forEach((b) => b.addEventListener('click', () => {
         const slug = (b as HTMLElement).dataset.slug;
         const rest = sel.filter((p) => p.slug !== slug).map((p) => p.slug);

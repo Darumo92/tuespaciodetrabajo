@@ -8,6 +8,9 @@ import {
   getCachedAmazonPriceAmount,
   isAmazonProductAvailable,
 } from '@/lib/amazon-products';
+import { buildAmazonUrl, hasVerifiedCommerceLocale } from '@/i18n/amazon';
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/i18n/locales';
+import { t } from '@/i18n/ui';
 
 interface Producto {
   nombre: string;
@@ -19,23 +22,20 @@ interface Producto {
   marca?: string;
 }
 
-const AMAZON_TAG = 'tuespaciodet-21';
-
-function amazonHref(url: string): string {
-  const normalized = url.startsWith('/dp/') ? `https://www.amazon.es${url}` : url;
-  if (normalized.includes('tag=')) return normalized;
-  return `${normalized}${normalized.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`;
-}
-
 interface Props {
   productos: Producto[];
   titulo?: string;
+  locale?: Locale;
 }
 
-const { productos, titulo } = Astro.props;
+const { productos, titulo, locale = DEFAULT_LOCALE } = Astro.props;
+const localeConfig = LOCALES[locale];
+const ui = t(locale);
 
 const FALLBACK_IMAGE = '/og-default.jpg';
 const PRICE_VALID_UNTIL = `${new Date().getFullYear() + 1}-12-31`;
+const showVerifiedPrice = locale === DEFAULT_LOCALE;
+const includeOfferSchema = showVerifiedPrice && hasVerifiedCommerceLocale(locale);
 
 const productosConCache = productos.map((p) => {
   const precio = getCachedAmazonPrice(p.enlaceAmazon, p.precio);
@@ -47,9 +47,9 @@ const productosConCache = productos.map((p) => {
     precio,
     precioNum,
     imagen: getCachedAmazonImage(p.enlaceAmazon, p.imagen || ''),
-    disponibilidad: getCachedAmazonAvailability(p.enlaceAmazon),
-    disponible: isAmazonProductAvailable(p.enlaceAmazon),
-    revisado: formatAmazonLastChecked(p.enlaceAmazon),
+    disponibilidad: locale === DEFAULT_LOCALE ? getCachedAmazonAvailability(p.enlaceAmazon) : null,
+    disponible: locale === DEFAULT_LOCALE ? isAmazonProductAvailable(p.enlaceAmazon) : null,
+    revisado: formatAmazonLastChecked(p.enlaceAmazon, locale),
   };
 });
 
@@ -81,17 +81,17 @@ const productSchemas = productosConCache.map(p => {
         bestRating: 5,
       },
     },
-    ...(price && {
+    ...(price && includeOfferSchema && localeConfig.currency && localeConfig.country && {
       offers: {
         '@type': 'Offer',
-        priceCurrency: 'EUR',
+        priceCurrency: localeConfig.currency,
         price,
         priceValidUntil: PRICE_VALID_UNTIL,
         availability: p.disponible === false ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock',
-        ...(p.enlaceAmazon && { url: amazonHref(p.enlaceAmazon) }),
+        ...(p.enlaceAmazon && { url: buildAmazonUrl({ href: p.enlaceAmazon, locale }) }),
         hasMerchantReturnPolicy: {
           '@type': 'MerchantReturnPolicy',
-          applicableCountry: 'ES',
+          applicableCountry: localeConfig.country,
           returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
           merchantReturnDays: 30,
           returnMethod: 'https://schema.org/ReturnByMail',
@@ -102,11 +102,11 @@ const productSchemas = productosConCache.map(p => {
           shippingRate: {
             '@type': 'MonetaryAmount',
             value: 0,
-            currency: 'EUR',
+            currency: localeConfig.currency,
           },
           shippingDestination: {
             '@type': 'DefinedRegion',
-            addressCountry: 'ES',
+            addressCountry: localeConfig.country,
           },
           deliveryTime: {
             '@type': 'ShippingDeliveryTime',
@@ -149,21 +149,21 @@ function starData(val: number) {
 
 {productosConCache.length > 2 && (
   <div class="comp-sort">
-    <span class="comp-sort-label">Ordenar por:</span>
-    <button class="comp-sort-btn comp-sort-btn--active" data-sort="default" aria-pressed="true">Recomendado</button>
-    <button class="comp-sort-btn" data-sort="price-asc" aria-pressed="false">Precio ↑</button>
-    <button class="comp-sort-btn" data-sort="price-desc" aria-pressed="false">Precio ↓</button>
-    <button class="comp-sort-btn" data-sort="rating" aria-pressed="false">Valoración</button>
+    <span class="comp-sort-label">{ui.commerce.sortBy}:</span>
+    <button class="comp-sort-btn comp-sort-btn--active" data-sort="default" aria-pressed="true">{ui.commerce.recommended}</button>
+    {showVerifiedPrice && <button class="comp-sort-btn" data-sort="price-asc" aria-pressed="false">{ui.commerce.priceAsc}</button>}
+    {showVerifiedPrice && <button class="comp-sort-btn" data-sort="price-desc" aria-pressed="false">{ui.commerce.priceDesc}</button>}
+    <button class="comp-sort-btn" data-sort="rating" aria-pressed="false">{ui.commerce.rating}</button>
   </div>
 )}
 
 <div class="comp-grid">
   {productosConCache.map((p, i) => {
     const stars = starData(p.valoracion);
-    const amazonUrl = p.enlaceAmazon ? amazonHref(p.enlaceAmazon) : null;
+    const amazonUrl = p.enlaceAmazon ? buildAmazonUrl({ href: p.enlaceAmazon, locale }) : null;
     return (
-      <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={p.precio} data-price-num={p.precioNum} data-rating={p.valoracion} data-original-index={i}>
-        {i === 0 && <span class="comp-badge">🏆 Mejor opción</span>}
+      <div class={`comp-card ${i === 0 ? 'comp-card--top' : ''}`} data-product-name={p.nombre} data-product-price={showVerifiedPrice ? p.precio : undefined} data-price-num={showVerifiedPrice ? p.precioNum : undefined} data-rating={p.valoracion} data-original-index={i}>
+        {i === 0 && <span class="comp-badge">🏆 {ui.commerce.topPick}</span>}
 
         <div class="comp-header">
           {p.imagen && (
@@ -174,7 +174,7 @@ function starData(val: number) {
           <div class="comp-header-info">
             <p class="comp-name">{p.nombre}</p>
             <div class="comp-meta">
-              <div class="comp-stars" aria-label={`${p.valoracion} de 5 estrellas`}>
+              <div class="comp-stars" aria-label={locale === 'en' ? `${p.valoracion} out of 5 stars` : `${p.valoracion} de 5 estrellas`}>
                 {Array.from({ length: stars.full }).map(() => (
                   <svg class="comp-star comp-star--full" viewBox="0 0 20 20" width="16" height="16"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.33L10 13.27l-4.77 2.51.91-5.33L2.27 6.68l5.34-.78L10 1z" /></svg>
                 ))}
@@ -190,12 +190,12 @@ function starData(val: number) {
                 ))}
                 <span class="comp-rating-num">{p.valoracion}</span>
               </div>
-              <span class="comp-price">{p.precio}</span>
+              {showVerifiedPrice && <span class="comp-price">{p.precio}</span>}
             </div>
             {(p.disponibilidad || p.revisado) && (
               <p class={`comp-availability ${p.disponible === false ? 'comp-availability--out' : ''}`}>
                 {p.disponibilidad && <span>{p.disponibilidad}</span>}
-                {p.revisado && <span>Revisado: {p.revisado}</span>}
+                {p.revisado && <span>{ui.commerce.reviewed}: {p.revisado}</span>}
               </p>
             )}
 
@@ -213,8 +213,8 @@ function starData(val: number) {
               rel="nofollow noopener noreferrer sponsored"
             >
               <StoreIcon tienda="amazon" size={15} />
-              Amazon · {p.precio}
-              <span class="sr-only">(se abre en nueva pestaña)</span>
+              {showVerifiedPrice ? `Amazon · ${p.precio}` : ui.commerce.viewOnAmazon}
+              <span class="sr-only">({ui.commerce.opensNewTab})</span>
             </a>
           </div>
         )}

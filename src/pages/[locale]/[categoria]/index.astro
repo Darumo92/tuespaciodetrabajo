@@ -1,0 +1,190 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
+import SmoothScroll from '@/components/SmoothScroll.astro';
+import { getCollection } from 'astro:content';
+import { LOCALES, READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  const fallbackCategoriesByLocale: Partial<Record<Locale, string[]>> = {
+    en: ['chairs', 'desks', 'accessories', 'workspace', 'audio-video'],
+  };
+  const articles = await getCollection('articulosI18n');
+  const paths = READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .flatMap(locale => {
+      const categories = new Set(
+        articles
+          .filter(article => article.data.locale === locale && article.data.tipo !== 'informativo')
+          .map(article => article.data.categoriaSlug)
+      );
+      for (const category of fallbackCategoriesByLocale[locale] ?? []) categories.add(category);
+      return [...categories].map(categoria => ({
+        params: { locale: pathLocaleSegment(locale), categoria },
+        props: { locale, categoria },
+      }));
+    });
+
+  return paths;
+}
+
+const { locale, categoria } = Astro.props as { locale: Locale; categoria: string };
+const articles = await getCollection('articulosI18n', ({ data }) =>
+  data.locale === locale && data.categoriaSlug === categoria && data.tipo !== 'informativo'
+);
+const ordered = articles.sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
+const destacados = ordered.filter(a => a.data.destacado).slice(0, 3);
+
+const categoryInfo: Record<string, { es: string; title: string; description: string; intro: string; icon: string }> = {
+  chairs: {
+    es: 'sillas',
+    title: 'Ergonomic Office Chairs',
+    description: 'Independent ergonomic chair comparisons for remote workers: adjustability, lumbar support, comfort and Amazon availability.',
+    intro: 'A chair is the one home office purchase that affects your body every day. These guides focus on practical ergonomics: lumbar support, seat depth, armrest adjustment, breathable materials and the trade-offs that matter during long work sessions.',
+    icon: 'sillas',
+  },
+  desks: {
+    es: 'escritorios',
+    title: 'Standing Desks and Home Office Desks',
+    description: 'Desk and standing desk guides for home workers: size, stability, motor quality, cable management and ergonomic fit.',
+    intro: 'A good desk does more than hold a laptop. It sets your monitor height, your cable layout, the room you have for two screens and whether a standing desk makes sense for your day. These guides focus on practical desk choices for real home offices.',
+    icon: 'escritorios',
+  },
+  accessories: {
+    es: 'accesorios',
+    title: 'Home Office Accessories',
+    description: 'Ergonomic keyboards, vertical mice, monitor arms and practical accessories that make a home office easier to use every day.',
+    intro: 'The smaller accessories often fix the problems people blame on their chair or desk: wrists bent too far, a monitor sitting too low, cables everywhere or a laptop screen forcing the neck forward. This section focuses on accessories that earn their space.',
+    icon: 'accesorios',
+  },
+  workspace: {
+    es: 'ambiente',
+    title: 'Workspace Comfort',
+    description: 'Lighting, heat, airflow and workspace comfort guides for a healthier and more focused home office.',
+    intro: 'Light, temperature, noise and airflow change how long you can work comfortably. The goal here is not a showroom desk, but a room that stays usable during long calls, late afternoons and hot weeks.',
+    icon: 'ambiente',
+  },
+  'audio-video': {
+    es: 'audio-video',
+    title: 'Audio and Video',
+    description: 'Audio and video equipment for remote meetings: headphones, microphones, webcams and monitor setups for clearer calls.',
+    intro: 'Remote work makes audio and video part of your professional setup. This category covers the gear that helps you sound clearer, look sharper and reduce distractions on calls.',
+    icon: 'audio-video',
+  },
+};
+
+const info = categoryInfo[categoria] ?? {
+  es: categoria,
+  title: categoria,
+  description: `Localized buying guides for ${categoria}.`,
+  intro: 'Localized category content will be expanded once there is enough edited material to avoid thin pages.',
+  icon: 'sillas',
+};
+
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', [info.es]),
+  [locale]: localizedPath(locale, [categoria]),
+});
+
+const pageUrl = absoluteUrl(localizedPath(locale, [categoria]));
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl(localizedPath(locale)) },
+    { '@type': 'ListItem', position: 2, name: info.title, item: pageUrl },
+  ],
+};
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: info.title,
+  description: info.description,
+  url: pageUrl,
+  numberOfItems: ordered.length,
+  inLanguage: LOCALES[locale].hreflang,
+};
+---
+
+<Base
+  title={`${info.title} ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
+  description={info.description}
+  canonical={pageUrl}
+  alternates={alternates}
+  locale={locale}
+  noindex={ordered.length === 0}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionSchema)} slot="head" />
+
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true"><CategoryIcon categoria={info.icon} size={32} /></div>
+      <h1>{info.title}</h1>
+      <p>{info.description}</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>{info.title}</span>
+    </nav>
+
+    <div class="category-intro">
+      <p>{info.intro}</p>
+    </div>
+
+    {ordered.length > 0 ? (
+      <>
+        {destacados.length > 0 && (
+          <div style="margin-bottom: 3rem;">
+            <h2 class="subcat-heading">Featured guides</h2>
+            <div class="articles-grid">
+              {destacados.map(article => <ArticleCard articulo={article} locale={locale} />)}
+            </div>
+          </div>
+        )}
+
+        <div class="articles-grid">
+          {ordered.map(article => <ArticleCard articulo={article} locale={locale} />)}
+        </div>
+      </>
+    ) : (
+      <div class="text-center" style="padding: 4rem 0;">
+        <h2 style="margin-bottom: 0.5rem;">Coming soon</h2>
+        <p class="text-muted">This localized category is being prepared.</p>
+        <a href={localizedPath(locale)} class="affiliate-button" style="margin-top: 1.5rem; display: inline-flex;">
+          Back to home
+        </a>
+      </div>
+    )}
+  </div>
+</Base>
+
+<SmoothScroll />
+
+<style>
+  .category-intro {
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .category-intro p {
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+  .subcat-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+</style>

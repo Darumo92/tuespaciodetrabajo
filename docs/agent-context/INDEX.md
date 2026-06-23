@@ -9,6 +9,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [SEO Workflows](reference_seo_workflows.md) — Blog Writing, Audit, Evaluate, Topic Cluster, Feature, Data Import workflows completos. **Cargar para cualquier tarea de contenido/SEO.**
 - [Article Checklists](reference_article_checklists.md) — Checklist obligatorio, 12 reglas anti-error, pre-publish checklist, humanización. **Cargar al crear/revisar artículos.**
 - [Amazon Rules](reference_amazon_rules.md) — Afiliación, comandos API, cadencia, reglas estrictas, imágenes. **Cargar al trabajar con productos/comparativas.**
+- [Internationalization Workflow](reference_i18n_workflow.md) — Arquitectura i18n, rutas por locale, slugs localizados, hreflang/canonical/sitemap y reglas Amazon OneLink.
 - [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Config para usar MCPs de Cloudflare, GA y GSC.
 - [Recon Reddit / old.reddit](reference_reddit_thread_recon.md) — Método validado para karma, hilos vivos, búsquedas y replies. Preferir old.reddit; RSS como fallback.
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/*.
@@ -27,6 +28,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Plan backlinks Tier 1](project_backlinks_plan.md) — Para "vamos con el plan de backlinks".
 - [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 27 may: karma Reddit 24; 3 comentarios de warmup sin link publicados y visibles en RSS.
 - [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar datos volátiles de Amazon del MDX.
+- [Estado Amazon OneLink](project_amazon_onelink_state.md) — Cuentas internacionales registradas; tag vigente `tuespaciodet-21`; pasos de configuración OneLink.
 - [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos que requieren revisión editorial.
 - [Estado megarecopilación sillas](../research/sillas/ESTADO.md) — Handoff catálogo 100+ sillas (rama `feat/megarecopilacion-sillas`). Tasks 1-5 hechas, 24 sillas, piloto de 5; bloqueado por Amazon API (403) y SERP. **Leer para retomar el catálogo de sillas.**
 

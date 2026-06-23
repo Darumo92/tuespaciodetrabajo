@@ -4,6 +4,7 @@ import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import SmoothScroll from '@/components/SmoothScroll.astro';
 import { getCollection } from 'astro:content';
+import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
 
 const articulos = await getCollection('articulos', ({ data }) => data.tipo === 'informativo');
 const articulosOrdenados = articulos.sort(
@@ -11,6 +12,10 @@ const articulosOrdenados = articulos.sort(
 );
 
 const destacados = articulosOrdenados.filter(a => a.data.destacado).slice(0, 3);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['guias']),
+  en: localizedPath('en', ['guides']),
+});
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const breadcrumbSchema = {
@@ -35,6 +40,8 @@ const collectionSchema = {
 <Base
   title={`Guías de home office ${new Date().getFullYear()} | Consejos y guías | Tu Espacio de Trabajo`}
   description="Guías informativas sobre ergonomía, productividad, organización y bienestar en el teletrabajo. Consejos prácticos para mejorar tu espacio de trabajo."
+  canonical={absoluteUrl(localizedPath('es-ES', ['guias']))}
+  alternates={alternates}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionSchema)} slot="head" />

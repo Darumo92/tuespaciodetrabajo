@@ -1,0 +1,60 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['privacy-policy']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['politica-privacidad']),
+  en: localizedPath(locale, ['privacy-policy']),
+});
+---
+
+<Base
+  title="Privacy Policy | Tu Espacio de Trabajo"
+  description="Privacy policy for Tu Espacio de Trabajo, including analytics, affiliate links and user rights."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+  noindex={true}
+>
+  <article class="container legal-page">
+    <h1>Privacy policy</h1>
+    <p><strong>Last updated:</strong> June 2026</p>
+
+    <p>
+      Tu Espacio de Trabajo, available at tuespaciodetrabajo.com, respects your privacy. This page explains
+      what data may be collected, how it is used and which rights you have.
+    </p>
+
+    <h2>Controller</h2>
+    <ul>
+      <li><strong>Website:</strong> tuespaciodetrabajo.com</li>
+      <li><strong>Contact:</strong> use the contact details available on the Spanish legal pages.</li>
+    </ul>
+
+    <h2>Analytics data</h2>
+    <p>
+      We may use Google Analytics 4 and Cloudflare Web Analytics to understand aggregate website usage:
+      page visits, approximate country, device type, browser and referral information.
+    </p>
+
+    <h2>Affiliate links</h2>
+    <p>
+      When you click an Amazon affiliate link, you leave this website. Amazon's own privacy and cookie
+      policies apply from that point. We do not receive personal data from Amazon Associates, only aggregate
+      affiliate reporting.
+    </p>
+
+    <h2>Cookies</h2>
+    <p>
+      See the <a href={localizedPath(locale, ['cookies'])}>cookie policy</a> for details about analytics
+      cookies and affiliate destination cookies.
+    </p>
+  </article>
+</Base>
+

@@ -1,35 +1,34 @@
 ---
 import StoreIcon from './StoreIcon.astro';
 import { formatAmazonLastChecked, getCachedAmazonAvailability, isAmazonProductAvailable } from '@/lib/amazon-products';
+import { buildAmazonUrl } from '@/i18n/amazon';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+import { t } from '@/i18n/ui';
 
 interface Props {
   href: string;
   tienda?: 'amazon' | 'default';
   texto?: string;
+  locale?: Locale;
 }
 
-const { href, tienda = 'default', texto } = Astro.props;
+const { href, tienda = 'default', texto, locale = DEFAULT_LOCALE } = Astro.props;
+const ui = t(locale);
 
 const tiendaInfo: Record<string, { label: string }> = {
-  amazon: { label: 'Ver en Amazon' },
-  default: { label: 'Ver oferta' },
+  amazon: { label: ui.commerce.viewOnAmazon },
+  default: { label: ui.commerce.viewOffer },
 };
 
 const info = tiendaInfo[tienda];
 const label = texto || info.label;
 
-const normalizedHref = tienda === 'amazon' && href.startsWith('/dp/')
-  ? `https://www.amazon.es${href}`
-  : href;
+const finalHref = tienda === 'amazon' ? buildAmazonUrl({ href, locale }) : href;
 
-const finalHref = tienda === 'amazon' && !normalizedHref.includes('tag=')
-  ? `${normalizedHref}${normalizedHref.includes('?') ? '&' : '?'}tag=tuespaciodet-21`
-  : normalizedHref;
-
-const disponibilidad = tienda === 'amazon' ? getCachedAmazonAvailability(href) : null;
-const disponible = tienda === 'amazon' ? isAmazonProductAvailable(href) : null;
-const revisado = tienda === 'amazon' ? formatAmazonLastChecked(href) : null;
-const title = [disponibilidad, revisado && `Revisado: ${revisado}`].filter(Boolean).join(' · ') || undefined;
+const disponibilidad = tienda === 'amazon' && locale === DEFAULT_LOCALE ? getCachedAmazonAvailability(href) : null;
+const disponible = tienda === 'amazon' && locale === DEFAULT_LOCALE ? isAmazonProductAvailable(href) : null;
+const revisado = tienda === 'amazon' ? formatAmazonLastChecked(href, locale) : null;
+const title = [disponibilidad, revisado && `${ui.commerce.reviewed}: ${revisado}`].filter(Boolean).join(' · ') || undefined;
 ---
 
 <a
@@ -43,7 +42,7 @@ const title = [disponibilidad, revisado && `Revisado: ${revisado}`].filter(Boole
 >
   <StoreIcon tienda={tienda} size={15} />
   {label}
-  <span class="sr-only">(se abre en nueva pestaña)</span>
+  <span class="sr-only">({ui.commerce.opensNewTab})</span>
 </a>
 
 <style>

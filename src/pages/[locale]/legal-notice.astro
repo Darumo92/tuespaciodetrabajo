@@ -1,0 +1,48 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['legal-notice']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['aviso-legal']),
+  en: localizedPath(locale, ['legal-notice']),
+});
+---
+
+<Base
+  title="Legal Notice | Tu Espacio de Trabajo"
+  description="Legal notice for Tu Espacio de Trabajo, including affiliate disclosure and editorial responsibility."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+  noindex={true}
+>
+  <article class="container legal-page">
+    <h1>Legal notice</h1>
+    <p><strong>Last updated:</strong> June 2026</p>
+
+    <p>
+      Tu Espacio de Trabajo is an editorial website about home office equipment, ergonomics and remote-work
+      setup decisions. The content is informational and should not replace professional medical, legal or
+      occupational-health advice.
+    </p>
+
+    <h2>Affiliate disclosure</h2>
+    <p>
+      Tu Espacio de Trabajo participates in the Amazon Associates Program. As an Amazon Associate, we earn
+      from qualifying purchases. This does not add cost for readers and does not allow brands to buy rankings.
+    </p>
+
+    <h2>Editorial responsibility</h2>
+    <p>
+      We aim to keep recommendations accurate and transparent. Product availability, specifications and
+      marketplace conditions may change, so readers should verify product details before purchasing.
+    </p>
+  </article>
+</Base>
+

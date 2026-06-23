@@ -1,13 +1,16 @@
 ---
 import FallbackImagen from './FallbackImagen.astro';
-interface Props { imagen?: string; imagenAlt?: string; marca: string; nombre: string; size?: number; }
-const { imagen, imagenAlt, marca, nombre, size = 200 } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+
+interface Props { imagen?: string; imagenAlt?: string; marca: string; nombre: string; size?: number; locale?: Locale; }
+const { imagen, imagenAlt, marca, nombre, size = 200, locale = DEFAULT_LOCALE } = Astro.props;
 const tieneImagen = imagen != null && imagen.trim() !== '';
+const alt = locale === 'en' ? `${marca} ${nombre} product image` : (imagenAlt ?? nombre);
 ---
 {tieneImagen ? (
-  <img src={imagen} alt={imagenAlt ?? nombre} width={size} height={size} loading="lazy" decoding="async" class="img-prod" style={`--img-box:${size}px`} />
+  <img src={imagen} alt={alt} width={size} height={size} loading="lazy" decoding="async" class="img-prod" style={`--img-box:${size}px`} />
 ) : (
-  <FallbackImagen marca={marca} nombre={nombre} size={size} />
+  <FallbackImagen marca={marca} nombre={nombre} size={size} locale={locale} />
 )}
 <style>
   .img-prod {
@@ -15,9 +18,8 @@ const tieneImagen = imagen != null && imagen.trim() !== '';
     height: var(--img-box, 200px);
     max-width: 100%;
     object-fit: contain;
-    /* Las fotos de producto llevan lienzo blanco horneado: la caja va siempre
-       blanca para que las barras del letterbox se fundan con la foto en modo
-       claro y oscuro (si no, en oscuro las barras salen negras). */
+    /* Product photos already include a white canvas, so the box stays white
+       and letterbox bars blend with the image in light and dark themes. */
     background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius);

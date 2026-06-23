@@ -1,21 +1,36 @@
 ---
 import type { Producto } from '@/lib/productos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
-interface Props { producto: Producto; }
+interface Props { producto: Producto; locale?: Locale; }
 
-const { producto: p } = Astro.props;
+const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
 const r = p.resumenCompra ?? {};
-const hasResumen = Boolean(r.mejorPara || r.evitarSi || r.alternativaDirecta || p.limitaciones?.length);
+const isEn = locale === 'en';
+const hasResumen = isEn || Boolean(r.mejorPara || r.evitarSi || r.alternativaDirecta || p.limitaciones?.length);
+const support = p.specs?.pesoMaxKg ? `Supports up to ${p.specs.pesoMaxKg} kg` : 'Verified capacity data is not available';
+const warranty = p.specs?.garantiaAnios ? `${p.specs.garantiaAnios}-year warranty listed in verified specs` : 'Warranty data is not verified';
 ---
 
 {hasResumen && (
   <section class="ficha-resumen" aria-labelledby="resumen-compra">
-    <h2 id="resumen-compra">Resumen de compra</h2>
+    <h2 id="resumen-compra">{isEn ? 'Buying summary' : 'Resumen de compra'}</h2>
     <div class="resumen-grid">
-      {r.mejorPara && <p><strong>Mejor para</strong><span>{r.mejorPara}</span></p>}
-      {r.evitarSi && <p><strong>Evitar si</strong><span>{r.evitarSi}</span></p>}
-      {r.alternativaDirecta && <p><strong>Alternativa directa</strong><span>{r.alternativaDirecta}</span></p>}
-      {p.limitaciones?.length ? <p><strong>Limitaciones verificadas</strong><span>{p.limitaciones.join(' · ')}</span></p> : null}
+      {isEn ? (
+        <>
+          <p><strong>Best use</strong><span>Compare this chair for long home-office sessions where fit, support and adjustability matter.</span></p>
+          <p><strong>Check before buying</strong><span>Confirm current price, stock, size and return policy on the retailer page.</span></p>
+          <p><strong>Verified capacity</strong><span>{support}</span></p>
+          <p><strong>Warranty</strong><span>{warranty}</span></p>
+        </>
+      ) : (
+        <>
+          {r.mejorPara && <p><strong>Mejor para</strong><span>{r.mejorPara}</span></p>}
+          {r.evitarSi && <p><strong>Evitar si</strong><span>{r.evitarSi}</span></p>}
+          {r.alternativaDirecta && <p><strong>Alternativa directa</strong><span>{r.alternativaDirecta}</span></p>}
+          {p.limitaciones?.length ? <p><strong>Limitaciones verificadas</strong><span>{p.limitaciones.join(' · ')}</span></p> : null}
+        </>
+      )}
     </div>
   </section>
 )}

@@ -1,0 +1,53 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['cookies']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['cookies']),
+  en: localizedPath(locale, ['cookies']),
+});
+---
+
+<Base
+  title="Cookie Policy | Tu Espacio de Trabajo"
+  description="Cookie policy for Tu Espacio de Trabajo, including analytics cookies and Amazon affiliate destination cookies."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+  noindex={true}
+>
+  <article class="container legal-page">
+    <h1>Cookie policy</h1>
+    <p><strong>Last updated:</strong> June 2026</p>
+
+    <p>
+      We use a minimal cookie setup. Analytics cookies help us understand which pages are useful and how the
+      site performs. You can accept or reject analytics cookies from the cookie banner.
+    </p>
+
+    <h2>Analytics cookies</h2>
+    <p>
+      Google Analytics 4 may be used only after consent where required. Cloudflare may also provide aggregate
+      analytics and security information.
+    </p>
+
+    <h2>Affiliate cookies</h2>
+    <p>
+      Amazon and other destination websites may set their own cookies after you click an affiliate link.
+      Those cookies are controlled by the destination website, not by Tu Espacio de Trabajo.
+    </p>
+
+    <h2>Managing cookies</h2>
+    <p>
+      You can accept or reject analytics cookies through the site banner and can also manage cookies from
+      your browser settings.
+    </p>
+  </article>
+</Base>
+

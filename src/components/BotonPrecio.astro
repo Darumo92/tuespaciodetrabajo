@@ -1,16 +1,20 @@
 ---
 import StoreIcon from './StoreIcon.astro';
 import { buildProductCta, type ProductoAmazon } from '@/lib/productos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+import { t } from '@/i18n/ui';
 
 interface Props {
   amazon?: ProductoAmazon;
   webOficial?: string | null;
   nombre: string;
   marca?: string;
+  locale?: Locale;
 }
 
-const { amazon, webOficial, nombre, marca } = Astro.props;
-const cta = buildProductCta({ amazon, webOficial, nombre, marca });
+const { amazon, webOficial, nombre, marca, locale = DEFAULT_LOCALE } = Astro.props;
+const ui = t(locale);
+const cta = buildProductCta({ amazon, webOficial, nombre, marca, locale });
 const rel = cta.sponsored ? 'sponsored nofollow noopener noreferrer' : 'nofollow noopener noreferrer';
 ---
 
@@ -24,7 +28,7 @@ const rel = cta.sponsored ? 'sponsored nofollow noopener noreferrer' : 'nofollow
   >
     {cta.kind.startsWith('amazon') && <StoreIcon tienda="amazon" size={15} />}
     {cta.label}
-    <span class="sr-only">{`de ${nombre} (se abre en nueva pestaña)`}</span>
+    <span class="sr-only">{locale === 'en' ? `for ${nombre} (${ui.commerce.opensNewTab})` : `de ${nombre} (${ui.commerce.opensNewTab})`}</span>
   </a>
 ) : (
   <span class="boton-sin-tienda">{cta.label}</span>

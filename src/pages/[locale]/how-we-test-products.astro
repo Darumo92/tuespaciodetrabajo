@@ -1,0 +1,63 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['how-we-test-products']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['como-probamos-productos']),
+  en: localizedPath(locale, ['how-we-test-products']),
+});
+---
+
+<Base
+  title="How We Evaluate Products | Tu Espacio de Trabajo"
+  description="How we evaluate chairs, desks, monitors, lighting and home office accessories, including limits of hands-on testing."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+>
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>How we evaluate products</span>
+    </nav>
+
+    <h1>How we evaluate products</h1>
+    <p>
+      We test products directly when that is practical and useful. When we do not have a product physically,
+      we evaluate it through specifications, availability, buyer feedback, warranty, limitations and comparison
+      with products we know well.
+    </p>
+
+    <h2>What we check in chairs</h2>
+    <ul>
+      <li>Seat height, seat depth and body fit.</li>
+      <li>Lumbar support and whether it adjusts in a useful way.</li>
+      <li>Armrest position, shoulder comfort and desk fit.</li>
+      <li>Materials, breathability and long-session comfort.</li>
+      <li>Warranty, returns and recurring buyer complaints.</li>
+    </ul>
+
+    <h2>What we check in desks</h2>
+    <ul>
+      <li>Stability while sitting and standing.</li>
+      <li>Height range, motor noise and memory presets.</li>
+      <li>Desktop size, depth and cable management.</li>
+      <li>Assembly, warranty and support.</li>
+    </ul>
+
+    <h2>What we check in monitors and accessories</h2>
+    <p>
+      For monitors we care about ergonomics as much as image quality: height adjustment, VESA compatibility,
+      USB-C, text clarity and whether the screen works at a healthy distance. For accessories we focus on
+      whether they solve a real workday problem rather than just making the desk look better.
+    </p>
+  </article>
+</Base>
+

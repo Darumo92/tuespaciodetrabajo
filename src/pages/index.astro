@@ -4,8 +4,13 @@ import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
+import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
 
 const articulos = await getCollection('articulos');
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES'),
+  en: localizedPath('en'),
+});
 
 // Pillar comparativas: enlazadas directamente desde home para reducir profundidad de clic
 // y reforzar señal de indexación sobre URLs prioritarias.
@@ -139,6 +144,8 @@ const categorias = [
 <Base
   title="Tu Espacio de Trabajo · Guías y comparativas de home office"
   description="Comparativas de sillas ergonómicas, escritorios y accesorios para tu home office. Todo lo que necesitas para teletrabajar mejor."
+  canonical={absoluteUrl(localizedPath('es-ES'))}
+  alternates={alternates}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(organizationSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />

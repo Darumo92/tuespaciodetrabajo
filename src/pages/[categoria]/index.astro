@@ -4,6 +4,7 @@ import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import SmoothScroll from '@/components/SmoothScroll.astro';
 import { getCollection } from 'astro:content';
+import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
 
 export async function getStaticPaths() {
   return [
@@ -50,6 +51,19 @@ const categoriasInfo: Record<string, {
 };
 
 const info = categoriasInfo[categoria as string];
+const categoryTranslations: Record<string, string> = {
+  sillas: 'chairs',
+  escritorios: 'desks',
+  accesorios: 'accessories',
+  ambiente: 'workspace',
+  'audio-video': 'audio-video',
+};
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', [categoria as string]),
+  ...(categoryTranslations[categoria as string]
+    ? { en: localizedPath('en', [categoryTranslations[categoria as string]]) }
+    : {}),
+});
 
 // Excluir informativos de las paginas de categoria (van en /guias/)
 const articulos = await getCollection('articulos', ({ data }) =>
@@ -90,6 +104,8 @@ const breadcrumbSchema = {
 <Base
   title={`${info.nombre} para home office ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
   description={info.descripcion}
+  canonical={absoluteUrl(localizedPath('es-ES', [categoria as string]))}
+  alternates={alternates}
   noindex={esVacia}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemListSchema)} slot="head" />

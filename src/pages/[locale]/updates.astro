@@ -1,0 +1,24 @@
+---
+import Base from '@/layouts/Base.astro';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+const { locale } = Astro.props as { locale: Locale };
+const pagePath = localizedPath(locale, ['updates']);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['actualizaciones']),
+  [locale]: pagePath,
+});
+---
+<Base title="Site Updates | Tu Espacio de Trabajo" description="Latest updates to English home office guides and product comparison pages." canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale} noindex={true}>
+  <main class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Updates</span></nav>
+    <h1>Updates</h1>
+    <p class="text-muted">English update notes will be published when there are dedicated English editorial changes to track.</p>
+  </main>
+</Base>

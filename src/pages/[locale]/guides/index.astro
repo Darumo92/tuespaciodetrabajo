@@ -1,0 +1,101 @@
+---
+import Base from '@/layouts/Base.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import CategoryIcon from '@/components/CategoryIcon.astro';
+import SmoothScroll from '@/components/SmoothScroll.astro';
+import { getCollection } from 'astro:content';
+import { LOCALES, READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES' && LOCALES[locale].guideSegment === 'guides')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const articles = await getCollection('articulosI18n', ({ data }) => data.locale === locale && data.tipo === 'informativo');
+const ordered = articles.sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['guias']),
+  [locale]: localizedPath(locale, ['guides']),
+});
+
+const pageUrl = absoluteUrl(localizedPath(locale, ['guides']));
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl(localizedPath(locale)) },
+    { '@type': 'ListItem', position: 2, name: 'Guides', item: pageUrl },
+  ],
+};
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Home office ergonomics guides',
+  description: 'Practical guides for home office ergonomics, posture, setup, comfort and remote-work habits.',
+  url: pageUrl,
+  numberOfItems: ordered.length,
+  inLanguage: LOCALES[locale].hreflang,
+};
+---
+
+<Base
+  title={`Home Office Ergonomics Guides ${new Date().getFullYear()} | Tu Espacio de Trabajo`}
+  description="Practical guides for home office ergonomics, posture, setup, comfort and healthier remote-work habits."
+  canonical={pageUrl}
+  alternates={alternates}
+  locale={locale}
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(collectionSchema)} slot="head" />
+
+  <div class="category-page-header">
+    <div class="container">
+      <div class="category-icon-large" aria-hidden="true"><CategoryIcon categoria="guias" size={32} /></div>
+      <h1>Home office guides</h1>
+      <p>{ordered.length} practical guide{ordered.length === 1 ? '' : 's'} for a better desk setup</p>
+    </div>
+  </div>
+
+  <div class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">></span>
+      <span>Guides</span>
+    </nav>
+
+    <div class="category-intro">
+      <p>Ergonomics, posture and setup advice for people who work from home. These guides focus on practical adjustments first, and product recommendations only when buying something actually solves the problem.</p>
+    </div>
+
+    {ordered.length > 0 ? (
+      <div class="articles-grid">
+        {ordered.map(article => <ArticleCard articulo={article} locale={locale} />)}
+      </div>
+    ) : (
+      <div class="text-center" style="padding: 4rem 0;">
+        <h2 style="margin-bottom: 0.5rem;">Coming soon</h2>
+        <p class="text-muted">English guides are being edited.</p>
+      </div>
+    )}
+  </div>
+</Base>
+
+<SmoothScroll />
+
+<style>
+  .category-intro {
+    background: var(--surface-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .category-intro p {
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

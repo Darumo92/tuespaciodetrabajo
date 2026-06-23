@@ -1,0 +1,66 @@
+---
+import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return [{ params: { locale: pathLocaleSegment('en') }, props: { locale: 'en' } }];
+}
+
+const locale = 'en';
+const canonical = absoluteUrl(localizedPath(locale, ['editorial-methodology']));
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['metodologia-editorial']),
+  en: localizedPath(locale, ['editorial-methodology']),
+});
+---
+
+<Base
+  title="Editorial Methodology | Tu Espacio de Trabajo"
+  description="How Tu Espacio de Trabajo researches, writes and updates home office guides and product comparisons."
+  canonical={canonical}
+  alternates={alternates}
+  locale={locale}
+>
+  <article class="container legal-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href={localizedPath(locale)}>Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>Editorial methodology</span>
+    </nav>
+
+    <h1>Editorial methodology</h1>
+    <p>
+      Tu Espacio de Trabajo publishes practical guides for remote workers. The goal is to help readers
+      decide what is worth changing in a real home office: chair, desk, monitor, lighting, peripherals and habits.
+    </p>
+
+    <h2>How topics are chosen</h2>
+    <p>
+      We prioritise problems that come up repeatedly in remote work: back pain, poor posture, small desks,
+      low laptop screens, heat, noise, cable clutter and buying uncertainty before choosing a product.
+    </p>
+
+    <h2>Sources</h2>
+    <ul>
+      <li>Hands-on experience from David's own remote-work setup.</li>
+      <li>Manufacturer specifications and manuals.</li>
+      <li>Patterns in verified buyer reviews.</li>
+      <li>Recognised ergonomics and occupational-health references where relevant.</li>
+      <li>Community discussions from remote workers and home-office users.</li>
+    </ul>
+
+    <h2>Updates</h2>
+    <p>
+      Articles are updated when something meaningful changes: availability, discontinued products, a new
+      relevant alternative, a factual correction or a better recommendation. We do not refresh dates in bulk
+      just to make content look newer.
+    </p>
+
+    <h2>Affiliate links</h2>
+    <p>
+      Some links are affiliate links. As an Amazon Associate, we earn from qualifying purchases. This does
+      not change the price for readers and does not allow brands to buy placement.
+    </p>
+  </article>
+</Base>
+

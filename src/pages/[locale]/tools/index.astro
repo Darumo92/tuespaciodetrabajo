@@ -1,0 +1,34 @@
+---
+import Base from '@/layouts/Base.astro';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+const { locale } = Astro.props as { locale: Locale };
+const pagePath = localizedPath(locale, ['tools']);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['herramientas']),
+  [locale]: pagePath,
+});
+---
+<Base title="Home Office Tools | Tu Espacio de Trabajo" description="Useful calculators and tools for planning an ergonomic home office setup." canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale} noindex={true}>
+  <main class="container section">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Tools</span></nav>
+    <h1>Tools</h1>
+    <div class="tool-grid">
+      <a class="tool-card" href={localizedPath(locale, ['tools', 'ergonomic-calculator'])}>
+        <h2>Ergonomic calculator</h2>
+        <p>Estimate chair, desk and monitor setup ranges for a healthier working posture.</p>
+      </a>
+    </div>
+  </main>
+</Base>
+<style>
+  .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { display: block; padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: inherit; background: var(--surface); }
+  .tool-card p { color: var(--ink-muted); }
+</style>

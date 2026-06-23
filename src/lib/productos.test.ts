@@ -9,6 +9,10 @@ import {
   formatoSpec,
   tramoTexto,
   etiquetaEnum,
+  productPath,
+  comparePath,
+  localizedTipoSlug,
+  localizedProductMeta,
   reposabrazosNivel,
   buildAmazonHref,
   buildProductCta,
@@ -104,6 +108,16 @@ describe('construirIndiceBusqueda', () => {
     );
     expect(idx[0].url).toBe('/guias/ergonomia/');
   });
+
+  it('puede emitir índice en inglés para productos y artículos', () => {
+    const idx = construirIndiceBusqueda(
+      [base({ slug: 'aeron', nombre: 'Aeron', marca: 'Herman Miller' })],
+      [{ slug: 'ergonomic-guide', titulo: 'Ergonomic guide', categoria: 'guides', tipo: 'informativo' }],
+      'en'
+    );
+    expect(idx[0].url).toBe('/en/catalog/chairs/aeron/');
+    expect(idx[1].url).toBe('/en/guides/ergonomic-guide/');
+  });
 });
 
 describe('formatoSpec', () => {
@@ -116,10 +130,18 @@ describe('formatoSpec', () => {
     expect(formatoSpec(48, 'cm')).toBe('48 cm');
   });
   it('bool', () => { expect(formatoSpec(true, 'bool')).toBe('Sí'); expect(formatoSpec(false, 'bool')).toBe('No'); });
+
+  it('renderiza booleanos y ausentes en inglés', () => {
+    expect(formatoSpec(true, 'bool', 'en')).toBe('Yes');
+    expect(formatoSpec(false, 'bool', 'en')).toBe('No');
+    expect(formatoSpec(null, 'kg', 'en')).toBe('n/a');
+    expect(formatoSpec(3, 'anios', 'en')).toBe('3 years');
+  });
 });
 
 describe('tramoTexto', () => {
   it('símbolos €', () => { expect(tramoTexto(1)).toBe('€'); expect(tramoTexto(4)).toBe('€€€€'); });
+  it('símbolos $ en inglés', () => { expect(tramoTexto(1, 'en')).toBe('$'); expect(tramoTexto(4, 'en')).toBe('$$$$'); });
 });
 
 describe('etiquetaEnum', () => {
@@ -127,6 +149,34 @@ describe('etiquetaEnum', () => {
     expect(etiquetaEnum('lumbar', 'dinamico')).toBe('Dinámico autoajustable');
     expect(etiquetaEnum('respaldo', 'malla')).toBe('Malla');
     expect(etiquetaEnum('lumbar', 'desconocido')).toBe('desconocido');
+  });
+
+  it('traduce enums a inglés', () => {
+    expect(etiquetaEnum('lumbar', 'dinamico', 'en')).toBe('Dynamic self-adjusting');
+    expect(etiquetaEnum('reposabrazos', '4d', 'en')).toBe('4D');
+    expect(etiquetaEnum('respaldo', 'malla', 'en')).toBe('Mesh');
+  });
+});
+
+describe('localized product URLs and SEO meta', () => {
+  it('crea rutas de catálogo y comparador en inglés', () => {
+    expect(localizedTipoSlug('silla', 'en')).toBe('chairs');
+    expect(productPath(base({ slug: 'aeron' }), 'en')).toBe('/en/catalog/chairs/aeron/');
+    expect(comparePath('silla', 'aeron-vs-leap', 'en')).toBe('/en/compare/chairs/aeron-vs-leap/');
+  });
+
+  it('genera meta description inglesa desde datos estructurados', () => {
+    const meta = localizedProductMeta(base({
+      nombre: 'Aeron',
+      marca: 'Herman Miller',
+      valoraciones: COMPLETOS,
+      specs: { tipo: 'silla', respaldo: 'malla', reposabrazos: '4d', pesoMaxKg: 159, garantiaAnios: 12 } as any,
+    }), 'en');
+    expect(meta.title).toBe('Aeron Specs | Chair Database');
+    expect(meta.h1).toContain('Aeron review and specs');
+    expect(meta.description).toContain('Herman Miller');
+    expect(meta.description).toContain('mesh back');
+    expect(meta.description).not.toContain('silla');
   });
 });
 

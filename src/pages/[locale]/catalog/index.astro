@@ -1,0 +1,55 @@
+---
+import Base from '@/layouts/Base.astro';
+import { getCollection } from 'astro:content';
+import { READY_LOCALES, type Locale } from '@/i18n/locales';
+import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+import { TIPOS, TIPOS_CON_DATOS } from '@/lib/tipos';
+import { catalogPath, localizedTipoSlug } from '@/lib/productos';
+
+export async function getStaticPaths() {
+  return READY_LOCALES
+    .filter(locale => locale !== 'es-ES')
+    .map(locale => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: Locale };
+const productos = await getCollection('productos');
+const conteo = (tipo: string) => productos.filter((p) => p.data.tipo === tipo).length;
+const tarjetas = TIPOS_CON_DATOS.map((slug) => ({ cfg: TIPOS[slug], n: conteo(slug) }));
+const pagePath = catalogPath(locale);
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['catalogo']),
+  [locale]: pagePath,
+});
+---
+<Base
+  title="Home Office Product Catalog | Tu Espacio de Trabajo"
+  description="Verified home office product database with ergonomic chair specs, editorial scores and side-by-side comparisons."
+  canonical={absoluteUrl(pagePath)}
+  alternates={alternates}
+  locale={locale}
+>
+  <main class="container" style="padding: 2rem 0;">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Catalog</span></nav>
+    <h1>Product catalog</h1>
+    <p class="cat-sub">Verified specs, editorial scoring and comparison tools for home office equipment.</p>
+    <div class="cat-hub">
+      {tarjetas.map(({ cfg, n }) => (
+        <a class="cat-hub-card" href={catalogPath(locale, cfg.slug)}>
+          <span class="cat-hub-ico" aria-hidden="true">{cfg.icono}</span>
+          <span class="cat-hub-tit">{localizedTipoSlug(cfg.slug, locale) === 'chairs' ? 'Chairs' : cfg.labelPlural}</span>
+          <span class="cat-hub-n">{n} products</span>
+        </a>
+      ))}
+    </div>
+  </main>
+</Base>
+<style>
+  .cat-sub { color: var(--ink-muted); margin-bottom: 2rem; }
+  .cat-hub { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .cat-hub-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1.5rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+  .cat-hub-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .cat-hub-ico { font-size: 2rem; }
+  .cat-hub-tit { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; }
+  .cat-hub-n { color: var(--ink-muted); font-size: 0.85rem; }
+</style>

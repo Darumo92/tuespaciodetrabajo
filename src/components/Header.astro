@@ -1,25 +1,53 @@
 ---
 import LogoIcon from './LogoIcon.astro';
+import LanguageSelector from './LanguageSelector.astro';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+import { localizedPath, type AlternateLink } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
+
+interface Props {
+  locale?: Locale;
+  alternates?: AlternateLink[];
+}
+
+const { locale = DEFAULT_LOCALE, alternates = [] } = Astro.props;
+const ui = t(locale);
+const navOpenLabel = ui.nav.openMenu;
+const navCloseLabel = ui.nav.closeMenu;
+const darkThemeLabel = ui.nav.darkTheme;
+const lightThemeLabel = ui.nav.lightTheme;
 
 const currentPath = Astro.url.pathname;
+const mainNavLabel = locale === DEFAULT_LOCALE ? 'Navegación principal' : 'Main navigation';
 
-const navLinks = [
-  { href: '/catalogo/', label: 'Catálogo' },
-  { href: '/guias/', label: 'Guías' },
-  { href: '/actualidad/', label: 'Actualidad' },
-  { href: '/herramientas/', label: 'Herramientas' },
-];
+const navLinks = locale === DEFAULT_LOCALE
+  ? [
+      { href: localizedPath(locale, ['catalogo']), label: ui.nav.catalog },
+      { href: localizedPath(locale, ['guias']), label: ui.nav.guides },
+      { href: localizedPath(locale, ['actualidad']), label: ui.nav.news },
+      { href: localizedPath(locale, ['herramientas']), label: ui.nav.tools },
+    ]
+  : [
+      { href: localizedPath(locale, ['catalog']), label: ui.nav.catalog },
+      { href: localizedPath(locale, ['guides']), label: ui.nav.guides },
+      { href: localizedPath(locale, ['articles']), label: ui.footer.allArticles },
+      { href: localizedPath(locale, ['tools']), label: ui.nav.tools },
+    ];
+
+const searchPath = locale === DEFAULT_LOCALE
+  ? localizedPath(DEFAULT_LOCALE, ['buscar'])
+  : localizedPath(locale, ['search']);
 ---
 
 <header class="header">
   <div class="container">
     <div class="header-inner">
-      <a href="/" class="logo">
+      <a href={localizedPath(locale)} class="logo">
         <LogoIcon size={28} />
         Tu Espacio de <span>Trabajo</span>
       </a>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <button class="nav-toggle" id="nav-toggle" aria-label={ui.nav.openMenu} aria-expanded="false" aria-controls="nav">
         <span class="hamburger-icon" aria-hidden="true">
           <span></span>
           <span></span>
@@ -27,7 +55,7 @@ const navLinks = [
         </span>
       </button>
 
-      <nav class="nav" id="nav" aria-label="Navegación principal">
+      <nav class="nav" id="nav" aria-label={mainNavLabel}>
         {navLinks.map(link => (
           <a
             href={link.href}
@@ -39,19 +67,21 @@ const navLinks = [
         ))}
 
         <a
-          href="/buscar/"
-          class={`nav-link nav-search ${currentPath.startsWith('/buscar/') ? 'active' : ''}`}
-          {...(currentPath === '/buscar/' ? { 'aria-current': 'page' } : {})}
+          href={searchPath}
+          class={`nav-link nav-search ${currentPath.startsWith(searchPath) ? 'active' : ''}`}
+          {...(currentPath === searchPath ? { 'aria-current': 'page' } : {})}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          <span class="nav-search-label">Buscar</span>
+          <span class="nav-search-label">{ui.nav.search}</span>
         </a>
+
+        <LanguageSelector locale={locale} alternates={alternates} />
 
         <button
           class="theme-toggle"
           id="theme-toggle"
-          aria-label="Cambiar tema claro/oscuro"
-          title="Cambiar tema"
+          aria-label={ui.nav.changeTheme}
+          title={ui.nav.changeTheme}
         >
           <svg id="theme-icon-sun" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
           <svg id="theme-icon-moon" class="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
@@ -61,14 +91,14 @@ const navLinks = [
   </div>
 </header>
 
-<script>
+<script define:vars={{ navOpenLabel, navCloseLabel, darkThemeLabel, lightThemeLabel }}>
   const toggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
 
   function closeNav() {
     nav?.classList.remove('open');
     toggle?.setAttribute('aria-expanded', 'false');
-    toggle?.setAttribute('aria-label', 'Abrir menú');
+    toggle?.setAttribute('aria-label', navOpenLabel);
   }
 
   toggle?.addEventListener('click', () => {
@@ -79,10 +109,12 @@ const navLinks = [
     } else {
       nav?.classList.add('open');
       toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', 'Cerrar menú');
+      toggle.setAttribute('aria-label', navCloseLabel);
       requestAnimationFrame(() => {
-        const firstLink = nav?.querySelector('a, button:not(#nav-toggle)') as HTMLElement;
-        firstLink?.focus();
+        const firstLink = nav?.querySelector('a, button:not(#nav-toggle)');
+        if (firstLink instanceof HTMLElement) {
+          firstLink.focus();
+        }
       });
     }
   });
@@ -101,12 +133,12 @@ const navLinks = [
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('theme', 'light');
       if (metaTheme) metaTheme.setAttribute('content', '#fafafa');
-      themeBtn.setAttribute('aria-label', 'Activar modo oscuro');
+      themeBtn.setAttribute('aria-label', darkThemeLabel);
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
       if (metaTheme) metaTheme.setAttribute('content', '#131514');
-      themeBtn.setAttribute('aria-label', 'Activar modo claro');
+      themeBtn.setAttribute('aria-label', lightThemeLabel);
     }
   });
 
@@ -121,7 +153,7 @@ const navLinks = [
   // Focus trap del menú móvil
   nav?.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab' || !nav.classList.contains('open')) return;
-    const focusable = nav.querySelectorAll('a, button') as NodeListOf<HTMLElement>;
+    const focusable = Array.from(nav.querySelectorAll('a, button')).filter((element) => element instanceof HTMLElement);
     if (!focusable.length) return;
     const first = focusable[0];
     const last = focusable[focusable.length - 1];

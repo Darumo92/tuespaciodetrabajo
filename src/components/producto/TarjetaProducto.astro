@@ -1,35 +1,37 @@
 ---
 import ImagenProducto from './ImagenProducto.astro';
-import { notaGlobal, tramoTexto, datosFiltrado, construirChips, buildProductCta, type Producto } from '@/lib/productos';
+import { localizedProductName, notaGlobal, tramoTexto, datosFiltrado, construirChips, buildProductCta, productPath, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 
-interface Props { producto: Producto; }
+interface Props { producto: Producto; locale?: Locale; }
 
-const { producto: p } = Astro.props;
+const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
 const global = notaGlobal(p);
 const cfg = getTipoConfig(p.tipo);
 const dataAttrs = cfg ? datosFiltrado(p, cfg) : {};
-const chips = cfg ? construirChips(p, cfg) : [];
-const cta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: p.nombre, marca: p.marca });
+const chips = cfg ? construirChips(p, cfg, locale) : [];
+const displayName = localizedProductName(p, locale);
+const cta = buildProductCta({ amazon: p.amazon, webOficial: p.webOficial, nombre: displayName, marca: p.marca, locale });
 const ctaLabel = cta.kind === 'amazon-product'
   ? 'Amazon'
   : cta.kind === 'amazon-search'
-    ? 'Búsqueda Amazon'
-    : 'Sin tienda';
+    ? (locale === 'en' ? 'Amazon search' : 'Búsqueda Amazon')
+    : (locale === 'en' ? 'No store' : 'Sin tienda');
 ---
 
 <article class="card" data-slug={p.slug} {...dataAttrs}>
   <label class="card-cmp">
     <input type="checkbox" class="cmp-chk" value={p.slug} />
-    comparar <span class="sr-only">{p.nombre}</span>
+    {locale === 'en' ? 'compare' : 'comparar'} <span class="sr-only">{displayName}</span>
   </label>
-  <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={p.nombre} size={110} />
+  <ImagenProducto imagen={p.imagen} imagenAlt={p.imagenAlt} marca={p.marca} nombre={displayName} size={110} locale={locale} />
   <div class="card-info">
     <span class="card-brand">{p.marca}</span>
-    <a class="card-name" href={`/catalogo/${p.tipo}/${p.slug}/`}>{p.nombre}</a>
+    <a class="card-name" href={productPath(p, locale)}>{displayName}</a>
     <p class="card-line">
       {global != null && <span class="card-score">{global.toFixed(1)}/10</span>}
-      <span class="card-price">{tramoTexto(p.tramoPrecio)}</span>
+      <span class="card-price">{tramoTexto(p.tramoPrecio, locale)}</span>
       <span class={`card-cta card-cta--${cta.kind}`}>{ctaLabel}</span>
     </p>
     <div class="card-chips">

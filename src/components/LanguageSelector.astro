@@ -1,0 +1,90 @@
+---
+import { LOCALES, type Locale } from '@/i18n/locales';
+import type { AlternateLink } from '@/i18n/routes';
+import { t } from '@/i18n/ui';
+
+interface Props {
+  locale: Locale;
+  alternates?: AlternateLink[];
+}
+
+const { locale, alternates = [] } = Astro.props;
+const ui = t(locale);
+const byHrefLang = new Map(alternates.map((item) => [item.hreflang, item.href]));
+---
+
+<details class="language-selector">
+  <summary aria-label={ui.language.selectorTitle}>
+    <span>{ui.language.label}</span>
+    <strong>{LOCALES[locale].nativeLabel}</strong>
+  </summary>
+  <div class="language-selector-menu">
+    {Object.entries(LOCALES).map(([code, cfg]) => {
+      const href = byHrefLang.get(cfg.hreflang);
+      if (!href) return null;
+      return (
+        <a href={href} lang={cfg.htmlLang} data-locale={code} class={code === locale ? 'is-active' : ''}>
+          {cfg.nativeLabel}
+        </a>
+      );
+    })}
+  </div>
+</details>
+
+<style>
+  .language-selector {
+    position: relative;
+  }
+
+  .language-selector summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    min-height: 2.15rem;
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    color: var(--ink-muted);
+    font-size: 0.8rem;
+    font-weight: 650;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .language-selector summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .language-selector summary strong {
+    color: var(--ink);
+    font-weight: 750;
+  }
+
+  .language-selector-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.45rem);
+    z-index: 120;
+    min-width: 11rem;
+    padding: 0.4rem;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-md);
+  }
+
+  .language-selector-menu a {
+    display: block;
+    padding: 0.5rem 0.65rem;
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 0.86rem;
+  }
+
+  .language-selector-menu a:hover,
+  .language-selector-menu a.is-active {
+    background: var(--surface-muted);
+    color: var(--accent);
+  }
+</style>

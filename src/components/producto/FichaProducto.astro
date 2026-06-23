@@ -7,46 +7,168 @@ import ValoracionEjes from './ValoracionEjes.astro';
 import ParaQuien from './ParaQuien.astro';
 import { formatoSpec, etiquetaEnum, getCampo, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
-interface Props { producto: Producto; }
-const { producto: p } = Astro.props;
+import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
+interface Props { producto: Producto; locale?: Locale; }
+const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
+const isEn = locale === 'en';
 const cfg = getTipoConfig(p.tipo);
 const ENUM_CAMPOS = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
+const TEXT_SPEC_TRANSLATIONS: Record<string, string> = {
+  'inclinacion-con-lumbar-adaptativa': 'Adaptive recline with lumbar support',
+  'inclinacion-con-lumbar-dinamica': 'Dynamic recline with lumbar support',
+  'inclinacion-bloqueable': 'Lockable tilt',
+  'inclinacion-bloqueable-multiposicion': 'Multi-position lockable tilt',
+  'inclinacion-sincronizada': 'Synchronized tilt',
+  'inclinacion-con-tension-regulable': 'Tension-adjustable tilt',
+  'inclinacion-3-posiciones': '3-position tilt',
+  'inclinacion-con-tension': 'Tension-adjustable tilt',
+  'balancin': 'Rocking tilt',
+  'balancin-sincronizado': 'Synchronized rocking tilt',
+  'sincronizado': 'Synchronized tilt',
+  'multiblock': 'Multi-lock mechanism',
+  'dorsocinetico patentado con sedo-lift iii de elevacion y suspension': 'Patented dorsokinetic mechanism with Sedo-Lift III height adjustment and suspension',
+  'metal': 'metal',
+  'aluminio': 'aluminum',
+  'aluminio anodizado (o730 mm)': 'anodized aluminum (730 mm diameter)',
+  'aluminio adc12 reforzado': 'reinforced ADC12 aluminum',
+  'aluminio con revestimiento epoxi/poliester': 'aluminum with epoxy/polyester coating',
+  'aluminio reforzado (base 5 puntas)': 'reinforced aluminum 5-star base',
+  'acero': 'steel',
+  'nylon': 'nylon',
+  'nailon': 'nylon',
+  'plastico': 'plastic',
+  'poliamida': 'polyamide',
+  'poliamida o aluminio': 'polyamide or aluminum',
+  'resina o aluminio pulido': 'resin or polished aluminum',
+};
+const SPANISH_SPEC_WORDS = /\b(reclinacion|inclinacion|bloqueo|bloqueable|basculacion|balancin|balanceo|giratoria|regulacion|regulable|tension|posicion|posiciones|grados|respaldo|asiento|espuma|cuero|sintetico|poliester|plastico|metalic|metalica|aluminio|acero|poliamida|nailon|mecanismo|dorsocinetico|elevacion|suspension|piston|clase|certificado|tipo|mariposa|sincrono|sincro|frontal|reforzado|fibra|vidrio|peso|usuario|con)\b/i;
+function normalizeSpecText(value: string): string {
+  return value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[®™]/g, '')
+    .replace(/Ø/g, 'o')
+    .toLowerCase()
+    .trim();
+}
+function translateTextSpec(value: unknown, campo: string): string {
+  if (value == null) return 'n/a';
+  const raw = String(value);
+  const normalized = normalizeSpecText(raw);
+  const direct = TEXT_SPEC_TRANSLATIONS[normalized];
+  if (direct) return direct;
+
+  let translated = raw
+    .replace(/\bReclinación\b/gi, 'Recline')
+    .replace(/\breclinación\b/gi, 'recline')
+    .replace(/\bInclinación\b/gi, 'Tilt')
+    .replace(/\binclinación\b/gi, 'tilt')
+    .replace(/\bbasculación\b/gi, 'tilt')
+    .replace(/\bBasculación\b/gi, 'Tilt')
+    .replace(/\bcon bloqueo\b/gi, 'with lock')
+    .replace(/\bbloqueable\b/gi, 'lockable')
+    .replace(/\bbloqueo\b/gi, 'lock')
+    .replace(/\bposiciones\b/gi, 'positions')
+    .replace(/\bposición\b/gi, 'position')
+    .replace(/\bgrados\b/gi, 'degrees')
+    .replace(/\bgiratoria\b/gi, 'swivel')
+    .replace(/\bregulación\b/gi, 'adjustment')
+    .replace(/\bregulable\b/gi, 'adjustable')
+    .replace(/\btensión\b/gi, 'tension')
+    .replace(/\bpor peso\b/gi, 'weight-activated')
+    .replace(/\bdel usuario\b/gi, 'for the user')
+    .replace(/\bcon\b/gi, 'with')
+    .replace(/\bbalanceo\b/gi, 'rocking')
+    .replace(/\bpistón\b/gi, 'gas lift')
+    .replace(/\bpiston\b/gi, 'gas lift')
+    .replace(/\bclase\b/gi, 'class')
+    .replace(/\bcertificado\b/gi, 'certified')
+    .replace(/\btipo mariposa\b/gi, 'butterfly mechanism')
+    .replace(/\bmariposa\b/gi, 'butterfly')
+    .replace(/\bsincrono\b/gi, 'synchronized')
+    .replace(/\bsincro\b/gi, 'synchronized')
+    .replace(/\bfrontal\b/gi, 'forward')
+    .replace(/\breforzado\b/gi, 'reinforced')
+    .replace(/\bfibra de vidrio\b/gi, 'glass fiber')
+    .replace(/\brespaldo\b/gi, 'backrest')
+    .replace(/\bdoble\b/gi, 'dual')
+    .replace(/\bsecciones\b/gi, 'sections')
+    .replace(/\blumbar\b/gi, 'lumbar')
+    .replace(/\bdorsal\b/gi, 'upper-back')
+    .replace(/\bindependientes\b/gi, 'independent')
+    .replace(/\baluminio\b/gi, 'aluminum')
+    .replace(/\bacero\b/gi, 'steel')
+    .replace(/\bpoliamida\b/gi, 'polyamide')
+    .replace(/\bplástico\b/gi, 'plastic')
+    .replace(/\bplastico\b/gi, 'plastic');
+
+  if (SPANISH_SPEC_WORDS.test(normalizeSpecText(translated))) {
+    return campo === 'specs.mecanismo' ? 'Manufacturer-listed recline mechanism' : 'Manufacturer-listed material';
+  }
+
+  return translated;
+}
 function render(campo: string, formato?: string): string {
   const v = getCampo(p, campo);
-  if (ENUM_CAMPOS.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v);
-  return formatoSpec(v, formato);
+  if (ENUM_CAMPOS.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v, locale);
+  if (isEn && (campo === 'specs.mecanismo' || campo === 'specs.baseMaterial')) return translateTextSpec(v, campo);
+  return formatoSpec(v, formato, locale);
 }
+const groupTitleMap: Record<string, string> = {
+  'Ergonomía y ajustes': 'Ergonomics and adjustments',
+  'Construcción y materiales': 'Build and materials',
+  'Dimensiones y garantía': 'Dimensions and warranty',
+};
+const rowLabelMap: Record<string, string> = {
+  'Soporte lumbar': 'Lumbar support',
+  'Reposabrazos': 'Armrests',
+  'Profundidad regulable': 'Adjustable seat depth',
+  'Reclinación máx.': 'Max recline',
+  'Mecanismo': 'Mechanism',
+  'Respaldo': 'Backrest',
+  'Base': 'Base',
+  'Certificación BIFMA': 'BIFMA certification',
+  'Peso máximo soportado': 'Maximum supported weight',
+  'Peso del producto': 'Product weight',
+  'Ancho': 'Width',
+  'Fondo': 'Depth',
+  'Garantía': 'Warranty',
+};
 const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
-  titulo: g.titulo,
-  filas: g.filas.map((f) => ({ etiqueta: f.etiqueta, valor: render(f.campo, f.formato) })),
+  titulo: isEn ? groupTitleMap[g.titulo] ?? g.titulo : g.titulo,
+  filas: g.filas.map((f) => ({ etiqueta: isEn ? rowLabelMap[f.etiqueta] ?? f.etiqueta : f.etiqueta, valor: render(f.campo, f.formato) })),
 }));
 ---
 <article class="ficha">
-  <FichaHero producto={p} />
-  <FichaResumenCompra producto={p} />
+  <FichaHero producto={p} locale={locale} />
+  <FichaResumenCompra producto={p} locale={locale} />
 
-  <FichaMetodologiaProducto producto={p} />
-  <ValoracionEjes producto={p} />
+  <FichaMetodologiaProducto producto={p} locale={locale} />
+  <ValoracionEjes producto={p} locale={locale} />
 
-  {p.veredicto && <div class="ficha-veredicto"><strong>Veredicto.</strong> {p.veredicto}</div>}
+  {isEn ? (
+    <div class="ficha-veredicto"><strong>Editorial note.</strong> This English product profile is generated from verified structured specifications and editorial scoring. Current price and availability are not shown unless they are verified for the relevant marketplace.</div>
+  ) : (
+    p.veredicto && <div class="ficha-veredicto"><strong>Veredicto.</strong> {p.veredicto}</div>
+  )}
 
-  <h2>Ficha técnica</h2>
+  <h2>{isEn ? 'Technical specs' : 'Ficha técnica'}</h2>
   {grupos.map((g) => (
     <div class="ficha-grupo">
       <h3>{g.titulo}</h3>
       <table class="ficha-specs"><tbody>
         {g.filas.map((f) => (
-          <tr><th scope="row">{f.etiqueta}</th><td class={f.valor === 'n/d' ? 'ficha-nd' : ''}>{f.valor}</td></tr>
+          <tr><th scope="row">{f.etiqueta}</th><td class={f.valor === 'n/d' || f.valor === 'n/a' ? 'ficha-nd' : ''}>{f.valor}</td></tr>
         ))}
       </tbody></table>
     </div>
   ))}
 
-  {p.comunidad && (<><h2>Qué dice la comunidad</h2><p class="ficha-comunidad">{p.comunidad}</p></>)}
+  {!isEn && p.comunidad && (<><h2>Qué dice la comunidad</h2><p class="ficha-comunidad">{p.comunidad}</p></>)}
 
-  <ParaQuien si={p.paraQuienSi ?? []} no={p.paraQuienNo ?? []} />
+  {!isEn && <ParaQuien si={p.paraQuienSi ?? []} no={p.paraQuienNo ?? []} locale={locale} />}
 
-  {(p.puntosFuertes.length > 0 || p.puntosDebiles.length > 0) && (
+  {!isEn && (p.puntosFuertes.length > 0 || p.puntosDebiles.length > 0) && (
     <div class="ficha-balance">
       {p.puntosFuertes.length > 0 && (
         <div class="balance-col balance-pro">
@@ -63,11 +185,12 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
     </div>
   )}
 
-  <FichaFuentes producto={p} />
+  <FichaFuentes producto={p} locale={locale} />
 
   <p class="ficha-fuente">
-    Datos: {p.fuenteSpecs}{p.verificadoEn ? ` · verificado el ${p.verificadoEn}` : ''}.
-    Las valoraciones por ejes son editoriales (specs + consenso de la comunidad). "n/d" = sin dato verificado; verifica la ficha del fabricante antes de comprar.
+    {isEn
+      ? <>Data source: verified product specs{p.verificadoEn ? ` · checked ${p.verificadoEn}` : ''}. Editorial scores are based on specs and category fit. "n/a" means no verified data; check the manufacturer or retailer page before buying.</>
+      : <>Datos: {p.fuenteSpecs}{p.verificadoEn ? ` · verificado el ${p.verificadoEn}` : ''}. Las valoraciones por ejes son editoriales (specs + consenso de la comunidad). "n/d" = sin dato verificado; verifica la ficha del fabricante antes de comprar.</>}
   </p>
 </article>
 <style>
