@@ -74,16 +74,10 @@ const bottomNavItems = locale === DEFAULT_LOCALE
         icon: 'home',
       },
       {
-        href: localizedPath(locale, ['sillas']),
-        active: currentPath.startsWith(localizedPath(locale, ['sillas'])) || currentPath.startsWith(localizedPath(locale, ['catalogo', 'silla'])),
-        label: ui.categories.sillas,
+        href: localizedPath(locale, ['catalogo']),
+        active: currentPath.startsWith(localizedPath(locale, ['catalogo'])),
+        label: ui.nav.catalog,
         icon: 'chair',
-      },
-      {
-        href: localizedPath(locale, ['escritorios']),
-        active: currentPath.startsWith(localizedPath(locale, ['escritorios'])),
-        label: ui.categories.escritorios,
-        icon: 'desk',
       },
       {
         href: localizedPath(locale, [localeConfig.guideSegment]),
