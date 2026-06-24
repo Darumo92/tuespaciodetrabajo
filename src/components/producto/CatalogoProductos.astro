@@ -79,14 +79,26 @@ const compareBase = comparePath(tipo, '', locale);
   </div>
 
   <div class="cat-bar">
-    <button class="cat-mobtoggle" type="button" data-mob-toggle aria-expanded="false" aria-controls={`cat-filterpanel-${typeSlug}`}>
-      {ui.catalog.filter}<span class="cat-mobn" data-mob-n hidden>0</span>
-    </button>
+    <div class="cat-actionbar">
+      <button class="cat-mobtoggle" type="button" data-mob-toggle aria-expanded="false" aria-controls={`cat-filterpanel-${typeSlug}`}>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10"/><path d="M18 6h2"/><circle cx="16" cy="6" r="2"/><path d="M4 12h2"/><path d="M10 12h10"/><circle cx="8" cy="12" r="2"/><path d="M4 18h10"/><path d="M18 18h2"/><circle cx="16" cy="18" r="2"/></svg>
+        {ui.catalog.filter}<span class="cat-mobn" data-mob-n hidden>0</span>
+      </button>
+      <label class="cat-sortmob">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l4-4 4 4"/><path d="M7 5v14"/><path d="M21 15l-4 4-4-4"/><path d="M17 19V5"/></svg>
+        <span class="cat-sortmob-label">{ui.catalog.sort}</span>
+        <select data-orden aria-label={ui.catalog.sort}>
+          {ordenaciones.map((o) => <option value={o.id}>{tr(o.etiqueta)}</option>)}
+        </select>
+      </label>
+    </div>
 
     <div class="cat-pills" id={`cat-filterpanel-${typeSlug}`} data-pills aria-label={ui.catalog.filterPanel}>
       <div class="cat-drawer-head">
         <strong>{ui.catalog.filterPanel}</strong>
-        <button class="cat-drawer-close" type="button" data-drawer-close>{ui.catalog.closeFilters}</button>
+        <button class="cat-drawer-close" type="button" data-drawer-close aria-label={ui.catalog.closeFilters}>
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
       </div>
 
       {rapidos.map((f) => <FiltroPill f={f} tr={tr} marcas={marcas} isEn={isEn} removeText={ui.catalog.remove} />)}
@@ -224,18 +236,24 @@ const compareBase = comparePath(tipo, '', locale);
   :global(.cat-pop-foot) { margin-top: 0.7rem; padding-top: 0.6rem; border-top: 1px solid var(--border); display: flex; justify-content: flex-end; }
   :global(.cat-pop-clear) { border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--accent); font: inherit; font-size: 0.8rem; font-weight: 700; cursor: pointer; }
 
-  /* Panel "Más filtros" */
+  /* Panel "Más filtros" (escritorio: card desplegable) */
   .cat-morebtn { gap: 0.4rem; }
   .cat-morebtn[aria-expanded='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--bg)); }
   .cat-morepanel {
-    flex-basis: 100%; order: 50; margin-top: 0.6rem; padding: 0.9rem;
-    border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted);
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 0.8rem 1.2rem;
+    flex-basis: 100%; order: 50; margin-top: 0.7rem; padding: 1.2rem 1.3rem 1rem;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface);
+    box-shadow: 0 1px 2px color-mix(in srgb, var(--ink) 5%, transparent);
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 0.6rem 2.2rem;
   }
-  .cat-group { border: 0; }
-  .cat-group-sum { cursor: pointer; font-weight: 700; font-size: 0.86rem; padding: 0.2rem 0; }
+  .cat-group { border: 0; min-width: 0; }
+  .cat-group-sum {
+    cursor: pointer; list-style: none;
+    font-size: 0.7rem; font-weight: 750; text-transform: uppercase; letter-spacing: 0.07em;
+    color: var(--ink-muted); padding: 0.2rem 0;
+  }
+  .cat-group-sum::-webkit-details-marker { display: none; }
   .cat-group-sum:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .cat-group-body { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+  .cat-group-body { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.55rem; padding-bottom: 0.3rem; }
 
   .cat-drawer-head { display: none; }
 
@@ -264,6 +282,7 @@ const compareBase = comparePath(tipo, '', locale);
   /* Controles sólo móviles: ocultos en escritorio */
   .cat-mobtoggle { display: none; }
   .cat-verres { display: none; }
+  .cat-sortmob { display: none; }
   .cat-mobn {
     display: inline-flex; align-items: center; justify-content: center;
     min-width: 1.2rem; height: 1.2rem; margin-left: 0.4rem; padding: 0 0.3rem;
@@ -287,43 +306,107 @@ const compareBase = comparePath(tipo, '', locale);
   .cmp-go, .cmp-clear { transition: transform var(--dur-press) var(--ease-out); }
   .cmp-go:active, .cmp-clear:active { transform: scale(0.97); }
 
-  /* Móvil: drawer de filtros */
+  /* Móvil: hoja de filtros a pantalla completa, facetas como secciones */
   @media (max-width: 768px) {
     .catalogo { padding-bottom: 8.5rem; }
-    .cat-mobtoggle {
-      display: inline-flex; align-items: center; min-height: 2.5rem; padding: 0.4rem 1rem;
+
+    /* Barra de acción: Filtrar | Ordenar */
+    .cat-actionbar { display: flex; gap: 0.5rem; }
+    .cat-mobtoggle, .cat-sortmob {
+      display: inline-flex; align-items: center; gap: 0.45rem; flex: 1 1 0; min-width: 0;
+      min-height: 2.85rem; padding: 0.4rem 0.9rem;
       border: 1px solid var(--border-strong); border-radius: var(--radius);
       background: var(--bg); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
     }
+    .cat-mobtoggle { justify-content: center; }
+    .cat-mobtoggle svg, .cat-sortmob svg { flex-shrink: 0; opacity: 0.65; }
+    .cat-sortmob-label { color: var(--ink-muted); font-weight: 650; font-size: 0.82rem; flex-shrink: 0; }
+    .cat-sortmob select {
+      flex: 1; min-width: 0; border: 0; background: transparent; color: var(--ink);
+      font: inherit; font-weight: 700; cursor: pointer;
+      text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+    }
+    .cat-sortmob:focus-within { border-color: var(--accent); }
+    .cat-pill--orden { display: none; }
+
+    /* Hoja */
     .cat-pills {
-      position: fixed; inset: 0; z-index: 300; display: none; /* por encima de .bottom-nav (z-index 200) */
-      flex-direction: column; align-items: stretch; gap: 0.7rem;
-      padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+      position: fixed; inset: 0; z-index: 300; display: none; /* sobre .bottom-nav */
+      flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0;
+      padding: 0 max(1rem, env(safe-area-inset-right)) max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
       background: var(--bg); overflow-y: auto; overscroll-behavior: contain;
     }
     .cat-bar.is-open .cat-pills { display: flex; }
     .cat-drawer-head {
       display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-      position: sticky; top: 0; z-index: 1; margin: -0.2rem -0.2rem 0.2rem; padding: 0.2rem 0.2rem 0.7rem;
+      position: sticky; top: 0; z-index: 2;
+      margin: 0 0 0.3rem; padding: max(0.85rem, env(safe-area-inset-top)) 0 0.8rem;
       background: var(--bg); border-bottom: 1px solid var(--border);
     }
-    .cat-drawer-head strong { font-family: var(--font-display); font-size: 1rem; }
+    .cat-drawer-head strong { font-family: var(--font-display); font-size: 1.2rem; }
     .cat-drawer-close {
-      min-height: 2.25rem; padding: 0.35rem 0.7rem;
-      border: 1px solid var(--border); border-radius: var(--radius);
-      background: var(--surface-muted); color: var(--ink); font: inherit; font-weight: 700; cursor: pointer;
+      display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0;
+      width: 2.5rem; height: 2.5rem; padding: 0;
+      border: 1px solid var(--border); border-radius: 999px;
+      background: var(--surface-muted); color: var(--ink); cursor: pointer;
+      transition: border-color var(--dur-hover) var(--ease-out), background var(--dur-hover) var(--ease-out);
     }
-    .cat-drawer-close:hover { border-color: var(--border-strong); }
+    .cat-drawer-close:hover { border-color: var(--border-strong); background: var(--surface); }
     .cat-drawer-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* En móvil "Más filtros" no se anida: se aplana en secciones */
+    .cat-morebtn { display: none; }
+    .cat-morepanel {
+      flex-basis: auto; order: 0; display: block; margin: 0;
+      padding: 0; border: 0; background: transparent; box-shadow: none;
+    }
+    .cat-group { padding: 0; }
+    .cat-group-sum {
+      padding: 1rem 0 0.1rem; margin: 0;
+      font-size: 0.68rem; letter-spacing: 0.08em;
+    }
+    .cat-group-body { display: block; margin: 0; padding: 0; }
+
+    /* Cada faceta = sección: cabecera (etiqueta + valor + chevron) + cuerpo */
+    :global(.cat-facet) { width: 100%; border-bottom: 1px solid var(--border); }
+    :global(.cat-pill) {
+      width: 100%; justify-content: space-between; min-height: 3rem;
+      border: 0; border-radius: 0; background: transparent; padding: 0.65rem 0;
+      font-size: 0.95rem; font-weight: 700;
+    }
+    :global(.cat-pill:hover) { background: transparent; }
+    :global(.cat-pill.is-active) { background: transparent; }
+    :global(.cat-pill-caret) { transition: transform var(--dur-hover) var(--ease-out); }
+    :global(.cat-pill[aria-expanded='true'] .cat-pill-caret) { transform: rotate(180deg); }
+
+    /* Toggle (sí/no) mantiene forma de píldora plena */
+    :global(.cat-pill--toggle) {
+      width: 100%; justify-content: flex-start; min-height: 2.85rem; margin: 0.55rem 0;
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 0.6rem 0.9rem;
+    }
+    :global(.cat-pill--toggle[aria-pressed='true']) { border-color: var(--accent); }
+
+    /* Cuerpo de sección (antes popover): sin side-stripe, contenido en flujo */
+    :global(.cat-pop) {
+      position: static; min-width: 0; max-width: none; box-shadow: none;
+      border: 0; border-radius: 0; margin: 0; padding: 0 0 0.85rem;
+    }
+    /* "Quitar" por faceta sólo cuando esa faceta tiene selección (menos ruido) */
+    :global(.cat-pop-foot) { display: none; margin-top: 0.55rem; padding-top: 0; border-top: 0; justify-content: flex-start; }
+    :global(.cat-facet:has(.cat-pill.is-active) .cat-pop-foot) { display: flex; }
+    :global(.cat-seg) { grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); gap: 0.4rem; }
+    :global(.cat-opt), :global(.cat-seg-btn) { min-height: 2.75rem; }
+    :global(.cat-checks) { max-height: 14rem; }
+    :global(.cat-check) { min-height: 2.6rem; padding: 0.4rem 0.2rem; }
+
+    /* CTA inferior pegado */
     .cat-verres {
       display: block; order: 99; position: sticky; bottom: 0;
-      margin-top: auto; min-height: 2.75rem; padding: 0.8rem; border: 0; text-align: center;
-      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius); font: inherit; font-weight: 750; cursor: pointer;
+      margin-top: 1rem; min-height: 3rem; padding: 0.85rem; border: 0; text-align: center;
+      background: var(--accent); color: var(--accent-ink); border-radius: var(--radius);
+      font: inherit; font-weight: 750; cursor: pointer;
+      box-shadow: 0 -10px 18px -10px color-mix(in srgb, var(--bg) 85%, transparent);
     }
-    :global(.cat-facet) { width: 100%; }
-    :global(.cat-pill) { width: 100%; justify-content: space-between; }
-    :global(.cat-pop) { position: static; min-width: 0; max-width: none; box-shadow: none; border: 0; border-left: 2px solid var(--border); border-radius: 0; margin: 0.2rem 0 0.4rem 0.4rem; }
-    :global(.cat-seg) { grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr)); }
     .cmp-bar { bottom: calc(56px + env(safe-area-inset-bottom, 0px)); padding-bottom: 0.78rem; }
   }
 
@@ -381,13 +464,15 @@ const compareBase = comparePath(tipo, '', locale);
     const filtroDe = (id: string) => filtros.find((f) => f.id === id);
 
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('.card'));
-    const ordenSel = root.querySelector<HTMLSelectElement>('[data-orden]');
+    const ordenSels = Array.from(root.querySelectorAll<HTMLSelectElement>('[data-orden]'));
+    const ordenValor = () => ordenSels[0]?.value;
     const nOut = root.querySelector<HTMLElement>('.catalogo-n');
     const vacio = root.querySelector<HTMLElement>('.catalogo-vacio');
     const busquedaInput = root.querySelector<HTMLInputElement>('[data-busqueda]');
     const chipsBox = root.querySelector<HTMLElement>('[data-chips]');
     const clearAllBtn = root.querySelector<HTMLButtonElement>('[data-clear-all]');
     const mobToggle = root.querySelector<HTMLButtonElement>('[data-mob-toggle]');
+    const pillsPanel = root.querySelector<HTMLElement>('[data-pills]');
     const drawerClose = root.querySelector<HTMLButtonElement>('[data-drawer-close]');
     const mobN = root.querySelector<HTMLElement>('[data-mob-n]');
     const bar = root.querySelector<HTMLElement>('.cat-bar');
@@ -462,7 +547,7 @@ const compareBase = comparePath(tipo, '', locale);
         if (visible) visibles += 1;
       });
 
-      const orden = ordenaciones.find((o) => o.id === ordenSel?.value) || ordenaciones[0];
+      const orden = ordenaciones.find((o) => o.id === ordenValor()) || ordenaciones[0];
       if (orden) {
         const worst = orden.direccion === 'asc' ? Infinity : -Infinity;
         cards.filter((c) => !c.hidden).sort((a, b) => {
@@ -607,8 +692,12 @@ const compareBase = comparePath(tipo, '', locale);
       pill.addEventListener('click', (e) => {
         e.stopPropagation();
         const abierto = pill.getAttribute('aria-expanded') === 'true';
-        cerrarPopovers();
-        if (!abierto && pop) {
+        // Escritorio: un único popover abierto (dropdown). Móvil: acordeón multi-abierto.
+        if (!esMovil()) cerrarPopovers();
+        if (abierto) {
+          if (pop) pop.hidden = true;
+          pill.setAttribute('aria-expanded', 'false');
+        } else if (pop) {
           pop.hidden = false;
           pill.setAttribute('aria-expanded', 'true');
         }
@@ -642,6 +731,7 @@ const compareBase = comparePath(tipo, '', locale);
     });
 
     document.addEventListener('click', (e) => {
+      if (esMovil()) return; // en móvil las facetas son secciones siempre visibles
       if (!(e.target as HTMLElement).closest('.cat-facet')) cerrarPopovers();
     });
     document.addEventListener('keydown', (e) => {
@@ -671,8 +761,13 @@ const compareBase = comparePath(tipo, '', locale);
       aplicarBusqueda();
     });
 
-    // ----- Orden -----
-    ordenSel?.addEventListener('change', applyFilters);
+    // ----- Orden (selects móvil + escritorio sincronizados) -----
+    ordenSels.forEach((sel) => {
+      sel.addEventListener('change', () => {
+        ordenSels.forEach((s) => { if (s !== sel) s.value = sel.value; });
+        applyFilters();
+      });
+    });
 
     // ----- Limpiar todo -----
     clearAllBtn?.addEventListener('click', () => {
@@ -686,16 +781,64 @@ const compareBase = comparePath(tipo, '', locale);
       applyFilters();
     });
 
-    // ----- Drawer móvil -----
+    // ----- Drawer móvil (diálogo modal accesible) -----
+    const esMovil = () => window.matchMedia('(max-width: 768px)').matches;
+    let trapHandler: ((e: KeyboardEvent) => void) | null = null;
+
+    // Móvil: aplanar el panel y mostrar todas las facetas como secciones (sin "Más filtros" anidado).
+    const morePanelEl = root.querySelector<HTMLElement>('[data-more-panel]');
+    const expandirSecciones = (abrir: boolean) => {
+      if (morePanelEl) morePanelEl.hidden = !abrir;
+      root.querySelectorAll<HTMLElement>('[data-pill-tipo="dropdown"]').forEach((p) => {
+        const pop = root.querySelector<HTMLElement>(`#pop-${p.dataset.pill}`);
+        if (pop) pop.hidden = !abrir;
+        p.setAttribute('aria-expanded', abrir ? 'true' : 'false');
+      });
+    };
+
+    const openDrawer = () => {
+      bar?.classList.add('is-open');
+      mobToggle?.setAttribute('aria-expanded', 'true');
+      document.documentElement.classList.add('cat-lock-scroll');
+      if (esMovil() && pillsPanel) {
+        pillsPanel.setAttribute('role', 'dialog');
+        pillsPanel.setAttribute('aria-modal', 'true');
+        expandirSecciones(true);
+        trapHandler = (e: KeyboardEvent) => {
+          if (e.key !== 'Tab') return;
+          const focusables = Array.from(
+            pillsPanel.querySelectorAll<HTMLElement>('a, button, input, select, [tabindex]:not([tabindex="-1"])')
+          ).filter((el) => !el.hidden && el.offsetParent !== null);
+          if (!focusables.length) return;
+          const first = focusables[0];
+          const last = focusables[focusables.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+        };
+        pillsPanel.addEventListener('keydown', trapHandler);
+        requestAnimationFrame(() => drawerClose?.focus());
+      }
+    };
+
     const closeDrawer = () => {
       bar?.classList.remove('is-open');
       mobToggle?.setAttribute('aria-expanded', 'false');
       document.documentElement.classList.remove('cat-lock-scroll');
+      if (pillsPanel) {
+        pillsPanel.removeAttribute('role');
+        pillsPanel.removeAttribute('aria-modal');
+        if (trapHandler) { pillsPanel.removeEventListener('keydown', trapHandler); trapHandler = null; }
+      }
+      expandirSecciones(false); // restaura estado colapsado para escritorio
     };
+
     mobToggle?.addEventListener('click', () => {
-      const abierto = Boolean(bar?.classList.toggle('is-open'));
-      mobToggle.setAttribute('aria-expanded', abierto ? 'true' : 'false');
-      document.documentElement.classList.toggle('cat-lock-scroll', abierto);
+      if (bar?.classList.contains('is-open')) {
+        closeDrawer();
+        mobToggle.focus();
+      } else {
+        openDrawer();
+      }
     });
     drawerClose?.addEventListener('click', () => {
       closeDrawer();
