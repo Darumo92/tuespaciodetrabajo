@@ -5,6 +5,74 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-25 - revision replies + paquete Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `27`, total `28`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- `scripts/reddit_replies.py comments/replies` fallo por RSS vacio (`ParseError: no element found`). No usar RSS como fuente unica.
+- Revision por `old.reddit.com/user/Dear_Potato8535/comments/`: publicados y visibles los 3 comentarios Reddit del 2026-06-24:
+  - `r/OfficeChairs` `1uedo2d` visible como `otj6c7y`: https://www.reddit.com/r/OfficeChairs/comments/1uedo2d/protoarc_ec200_vs_colamy_atlas_vs_staples_dexley/otj6c7y/
+  - `r/OfficeChairs` `1ue6mlo` visible como `otjdruf`: https://www.reddit.com/r/OfficeChairs/comments/1ue6mlo/how_do_you_guys_deal_with_sweating_on_leatherpu/otjdruf/
+  - `r/Ergonomics` `1udpazf` visible como `otjomuu`: https://www.reddit.com/r/Ergonomics/comments/1udpazf/are_anti_fatigue_mats_any_good/otjomuu/
+- Los comentarios recientes muestran `0 children`; no hay reply directo pendiente de contestar en la tanda reciente.
+- Auditoria manual ampliada de replies: revisados 55 comentarios/permalinks historicos con `old.reddit`; 8 tenian hijos. De esos, 6 eran agradecimientos o ya estaban contestados. Quedan 2 replies accionables:
+  - `r/Ergonomics` `1tr8njw` reply OP `oouiu5y`: escritorio familiar no se puede cambiar, keyboard/mouse ya estan cerca, usa footrest, puede subir algo la silla y le encaja probar trackpad. Conviene responder corto, sin link.
+  - `r/programacion` `1tz9iow` reply `os77a4o`: pregunta por ghosting, cursos Udemy/Java 21 y si es tarde para iniciar carrera de informatica en Espana. Conviene responder por autoridad de David/IT, sin link.
+- Reply adicional detectado por usuario:
+  - `r/StandingDesks` `1ucheh2` reply OP `oto1ioc`: agradece comentario `otadibt`, confirma hard cap de 65 cm de fondo por ventilacion/moldura y pide nombres/modelos porque Amazon/Home Depot le parecen baratos/plasticosos. Merece contestar, sin link, recomendando separar frame + top y revisar modelos/frame serios compatibles con 24-26".
+- El comentario Reddit de hoy `r/programacion` `1ueq3v1` ya aparece publicado y visible como `otocowq`: https://www.reddit.com/r/programacion/comments/1ueq3v1/cu%C3%A1nto_valen_realmente_tus_derechos_dar_el_salto/otocowq/
+
+Candidatos Reddit verificados para hoy, todos SIN link:
+- Prioridad 1 ES: `r/programacion` `1ueq3v1` — OP ingeniero por cuenta ajena 35k, oferta europea 100% remoto como freelance/autonomo B2B, duda como valorar vacaciones, despido/paro y futura paternidad.
+- Prioridad 2 EN: `r/OfficeChairs` `1ueqt2z` — presupuesto 500 USD, duda remanufactured Leap v2 vs silla nueva tipo HBADA P5 con garantia/mesh moderno.
+- Prioridad 3 EN: `r/StandingDesks` `1ueitip` — cubiculo 48x36, riser VIVO con bandeja estatica demasiado baja, busca tabletop adjustable desk con bandeja ajustable o mod.
+- Backup EN: `r/OfficeChairs` `1uet8jd` — OP 5'5 / 205 lb, back/neck issues post foot injury/surgery, reimbursement chair under 500-600 USD.
+- Backup EN: `r/Ergonomics` `1uen9qr` / `1uer95l` — dolor/lesiones y dudas de dynamic lumbar/posture correction chair; usar con cautela por claims medicos.
+
+Quora ES:
+- Brave devolvio preguntas reales de monitor/tamano/distancia. Para variar respecto a sillas ya contestadas, prioridad hoy:
+  - `https://es.quora.com/Cu%C3%A1l-es-para-ti-el-tama%C3%B1o-ideal-de-un-monitor-de-PC-para-trabajar` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+- Alternativas si esa ya se publico manualmente:
+  - `https://es.quora.com/Son-buenos-para-la-programaci%C3%B3n-los-monitores-curvos`
+  - `https://es.quora.com/A-qu%C3%A9-distancia-deber%C3%ADa-ubicarme-de-mi-monitor-de-24-pulgadas`
+
+Pendiente:
+- Usuario publica manualmente 2-3 comentarios Reddit y 1 respuesta Quora si toca.
+- Tras publicar, verificar `old.reddit.com/user/Dear_Potato8535/comments/` y anotar IDs visibles.
+- Quora sigue sin ser verificable desde entorno agente por challenge/403; registrar URL exacta de answer si el usuario puede copiarla desde Quora.
+
+Update post-publicacion 2026-06-25:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/`: visibles 5 comentarios nuevos.
+- Karma visible tras publicacion: post `1`, comment `28`, total `29`.
+- Publicados SIN link:
+  - `r/programacion` `1ueq3v1` visible como `otocowq`: https://www.reddit.com/r/programacion/comments/1ueq3v1/cu%C3%A1nto_valen_realmente_tus_derechos_dar_el_salto/otocowq/
+  - Reply `r/programacion` `1tz9iow` visible como `otodldn`: https://www.reddit.com/r/programacion/comments/1tz9iow/qu%C3%A9_me_aconsejais/otodldn/
+  - Reply `r/StandingDesks` `1ucheh2` visible como `otodwsp`: https://www.reddit.com/r/StandingDesks/comments/1ucheh2/lshaped_electric_standing_desk_vs_modular_diy_w/otodwsp/
+  - `r/OfficeChairs` `1ueqt2z` visible como `otog21b`: https://www.reddit.com/r/OfficeChairs/comments/1ueqt2z/is_it_better_to_get_a_refurbished_steelcase_vs/otog21b/
+  - `r/StandingDesks` `1ueitip` visible como `otolfrh`: https://www.reddit.com/r/StandingDesks/comments/1ueitip/tabletop_adjustable_desk_with_adjustable_keyboard/otolfrh/
+- No aparece en primera pagina de perfil el reply preparado para `r/Ergonomics` `1tr8njw` (`oouiu5y`). Si el usuario lo publico, verificar por URL directa en proxima revision.
+
+## Update 2026-06-24 - paquete Reddit + Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `25`, total `26`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Reddit ES revisado (`r/askspain`, `r/programacion`): sin candidato fuerte hoy. `r/programacion` sin resultados semanales; `r/askspain` solo devuelve hilos laterales/culturales sin encaje claro.
+- Reddit EN candidatos verificados con old.reddit y textos humanizados:
+  - `r/OfficeChairs` `1uedo2d` — OP viene de GTOmega gaming, 5'9/165 lb, busca ergonomica 200-400 EUR, duda entre ProtoArc EC200 / Colamy Atlas / Staples Dexley / HBADA / Libernovo y le preocupa calor/sudor.
+  - `r/OfficeChairs` `1ue6mlo` — OP con silla gaming PU/cuero, verano, sudor tras 30 min, busca soluciones sin reemplazar silla.
+  - `r/Ergonomics` `1udpazf` — OP con standing desk, suelo de hormigon con moqueta gastada, dolor de pies, pregunta por anti-fatigue mats.
+- Backup Reddit:
+  - `r/StandingDesks` `1ue5t7l` — pomos de cajon golpean el estomago en standing desk tradicional; comentario corto preparado.
+  - `r/OfficeChairs` `1ue3gdn` — "I'm becoming a hunchback"; descartado como prioridad por baja informacion y respuesta existente suficiente.
+- Quora ES:
+  - Descartado por correccion del usuario: `https://es.quora.com/Qu%C3%A9-diferencia-hay-entre-sillas-de-oficina-escritorio-y-ergon%C3%B3micas-Necesito-una-silla-para-teletrabajar-Os-pongo-un-enlace-donde-parecen-diferenciarlas-pero-no-me-queda-claro-cu%C3%A1l-es-para-trabajar-8` ya estaba respondido en otra sesion. No volver a proponer.
+  - Candidato sustituto: `https://es.quora.com/Vale-la-pena-un-monitor-de-24-pulgadas-curvo-o-es-mejor-uno-plano-Cu%C3%A1l-es-un-buen-monitor-de-24-pulgadas-Lo-usar%C3%A9-para-jugar-en-PS4-y-trabajar-en-la-computadora` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+- Borradores entregados por chat; por feedback del usuario, no crear paquetes `.md` nuevos para Reddit/Quora.
+- Pendiente: usuario publica manualmente, confirma cuales y luego verificar visibilidad/karma. Registrar URL exacta de answer Quora si el usuario puede copiarla desde Quora.
+
 ## Update 2026-06-23 - paquete Reddit + Quora preparado
 
 Contexto operativo:
