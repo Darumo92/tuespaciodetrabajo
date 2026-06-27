@@ -5,6 +5,82 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-27 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `30`, total `31`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Busquedas ES revisadas: `r/programacion` solo devolvio `1ueq3v1`, ya comentado el 2026-06-25; `r/askspain` sin candidato accionable de teletrabajo/ergonomia.
+- Reddit candidatos verificados con old.reddit y textos preparados SIN link:
+  - Prioridad 1: `r/OfficeChairs` `1ugqjwv` — OP 180 cm / 135 kg, dolor lumbar, 8-12 h sentado, duda SIHOO Doro C300 Pro vs S100, a veces se sienta cross-legged.
+  - Prioridad 2: `r/WFH` `1ufpl7r` — OP busca monitor portatil para remoto, presupuesto <100 USD, compara ViewSonic VG1655, Acer 15.6, Arzopa A1 y Arzopa Z1FC.
+  - Prioridad 3: `r/homeoffice` `1ugujvq` — OP compara executive desk 71"x63" vs desk normal 50"x24", pregunta cual elegir si la habitacion tiene espacio.
+- Descartados / backups:
+  - `r/OfficeChairs` / `r/Ergonomics` `1ugtywq` / `1uguwby`: OP sin contexto suficiente; solo aparece respuesta "6ft 15k".
+  - `r/Ergonomics` `1ugaiys`: buen tema de silla cara + hombros/cuello, pero entra en dolor/claims fisicos y ya tiene respuestas suficientes.
+  - `r/OfficeChairs` `1ugmezk`: Libernovo SE, hilo ya cubierto por respuestas extensas y riesgo de entrar en drama de marca/fulfillment.
+  - `r/Ergonomics` `1ugqo5z`: trackpad/tendonitis, demasiado especifico y fuera del core del sitio.
+- Quora ES via Brave devolvio candidato real no marcado como respondido:
+  - `https://es.quora.com/Qu%C3%A9-es-mejor-para-trabajar-frente-al-ordenador-una-silla-gaming-o-una-de-oficina` -> `/guias/silla-gaming-vs-ergonomica/`.
+  - Correccion usuario 2026-06-27: esta pregunta ya fue respondida ayer aprox.; no volver a proponer.
+  - Sustituta no marcada como respondida, salida del indice Brave previo: `https://es.quora.com/Qu%C3%A9-aspectos-hay-que-tener-en-cuenta-a-la-hora-de-comprar-una-silla-ergon%C3%B3mica-para-escritorio` -> `/sillas/mejor-silla-ergonomica-calidad-precio/`.
+  - Correccion usuario 2026-06-27: la sustituta tambien esta comentada; no volver a proponer.
+  - Nueva sustituta de pool Brave previo, no marcada como respondida: `https://es.quora.com/Qu%C3%A9-le-recomiendas-a-una-persona-que-se-la-pasa-18-horas-en-frente-de-su-computadora-trabajando-para-que-su-salud-no-se-deteriore` -> `/guias/ergonomia-teletrabajo-postura-correcta/`.
+  - Backup si tambien estuviera respondida: `https://es.quora.com/Empec%C3%A9-a-trabajar-y-me-sent%C3%A9-en-mi-escritorio-durante-mucho-tiempo-trabajando-en-la-computadora-pero-despu%C3%A9s-de-un-tiempo-me-dol%C3%ADa-el-cuello-Podr%C3%ADa-usar-un-collar-para-mejorar-mi-postura-y` -> responder sin link o con `/guias/ergonomia-teletrabajo-postura-correcta/` solo si encaja natural.
+  - Recomendacion tactica: publicar solo si se quiere mantener Quora hoy; si ayer se publico Quora, mejor espaciar 24h+.
+- Pendiente: usuario publica manualmente 2-3 comentarios Reddit y, si decide, 1 respuesta Quora. Luego verificar visibilidad en `old.reddit.com/user/Dear_Potato8535/comments/` y registrar IDs. Quora sigue no verificable desde entorno agente por challenge/403; registrar URL exacta de answer si el usuario puede copiarla.
+
+Update post-publicacion 2026-06-27:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/` y los hilos directos: visibles 3 comentarios nuevos de hoy.
+- Karma visible tras publicacion: post `1`, comment `30`, total `31`; sin subida visible inmediata.
+- Publicados SIN link y visibles:
+  - `r/OfficeChairs` `1ugqjwv` visible como `ou2z1ol`: https://www.reddit.com/r/OfficeChairs/comments/1ugqjwv/which_sihoo_chair_should_i_get/ou2z1ol/
+  - `r/WFH` `1ufpl7r` visible como `ou32jfd`: https://www.reddit.com/r/WFH/comments/1ufpl7r/does_anyone_have_a_portable_monitor_theyd/ou32jfd/
+  - `r/homeoffice` `1ugujvq` visible como `ou36gvw`: https://www.reddit.com/r/homeoffice/comments/1ugujvq/is_executive_desk_a_good_home_office_desk/ou36gvw/
+- Quora: publicacion confirmada manualmente por usuario; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de answer si el usuario la puede copiar desde Quora.
+
+## Update 2026-06-26 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `29`, total `30`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Busquedas ES revisadas (`r/askspain`, `r/programacion`, `r/Autonomos`, `r/Spain`):
+  - `r/programacion` `1ueq3v1` vuelve a aparecer pero ya se comento el 2026-06-25; no repetir.
+  - `r/askspain` sin encaje real de home office/teletrabajo hoy.
+  - `r/Autonomos` trae hilos fiscales sobre deducciones de ordenadores/portatiles; no comentar por riesgo legal/fiscal y poco encaje de ergonomia.
+- Reddit candidatos EN verificados con old.reddit y textos preparados sin link:
+  - Prioridad 1: `r/homeoffice` `1ufsyqj` — product manager editorial, spreadsheets/docs/PDFs/Teams, duda entre ultrawide 49/45 + vertical o varios monitores, dos MacBooks, escritorio 75x30, quiere funcionalidad sin "wall of monitors".
+  - Prioridad 2: `r/OfficeChairs` `1ufrwd2` — estudiante de medicina, 183 cm/85 kg, viene de folding chair, calor/verano, quiere mesh chair 200-500 EUR y desconfia de HBADA/Aliexpress ads.
+  - Prioridad 3: `r/homeoffice` `1ued0ux` — empieza remoto, quiere montar home office desde cero, le atrae standing desk porque ya lo usaba, duda entre silla/monitor/brazos/lampara/storage.
+  - Backup: `r/Ergonomics` `1ufalbd` — distancia de monitor 24 inches, pregunta tamano maximo comodo; buen encaje si se quiere un comentario corto.
+- Descartados como prioridad:
+  - `r/OfficeChairs` `1ufkt2w` Prime Day: demasiado generico.
+  - `r/OfficeChairs` `1uflzzi` Amia not so amazing: ya tiene discusion cubierta sobre cushion/Crandall/BTOD/Zody.
+- Quora ES: Brave devolvio preguntas reales de monitor/productividad. Para evitar repetir las preguntas de monitor ya propuestas en dias anteriores, prioridad hoy:
+  - `https://es.quora.com/De-qu%C3%A9-manera-mejora-la-productividad-dos-monitores-cuando-se-trabaja-con-computadoras` -> `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+- Pendiente: usuario publica manualmente 2-3 comentarios Reddit y 1 respuesta Quora si toca; despues verificar visibilidad en `old.reddit.com/user/Dear_Potato8535/comments/` y registrar IDs.
+
+Update replies 2026-06-26:
+- Primera pagina de `old.reddit.com/user/Dear_Potato8535/comments/`: todos los comentarios recientes visibles muestran `0 children`.
+- Revisados hilos clave con old.reddit:
+  - `r/programacion` `1tz9iow`: reply `otpd81q` del OP dice solo "gracias" debajo de `otodldn`; no merece contestar.
+  - `r/StandingDesks` `1ucheh2`: reply OP `oto1ioc` ya contestado con `otodwsp`; no hay nuevo child debajo de `otodwsp`.
+  - `r/Ergonomics` `1tr8njw`: sigue existiendo reply OP `oouiu5y` bajo `ootugv4` sin respuesta de la cuenta; es el unico pendiente accionable si se quiere cerrar, aunque ya es antiguo.
+- Conclusion operativa: no hay replies nuevos urgentes; solo queda el pendiente historico de `r/Ergonomics` `1tr8njw`.
+
+Update post-publicacion 2026-06-26:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/`: visibles 2 comentarios nuevos de hoy.
+- Karma visible tras publicacion: post `1`, comment `30`, total `31`.
+- Publicados SIN link y visibles:
+  - `r/homeoffice` `1ufsyqj` visible como `otvhb9h`: https://www.reddit.com/r/homeoffice/comments/1ufsyqj/best_monitor_setup_for_product_manager/otvhb9h/
+  - `r/homeoffice` `1ued0ux` visible como `otvw40k`: https://www.reddit.com/r/homeoffice/comments/1ued0ux/just_started_working_from_home_and_honestly_not/otvw40k/
+- No visible en perfil ni en hilo directo:
+  - `r/OfficeChairs` `1ufrwd2` — `https://old.reddit.com/r/OfficeChairs/comments/1ufrwd2/which_chair_to_choose/` no contiene `Dear_Potato8535`. Si el usuario lo publico, quedo oculto/no publico o no se envio.
+  - Reply historico `r/Ergonomics` `1tr8njw` bajo `oouiu5y` sigue sin respuesta visible; solo aparece el comentario base `ootugv4`.
+- Quora: publicacion confirmada manualmente por usuario; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de answer si el usuario la puede copiar desde Quora.
+
 ## Update 2026-06-25 - revision replies + paquete Reddit/Quora preparado
 
 Contexto operativo:

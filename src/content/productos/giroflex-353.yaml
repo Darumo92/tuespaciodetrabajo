@@ -70,7 +70,49 @@ puntosDebiles:
   - "Reposabrazos opcionales, no de serie"
   - "Datos de lumbar y carga máxima no especificados"
 fuenteSpecs: "Web oficial Flokk (store.flokk.com/us/en-gb/products/giroflex-353: diseño de Paolo Fancelli, mecanismo Automatic Move de autoajuste al peso, asiento de dos zonas que envuelve la pelvis con borde delantero inclinado, respaldo en tejido de punto 3D o tapizado, altura asiento 390-510 mm, ancho asiento 490 mm, profundidad asiento 380-440 mm, altura respaldo rango 59-65 cm, base de 5 radios en plástico negro, fabricación suiza con certificación Cradle to Cradle y Red Dot 2014)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Giroflex 353"
+  veredicto: "The Giroflex 353 is a Swiss swivel chair designed by Paolo Fancelli whose big idea is the Automatic Move mechanism, which self-adjusts to the user's weight with no levers. The seat has a two-zone profile that wraps the pelvis and stops you sliding forward, with the front edge slightly tilted to relieve the thighs. Its height range starts quite low, making it suitable for shorter people, an unusual strength. The backrest comes in 3D knit fabric or classic upholstery. It adds Swiss manufacturing with Cradle to Cradle certification and a Red Dot 2014. It's a solid buy for anyone who values self-adjustment and provenance over a surplus of levers."
+  idealPara: "Anyone wanting a Swiss-made swivel chair that self-adjusts to weight, ideal for shorter heights"
+  comunidad: "Giroflex is a Swiss brand with a good reputation for quality and design in the office segment, now under the Flokk group. The 353 is known for its award-winning design (Red Dot 2014) and its self-adjusting mechanism, though public end-user reviews are limited because its main channel is contract and project. The available consensus describes it as a well-built, comfortable chair, especially valued by those after a low seat."
+  resumenCompra:
+    mejorPara: "Anyone wanting weight self-adjustment and a low seat suitable for shorter heights."
+    evitarSi: "You need armrests as standard or many documented manual adjustments."
+    alternativaDirecta: "HAG SoFi if you want another motion swivel chair with Scandinavian provenance."
+    decisionRapida: "If you need the seat to drop very low and prefer the chair to adjust itself, this Swiss one fits."
+  puntosFuertes:
+    - "Automatic Move mechanism that self-adjusts to the user's weight"
+    - "Two-zone seat that wraps the pelvis and stops sliding"
+    - "Tilted front edge that relieves the thighs"
+    - "Low seat suitable for shorter people"
+    - "Swiss manufacturing with Cradle to Cradle certification and Red Dot 2014"
+    - "Backrest in 3D knit fabric or classic upholstery"
+  puntosDebiles:
+    - "Optional armrests, not standard"
+    - "Lumbar and maximum load data not specified"
+  paraQuienSi:
+    - "Shorter people who need a seat that drops very low"
+    - "Anyone who prefers weight self-adjustment to handling many levers"
+    - "Users who value Swiss manufacturing and a sustainability certification"
+  paraQuienNo:
+    - "Anyone needing armrests as standard without paying for the option"
+    - "Users who want lumbar and detailed manual adjustments"
+    - "Anyone after the lowest possible price"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 54
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -84,3 +126,4 @@ specs:
   profundidadAsientoMinCm: 38
   profundidadAsientoMaxCm: 44
   alturaRespaldoCm: 62
+  asientoMaterial: "tejido de punto 3D o tapizado"

@@ -69,7 +69,50 @@ puntosDebiles:
   - "Garantía de solo 1 año en malla y asiento frente a 5 años en estructura"
   - "Pensada para 170 cm en adelante, poco margen para usuarios bajos"
 fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-fujin-pro: respaldo de malla de elastómero termoplástico y poliéster, lumbar 2D en altura y profundidad, reposabrazos 4D, reposacabezas 3D, máx 136 kg, altura recomendada 170-200 cm, estructura y base de aleación de aluminio, mecanismo synchro-tilt con tensión regulable, garantía hasta 5 años en estructura, mecanismos y reposabrazos y hasta 1 año en malla y asiento)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Razer Fujin Pro"
+  veredicto: "The Fujin Pro is Razer's serious bet on a full-mesh ergonomic chair, far from the brand's classic padded racing seat. A breathable mesh backrest, 2D lumbar, 4D arms and 3D headrest deliver a very high level of adjustment for prolonged use. The important caveat is the warranty: frame, mechanisms and armrests are covered up to 5 years, but the mesh and seat only up to 1 year, so the part that wears most has the least cover."
+  idealPara: "Long gaming and office sessions for anyone wanting breathable mesh rather than a racing-style bucket seat"
+  comunidad: "Razer came late to mesh ergonomic chairs and the Fujin line is its full-mesh answer to its historic catalogue of racing seats. The Fujin Pro is discussed in gaming and office forums as one of the few premium mesh chairs from a peripherals brand, with good marks for its adjustment system. The community's most cited concern is the uneven warranty: five years for the frame, but only one for the mesh and seat, exactly what suffers most with daily use."
+  resumenCompra:
+    mejorPara: "Anyone wanting Razer's full-mesh ergonomic chair to combine intense gaming and an office day."
+    evitarSi: "You want the soft feel of a racing chair or are under 170 cm."
+    alternativaDirecta: "Eurotech Ergohuman Gen2 if you want a proven mesh ergonomic chair outside the gaming world."
+    decisionRapida: "The Razer made for hours on end seated, with mesh and real adjustments; just mind the short mesh warranty."
+  puntosFuertes:
+    - "Full breathable mesh backrest (thermoplastic elastomer and polyester)"
+    - "2D lumbar adjustable in height and depth"
+    - "4D armrests and 3D headrest"
+    - "Aluminium-alloy frame, arms and base"
+    - "Supports up to 136 kg"
+  puntosDebiles:
+    - "Only 1-year warranty on mesh and seat versus 5 years on the frame"
+    - "Designed for 170 cm and up, little margin for shorter users"
+  paraQuienSi:
+    - "People combining long gaming with home-office work who want mesh breathability"
+    - "Users from 170 to 200 cm who want adjustable lumbar and headrest"
+    - "Anyone who prefers an aluminium frame to plastic bases"
+  paraQuienNo:
+    - "Anyone who wants the enveloping padding of a racing chair"
+    - "Users below 170 cm"
+    - "Anyone who prioritises a long warranty on the mesh too"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 50
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -82,3 +125,4 @@ specs:
   alturaRecomendadaMinCm: 170
   alturaRecomendadaMaxCm: 200
   reposacabezas: "ajustable"
+  asientoMaterial: "malla de elastómero termoplástico y poliéster"

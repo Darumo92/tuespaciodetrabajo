@@ -67,7 +67,48 @@ puntosDebiles:
   - "Sin ajustes manuales de lumbar ni soporte regulable"
   - "Reposabrazos opcionales, no de serie"
 fuenteSpecs: "Web oficial Sedus (sedus.com/en/products/chairs/sejoy: asiento y respaldo en una sola estructura con membrana de tejido de punto autoajustable, reposabrazos opcionales, altura de asiento 390-510 mm, máx 130 kg, mecanismo balancín con suspensión en profundidad e inclinación 4 grados adelante y 7 atrás, certif. DIN EN 1335, GS, QUALITY OFFICE, GREENGUARD, AGR y Blue Angel, garantía 5 años)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Sedus se:joy"
+  veredicto: "The idea behind the se:joy is to give up adjustments: seat and backrest form a single structure covered by a knit membrane that flexes and adapts to each body automatically, with no adjustable lumbar and no controls to learn. That simplicity is both its charm and its limit, because if you need to fine-tune a specific support, you won't be able to here. Armrests aren't included as standard: they're optional. In its favour are the Sedus name, a suspension rocker mechanism and certifications to spare."
+  idealPara: "Anyone wanting a minimalist German chair that adapts on its own, with no levers or adjustments to touch"
+  comunidad: "Sedus is a German manufacturer with a long reputation in professional office furniture. The se:joy is mostly discussed for its minimalist approach and the self-adapting knit membrane, and it fits projects after a clean look and low maintenance. As it sells through the professional channel, end-user reviews are scarce, but the general view centres on its immediate comfort with no learning curve. The most repeated drawback is the lack of adjustments for anyone who wants to personalise their posture."
+  resumenCompra:
+    mejorPara: "Settings and people who want to sit and forget, with German quality behind it."
+    evitarSi: "You like fine-tuning lumbar and armrests by hand, or you're at the extremes of the size chart."
+    alternativaDirecta: "Humanscale Diffrient Smart if you want another self-adjusting chair with almost no controls."
+    decisionRapida: "One size for almost everyone: set it up and it supports you, no instruction manual. That's the deal."
+  puntosFuertes:
+    - "Self-adapting knit membrane, no adjustments needed"
+    - "Seat and backrest in a single continuous structure"
+    - "Rocker mechanism with depth suspension and 4° forward / 7° backward tilt"
+    - "DIN EN 1335, GS, GREENGUARD, AGR and Blue Angel certifications"
+    - "5-year warranty"
+  puntosDebiles:
+    - "No manual lumbar adjustment or adjustable support"
+    - "Optional armrests, not standard"
+  paraQuienSi:
+    - "People who don't want to learn to adjust a chair and prefer it to adapt on its own"
+    - "Offices after a minimalist look and easy maintenance"
+    - "Average-build users up to 130 kg in moderate-intensity days"
+  paraQuienNo:
+    - "Anyone needing adjustable lumbar or wanting to fine-tune every parameter"
+    - "Anyone who assumes armrests are included"
+    - "Very tall, very short or over-130 kg users"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 60
+  confianza: "medio"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -79,3 +120,5 @@ specs:
   mecanismo: "balancin-sincronizado"
   garantiaAnios: 5
   certificacionEn1335: true
+  asientoMaterial: "membrana de tejido de punto (knit) autoajustable"
+  reposacabezas: "ninguno"

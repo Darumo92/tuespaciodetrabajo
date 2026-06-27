@@ -35,22 +35,68 @@ puntosFuertes:
 puntosDebiles:
   - "Malla del respaldo algo fina (según reseñas)"
   - "Instrucciones de montaje mejorables"
-fuenteSpecs: "Amazon.es ficha B0BLNHPM3P · holludleoffice.com (peso máx 150 kg, EN1335, BIFMA, garantía 5 años, base acero) · hagensieker.com (BIFMA x5.1) · búsqueda web (dimensiones 70,1 × 65 × 131 cm, peso 19,4 kg)"
-verificadoEn: "2026-06-07"
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es HOLLUDLE B0BLNHPM3P"
+    url: "https://www.amazon.es/dp/B0BLNHPM3P"
+    fechaConsulta: "2026-06-25"
+  - tipo: "oficial"
+    nombre: "HOLLUDLE Office (web de marca)"
+    url: "https://holludleoffice.com/en-us/products/holludle-ergonomic-office-chair-v-chair"
+    fechaConsulta: "2026-06-25"
+  - tipo: "review"
+    nombre: "John's Tech Blog — Holludle Ergonomic Chair"
+    url: "https://hagensieker.com/2026/04/08/holludle-ergonomic-office-chair/"
+    fechaConsulta: "2026-06-25"
+fuenteSpecs: "Amazon.es ficha B0BLNHPM3P · holludleoffice.com (peso máx 150 kg, EN1335 + BIFMA, garantía 5 años, base acero, mecanismo sincro con bloqueo en 3 posiciones, respaldo reclinable ~100-110°, reposacabezas 2D ajustable) · hagensieker.com (BIFMA x5.1) · búsqueda web (dimensiones 70,1 × 65 × 131 cm, peso 19,4 kg). CORRECCIÓN: reposabrazos reclasificados de 'abatibles' a 4D según ficha oficial holludleoffice.com y listado Amazon UK ('4D armrests')."
+en:
+  nombreComercial: "HOLLUDLE Ergonomic Chair"
+  veredicto: "The clearest differentiator in this price bracket: adjustable seat depth, 4D armrests and height-adjustable lumbar are unusual on Amazon below €220. The back mesh draws criticism for being somewhat thin, and assembly is confusing. A good option for users with atypical proportions."
+  idealPara: "Heights outside the average (under 1.65 m or over 1.85 m)"
+  comunidad: "Generally positive ratings highlighting adjustability; detractors point to the mesh quality and the assembly instructions. EN1335 + BIFMA certified, with an exceptional 5-year warranty for this segment."
+  puntosFuertes:
+    - "Adjustable seat depth (rare at this price)"
+    - "Headrest adjustable in height and angle"
+    - "Integrated lumbar support"
+  puntosDebiles:
+    - "Backrest mesh somewhat thin (per reviews)"
+    - "Assembly instructions could be better"
+  paraQuienSi:
+    - "Users under 1.65 m or over 1.85 m tall"
+    - "Those who need adjustable seat depth"
+    - "People who value adjustability over premium materials"
+  paraQuienNo:
+    - "Users who prioritise the tactile quality of the mesh"
+    - "Those unwilling to spend time on assembly"
+    - "Budgets below €180"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "medio"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.asientoMaterial"
 specs:
   tipo: "silla"
   lumbar: "altura"
   respaldo: "malla"
-  reposabrazos: "abatibles"
+  reposabrazos: "4d"
   profundidadRegulable: true
-  reclinacionMaxGrados: null
+  reclinacionMaxGrados: 110
   pesoMaxKg: 150
   alturaAsientoMinCm: null
   alturaAsientoMaxCm: null
-  anchoCm: null
-  fondoCm: null
-  mecanismo: null
+  anchoCm: 70
+  fondoCm: 65
+  mecanismo: "sincro con bloqueo en 3 posiciones"
   baseMaterial: "acero"
   certificacionBifma: true
   pesoProductoKg: 19.4
   garantiaAnios: 5
+  certificacionEn1335: true
+  reposacabezas: "ajustable"

@@ -73,7 +73,50 @@ puntosDebiles:
   - "Precio alto"
   - "Peso elevado"
 fuenteSpecs: "Web oficial Quersus (quersus.com/vaos-3.html: polipiel sobre espuma fría de tres capas, mecanismo OPTIMUS SYNCHRON con bloqueo en cinco posiciones y antichoque, reclinación 140°, reposabrazos 4D con almohadillas reemplazables, lumbar LUMBFLEX ajustable en dos direcciones, cojín cervical de viscoelástica, máx 150 kg, altura recomendada 157-205 cm, base de aluminio Q-FORTIS, estructura de acero, ruedas de poliuretano, peso 33 kg)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Quersus VAOS.3"
+  veredicto: "The VAOS.3 is Quersus's evolution towards a wider seat and backrest than the VAOS.2, designed to accommodate a very broad height range, from 157 to 205 cm. It goes for European build: three-layer cold foam, an OPTIMUS SYNCHRON mechanism with five-position lock and anti-shock system, a two-way adjustable LUMBFLEX lumbar and 4D armrests with replaceable pads. The backrest is faux leather over foam, not mesh, so it breathes less in summer, and its price puts it in high-end territory. For anyone after a well-finished European gaming chair with a genuinely adjustable lumbar, it's worth considering."
+  idealPara: "A European gaming chair with a widened backrest and a broad range of user heights"
+  comunidad: "Good standing in the high-end European gaming niche: the very wide height range, the cold-foam quality and the adjustable lumbar are valued over generic racing gaming chairs. On the downside, the heat of the faux leather in summer and a price that puts it out of tight budgets are mentioned."
+  resumenCompra:
+    mejorPara: "Anyone wanting a European gaming chair with an adjustable lumbar and a widened backrest."
+    evitarSi: "You need breathable mesh or want the lowest price."
+    alternativaDirecta: "Noblechairs HERO if you prefer a sturdy gaming chair for larger users."
+    decisionRapida: "For very different heights and anyone wanting a European finish with an adjustable lumbar, it makes the list."
+  puntosFuertes:
+    - "Backrest and seat widened versus the VAOS.2"
+    - "Two-way adjustable LUMBFLEX lumbar"
+    - "4D armrests with replaceable pads"
+    - "OPTIMUS SYNCHRON mechanism with five-position lock and anti-shock"
+    - "User height range from 157 to 205 cm"
+  puntosDebiles:
+    - "Faux-leather backrest, warmer in summer"
+    - "High price"
+    - "Heavy"
+  paraQuienSi:
+    - "Users between 157 and 205 cm who need a broad height range"
+    - "Anyone wanting a European gaming chair with a genuinely adjustable lumbar"
+    - "People who value cold foam and 4D armrests with replaceable pads"
+  paraQuienNo:
+    - "Anyone who needs breathable mesh for summer"
+    - "Anyone wanting to spend the minimum on a chair"
+    - "Anyone wanting a light, easy-to-move chair"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 52
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -87,3 +130,4 @@ specs:
   alturaRecomendadaMinCm: 157
   alturaRecomendadaMaxCm: 205
   reposacabezas: "fijo"
+  asientoMaterial: "polipiel sobre espuma fría de tres capas"

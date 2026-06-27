@@ -25,7 +25,14 @@ const displayName = localizedProductName(p, locale);
       {p.verificadoEn && <span class="ficha-verificado">{isEn ? 'Verified' : 'Verificado'} {p.verificadoEn}</span>}
     </div>
     {isEn ? (
-      <p class="ficha-ideal">Structured product profile for comparing ergonomics, adjustability, materials and verified chair specs before buying.</p>
+      (p.en?.idealPara || p.en?.resumenCompra?.decisionRapida) ? (
+        <>
+          {p.en?.idealPara && <p class="ficha-ideal">Ideal for: {p.en.idealPara}</p>}
+          {p.en?.resumenCompra?.decisionRapida && <p class="ficha-decision">{p.en.resumenCompra.decisionRapida}</p>}
+        </>
+      ) : (
+        <p class="ficha-ideal">Structured product profile for comparing ergonomics, adjustability, materials and verified chair specs before buying.</p>
+      )
     ) : (
       <>
         {p.idealPara && <p class="ficha-ideal">Ideal para: {p.idealPara}</p>}

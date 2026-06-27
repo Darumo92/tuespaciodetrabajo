@@ -153,6 +153,30 @@ const productos = defineCollection({
     puntosDebiles: z.array(z.string()).default([]),
     fuenteSpecs: z.string(),
     verificadoEn: z.string().optional(),
+    calidadDatos: z.object({
+      score: z.number().int().min(0).max(100).nullable().default(null),
+      confianza: z.enum(['alto', 'medio', 'bajo']).nullable().default(null),
+      camposFaltantes: z.array(z.string()).default([]),
+      enriquecidoEn: z.string().nullable().default(null),
+    }).optional(),
+    // Contenido editorial en inglés. ES vive en los campos base; las specs técnicas
+    // son compartidas. Si falta, la ficha EN usa el fallback generado de specs.
+    en: z.object({
+      nombreComercial: z.string().optional(),
+      veredicto: z.string().optional(),
+      idealPara: z.string().optional(),
+      comunidad: z.string().optional(),
+      resumenCompra: z.object({
+        mejorPara: z.string().optional(),
+        evitarSi: z.string().optional(),
+        alternativaDirecta: z.string().optional(),
+        decisionRapida: z.string().optional(),
+      }).optional(),
+      puntosFuertes: z.array(z.string()).default([]),
+      puntosDebiles: z.array(z.string()).default([]),
+      paraQuienSi: z.array(z.string()).default([]),
+      paraQuienNo: z.array(z.string()).default([]),
+    }).optional(),
     specs: z.discriminatedUnion('tipo', [specsSilla]),
   }),
 });

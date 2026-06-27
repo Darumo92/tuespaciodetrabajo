@@ -73,7 +73,47 @@ puntosDebiles:
   - "No se vende en Amazon y suele ir bajo pedido"
   - "Capacidad de carga y garantía no publicadas con claridad"
 fuenteSpecs: "Web oficial Okamura (okamura.com/products/sylphy) + Think Furniture (think-furniture.com/okamura-sylphy-task-chair): respaldo alto W648 x D574-624 x H960-1090 mm, asiento W460 x D410 mm, reclinación hasta 23 grados, basculación frontal 10 grados con dial, malla o tapizado, cojín multidensidad, brazos 3D/fijos/sin brazos, cabecero y lumbar opcionales, base resina o pulida, 30% materiales reciclados"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Okamura Sylphy"
+  veredicto: "The Sylphy is Okamura's premium ergonomic chair, from a Japanese brand with a strong reputation in high-end office furniture. Its signature is the S-curve backrest, which supports the lumbar and thoracic areas with a line designed to follow the spine, and a synchro mechanism that reclines up to 23 degrees with a 10-degree forward tilt adjustable by dial. The seat cushion is multi-density, softer at the front and firmer at the back. It isn't sold on Amazon Spain and usually ships to order with long lead times, so it's a specialist-channel purchase rather than a consumer one, and the price matches that category."
+  idealPara: "Anyone wanting a premium Japanese ergonomic chair with an S-curve backrest and support for different builds"
+  comunidad: "Highly regarded among those who know Japanese office ergonomics: the S-curve backrest and the fit to different builds are cited as its strengths. The consensus is that it competes in the premium league, with the drawback of an indirect purchase channel outside Asia and little public information on maximum load and warranty."
+  resumenCompra:
+    mejorPara: "Anyone wanting a high-end Japanese ergonomic chair with an S-curve back that adapts well to different heights."
+    evitarSi: "You need to buy quickly on Amazon or have a tight budget."
+    alternativaDirecta: "Herman Miller Aeron if you prefer a premium ergonomic chair with wider availability and global support."
+    decisionRapida: "A very serious premium option if Japanese ergonomics appeal to you and you accept a less direct purchase channel."
+  puntosFuertes:
+    - "S-curve backrest that follows the spine"
+    - "23-degree recline with a 10-degree forward tilt adjustable by dial"
+    - "Multi-density seat cushion (softer at the front, firmer at the back)"
+    - "High-end materials with a recycled percentage"
+  puntosDebiles:
+    - "Not sold on Amazon and usually made to order"
+    - "Load capacity and warranty not clearly published"
+  paraQuienSi:
+    - "Anyone wanting a premium Japanese ergonomic chair with an S-curve back"
+    - "Wide- or narrow-build users who want a backrest that adapts"
+    - "Anyone who values a multi-density cushion and high-end materials"
+  paraQuienNo:
+    - "Tight budgets"
+    - "Anyone who wants to buy and receive quickly on Amazon"
+    - "Anyone who needs a published, verifiable maximum load"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 54
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -82,6 +122,7 @@ specs:
   profundidadRegulable: false
   reclinacionMaxGrados: 23
   anchoCm: 64.8
+  fondoCm: 62.4
   mecanismo: "Sincro con reclinación de 23 grados y basculación frontal de 10 grados regulable con dial"
   baseMaterial: "resina o aluminio pulido"
   anchoAsientoCm: 46

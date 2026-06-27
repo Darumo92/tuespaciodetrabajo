@@ -70,7 +70,51 @@ puntosDebiles:
   - "Sin reclinado libre, solo posiciones preconfiguradas"
   - "Lumbar fijo y precio de tramo premium"
 fuenteSpecs: "Web oficial RECARO Gaming (recaro-gaming.com/en/recaro-exo/: silla de concha de asiento ergonómica fabricada en Alemania, cuatro posiciones preconfiguradas Attack, Core Focus, Core Relax y Recharge, respaldo de concha individualizable con espuma fría de motorsport y tejidos transpirables, resalte antideslizamiento, lumbar fijo integrado, reposabrazos 4D acolchados con 5D y base de aluminio en FX y Platinum, altura de asiento ajustable con rueda de fuerza del resorte, máx 150 kg, altura recomendada 150-195 cm, base de plástico reforzado con fibra de vidrio en Exo y aluminio en FX y Platinum, certif. EN 1335, sello GS, Made in Germany, garantía 5 años)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "RECARO Exo"
+  veredicto: "The RECARO Exo isn't a typical reclining racing gaming chair but an ergonomic seat-shell chair made in Germany that applies RECARO's motorsport know-how. Instead of reclining, it offers four preset seat positions (Attack, Core Focus, Core Relax and Recharge), an individualisable shell backrest with cold foam and breathable fabrics, and an anti-slide lip that stops you sliding forward. It has an integrated fixed lumbar and padded 4D armrests on the base model; the FX and Platinum versions step up to 5D and an aluminium base. It's a premium buy for anyone who values a firm posture and serious build over deep reclining."
+  idealPara: "An ergonomic seat-shell gaming chair made in Germany, for anyone wanting a firm posture and motorsport-grade materials"
+  comunidad: "RECARO carries a very strong reputation from its automotive and motorsport seats, and the Exo benefits from that image of material and build quality made in Germany. As a gaming product it's relatively recent and independent reviews are fewer than for veteran brands; the available consensus highlights the build quality and firm-posture approach, with price as the main drawback versus more conventional gaming chairs."
+  resumenCompra:
+    mejorPara: "Anyone wanting an ergonomic seat-shell gaming chair with a firm posture and motorsport materials."
+    evitarSi: "You want to recline almost flat or want the lowest price."
+    alternativaDirecta: "Secretlab TITAN Evo if you prefer a premium gaming chair with deep recline."
+    decisionRapida: "Firm posture and German build over deep reclining: that's the Exo's deal."
+  puntosFuertes:
+    - "Individualisable ergonomic seat shell made in Germany"
+    - "Four preset seat positions: Attack, Core Focus, Core Relax and Recharge"
+    - "Motorsport-grade cold foam and breathable fabrics"
+    - "Anti-slide lip that stops you sliding forward"
+    - "Padded 4D armrests (5D and aluminium base on FX and Platinum)"
+    - "Supports up to 150 kg, EN 1335 certification, GS mark and 5-year warranty"
+  puntosDebiles:
+    - "No free reclining, only preset positions"
+    - "Fixed lumbar and premium-tier price"
+  paraQuienSi:
+    - "Gamers who prefer a firm, active posture to lying back"
+    - "Anyone who values motorsport-grade materials and German manufacturing"
+    - "Users between 150 and 195 cm within the 150 kg limit"
+  paraQuienNo:
+    - "Anyone who wants to recline almost flat"
+    - "Users who need adjustable lumbar"
+    - "Anyone after a cheap gaming chair for occasional use"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 49
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -83,3 +127,4 @@ specs:
   alturaRecomendadaMinCm: 150
   alturaRecomendadaMaxCm: 195
   certificacionEn1335: true
+  asientoMaterial: "espuma fría de origen motorsport"

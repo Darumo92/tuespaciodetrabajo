@@ -18,8 +18,13 @@ const warranty = p.specs?.garantiaAnios ? `${p.specs.garantiaAnios}-year warrant
     <div class="resumen-grid">
       {isEn ? (
         <>
-          <p><strong>Best use</strong><span>Compare this chair for long home-office sessions where fit, support and adjustability matter.</span></p>
-          <p><strong>Check before buying</strong><span>Confirm current price, stock, size and return policy on the retailer page.</span></p>
+          {p.en?.resumenCompra?.mejorPara
+            ? <p><strong>Best use</strong><span>{p.en.resumenCompra.mejorPara}</span></p>
+            : <p><strong>Best use</strong><span>Compare this chair for long home-office sessions where fit, support and adjustability matter.</span></p>}
+          {p.en?.resumenCompra?.evitarSi
+            ? <p><strong>Avoid if</strong><span>{p.en.resumenCompra.evitarSi}</span></p>
+            : <p><strong>Check before buying</strong><span>Confirm current price, stock, size and return policy on the retailer page.</span></p>}
+          {p.en?.resumenCompra?.alternativaDirecta && <p><strong>Direct alternative</strong><span>{p.en.resumenCompra.alternativaDirecta}</span></p>}
           <p><strong>Verified capacity</strong><span>{support}</span></p>
           <p><strong>Warranty</strong><span>{warranty}</span></p>
         </>

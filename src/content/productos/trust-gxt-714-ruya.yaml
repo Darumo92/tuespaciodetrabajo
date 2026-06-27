@@ -73,7 +73,50 @@ puntosDebiles:
   - "Soporte lumbar mediante cojín, sin sistema dinámico"
   - "Ajustes básicos para su categoría"
 fuenteSpecs: "Web oficial Trust (trust.com/en/product/24908-gxt-714-ruya-gaming-chair-black: chasis de madera certificada FSC, respaldo de espuma de alta densidad con tejido transpirable y polipiel en laterales y trasera, asiento de espuma moldeada, reposabrazos 3D, cojines lumbar y cervical ajustables y desmontables, inclinación con bloqueo, pistón de gas clase 4 probado hasta 150 kg, altura recomendada hasta 195 cm, ancho de asiento 52 cm, dimensiones 71x75 cm, altura mínima 134 cm)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Trust GXT 714 Ruya"
+  veredicto: "The GXT 714 Ruya is Trust's take on an affordable gaming chair with an unusual differentiator: its wooden frame is FSC-certified, a nod to sustainability that's rare in this range. It pairs a high-density foam backrest with breathable fabric and faux leather on the sides and back, a moulded foam seat, 3D armrests and a tilt-and-lock function. It's a budget chair, so lumbar support comes from removable cushions and the adjustments are basic. For anyone after a cheap gaming chair that breathes well with a sustainable touch, it does the job without pretensions."
+  idealPara: "Entry-level gaming with an FSC-certified wooden frame and breathable fabric"
+  comunidad: "Decent reception for its range in reviews and user feedback: people value the breathable fabric, the keen price and the FSC-certified frame as a sustainable differentiator. Complaints stick to what's expected of an entry gaming chair: 3D-only armrests and basic adjustments."
+  resumenCompra:
+    mejorPara: "Anyone wanting a cheap, breathable gaming chair with a sustainable touch."
+    evitarSi: "You need 4D armrests or a dynamic lumbar."
+    alternativaDirecta: "Corsair TC100 if you prefer an established gaming brand at the same price."
+    decisionRapida: "If you want the basics that breathe and cost little, nothing more, it delivers."
+  puntosFuertes:
+    - "FSC-certified wooden frame"
+    - "Breathable fabric with faux leather on sides and back"
+    - "3D armrests"
+    - "Adjustable, removable lumbar and neck cushions"
+    - "Tilt-and-lock function"
+  puntosDebiles:
+    - "3D armrests, no 4D option"
+    - "Lumbar support via cushion, no dynamic system"
+    - "Basic adjustments for its category"
+  paraQuienSi:
+    - "Anyone after a cheap gaming chair that breathes well"
+    - "Users up to 195 cm within the 150 kg limit"
+    - "Anyone who values a sustainable touch with FSC-certified wood"
+  paraQuienNo:
+    - "Anyone needing 4D armrests or a dynamic lumbar"
+    - "Anyone wanting lots of fine ergonomic adjustments"
+    - "Users looking for premium finishes"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 53
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -83,3 +126,7 @@ specs:
   alturaRecomendadaMaxCm: 195
   anchoAsientoCm: 52
   reposacabezas: "fijo"
+  anchoCm: 71
+  fondoCm: 75
+  mecanismo: "inclinación con bloqueo"
+  asientoMaterial: "espuma moldeada"

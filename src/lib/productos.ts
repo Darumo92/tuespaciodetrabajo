@@ -59,6 +59,28 @@ export interface Producto {
   puntosDebiles: string[];
   fuenteSpecs: string;
   verificadoEn?: string;
+  calidadDatos?: {
+    score: number | null;
+    confianza: 'alto' | 'medio' | 'bajo' | null;
+    camposFaltantes: string[];
+    enriquecidoEn: string | null;
+  };
+  en?: {
+    nombreComercial?: string;
+    veredicto?: string;
+    idealPara?: string;
+    comunidad?: string;
+    resumenCompra?: {
+      mejorPara?: string;
+      evitarSi?: string;
+      alternativaDirecta?: string;
+      decisionRapida?: string;
+    };
+    puntosFuertes?: string[];
+    puntosDebiles?: string[];
+    paraQuienSi?: string[];
+    paraQuienNo?: string[];
+  };
   specs: Record<string, unknown> & { tipo: ClaveTipo };
 }
 
@@ -446,8 +468,9 @@ export function comparePath(tipo: string, par = '', locale: Locale = DEFAULT_LOC
   return localizedPath(locale, segments);
 }
 
-export function localizedProductName(p: Pick<Producto, 'nombre' | 'marca'>, locale: Locale = DEFAULT_LOCALE): string {
+export function localizedProductName(p: Pick<Producto, 'nombre' | 'marca' | 'en'>, locale: Locale = DEFAULT_LOCALE): string {
   if (locale === DEFAULT_LOCALE) return p.nombre;
+  if (p.en?.nombreComercial) return p.en.nombreComercial;
   return p.nombre
     .replace(/\bSilla de Oficina Ergonomica de Malla\b/gi, 'Mesh Ergonomic Office Chair')
     .replace(/\bSilla de Oficina Ergonómica de Malla\b/gi, 'Mesh Ergonomic Office Chair')
@@ -487,9 +510,12 @@ export function localizedProductMeta(p: Producto, locale: Locale = DEFAULT_LOCAL
     warranty ? `${warranty}-year warranty` : null,
   ].filter(Boolean);
   const detail = bits.length ? `: ${bits.join(', ')}` : '';
+  const description = p.en?.veredicto
+    ? recortarMeta(p.en.veredicto)
+    : recortarMeta(`${brandedName} review with verified specs${detail}. Compare ergonomics, adjustability, comfort and buying options.`);
   return {
     title: `${name} Specs | Chair Database`,
-    description: recortarMeta(`${brandedName} review with verified specs${detail}. Compare ergonomics, adjustability, comfort and buying options.`),
+    description,
     h1: `${name} review and specs`,
   };
 }

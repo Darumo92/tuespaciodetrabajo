@@ -41,6 +41,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Usar todos los agentes y skills](feedback_use_all_tools.md) — Usar todos los agentes, plugins y skills sin pedir permiso.
 - [Usar MCP antes de pedir datos](feedback_use_mcp_analytics_before_asking.md) — Para SEO/tráfico/indexación, consultar primero GSC/GA4/Cloudflare via MCP.
 - [Comentarios foros anti-IA](feedback_forum_comment_humanization.md) — Comentarios Reddit/Quora/Mediavida deben pasar test humano y referenciar al OP.
+- [No crear paquetes MD social](feedback_no_social_draft_md_packages.md) — Para Reddit/Quora/backlinks, pasar URLs y borradores por chat; no crear `SESION_X_*.md`.
 
 ## Scripts útiles
 

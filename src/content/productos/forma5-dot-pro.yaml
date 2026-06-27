@@ -73,7 +73,47 @@ puntosDebiles:
   - "No se vende en Amazon y va por canal de contract"
   - "Capacidad de carga máxima no publicada con claridad (rango de uso 45 a 120 kg)"
 fuenteSpecs: "Web oficial Forma5 (forma5.com/en/chairs/office-desk-chair/dot-pro) + Think Furniture (think-furniture.com/forma-5-dot-pro-task-chair) + Posture People: respaldo alto malla 3D/Meci, asiento poliuretano inyectado, mecanismo Sincro Motion 24 grados respaldo y 10 grados asiento (autorregula 45-110 kg, uso 45-120 kg), 4 posiciones de bloqueo, fondo asiento 475 mm, altura total 1025-1155 mm, ancho 480-635 mm, brazos sin/fijos/1D/3D/4D, lumbar flexible opcional, cabecero tapizado o malla 3D, base poliamida 69 cm, certif UNE-EN 1335-1/2/3 y NF Environnement, diseñador Jorge Herrera"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Forma5 Dot Pro"
+  veredicto: "The Dot Pro is Forma5's upper-mid-range operative chair, from a Spanish office-furniture maker with a good contract reputation. It combines a high 3D-mesh backrest with an injected polyurethane foam seat and a Sincro Motion mechanism that regulates 24 degrees of backrest and 10 degrees of seat, adjusting automatically to the user's weight between 45 and 110 kg. It's well stocked with European certifications (UNE-EN 1335, NF Environnement) and lets you configure up to 4D aluminium arms, an optional flexible lumbar and a headrest. Like other contract chairs, it isn't bought directly on Amazon Spain and the base chair can be expanded a lot with options."
+  idealPara: "Full-day office use with a high mesh backrest and certified European manufacturing"
+  comunidad: "Well regarded in the European office-furniture market for its balance of mesh, Spanish manufacturing and environmental certifications. The consensus is that it's a serious operative contract chair, with the usual drawback of a less direct purchase channel and that many adjustments depend on the chosen configuration."
+  resumenCompra:
+    mejorPara: "Anyone wanting a certified European office chair with a mesh backrest and a mechanism that self-regulates to weight."
+    evitarSi: "You want to buy quickly on Amazon or an entry-level price."
+    alternativaDirecta: "Actiu TNK Flex, another Spanish contract chair, more geared to intensive 24h use."
+    decisionRapida: "A very solid option if you value European manufacturing and mesh, and accept a contract purchase channel."
+  puntosFuertes:
+    - "High 3D-mesh backrest"
+    - "Sincro Motion mechanism that self-regulates to weight (45 to 110 kg)"
+    - "Arms configurable up to 4D aluminium and optional flexible lumbar"
+    - "European certifications (UNE-EN 1335, NF Environnement)"
+  puntosDebiles:
+    - "Not sold on Amazon and goes through the contract channel"
+    - "Maximum load not clearly published (usage range 45 to 120 kg)"
+  paraQuienSi:
+    - "Anyone seated the full working day who wants a high mesh backrest"
+    - "Users between 45 and 110 kg who benefit from the self-regulating mechanism"
+    - "Anyone who values European manufacturing with environmental certifications"
+  paraQuienNo:
+    - "Anyone wanting to buy and receive quickly on Amazon"
+    - "Entry-level budgets"
+    - "Very heavy users who need a high, verified maximum load"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 51
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "presion"

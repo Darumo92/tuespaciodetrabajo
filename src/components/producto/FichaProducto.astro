@@ -147,7 +147,9 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
   <ValoracionEjes producto={p} locale={locale} />
 
   {isEn ? (
-    <div class="ficha-veredicto"><strong>Editorial note.</strong> This English product profile is generated from verified structured specifications and editorial scoring. Current price and availability are not shown unless they are verified for the relevant marketplace.</div>
+    p.en?.veredicto
+      ? <div class="ficha-veredicto"><strong>Verdict.</strong> {p.en.veredicto}</div>
+      : <div class="ficha-veredicto"><strong>Editorial note.</strong> This English product profile is generated from verified structured specifications and editorial scoring. Current price and availability are not shown unless they are verified for the relevant marketplace.</div>
   ) : (
     p.veredicto && <div class="ficha-veredicto"><strong>Veredicto.</strong> {p.veredicto}</div>
   )}
@@ -164,26 +166,37 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
     </div>
   ))}
 
-  {!isEn && p.comunidad && (<><h2>Qué dice la comunidad</h2><p class="ficha-comunidad">{p.comunidad}</p></>)}
+  {(() => {
+    const comunidad = isEn ? p.en?.comunidad : p.comunidad;
+    const si = isEn ? (p.en?.paraQuienSi ?? []) : (p.paraQuienSi ?? []);
+    const no = isEn ? (p.en?.paraQuienNo ?? []) : (p.paraQuienNo ?? []);
+    const fuertes = isEn ? (p.en?.puntosFuertes ?? []) : p.puntosFuertes;
+    const debiles = isEn ? (p.en?.puntosDebiles ?? []) : p.puntosDebiles;
+    return (
+      <>
+        {comunidad && (<><h2>{isEn ? 'What the community says' : 'Qué dice la comunidad'}</h2><p class="ficha-comunidad">{comunidad}</p></>)}
 
-  {!isEn && <ParaQuien si={p.paraQuienSi ?? []} no={p.paraQuienNo ?? []} locale={locale} />}
+        {(si.length > 0 || no.length > 0) && <ParaQuien si={si} no={no} locale={locale} />}
 
-  {!isEn && (p.puntosFuertes.length > 0 || p.puntosDebiles.length > 0) && (
-    <div class="ficha-balance">
-      {p.puntosFuertes.length > 0 && (
-        <div class="balance-col balance-pro">
-          <h2>Lo que destaca</h2>
-          <ul>{p.puntosFuertes.map((x) => <li>{x}</li>)}</ul>
-        </div>
-      )}
-      {p.puntosDebiles.length > 0 && (
-        <div class="balance-col balance-con">
-          <h2>Lo que no convence</h2>
-          <ul>{p.puntosDebiles.map((x) => <li>{x}</li>)}</ul>
-        </div>
-      )}
-    </div>
-  )}
+        {(fuertes.length > 0 || debiles.length > 0) && (
+          <div class="ficha-balance">
+            {fuertes.length > 0 && (
+              <div class="balance-col balance-pro">
+                <h2>{isEn ? 'Strengths' : 'Lo que destaca'}</h2>
+                <ul>{fuertes.map((x) => <li>{x}</li>)}</ul>
+              </div>
+            )}
+            {debiles.length > 0 && (
+              <div class="balance-col balance-con">
+                <h2>{isEn ? 'Weaknesses' : 'Lo que no convence'}</h2>
+                <ul>{debiles.map((x) => <li>{x}</li>)}</ul>
+              </div>
+            )}
+          </div>
+        )}
+      </>
+    );
+  })()}
 
   <FichaFuentes producto={p} locale={locale} />
 

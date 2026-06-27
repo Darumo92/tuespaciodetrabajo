@@ -42,7 +42,47 @@ puntosDebiles:
   - "Menos transpirable que una silla de malla"
   - "Garantía estándar de 2 años (inferior a las premium de oficina)"
 fuenteSpecs: "Centro de ayuda oficial noblechairs (help.noblechairs.com, guía altura/peso) + manual de usuario HERO (manua.ls/noblechairs/hero) + reviews Tom's Hardware y ChairsFX"
-verificadoEn: "2026-06-18"
+en:
+  nombreComercial: "noblechairs HERO"
+  veredicto: "The HERO is one of the few gaming chairs designed from the outset for larger bodies: it supports 150 kg, is recommended up to 200 cm tall and integrates a 4-way adjustable lumbar support inside the backrest, with no loose cushions. In return, the padding is firm and, like any gaming chair, it prioritises an enveloping backrest over the breathability of mesh."
+  idealPara: "Tall or larger-build people who use a gaming chair to work from home"
+  comunidad: "Reviews (Tom's Hardware, ChairsFX) consider it one of the most solid gaming chairs for prolonged use thanks to its integrated lumbar and load capacity; the recurring criticism is that the padding is firm and that heat builds up compared with a mesh chair."
+  puntosFuertes:
+    - "Supports up to 150 kg and recommended up to 200 cm tall"
+    - "4-way lumbar support integrated into the backrest"
+    - "4D armrests"
+    - "Sturdy aluminium base"
+    - "Backrest recline up to 135°"
+  puntosDebiles:
+    - "Firm padding, break-in period"
+    - "Less breathable than a mesh chair"
+    - "Standard 2-year warranty (below premium office chairs)"
+  paraQuienSi:
+    - "Tall (up to ~200 cm) or heavier (up to 150 kg) people"
+    - "Anyone wanting integrated adjustable lumbar without loose cushions"
+    - "Mixed home-office and gaming use with an enveloping backrest"
+  paraQuienNo:
+    - "Anyone who prefers breathable mesh in warm climates"
+    - "Anyone after soft padding"
+    - "Very small spaces (it's a bulky chair)"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 36
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
+    - "valoraciones"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"

@@ -66,7 +66,50 @@ puntosDebiles:
   - "Altura de asiento y garantía no publicadas en la web"
   - "Lumbar mediante cojín, no integrado"
 fuenteSpecs: "Web oficial Diablo Chairs (diablochairs.com/en/x-player: tejido EcoFiber + malla Honeycomb, lumbar cojín memory foam, 3D Armtech Hybrid, reclinación 160 grados, máximo 150 kg, base metálica, asiento HR doble capa, cojines memory foam, tallas Small/Normal/King). Altura recomendada 150-205 cm según datos de catálogo."
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Diablo X-Player 2.0"
+  veredicto: "The X-Player 2.0 is Diablo's answer for anyone who can't stand synthetic leather in summer: it combines EcoFiber fabric with a Honeycomb mesh zone that really ventilates. It adds 3D armrests, memory-foam cushions and comes in Small, Normal and King sizes to fine-tune the fit. It's very popular on Amazon in Spain, though it's worth checking availability per size before hitting buy."
+  idealPara: "Anyone wanting a breathable fabric-and-mesh gaming chair with several sizes"
+  comunidad: "Diablo is a Polish brand with a big presence on Amazon Spain, and the X-Player often appears among recommended gaming chairs for its freshness. Those who try it usually praise the fabric-and-mesh combo against the heat of synthetic leather and the option to pick a size. The usual caveat is that lumbar support is a cushion and that the warranty is best confirmed with the seller."
+  resumenCompra:
+    mejorPara: "Anyone after real ventilation thanks to the fabric-and-mesh mix."
+    evitarSi: "You prefer the feel and look of classic synthetic leather."
+    alternativaDirecta: "Quersus Vaos 3 if you want another gaming chair with a careful ergonomic focus."
+    decisionRapida: "The one I put on the table when someone wants a cool gaming chair with size options, not one-size-fits-all."
+  puntosFuertes:
+    - "Very breathable EcoFiber fabric with Honeycomb mesh"
+    - "3D Armtech Hybrid armrests"
+    - "Memory-foam cushions included"
+    - "Available in Small, Normal and King sizes"
+  puntosDebiles:
+    - "Seat height and warranty not published on the website"
+    - "Lumbar via cushion, not integrated"
+  paraQuienSi:
+    - "People from 150 to 205 cm depending on the size they choose"
+    - "Anyone who overheats with leather gaming chairs and wants ventilation"
+    - "Users up to 150 kg who want memory-foam cushions as standard"
+  paraQuienNo:
+    - "Anyone who prefers the feel of synthetic leather"
+    - "Users who require integrated adjustable lumbar"
+    - "Anyone who wants seat height and warranty known up front"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 42
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.mecanismo"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"

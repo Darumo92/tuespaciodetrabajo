@@ -75,7 +75,48 @@ puntosDebiles:
   - "Respaldo tapizado en espuma, sin opción de malla en este modelo"
   - "Precio de tramo premium contract"
 fuenteSpecs: "Web oficial Steelcase (steelcase.com/eu-en/products/office-chairs/please/: respaldo doble LTC2 con secciones lumbar y dorsal independientes y tensión regulable, profundidad de asiento regulable, reposabrazos 3D de altura, ángulo y profundidad) + Steelcase Please Brochure EN (steelcase.com/content/uploads/sites/10/2023/10/Steelcase-Please-Brochure-EN.pdf) + uk.steelcase.com/products/please (máx 150 kg, altura recomendada 150-190 cm, peso del producto 27 kg, 91,4 por ciento reciclable, garantía estructura de por vida, mecanismos 12 años, tapicería 5 años)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Steelcase Please"
+  veredicto: "The Steelcase Please revolves around its dual backrest with the patented LTC2 mechanism: instead of a single panel, two independent sections support the lumbar and thoracic areas separately, so each part of the back gets its own tension. It adds an adjustable-depth seat and very complete armrests. The catch is the one common to every Steelcase contract chair: it's an expensive buy with a foam-upholstered backrest (not mesh), and the warranty rewards the frame above each component equally."
+  idealPara: "High-end contract office use for anyone wanting the backrest to support lumbar and thoracic zones separately"
+  comunidad: "Steelcase is a benchmark brand in contract office furniture, with a strong reputation for durability. The Please is known for its dual LTC2 backrest, an unusual solution: each backrest section supports a different region of the back. As a professional- and project-channel chair, end-user reviews are fewer than for consumer brands, but the available consensus rates it a serious, long-lived option. Note the tiered warranty: lifetime frame, 12 years on mechanisms and 5 years on upholstery."
+  resumenCompra:
+    mejorPara: "Anyone wanting independent lumbar and thoracic support with Steelcase contract reliability."
+    evitarSi: "You prefer a breathable mesh backrest or don't want premium pricing."
+    alternativaDirecta: "Steelcase Leap V2 if you want an adjustable flexible backrest from the same brand for a bit less."
+    decisionRapida: "If your back asks for lumbar and thoracic to work separately, this is the chair that does it from the factory; price is the filter."
+  puntosFuertes:
+    - "Dual backrest with patented LTC2 mechanism: independent lumbar and thoracic support"
+    - "Adjustable seat depth"
+    - "Armrests adjustable in height (11 positions), angle (4 positions) and depth (6 positions)"
+    - "91.4% recyclable materials"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "Foam-upholstered backrest, no mesh option on this model"
+    - "Premium contract pricing"
+  paraQuienSi:
+    - "People who feel different tension in lumbar and thoracic zones and want to adjust them separately"
+    - "Companies prioritising Steelcase durability and recyclable materials"
+    - "Users between 150 and 190 cm who want adjustable seat depth"
+  paraQuienNo:
+    - "Anyone wanting a breathable mesh backrest for summer"
+    - "Tight budgets that don't reach the premium contract tier"
+    - "Anyone clearly over 190 cm"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 58
+  confianza: "medio"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -88,3 +129,7 @@ specs:
   garantiaAnios: 12
   alturaRecomendadaMinCm: 150
   alturaRecomendadaMaxCm: 190
+  anchoCm: 74
+  fondoCm: 76
+  certificacionEn1335: true
+  asientoMaterial: "espuma tapizada"

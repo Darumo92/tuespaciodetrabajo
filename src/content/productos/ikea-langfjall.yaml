@@ -40,8 +40,52 @@ puntosDebiles:
   - "Soporta hasta 110 kg"
   - "Sin lumbar ajustable ni profundidad de asiento regulable"
   - "Respaldo de altura media, sin reposacabezas"
-fuenteSpecs: "Web oficial IKEA LÅNGFJÄLL (ikea.com/es ficha producto, asiento 53x41 cm, altura 45-56 cm, garantía 10 años) + PDF sillas giratorias IKEA"
-verificadoEn: "2026-06-18"
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA LÅNGFJÄLL ficha de producto"
+    url: "https://www.ikea.com/es/es/p/langfjall-silla-confidente-gunnared-beige-negro-s49177629/"
+    fechaConsulta: "2026-06-25"
+  - tipo: "oficial"
+    nombre: "IKEA guía sillas giratorias (PDF)"
+    url: "https://www.ikea.com/es/es/files/pdf/ae/7c/ae7ce672/sillasgiratorias-19-hfb-3-esp_r-1-_006.pdf"
+    fechaConsulta: "2026-06-25"
+fuenteSpecs: "Web oficial IKEA LÅNGFJÄLL (ikea.com/es ficha producto: asiento 53x41 cm, altura asiento 45-56 cm, máx 110 kg, base de aluminio con recubrimiento, espuma fría PU 65 kg/m³, tapizado poliéster reciclado, garantía 10 años) + guía PDF sillas giratorias IKEA. Ancho y fondo totales sin publicar en texto (solo en ilustración)."
+en:
+  nombreComercial: "IKEA LÅNGFJÄLL"
+  veredicto: "The LÅNGFJÄLL is IKEA's upholstered work chair with the best balance of finish and price: a back with lumbar support, manual tilt tension with lock and a 10-year warranty. It isn't a fine-tuned ergonomic chair, but its padding, looks and warranty make it a solid buy for moderate days working from home."
+  idealPara: "Upholstered home-office work with tidy looks and IKEA's long warranty"
+  comunidad: "Good consensus among IKEA users for value, looks and the 10-year warranty; the usual criticisms note that adjustments are limited (no adjustable lumbar or seat depth) and that the backrest is mid-height."
+  puntosFuertes:
+    - "IKEA 10-year warranty"
+    - "Upholstered backrest with lumbar support"
+    - "Manual tilt tension with lock"
+    - "Castors that lock when the chair is not in use"
+  puntosDebiles:
+    - "Supports up to 110 kg"
+    - "No adjustable lumbar or seat depth"
+    - "Mid-height backrest, no headrest"
+  paraQuienSi:
+    - "Anyone wanting an upholstered work chair with a good finish"
+    - "Moderate home-office work that values looks and warranty"
+    - "Spaces where a bulky gaming chair doesn't fit"
+  paraQuienNo:
+    - "Anyone needing adjustable lumbar or seat depth"
+    - "People over 110 kg"
+    - "Anyone wanting a high back with headrest"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 63
+  confianza: "medio"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
+    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -55,10 +99,11 @@ specs:
   anchoCm: null
   fondoCm: null
   mecanismo: "Inclinación con tensión manual y bloqueo"
-  baseMaterial: null
+  baseMaterial: "aluminio"
   certificacionBifma: null
   pesoProductoKg: null
   garantiaAnios: 10
   anchoAsientoCm: 53
   profundidadAsientoMaxCm: 41
   reposacabezas: "ninguno"
+  asientoMaterial: "espuma fría de poliuretano (65 kg/m³); tapizado 100% poliéster (mín. 90% reciclado)"

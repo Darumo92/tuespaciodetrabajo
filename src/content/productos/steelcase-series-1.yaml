@@ -41,8 +41,55 @@ puntosDebiles:
   - "Los ajustes premium (4D, lumbar) suben el precio de la configuración"
   - "Acolchado del asiento más firme que la media"
   - "Sin reposacabezas en la configuración base"
-fuenteSpecs: "Web oficial Steelcase Series 1 (steelcase.com/products/office-chairs/steelcase-series-1) + guía de especificación Series 1 (steelcase.com/resources/documents/series-1-spec-guide) + reviews SeatedLab y TechGearLab"
-verificadoEn: "2026-06-18"
+fuentes:
+  - tipo: "oficial"
+    nombre: "Steelcase Series 1 specs"
+    url: "https://www.steelcase.com/products/office-chairs/steelcase-series-1/"
+    fechaConsulta: "2026-06-25"
+  - tipo: "oficial"
+    nombre: "Steelcase Series 1 Spec Guide (PDF)"
+    url: "https://www.steelcase.com/content/uploads/2024/02/Series-1-Spec-Guide.pdf"
+    fechaConsulta: "2026-06-25"
+  - tipo: "review"
+    nombre: "SeatedLab Steelcase Series 1 review"
+    url: "https://seatedlab.com/steelcase-series-1-review/"
+    fechaConsulta: "2026-06-25"
+fuenteSpecs: "Web oficial Steelcase Series 1 (steelcase.com/products/office-chairs/steelcase-series-1) + guía de especificación Series 1 (steelcase.com/content/uploads/2024/02/Series-1-Spec-Guide.pdf: ancho asiento 488 mm, alto respaldo 546 mm, peso silla 29 lb/13,2 kg, BIFMA LEVEL 3, carga 181 kg) + reviews SeatedLab y TechGearLab. Ancho total 569-880 mm y fondo 533-603 mm según configuración (rango no representable en campo único)."
+en:
+  nombreComercial: "Steelcase Series 1"
+  veredicto: "The Series 1 is the entry point to the Steelcase ecosystem: a flexible mesh back, adjustable lumbar support and up to 4D armrests depending on configuration, with the same 12-year warranty as the high-end range. It doesn't match the fine-tuned adjustment of a Leap, but it delivers serious office-grade durability at a much more accessible price."
+  idealPara: "Anyone who wants Steelcase ergonomics and warranty without paying Leap or Gesture money"
+  comunidad: "Reviews such as SeatedLab and TechGearLab rank it among the best accessible-premium buys: genuine office-grade construction and a long warranty, with the usual criticism that the seat padding is somewhat firm and that the premium options (4D arms, lumbar) push up the configured price."
+  puntosFuertes:
+    - "12-year warranty inherited from Steelcase's high-end range"
+    - "Flexible mesh back with adjustable lumbar support"
+    - "Adjustable seat depth"
+    - "Up to 4D armrests depending on configuration"
+    - "Supports up to 181 kg"
+  puntosDebiles:
+    - "Premium options (4D arms, lumbar) raise the configured price"
+    - "Seat padding firmer than average"
+    - "No headrest in the base configuration"
+  paraQuienSi:
+    - "Buyers wanting office-brand warranty and durability at a mid-range price"
+    - "Users who value a breathable mesh back with adjustable lumbar"
+    - "Long work days where reliability matters more than luxury"
+  paraQuienNo:
+    - "Anyone wanting the fine synchronized adjustment of a Leap V2 or Gesture"
+    - "Budgets below the mid-range"
+    - "Anyone who prefers a very plush seat"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-06-25"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.certificacionEn1335"
+    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -58,7 +105,10 @@ specs:
   mecanismo: "Inclinación activada por peso"
   baseMaterial: null
   certificacionBifma: true
-  pesoProductoKg: null
+  pesoProductoKg: 13.2
   garantiaAnios: 12
   reposacabezas: "ninguno"
   profundidadAsientoMaxCm: 45
+  anchoAsientoCm: 49
+  alturaRespaldoCm: 55
+  asientoMaterial: "tejido tapizado (opcional piel o vinilo)"
