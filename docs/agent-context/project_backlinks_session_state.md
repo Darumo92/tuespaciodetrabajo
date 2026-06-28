@@ -5,6 +5,41 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-28 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `31`, total `32`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Busquedas ES revisadas:
+  - `r/programacion`: solo reaparece `1ueq3v1`, ya comentado el 2026-06-25.
+  - `r/askspain`: resultados sobre empleo/ordenador sin encaje de ergonomia/home office; no forzar.
+  - `r/Autonomos`: hilo fiscal sobre comprar dos portatiles, descartado por riesgo legal/fiscal.
+- Reddit candidatos verificados con old.reddit y textos preparados SIN link:
+  - Prioridad 1: `r/OfficeChairs` `1uhm2p9` — OP usa Staples Sorina desde la uni, probo Aeron en oficina, busca alternativas usadas/refurbished, le gustan las sillas mesh porque se calienta/suda, no tiene presupuesto fijo y quiere mejor valor.
+  - Prioridad 2: `r/Ergonomics` `1uh4h00` — OP tiene reposabrazos ~2" demasiado altos con escritorio elevable nuevo; Gesture le encaja pero no puede gastar 1000+ USD; pregunta por bajar/cortar brazos o soluciones.
+  - Prioridad 3: `r/homeoffice` `1uh26a6` — OP empieza trabajo de virtual counseling y busca recomendaciones de oficina: papel/notebook fountain-pen friendly barato y destruible, pluma/tinta, almacenamiento, productividad y algo de diversion.
+  - Backup: `r/OfficeChairs` `1uh6tkn` — OP 16 anos, 5'6", 125 lb, tiene Aeron, escritorio Ikea demasiado alto y pide standing desk especifico.
+- Descartados / baja prioridad:
+  - `r/WFH` `1uhhbai`: buen engagement, pero el propio subreddit indica no career/job seeking advice; riesgo de removal por regla 1.
+  - Hilos de imagen/identificacion de silla sin cuerpo suficiente o demasiado dependientes de foto.
+- Quora ES via Brave:
+  - Descartadas preguntas ya marcadas como respondidas: gaming vs oficina, aspectos al comprar silla ergonomica, postura ideal, distancia monitor, tamano monitor, monitor curvo/productividad.
+  - Candidato nuevo no marcado como respondido: `https://es.quora.com/Qu%C3%A9-tipo-de-silla-es-recomendable-para-una-persona-que-pasa-m%C3%A1s-de-10-horas-sentada-al-d%C3%ADa` -> `/sillas/mejor-silla-ergonomica-calidad-precio/`.
+  - Backup Quora: `https://es.quora.com/Qu%C3%A9-es-mejor-para-los-que-pasamos-muchas-horas-sentados-silla-ergon%C3%B3mica-fitball-o-taburete-para-apoyar-las-rodillas` -> `/guias/ergonomia-teletrabajo-postura-correcta/` o sin link si se quiere cuidar ratio.
+- Recomendacion tactica: hoy publicar 3 Reddit sin link. Quora solo si han pasado 24h desde la respuesta de ayer; si no, dejarla para la tarde/noche.
+- Pendiente: usuario publica manualmente y confirma; luego verificar `old.reddit.com/user/Dear_Potato8535/comments/`, anotar IDs visibles y karma. Quora sigue no verificable desde entorno agente por challenge/403; registrar URL exacta de answer si el usuario la copia.
+
+Update parcial post-publicacion 2026-06-28:
+- Usuario confirma que solo falta el ultimo comentario y que lo publicara mas tarde.
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/`: visibles 2 comentarios nuevos de hoy.
+- Karma visible tras publicacion: post `1`, comment `31`, total `32`; sin subida visible inmediata.
+- Publicados SIN link y visibles:
+  - `r/OfficeChairs` `1uhm2p9` visible como `ou9rw5n`: https://www.reddit.com/r/OfficeChairs/comments/1uhm2p9/i_dont_know_what_to_look_for/ou9rw5n/
+  - `r/Ergonomics` `1uh4h00` visible como `ou9vd71`: https://www.reddit.com/r/Ergonomics/comments/1uh4h00/armrests_are_about_2_too_high_for_my_new_desk/ou9vd71/
+- Pendiente para mas tarde:
+  - `r/homeoffice` `1uh26a6` — tercer comentario del plan de hoy, todavia no visible/publicado.
+- Quora: no queda URL de answer registrada y no es verificable desde entorno agente por challenge/403. Registrar URL exacta si se publico o cuando se publique.
+
 ## Update 2026-06-27 - plan Reddit/Quora preparado
 
 Contexto operativo:
