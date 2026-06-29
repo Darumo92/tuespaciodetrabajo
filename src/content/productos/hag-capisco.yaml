@@ -44,7 +44,45 @@ puntosDebiles:
   - "Precio elevado (~945 € en la tienda oficial)"
   - "No apta para quienes buscan reclinación pasiva"
 fuenteSpecs: "Web oficial HÅG (hag-office.com/products/capisco-8106 — precio EUR, specs verificados) + back2.co.uk (peso 14 kg, fondoCm 37-46 cm) + ergonomika.es (anchoCm 47 cm confirmado) + store.flokk.com (certificación BIFMA descargable, mecanismo inBalance) + Flokk factsheet flokkplatformprod.blob.core.windows.net (EN1335 + ANSI/BIFMA X5.1, reclinación 15°, materiales, base aluminio Ø730 mm)"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "HÅG Capisco 8106"
+  veredicto: "The Capisco isn't a chair, it's a philosophy: a saddle seat, inBalance® tilting and full compatibility with sit-stand desks make it the best option for active work and dynamic posture. It needs real adaptation and doesn't give the passive comfort of a conventional chair, but for those who adopt it, it's irreplaceable."
+  idealPara: "Sit-stand desk users, designers who alternate position and anyone who prefers active posture"
+  comunidad: "A cult chair on r/OfficeChairs and among ergonomists. The consensus is clear: it's not for everyone, but anyone who works at a standing desk or seeks active posture doesn't go back. Creative Bloq (8/10) and remotehomesolutions.com highlight the flexibility and sturdy build; price and the adaptation curve are the only brakes."
+  puntosFuertes:
+    - "Saddle-style seat design: opens the hip angle and extends the spine"
+    - "Compatible with standing desks: three cylinder heights available (up to 79 cm)"
+    - "HÅG inBalance® system: smooth, balanced tilting mechanism"
+    - "Height-adjustable backrest for lumbar support in multiple positions"
+    - "Adjustable seat depth"
+    - "10-year warranty"
+  puntosDebiles:
+    - "Maximum weight 110 kg, lower than other premiums"
+    - "The saddle seat needs adaptation (weeks of postural adjustment)"
+    - "No headrest as standard (optional)"
+    - "High price (~€945 at the official store)"
+    - "Not suited to anyone seeking passive reclining"
+  paraQuienSi:
+    - "Users with a height-adjustable desk who alternate sitting and standing"
+    - "Designers, creatives and professionals who move a lot in the chair"
+    - "People with lower-back issues seeking active posture"
+    - "Anyone prioritising material quality and sustainability (50% recycled material)"
+  paraQuienNo:
+    - "Users looking to recline and rest passively"
+    - "Anyone over 110 kg"
+    - "People who need an integrated headrest as standard"
+    - "Budgets below €900"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -62,3 +100,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 14
   garantiaAnios: 10
+  reposacabezas: "ninguno"
+  asientoMaterial: "espuma tapizada"

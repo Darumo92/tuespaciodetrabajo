@@ -77,7 +77,48 @@ puntosDebiles:
   - "Garantía de solo un año"
   - "Capacidad de carga moderada (127 kg)"
 fuenteSpecs: "Web oficial Ticova (ticova.org) + ficha officesource.co.uk/ticova-ergonomic-office-chair-high-back-desk-chair-with-adjustable-lumbar-support + gadgetreview.com/ticova-ergonomic-office-chair-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Ticova Ergonomic Office Chair"
+  veredicto: "The Ticova stands out for its seat: a high-density foam about 8 cm thick with a W shape and waterfall edge that many reviews cite as its best asset. It combines a mesh backrest, lumbar adjustable in height and depth, a tilting headrest and 3D metal-cored armrests. It's a very comfortable option for home-office work, with the downside of a short one-year warranty and a moderate load capacity versus rivals that go higher."
+  idealPara: "Anyone wanting a plush high-density-foam seat with adjustable lumbar"
+  comunidad: "Reviews agree its best argument is the padded seat, softer than that of many full-mesh rivals. The usual warnings are the one-year warranty and a load capacity that falls below chairs boasting 150 kg."
+  resumenCompra:
+    mejorPara: "Anyone prioritising a plush seat and good adjustable lumbar support at a contained price."
+    evitarSi: "You need a long warranty or a high load capacity."
+    alternativaDirecta: "Nouhaus Ergo3D if you prefer a full-mesh seat instead of foam."
+    decisionRapida: "One of the most comfortable for its price if you value the padded seat above all."
+  puntosFuertes:
+    - "High-density foam seat with W shape and waterfall edge"
+    - "Lumbar adjustable in height and depth"
+    - "Tilting headrest and 3D metal-cored armrests"
+    - "Breathable mesh backrest"
+  puntosDebiles:
+    - "Only one-year warranty"
+    - "Moderate load capacity (127 kg)"
+  paraQuienSi:
+    - "Anyone who prefers a plush foam seat to a mesh one"
+    - "Users who want lumbar adjustable in height and depth"
+    - "Home workers seeking comfort at a contained price"
+  paraQuienNo:
+    - "Anyone needing a long warranty"
+    - "People near or above 127 kg"
+    - "Anyone who requires documented certification"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 54
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

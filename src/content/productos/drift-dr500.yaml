@@ -75,7 +75,47 @@ puntosDebiles:
   - "Reclinación limitada a 135°"
   - "Queda alta para usuarios bajos"
 fuenteSpecs: "Web oficial Drift (DR500: 70x126-136x55 cm, máx 150 kg, reclinación 90-135°, cuero sintético, espuma fría 65 kg/m³, reposabrazos 4D, gas clase 4, garantía 3 años, recomendada a partir de 1,75 m) + Profesional Review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Drift DR500"
+  veredicto: "The DR500 is Drift's gaming chair aimed above all at taller users: its backrest is high, it supports up to 150 kg and it has 4D armrests, lumbar and neck cushions and a class 4 gas piston. The finish is faux leather, so it breathes less than a fabric or mesh chair, and the recline reaches 135 degrees, enough to lean back but not to lie fully flat. As an affordable, sturdy gaming chair for tall people, it does the job well."
+  idealPara: "Budget gaming for tall users with 4D armrests"
+  comunidad: "Spanish-language reviews place it as a solid, affordable gaming chair especially recommended for tall people, with good support and a sturdy build. The usual criticisms are that the faux leather runs warm, that the chair sits high for users under 1.80 m and that the lumbar is a cushion, not integrated."
+  resumenCompra:
+    mejorPara: "Tall users wanting a sturdy gaming chair with 4D armrests at a contained price."
+    evitarSi: "You're under 1.75 m or need breathable mesh or fabric."
+    alternativaDirecta: "Newskill Takamikura if you prefer breathable fabric and 180° recline."
+    decisionRapida: "The affordable gaming chair I'd recommend to a tall person who wants something sturdy without overspending."
+  puntosFuertes:
+    - "High backrest designed for tall people"
+    - "Supports up to 150 kg"
+    - "4D armrests"
+    - "Lumbar and neck cushions included"
+    - "Class 4 gas piston and metal base"
+  puntosDebiles:
+    - "Faux-leather backrest, warm in summer"
+    - "Recline limited to 135°"
+    - "Sits high for shorter users"
+  paraQuienSi:
+    - "Tall users from 1.75 m"
+    - "Anyone wanting a sturdy gaming chair up to 150 kg with 4D armrests"
+    - "Anyone after a good price without giving up sturdiness"
+  paraQuienNo:
+    - "People under 1.75 m (the chair sits high)"
+    - "Anyone who needs breathable mesh or fabric"
+    - "Anyone wanting near-horizontal recline"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 68
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "presion"
@@ -100,3 +140,4 @@ specs:
   alturaRespaldoCm: null
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "cuero sintético sobre espuma fría (65 kg/m³)"

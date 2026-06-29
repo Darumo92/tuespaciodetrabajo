@@ -71,7 +71,48 @@ puntosDebiles:
   - "IKEA no especifica reclinación máxima concreta"
   - "Acolchado firme"
 fuenteSpecs: "Web oficial IKEA (ficha STYRSPEL: asiento 49,8x47 cm, altura 47,9-59,1 cm, máx 110 kg, malla nylon, reposabrazos 3D, lumbar y reposacabezas ajustables, profundidad regulable, EN 1335 + BIFMA X5.1)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "IKEA STYRSPEL"
+  veredicto: "The STYRSPEL is IKEA's gaming chair and it breaks from most of the sector: instead of an upholstered backrest that traps heat, it runs breathable mesh, and adds an adjustable headrest, adjustable lumbar, 3D armrests and adjustable seat depth. For anyone alternating long sessions and home-office work it's a very interesting alternative to faux-leather gaming chairs, with IKEA's warranty and EN 1335 certification behind it. It loses some of the classic racing look but gains in freshness and adjustment."
+  idealPara: "Gaming and work with breathable mesh and full adjustments at a contained price"
+  comunidad: "Positive reception among those after a gaming chair that doesn't get hot: the breathable mesh and the set of adjustments (lumbar, headrest, 3D armrests, seat depth) uncommon at this price are valued. Criticisms note it loses the racing look many associate with gaming and that the padding is firmer than on faux-leather chairs."
+  resumenCompra:
+    mejorPara: "Anyone wanting a breathable-mesh gaming chair with full adjustments without paying a premium."
+    evitarSi: "You're after the faux-leather racing look or a very flat recline for napping."
+    alternativaDirecta: "Secretlab TITAN Evo if you prefer premium build and greater recline."
+    decisionRapida: "The mesh gaming chair I'd recommend to anyone who sweats in faux-leather chairs and wants serious adjustments."
+  puntosFuertes:
+    - "Breathable mesh backrest"
+    - "Adjustable lumbar and headrest"
+    - "3D armrests (height, width and rotation)"
+    - "Adjustable seat depth"
+    - "IKEA warranty and EN 1335 + BIFMA X5.1 certification"
+  puntosDebiles:
+    - "No faux-leather racing look"
+    - "IKEA doesn't specify a concrete maximum recline"
+    - "Firm padding"
+  paraQuienSi:
+    - "Anyone alternating gaming and home-office who wants breathable mesh"
+    - "Users who sweat in faux-leather gaming chairs"
+    - "Anyone who values adjustable lumbar, headrest and seat depth"
+  paraQuienNo:
+    - "Anyone after the classic faux-leather racing look"
+    - "People over 110 kg"
+    - "Anyone wanting to recline almost flat to rest"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 59
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -94,3 +135,4 @@ specs:
   alturaRespaldoCm: null
   reposacabezas: "ajustable"
   certificacionEn1335: true
+  asientoMaterial: "espuma (asiento), malla de nylon (respaldo)"

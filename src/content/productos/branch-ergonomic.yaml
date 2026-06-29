@@ -74,7 +74,45 @@ puntosDebiles:
   - "Reposabrazos sin ajuste de profundidad ni ángulo"
   - "Reclinación limitada (56°)"
 fuenteSpecs: "Web oficial Branch (Branch Ergonomic Chair: máx 275 lb/125 kg, reclinación 56°, malla doble capa, lumbar regulable, profundidad de asiento ajustable, BIFMA, garantía 7 años, venta solo EE. UU./Canadá) + TechGearLab (medidas: asiento 50,8 cm, 7 puntos de ajuste, montaje ~12 min)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Branch Ergonomic Chair"
+  veredicto: "The Branch Ergonomic Chair gives a lot of adjustment for its price: a double-layer mesh backrest, adjustable removable lumbar, adjustable seat depth and armrests adjustable in height and width, all BIFMA certified and with a seven-year warranty. The big problem for the Spanish buyer is availability: Branch sells and supports only in the US and Canada, so here it isn't a practical buy except by import, and the warranty doesn't cover outside that region."
+  idealPara: "Home-office work with breathable mesh and many adjustments, in the US market"
+  comunidad: "Good reputation in US reviews as a mesh chair with lots of adjustment for the price, highlighting the adjustable seat depth and adjustable lumbar, rare at this level. The recurringly noted weak point is that the armrests don't adjust depth or angle; and for the European buyer, the added problem is that it isn't sold or warranted outside North America."
+  resumenCompra:
+    mejorPara: "Anyone buying in the US or Canada who wants mesh with lots of adjustment at a good price."
+    evitarSi: "You buy from Spain or the EU: there's no official sale or warranty."
+    alternativaDirecta: "SIHOO M18 if you want an affordable ergonomic mesh chair available in Spain."
+    decisionRapida: "A great chair in its market, but for Spain I'd look at an alternative with local sale and warranty."
+  puntosFuertes:
+    - "Breathable double-layer mesh backrest"
+    - "Adjustable, removable lumbar"
+    - "Adjustable seat depth"
+    - "BIFMA certification and 7-year warranty"
+  puntosDebiles:
+    - "No official sale or warranty outside the US and Canada"
+    - "Armrests without depth or angle adjustment"
+    - "Limited recline (56°)"
+  paraQuienSi:
+    - "Anyone buying from the US or Canada who wants mesh with lots of adjustment"
+    - "Home-office work that values adjustable seat depth and lumbar"
+    - "Anyone wanting BIFMA certification and a long warranty in their market"
+  paraQuienNo:
+    - "Buyers from Spain or the EU (no official sale or warranty)"
+    - "Anyone needing armrests with depth and angle adjustment"
+    - "People over 125 kg"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 71
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.baseMaterial"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -100,3 +138,4 @@ specs:
   montajeMinutos: 12
   reposacabezas: "ninguno"
   certificacionEn1335: null
+  asientoMaterial: "malla de doble capa"

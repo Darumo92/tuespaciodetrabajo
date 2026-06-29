@@ -42,7 +42,44 @@ puntosDebiles:
   - "Sin profundidad de asiento regulable"
   - "Precio de gama alta"
 fuenteSpecs: "Web oficial Humanscale Freedom con reposacabezas (humanscale.com/products/seating/freedom-headrest-executive-chair) + reviews BTOD y The Human Solution"
-verificadoEn: "2026-06-18"
+en:
+  nombreComercial: "Humanscale Freedom with headrest"
+  veredicto: "The Freedom was the first chair with recline activated by the user's weight: you lean back and the backrest and headrest follow without touching a single control. That simplicity is its greatest virtue and also its limit; there's no discrete lumbar adjustment or adjustable seat depth, but for anyone who hates configuring chairs it's about as comfortable as it gets, with a 15-year warranty."
+  idealPara: "Anyone wanting a premium chair that adjusts itself, with no levers or manuals"
+  comunidad: "Review consensus (BTOD, The Human Solution) is very positive on immediate comfort and the dynamic headrest; criticisms point to lumbar support not being independently adjustable and a clearly premium price."
+  puntosFuertes:
+    - "Weight-activated recline, no levers to adjust"
+    - "Dynamic headrest that follows your posture"
+    - "Synchronised armrests adjustable with one hand"
+    - "15-year warranty, 24/7 use"
+    - "Aluminium base and premium build"
+  puntosDebiles:
+    - "No independent lumbar adjustment"
+    - "No adjustable seat depth"
+    - "High-end price"
+  paraQuienSi:
+    - "Anyone wanting immediate comfort without learning to adjust the chair"
+    - "Users who change posture a lot during the day"
+    - "Anyone who values a headrest that follows movement"
+  paraQuienNo:
+    - "Anyone needing independently adjustable lumbar support"
+    - "Anyone wanting adjustable seat depth"
+    - "Tight budgets"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 52
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "valoraciones"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "fijo"

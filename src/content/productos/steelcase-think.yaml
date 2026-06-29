@@ -79,7 +79,36 @@ puntosDebiles:
   - "Respaldo tapizado, menos transpirable que una malla"
   - "Precio premium"
 fuenteSpecs: "Tienda oficial Steelcase Europa (eu.steelcase.com/products/think) + web oficial (steelcase.com/products/office-chairs/think) + goegyptian.com/learninghub/steelcase-think-chair-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Steelcase Think"
+  veredicto: "The Think is the Steelcase designed to adjust itself: the LiveBack system moulds to the spine and the tilt is activated by the user's weight. It comes with adjustable lumbar and 4D armrests as standard, with a very solid warranty; its limit is that the recline adjustment is by positions, not continuous, and it's still a premium-priced chair."
+  idealPara: "Anyone wanting an intuitive Steelcase, with weight-based adjustment and a backrest that adapts to the back without fuss"
+  comunidad: "Specialist reviews and user opinions value the Think for its simplicity: it adjusts itself to weight and the LiveBack backrest moulds well. The most common negative consensus is that the recline goes by positions rather than continuously, and that the upholstered backrest breathes less than mesh."
+  resumenCompra:
+    mejorPara: "Anyone wanting an intuitive premium, with weight adjustment, adjustable lumbar and 4D armrests as standard."
+    evitarSi: "You prefer a breathable mesh backrest or need continuous recline rather than by positions."
+    alternativaDirecta: "Steelcase Leap V2 if you want more backrest adjustments from the same brand."
+    decisionRapida: "I'd choose it for its ease of use, weight-based adjustment and warranty, accepting that it's premium and the backrest is upholstered, not mesh."
+  puntosFuertes:
+    - "LiveBack system that moulds to the curve of the spine"
+    - "Tilt activated by the user's weight, no setup"
+    - "Height-adjustable lumbar and 4D armrests as standard"
+    - "Supports up to 150 kg"
+    - "Broad warranty: lifetime frame, 12 years on mechanisms"
+    - "European manufacturing, high recyclable percentage"
+  puntosDebiles:
+    - "Recline by 4 positions, not continuous"
+    - "Upholstered backrest, less breathable than mesh"
+    - "Premium price"
+  paraQuienSi:
+    - "Anyone wanting a premium that adjusts itself to weight without touching levers"
+    - "Users who value adjustable lumbar and 4D armrests as standard"
+    - "Anyone seeking Steelcase durability and a very broad warranty"
+  paraQuienNo:
+    - "Anyone who prefers a breathable mesh backrest"
+    - "Users who want continuous recline rather than by positions"
+    - "Budgets below the premium tier"
+verificadoEn: "2026-06-25"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -102,3 +131,4 @@ specs:
   profundidadAsientoMaxCm: 47
   alturaRespaldoCm: null
   reposacabezas: "ninguno"
+  asientoMaterial: "espuma tapizada"

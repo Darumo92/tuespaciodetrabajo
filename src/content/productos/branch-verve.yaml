@@ -67,7 +67,46 @@ puntosDebiles:
   - "Solo disponible en Estados Unidos y Canadá"
   - "Inclinación limitada a 20 grados con bloqueo, sin reclinación profunda"
 fuenteSpecs: "Web oficial Branch Furniture (branchfurniture.com/products/verve-chair: respaldo de punto 3D transpirable, lumbar regulable en altura, profundidad de asiento ajustable, reposabrazos regulables en altura, anchura y ángulo con seis puntos de ajuste, inclinación de 20 grados con bloqueo, máx 125 kg / 275 lb, altura de asiento 41,6-52 cm / 16,4-20,5 in, peso del producto 18 kg / 40 lb, certificación BIFMA, certificación GREENGUARD Gold, garantía 7 años, envío solo a Estados Unidos y Canadá)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Branch Verve Chair"
+  veredicto: "The Verve is Branch's most characterful chair: a breathable 3D-knit backrest in a colour palette uncommon in offices, with six adjustment points and GREENGUARD Gold low-emission certification. Inside it covers what's expected in its range (height-adjustable lumbar, adjustable seat depth, BIFMA) and the 7-year warranty is generous for the price. The big catch for Spanish buyers is logistics: Branch only sells and ships to the US and Canada, so here it arrives by import only."
+  idealPara: "Stylish home-office work in the US and Canada, for anyone wanting certified colourful mesh without overspending"
+  comunidad: "Branch is a US direct-to-consumer office-furniture brand that has gained traction among home workers for its value and design. The Verve appears in mid-range chair comparisons as an option with character thanks to its colourful mesh and sustainability certifications. The recurring, decisive comment for European buyers is that the brand operates only in the US and Canada, so for Spain it's out of play unless you accept importing."
+  resumenCompra:
+    mejorPara: "Anyone wanting a design office chair with certified mesh at a mid price in North America."
+    evitarSi: "You live in Spain or the EU and don't want to deal with import and customs."
+    alternativaDirecta: "Branch Ergonomic Chair from the same brand if you prefer a more classic, complete approach."
+    decisionRapida: "Pretty, breathable and well warranted, but it only makes sense if you buy from the US or Canada."
+  puntosFuertes:
+    - "Breathable 3D-knit backrest with an uncommon colour palette"
+    - "Six adjustment points, with 3D armrests in height, width and angle"
+    - "Adjustable seat depth"
+    - "BIFMA and GREENGUARD Gold low-emission certification"
+    - "7-year warranty"
+  puntosDebiles:
+    - "Available only in the US and Canada"
+    - "Tilt limited to 20 degrees with lock, no deep recline"
+  paraQuienSi:
+    - "Home workers in the US or Canada who want design and colour"
+    - "Anyone who values GREENGUARD Gold and BIFMA certification at a mid price"
+    - "Users up to 125 kg seeking adjustable seat depth"
+  paraQuienNo:
+    - "Buyers in Spain or the EU who don't want to import"
+    - "Anyone needing deep recline to rest"
+    - "Users over 125 kg"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -82,3 +121,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 18
   garantiaAnios: 7
+  reposacabezas: "ninguno"
+  asientoMaterial: "tejido de punto 3D transpirable"

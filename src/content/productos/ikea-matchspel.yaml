@@ -41,7 +41,43 @@ puntosDebiles:
   - "Soporte lumbar no ajustable"
   - "Sin profundidad de asiento regulable"
 fuenteSpecs: "Web oficial IKEA MATCHSPEL (ikea.com/es ficha producto, peso probado 110 kg, asiento 47-59 cm, respaldo de malla con tensión automática)"
-verificadoEn: "2026-06-18"
+en:
+  nombreComercial: "IKEA MATCHSPEL"
+  veredicto: "The MATCHSPEL is IKEA's cheap gaming-office chair that best combines breathable mesh with automatic tension: the backrest adjusts its resistance to your weight with no controls to touch. It doesn't have the depth of adjustment of a serious ergonomic chair, but for its price it offers decent breathability and support for moderate days."
+  idealPara: "Home-office and gaming on a tight budget that wants a mesh backrest"
+  comunidad: "Spanish press (Vida Extra, El Español) highlights it as one of the most comfortable budget gaming chairs for its mesh and automatic tension; the consensus recommends it for moderate use and warns that the padding and adjustments are basic next to a mid-range ergonomic chair."
+  puntosFuertes:
+    - "Breathable mesh backrest"
+    - "Automatic tension that adjusts the backrest to your weight"
+    - "Adjustable armrests"
+    - "Very contained entry price"
+  puntosDebiles:
+    - "Supports up to 110 kg"
+    - "Non-adjustable lumbar support"
+    - "No adjustable seat depth"
+  paraQuienSi:
+    - "Tight budget that wants breathable mesh"
+    - "Moderate home-office and gaming use"
+    - "Anyone who prefers automatic tension to setting controls"
+  paraQuienNo:
+    - "Anyone needing adjustable lumbar or seat depth"
+    - "People over 110 kg"
+    - "Very long days with high ergonomic demands"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 51
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.asientoMaterial"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
+    - "valoraciones"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "fijo"

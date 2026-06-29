@@ -41,7 +41,42 @@ puntosDebiles:
   - "Sin ajuste de profundidad de asiento"
   - "Sin certificación BIFMA (certificada TÜV SÜD EN 1335-2)"
 fuenteSpecs: "Amazon.es ficha OBN55BK (B07ZCJVFDJ) · allesopvoorraad.com (reclinación, certificación TÜV) · vasbutor.hu (altura asiento 44-54 cm, peso 15,4 kg) · chairinstitute.com (garantía 30 meses)"
-verificadoEn: "2026-06-07"
+en:
+  nombreComercial: "SONGMICS OBN55BK"
+  veredicto: "A very accessible entry-level chair with breathable mesh and a three-position recline adjustment; basic materials and finishes in line with the price, with no seat-depth adjustment or height-adjustable lumbar. It does the job well for occasional use or as a second chair."
+  idealPara: "A very tight budget (under €100), occasional use or a second chair"
+  comunidad: "Polarised reviews: high satisfaction for occasional use or very tight budgets; frequent criticism of the plastic and the lack of fine adjustment. TÜV SÜD / EN 1335-2 certified."
+  puntosFuertes:
+    - "Very competitive price (under €100)"
+    - "Breathable mesh backrest"
+    - "Adjustable headrest and lumbar included"
+    - "Three recline positions (90°, 105°, 120°)"
+    - "Available on Amazon.es with fast shipping"
+  puntosDebiles:
+    - "Maximum weight of 120 kg, lower than other options"
+    - "Armrests adjustable in height only"
+    - "Basic-quality plastic materials"
+    - "No seat-depth adjustment"
+    - "No BIFMA certification (TÜV SÜD EN 1335-2 certified)"
+  paraQuienSi:
+    - "A budget under €100"
+    - "Occasional use (less than 4 hours a day)"
+    - "A second or guest chair in a home office"
+  paraQuienNo:
+    - "Full-time work (more than 6 hours a day)"
+    - "Users who need fine lumbar or depth adjustment"
+    - "People looking for long-term durability"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 71
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "presion"
@@ -54,8 +89,10 @@ specs:
   alturaAsientoMaxCm: 54
   anchoCm: 52
   fondoCm: 50
-  mecanismo: null
+  mecanismo: "inclinación con bloqueo en 3 posiciones (90/105/120°)"
   baseMaterial: "nylon"
   certificacionBifma: false
+  certificacionEn1335: true
   pesoProductoKg: 15.4
   garantiaAnios: 2
+  asientoMaterial: "espuma (asiento), malla transpirable (respaldo)"

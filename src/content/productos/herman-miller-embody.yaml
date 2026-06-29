@@ -43,7 +43,44 @@ puntosDebiles:
   - "Reposabrazos solo 2D (altura y anchura), inferiores a otras premium"
   - "Respaldo mixto (no malla completa) puede ser menos transpirable"
 fuenteSpecs: "Web oficial Herman Miller (hermanmiller.com/products/seating/office-chairs/embody-chairs + specs PDF) + distribuidor España ofival.es (precio €1.824 verificado) + store.hermanmiller.com/office-chairs-ergonomic-chairs/embody-chair/4737 + seatedlab.com/herman-miller-embody-review + btod.com/blog/herman-miller-embody-review"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Herman Miller Embody"
+  veredicto: "The Embody is the chair with the most sophisticated backrest support on the market: its Pixelated system adapts automatically to every movement, but its price is the highest and the 2D armrests are a notable concession in this segment."
+  idealPara: "Creatives and professionals seeking maximum adaptive back support regardless of price"
+  comunidad: "Very polarised: those who click with its dynamic-support philosophy consider it irreplaceable; those who need adjustable lumbar or 4D arms are disappointed by the price."
+  puntosFuertes:
+    - "Pixelated™ support: a polymer matrix that adapts dynamically to the back"
+    - "BackFit™: full backrest-angle adjustment to align the whole spine"
+    - "4-layer seat with intelligent pressure distribution"
+    - "Designed with biomechanists and physiotherapists"
+    - "12-year warranty, 3 shifts"
+    - "Premium benchmark for creative work and long days"
+  puntosDebiles:
+    - "The most expensive in the comparison (~€1,824)"
+    - "Recline limited to 18° (controlled by body weight)"
+    - "2D armrests only (height and width), inferior to other premiums"
+    - "Mixed backrest (not full mesh), can be less breathable"
+  paraQuienSi:
+    - "Professionals with long days who prioritise adaptive back support"
+    - "Creatives and designers who constantly change posture"
+    - "Users who value sustainable certifications (BIFMA L3, GREENGUARD Gold)"
+    - "Anyone who prefers the chair to adapt itself without manual adjustments"
+  paraQuienNo:
+    - "Users who need lumbar support adjustable in height or firmness"
+    - "Very broad-shouldered people (the 54 cm backrest may be tight)"
+    - "Anyone who needs armrests with depth or pivot adjustment"
+    - "Budgets below €1,600"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -61,3 +98,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 23.1
   garantiaAnios: 12
+  reposacabezas: "ninguno"
+  asientoMaterial: "asiento de 4 capas con tejido tapizado"

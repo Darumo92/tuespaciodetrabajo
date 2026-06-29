@@ -42,7 +42,45 @@ puntosDebiles:
   - "Disponible principalmente por distribuidores especializados en España"
   - "Sin datos de grados de reclinación máxima en ficha oficial"
 fuenteSpecs: "Haworth Store Internacional (shopping.haworth.com/en-es, precio €970 verificado) + store.haworth.com (dimensiones cm verificadas) + 2modern.com/products/fern-mesh-office-chair (peso 64-70 lbs confirmado) + haworth.com data sheet AP 2025"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Haworth Fern"
+  veredicto: "The Fern is the most convincing mesh alternative to the Aeron: its Wave Suspension System delivers genuine dynamic adaptation and makes it the best premium option under €1,000 for users who prioritise high-quality mesh."
+  idealPara: "Professionals who want high-quality mesh with dynamic lumbar support at Herman Miller level but slightly more accessible"
+  comunidad: "Well rated in ergonomics communities as a serious alternative to Herman Miller; its main cited advantage is value versus the Aeron, and its weak point is a smaller second-hand presence in the European market."
+  puntosFuertes:
+    - "Mesh backrest with technology that mimics the spine and adapts to movement"
+    - "Integrated dynamic lumbar support as standard"
+    - "4D armrests with a wide range of movement"
+    - "Adjustable seat depth of 88 mm"
+    - "5 backrest lock positions"
+    - "Award-winning design, widely recommended in ergonomics communities"
+  puntosDebiles:
+    - "Premium price (~€970-1,400 depending on configuration)"
+    - "Available mainly through specialist distributors in Spain"
+    - "No maximum recline degrees in the official datasheet"
+  paraQuienSi:
+    - "Users seeking high-quality breathable mesh for under €1,000"
+    - "Professionals who value integrated dynamic lumbar support with no setup"
+    - "People up to 159 kg who need a high-capacity mesh chair"
+    - "Anyone who prefers American assembly with a 12-year warranty"
+  paraQuienNo:
+    - "Users who need precise recline-degree figures"
+    - "Buyers who want easy second-hand access in Europe"
+    - "Anyone prioritising the most versatile armrests on the market (the Gesture beats them)"
+    - "Budgets below €900 looking for premium mesh"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 64
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -60,3 +98,4 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 29.5
   garantiaAnios: 12
+  asientoMaterial: "espuma con tapizado (Digital Knit opcional)"

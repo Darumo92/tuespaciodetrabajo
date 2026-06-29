@@ -42,7 +42,47 @@ puntosDebiles:
   - "Soporte postventa desde EE. UU., puede ser lento"
   - "Comunidad r/OfficeChairs señala que la calidad de materiales no es del nivel premium"
 fuenteSpecs: "Web oficial Autonomous (autonomous.ai/office-chairs/ergonomic-chair — dimensiones, peso 22 kg/48.5 lbs, mecanismo Donati, capacidad 136 kg verificados) + autonomous.ai/ourblog/office-chair-dimensions-autonomous-chairs (conversión cm) + Tom's Hardware review + TechRadar review"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Autonomous ErgoChair Pro"
+  veredicto: "The ErgoChair Pro offers the most adjustments per euro in its price range: 9 adjustment points including height-adjustable lumbar and seat depth. Material quality is fine but not premium, and the recline of only 22° limits resting. A solid option for anyone prioritising adjustability over luxury."
+  idealPara: "Anyone wanting lots of adjustments without reaching Steelcase/Herman Miller prices"
+  comunidad: "Mixed ratings: Tom's Hardware calls it 'good but not outstanding'; Tom's Guide and TechRadar recommend it for postural correction and prolonged work. Its Achilles' heel is the frame plastics and slow after-sales support from the US. Absent from the r/OfficeChairs top tier next to Steelcase or HM."
+  puntosFuertes:
+    - "9 adjustment points (seat height, depth, armrests, lumbar, headrest, tension, recline)"
+    - "Height-adjustable lumbar with a 15 cm range"
+    - "Adjustable seat depth"
+    - "Lifetime warranty on structural parts"
+    - "Competitive price for the number of adjustments"
+  puntosDebiles:
+    - "Maximum recline of only 22°, very limited"
+    - "No physical-store distribution in Spain"
+    - "After-sales support from the US, can be slow"
+    - "The r/OfficeChairs community notes material quality isn't premium-grade"
+  paraQuienSi:
+    - "Home workers with a €400-550 budget who want many adjustments"
+    - "Users with lower-back pain who need height-adjustable support"
+    - "People 160-190 cm weighing up to 136 kg"
+    - "Anyone who values breathable mesh for warm climates"
+  paraQuienNo:
+    - "Users who want to recline more than 30° to rest"
+    - "Anyone needing fast after-sales support in Spain"
+    - "Buyers who prioritise premium materials or durable build"
+    - "Users comparing with Steelcase Leap or Herman Miller in the same extended budget"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 55
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.asientoMaterial"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"

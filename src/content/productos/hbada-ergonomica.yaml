@@ -38,7 +38,41 @@ puntosDebiles:
   - "Asiento de espuma con muelles, no malla completa"
   - "Sin profundidad de asiento regulable"
 fuenteSpecs: "Web oficial Hbada P5 (hbada.com/products/hbada-p5-ergonomic-office-chair-with-footrest) · manual P5 (manuals.plus/asin/B0BWDQX8RH) · newegg.com (BIFMA, inclinación 135°, límite 300 lb) · Amazon.es ficha B0CH7RBQQ7"
-verificadoEn: "2026-06-18"
+en:
+  nombreComercial: "Hbada Ergonomic Chair"
+  veredicto: "The P5 model is a mid-budget chair with a retractable footrest as its clear differentiator, 2D lumbar and an adjustable headrest; a mesh backrest with a spring-loaded memory-foam seat. A good option for moderate days if the footrest and basic adjustments are the priority."
+  idealPara: "Anyone prioritising an integrated footrest and 2D adjustments at a mid price"
+  comunidad: "Users value the footrest, the adjustable lumbar and the seat comfort; criticisms centre on the 2D armrests' adjustment range and the cushion firming over time. Positive consensus on Amazon.es for 6-8 hours of use."
+  puntosFuertes:
+    - "Integrated retractable footrest"
+    - "2D adjustable lumbar (height and depth)"
+    - "Headrest adjustable in height and up to 40° rotation"
+    - "Breathable mesh backrest"
+  puntosDebiles:
+    - "2D armrests (no rotation or depth adjustment like 3D/4D)"
+    - "Spring-loaded foam seat, not full mesh"
+    - "No adjustable seat depth"
+  paraQuienSi:
+    - "Anyone needing an integrated footrest without paying a premium price"
+    - "Average-height users (1.60–1.85 m)"
+    - "6-8 hours of work with regular breaks"
+  paraQuienNo:
+    - "Anyone needing 3D/4D armrests or adjustable seat depth"
+    - "Users who prefer full mesh on seat and back in warm climates"
+    - "Anyone over 136 kg"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 60
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -51,7 +85,7 @@ specs:
   alturaAsientoMaxCm: null
   anchoCm: 48
   fondoCm: 43
-  mecanismo: null
+  mecanismo: "inclinación con bloqueo"
   baseMaterial: "nylon"
   certificacionBifma: true
   pesoProductoKg: 20

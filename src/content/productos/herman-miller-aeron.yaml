@@ -80,7 +80,49 @@ puntosDebiles:
   - "Puede resultar incómoda para usuarios con mucho peso en la parte superior"
   - "Requiere distribuidor oficial o tienda especializada"
 fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/aeron-chair/specs) + tienda España (esstore.hermanmiller.com) + ofival.es + store.hermanmiller.com/office-chairs-aeron/aeron-chair/2195348 + dimensions.com/element/aeron-chair-b-size + seatedlab.com/herman-miller-aeron-review"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Herman Miller Aeron"
+  veredicto: "The Aeron is the world benchmark for mesh chairs: PostureFit SL and the 8Z Pellicle suspension deliver sacrolumbar support with no equivalent, though its price and the need to pick the right size are real barriers."
+  idealPara: "Professionals seeking the absolute benchmark in breathable mesh and sacrolumbar support"
+  comunidad: "r/OfficeChairs marks it as the absolute ergonomics benchmark; the only consistent negative consensus is picking the wrong size or expecting a soft seat like a gaming chair's."
+  resumenCompra:
+    mejorPara: "Long days in warm climates, users who prioritise breathable mesh and sacrolumbar support."
+    evitarSi: "You prefer a padded seat, need adjustable seat depth as standard, or aren't sure of the size."
+    alternativaDirecta: "Steelcase Leap V2 if you want more adjustments in an upholstered backrest."
+    decisionRapida: "I'd buy it if you want a premium mesh chair and can choose the size well; it isn't the most flexible per euro spent."
+  puntosFuertes:
+    - "8Z Pellicle mesh back and seat with differentiated support zones"
+    - "PostureFit SL: simultaneous sacral and lumbar support, unique on the market"
+    - "Available in 3 sizes (A, B, C) to fit each body"
+    - "An icon of ergonomic design, the absolute benchmark on r/OfficeChairs"
+    - "12-year warranty, 3 shifts (24/7 use)"
+    - "Excellent mesh breathability in warm climates"
+  puntosDebiles:
+    - "Very high price (€1,500-1,800 new in Spain)"
+    - "No seat-depth adjustment on base models"
+    - "Can be uncomfortable for users with a lot of upper-body weight"
+    - "Requires an official dealer or specialist store"
+  paraQuienSi:
+    - "Users who work 8+ hours a day and prioritise breathability"
+    - "People with sacrolumbar issues seeking differentiated support"
+    - "Professionals willing to invest in the sector benchmark"
+    - "Warm climates where mesh makes the difference"
+  paraQuienNo:
+    - "Users who prefer upholstered or soft-padded seats"
+    - "Very broad-build people (they fit better in size C)"
+    - "Anyone needing seat-depth adjustment without paying extra"
+    - "Budgets below €1,400"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -98,3 +140,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 18.6
   garantiaAnios: 12
+  reposacabezas: "ninguno"
+  asientoMaterial: "malla 8Z Pellicle por zonas"

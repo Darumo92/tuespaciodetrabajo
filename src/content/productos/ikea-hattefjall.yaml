@@ -75,7 +75,45 @@ puntosDebiles:
   - "Soporta hasta 110 kg"
   - "Sin profundidad de asiento regulable"
 fuenteSpecs: "Web oficial IKEA España (ficha HATTEFJÄLL con reposabrazos: asiento 50x40 cm, altura 46-56 cm, máx 110 kg, garantía 10 años, EN 1335 + BIFMA X5.1) + manual del producto"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "IKEA HATTEFJÄLL"
+  veredicto: "The HATTEFJÄLL gathers more real adjustments than almost any IKEA work chair: it adds an adjustable lumbar, a backrest with height adjustable in several positions, 2D armrests and a synchronised tilt with a three-position lock, all with the 10-year warranty. The backrest is upholstered rather than mesh, so it breathes less in summer, but as an upholstered office chair with real adjustments and a good finish it's a very balanced option for full days at home."
+  idealPara: "Upholstered home-office work with adjustable lumbar and a tidy office look"
+  comunidad: "Good consensus among IKEA users: it's rated one of the brand's most complete upholstered chairs for its adjustable lumbar and height-adjustable backrest, plus the 10-year warranty. The usual criticisms note that the upholstered backrest runs warmer than mesh and that the 110 kg limit leaves out larger users."
+  resumenCompra:
+    mejorPara: "Anyone wanting an upholstered chair with adjustable lumbar and a height-adjustable backrest."
+    evitarSi: "You need breathable mesh or adjustable seat depth."
+    alternativaDirecta: "IKEA JÄRVFJÄLLET if you prefer a mesh backrest with more adjustments."
+    decisionRapida: "The IKEA upholstered chair I'd put first for home-office work if you value adjustable lumbar and backrest."
+  puntosFuertes:
+    - "Adjustable lumbar support"
+    - "Backrest with height adjustable in several positions"
+    - "2D armrests (height and width)"
+    - "Synchronised tilt with a three-position lock"
+    - "10-year warranty and EN 1335 + BIFMA X5.1 certification"
+  puntosDebiles:
+    - "Upholstered backrest, breathes less than mesh"
+    - "Supports up to 110 kg"
+    - "No adjustable seat depth"
+  paraQuienSi:
+    - "Anyone wanting an upholstered chair with adjustable lumbar and backrest"
+    - "Full-day home-office work that values padding and a sober look"
+    - "Anyone seeking IKEA's 10-year warranty"
+  paraQuienNo:
+    - "Anyone needing breathable mesh for summer"
+    - "People over 110 kg"
+    - "Anyone who needs adjustable seat depth"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 75
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -98,3 +136,4 @@ specs:
   alturaRespaldoCm: null
   reposacabezas: "ninguno"
   certificacionEn1335: true
+  asientoMaterial: "espuma tapizada"

@@ -73,7 +73,46 @@ puntosDebiles:
   - "Exclusiva de PcComponentes"
   - "La versión en polipiel transpira menos"
 fuenteSpecs: "Ficha oficial PcComponentes (pccomponentes.com/forgeon-spica-fabric-silla-gaming-tela-transpirable-negra: tela transpirable o polipiel sobre espuma moldeada 50 kg/m³, reclinación 180°, reposabrazos 4D, cojín lumbar de espuma y cervical de memory foam magnético, máx 150 kg, asiento 56x46 cm, base metálica reforzada de 350 mm con reposapiés retráctil, pistón clase 4, ruedas de nylon 65 mm, mecanismo tipo mariposa, peso 24 kg, dimensiones 74x58x125-131 cm)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Forgeon Spica"
+  veredicto: "The Spica is the gaming chair from PcComponentes' own brand, and its big draw is how well equipped it comes for its price: 4D armrests, recline up to 180°, a reinforced 350 mm base with a retractable footrest and a magnetic memory-foam neck cushion. It comes in breathable fabric or faux leather, so you can choose freshness or a classic finish. Lumbar support is a foam cushion, not a dynamic system, and being exclusive to PcComponentes you can only buy it there. For anyone wanting a well-equipped gaming chair and an unusual extra like the footrest at a contained price, it's a very reasonable buy."
+  idealPara: "A fully-featured gaming chair with a retractable footrest at a contained price, exclusive to PcComponentes"
+  comunidad: "Favourable reception in the store's own reviews and ratings: the equipment for the price is valued, especially the retractable footrest and the 4D armrests, uncommon in its range. The most repeated criticisms are that the lumbar is just a cushion and that, being exclusive to PcComponentes, it depends entirely on that channel for purchase and after-sales."
+  resumenCompra:
+    mejorPara: "Anyone after a very well-equipped gaming chair with a retractable footrest without overspending."
+    evitarSi: "You want a dynamic lumbar or don't shop at PcComponentes."
+    alternativaDirecta: "Corsair TC100 if you prefer a brand with wider distribution."
+    decisionRapida: "4D armrests and even a footrest for little money, as long as you buy at PcComponentes."
+  puntosFuertes:
+    - "4D armrests"
+    - "Recline up to 180°"
+    - "Reinforced 350 mm metal base with retractable footrest"
+    - "Magnetic memory-foam neck cushion"
+    - "Available in breathable fabric or faux leather"
+  puntosDebiles:
+    - "Foam-cushion lumbar support, no dynamic system"
+    - "Exclusive to PcComponentes"
+    - "The faux-leather version breathes less"
+  paraQuienSi:
+    - "Anyone wanting a very well-equipped gaming chair for little money"
+    - "Users who value an integrated retractable footrest"
+    - "Anyone who prefers to choose between breathable fabric or faux leather"
+  paraQuienNo:
+    - "Anyone needing a dynamic lumbar instead of a cushion"
+    - "Anyone who doesn't want to depend on a single sales channel"
+    - "Anyone after a full-mesh chair"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.garantiaAnios"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -87,3 +126,6 @@ specs:
   anchoAsientoCm: 56
   profundidadAsientoMaxCm: 46
   reposacabezas: "fijo"
+  anchoCm: 74
+  fondoCm: 58
+  asientoMaterial: "tela transpirable o polipiel sobre espuma moldeada (50 kg/m³)"

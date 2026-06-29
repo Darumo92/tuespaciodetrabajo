@@ -80,7 +80,39 @@ puntosDebiles:
   - "Respaldo tapizado, menos transpirable que malla"
   - "Reclinación máxima de 25° (5 posiciones), más conservadora que sillas gaming"
 fuenteSpecs: "Web oficial Steelcase España (es.steelcase.com/products/steelcase-leap) + btod.com/steelcase-leap-v2 (dimensiones verificadas) + seatedlab.com/steelcase-leap-review + store.steelcase.com/seating/ergonomic-chairs/leap"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Steelcase Leap V2"
+  veredicto: "The Leap V2 is the classic benchmark for full-day work: its height- and firmness-adjustable lumbar combined with LiveBack makes it the most adaptable chair in the premium upholstered segment, with proven durability of 15-20 years."
+  idealPara: "Professionals on full workdays who prioritise ergonomics and durability over price"
+  comunidad: "The most recommended on r/OfficeChairs for intense sedentary work; the second-hand market through Crandall is cited as the best value in the segment."
+  resumenCompra:
+    mejorPara: "Full workdays, users who prefer an upholstered backrest and fine lumbar/seat adjustments."
+    evitarSi: "You're after maximum mesh breathability or a contained entry price."
+    alternativaDirecta: "Herman Miller Aeron if you want premium mesh and differentiated sacrolumbar support."
+    decisionRapida: "I'd put it ahead of many premiums if you need precise lumbar adjustment and don't mind paying for an upholstered design."
+  puntosFuertes:
+    - "LiveBack™ technology: independent upper and lower back that follow the spine"
+    - "Lumbar adjustable in height and firmness"
+    - "4D armrests adjustable in height, width, depth and pivot"
+    - "Lifetime frame warranty + 12 years on mechanisms (24/7 use)"
+    - "A historic r/OfficeChairs benchmark for full-day work"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "High price (~€1,200 new in Spain)"
+    - "Not in mass physical stores; requires an official dealer"
+    - "Upholstered backrest, less breathable than mesh"
+    - "Maximum recline of 25° (5 positions), more conservative than gaming chairs"
+  paraQuienSi:
+    - "Professionals with 8+ hours a day of intense sedentary work"
+    - "Users who prioritise precise lumbar adjustment (height and firmness)"
+    - "Anyone seeking proven 15-20-year durability"
+    - "Second-hand buyers who want premium quality at half price"
+  paraQuienNo:
+    - "Users in warm climates who prefer breathable mesh"
+    - "Very robust-build people (150 kg limit versus the Gesture's 181 kg)"
+    - "Anyone wanting the most versatile armrests on the market (the Gesture beats them)"
+    - "Budgets below €1,000 without the refurbished market"
+verificadoEn: "2026-06-25"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -98,3 +130,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 29.0
   garantiaAnios: 12
+  reposacabezas: "ninguno"
+  asientoMaterial: "espuma tapizada"

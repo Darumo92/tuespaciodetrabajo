@@ -43,7 +43,46 @@ puntosDebiles:
   - "Brazo 360° puede desestabilizarse en uso intenso según algunas reseñas"
   - "Precisa distribución oficial; no en tiendas generalistas"
 fuenteSpecs: "Web oficial Steelcase (steelcase.com/products/office-chairs/gesture) + btod.com/blog/steelcase-gesture-chair-review + in.steelcase.com/products/gesture (dimensiones mm verificadas) + BIFMA cert PDF steelcase.com/content/uploads/sites/15/2015/06/AP_Gesture_Certification_BIFMA.pdf + seatedlab.com/steelcase-gesture-review"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "Steelcase Gesture"
+  veredicto: "The Gesture is the most versatile chair in the premium market: its 360° arms and 3D LiveBack mechanism make it ideal for anyone working across multiple devices, though its upholstered backrest counts against it versus mesh in summer."
+  idealPara: "Professionals who work with multiple devices (laptop, tablet, phone) and make many video calls"
+  comunidad: "Consensus on r/OfficeChairs: first choice for tablet and phone work; the recurring criticism is that the lumbar isn't height-adjustable and that it runs warmer than the Leap V2 for prolonged sedentary work."
+  puntosFuertes:
+    - "360° arms designed for posture across screens and mobile devices"
+    - "Core Equalizer™: dynamic lumbar support that adapts in every position"
+    - "Widest arm-width range on the market"
+    - "Lifetime frame warranty + 12 years on mechanisms (24/7 use)"
+    - "Capacity up to 181 kg (400 lb)"
+    - "Especially valued for multi-device users and video calls"
+  puntosDebiles:
+    - "The most expensive of the new Steelcase range (~€1,500)"
+    - "Upholstered backrest, less breathable than mesh"
+    - "The 360° arm can become unstable under heavy use, per some reviews"
+    - "Requires official distribution; not in general stores"
+  paraQuienSi:
+    - "Users working across computer, tablet and phone, switching postures"
+    - "Professionals who make many video calls and recline frequently"
+    - "Robust-build people (up to 181 kg capacity)"
+    - "Anyone who values the widest arm adjustment on the market"
+  paraQuienNo:
+    - "Users in warm climates who prefer breathable mesh"
+    - "Anyone needing lumbar height adjustment (the Gesture lacks it)"
+    - "Very prolonged sedentary work with no frequent posture change"
+    - "Budgets below €1,300"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 64
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -61,3 +100,4 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 26.4
   garantiaAnios: 12
+  asientoMaterial: "espuma tapizada"

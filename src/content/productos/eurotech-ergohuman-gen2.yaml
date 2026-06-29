@@ -74,7 +74,50 @@ puntosDebiles:
   - "Límite de carga de 125 kg"
   - "Acabado funcional, poco premium"
 fuenteSpecs: "Web oficial Eurotech Seating (eurotechseating.com/executive/ergohuman_gen2_high_all_mesh: malla integral, lumbar dinámico de 6 vías, reposacabezas ajustable con pivote, reposabrazos 4D, altura asiento 45-54 cm (17,83-21,38 pulgadas), ancho asiento 52 cm, profundidad máx 50 cm, profundidad regulable, máx 125 kg / 275 lb, mecanismo sincronizado con bloqueo en varias posiciones e inclinación frontal) + ergohuman.com"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Eurotech Ergohuman GEN2"
+  veredicto: "The Ergohuman GEN2 is the classic mesh ergonomic chair that has worked for years as an alternative to the Aeron for considerably less money. Its big asset is the 6-way dynamic lumbar panel that follows the lumbar area instead of pushing with fixed pressure, plus full mesh on seat, backrest and headrest, and 4D armrests. It isn't the most refined in finish or the most modern in looks, but it delivers full-mesh ergonomics with an adjustable headrest that few rivals in its bracket offer. Lifetime parts coverage (5 years on upholstery) reinforces the sense of a long-term buy."
+  idealPara: "Full days on full mesh with an adjustable headrest, at a price below the premiums"
+  comunidad: "A veteran model with a long track record in office and ergonomics forums, where it's recurrently cited as the reasonable alternative to the Aeron for much less thanks to its full mesh and adjustable headrest. The usual criticisms point to slightly cheap plastic finishing for the price and an assembly best done calmly; the consensus is positive on mesh comfort for long days."
+  resumenCompra:
+    mejorPara: "Anyone wanting full mesh with an adjustable headrest and dynamic lumbar without paying a premium price."
+    evitarSi: "You're after a very refined contract finish or weigh over 125 kg."
+    alternativaDirecta: "Herman Miller Mirra 2 if you prefer a premium brand with a mesh backrest and better finish."
+    decisionRapida: "Full mesh with an adjustable headrest for far less than an Aeron: that's its argument."
+  puntosFuertes:
+    - "6-way dynamic lumbar panel that follows the lumbar area"
+    - "Full mesh on seat, backrest and headrest"
+    - "Headrest adjustable in height and with pivot"
+    - "4D armrests adjustable in height, depth and width"
+    - "Adjustable seat depth"
+    - "Lifetime parts coverage and 5 years on upholstery"
+  puntosDebiles:
+    - "Load limit of 125 kg"
+    - "Functional finish, not very premium"
+  paraQuienSi:
+    - "People seated 6-10 h who want breathable full mesh"
+    - "Anyone wanting an adjustable mesh headrest, uncommon in its bracket"
+    - "Users who value a dynamic lumbar that follows the back"
+  paraQuienNo:
+    - "Users over 125 kg"
+    - "Anyone wanting a very refined contract finish"
+    - "Entry-level buys on a very tight budget"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 55
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.asientoMaterial"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"

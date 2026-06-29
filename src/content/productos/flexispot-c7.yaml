@@ -100,3 +100,4 @@ specs:
   profundidadAsientoMaxCm: 50
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "malla o asiento acolchado (configurable)"

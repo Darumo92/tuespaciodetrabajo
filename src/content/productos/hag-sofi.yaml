@@ -74,7 +74,35 @@ puntosDebiles:
   - "Reposabrazos sin ajuste 4D completo"
   - "Precio premium y canal especializado"
 fuenteSpecs: "Web oficial HÅG (hag-office.com/products/hag-sofi-7500) + ficha técnica oficial HÅG SoFi (Flokk)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "HÅG SoFi"
+  veredicto: "The HÅG SoFi bets on movement: its inBalance mechanism follows the body forwards and backwards to curb the tendency to sit still, a signature of the Norwegian brand. It comes with adjustable lumbar and seat depth and clever SlideBack armrests; its limits are a moderate load capacity (110 kg) and a premium price."
+  idealPara: "Anyone seeking a Nordic chair that invites constant movement, focused on active sitting"
+  comunidad: "The SoFi has a good reputation among those seeking chairs that invite movement: the inBalance system and HÅG's active-sitting philosophy are its hallmarks. The consensus on downsides centres on the moderate load capacity and that it's a premium-channel chair, not as easy to find as more mainstream brands."
+  resumenCompra:
+    mejorPara: "Anyone wanting to sit actively, with constant movement, adjustable lumbar and depth."
+    evitarSi: "You weigh near or over 110 kg, or prefer a more static, heavily padded chair."
+    alternativaDirecta: "HÅG Capisco if you want to take active sitting to the extreme with its saddle seat."
+    decisionRapida: "I'd choose it for its movement focus and adjustable lumbar, watching the 110 kg limit and the price."
+  puntosFuertes:
+    - "inBalance mechanism that follows movement forwards and backwards"
+    - "Adjustable lumbar and seat depth"
+    - "SlideBack armrests that let you get close to the desk"
+    - "Breathable mesh backrest and a five-star aluminium base"
+    - "10-year warranty under normal use"
+  puntosDebiles:
+    - "Moderate load capacity (110 kg)"
+    - "Armrests without full 4D adjustment"
+    - "Premium price and specialist channel"
+  paraQuienSi:
+    - "Anyone wanting to sit actively and move while working"
+    - "Users up to 110 kg who value adjustable lumbar and depth"
+    - "Anyone who appreciates Nordic design and Flokk's environmental focus"
+  paraQuienNo:
+    - "People near or over 110 kg"
+    - "Anyone who prefers a static, heavily padded chair"
+    - "Anyone needing full 4D armrests or a standard headrest"
+verificadoEn: "2026-06-25"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -97,3 +125,4 @@ specs:
   profundidadAsientoMaxCm: 46
   alturaRespaldoCm: 72
   reposacabezas: "ninguno"
+  asientoMaterial: "espuma tapizada (asiento), malla (respaldo)"

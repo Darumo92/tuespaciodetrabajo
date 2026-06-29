@@ -73,7 +73,44 @@ puntosDebiles:
   - "Soporte lumbar mediante cojín, sin sistema dinámico"
   - "Peso considerable"
 fuenteSpecs: "Web oficial Sharkoon (en.sharkoon.com/product/SGS40: polipiel sobre espuma de alta densidad 60-70 kg/m³, respaldo 90-160°, balanceo 0-14° con bloqueo, reposabrazos 4D 30,5-37,5 cm, máx 150 kg, altura recomendada hasta 200 cm, asiento 59,5x53 cm, altura asiento 51,5-59 cm, respaldo 86 cm, base de aluminio, pistón clase 4, peso 25 kg, EN 1335-1/2 y EN 16955)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Sharkoon Skiller SGS40"
+  veredicto: "The Skiller SGS40 chases comfort in a reasonably priced racing gaming chair, standing out for its extra-wide seat of nearly 60 cm and high-density moulded foam, plus an EN 1335 certification and a certified piston that give peace of mind about the build. It adds a rocking mechanism with lock, 4D armrests and recline up to 160°. The backrest is faux leather over foam, with a cooler fabric variant, so in summer the fabric option is worth considering. For anyone needing more seat width than usual without overpaying, it's a sensible buy."
+  idealPara: "Users wanting an extra-wide seat with EN 1335 certification at a contained price"
+  comunidad: "Positive rating in reviews and stores: the extra-wide seat, the feeling of sturdiness and the EN certifications stand out as points in its favour versus more basic gaming chairs. The repeated gripes are the faux-leather heat in summer and an assembly that asks for some patience."
+  resumenCompra:
+    mejorPara: "Anyone needing a wide seat and EN 1335 certification without overspending."
+    evitarSi: "You want breathable mesh or the lightest possible weight."
+    alternativaDirecta: "Corsair T3 Rush if you prefer breathable fabric instead of faux leather."
+    decisionRapida: "A wide, well-certified seat for little money: that's the SGS40's argument."
+  puntosFuertes:
+    - "Extra-wide seat of nearly 60 cm"
+    - "4D armrests with a wide pad"
+    - "Rocking mechanism with lock and recline up to 160°"
+    - "EN 1335 certification and EN 16955 certified piston"
+    - "Lumbar and neck cushions included"
+  puntosDebiles:
+    - "Faux-leather backrest on the standard version, warmer in summer"
+    - "Lumbar support via cushion, no dynamic system"
+    - "Considerable weight"
+  paraQuienSi:
+    - "Users who need a wider-than-usual seat"
+    - "People up to 200 cm within the 150 kg limit"
+    - "Anyone who values EN 1335 certification and 4D armrests at a contained price"
+  paraQuienNo:
+    - "Anyone who needs breathable mesh for summer"
+    - "Anyone after the lightest gaming chair"
+    - "Anyone wanting a dynamic lumbar instead of a cushion"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 77
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.garantiaAnios"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -92,3 +129,4 @@ specs:
   alturaRespaldoCm: 86
   reposacabezas: "fijo"
   certificacionEn1335: true
+  asientoMaterial: "polipiel sobre espuma de alta densidad (60-70 kg/m³)"

@@ -73,7 +73,46 @@ puntosDebiles:
   - "La garantía completa solo cubre dos años fuera del chasis"
   - "Precio por encima de la media"
 fuenteSpecs: "Web oficial Vertagear (vertagear.com/products/sl5000-gaming-chair: polipiel sobre espuma UPHR, reclinación 140°, reposabrazos 4D, máx 150 kg, altura recomendada hasta 193 cm, asiento 57x48 cm, base de aluminio, ruedas Penta RS1 65 mm, pistón clase 4, peso 26 kg, garantía 10 años chasis)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Vertagear SL5000"
+  veredicto: "The SL5000 is the racing gaming chair where Vertagear bets on durability: a five-spoke aluminium base, high-resilience UPHR foam and a steel chassis with a ten-year warranty, coverage uncommon in this category. The backrest is faux leather over foam, not mesh, so it runs warmer in summer, and it's worth being clear that those ten years cover the chassis, while the rest of the components get two years. The 4D armrests and removable memory-foam lumbar and neck cushions round out a solid proposition for anyone wanting a well-built gaming chair and willing to pay above average."
+  idealPara: "High-end gaming with aluminium build and a long chassis warranty"
+  comunidad: "Good overall rating in hardware reviews: the aluminium build, base stability and long chassis warranty stand out as differentiators versus plastic gaming chairs. On the downside is the usual faux-leather story, summer heat, and a price that goes above average."
+  resumenCompra:
+    mejorPara: "Anyone wanting a sturdy aluminium racing gaming chair with a long chassis warranty."
+    evitarSi: "You need breathable mesh or want the lowest price-per-ergonomics."
+    alternativaDirecta: "Secretlab TITAN Evo if you prefer more size options and a premium finish."
+    decisionRapida: "Aluminium build and a ten-year chassis warranty justify paying a bit above average."
+  puntosFuertes:
+    - "Five-spoke aluminium base"
+    - "4D armrests"
+    - "High-resilience UPHR foam"
+    - "Removable memory-foam lumbar and neck cushions"
+    - "Ten-year warranty on the steel chassis"
+  puntosDebiles:
+    - "Faux-leather backrest, warmer in summer"
+    - "Full warranty covers only two years outside the chassis"
+    - "Above-average price"
+  paraQuienSi:
+    - "Gamers wanting a well-built aluminium racing chair"
+    - "Users up to 193 cm within the 150 kg limit"
+    - "Anyone who values a long chassis warranty and 4D armrests"
+  paraQuienNo:
+    - "Anyone who needs breathable mesh for summer"
+    - "Anyone unwilling to pay extra for sturdiness they'll barely use"
+    - "Anyone expecting the ten years to cover the whole chair, not just the chassis"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 71
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.mecanismo"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -90,3 +129,4 @@ specs:
   anchoAsientoCm: 57
   profundidadAsientoMaxCm: 48
   reposacabezas: "fijo"
+  asientoMaterial: "polipiel sobre espuma UPHR de alta resiliencia"

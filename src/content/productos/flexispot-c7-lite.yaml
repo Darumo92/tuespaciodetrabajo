@@ -71,7 +71,44 @@ puntosDebiles:
   - "Asiento firme para menos de 60 kg (según reseñas)"
   - "Rango de altura de asiento muy estrecho (solo 2 cm)"
 fuenteSpecs: "techradar.com/pro/flexispot-c7-lite-office-chair-review + relaxingrecliners.com/products/c7-lite + Amazon.es ficha B0F6XL3SFG + web FlexiSpot"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "FlexiSpot C7 Lite"
+  veredicto: "The C7 Lite packs a 5-axis self-adjusting lumbar and 3D armrests into a compact chassis aimed at S/M users; its biggest weakness is the narrow seat-height range (only ~2 cm of margin), which makes it unsuitable for tall people."
+  idealPara: "Many adjustments under €300, breathability priority, S/M size"
+  comunidad: "TechRadar recommends it for users up to 170 cm and highlights comfort maintained after 64 days of testing. The most repeated criticism is that the recline mechanism has very little resistance and the lumbar adjustment's position forces you to stand up to reach it."
+  resumenCompra:
+    mejorPara: "S/M-size users who want lots of adjustment in a compact mid-range chair."
+    evitarSi: "You're taller than 175 cm, need a high seat or want recline with strong resistance."
+    alternativaDirecta: "SIHOO Doro C300 if you want a more versatile mesh chair for long days."
+    decisionRapida: "It makes sense if you fit its size range; outside that, the limited height weighs too much."
+  puntosFuertes:
+    - "5D lumbar support"
+    - "Headrest and 3D armrests"
+    - "Breathable cushion"
+    - "Compact design ideal for users up to 170 cm"
+  puntosDebiles:
+    - "Not cheap: it competes in the mid range"
+    - "Seat firm for under 60 kg (per reviews)"
+    - "Very narrow seat-height range (only 2 cm)"
+  paraQuienSi:
+    - "Users up to 170 cm seeking maximum lumbar adjustability under €300"
+    - "Spaces where compactness and modern design matter"
+    - "Anyone alternating upright posture with reclined breaks through the day"
+  paraQuienNo:
+    - "Users over 175 cm (insufficient seat height)"
+    - "Anyone who prefers firm recline resistance"
+    - "Anyone needing an aluminium base or verified BIFMA certification"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 76
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "5d"
@@ -89,3 +126,5 @@ specs:
   certificacionBifma: null
   pesoProductoKg: 21
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "cojín transpirable (asiento), malla (respaldo)"

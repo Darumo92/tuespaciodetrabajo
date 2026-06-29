@@ -75,7 +75,47 @@ puntosDebiles:
   - "Lumbar fijo, no personalizable en altura"
   - "No recomendada para personas de más de 110 kg"
 fuenteSpecs: "Web oficial IKEA US (ikea.com/us/en/p/markus-office-chair-vissle-dark-gray-90289172 — anchoCm 53 cm, fondoCm 47 cm, peso 22.4 kg, base aluminio, EN 1335 + ANSI/BIFMA X5.1 verificados) + ikea.com/es/es/p/markus-silla-trabajo (precio y disponibilidad España) + btod.com/blog/ikea-markus-vs-jarvfjallet (revisión editorial)"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "IKEA MARKUS"
+  veredicto: "The Markus is the reference office chair at its price: a high mesh backrest, integrated lumbar, a certified aluminium base and a 10-year warranty for ~€159. The adjustments are minimal (only seat height and tilt), but for that price it's simply unbeatable as a first home-office chair."
+  idealPara: "A tight budget, light home-office work or students after mesh at the lowest price"
+  comunidad: "A worldwide icon of the office-chair community. On r/OfficeChairs it constantly appears as the best entry option and the comparison standard for the budget segment. BTOD values it for the smooth recline and spacious seat. Its most cited weak point: the fixed lumbar doesn't work for every torso."
+  resumenCompra:
+    mejorPara: "A first home-office chair, students and moderate use on a tight budget."
+    evitarSi: "You need adjustable lumbar support, adjustable armrests or you sit more than 8 hours a day."
+    alternativaDirecta: "SIHOO Doro C300 if you want a clear step up in ergonomics and adjustments."
+    decisionRapida: "I'd choose it as an entry buy for warranty and price, not as an advanced ergonomic solution."
+  puntosFuertes:
+    - "Best value on the market in its range"
+    - "High breathable mesh backrest"
+    - "10-year IKEA warranty"
+    - "Integrated fixed lumbar support"
+    - "Easy assembly and available in an IKEA store in Spain"
+  puntosDebiles:
+    - "Armrests not height-adjustable"
+    - "No adjustable seat depth"
+    - "Fixed lumbar, not height-customisable"
+    - "Not recommended for people over 110 kg"
+  paraQuienSi:
+    - "A first home-office chair or students with a budget up to €200"
+    - "Moderate workdays (4-6 hours a day)"
+    - "Users who prioritise a breathable mesh backrest"
+    - "Anyone valuing immediate availability and easy assembly at IKEA Spain"
+  paraQuienNo:
+    - "Users with lumbar issues who need adjustable support"
+    - "People who sit more than 8 hours a day"
+    - "Anyone taller than 195 cm or with a very long torso"
+    - "Buyers who need to adjust the seat depth"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 83
+  confianza: "alto"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -91,5 +131,8 @@ specs:
   mecanismo: "inclinación sincronizada con tensión manual y bloqueo en 3 posiciones"
   baseMaterial: "aluminio con revestimiento epoxi/poliéster"
   certificacionBifma: true
+  certificacionEn1335: true
   pesoProductoKg: 22.4
   garantiaAnios: 10
+  reposacabezas: "ninguno"
+  asientoMaterial: "espuma (asiento), malla (respaldo)"

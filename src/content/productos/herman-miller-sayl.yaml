@@ -78,7 +78,48 @@ puntosDebiles:
   - "Sin reposacabezas"
   - "La configuración básica trae pocos ajustes; los completos suben el precio"
 fuenteSpecs: "Web oficial Herman Miller (hermanmiller.com/products/seating/office-chairs/sayl-chairs/product-details) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/sayl-chair/2294.html) + dimensions.com/element/sayl-task-chair + creativebloq.com Herman Miller Sayl review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Herman Miller Sayl"
+  veredicto: "The Sayl offers Herman Miller's warranty and 3D suspension backrest in a lightweight Yves Béhar design. It's a genuine entry into the premium ecosystem, but the lumbar support is optional and modest, and the basic configuration ships with very few adjustments for what it costs."
+  idealPara: "Anyone wanting a Herman Miller with iconic design and a suspension backrest at a more contained price than the Aeron"
+  comunidad: "Consensus from specialist reviews (Creative Bloq, TechRadar): the design, lightness and warranty are valued, but they agree the lumbar is weak unless you pay extra and that the lack of a headrest may put some off. It's seen as the gateway to Herman Miller rather than its most ergonomic chair."
+  resumenCompra:
+    mejorPara: "Anyone who values design, a 12-year warranty and a suspension backrest without paying Aeron money."
+    evitarSi: "You need strong lumbar as standard or a headrest, or you want the most adjustments per euro."
+    alternativaDirecta: "Steelcase Series 1 if you prefer more standard adjustments at a similar or lower price."
+    decisionRapida: "I'd pick it for the design, the suspension and the warranty, accepting that the lumbar is modest and the well-equipped version costs more."
+  puntosFuertes:
+    - "Breathable 3D suspension backrest with passive sacral support"
+    - "Iconic Yves Béhar design, light and compact"
+    - "12-year Herman Miller warranty"
+    - "Supports up to 159 kg"
+    - "Almost fully recyclable materials, PVC-free"
+  puntosDebiles:
+    - "Optional lumbar, considered modest"
+    - "No headrest"
+    - "The basic configuration has few adjustments; the full ones raise the price"
+  paraQuienSi:
+    - "Anyone wanting a Herman Miller with distinctive design without paying Aeron money"
+    - "Users who value a breathable suspension backrest and a 12-year warranty"
+    - "Small spaces where a light, compact chair fits better"
+  paraQuienNo:
+    - "Anyone needing firm lumbar support as standard"
+    - "Users who want a headrest"
+    - "Anyone after the most adjustments per euro spent"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 63
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -97,3 +138,4 @@ specs:
   pesoProductoKg: 17
   garantiaAnios: 12
   reposacabezas: "ninguno"
+  asientoMaterial: "espuma moldeada tapizada"

@@ -36,7 +36,37 @@ puntosDebiles:
   - "Menos historial de reseñas que la M18"
   - "Ajustes por debajo de Doro C300 y C7 Lite"
 fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m102/ + sihoooffice.com/products/sihoo-m102-ergonomic-office-chair + uk.sihoooffice.com/products/sihoo-m102-ergonomic-office-chair-next-level) + sihooreview.com/sihoo-m102c-office-chair + Amazon.co.uk/dp/B0CLLRNFB8"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "SIHOO M102C"
+  veredicto: "The M102C stands out for its 3D flip-up armrests and an independent lumbar adjustable over 6 cm — unusual at this price; the mesh is thinner than the M57's and the base is nylon, but for a first jump into real ergonomics under €200 it's a solid option."
+  idealPara: "A first SIHOO ergonomic chair under €200"
+  comunidad: "Reviews on Amazon and specialist sites (sihooreview.com) agree it doesn't creak, the lumbar is effective and assembly is simple. The most common criticism: the backrest mesh is softer than on higher models and the 3D armrests have limited travel."
+  puntosFuertes:
+    - "Adjustable lumbar support"
+    - "Adjustable headrest"
+    - "Flip-up armrests, useful in small spaces"
+  puntosDebiles:
+    - "Less review history than the M18"
+    - "Adjustments below the Doro C300 and C7 Lite"
+  paraQuienSi:
+    - "Small spaces where flip-up armrests matter"
+    - "A first ergonomic chair with adjustable lumbar and 3D arms under €200"
+    - "Users 160-185 cm with 4-7 h days"
+  paraQuienNo:
+    - "Anyone after high-density mesh for intensive daily use"
+    - "Users who already have the budget for the M57 or C300"
+    - "Anyone needing adjustable seat depth"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -54,3 +84,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 14
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma (asiento), malla (respaldo)"

@@ -79,7 +79,50 @@ puntosDebiles:
   - "Acolchado firme las primeras semanas"
   - "Web oficial parca en dimensiones exactas de asiento"
 fuenteSpecs: "Web oficial AndaSeat (andaseat.com/products/andaseat-kaiser-3-series: reclinación 155 grados + balanceo 15 grados, reposabrazos 4D magnéticos, lumbar integrado 4 vías, cojín cervical 20 cm, L <120 kg / XL 80-180 kg, altura L 150-190 cm / XL 181-210 cm, cuero PVC o lino, garantía 5 años) + TechRadar + Tom's Hardware (base aluminio en XL, hierro en L)"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "AndaSeat Kaiser 3"
+  veredicto: "The Kaiser 3 is one of the best-rated padded gaming chairs in its range: it offers 4D armrests with interchangeable magnetic surfaces, an integrated 4-way lumbar and a wide seat that suits large users, especially in the XL version that holds up to 180 kg. The aluminium-base build on the XL feels solid and the five-year warranty brings peace of mind. The catch is the one for almost every leather gaming chair: the backrest doesn't breathe like mesh and the lumbar cushion is firm at first. If you want a sturdy, well-finished gaming chair without reaching premium-office prices, it more than delivers."
+  idealPara: "Intensive gaming and larger users wanting generous padding and 4D magnetic armrests"
+  comunidad: "Good reception in hardware reviews (Tom's Hardware, TechRadar, PC Gamer): the wide, comfortable seat, the 4D armrests with magnetic caps and the build solidity stand out, especially on the XL for large users. Recurring criticisms are the usual for leather gaming chairs: the backrest runs warm in summer and the padding is firm at first."
+  resumenCompra:
+    mejorPara: "Anyone wanting a sturdy padded gaming chair with 4D armrests and, if large-build, the XL version."
+    evitarSi: "You need breathable mesh for summer or prefer an office ergonomic chair."
+    alternativaDirecta: "Secretlab TITAN Evo if you want an equally premium finish with more size options."
+    decisionRapida: "The padded gaming chair I'd recommend to anyone who spends many hours and values a wide, well-built seat."
+  puntosFuertes:
+    - "4D armrests with interchangeable magnetic surfaces"
+    - "Integrated 4-way lumbar"
+    - "XL version supports up to 180 kg"
+    - "Magnetic foam neck cushion included"
+    - "Five-year warranty"
+  puntosDebiles:
+    - "Synthetic-leather backrest, warmer in summer"
+    - "Padding firm for the first few weeks"
+    - "Official site sparse on exact seat dimensions"
+  paraQuienSi:
+    - "Gamers who spend many hours and want a wide, well-padded seat"
+    - "Larger users, especially with the XL version (up to 180 kg)"
+    - "Anyone who values 4D armrests and a long warranty without paying office premium"
+  paraQuienNo:
+    - "Anyone needing breathable mesh for summer"
+    - "Anyone who prefers an office ergonomic chair with dynamic lumbar"
+    - "Petite people who may find the seat too big"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 54
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

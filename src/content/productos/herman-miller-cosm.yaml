@@ -79,7 +79,46 @@ puntosDebiles:
   - "Sin profundidad de asiento regulable"
   - "Pocos ajustes individuales para su precio premium"
 fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/cosm-chairs/specs) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/cosm-chair/2515454.html) + btod.com/blog/herman-miller-cosm-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Herman Miller Cosm"
+  veredicto: "The Cosm goes for simplicity: its Auto-Harmonic tilt and Intercept suspension adjust themselves to the user's weight, with a lightness almost every review highlights. In return it gives up manual adjustments like an adjustable lumbar, so anyone wanting fine control will feel limited despite the premium price."
+  idealPara: "Anyone wanting to sit and forget about adjustments: automatic tilt and suspension that adapts itself to the body"
+  comunidad: "Specialist reviews (BTOD) and user comments highlight the Cosm's lightness and immediate comfort, plus the Leaf armrests. The most repeated criticism: with no adjustable lumbar or seat depth, anyone seeking fine control may find it limited for the price."
+  resumenCompra:
+    mejorPara: "Anyone prioritising immediate comfort with no levers to touch, who values the design and the Leaf armrests."
+    evitarSi: "You need a manual adjustable lumbar or the maximum of individual adjustments for your posture."
+    alternativaDirecta: "Herman Miller Aeron if you want differentiated, adjustable lumbar and sacral support."
+    decisionRapida: "I'd pick it for its setup-free comfort and looks, accepting you give up fine manual adjustments."
+  puntosFuertes:
+    - "Auto-Harmonic tilt that adjusts itself to weight and posture"
+    - "Breathable, neutral-feel Intercept suspension"
+    - "Highly praised immediate comfort, no setup needed"
+    - "Wraparound Leaf armrests"
+    - "12-year warranty, 3 shifts"
+    - "Available in low, mid and high back"
+  puntosDebiles:
+    - "No manual adjustable lumbar"
+    - "No adjustable seat depth"
+    - "Few individual adjustments for its premium price"
+  paraQuienSi:
+    - "Anyone wanting to sit and work without adjusting anything"
+    - "Users who value immediate comfort, design and Leaf armrests"
+    - "Anyone seeking premium breathable suspension with a 12-year warranty"
+  paraQuienNo:
+    - "Anyone needing a manual adjustable lumbar"
+    - "Users who want adjustable seat depth"
+    - "Anyone after the most individual adjustments per euro"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 78
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -101,3 +140,4 @@ specs:
   profundidadAsientoMinCm: 40
   profundidadAsientoMaxCm: 40
   reposacabezas: "ninguno"
+  asientoMaterial: "suspensión Intercept (malla)"

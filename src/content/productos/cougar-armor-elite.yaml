@@ -66,7 +66,46 @@ puntosDebiles:
   - "Reposabrazos solo 2D"
   - "Datos de altura de asiento y garantía no publicados"
 fuenteSpecs: "Web oficial Cougar (cougargaming.com/products/chairs/armor-elite/: piel sintética PVC transpirable, cojines de cabeza y lumbar, 2D, reclinación 160 grados, máximo 120 kg, gas clase 4, base y estructura de acero, peso producto 20 kg, dimensiones 690x665x1260 mm)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Cougar Armor Elite"
+  veredicto: "The Armor Elite plays to what Cougar does best: a serious steel frame and a build that takes a beating. The breathable synthetic leather and the two cushions (neck and lumbar) cover what's expected of a mid-range gaming chair, though the armrests stop at 2D and that limits fine adjustment. A good buy for anyone who wants sturdiness over frills."
+  idealPara: "Entry-level gaming with a steel frame and solid build"
+  comunidad: "Cougar carries a reputation for durable frames, and the Armor Elite reflects it: it's usually described as a chair that feels firm and well assembled. The most repeated limitation is the 2D armrests, short on travel versus rivals with 3D, and the heat of any synthetic-leather backrest in summer."
+  resumenCompra:
+    mejorPara: "Anyone after a resistant steel chassis without paying high-end."
+    evitarSi: "You need 3D or 4D armrests to fine-tune your posture."
+    alternativaDirecta: "Sharkoon Skiller SGS40 if you prefer another mid-range gaming chair with a good base."
+    decisionRapida: "The one I suggest to anyone who values a solid build and standard cushions over a thousand adjustments."
+  puntosFuertes:
+    - "Steel frame and base"
+    - "160-degree recline"
+    - "Neck and lumbar cushions included"
+    - "Class 4 gas piston"
+  puntosDebiles:
+    - "2D armrests only"
+    - "Seat height and warranty not published"
+  paraQuienSi:
+    - "Anyone wanting a steel frame that inspires confidence"
+    - "Users up to 120 kg looking for wide recline"
+    - "Anyone who appreciates neck and lumbar cushions as standard"
+  paraQuienNo:
+    - "Anyone needing 3D or 4D armrests"
+    - "Users who prefer breathable mesh"
+    - "Anyone who wants the exact warranty before buying"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 62
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -79,3 +118,5 @@ specs:
   pesoProductoKg: 20
   reposacabezas: "ajustable"
   asientoMaterial: "piel sintetica PVC transpirable"
+  anchoCm: 69
+  fondoCm: 66.5

@@ -66,7 +66,47 @@ puntosDebiles:
   - "Tipo de reposabrazos sin confirmar"
   - "Recorrido de altura de asiento corto"
 fuenteSpecs: "Web oficial Genesis (genesis-zone.com/product/nitro-950: respaldo tapizado, lumbar cojín memory foam, reclinación 165 grados, máximo 150 kg, altura asiento 50-55 cm, peso producto 24.5 kg, ruedas 75 mm con freno, mecanismo multiblock, gas clase 4, cojines de cabeza y lumbar memory foam)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Genesis Nitro 950"
+  veredicto: "The Nitro 950 is Genesis's pick for anyone who needs to take the load: it supports up to 150 kg, runs 75 mm braked castors and comes with memory-foam head and lumbar cushions. The brand is very common on Amazon in Spain, which makes service easier. The weak spot is the armrest information, which we treat conservatively here until its real travel is confirmed."
+  idealPara: "Larger users who want a European gaming chair up to 150 kg"
+  comunidad: "Genesis is a European brand with a strong presence in Amazon Spain's catalogue, which is reassuring for shipping and after-sales. On the Nitro 950 the 150 kg capacity and the memory-foam cushions are valued. The most repeated doubt in reviews is how much travel the armrests really offer, worth checking on the seller's listing."
+  resumenCompra:
+    mejorPara: "Anyone near the usual weight limit looking for a gaming chair with good capacity."
+    evitarSi: "You want guaranteed maximum-travel armrests confirmed up front."
+    alternativaDirecta: "Sharkoon Skiller SGS40 in its XL size if you prefer another high-load option."
+    decisionRapida: "My pick when user weight is the priority and you want a well-known, easy-to-find brand."
+  puntosFuertes:
+    - "Capacity up to 150 kg"
+    - "165-degree recline"
+    - "75 mm braked castors"
+    - "Memory-foam head and lumbar cushions"
+  puntosDebiles:
+    - "Armrest type not confirmed"
+    - "Short seat-height range"
+  paraQuienSi:
+    - "Users up to 150 kg who need load headroom"
+    - "Anyone wanting a brand that's available and well known on Amazon Spain"
+    - "People who appreciate memory-foam head and lumbar cushions"
+  paraQuienNo:
+    - "Anyone needing a wide seat-height range"
+    - "Users who require confirmed 4D armrests"
+    - "Anyone who prefers breathable mesh to upholstery"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 59
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -79,3 +119,4 @@ specs:
   mecanismo: "multiblock"
   pesoProductoKg: 24.5
   reposacabezas: "ajustable"
+  asientoMaterial: "espuma tapizada con cojines de espuma viscoelástica"

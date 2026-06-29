@@ -75,7 +75,46 @@ puntosDebiles:
   - "Con inclinacion frontal opcional baja la capacidad de carga"
   - "Precio premium"
 fuenteSpecs: "Tienda oficial Haworth (store.haworth.com/products/zody-office-chair) + web oficial (haworth.com/ap/en/products/office-chairs/zody-1.html) + comparativa oficial de asientos Haworth 2025"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Haworth Zody"
+  veredicto: "The Zody stands out for its PAL lumbar system, which lets you adjust each side of the back independently, uncommon even in the premium tier. With 4D armrests and a zoned mesh backrest, it's one of the most complete chairs for back issues; its premium price and the need to set it up well are its main brakes."
+  idealPara: "Anyone seeking advanced, asymmetric lumbar support, ideal for demanding backs and long days"
+  comunidad: "The Zody is known in ergonomics communities for its PAL lumbar system, which many consider among the best for adjusting support on each side of the back. The positive consensus centres on that lumbar and its 4D armrests; the usual gripes are the price and the time you must invest setting it up to feel the difference."
+  resumenCompra:
+    mejorPara: "Anyone needing fine, asymmetric lumbar support who values 4D armrests and zoned mesh."
+    evitarSi: "You want a plug-and-play chair with no adjustments or your budget doesn't reach the premium tier."
+    alternativaDirecta: "Haworth Fern if you prefer a backrest that flexes rather than the adjustable PAL lumbar."
+    decisionRapida: "I'd choose it above all for the PAL lumbar if I have back trouble, accepting you must spend time adjusting it and that it's premium."
+  puntosFuertes:
+    - "PAL lumbar system: asymmetric, independent adjustment of each side of the back"
+    - "4D armrests (height, width, depth and pivot)"
+    - "Zoned suspension mesh backrest"
+    - "Adjustable seat depth and 3-point synchronised tilt"
+    - "GREENGUARD Gold, Cradle to Cradle and BIFMA certifications"
+    - "12-year warranty, supports up to 159 kg"
+  puntosDebiles:
+    - "Needs setup time to make the most of the PAL lumbar"
+    - "Optional forward tilt lowers the load capacity"
+    - "Premium price"
+  paraQuienSi:
+    - "People with back trouble who need fine, side-by-side lumbar support"
+    - "Users who value 4D armrests and zoned suspension mesh"
+    - "Anyone seeking environmental certifications and a 12-year warranty"
+  paraQuienNo:
+    - "Anyone wanting a ready-to-go chair with almost no adjustments"
+    - "Budgets below the premium tier"
+    - "Anyone who prefers a heavily padded upholstered seat"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 78
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "5d"
@@ -97,3 +136,4 @@ specs:
   profundidadAsientoMinCm: 43
   profundidadAsientoMaxCm: 50
   reposacabezas: "ninguno"
+  asientoMaterial: "malla de suspensión por zonas"

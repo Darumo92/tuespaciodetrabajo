@@ -74,7 +74,33 @@ puntosDebiles:
   - "Precio alto dentro de la gama"
   - "Malla firme las primeras semanas"
 fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/doro-c300/) + sihoooffice.com/products/sihoo-doro-c300-ergonomic-office-chair + ralphsway.com/sihoo-doro-c300-review/ + tomsguide.com/reviews/sihoo-doro-c300 + appleinsider.com"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "SIHOO Doro C300"
+  veredicto: "The C300 sets the standard in the upper-mid range: its dynamic lumbar removes manual adjustment and the BM mesh holds up for years without deforming; the only real downside is its price, which puts it close to much more expensive chairs."
+  idealPara: "Full workdays, maximum ergonomics without a premium price"
+  comunidad: "Broad positive consensus in specialist reviews (Tom's Guide, Windows Central, Apple Insider): considered the best ergonomic chair under €400 thanks to the self-adjusting lumbar. Recurring criticism: armrests easy to nudge sideways by accident."
+  resumenCompra:
+    mejorPara: "Anyone wanting a dynamic lumbar, mesh and an aluminium base without entering premium prices."
+    evitarSi: "You need adjustable seat depth or you're clearly over 190 cm tall."
+    alternativaDirecta: "FlexiSpot C7 Lite if you want more lumbar adjustments in a more compact chair."
+    decisionRapida: "It's the mid-range chair I'd put first for long days if the budget allows paying more than a basic chair."
+  puntosFuertes:
+    - "Self-adjusting dynamic lumbar support"
+    - "Dense BM mesh that keeps its shape"
+    - "3D armrests"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "High price within the range"
+    - "Firm mesh for the first few weeks"
+  paraQuienSi:
+    - "People who sit 6-10 h a day and want lumbar support with no manual adjustment"
+    - "Users up to 185 cm seeking breathable mesh year-round"
+    - "Anyone who values BIFMA certification and an aluminium base at a contained price"
+  paraQuienNo:
+    - "A budget below €280"
+    - "Users over 190 cm (the headrest sits low)"
+    - "Anyone needing adjustable seat depth"
+verificadoEn: "2026-06-25"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -92,3 +118,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 23
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "malla BM densa"

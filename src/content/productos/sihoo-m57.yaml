@@ -40,7 +40,41 @@ puntosDebiles:
   - "Garantía de solo 3 años"
   - "Precio puede variar mucho entre plataformas"
 fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m57-2/ + sihoooffice.com/products/m57-ergonomic-chair) + techradar.com/reviews/sihoo-m57-review + windowscentral.com + Amazon.es + Idealo.es"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "SIHOO M57"
+  veredicto: "The M57 is a functional, well-built chair with an aluminium base and breathable mesh; it delivers on basic ergonomics, though it lacks the C300's dynamic lumbar and its three recline positions feel limited for anyone seeking real flexibility."
+  idealPara: "Full days at home, good value without reaching the high end"
+  comunidad: "TechRadar calls it 'functional but unspectacular': good material quality for the price but without clear differentiators. Windows Central highlights long-term comfort and the breathable mesh. General rating 4/5 on most platforms."
+  puntosFuertes:
+    - "2D lumbar support (vertical and horizontal)"
+    - "3D armrests with 34° rotation"
+    - "Headrest adjustable in height and angle"
+    - "Mesh backrest with an integrated S shape"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "No adjustable seat depth"
+    - "Only 3 recline positions (110°, 116°, 126°)"
+    - "Only 3-year warranty"
+    - "Price can vary a lot between platforms"
+  paraQuienSi:
+    - "Users wanting an aluminium base and durable mesh under €250"
+    - "6-8 h days needing height-adjustable lumbar"
+    - "People 165-190 cm with generally good posture"
+  paraQuienNo:
+    - "Anyone needing free recline or more than 3 positions"
+    - "Very short (<160 cm) or very tall (>195 cm) users"
+    - "Anyone expecting the Doro C300's level of adjustability"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -58,3 +92,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 20
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma (asiento), malla con forma de S (respaldo)"

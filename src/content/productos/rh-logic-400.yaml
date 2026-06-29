@@ -70,7 +70,49 @@ puntosDebiles:
   - "Precio de tramo premium"
   - "Respaldo de espuma, sin variante de malla"
 fuenteSpecs: "Web oficial Flokk (store.flokk.com/us/en-gb/products/rh-logic, factsheet RH Logic 400: filosofía 2PP de sentado activo, respaldo tapizado, reposabrazos ajustables en altura y anchura, lumbar ajustable en altura, ajustes de altura de asiento, ángulo y altura de respaldo y deslizamiento, resistencia de inclinación regulable al usuario, altura asiento 410-530 mm, ancho asiento 457 mm, profundidad máx 465 mm con deslizamiento, altura respaldo 620 mm, peso producto 21,8 kg, certif. EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD, Nordic Swan)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "RH Logic 400"
+  veredicto: "The RH Logic 400 is a Scandinavian contract-grade chair built around the 2PP philosophy of posture and movement, that is, active rather than passive sitting. Its high foam-upholstered backrest, height-adjustable lumbar and a tilt resistance that adjusts to the user's weight and height aim to make the back work instead of staying still. It adds serious certifications (EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD, Nordic Swan) backing both ergonomics and sustainability. It's a premium-tier buy meant for anyone who wants a durable project chair rather than an aesthetic indulgence."
+  idealPara: "Active sitting in professional settings that demand posture and movement all day"
+  comunidad: "RH is a prestigious Scandinavian brand in the contract and postural-health segment, well regarded in European professional offices for its active-sitting approach and durability. Public end-user reviews are less abundant than for mass-consumer brands, as it sells mainly through the project channel; the available consensus places it as a serious, high-end chair, with price as the main brake."
+  resumenCompra:
+    mejorPara: "Professionals seated all day who want a certified active-sitting chair."
+    evitarSi: "You prefer a mesh backrest or want the best ergonomics-per-euro."
+    alternativaDirecta: "Steelcase Leap v2 if you want a premium upholstered backrest with more documented adjustment mechanisms."
+    decisionRapida: "For anyone putting posture, movement and certification above price, few project chairs perform the same."
+  puntosFuertes:
+    - "2PP posture-and-movement philosophy for active sitting"
+    - "Tilt resistance adjustable to the user's weight and height"
+    - "Height-adjustable lumbar"
+    - "High 62 cm backrest with adjustable backrest height"
+    - "Seat slide and adjustable depth"
+    - "EN 1335, NPR 1813, Möbelfakta, GREENGUARD GOLD and Nordic Swan certifications"
+  puntosDebiles:
+    - "Premium-tier price"
+    - "Foam backrest, no mesh variant"
+  paraQuienSi:
+    - "Professionals seated all day who want active sitting"
+    - "Anyone who values recognised ergonomics and sustainability certifications"
+    - "Users who prefer a high upholstered backrest to mesh"
+  paraQuienNo:
+    - "Anyone wanting a breathable mesh backrest"
+    - "Anyone needing to squeeze every euro and not valuing certification"
+    - "Anyone prioritising flashy looks over postural philosophy"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 53
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.asientoMaterial"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "altura"

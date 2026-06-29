@@ -70,7 +70,48 @@ puntosDebiles:
   - "Lumbar fijo en el modelo tapizado estándar"
   - "Precio de tramo premium"
 fuenteSpecs: "Web oficial Sedus (sedus.com/en/products/chairs/black-dot: mecanismo dorsocinético patentado con respaldo flexible 15 grados atrás y 8 laterales, mecanismo Sedo-Lift III de elevación con suspensión, respaldo tapizado en espuma con variante net de malla, reposabrazos estándar ajustables en altura y opcionales 4D, lumbar fijo en estándar y ajustable en altura en la variante net, altura asiento 420-530 mm, base de aluminio, máx 130 kg y 150 kg en la variante black dot 24, certif. EN 1335-1:2023 Tipo A, GS, GREENGUARD, AGR, Blue Angel, garantía 5 años y 30 años en el mecanismo Sedo-Lift)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Sedus black dot"
+  veredicto: "The Sedus black dot is a German contract-grade office chair whose signature is its patented dorsokinetic mechanism: the backrest is joined by a flexible articulation that yields 15 degrees backward and 8 degrees sideways, following the natural movement of the torso. It adds the Sedo-Lift III seat-lift mechanism with suspension, a very serious build and EN 1335-1:2023 Type A certification, among others (GS, GREENGUARD, AGR, Blue Angel). The standard upholstered model has a fixed lumbar; the black dot net variant with a mesh membrane adds height-adjustable lumbar. It's a premium buy justified by durability and warranty rather than by the number of adjustments."
+  idealPara: "Contract offices that prioritise German durability and a mechanism that follows the back's natural movement"
+  comunidad: "Sedus is a benchmark German contract office-furniture maker, with a very good reputation for durability and build quality in European professional settings. The black dot is valued for its dorsokinetic mechanism and its build, though end-user reviews are fewer than for consumer brands, as its main channel is project and corporate. The available consensus places it as a serious, long-lived chair, with price as the main barrier."
+  resumenCompra:
+    mejorPara: "Anyone wanting a very durable German office chair with lateral backrest movement."
+    evitarSi: "You're after lots of manual adjustments or the best ergonomics-per-euro."
+    alternativaDirecta: "Steelcase Think if you want a premium contract chair with a mechanism that also adapts to the user."
+    decisionRapida: "A corporate buy: German durability and a backrest that yields with you, in exchange for giving up a few adjustments."
+  puntosFuertes:
+    - "Patented dorsokinetic mechanism, 15 degrees back and 8 sideways"
+    - "Sedo-Lift III seat-lift mechanism with suspension"
+    - "Aluminium base and durable German build"
+    - "EN 1335-1:2023 Type A certification, plus GS, GREENGUARD, AGR and Blue Angel"
+    - "5-year warranty, with 30 years on the Sedo-Lift mechanism"
+    - "Supports up to 130 kg (150 kg on the black dot 24 variant)"
+  puntosDebiles:
+    - "Fixed lumbar on the standard upholstered model"
+    - "Premium-tier price"
+  paraQuienSi:
+    - "Companies and individuals after certified German durability"
+    - "Anyone who values a backrest that yields back and sideways with the body"
+    - "Users who prioritise a long warranty over the number of adjustments"
+  paraQuienNo:
+    - "Anyone wanting many manual adjustments on the base model"
+    - "Anyone who looks mainly at price rather than service life"
+    - "Anyone needing adjustable lumbar without moving to the net variant"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 65
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -83,3 +124,5 @@ specs:
   baseMaterial: "Aluminio"
   garantiaAnios: 5
   certificacionEn1335: true
+  reposacabezas: "ninguno"
+  asientoMaterial: "espuma tapizada (variante net en malla)"

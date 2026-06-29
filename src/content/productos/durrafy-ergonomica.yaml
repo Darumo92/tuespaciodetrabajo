@@ -36,7 +36,38 @@ puntosDebiles:
   - "Materiales inferiores al tacto (según reseñas)"
   - "Asiento estrecho para personas anchas"
 fuenteSpecs: "Amazon.es ficha B0C3BZHVK8 · ergonomicworkspace.co.uk (peso 15,8 kg, dimensiones) · sillaergonomicaonline.com/durrafy-d03 (altura asiento 45-55 cm) · hardwareyou.es (certificaciones BIFMA/SGS, base nylon)"
-verificadoEn: "2026-06-07"
+en:
+  nombreComercial: "Durrafy Ergonomic Chair"
+  veredicto: "An entry-level ergonomic chair with breathable mesh, adjustable lumbar and headrest at an affordable price. Materials are perceived as basic in reviews; it does its job for short-to-medium days and users 1.45–1.80 m tall."
+  idealPara: "A limited €130-140 budget, a transition chair"
+  comunidad: "Well rated as a transition or first ergonomic chair; recurring criticisms of the lumbar stiffness and the narrow seat. The 150 kg capacity is its differentiator versus similarly priced rivals."
+  puntosFuertes:
+    - "The lowest price in the comparison"
+    - "Lumbar support and headrest included"
+  puntosDebiles:
+    - "Lumbar not height-adjustable, only pressure"
+    - "Materials feel inferior (per reviews)"
+    - "Narrow seat for broader builds"
+  paraQuienSi:
+    - "Limited budget (under €140)"
+    - "First ergonomic chair or a transition chair"
+    - "Users between 1.45 m and 1.80 m tall"
+  paraQuienNo:
+    - "Broad-build people (the seat is somewhat narrow)"
+    - "Long days of more than 8 continuous hours"
+    - "Anyone who values material quality highly"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 68
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "presion"
@@ -49,8 +80,9 @@ specs:
   alturaAsientoMaxCm: 55
   anchoCm: 54
   fondoCm: 52
-  mecanismo: null
+  mecanismo: "inclinación con bloqueo"
   baseMaterial: "nylon"
   certificacionBifma: true
   pesoProductoKg: 15.8
   garantiaAnios: 2
+  asientoMaterial: "espuma (asiento), malla transpirable (respaldo)"

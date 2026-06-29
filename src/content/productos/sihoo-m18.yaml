@@ -40,7 +40,41 @@ puntosDebiles:
   - "Espuma del asiento puede ablandarse con el tiempo según reseñas"
   - "Calidad de materiales inferior a la M57"
 fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/m18/ + sihoooffice.com/products/m18-ergonomic-chair) + mmorpg.com/hardware-reviews/sihoo-m18-classic-office-chair-review + techgearlab.com/reviews + Amazon.es + Idealo.es"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "SIHOO M18"
+  veredicto: "The M18 offers two-axis adjustable lumbar and a comfortable W-shaped cushion at an entry price few rivals match; its fixed armrests and nylon base keep it out of the mid range, but for 4-6 h of daily use it's a very solid buy."
+  idealPara: "A ~€150-170 budget, moderate home-office work without demanding premium"
+  comunidad: "MMORPG.com gives it 8/10, highlighting the four-way lumbar and the firm cushion; TechGearLab rates it 66/100, noting low-glide castors and very stiff controls to operate. Consensus: the best entry-level ergonomic chair under €200, with the caveat that the armrests don't adjust for width."
+  puntosFuertes:
+    - "Budget price with a high mesh backrest"
+    - "Dual adjustable lumbar support (vertical and horizontal)"
+    - "Headrest adjustable in height and angle"
+    - "Supports up to 150 kg"
+    - "W-shaped seat cushion for added support"
+  puntosDebiles:
+    - "Armrests with height adjustment only (1D)"
+    - "No adjustable seat depth"
+    - "Seat foam may soften over time, per reviews"
+    - "Material quality below the M57"
+  paraQuienSi:
+    - "A €130-180 budget that demands real lumbar support"
+    - "People with occasional lower-back pain who need vertical and horizontal adjustment"
+    - "Home workers of 4-6 h a day without high adjustability demands"
+  paraQuienNo:
+    - "Users who share the chair and need 3D armrests"
+    - "Days over 8 h where the foam may show over time"
+    - "Anyone after an aluminium base or high-end certification"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 72
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -58,3 +92,5 @@ specs:
   certificacionBifma: true
   pesoProductoKg: 17
   garantiaAnios: 3
+  reposacabezas: "ajustable"
+  asientoMaterial: "espuma con forma de W (asiento), malla (respaldo)"

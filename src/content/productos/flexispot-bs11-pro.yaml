@@ -77,7 +77,45 @@ puntosDebiles:
   - "Capacidad máxima de carga sin confirmar entre fuentes"
   - "Base de nylon en lugar de aluminio"
 fuenteSpecs: "Web oficial FlexiSpot UK (flexispot.co.uk/office-chair-bs11pro.html) + basic-tutorials.com/reviews/gadget-reviews/flexispot-backsupport-bs11-pro + pcgamesn.com/flexispot-bs11-pro-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "FlexiSpot BS11 Pro"
+  veredicto: "The BS11 Pro goes for a dynamic lumbar that self-adjusts to the curve of your back instead of a cushion you have to position by hand. It adds an elastic mesh backrest, armrests adjustable in height, depth and rotation, and an adjustable headrest, all at a mid-range price. It's a sensible home-office option, though the official datasheets and reviews don't fully agree on maximum load capacity, so it's worth confirming before buying if your weight is near the limit."
+  idealPara: "Anyone wanting a dynamic lumbar that adjusts itself without handling a cushion"
+  comunidad: "European media reviews describe it as a comfortable mesh chair for home-office work whose strength is the lumbar that self-adjusts to the back. There are warnings about hard-to-believe maximum-load figures on some commercial listings, which is why that figure is left unconfirmed here."
+  resumenCompra:
+    mejorPara: "Anyone who prefers a self-adjusting lumbar and doesn't want to deal with lumbar cushions."
+    evitarSi: "You need a completely clear maximum-load figure or want an aluminium base."
+    alternativaDirecta: "FlexiSpot C7 if you want a lumbar adjustable to a fixed height and a ten-year warranty."
+    decisionRapida: "A good mid-range buy if the self-adapting lumbar convinces you and you verify the maximum load."
+  puntosFuertes:
+    - "Dynamic lumbar that self-adjusts to the curve of the back"
+    - "Breathable elastic mesh backrest"
+    - "Armrests adjustable in height, depth and rotation"
+    - "Headrest adjustable in height and tilt"
+  puntosDebiles:
+    - "Maximum load capacity unconfirmed across sources"
+    - "Nylon base instead of aluminium"
+  paraQuienSi:
+    - "Anyone who prefers a dynamic lumbar that adjusts itself"
+    - "Home workers who want elastic mesh and an adjustable headrest"
+    - "Users who value armrests adjustable in height, depth and rotation"
+  paraQuienNo:
+    - "Anyone who needs a fully verified maximum-load figure"
+    - "Anyone after an aluminium base or documented certification"
+    - "An entry-level chair budget"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 68
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -100,3 +138,4 @@ specs:
   profundidadAsientoMaxCm: null
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "espuma (asiento), malla elástica (respaldo)"

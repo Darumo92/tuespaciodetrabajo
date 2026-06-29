@@ -73,7 +73,44 @@ puntosDebiles:
   - "Ajustabilidad limitada"
   - "Materiales y base de gama de entrada"
 fuenteSpecs: "Web oficial Yaheetech (yaheetech.shop/products/yaheetech-ergonomic-mesh-office-chair): respaldo alto de malla de poliéster, cabecero acolchado ajustable, cojín lumbar móvil, reposabrazos abatibles 90 grados acolchados, máximo 136 kg (300 lb), altura asiento 47,5-56,5 cm (18,7-22,2 in), fondo asiento 49,5 cm (19,5 in), ancho total 62 cm, fondo total 62 cm, altura total con cabecero 122-132 cm, base de plástico con ruedas de nylon, estructura de contrachapado, función de balanceo, peso producto 11,4 kg neto"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Yaheetech Ergonomic Mesh Office Chair"
+  veredicto: "This Yaheetech mesh chair is an entry-level office chair built to spend little: a high polyester-mesh backrest, an adjustable padded headrest, a movable lumbar cushion and padded 90-degree flip-up armrests that let you tuck it under the desk. It supports up to 136 kg and has a rocking function. It isn't an advanced-ergonomics chair (the adjustments are basic and the materials match the price), but for a home desk or occasional-use spot it offers more equipment than you'd expect for the cost. The sensible buy when budget rules."
+  idealPara: "A home desk on a tight budget wanting mesh, a headrest and a high backrest"
+  comunidad: "Yaheetech's cheap office chairs get a fair reception on Amazon for the price: the mesh backrest, adjustable headrest and how well-equipped they are for the cost are valued, while the usual criticisms point to entry-level durability and materials. A tight-budget buy, not a chair for intensive days."
+  resumenCompra:
+    mejorPara: "Anyone wanting a mesh chair with a headrest and high backrest while spending the minimum."
+    evitarSi: "You sit for many hours and need real ergonomics with adjustable lumbar and armrests."
+    alternativaDirecta: "Eureka Ergonomic Onyx if you can raise the budget a bit for a better lumbar."
+    decisionRapida: "A logical option for a secondary spot or to start without spending, accepting basic adjustments."
+  puntosFuertes:
+    - "High polyester-mesh backrest"
+    - "Adjustable padded headrest and movable lumbar cushion"
+    - "Padded 90-degree flip-up armrests"
+    - "Supports up to 136 kg at a very low price"
+  puntosDebiles:
+    - "Limited adjustability"
+    - "Entry-level materials and base"
+  paraQuienSi:
+    - "Anyone on a very tight budget wanting mesh with a headrest"
+    - "Secondary or occasional-use spots"
+    - "Users up to 136 kg seeking flip-up armrests"
+  paraQuienNo:
+    - "Anyone seated the full day who needs advanced ergonomics"
+    - "Anyone wanting precisely adjustable lumbar and armrests"
+    - "Anyone seeking mid- or high-range materials and durability"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 73
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.reclinacionMaxGrados"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"

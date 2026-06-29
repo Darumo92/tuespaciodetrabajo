@@ -66,7 +66,45 @@ puntosDebiles:
   - "Lumbar mediante cojín, no integrado"
   - "Garantía no publicada en la web oficial"
 fuenteSpecs: "Web oficial Nitro Concepts (nitro-concepts.com/en-us/chairs/s300-gaming-chair: tela acolchada, lumbar cojín, 3D, reclinación 135 grados, máximo 135 kg, altura asiento 47-59 cm, respaldo 87 cm, gas clase 4, ruedas 50 mm, peso 24.5 kg, sistema H.E.A.T., norma DIN EN 1335, diseño Alemania)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Nitro Concepts S300"
+  veredicto: "Few fabric gaming chairs have such a good value reputation as Nitro Concepts' S300. The fabric upholstery breathes much better than the segment's typical faux leather, the padding is generous and the H.E.A.T. system keeps the seat from heating up. Don't expect an adjustable integrated lumbar (it comes with a cushion), but for the money it's one of the safest bets."
+  idealPara: "Anyone wanting a well-rated breathable-fabric gaming chair without overspending"
+  comunidad: "It's one of the most recommended fabric chairs on PC forums and European reviews, where its breathability versus faux leather and easy assembly stand out. Designed in Germany by the Caseking house, it's usually noted that the lumbar cushion doesn't replace an integrated lumbar and that warranty coverage is best confirmed with the seller."
+  resumenCompra:
+    mejorPara: "Anyone prioritising breathable fabric and comfort over the look of leather."
+    evitarSi: "You want an integrated, height-adjustable lumbar support."
+    alternativaDirecta: "Corsair T3 Rush if you want another fabric gaming chair in the same range."
+    decisionRapida: "When someone asks me for a comfortable, durable fabric gaming chair with no surprises, this is the first I name."
+  puntosFuertes:
+    - "Breathable fabric upholstery with the H.E.A.T. system"
+    - "3D armrests"
+    - "Wide seat-height range from 47 to 59 cm"
+    - "High 87 cm backrest with a cold-foam core"
+  puntosDebiles:
+    - "Lumbar via cushion, not integrated"
+    - "Warranty not published on the official website"
+  paraQuienSi:
+    - "Anyone who overheats in leather gaming chairs and prefers breathable fabric"
+    - "Users wanting generous padding for many hours"
+    - "People seeking a solid gaming chair without going high-end"
+  paraQuienNo:
+    - "Anyone over 135 kg"
+    - "Users who require an adjustable integrated lumbar"
+    - "Anyone wanting near-horizontal recline"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 65
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.baseMaterial"
+    - "specs.garantiaAnios"
+    - "specs.anchoAsientoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -81,3 +119,4 @@ specs:
   alturaRespaldoCm: 87
   reposacabezas: "fijo"
   certificacionEn1335: true
+  asientoMaterial: "tela acolchada con núcleo de espuma fría"

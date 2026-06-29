@@ -41,7 +41,43 @@ puntosDebiles:
   - "Sin ajuste de tensión de reclinación avanzado"
   - "Limitada en personalización frente a sillas premium"
 fuenteSpecs: "Web oficial IKEA España (ikea.com/es/es/p/jarvfjallet-silla-trabajo-con-reposabrazos-glose-negro-80510639 — anchoCm 52 cm, fondoCm 46 cm, peso 20.7 kg, base aluminio, EN 1335 + ANSI/BIFMA X5.1 verificados) + btod.com/blog/ikea-markus-vs-jarvfjallet (revisión editorial) + spacehop.com (review)"
-verificadoEn: "2026-06-06"
+en:
+  nombreComercial: "IKEA JÄRVFJÄLLET"
+  veredicto: "The Järvfjället is the most ergonomic option in IKEA's catalogue: height-adjustable lumbar, adjustable seat depth and an aluminium base certified to EN 1335 + BIFMA. The firm seat and the lack of mesh are its real limits, but for its ~€249 price it offers more adjustments than many chairs costing twice as much."
+  idealPara: "Anyone wanting good basic ergonomics from IKEA with more adjustments than the Markus"
+  comunidad: "Well regarded as a step between the Markus and premium chairs. BTOD and Spacehop highlight the adjustable lumbar as a differentiator over the Markus. The most repeated criticism: a seat too hard for long days and hard-plastic armrests. Good value, not a substitute for serious office ergonomic chairs."
+  puntosFuertes:
+    - "Height-adjustable lumbar support"
+    - "Adjustable seat depth"
+    - "2D armrests (height and width)"
+    - "10-year IKEA warranty"
+    - "Mid price with good ergonomic features"
+  puntosDebiles:
+    - "Upholstered backrest (not mesh), less breathable"
+    - "No advanced recline tension adjustment"
+    - "Limited customisation versus premium chairs"
+  paraQuienSi:
+    - "IKEA users who want more ergonomic adjustment than the Markus"
+    - "Home workers with a €200-300 budget who prioritise adjustable lumbar support"
+    - "People who combine a fixed desk with occasional standing work"
+    - "Anyone who prefers immediate availability in an IKEA store in Spain"
+  paraQuienNo:
+    - "Users who need breathable mesh (upholstered backrest)"
+    - "People with long days who need a very padded seat"
+    - "Anyone over 110 kg"
+    - "Buyers comparing with mid-to-high-end ergonomic chairs (>€400)"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 67
+  confianza: "bajo"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.reclinacionMaxGrados"
+    - "specs.reposacabezas"
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -57,5 +93,7 @@ specs:
   mecanismo: "inclinación sincronizada con tensión automática por peso y bloqueo en 3 posiciones"
   baseMaterial: "aluminio con revestimiento epoxi/poliéster"
   certificacionBifma: true
+  certificacionEn1335: true
   pesoProductoKg: 20.7
   garantiaAnios: 10
+  asientoMaterial: "espuma tapizada"

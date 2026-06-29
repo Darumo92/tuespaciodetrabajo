@@ -79,7 +79,36 @@ puntosDebiles:
   - "El respaldo de polímero divide frente a la malla tejida"
   - "Precio premium"
 fuenteSpecs: "Web oficial Herman Miller specs (hermanmiller.com/products/seating/office-chairs/mirra-2-chair/specs) + tienda oficial (store.hermanmiller.com/office-chairs-ergonomic-chairs/mirra-2-chair/1453.html) + btod.com/blog/herman-miller-mirra-2-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Herman Miller Mirra 2"
+  veredicto: "The Mirra 2 is one of the most balanced Herman Millers: a TriFlex polymer backrest that flexes with the body, Harmonic 2 tilt and adjustable seat depth as standard. It's very adjustable and durable, though its price is still clearly premium and the polymer backrest appeals less to anyone after traditional mesh."
+  idealPara: "Anyone wanting a dynamic, highly adjustable Herman Miller with a polymer backrest that follows the body's movement"
+  comunidad: "Specialist reviews (BTOD) and user consensus place it among the most versatile Herman Millers for its dynamic backrest and adjustable seat depth. The most repeated criticism is one of taste: the polymer backrest isn't for everyone and those expecting classic mesh may be disappointed."
+  resumenCompra:
+    mejorPara: "Anyone wanting a dynamic, highly adjustable chair with adjustable seat depth, within the Herman Miller catalogue."
+    evitarSi: "You prefer classic woven mesh or a heavily padded seat, or your budget doesn't reach premium."
+    alternativaDirecta: "Herman Miller Aeron if you prioritise mesh and PostureFit SL sacrolumbar support."
+    decisionRapida: "I'd choose it for its mix of adjustments, adjustable depth and 12-year warranty, accepting the premium price."
+  puntosFuertes:
+    - "TriFlex polymer backrest that flexes by zones with the body"
+    - "Harmonic 2 tilt for natural, balanced movement"
+    - "Adjustable seat depth as standard"
+    - "Fully adjustable armrests (height 6-11.5 inches)"
+    - "12-year warranty, 3 shifts"
+    - "Supports up to 159 kg"
+  puntosDebiles:
+    - "Adjustable lumbar is optional, not in every configuration"
+    - "The polymer backrest divides opinion versus woven mesh"
+    - "Premium price"
+  paraQuienSi:
+    - "Users who move a lot and want a backrest that follows the body"
+    - "Anyone valuing standard adjustable seat depth and fully adjustable armrests"
+    - "Anyone seeking Herman Miller durability and a 12-year warranty"
+  paraQuienNo:
+    - "Anyone who prefers classic woven mesh or a heavily padded seat"
+    - "Budgets below the premium tier"
+    - "Anyone who wants an integrated headrest"
+verificadoEn: "2026-06-25"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -101,3 +130,4 @@ specs:
   profundidadAsientoMinCm: 41
   profundidadAsientoMaxCm: 46
   reposacabezas: "ninguno"
+  asientoMaterial: "respaldo TriFlex de polímero, asiento tapizado"

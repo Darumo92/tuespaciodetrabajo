@@ -74,7 +74,44 @@ puntosDebiles:
   - "Capacidad de carga limitada a 125 kg"
   - "Disponible en un único color"
 fuenteSpecs: "Ficha técnica oficial Ergotopia (info.ergotopia.de/anleitungen/Datenblatt-NextBack.pdf) + manual oficial (info.ergotopia.de/anleitungen/nextback.pdf)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Ergotopia NextBack"
+  veredicto: "The NextBack is German brand Ergotopia's answer to back pain: a synchronised mechanism that follows the backrest and seat tilt up to 35 degrees, an integrated height-adjustable lordosis support, a seat adjustable in height and depth, and a tiltable headrest. The German manufacturing is rigorous and the five-year warranty on the frame reflects that confidence. Its limit is a 125 kg load capacity and a mid-range price that doesn't compete with the cheapest options."
+  idealPara: "Anyone wanting a well-built German chair against back pain with a synchronised mechanism"
+  comunidad: "In German media and tests the NextBack is well rated as an anti-back-pain chair, with praise for the synchronised mechanism and the build. The usual warnings are the 125 kg load capacity and a price that keeps it mid-range."
+  resumenCompra:
+    mejorPara: "Anyone wanting a well-built anti-back-pain chair with a synchronised mechanism."
+    evitarSi: "You weigh over 125 kg or want the lowest price."
+    alternativaDirecta: "FlexiSpot C7 if you prefer a lumbar that fixes to a height or adapts itself."
+    decisionRapida: "A good mid-range choice if you value the synchronised backrest and the long warranty."
+  puntosFuertes:
+    - "Synchronised mechanism that follows the tilt up to 35 degrees"
+    - "Integrated height-adjustable lordosis support"
+    - "Seat adjustable in height and depth"
+    - "Headrest adjustable in height and angle"
+    - "Five-year warranty on the frame"
+  puntosDebiles:
+    - "Load capacity limited to 125 kg"
+    - "Available in a single colour"
+  paraQuienSi:
+    - "Anyone seeking a well-built anti-back-pain chair"
+    - "Users who value a synchronised mechanism up to 35 degrees"
+    - "Anyone wanting adjustable lordosis, an adjustable seat and a tiltable headrest"
+  paraQuienNo:
+    - "People over 125 kg"
+    - "An entry-level chair budget"
+    - "Anyone needing documented European EN 1335 certification"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 78
+  confianza: "medio"
+  enriquecidoEn: "2026-06-29"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.anchoAsientoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -95,3 +132,4 @@ specs:
   alturaRespaldoCm: 48
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "malla (respaldo), espuma (asiento)"

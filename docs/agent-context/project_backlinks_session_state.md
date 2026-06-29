@@ -5,6 +5,41 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-06-29 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `32`, total `33`.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- El tercer comentario pendiente de ayer ya aparece visible:
+  - `r/homeoffice` `1uh26a6` visible como `oua7p9w`: https://www.reddit.com/r/homeoffice/comments/1uh26a6/home_office_recommendations_for_new_job/oua7p9w/
+- Busquedas ES revisadas:
+  - `r/programacion`: solo reaparece `1ueq3v1`, ya comentado el 2026-06-25.
+  - `r/askspain`: hilos de ordenador/empleo sin encaje ergonomia/home office suficiente.
+  - `r/Autonomos`: vuelve tema fiscal/ordenadores; descartado por riesgo legal/fiscal.
+- Reddit candidatos verificados con old.reddit y textos preparados SIN link:
+  - Prioridad 1: `r/OfficeChairs` `1uhylse` — OP compara Actiu Stay 135 EUR vs Steelcase Reply Air 120 EUR en marketplace local, trabaja 8-10h/dia y es de altura/peso medio.
+  - Prioridad 2: `r/OfficeChairs` `1ui0qst` — OP mide 186 cm/70 kg, busca silla mesh hasta 500 EUR y desconfia de Fractal Refine por reviews negativas.
+  - Prioridad 3: `r/StandingDesks` `1ui9fhk` — OP con setup de ingenieria, Omniwall, cables siempre enredados y quiere shelf a la derecha para power supply, soldering iron y oscilloscope.
+- Descartados / baja prioridad:
+  - `r/Ergonomics` `1uhr5yf`: dolor en palma/dedos por laptop ThinkPad; tema medico/RSI y ya tiene bastantes respuestas.
+  - `r/WFH` `1udiutp`: pregunta generica sobre silla con reposacabezas; hilo antiguo y ya cubierto.
+  - Hilos de imagen/galeria de `r/homeoffice` sin cuerpo suficiente para responder sin ver la imagen completa.
+- Quora ES via Brave:
+  - Descartar por correccion usuario 2026-06-29: `https://es.quora.com/Qu%C3%A9-tipo-de-silla-es-recomendable-para-una-persona-que-pasa-m%C3%A1s-de-10-horas-sentada-al-d%C3%ADa` ya fue comentada el 2026-04-30. No volver a proponer.
+  - Descartar por correccion usuario 2026-06-29: `https://es.quora.com/Cu%C3%A1l-es-la-silla-m%C3%A1s-ergon%C3%B3mica-si-voy-a-trabajar-15-horas-en-el-computador` tambien ya estaba comentada. No volver a proponer.
+  - Sustituta sin repetir preguntas ya marcadas como respondidas: `https://es.quora.com/Qu%C3%A9-es-mejor-para-los-que-pasamos-muchas-horas-sentados-silla-ergon%C3%B3mica-fitball-o-taburete-para-apoyar-las-rodillas` -> `/guias/ergonomia-teletrabajo-postura-correcta/`.
+- Recomendacion tactica: publicar 3 Reddit sin link. Quora solo si han pasado 24h desde la ultima respuesta; si no, dejarla para la tarde/noche. Pedir al usuario URL exacta de answer Quora tras publicarla porque no es verificable desde entorno agente por challenge/403.
+
+Update post-publicacion 2026-06-29:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/` y los hilos directos: visibles 3/3 comentarios Reddit.
+- Karma visible tras publicacion: post `1`, comment `32`, total `33`; sin subida visible inmediata.
+- Publicados SIN link y visibles:
+  - `r/OfficeChairs` `1uhylse` visible como `ouge6un`: https://www.reddit.com/r/OfficeChairs/comments/1uhylse/actiu_stay_vs_steelcase_reply_air/ouge6un/
+  - `r/OfficeChairs` `1ui0qst` visible como `ougkdj2`: https://www.reddit.com/r/OfficeChairs/comments/1ui0qst/chair_max_500/ougkdj2/
+  - `r/StandingDesks` `1ui9fhk` visible como `ougpt1t`: https://www.reddit.com/r/StandingDesks/comments/1ui9fhk/looking_for_some_engineering_desk_setup_advice/ougpt1t/
+- Quora: si fue incluida en "todo comentado", queda confirmada manualmente por usuario; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de answer si el usuario la puede copiar desde Quora.
+
 ## Update 2026-06-28 - plan Reddit/Quora preparado
 
 Contexto operativo:

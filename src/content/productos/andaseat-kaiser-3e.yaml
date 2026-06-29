@@ -66,7 +66,46 @@ puntosDebiles:
   - "Lumbar fijo, sin regulación"
   - "Respaldo tapizado en vez de malla"
 fuenteSpecs: "Web oficial AndaSeat (andaseat.com/products/andaseat-kaiser-3e-series-ergonomic-office-gaming-chair: asiento L 50x51 cm / XL 52x54 cm, espuma fría 60 kg/m3, lumbar curva 4.8 cm, 4D, reclinación 155 grados + 15 balanceo, máximo 120 kg, gas SGS clase 4, base hierro L / aluminio XL, garantía 5 años, altura L 155-190 cm / XL 165-210 cm)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "AndaSeat Kaiser 3E Series"
+  veredicto: "The Kaiser 3E is the pared-down version of AndaSeat's Kaiser 3: it keeps the sturdy chassis, dense cold foam and 4D armrests, but trims materials and extras to land in a friendlier price tier. Lumbar support is an integrated curve that supports well without being adjustable, and that's exactly what you have to accept here. If the Kaiser 3 is out of budget, this E gives you almost the same where it matters."
+  idealPara: "Anyone wanting the Kaiser 3 base at a more contained price"
+  comunidad: "AndaSeat has a good reputation for chassis solidity, and the Kaiser 3 line is among the most recommended in its range. The 3E is seen as the entry point to that quality. The most mentioned reservation is the non-adjustable lumbar and that, like any upholstered chair, it runs a bit warm in hot climates."
+  resumenCompra:
+    mejorPara: "Anyone after the Kaiser chassis and 4D arms while paying less."
+    evitarSi: "You want a genuinely adjustable lumbar rather than a fixed curve."
+    alternativaDirecta: "AndaSeat Kaiser 3 if you prefer the full model with better finishes."
+    decisionRapida: "My pick when someone wants a serious gaming brand and build without touching the high price tier."
+  puntosFuertes:
+    - "Full 4D armrests"
+    - "Dense 60 kg/m³ cold foam and an 11 cm seat"
+    - "155-degree recline plus 15 of rocking"
+    - "Five-year warranty"
+  puntosDebiles:
+    - "Fixed lumbar, no adjustment"
+    - "Upholstered backrest instead of mesh"
+  paraQuienSi:
+    - "People from 155 to 210 cm depending on the L or XL size"
+    - "Anyone wanting 4D armrests and 155-degree recline without overpaying"
+    - "Users who value a firm, deep seat for many hours"
+  paraQuienNo:
+    - "Anyone over 120 kg"
+    - "Users who need to adjust the lumbar to taste"
+    - "Anyone who prefers breathable mesh to upholstery"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 61
+  confianza: "medio"
+  enriquecidoEn: "2026-06-28"
+  camposFaltantes:
+    - "specs.alturaAsientoMinCm"
+    - "specs.alturaAsientoMaxCm"
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.pesoProductoKg"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
@@ -82,3 +121,4 @@ specs:
   anchoAsientoCm: 54
   profundidadAsientoMaxCm: 52
   reposacabezas: "ajustable"
+  asientoMaterial: "espuma fría (60 kg/m³) con tapizado de cuero PVC"
