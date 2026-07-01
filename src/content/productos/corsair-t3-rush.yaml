@@ -71,7 +71,42 @@ puntosDebiles:
   - "Lumbar por cojín, no integrado"
   - "Base de nailon, no de aluminio"
 fuenteSpecs: "Web oficial Corsair (corsair.com T3 Rush Fabric 2023 CF-9010057-WW: max 120 kg, altura usuario hasta 188 cm, reclinación 90-160 grados, balanceo 0-10 grados, reposabrazos 4D, tela suave, lumbar cojín de memoria, base nailon, altura asiento 48-58 cm, asiento 49x54 cm, respaldo 85 cm, pistón clase 4, peso neto 21,3 kg, garantía 2 años)"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Corsair T3 Rush (2023)"
+  veredicto: "The T3 Rush is Corsair's answer for anyone who doesn't want to sweat on synthetic leather: its soft fabric upholstery breathes better and feels nicer in summer than faux-leather gaming chairs. It comes with 4D armrests, a wide recline up to 160 degrees and a class 4 piston, the basics done well. Lumbar support is a memory-foam cushion, not integrated, so the fit depends on positioning it, and the two-year warranty falls short of brands that give five. For anyone after a comfortable, cool, well-finished gaming chair without overpaying, it's a very reasonable option."
+  idealPara: "Anyone wanting a breathable-fabric gaming chair, cooler than leather, with 4D armrests"
+  comunidad: "Positive reception in reviews and the gaming community: the breathable fabric over leather, the comfort for long sessions and the 4D armrests are valued. The usual criticisms are the short two-year warranty and that the lumbar is a cushion rather than integrated, plus the height limit for very tall users."
+  resumenCompra:
+    mejorPara: "Anyone wanting a breathable-fabric gaming chair with 4D armrests and a wide recline."
+    evitarSi: "You're over 188 cm or want a long warranty and an integrated lumbar."
+    alternativaDirecta: "Corsair TC100 if you want a cheaper Corsair gaming chair in fabric or faux leather."
+    decisionRapida: "The gaming chair I'd recommend to anyone who prioritises cool fabric and comfort over the longest warranty."
+  puntosFuertes:
+    - "Soft breathable fabric upholstery"
+    - "4D armrests"
+    - "Wide recline 90-160 degrees"
+    - "Class 4 piston and seat height 48-58 cm"
+    - "Memory-foam lumbar cushion included"
+  puntosDebiles:
+    - "Only a two-year warranty"
+    - "Lumbar via cushion, not integrated"
+    - "Nylon base, not aluminium"
+  paraQuienSi:
+    - "Anyone wanting a cool fabric gaming chair instead of synthetic leather"
+    - "Users up to 188 cm and 120 kg"
+    - "Anyone who values 4D armrests and a wide recline at a good price"
+  paraQuienNo:
+    - "People over 188 cm"
+    - "Anyone wanting a long (five-year) warranty and an integrated lumbar"
+    - "Anyone who prefers mesh to fabric"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 90
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"

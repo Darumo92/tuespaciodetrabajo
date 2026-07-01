@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.2
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 7.5
+  ajustabilidad: 8.0
+  materiales: 8.5
+  comodidad: 8.0
+  calidadPrecio: 7.5
 amazon:
   asin: null
   buscar: "noblechairs HERO silla gaming"
@@ -41,7 +41,20 @@ puntosDebiles:
   - "Acolchado firme, periodo de adaptación"
   - "Menos transpirable que una silla de malla"
   - "Garantía estándar de 2 años (inferior a las premium de oficina)"
-fuenteSpecs: "Centro de ayuda oficial noblechairs (help.noblechairs.com, guía altura/peso) + manual de usuario HERO (manua.ls/noblechairs/hero) + reviews Tom's Hardware y ChairsFX"
+fuentes:
+  - tipo: "oficial"
+    nombre: "noblechairs HERO (centro de ayuda altura/peso)"
+    url: "https://help.noblechairs.com/hc/en-us/articles/31062021686429-Which-noblechair-fits-my-height-weight"
+    fechaConsulta: "2026-06-30"
+  - tipo: "manual"
+    nombre: "Manual de usuario noblechairs HERO (manua.ls)"
+    url: "https://www.manua.ls/noblechairs/hero/specifications"
+    fechaConsulta: "2026-06-30"
+  - tipo: "review"
+    nombre: "Vortez noblechairs HERO review (specs)"
+    url: "https://www.vortez.net/articles_pages/noblechairs_hero_review,2.html"
+    fechaConsulta: "2026-06-30"
+fuenteSpecs: "Centro de ayuda oficial noblechairs (help.noblechairs.com, guía altura/peso) + manual de usuario HERO (manua.ls/noblechairs/hero/specifications: altura asiento 480-560 mm, asiento 520x500 mm, total 690x670 mm, respaldo 890 mm de alto, peso 28-30 kg) + reviews Vortez/Tom's Hardware/ChairsFX"
 en:
   nombreComercial: "noblechairs HERO"
   veredicto: "The HERO is one of the few gaming chairs designed from the outset for larger bodies: it supports 150 kg, is recommended up to 200 cm tall and integrates a 4-way adjustable lumbar support inside the backrest, with no loose cushions. In return, the padding is firm and, like any gaming chair, it prioritises an enveloping backrest over the breathability of mesh."
@@ -67,22 +80,12 @@ en:
     - "Very small spaces (it's a bulky chair)"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 36
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-25"
+  score: 90
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.alturaAsientoMinCm"
-    - "specs.alturaAsientoMaxCm"
-    - "specs.anchoCm"
-    - "specs.fondoCm"
-    - "specs.pesoProductoKg"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
-    - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
-    - "valoraciones"
-    - "fuentes"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -91,16 +94,19 @@ specs:
   profundidadRegulable: false
   reclinacionMaxGrados: 135
   pesoMaxKg: 150
-  alturaAsientoMinCm: null
-  alturaAsientoMaxCm: null
-  anchoCm: null
-  fondoCm: null
+  alturaAsientoMinCm: 48
+  alturaAsientoMaxCm: 56
+  anchoCm: 69
+  fondoCm: 67
   mecanismo: "Balancín con bloqueo e inclinación"
   baseMaterial: "aluminio"
   certificacionBifma: null
-  pesoProductoKg: null
+  pesoProductoKg: 28
   garantiaAnios: 2
   alturaRecomendadaMinCm: 150
   alturaRecomendadaMaxCm: 200
   reposacabezas: "ninguno"
   asientoMaterial: "espuma fría"
+  anchoAsientoCm: 52
+  profundidadAsientoMaxCm: 50
+  alturaRespaldoCm: 89

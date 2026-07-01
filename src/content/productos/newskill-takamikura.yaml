@@ -75,7 +75,44 @@ puntosDebiles:
   - "Sin profundidad de asiento regulable"
   - "Acolchado firme al principio"
 fuenteSpecs: "Web oficial Newskill (Takamikura V2: asiento 55x55 cm, altura 47-54 cm, reclinación 90-180°, máx 150 kg, altura recomendada hasta 190 cm, tela transpirable, espuma fría 45 kg/m³, 4D, gas clase 4, garantía 3 años) + Profesional Review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Newskill Takamikura V2"
+  veredicto: "The Takamikura V2 balances price and features better than the average in its bracket: it fits breathable fabric instead of synthetic leather, adds 4D armrests, recline from 90 to 180 degrees to lie fully flat and supports up to 150 kg, a high capacity for its category. It isn't a clinically adjustable ergonomic chair and the lumbar is a cushion, not integrated, but for the money it offers a set of adjustments and breathability hard to match. A good choice for anyone after an affordable gaming chair without overheating."
+  idealPara: "Gaming on a contained budget with breathable fabric, 4D armrests and 180° recline"
+  comunidad: "Rated as one of the best value buys in Spanish gaming: the breathable fabric, 4D armrests and recline up to 180° are liked, plus the 150 kg capacity. The usual criticisms point to the cushion lumbar rather than integrated and that, like any gaming chair at this price, it doesn't reach the fine adjustment of an ergonomic office chair."
+  resumenCompra:
+    mejorPara: "Anyone wanting fabric gaming with 4D armrests and 180° recline while spending little."
+    evitarSi: "You need an adjustable integrated lumbar or a premium build."
+    alternativaDirecta: "Corsair TC100 if you prefer a wider seat, albeit with 2D armrests."
+    decisionRapida: "The affordable gaming chair I'd recommend to anyone who overheats on synthetic leather and wants 4D armrests."
+  puntosFuertes:
+    - "Breathable fabric backrest"
+    - "4D armrests"
+    - "Recline from 90 to 180 degrees"
+    - "Supports up to 150 kg"
+    - "Lumbar and neck cushions included"
+  puntosDebiles:
+    - "Cushion lumbar support, not adjustable integrated"
+    - "No adjustable seat depth"
+    - "Firm padding at first"
+  paraQuienSi:
+    - "Anyone wanting breathable gaming with 4D armrests at a contained price"
+    - "Users up to 190 cm and 150 kg"
+    - "Anyone who values recline up to 180° to rest"
+  paraQuienNo:
+    - "Anyone needing an adjustable integrated lumbar"
+    - "Anyone seeking a premium build or adjustable seat depth"
+    - "People over 150 kg"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 83
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "presion"
@@ -100,3 +137,4 @@ specs:
   alturaRespaldoCm: null
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "tela transpirable sobre espuma fría (45 kg/m³)"

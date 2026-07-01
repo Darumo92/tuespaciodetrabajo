@@ -94,8 +94,6 @@ const specsSilla = z.object({
   asientoMaterial: z.string().nullable().default(null),
   ruedasSueloDuro: z.boolean().nullable().default(null),
   certificacionEn1335: z.boolean().nullable().default(null),
-  montajeMinutos: z.number().nullable().default(null),
-  devolucionDias: z.number().nullable().default(null),
 });
 
 const productos = defineCollection({

@@ -71,7 +71,39 @@ puntosDebiles:
   - "Sin profundidad de asiento regulable ni reposacabezas"
   - "Acolchado del asiento escaso"
 fuenteSpecs: "Web oficial IKEA España (ficha FLINTAN con reposabrazos: asiento 46x49 cm, altura 45-58 cm, máx 110 kg, garantía 10 años, EN 1335 + BIFMA X5.1)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "IKEA FLINTAN"
+  veredicto: "The FLINTAN is one of IKEA's most affordable mesh office chairs: a breathable backrest, basic built-in lumbar support, height-adjustable armrests and tilt with tension adjustment, all with the 10-year warranty. The adjustments are limited and the materials are entry-level, but for a tight budget and moderate use it's a reasonable mesh option with IKEA's guarantee behind it."
+  idealPara: "A tight budget that wants a breathable mesh backrest with IKEA's warranty"
+  comunidad: "Among IKEA users it's seen as a sensible entry buy for its breathable mesh and price, often compared with the Markus. The usual criticisms point to a basic, non-adjustable lumbar and entry-level materials; for moderate days it does the job, but it isn't a substitute for a serious ergonomic chair."
+  puntosFuertes:
+    - "Breathable mesh backrest"
+    - "Built-in lumbar support"
+    - "Height-adjustable armrests"
+    - "Tilt with tension adjustment"
+    - "10-year IKEA warranty"
+  puntosDebiles:
+    - "Basic, non-adjustable lumbar"
+    - "Entry-level materials"
+    - "No adjustable seat depth"
+  paraQuienSi:
+    - "A tight budget that wants breathable mesh"
+    - "Moderate home-office or study use"
+    - "Anyone who values IKEA availability and warranty"
+  paraQuienNo:
+    - "Anyone needing adjustable lumbar or seat depth"
+    - "Full days of intensive sedentary work"
+    - "Anyone seeking mid- or high-range materials"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 79
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "fijo"

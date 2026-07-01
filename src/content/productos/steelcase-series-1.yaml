@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.5
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 8.0
+  ajustabilidad: 7.5
+  materiales: 8.0
+  comodidad: 7.5
+  calidadPrecio: 8.0
 amazon:
   asin: null
   buscar: "Steelcase Series 1 silla"
@@ -80,16 +80,15 @@ en:
     - "Anyone who prefers a very plush seat"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 69
+  score: 75
   confianza: "medio"
-  enriquecidoEn: "2026-06-25"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"
     - "specs.baseMaterial"
     - "specs.reclinacionMaxGrados"
     - "specs.certificacionEn1335"
-    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "altura"

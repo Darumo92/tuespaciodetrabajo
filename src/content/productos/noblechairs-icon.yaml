@@ -79,7 +79,43 @@ puntosDebiles:
   - "Reposabrazos con poco acolchado"
   - "Respaldo de cuero sintético, transpira menos que la malla"
 fuenteSpecs: "Web oficial noblechairs (noblechairs.com/en-us/icon-series/gaming-chair-pu-leather: max 150 kg, respaldo 90-135 grados, balanceo 11 grados, reposabrazos 4D, base aluminio, espuma fría, asiento ancho interior 33 cm / exterior 52 cm, fondo 49 cm, altura asiento 47-57 cm, altura total 128-138 cm, pistón clase 4, certificación DIN EN 1335, peso 28 kg) + Tech Advisor + GamingScan"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "noblechairs ICON"
+  veredicto: "The ICON is the noblechairs that strays furthest from the racing-bucket look: its design is sober, almost office-like, which lets it fit a living room or an office without clashing. Inside it delivers what's expected of the range: firm cold foam, an aluminium base, 4D armrests and DIN EN 1335 certification. The lumbar is a cushion, not integrated, so fine adjustment depends on positioning it well, and the armrests have little padding. For anyone wanting an elegant, well-built gaming chair that holds up for many hours, it's a solid buy; anyone wanting the most adjustable lumbar support should look elsewhere."
+  idealPara: "Anyone wanting a sober, almost office-like gaming chair with quality synthetic leather and cold foam"
+  comunidad: "Very positive consensus in specialist reviews (Tech Advisor, GamingScan, TweakTown): the comfort for very long days, the sober design less flashy than a racing chair and the build quality are valued. The recurring criticisms are the armrests' thin padding and that it fits medium- or short-height people better than very tall ones."
+  resumenCompra:
+    mejorPara: "Anyone wanting a discreet, well-finished gaming chair with synthetic leather and cold foam."
+    evitarSi: "You need an adjustable integrated lumbar or you're short."
+    alternativaDirecta: "noblechairs HERO if you want more size, more recline and an integrated lumbar from the same brand."
+    decisionRapida: "The gaming chair I'd recommend to anyone who values a sober look and serious finish over maximum lumbar adjustment."
+  puntosFuertes:
+    - "Firm, durable cold foam"
+    - "Aluminium base"
+    - "4D armrests"
+    - "DIN EN 1335 certification"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "Lumbar via cushion, not integrated or adjustable"
+    - "Armrests with little padding"
+    - "Synthetic-leather backrest, breathes less than mesh"
+  paraQuienSi:
+    - "Anyone wanting a sober-looking gaming chair that fits an office or living room"
+    - "Medium-height users who spend many hours seated"
+    - "Anyone who values firm cold foam, an aluminium base and EN 1335 certification"
+  paraQuienNo:
+    - "Anyone needing a factory adjustable integrated lumbar"
+    - "Very tall users (it fits medium sizes better)"
+    - "Anyone seeking breathable mesh"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 84
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "fijo"

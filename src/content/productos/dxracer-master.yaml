@@ -79,7 +79,41 @@ puntosDebiles:
   - "Precio alto frente a la competencia"
   - "Asiento estrecho, poco apto para complexiones anchas"
 fuenteSpecs: "Web oficial DXRacer (dxracer.com/pages/gaming-chairs/master: reposabrazos 4D, lumbar integrado 4D 6 niveles, balanceo 15 grados, pistón clase 4 certificado SGS, ruedas PU 3 pulgadas, certif SGS/BIFMA/TÜV) + ChairsFX (max 275 lbs ~125 kg, altura usuario 167-198 cm, altura asiento 19,75-22,75 pulgadas, asiento 15x19,5 pulgadas, respaldo 22x33 pulgadas, reclinación 155 grados, microfibra PU, garantía 2 años, peso ~29 kg)"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "DXRacer Master"
+  veredicto: "The Master is the gaming chair with which DXRacer tries to move into serious ergonomics: the best part is its 4D integrated lumbar with six adjustment levels, which moves in height and depth instead of being a simple cushion, paired with 4D armrests and an SGS-certified class 4 piston. The look is more executive and discreet than the typical racing chair. The downsides weigh: the warranty is only two years when rivals give five, the price is high and the seat is somewhat narrow, so it isn't the best for broad bodies. For anyone wanting a genuinely adjustable lumbar in a gaming format who doesn't mind the short warranty, it delivers."
+  idealPara: "Anyone wanting a genuinely adjustable integrated 4D lumbar in a gaming chair with a more executive look"
+  comunidad: "Mixed-positive reception in reviews (ChairsFX, PC Gamer, TechRadar): the 4D integrated adjustable lumbar, the modular design expandable with accessories and the executive look are valued. The recurring criticisms are the short two-year warranty versus brands that give five, the high price and a somewhat narrow seat that doesn't suit broad bodies well."
+  resumenCompra:
+    mejorPara: "Anyone wanting an adjustable 4D integrated lumbar in a sober-looking gaming chair."
+    evitarSi: "You're after a long warranty, a better price or you're broad-build."
+    alternativaDirecta: "Razer Iskur V2 if you want an adjustable adaptive lumbar with a better warranty."
+    decisionRapida: "The gaming chair I'd recommend to anyone who values an adjustable integrated lumbar over warranty and price."
+  puntosFuertes:
+    - "4D integrated lumbar with six adjustment levels"
+    - "4D armrests"
+    - "SGS-certified class 4 piston"
+    - "Modular design expandable with accessories"
+    - "SGS, BIFMA and TÜV certifications"
+  puntosDebiles:
+    - "Only a two-year warranty"
+    - "High price versus the competition"
+    - "Narrow seat, not great for broad bodies"
+  paraQuienSi:
+    - "Anyone wanting an adjustable 4D integrated lumbar in a gaming format"
+    - "Users between 167 and 198 cm within the weight limit"
+    - "Anyone who prefers an executive, discreet look to a racing one"
+  paraQuienNo:
+    - "Anyone wanting a long (five-year) warranty"
+    - "Broad-build people (narrow seat)"
+    - "Tight budgets seeking a better price"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

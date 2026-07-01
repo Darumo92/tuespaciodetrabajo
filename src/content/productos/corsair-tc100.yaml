@@ -71,7 +71,43 @@ puntosDebiles:
   - "Reposabrazos 2D"
   - "Garantía de solo 2 años"
 fuenteSpecs: "Web oficial Corsair (TC100 Relaxed: asiento 54x50 cm, altura 45-55 cm, reclinación 90-160°, máx 120 kg, altura recomendada hasta 188 cm, tela o cuero sintético, reposabrazos 2D, gas clase 4, garantía 2 años)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Corsair TC100 Relaxed"
+  veredicto: "The TC100 Relaxed is Corsair's entry-level gaming chair and performs better than its price suggests: a wide, roomy seat, recline from 90 to 160 degrees, lumbar and neck cushions included and the option of breathable fabric or synthetic leather. It doesn't have an adjustable integrated lumbar or high-end armrests, its are 2D, but as a wide, comfortable chair at an affordable price it's a very reasonable buy. I'd recommend the fabric version over the synthetic-leather one if you tend to run hot."
+  idealPara: "Gaming and work on a contained budget with a wide seat and generous recline"
+  comunidad: "Well rated as an entry-level gaming chair for its wide seat and comfort for medium-to-large builds, plus the breathable-fabric option. The usual criticisms point to the 2D armrests, the cushion lumbar rather than integrated, and a two-year warranty, short versus other gaming chairs."
+  resumenCompra:
+    mejorPara: "Anyone wanting a wide, comfortable gaming chair at an entry price with good recline."
+    evitarSi: "You need an adjustable integrated lumbar or 4D armrests."
+    alternativaDirecta: "Newskill Takamikura if you want 4D armrests and 180° recline at a similar price."
+    decisionRapida: "The affordable gaming chair I'd put first for anyone wanting a wide seat without overspending."
+  puntosFuertes:
+    - "Wide, roomy seat (54 cm)"
+    - "Recline from 90 to 160 degrees"
+    - "Lumbar and neck cushions included"
+    - "Available in breathable fabric or synthetic leather"
+    - "Class 4 gas piston"
+  puntosDebiles:
+    - "Cushion lumbar support, not adjustable integrated"
+    - "2D armrests"
+    - "Only a two-year warranty"
+  paraQuienSi:
+    - "Anyone wanting a wide, comfortable gaming chair at an entry price"
+    - "Medium-to-large builds up to 188 cm and 120 kg"
+    - "Anyone who prefers breathable fabric to synthetic leather"
+  paraQuienNo:
+    - "Anyone needing an adjustable integrated lumbar"
+    - "Anyone wanting 4D armrests or a premium build"
+    - "People over 120 kg"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 86
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "presion"
@@ -96,3 +132,4 @@ specs:
   alturaRespaldoCm: 80
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "tela transpirable o cuero sintético sobre espuma"

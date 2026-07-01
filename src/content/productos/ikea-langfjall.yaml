@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.0
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 6.5
+  ajustabilidad: 5.5
+  materiales: 7.0
+  comodidad: 7.0
+  calidadPrecio: 8.0
 amazon:
   asin: null
   buscar: "IKEA LANGFJALL silla trabajo"
@@ -74,9 +74,9 @@ en:
     - "Anyone wanting a high back with headrest"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 63
+  score: 69
   confianza: "medio"
-  enriquecidoEn: "2026-06-25"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"
@@ -85,7 +85,6 @@ calidadDatos:
     - "specs.alturaRespaldoCm"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
-    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "fijo"

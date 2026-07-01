@@ -103,6 +103,15 @@ en:
     - "Anyone who prefers a static, heavily padded chair"
     - "Anyone needing full 4D armrests or a standard headrest"
 verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 82
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.reclinacionMaxGrados"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

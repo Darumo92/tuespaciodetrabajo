@@ -101,6 +101,15 @@ en:
     - "Users over 190 cm (the headrest sits low)"
     - "Anyone needing adjustable seat depth"
 verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 84
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"

@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.6
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 8.5
+  ajustabilidad: 6.5
+  materiales: 9.0
+  comodidad: 9.0
+  calidadPrecio: 7.0
 amazon:
   asin: null
   buscar: "Humanscale Freedom reposacabezas silla"
@@ -67,18 +67,14 @@ en:
     - "Tight budgets"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 52
+  score: 68
   confianza: "bajo"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"
     - "specs.reclinacionMaxGrados"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
-    - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionEn1335"
-    - "valoraciones"
     - "fuentes"
 specs:
   tipo: "silla"
@@ -99,3 +95,6 @@ specs:
   garantiaAnios: 15
   reposacabezas: "ajustable"
   asientoMaterial: "espuma moldeada"
+  anchoAsientoCm: 51
+  profundidadAsientoMaxCm: 50
+  alturaRespaldoCm: 53

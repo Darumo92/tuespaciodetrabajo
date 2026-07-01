@@ -107,7 +107,7 @@ verificadoEn: "2026-06-25"
 calidadDatos:
   score: 68
   confianza: "medio"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.pesoMaxKg"
     - "specs.pesoProductoKg"

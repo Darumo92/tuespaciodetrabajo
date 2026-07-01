@@ -98,19 +98,15 @@ en:
     - "Anyone who prioritises a long warranty on the mesh too"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 50
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-25"
+  score: 64
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.alturaAsientoMinCm"
     - "specs.alturaAsientoMaxCm"
     - "specs.anchoCm"
     - "specs.fondoCm"
-    - "specs.pesoProductoKg"
     - "specs.reclinacionMaxGrados"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
-    - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
 specs:
@@ -126,3 +122,7 @@ specs:
   alturaRecomendadaMaxCm: 200
   reposacabezas: "ajustable"
   asientoMaterial: "malla de elastómero termoplástico y poliéster"
+  anchoAsientoCm: 53
+  profundidadAsientoMaxCm: 48
+  alturaRespaldoCm: 85
+  pesoProductoKg: 22.7

@@ -110,7 +110,7 @@ verificadoEn: "2026-06-25"
 calidadDatos:
   score: 83
   confianza: "alto"
-  enriquecidoEn: "2026-06-29"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.reclinacionMaxGrados"
     - "specs.anchoAsientoCm"

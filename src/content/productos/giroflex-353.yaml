@@ -100,15 +100,11 @@ en:
     - "Anyone after the lowest possible price"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 54
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-25"
+  score: 77
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.pesoMaxKg"
-    - "specs.anchoCm"
     - "specs.fondoCm"
-    - "specs.pesoProductoKg"
-    - "specs.garantiaAnios"
     - "specs.reclinacionMaxGrados"
     - "specs.reposacabezas"
     - "specs.certificacionBifma"
@@ -127,3 +123,7 @@ specs:
   profundidadAsientoMaxCm: 44
   alturaRespaldoCm: 62
   asientoMaterial: "tejido de punto 3D o tapizado"
+  pesoMaxKg: 110
+  garantiaAnios: 5
+  pesoProductoKg: 25
+  anchoCm: 70

@@ -73,7 +73,7 @@ verificadoEn: "2026-06-25"
 calidadDatos:
   score: 72
   confianza: "medio"
-  enriquecidoEn: "2026-06-25"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.alturaAsientoMinCm"
     - "specs.alturaAsientoMaxCm"

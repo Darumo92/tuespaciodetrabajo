@@ -67,7 +67,43 @@ puntosDebiles:
   - "Garantía de solo 2 años"
   - "Lumbar de 4 vías sin soporte dinámico"
 fuenteSpecs: "Web oficial Corsair (corsair.com/us/en/p/gaming-chairs/cf-9010066-ww: respaldo de tela premium transpirable acolchada, lumbar regulable de 4 vías, reposabrazos 5D Omniflex, reclinación 90-160 grados, máx 120 kg, altura recomendada hasta 188 cm, altura de asiento 42-52 cm, ancho de asiento 59 cm, profundidad de asiento 50 cm, altura de respaldo 80 cm, estructura de acero con base metálica acabada al horno, peso del producto 32 kg, reposacabezas de memory foam desmontable, garantía 2 años)"
-verificadoEn: "2026-06-22"
+en:
+  nombreComercial: "Corsair TC500 LUXE"
+  veredicto: "Where the TC500 LUXE shows off is the armrests: the 5D Omniflex system moves in five directions (up/down, left/right, forward/back, swivel and reverse), among the most versatile seen in gaming. Add breathable padded fabric instead of faux leather and recline up to 160 degrees, and you have a chair built for long sessions without a sweaty back. The catch is in the fine print: only a 2-year warranty and a 4-way lumbar that, while useful, isn't a high-end dynamic ergonomic support."
+  idealPara: "Premium fabric gaming for anyone wanting to recline fully and adjust the arms to the millimetre"
+  comunidad: "Corsair is a known peripherals brand and its chair range moves in breathable-fabric territory versus the usual faux leather. The TC500 LUXE is discussed mostly for its 5D Omniflex armrests, which many users highlight as its best asset, and for the fabric comfort in long sessions. The most cited criticism is the 2-year warranty, shorter than several direct rivals, and that the lumbar, while adjustable, doesn't compete with a dynamic mesh support."
+  resumenCompra:
+    mejorPara: "Anyone wanting breathable-fabric gaming and the most adjustable armrests in its range."
+    evitarSi: "You're after pure ergonomic mesh or a long contract-style warranty."
+    alternativaDirecta: "Corsair T3 Rush if you want the same fabric philosophy at a slightly more contained price."
+    decisionRapida: "If your chair's arms never sit where you want, the 5D Omniflex ones solve exactly that."
+  puntosFuertes:
+    - "5D Omniflex armrests (up/down, left/right, forward/back, swivel and reverse)"
+    - "Breathable premium padded fabric instead of faux leather"
+    - "Recline from 90 to 160 degrees"
+    - "Steel frame and oven-finished metal base"
+    - "Removable, adjustable memory-foam headrest"
+  puntosDebiles:
+    - "Only a 2-year warranty"
+    - "4-way lumbar without dynamic support"
+  paraQuienSi:
+    - "Gamers who spend many hours and prefer breathable fabric to faux leather"
+    - "Anyone wanting armrests with full travel in five directions"
+    - "Users up to 188 cm and 120 kg seeking recline up to 160 degrees"
+  paraQuienNo:
+    - "Anyone seeking high-end dynamic ergonomic lumbar support"
+    - "Anyone wanting a long contract-style warranty"
+    - "Users over 120 kg or 188 cm"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.anchoCm"
+    - "specs.fondoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

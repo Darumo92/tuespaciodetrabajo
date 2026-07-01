@@ -103,15 +103,14 @@ en:
     - "Users looking for premium finishes"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 53
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-25"
+  score: 59
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.alturaAsientoMinCm"
     - "specs.alturaAsientoMaxCm"
     - "specs.baseMaterial"
     - "specs.pesoProductoKg"
-    - "specs.garantiaAnios"
     - "specs.reclinacionMaxGrados"
     - "specs.alturaRespaldoCm"
     - "specs.profundidadAsientoMaxCm"
@@ -130,3 +129,4 @@ specs:
   fondoCm: 75
   mecanismo: "inclinación con bloqueo"
   asientoMaterial: "espuma moldeada"
+  garantiaAnios: 2

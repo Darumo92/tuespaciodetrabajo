@@ -71,7 +71,43 @@ puntosDebiles:
   - "Reposabrazos no 4D completos"
   - "Respaldo de cuero sintético, transpira menos que la malla"
 fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-enki: asiento ancho 540 mm, fondo 525 mm, arcos hombro 110 grados, reclinación hasta 152 grados, altura asiento 445-545 mm, reposabrazos altura 125 mm y lateral 25 mm, separación 445-495 mm, respaldo 835 mm de alto y 500 mm de ancho, base 690 mm, cuero sintético doble textura, cojín cervical de memoria, certif BIFMA x5.1 y EN 1335-2, garantía 3 años ampliable a 5)"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Razer Enki"
+  veredicto: "The Enki is Razer's bet on full-day comfort: its ultra-wide 540 mm seat and shoulder arches extended to 110 degrees spread weight well and let you move without the sides digging in. It has a lumbar built into the backrest (an arch, not separately adjustable), a memory-foam neck cushion and BIFMA x5.1 and EN 1335-2 certifications, uncommon in a gaming chair. The recline reaches 152 degrees and the armrests adjust in height, sideways and spacing, though they aren't full 4D. For anyone who values wide comfort and a certified backrest, it's a solid gaming chair; anyone wanting maximum armrest adjustment or mesh will look elsewhere."
+  idealPara: "Long gaming sessions with a wide seat and shoulder arches built for all-day comfort"
+  comunidad: "Good rating among users and hardware reviews: the comfort of the wide seat for long sessions stands out, and the BIFMA and EN 1335-2 certifications give it a plus uncommon in gaming. The usual criticisms are that the lumbar is a fixed arch not adjusted separately, and that the armrests, while adjustable, don't reach full 4D."
+  resumenCompra:
+    mejorPara: "Anyone wanting a wide, comfortable seat for many hours with a certified backrest."
+    evitarSi: "You need full 4D armrests or breathable mesh."
+    alternativaDirecta: "Razer Iskur V2 if you want an adjustable adaptive lumbar and 4D armrests from the same brand."
+    decisionRapida: "The gaming chair I'd recommend to anyone who prioritises a wide, comfortable seat over maximum fine adjustment."
+  puntosFuertes:
+    - "Ultra-wide 540 mm seat"
+    - "Shoulder arches extended to 110 degrees"
+    - "BIFMA x5.1 and EN 1335-2 certifications"
+    - "Memory-foam neck cushion included"
+    - "3-year warranty extendable to 5"
+  puntosDebiles:
+    - "Fixed-arch lumbar, not separately adjustable"
+    - "Armrests not full 4D"
+    - "Synthetic-leather backrest, breathes less than mesh"
+  paraQuienSi:
+    - "Gamers who spend many hours and want a wide, comfortable seat"
+    - "Anyone who values a backrest with BIFMA and EN 1335-2 certifications"
+    - "Users who move a lot and appreciate the extended shoulder arches"
+  paraQuienNo:
+    - "Anyone needing full 4D armrests"
+    - "Anyone seeking breathable mesh"
+    - "Anyone wanting an independently adjustable lumbar"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.pesoMaxKg"
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
 specs:
   tipo: "silla"
   lumbar: "fijo"

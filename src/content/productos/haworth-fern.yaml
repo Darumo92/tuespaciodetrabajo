@@ -70,15 +70,12 @@ en:
     - "Budgets below €900 looking for premium mesh"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 64
+  score: 74
   confianza: "bajo"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.reclinacionMaxGrados"
     - "specs.reposacabezas"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
-    - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionEn1335"
     - "fuentes"
 specs:
@@ -91,11 +88,15 @@ specs:
   pesoMaxKg: 159
   alturaAsientoMinCm: 42
   alturaAsientoMaxCm: 55
-  anchoCm: 51
-  fondoCm: 39
+  anchoCm: 74
+  fondoCm: 72
   mecanismo: "Wave Suspension System con 5 posiciones de bloqueo de respaldo"
   baseMaterial: "aluminio"
   certificacionBifma: true
   pesoProductoKg: 29.5
   garantiaAnios: 12
   asientoMaterial: "espuma con tapizado (Digital Knit opcional)"
+  anchoAsientoCm: 50
+  profundidadAsientoMinCm: 39
+  profundidadAsientoMaxCm: 47
+  alturaRespaldoCm: 65

@@ -105,7 +105,7 @@ verificadoEn: "2026-06-25"
 calidadDatos:
   score: 77
   confianza: "medio"
-  enriquecidoEn: "2026-06-29"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"

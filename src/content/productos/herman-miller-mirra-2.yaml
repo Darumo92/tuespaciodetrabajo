@@ -109,6 +109,15 @@ en:
     - "Budgets below the premium tier"
     - "Anyone who wants an integrated headrest"
 verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 82
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

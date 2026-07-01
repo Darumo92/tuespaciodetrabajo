@@ -109,6 +109,16 @@ en:
     - "Users who want continuous recline rather than by positions"
     - "Budgets below the premium tier"
 verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 78
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.reclinacionMaxGrados"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

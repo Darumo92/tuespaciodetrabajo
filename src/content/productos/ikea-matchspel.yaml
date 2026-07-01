@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.0
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 6.5
+  ajustabilidad: 6.0
+  materiales: 6.5
+  comodidad: 7.0
+  calidadPrecio: 8.5
 amazon:
   asin: null
   buscar: "IKEA MATCHSPEL silla gaming"
@@ -65,18 +65,15 @@ en:
     - "Very long days with high ergonomic demands"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 51
+  score: 68
   confianza: "bajo"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.baseMaterial"
-    - "specs.garantiaAnios"
     - "specs.reclinacionMaxGrados"
     - "specs.alturaRespaldoCm"
     - "specs.asientoMaterial"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
-    - "valoraciones"
     - "fuentes"
 specs:
   tipo: "silla"
@@ -91,10 +88,10 @@ specs:
   anchoCm: 66
   fondoCm: 66
   mecanismo: "Tensión automática por peso"
-  baseMaterial: null
+  baseMaterial: "acero al carbono (estructura con contrachapado)"
   certificacionBifma: null
   pesoProductoKg: 18
-  garantiaAnios: null
+  garantiaAnios: 3
   anchoAsientoCm: 54
   profundidadAsientoMaxCm: 48
   reposacabezas: "ninguno"

@@ -73,7 +73,42 @@ puntosDebiles:
   - "Capacidad máxima moderada (125 kg)"
   - "Reposabrazos solo abatibles, sin más regulación"
 fuenteSpecs: "Web oficial Eureka Ergonomic (eurekaergonomic.com/products/onyx-series-office-chair): respaldo malla TPEE/poliéster, lumbar ajustable en altura, reposabrazos abatibles (flip-up), balanceo 15 grados, máximo 275 lbs (125 kg), altura asiento 18,5-21,46 in (47-54,5 cm), fondo asiento 20,6 in (52 cm), ancho asiento 20,87 in (53 cm), dimensiones totales 25,63 D x 23,63 W x 39,37-43,37 H in, pistón de gas clase 4, peso producto 26,46 lbs (12 kg), estatura recomendada 5'1''-5'9'' (155-175 cm), BIFMA passed según fichas de la marca"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Eureka Ergonomic Onyx"
+  veredicto: "The Onyx is Eureka Ergonomic's most restrained mesh chair, from a brand known for gaming and office furniture with a good presence on Amazon. It's a clean, minimalist chair with a full mesh backrest, a height-adjustable lumbar, flip-up armrests to tuck it under the desk and 15 degrees of rocking. It isn't trying to compete with the premiums: it supports up to 125 kg, is recommended for heights around 1.55 to 1.75 m and its flip-up armrests don't adjust on more axes. For home-office and everyday use without pretensions, it does the job with sensible value."
+  idealPara: "Home-office and home-office work with breathable mesh and an adjustable lumbar at a contained price"
+  comunidad: "Eureka's mesh chairs get a fair reception in reviews and on Amazon: the breathable mesh, adjustable lumbar and price are valued, while the usual criticisms point to basic armrests and a size meant for average-height users. It's a home-office chair rather than a professional chair for intensive days."
+  resumenCompra:
+    mejorPara: "Anyone wanting breathable mesh and an adjustable lumbar for daily use without overspending."
+    evitarSi: "You're well over 1.75 m or need multidirectional armrests and adjustable depth."
+    alternativaDirecta: "Yaheetech mesh office chair if you want something even cheaper with a headrest."
+    decisionRapida: "A logical buy for a home desk if you prioritise mesh and price over maximum adjustability."
+  puntosFuertes:
+    - "Full breathable mesh backrest"
+    - "Height-adjustable lumbar"
+    - "Flip-up armrests to tuck it under the desk"
+    - "Good value on Amazon"
+  puntosDebiles:
+    - "Moderate maximum capacity (125 kg)"
+    - "Flip-up armrests only, no further adjustment"
+  paraQuienSi:
+    - "Home workers wanting breathable mesh at a contained price"
+    - "Average-height users (around 1.55 to 1.75 m) up to 125 kg"
+    - "Anyone wanting flip-up armrests to store the chair under the desk"
+  paraQuienNo:
+    - "Tall people (over 1.80 m)"
+    - "Users over 125 kg"
+    - "Anyone needing multidirectional armrests and adjustable seat depth"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.garantiaAnios"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

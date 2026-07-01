@@ -39,8 +39,13 @@ fuentes:
     nombre: "Diablo X-Player 2.0"
     url: "https://diablochairs.com/en/x-player"
     fechaConsulta: "2026-06-22"
+  - tipo: "tienda"
+    nombre: "e-catalog Diablo X-Player 2.0 (ficha dimensiones talla Normal)"
+    url: "https://e-catalog.com/DIABLO-X-PLAYER-2-0-KING.htm"
+    fechaConsulta: "2026-06-30"
 limitaciones:
-  - "La web oficial no detalla recorrido de altura de asiento ni garantía."
+  - "Talla Normal: altura de asiento 52-62 cm, respaldo 90 cm, asiento 42x49 cm (dimensiones de catálogo, no en la web oficial)."
+  - "La garantía conviene confirmarla con el vendedor; no figura en la web oficial."
   - "La disponibilidad varía según la talla elegida."
   - "El soporte lumbar es un cojín, no un mecanismo integrado regulable."
 alternativas:
@@ -94,20 +99,15 @@ en:
     - "Anyone who wants seat height and warranty known up front"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 42
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-25"
+  score: 64
+  confianza: "medio"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.alturaAsientoMinCm"
-    - "specs.alturaAsientoMaxCm"
     - "specs.anchoCm"
     - "specs.fondoCm"
     - "specs.mecanismo"
     - "specs.pesoProductoKg"
     - "specs.garantiaAnios"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
-    - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
 specs:
@@ -117,8 +117,13 @@ specs:
   reposabrazos: "3d"
   reclinacionMaxGrados: 160
   pesoMaxKg: 150
+  alturaAsientoMinCm: 52
+  alturaAsientoMaxCm: 62
   baseMaterial: "metal"
   alturaRecomendadaMinCm: 150
   alturaRecomendadaMaxCm: 205
   reposacabezas: "ajustable"
   asientoMaterial: "espuma HR doble capa"
+  anchoAsientoCm: 42
+  profundidadAsientoMaxCm: 49
+  alturaRespaldoCm: 90

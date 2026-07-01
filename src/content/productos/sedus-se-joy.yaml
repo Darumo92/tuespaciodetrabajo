@@ -96,17 +96,13 @@ en:
     - "Very tall, very short or over-130 kg users"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 60
+  score: 77
   confianza: "medio"
-  enriquecidoEn: "2026-06-25"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.anchoCm"
-    - "specs.fondoCm"
     - "specs.baseMaterial"
     - "specs.pesoProductoKg"
     - "specs.reclinacionMaxGrados"
-    - "specs.anchoAsientoCm"
-    - "specs.alturaRespaldoCm"
     - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
 specs:
@@ -122,3 +118,7 @@ specs:
   certificacionEn1335: true
   asientoMaterial: "membrana de tejido de punto (knit) autoajustable"
   reposacabezas: "ninguno"
+  anchoCm: 68
+  fondoCm: 67
+  anchoAsientoCm: 52
+  alturaRespaldoCm: 70

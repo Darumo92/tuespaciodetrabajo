@@ -109,16 +109,11 @@ en:
     - "Petite people who may find the seat too big"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 54
-  confianza: "bajo"
-  enriquecidoEn: "2026-06-28"
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.alturaAsientoMinCm"
-    - "specs.alturaAsientoMaxCm"
-    - "specs.anchoCm"
-    - "specs.fondoCm"
     - "specs.pesoProductoKg"
-    - "specs.anchoAsientoCm"
     - "specs.alturaRespaldoCm"
     - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
@@ -138,3 +133,8 @@ specs:
   alturaRecomendadaMaxCm: 210
   reposacabezas: "ajustable"
   asientoMaterial: "Cuero PVC premium o lino"
+  alturaAsientoMinCm: 45
+  alturaAsientoMaxCm: 51
+  anchoCm: 74
+  fondoCm: 57.5
+  anchoAsientoCm: 53

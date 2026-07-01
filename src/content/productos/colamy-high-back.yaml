@@ -74,7 +74,43 @@ puntosDebiles:
   - "Lumbar regulable pero no dinámica autoajustable"
   - "Capacidad de carga en la media (unos 136 kg)"
 fuenteSpecs: "Web oficial COLAMY (colamyhome.com/products/colamy-atlas-ergonomic-high-back-mesh-office-chair-bifma-certified) + colamyhome.com/products/colamy-atlas-01-executive-mesh-ergonomic-office-chair-bifma-certified"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "COLAMY ATLAS High Back"
+  veredicto: "COLAMY's ATLAS is a high-back mesh chair with a notable set of adjustments for its price: 4D armrests, an adjustable headrest that also rotates, a sliding-depth seat and four recline-lock positions. It adds an aluminium base, BIFMA certification and a three-year warranty. It's a very balanced mid-range buy, with mesh treated to the OEKO-TEX standard. Its load capacity, around 136 kg, sits at the average."
+  idealPara: "Anyone wanting a high mesh backrest with 4D armrests and BIFMA certification at a good price"
+  comunidad: "The consensus rates the ATLAS as a very complete mesh chair for its price, with a good aluminium base, 4D armrests and the reassurance of BIFMA certification. The usual caveats are that the lumbar is adjustable but not self-adjusting and that the load capacity sits at the average."
+  resumenCompra:
+    mejorPara: "Anyone wanting a high mesh backrest, 4D armrests and BIFMA certification without paying a premium price."
+    evitarSi: "You need a very high load capacity or a padded foam seat."
+    alternativaDirecta: "Hbada E3 Pro if you want even more lumbar and headrest adjustments."
+    decisionRapida: "A very complete, certified mid-range chair, easy to recommend for home-office work."
+  puntosFuertes:
+    - "High mesh backrest with 4D armrests"
+    - "Adjustable headrest that also rotates"
+    - "Sliding-depth seat"
+    - "Aluminium base and BIFMA certification"
+    - "Four recline-lock positions"
+  puntosDebiles:
+    - "Lumbar adjustable but not self-adjusting"
+    - "Average load capacity (around 136 kg)"
+  paraQuienSi:
+    - "Anyone wanting a high mesh backrest with 4D armrests"
+    - "Users who value a sliding seat and a rotating headrest"
+    - "Anyone who weighs BIFMA certification and an aluminium base heavily"
+  paraQuienNo:
+    - "Anyone needing a very high load capacity"
+    - "Anyone seeking a self-adjusting dynamic lumbar"
+    - "Anyone who prefers a padded foam seat"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 84
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"
@@ -94,3 +130,4 @@ specs:
   garantiaAnios: 3
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "malla elástica tratada (estándar OEKO-TEX)"

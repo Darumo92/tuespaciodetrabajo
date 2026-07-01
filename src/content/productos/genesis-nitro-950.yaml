@@ -94,15 +94,14 @@ en:
     - "Anyone who prefers breathable mesh to upholstery"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 59
+  score: 63
   confianza: "medio"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"
     - "specs.baseMaterial"
     - "specs.garantiaAnios"
-    - "specs.anchoAsientoCm"
     - "specs.alturaRespaldoCm"
     - "specs.profundidadAsientoMaxCm"
     - "specs.certificacionBifma"
@@ -120,3 +119,4 @@ specs:
   pesoProductoKg: 24.5
   reposacabezas: "ajustable"
   asientoMaterial: "espuma tapizada con cojines de espuma viscoelástica"
+  anchoAsientoCm: 41

@@ -64,7 +64,7 @@ verificadoEn: "2026-06-25"
 calidadDatos:
   score: 60
   confianza: "bajo"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.alturaAsientoMinCm"
     - "specs.alturaAsientoMaxCm"
@@ -83,8 +83,8 @@ specs:
   pesoMaxKg: 136
   alturaAsientoMinCm: null
   alturaAsientoMaxCm: null
-  anchoCm: 48
-  fondoCm: 43
+  anchoCm: 66
+  fondoCm: 66
   mecanismo: "inclinación con bloqueo"
   baseMaterial: "nylon"
   certificacionBifma: true

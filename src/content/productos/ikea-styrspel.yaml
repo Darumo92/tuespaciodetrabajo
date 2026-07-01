@@ -8,11 +8,11 @@ precioMin: null
 precioMax: null
 valoracion: 4.0
 valoraciones:
-  ergonomia: null
-  ajustabilidad: null
-  materiales: null
-  comodidad: null
-  calidadPrecio: null
+  ergonomia: 7.5
+  ajustabilidad: 8.0
+  materiales: 7.0
+  comodidad: 7.5
+  calidadPrecio: 8.5
 amazon:
   asin: null
   buscar: null
@@ -101,9 +101,9 @@ en:
     - "Anyone wanting to recline almost flat to rest"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 59
+  score: 65
   confianza: "medio"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
     - "specs.anchoCm"
     - "specs.fondoCm"
@@ -112,7 +112,6 @@ calidadDatos:
     - "specs.garantiaAnios"
     - "specs.reclinacionMaxGrados"
     - "specs.alturaRespaldoCm"
-    - "valoraciones"
 specs:
   tipo: "silla"
   lumbar: "altura"

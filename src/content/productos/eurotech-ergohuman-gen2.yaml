@@ -104,18 +104,13 @@ en:
     - "Entry-level buys on a very tight budget"
 verificadoEn: "2026-06-25"
 calidadDatos:
-  score: 55
+  score: 75
   confianza: "medio"
-  enriquecidoEn: "2026-06-28"
+  enriquecidoEn: "2026-07-01"
   camposFaltantes:
-    - "specs.anchoCm"
-    - "specs.fondoCm"
     - "specs.baseMaterial"
-    - "specs.pesoProductoKg"
     - "specs.garantiaAnios"
     - "specs.reclinacionMaxGrados"
-    - "specs.alturaRespaldoCm"
-    - "specs.asientoMaterial"
     - "specs.certificacionBifma"
     - "specs.certificacionEn1335"
 specs:
@@ -131,3 +126,8 @@ specs:
   anchoAsientoCm: 52
   profundidadAsientoMaxCm: 50
   reposacabezas: "ajustable"
+  anchoCm: 66.5
+  fondoCm: 67.5
+  alturaRespaldoCm: 69
+  pesoProductoKg: 30
+  asientoMaterial: "malla completa (elastómero y poliéster)"

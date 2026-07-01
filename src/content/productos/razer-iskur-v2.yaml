@@ -75,7 +75,43 @@ puntosDebiles:
   - "Precio premium"
   - "Reclinación máxima limitada frente a otras gaming"
 fuenteSpecs: "Web oficial Razer (razer.com/gaming-chairs/razer-iskur-v2: asiento 40x45 cm, altura 43,5-53,5 cm, reclinación ~152°, máx 136 kg, altura recomendada 160-200 cm, cuero EPU, 4D, garantía 3 años) + soporte Razer"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Razer Iskur V2"
+  veredicto: "The Iskur V2 is Razer's bet on real lumbar support in a gaming chair: its 6D adjustable integrated lumbar arch follows the lower back instead of a loose cushion, an uncommon feature in the category. It adds 4D armrests, recline up to 152 degrees and a sturdy build. The backrest is EPU synthetic leather, with a fabric variant that breathes more, so in summer the fabric option is worth weighing. For anyone who wants gaming looks with genuine lumbar support, it's one of the most convincing options."
+  idealPara: "Gaming with a genuinely adjustable integrated lumbar, for anyone who wants real back support"
+  comunidad: "Razer entered the ergonomic gaming segment with the Iskur as its lumbar-support proposition, and the V2 refines that arch with more adjustment. It's discussed in gaming and hardware forums as one of the few gaming chairs with a real integrated lumbar rather than a cushion. The usual criticisms are the EPU heat in summer and a high price for a gaming chair."
+  resumenCompra:
+    mejorPara: "Anyone wanting a gaming chair with a genuinely adjustable integrated lumbar."
+    evitarSi: "You need breathable mesh or want a contained price."
+    alternativaDirecta: "Secretlab TITAN Evo if you prefer more size options and a proven build."
+    decisionRapida: "The gaming chair I'd recommend to anyone who wants real back support without giving up the look."
+  puntosFuertes:
+    - "6D adjustable integrated lumbar arch"
+    - "4D armrests"
+    - "Recline up to 152 degrees"
+    - "Sturdy build with an aluminium base"
+    - "Fabric variant available for more breathability"
+  puntosDebiles:
+    - "EPU synthetic-leather backrest, warmer in summer"
+    - "High price for a gaming chair"
+  paraQuienSi:
+    - "Anyone wanting a gaming chair with real adjustable lumbar support"
+    - "Users seeking gaming looks with serious ergonomics"
+    - "Anyone who values a sturdy build and 4D armrests"
+  paraQuienNo:
+    - "Anyone needing breathable mesh for summer"
+    - "A contained budget"
+    - "Anyone who prefers an office ergonomic chair"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 81
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"

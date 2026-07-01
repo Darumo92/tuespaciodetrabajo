@@ -77,7 +77,42 @@ puntosDebiles:
   - "Capacidad máxima de 130 kg"
   - "Precio por encima de la gama de entrada"
 fuenteSpecs: "Web oficial FlexiSpot ES (flexispot.es/silla-de-oficina-ergonomica-de-alta-calidad-c7) + flexispot.com/flexispot-best-ergonomic-office-chair-c7 + techspot.com/review/2757-flexispot-c7-ergonomic-chair"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "FlexiSpot C7"
+  veredicto: "The C7 is the ergonomic chair that best sums up FlexiSpot's philosophy: a lumbar you can fix at a set height or let it adapt itself to your posture, 4D armrests and a ten-year warranty, uncommon in this price bracket. Its seat can be chosen in mesh or padded and it supports up to 130 kg. Its price is high within the mid range, but the ten-year warranty and the adjustable lumbar make up for that investment over long days."
+  idealPara: "Full-day home-office work with a lumbar that locks or adapts itself"
+  comunidad: "Specialist reviews rate it as one of the most complete mid-range mesh chairs, with special mention for the ten-year warranty and the dual nature of its lumbar, which can be locked or left free. The most repeated criticism is that assembly takes time and that very large people sit close to the 130 kg limit."
+  resumenCompra:
+    mejorPara: "Anyone wanting an adjustable or self-adapting lumbar, 4D armrests and a very long warranty."
+    evitarSi: "You're after the lowest price or weigh clearly over 130 kg."
+    alternativaDirecta: "FlexiSpot C7 Lite if you prefer a more compact, cheaper version of the same family."
+    decisionRapida: "A safe mid-range bet for serious home-office work, above all for the ten-year warranty."
+  puntosFuertes:
+    - "Lumbar that locks at a height or adapts itself to posture"
+    - "4D armrests and an adjustable headrest"
+    - "Seat available in mesh or padded"
+    - "Ten-year warranty"
+  puntosDebiles:
+    - "Maximum capacity of 130 kg"
+    - "Price above the entry range"
+  paraQuienSi:
+    - "Full-day home workers who want an adjustable or self-adapting lumbar"
+    - "Users who value 4D armrests and an adjustable headrest"
+    - "Anyone who weighs a long, ten-year warranty heavily"
+  paraQuienNo:
+    - "An entry-level chair budget"
+    - "People over 130 kg"
+    - "Anyone needing documented European EN 1335 certification"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 82
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.baseMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "altura"

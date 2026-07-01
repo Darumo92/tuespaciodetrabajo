@@ -73,7 +73,42 @@ puntosDebiles:
   - "Precio de gama alta"
   - "Varios ajustes (brazos, cabecero, base) son opcionales"
 fuenteSpecs: "Web oficial Actiu (actiu.com/en/seats-contract/office-chairs/tnk-flex) + ficha técnica PDF (actiu.store sillas-oficina-tnk-flex-ficha-tecnica-es.pdf): altura asiento 420-530 mm, ancho asiento 490 mm, fondo asiento 420-490 mm, ancho total 675 mm, sincro 4 posiciones 0-30 grados, tensión 50-120 kg, lumbar adaptable 25 mm, brazos 3D, base poliamida o aluminio diámetro 67,5 cm, cabecero con altura 50 mm e inclinación 20 grados, máximo 150 kg, uso 24h según UNE-EN 1335-1 y BS 5459-2"
-verificadoEn: "2026-06-21"
+en:
+  nombreComercial: "Actiu TNK Flex"
+  veredicto: "The TNK Flex is a Spanish contract chair designed for intensive use of up to 24 hours and users up to 150 kg, and it shows in the build: a glass-fibre-reinforced polypropylene frame, a 360-degree tilting seat that follows movement and a 4-position synchro mechanism from 0 to 30 degrees with adjustable tension. It isn't a chair you buy on Amazon or with flashy gaming specs, but an office tool with intensive-use certification and Alegre Design styling. Its weak point is the price and that the configuration (arms, base, headrest) is chosen separately, so the base chair can feel a little short on adjustments."
+  idealPara: "Intensive 24h office workstations that prioritise active ergonomics and European manufacturing"
+  comunidad: "Recognised in the European office-furniture sector for its build and intensive-use certification. The consensus is that it's a serious contract chair rather than a consumer product, with good durability and award-winning design (Archiproducts, German Design Award), in exchange for a high price and a less direct purchase than Amazon brands."
+  resumenCompra:
+    mejorPara: "Companies or individuals wanting a European contract chair for long days and many years of use."
+    evitarSi: "You're after a tight price or one-click buying on Amazon."
+    alternativaDirecta: "Forma5 Dot Pro, another Spanish contract chair of similar tier with a mesh backrest."
+    decisionRapida: "If you value certified European manufacturing for intensive use and don't mind paying high-end, it's a very solid bet."
+  puntosFuertes:
+    - "Certified for intensive use of up to 24 hours and 150 kg"
+    - "360-degree tilting seat that follows movement"
+    - "4-position synchro mechanism (0 to 30 degrees) with adjustable tension"
+    - "Glass-fibre-reinforced polypropylene frame and optional aluminium base"
+  puntosDebiles:
+    - "High-end price"
+    - "Several adjustments (arms, headrest, base) are optional"
+  paraQuienSi:
+    - "Anyone seated for many hours who wants a chair certified for intensive 24h use"
+    - "Users up to 150 kg seeking a robust build"
+    - "Anyone who values European manufacturing and signature design"
+  paraQuienNo:
+    - "Tight budgets"
+    - "Anyone who wants to buy and receive quickly on Amazon"
+    - "Anyone who prefers a ready-equipped chair without choosing a configuration"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.garantiaAnios"
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionBifma"
 specs:
   tipo: "silla"
   lumbar: "altura"

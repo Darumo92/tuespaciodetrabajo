@@ -78,7 +78,43 @@ puntosDebiles:
   - "Garantía de solo un año"
   - "Respaldo justo para personas muy altas"
 fuenteSpecs: "Web oficial Nouhaus (nouhaus.com/products/ergo3d) + chairssolution.com/nouhaus-ergo3d-review-2025 + ficha wayfair.com (NUHA1004)"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Nouhaus Ergo3D"
+  veredicto: "The Ergo3D is a full-mesh chair with 4D armrests, a dual-piece dynamic lumbar and an aluminium base, an uncommon combination in its price bracket. It assembles in about fifteen minutes and is very adjustable. Its weak points are a one-year warranty, a moderate load capacity and that very tall people, over 1.85 m, find the backrest a little short."
+  idealPara: "Anyone wanting full mesh, 4D armrests and an aluminium base in the mid range"
+  comunidad: "The consensus describes it as a very adjustable, well-finished mesh chair for its price, with a good aluminium base and 4D armrests. The recurring criticisms are the one-year warranty and that people over 1.85 m find the backrest a bit short."
+  resumenCompra:
+    mejorPara: "Anyone wanting full mesh, 4D armrests and an aluminium base without paying a premium price."
+    evitarSi: "You're over 1.85 m or need a long warranty and a high load capacity."
+    alternativaDirecta: "Ticova if you prefer a plush foam seat instead of full mesh."
+    decisionRapida: "A very adjustable, well-built mid-range chair if your height isn't very tall."
+  puntosFuertes:
+    - "Breathable full-mesh backrest"
+    - "4D armrests and an adjustable headrest"
+    - "Dual-piece dynamic lumbar"
+    - "Aluminium base with blade-style castors"
+    - "Quick assembly, around fifteen minutes"
+  puntosDebiles:
+    - "Only a one-year warranty"
+    - "Backrest a bit short for very tall people"
+  paraQuienSi:
+    - "Anyone wanting full mesh with 4D armrests"
+    - "Users who value an aluminium base and quick assembly"
+    - "People up to 1.85 m seeking lots of adjustability"
+  paraQuienNo:
+    - "People over 1.85 m"
+    - "Anyone needing a long warranty and a high load capacity"
+    - "Anyone who prefers a padded foam seat"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 84
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -98,5 +134,5 @@ specs:
   garantiaAnios: 1
   alturaRecomendadaMaxCm: 185
   reposacabezas: "ajustable"
-  montajeMinutos: 15
   certificacionEn1335: null
+  asientoMaterial: "malla integral elástica"

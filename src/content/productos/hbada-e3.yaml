@@ -74,7 +74,41 @@ puntosDebiles:
   - "Base de acero en lugar de aluminio"
   - "Malla firme las primeras semanas"
 fuenteSpecs: "Web oficial Hbada (hbada.com/products/hbada-e3-pro-ergonomic-office-chair) + tienda oficial hbada.eu/products/hbada-e3-pro-ergonomic-office-chair-white"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Hbada E3 Pro"
+  veredicto: "The E3 Pro is among the most adjustable chairs you'll find in the mid range: a three-zone adaptive lumbar with six height levels, a 4D headrest, very mobile armrests and five recline positions up to 140 degrees. It adds a five-year warranty and a good set of certifications. For people 1.55 to 1.95 m who want to fine-tune every support without paying a premium price, it's one of the most versatile in the mid range; its downside is a steel base instead of aluminium and a mesh that takes a few weeks to soften."
+  idealPara: "Anyone seeking maximum adjustments in the mid range: a three-zone lumbar and a 4D headrest"
+  comunidad: "The consensus in reviews and forums places it among the most complete chairs for adjustments in the mid range, with praise for the 4D headrest and the three-zone lumbar. The most repeated criticism is that the base is steel and that the mesh takes a few weeks to lose its initial firmness."
+  resumenCompra:
+    mejorPara: "Anyone wanting to fine-tune lumbar, headrest and armrests in detail without entering premium prices."
+    evitarSi: "You're after an aluminium base or the lowest possible price."
+    alternativaDirecta: "SIHOO Doro C300 if you prefer a dynamic lumbar that adjusts itself without so much manual setup."
+    decisionRapida: "If you like customising every support, it's one of the most versatile mid-range chairs."
+  puntosFuertes:
+    - "Three-zone adaptive lumbar with six height levels"
+    - "Dual-axis 4D headrest"
+    - "Very mobile armrests and adjustable seat depth"
+    - "Five recline positions up to 140 degrees"
+    - "Five-year warranty"
+  puntosDebiles:
+    - "Steel base instead of aluminium"
+    - "Mesh firm for the first few weeks"
+  paraQuienSi:
+    - "People 1.55 to 1.95 m who want to fine-tune every support"
+    - "Anyone who values a 4D headrest and a three-zone lumbar"
+    - "Users seeking many adjustments with a five-year warranty"
+  paraQuienNo:
+    - "Anyone who prefers an aluminium base"
+    - "An entry-level chair budget"
+    - "Anyone wanting a lumbar that adjusts itself without manual setup"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 91
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -99,3 +133,4 @@ specs:
   profundidadAsientoMaxCm: 50
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "malla CloudMesh"

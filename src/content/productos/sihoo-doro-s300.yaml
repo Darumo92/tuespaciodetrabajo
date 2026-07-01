@@ -78,7 +78,41 @@ puntosDebiles:
   - "Precio dentro de la gama media-alta"
   - "Peso elevado del conjunto"
 fuenteSpecs: "Web oficial SIHOO (sihoo.com/en/doro-s300/) + tienda oficial sihoooffice.com/products/sihoo-doro-s300-gravity-defying-ergonomic-chair + reseña gbatemp.net"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "SIHOO Doro S300"
+  veredicto: "The Doro S300 is the large, most adjustable version of the Doro family: a high backrest adjustable across five levels, a dual dynamic lumbar and 6D armrests that few chairs at its price offer. Designed for users up to 1.90 m, its smooth recline mechanism gets close to a zero-gravity feel without jumping to the premium tier. The catch, as with almost the whole family, is that it doesn't hide a low price."
+  idealPara: "Tall people wanting zero-gravity-style recline and 6D armrests"
+  comunidad: "Specialist reviews place it among the most solid options for tall users below the premium tier, highlighting the smooth recline and the 6D armrests. The consensus repeats two warnings: it's quite heavy and its price puts it away from the cheap chairs it's sometimes compared with."
+  resumenCompra:
+    mejorPara: "Anyone 1.70-1.90 m wanting a high backrest, dual lumbar and 6D armrests."
+    evitarSi: "Your budget is for an entry-level chair or you're petite and short."
+    alternativaDirecta: "SIHOO Doro C300 if you don't need the extra-high backrest or the 6D armrests."
+    decisionRapida: "The Doro a tall person who sits for many hours and wants to recline fully would choose."
+  puntosFuertes:
+    - "Dual dynamic lumbar support with adjustable angle"
+    - "Coordinated 6D armrests"
+    - "High backrest adjustable across five levels for the neck"
+    - "Aluminium frame and base"
+    - "Supports up to 150 kg"
+  puntosDebiles:
+    - "Price within the mid-to-high range"
+    - "Heavy overall"
+  paraQuienSi:
+    - "People 1.70-1.90 m who need a genuinely high backrest"
+    - "Anyone wanting to recline fully with a weightless feel"
+    - "Users who value 6D armrests and a dual dynamic lumbar"
+  paraQuienNo:
+    - "An entry-level chair budget"
+    - "Petite or short-build people"
+    - "Anyone wanting the lightest possible chair to assemble alone"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 91
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.alturaRespaldoCm"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "dinamico"
@@ -103,3 +137,4 @@ specs:
   profundidadAsientoMaxCm: 47
   reposacabezas: "ajustable"
   certificacionEn1335: null
+  asientoMaterial: "malla de terciopelo italiano (TPEE de DuPont)"

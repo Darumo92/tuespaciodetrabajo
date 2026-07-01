@@ -75,7 +75,46 @@ puntosDebiles:
   - "Muy pocos ajustes individuales"
   - "Sin reposacabezas en esta versión"
 fuenteSpecs: "Web oficial Humanscale (humanscale.com/products/seating/diffrient-smart-task-office-chair/custom) + btod.com/blog/diffrient-smart-review"
-verificadoEn: "2026-06-20"
+en:
+  nombreComercial: "Humanscale Diffrient Smart"
+  veredicto: "The Diffrient Smart takes Humanscale's philosophy to the extreme: a form-sensing mesh that moulds to the body and a weight-activated recline, with no tension levers or manual lumbar. It's extremely easy to use and there's almost nothing to set up; the trade-off is that anyone wanting fine control of every parameter will find very few adjustments for the price."
+  idealPara: "Anyone wanting a chair that adjusts itself to the body, with no tension levers or manual lumbar"
+  comunidad: "Specialist reviews (BTOD) and users highlight how comfortable the Diffrient Smart is without touching anything: the mesh adapts to the body and the recline responds to weight. The recurring criticism is that the same approach leaves it without manual lumbar or fine adjustments, something not everyone accepts at this price."
+  resumenCompra:
+    mejorPara: "Anyone wanting comfort with nothing to set up, who values mesh that adapts to the body and a 15-year warranty."
+    evitarSi: "You need a manual adjustable lumbar or many individual adjustments, or the low backrest isn't enough."
+    alternativaDirecta: "Humanscale Freedom if you want a headrest and the same lever-free brand approach."
+    decisionRapida: "I'd choose it for its setup-free comfort and long warranty, accepting you give up fine adjustment."
+  puntosFuertes:
+    - "Tri-panel form-sensing mesh that adapts to each user's body"
+    - "Weight-activated recline, no tension levers"
+    - "18 degrees of recline plus 8 of backrest tilt"
+    - "Supports up to 181 kg"
+    - "15-year warranty, 24/7 use"
+    - "Armrests available fixed, adjustable or 4D"
+  puntosDebiles:
+    - "No manual adjustable lumbar"
+    - "Very few individual adjustments"
+    - "No headrest in this version"
+  paraQuienSi:
+    - "Anyone wanting to sit and work without setting anything up"
+    - "Users who value breathable mesh that adapts to the body"
+    - "Anyone seeking a very long warranty (15 years) and high load capacity"
+  paraQuienNo:
+    - "Anyone needing a manual adjustable lumbar"
+    - "Users who want many individual adjustments"
+    - "Anyone needing a headrest or a higher backrest"
+verificadoEn: "2026-06-25"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-01"
+  camposFaltantes:
+    - "specs.anchoAsientoCm"
+    - "specs.alturaRespaldoCm"
+    - "specs.profundidadAsientoMaxCm"
+    - "specs.certificacionBifma"
+    - "specs.certificacionEn1335"
 specs:
   tipo: "silla"
   lumbar: "fijo"
