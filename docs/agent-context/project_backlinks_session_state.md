@@ -5,6 +5,44 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-07-01 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `32`, total `33`. Sin subida desde 2026-06-29.
+- Mantener **0 links en Reddit** hasta confirmar `total_karma >=50`.
+- Revisados los 3 hilos publicados el 2026-06-29 (`old.reddit`, comentario propio + `numchildren`):
+  - `r/OfficeChairs` `1uhylse` y `r/OfficeChairs` `1ui0qst`: comentario propio con `0 children`, sin reply directo.
+  - `r/StandingDesks` `1ui9fhk`: el OP respondió al comentario propio (`ougpt1t`) con un simple "Yeah I like that. Someone in a different thread recommended these bins which seem worth a try". Reply casual de refuerzo, no imprescindible contestar; opcional si se quiere mantener el hilo vivo.
+- Busquedas ES revisadas: `r/askspain` (mudanza Girona-Palma, vaciar ordenador para reciclar) y `r/programacion` (primer laburo IT, paginas trabajo remoto, que carrera estudiar) sin encaje real de ergonomia/home office hoy; no forzar.
+- Candidato ES fuerte fuera de los subs habituales: `r/Ergonomics` `1uj0pc0` — post en español de psicologa mexicana en home office, 80% del dia sentada, pide feedback transparente sobre 4 sillas via links de Amazon.com.mx (`a.co`, no verificables desde el agente). Ya hay una respuesta comparando las 4 opciones por link.
+- Reddit candidatos verificados con old.reddit y textos preparados SIN link:
+  - Prioridad 1 (ES): `r/Ergonomics` `1uj0pc0` — ver contexto arriba. Texto da un checklist de evaluacion (mecanismo synchro, lumbar regulable en altura, profundidad de asiento, reposabrazos ajustables) para que la OP compare sus 4 opciones sin que el agente necesite abrir los links de Amazon.
+  - Prioridad 2 (EN): `r/OfficeChairs` `1uk9vpe` — OP 6'2/340 lb, busca silla amplia sin sentirse apretado, reposabrazos anchos que no molesten al levantarse, presupuesto 1000-1200 USD, pregunta por Libernovo Maxis.
+  - Prioridad 3 (EN): `r/OfficeChairs` `1uk0crw` — OP con hEDS (hipermovilidad), Leap v2 con padding extra, dolor lumbar tras 3-4h, pregunta como saber si una silla le sirve. Respuesta cautelosa sin diagnosticar, con foco en soporte dinamico vs fijo y devolucion tras prueba real; deriva a PT/reumatologo si el dolor persiste.
+- Backups no usados hoy:
+  - `r/StandingDesks` `1ujetcy` — "Thoughts about footrests?"; piernas cansadas en el escritorio, duda si merece la pena un reposapies.
+  - `r/Ergonomics` `1ujlcl0` — dolor lumbar montando nuevo setup ergonomico; buen candidato para manana.
+- Descartados hoy: hilos de galeria/identificacion de silla sin cuerpo suficiente (`r/OfficeChairs` "Guess the chair", "fix or toss?", etc.); `r/homeoffice` sin candidato de pregunta clara (mayoria son fotos de setup).
+- Quora ES via Brave (2 busquedas: "dolor de cuello por monitor teletrabajo" y "escritorio elevable trabajar de pie"):
+  - Candidato nuevo no marcado como respondido, varia tema respecto a preguntas de silla recientes: `https://es.quora.com/Alguna-vez-haz-probado-escritorios-para-trabajar-parado` -> `/escritorios/mejor-escritorio-elevable-electrico/`. Verificado fit del articulo (existe, cubre precio desde 110 EUR, carga soportada, tamanos de tablero, ruido en dB).
+  - Backup si esa ya estuviera respondida: `https://es.quora.com/Por-qué-no-soporto-ni-10-minutos-en-la-silla-cuando-voy-a-programar-y-me-duele-el-cuello-y-la-espalda` -> `/guias/dolor-espalda-trabajar-casa/` (encaje fuerte con nicho developer).
+  - Confirmado que siguen constando como ya respondidas y no se deben reproponer: diferencia sillas oficina/ergonomicas, aspectos a tener en cuenta al comprar silla ergonomica, silla gaming vs oficina, vale la pena silla gamer si trabajas todo el dia, mejor postura para usar computadora.
+- Recomendacion tactica: publicar 3 Reddit sin link (1 ES + 2 EN) y 1 Quora ES con link. Espaciar Quora 24h+ desde la ultima respuesta si el usuario no recuerda cuando fue.
+- Pendiente: usuario publica manualmente y confirma; despues verificar `old.reddit.com/user/Dear_Potato8535/comments/`, anotar IDs visibles y karma. Registrar URL exacta de la respuesta Quora si el usuario puede copiarla.
+
+Update post-publicacion 2026-07-01:
+- Usuario confirma "todo comentado".
+- Verificacion publica con los 3 hilos directos (`old.reddit`): visibles 3/3 comentarios Reddit.
+- Karma visible tras publicacion: post `1`, comment `32`, total `33`; sin subida inmediata (esperable).
+- Sobre `r/Ergonomics` `1uj0pc0` (ES): el borrador se reescribio 2 veces en sesion tras feedback del usuario (primero paso de checklist generico a analisis nombrando modelos por numero, luego a nombrar modelos por marca porque el orden de sus 4 links no coincidia con la numeracion). Se plantea link de afiliado Amazon a Sihoo Doro C300 Pro (silla fuera de sus 4 opciones, no a las suyas) pendiente de que el usuario aporte el link corto; placeholder `[LINK]` sigue sin rellenar en el comentario ya publicado.
+- Publicados SIN link a tuespaciodetrabajo.com (Reddit sigue en regla 0 links hasta karma >=50):
+  - `r/Ergonomics` `1uj0pc0` visible como `ouv0uz9`: https://www.reddit.com/r/Ergonomics/comments/1uj0pc0/busco_recomendación_de_sillas_de_escritorio/ouv0uz9/
+  - `r/OfficeChairs` `1uk9vpe` visible como `ouv5son`: https://www.reddit.com/r/OfficeChairs/comments/1uk9vpe/looking_for_a_chair_that_doesnt_feel_restrictive/ouv5son/
+  - `r/OfficeChairs` `1uk0crw` visible como `ouvaefz`: https://www.reddit.com/r/OfficeChairs/comments/1uk0crw/best_chair_for_lower_back_discomfort/ouvaefz/
+- Decision explicita del usuario 2026-07-01: no anadir enlaces a tuespaciodetrabajo.com en Reddit todavia (mantener regla karma >=50); sí autorizado un link de afiliado Amazon puntual a un producto que NO sea parte de las opciones que el propio OP compartio (para no parecer que se esta vendiendo directamente lo que la OP ya trajo), pendiente del link corto del usuario.
+- Quora: publicacion confirmada manualmente por el usuario; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de la respuesta si el usuario la puede copiar desde Quora.
+- Todos los textos (3 Reddit + 1 Quora) pasados por el skill `humanizer` antes de publicar, a peticion del usuario. Aplicar humanizer por defecto de aqui en adelante en este proyecto, no solo cuando se pida explicitamente.
+
 ## Update 2026-06-29 - plan Reddit/Quora preparado
 
 Contexto operativo:
