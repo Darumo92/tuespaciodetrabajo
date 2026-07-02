@@ -30,7 +30,18 @@ ES/EN, SEO rico (Product schema con specs, rating, oferta cuando haya precio ver
 `tableroFondoCm`, `tableroGrosorCm`, `pantallaControl` (ninguna|boton|led|tactil),
 `memorias`, `anticolision`, `puertoUsb`, `garantiaAnios`, `certificacionTuv`, `certificacionEmc`.
 
-## FASES 1-N — Research + creación de fichas ⬜ PENDIENTE
+## FASE 1 — Lote 1 (cola prioritaria) ✅ COMPLETA (2026-07-02)
+8 fichas creadas (2 subagentes Sonnet en paralelo), media calidad 69.1, confianza "medio":
+`flexispot-ec5-pro` (69) · `flexispot-e1-pro` (69) · `flexispot-e7` (76) ·
+`maidesite-el2-pro-art` (68) · `sanodesk-qs-plus` (66) · `ergear-140x70` (58) ·
+`jummico-140x60` (70) · `ikea-bekant` (77, descatalogado).
+- **Precios: 0 verificados** (Amazon.es bloqueó fetch, error 500). `precioMin/Max: null`,
+  `tramoPrecio` estimado por gama. Pendiente pasada de verificación de precios (script amazon-lookup o manual).
+- Faltan specs recurrentes en varias: `nivelRuidoDb`, `pesoProductoKg`, `tableroGrosorCm`,
+  `segmentosColumna`, certificaciones → subir score en pasada de enriquecido posterior.
+- `imagen: ""` en las 8 (sin imágenes aún).
+
+## FASES 2-N — Research + creación de fichas ⬜ PENDIENTE
 - Batches de 5-8 escritorios por subagente (general-purpose, run_in_background donde paralelice).
 - Por producto: specs reales (motor, velocidad, rango altura, carga, dimensiones+grosor tablero,
   memorias, anticolisión, garantía, peso, materiales) desde fuentes oficiales/tiendas. Nunca inventar.
@@ -43,7 +54,7 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 0 / (objetivo 50-100).
+- Creadas: 8 / (objetivo 50-100).
 
 ## FASE FINAL — Integración ⬜ PENDIENTE
 Acoplamientos silla→escritorio a resolver (diferidos aquí en FASE 0 a propósito):

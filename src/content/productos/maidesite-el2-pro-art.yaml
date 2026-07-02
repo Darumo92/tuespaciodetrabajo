@@ -1,0 +1,148 @@
+tipo: "escritorio"
+nombre: "Maidesite EL2 Pro Art"
+marca: "Maidesite"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico Maidesite EL2 Pro Art con patas ovaladas y doble motor"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 7.5
+  estabilidad: 7
+  capacidadCarga: 8.5
+  rangoAltura: 6
+  materiales: 7
+  calidadPrecio: 8.5
+amazon:
+  asin: "B0DBVFDM3D"
+  buscar: "Maidesite EL2 Pro Art escritorio elevable"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.maidesite.co.uk/products/maidesite-th2-pro-electric-stand-up-desk-frame"
+idealPara: "Quien busca la mayor capacidad de carga (180 kg) con un diseño de pata ovalada más cuidado"
+veredicto: "El EL2 Pro Art de Maidesite destaca por su diseño de patas ovaladas, poco habitual frente a las columnas rectangulares de la mayoría de marcas, y por una capacidad de carga de 180 kg, la más alta de este lote. La velocidad de 35 mm/s y el nivel de ruido por debajo de 45 dB están en línea con los mejores de su categoría, y el panel incluye 4 memorias, puerto USB, bloqueo infantil y recordatorio de postura. Su rango de altura (72-120 cm) es el más corto de los cuatro modelos analizados, lo que lo hace menos versátil para personas muy altas o muy bajas. Maidesite es una marca menos establecida que FlexiSpot en el mercado español, con menos reseñas independientes disponibles, pero las valoraciones de compradores (Trustpilot, tiendas especializadas) son consistentemente positivas en cuanto a robustez y montaje."
+resumenCompra:
+  mejorPara: "Quien prioriza la máxima capacidad de carga (180 kg) y un diseño distinto a las columnas rectangulares habituales."
+  evitarSi: "Eres muy alto o muy bajo y necesitas más rango de altura que 72-120 cm."
+  alternativaDirecta: "FlexiSpot EC5 PRO si prefieres una marca con más recorrido y reseñas independientes en español."
+  decisionRapida: "El escritorio con más capacidad de carga de este lote, ideal para equipos pesados en un espacio de trabajo compacto en altura."
+metodologia:
+  - "Specs tomadas de la ficha oficial de Maidesite para EL2 Pro Art en tuescritorioelevable.es (distribuidor especializado) y de la ficha de Amazon.es (ASIN B0DBVFDM3D)."
+  - "La nota prioriza la capacidad de carga y penaliza el rango de altura, más corto que el resto de modelos analizados en este lote."
+scoreRationale:
+  velocidad: "35 mm/s es una velocidad alta, similar a la del EC5 Pro y algo por debajo del E7."
+  estabilidad: "El diseño de pata ovalada se comercializa como más estable, aunque hay menos reseñas independientes que confirmen esta cualidad frente a marcas más establecidas."
+  capacidadCarga: "180 kg es la capacidad de carga más alta de los cuatro modelos de este lote."
+  rangoAltura: "72-120 cm es el rango más corto analizado, limitando su idoneidad para personas muy altas o muy bajas."
+  materiales: "Acero laminado en frío con tratamiento antioxidante, sin detalles de certificación independiente confirmados."
+  calidadPrecio: "Precio observado en tiendas especializadas (alrededor de 234€) por 180 kg de carga y funciones completas hacen de este modelo una opción de muy buena relación calidad-precio."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Marco elevable MAIDeSITe EL2 Pro Art - tuescritorioelevable.es"
+    url: "https://tuescritorioelevable.es/products/marco-de-escritorio-elevable-electrico-maidesite-el2-pro-art-pluscon"
+    fechaConsulta: "2026-07-02"
+  - tipo: "tienda"
+    nombre: "MAIDeSITe EL2 Pro Art - Amazon.es"
+    url: "https://www.amazon.es/MAIDeSITe-Escritorio-Elevable-El%C3%A9ctrico-Capacidad/dp/B0DBVFDM3D"
+    fechaConsulta: "2026-07-02"
+  - tipo: "oficial"
+    nombre: "Maidesite EL2 Pro Art - Electric Stand Up Desk Frame (MaidesiteUK)"
+    url: "https://www.maidesite.co.uk/products/maidesite-th2-pro-electric-stand-up-desk-frame"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "Rango de altura (72-120 cm) más corto que el resto de escritorios de este lote."
+  - "Menos reseñas independientes en español que FlexiSpot; la marca tiene menor recorrido en el mercado nacional."
+  - "No se ha podido confirmar segmentos de columna, peso del producto ni certificaciones TÜV/EMC."
+  - "Precio no verificado de forma estable en Amazon.es; el dato de referencia procede de un distribuidor especializado."
+alternativas:
+  - slug: "flexispot-ec5-pro"
+    motivo: "Marca con más recorrido y reseñas independientes, aunque con algo menos de capacidad de carga."
+  - slug: "flexispot-e7"
+    motivo: "Más rango de altura y estabilidad contrastada si el presupuesto lo permite."
+  - slug: "flexispot-e1-pro"
+    motivo: "Opción más económica si no necesitas 180 kg de capacidad de carga."
+comunidad: "Las opiniones disponibles sobre la gama Maidesite EL2/TH2 en Trustpilot y tiendas especializadas describen los marcos como sólidos y fáciles de montar, con envíos rápidos y buena atención al cliente. Al ser una marca con menor presencia en medios españoles que FlexiSpot, hay menos reseñas técnicas independientes que analicen a fondo el EL2 Pro Art en concreto, por lo que la valoración de estabilidad se apoya más en la ficha técnica del fabricante que en pruebas de terceros."
+paraQuienSi:
+  - "Quien necesita la máxima capacidad de carga de este lote (180 kg)"
+  - "Quien valora un diseño de pata ovalada diferente a las columnas rectangulares habituales"
+  - "Quien busca puerto USB, bloqueo infantil y recordatorio de postura de serie"
+paraQuienNo:
+  - "Personas muy altas o muy bajas que necesiten un rango de altura mayor de 72-120 cm"
+  - "Quien prefiere una marca con más reseñas independientes contrastadas en España"
+puntosFuertes:
+  - "Capacidad de carga de 180 kg, la más alta de este lote"
+  - "Velocidad de 35 mm/s y ruido por debajo de 45 dB"
+  - "Diseño de pata ovalada distintivo"
+  - "4 memorias, puerto USB, bloqueo infantil y recordatorio de postura"
+  - "Buena relación calidad-precio según precios observados en tiendas especializadas"
+puntosDebiles:
+  - "Rango de altura más corto (72-120 cm) que el resto de modelos analizados"
+  - "Menos reseñas independientes en español que FlexiSpot"
+  - "Certificaciones TÜV/EMC y peso del producto no confirmados"
+fuenteSpecs: "Ficha del distribuidor tuescritorioelevable.es (72-120 cm, 180 kg, 35 mm/s, <45 dB, 4 memorias) + ficha Amazon.es (ASIN B0DBVFDM3D: diseño de pata ovalada, doble motor, 180 kg, 4 controles de memoria) + página oficial Maidesite (control de postura, bloqueo infantil, puerto USB)."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "Maidesite EL2 Pro Art"
+  veredicto: "The Maidesite EL2 Pro Art stands out for its oval-leg design, unusual next to the rectangular columns most brands use, and for a 180 kg load capacity, the highest in this batch. Its 35 mm/s speed and sub-45 dB noise level are on par with the best in its category, and the control panel includes 4 memory presets, a USB port, child lock and posture reminder. Its height range (72-120 cm) is the shortest of the four desks reviewed here, making it less versatile for very tall or very short users. Maidesite is a less established brand than FlexiSpot in the Spanish market, with fewer independent reviews available, but buyer ratings (Trustpilot, specialty retailers) are consistently positive on build quality and assembly."
+  idealPara: "Anyone prioritizing maximum load capacity (180 kg) and a design different from the usual rectangular columns"
+  comunidad: "Available opinions on the Maidesite EL2/TH2 range on Trustpilot and specialty retailers describe the frames as sturdy and easy to assemble, with fast shipping and good customer service. Since it's a brand with less presence in Spanish media than FlexiSpot, there are fewer independent technical reviews that dig deep into the EL2 Pro Art specifically, so the stability rating leans more on the manufacturer's spec sheet than on third-party testing."
+  resumenCompra:
+    mejorPara: "Anyone who wants the highest load capacity in this batch (180 kg) and a design different from the usual rectangular columns."
+    evitarSi: "You're very tall or very short and need more range than 72-120 cm."
+    alternativaDirecta: "FlexiSpot EC5 PRO if you prefer a brand with more track record and independent Spanish-language reviews."
+    decisionRapida: "The desk with the highest load capacity in this batch, ideal for heavy equipment in a height-compact workspace."
+  puntosFuertes:
+    - "180 kg load capacity, the highest in this batch"
+    - "35 mm/s speed and sub-45 dB noise level"
+    - "Distinctive oval-leg design"
+    - "4 memory presets, USB port, child lock and posture reminder"
+    - "Good value for money based on prices seen at specialty retailers"
+  puntosDebiles:
+    - "Shorter height range (72-120 cm) than the other models reviewed"
+    - "Fewer independent Spanish-language reviews than FlexiSpot"
+    - "TÜV/EMC certifications and product weight not confirmed"
+  paraQuienSi:
+    - "Anyone needing the highest load capacity in this batch (180 kg)"
+    - "Anyone who values an oval-leg design different from the usual rectangular columns"
+    - "Anyone wanting a USB port, child lock and posture reminder as standard"
+  paraQuienNo:
+    - "Very tall or very short people needing more than a 72-120 cm range"
+    - "Anyone who prefers a brand with more proven independent reviews in Spain"
+calidadDatos:
+  score: 68
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.tableroMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 35
+  nivelRuidoDb: 45
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 180
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

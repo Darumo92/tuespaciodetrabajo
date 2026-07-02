@@ -1,0 +1,147 @@
+tipo: "escritorio"
+nombre: "FlexiSpot EC5 PRO"
+marca: "FlexiSpot"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico FlexiSpot EC5 PRO con doble motor y 3 columnas"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 7
+  estabilidad: 6.5
+  capacidadCarga: 7.5
+  rangoAltura: 8
+  materiales: 6.5
+  calidadPrecio: 8
+amazon:
+  asin: "B077JPC7PK"
+  buscar: "FlexiSpot EC5 Pro escritorio elevable"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es/escritorio-elevable-E5"
+idealPara: "Quien busca un marco elevable con doble motor y carga alta a precio de gama media"
+veredicto: "El EC5 PRO es uno de los marcos elevables más veteranos del catálogo de FlexiSpot: doble motor, 3 columnas telescópicas y 160 kg de carga máxima, con una velocidad de 3,5 cm/s que en su día se anunciaba un 70% más rápida que la competencia. El rango de 62 a 127 cm es amplio y cubre casi cualquier estatura, y el sistema anticolisión y las memorias de altura funcionan bien en el uso diario. Su punto débil, según reseñas de usuarios, es una ligera pérdida de rigidez en la posición más alta, algo habitual en marcos de esta franja de precio. Para quien no necesita la última generación de FlexiSpot (E7) y quiere doble motor con buena capacidad de carga sin pagar de más, cumple sobradamente."
+resumenCompra:
+  mejorPara: "Quien quiere doble motor y 160 kg de carga sin pagar el precio de la gama E7."
+  evitarSi: "Necesitas máxima rigidez en la posición más alta o vas a poner equipos muy pesados de forma habitual."
+  alternativaDirecta: "FlexiSpot E7 si quieres más estabilidad estructural y estás dispuesto a pagar más."
+  decisionRapida: "Un marco de doble motor fiable y con buena carga para quien prioriza precio sobre el último acabado."
+metodologia:
+  - "Specs tomadas de la ficha de Amazon.es del EC5 Pro, de la web de FlexiSpot y de reseñas especializadas (escritorioelevable.net)."
+  - "La nota prioriza la capacidad de carga y el rango de altura, penalizando la estabilidad en la posición más alta según reseñas de usuarios."
+scoreRationale:
+  velocidad: "3,5 cm/s de elevación, un registro correcto para un marco de gama media."
+  estabilidad: "Reseñas de usuarios señalan ligera pérdida de rigidez en la altura máxima, aunque la vibración es mínima en uso normal."
+  capacidadCarga: "160 kg es un dato alto para su rango de precio, suficiente para varios monitores y equipo pesado."
+  rangoAltura: "62-127 cm cubre un rango muy amplio de estaturas, incluido uso infantil según el fabricante."
+  materiales: "Estructura de acero convencional sin detalles adicionales de acabado documentados por el fabricante."
+  calidadPrecio: "Doble motor y 160 kg de carga a un precio de gama media hacen de este marco una opción de buena relación calidad-precio."
+fuentes:
+  - tipo: "tienda"
+    nombre: "FLEXISPOT EC5 Pro Electric Lift Desk - Amazon.es"
+    url: "https://www.amazon.es/FLEXISPOT-Escritorio-Ajustable-autom%C3%A1tica-Inteligente/dp/B077JPC7PK"
+    fechaConsulta: "2026-07-02"
+  - tipo: "oficial"
+    nombre: "Escritorio elevable E5/EC5 - FlexiSpot España"
+    url: "https://www.flexispot.es/escritorio-elevable-E5"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "FlexiSpot EC5: El Escritorio Elevable de Vanguardia para tu Oficina"
+    url: "https://escritorioelevable.net/flexispot/flexispot-ec5/"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "Ligera pérdida de rigidez percibida en la posición más alta, según reseñas de usuarios."
+  - "El fabricante no detalla nivel de ruido exacto en dB ni peso del marco."
+  - "No se ha podido confirmar el precio actual en Amazon.es; tramo de precio estimado por rango histórico observado en tiendas."
+alternativas:
+  - slug: "flexispot-e7"
+    motivo: "Más estabilidad estructural y mejor acabado si el presupuesto lo permite."
+  - slug: "flexispot-e1-pro"
+    motivo: "Opción más económica si no necesitas 160 kg de carga ni tanto rango de altura."
+  - slug: "maidesite-el2-pro-art"
+    motivo: "Diseño de pata ovalada con más capacidad de carga (180 kg) a un precio similar."
+comunidad: "Las reseñas disponibles (escritorioelevable.net y opiniones de compradores en Amazon) destacan la solidez general del marco, el buen servicio de atención al cliente de FlexiSpot y una relación calidad-precio equilibrada. La crítica más repetida es que a la altura máxima el escritorio pierde algo de rigidez, algo que se nota sobre todo con tableros muy anchos, aunque para el uso diario de oficina la vibración es mínima."
+paraQuienSi:
+  - "Quien quiere doble motor y 160 kg de carga máxima sin pagar la gama premium"
+  - "Personas muy altas o bajas que necesitan un rango de altura amplio (62-127 cm)"
+  - "Quien prioriza precio y no necesita el último acabado de FlexiSpot"
+paraQuienNo:
+  - "Quien va a usar tableros muy anchos o pesados de forma habitual y necesita máxima rigidez"
+  - "Quien busca especificaciones certificadas de ruido o materiales muy detalladas"
+puntosFuertes:
+  - "Doble motor con 160 kg de carga máxima"
+  - "Rango de altura amplio: 62-127 cm"
+  - "Velocidad de elevación de 3,5 cm/s"
+  - "Sistema anticolisión y memorias de altura"
+  - "Garantía de 5 años en estructura y 3 en motor"
+puntosDebiles:
+  - "Ligera pérdida de rigidez en la posición más alta"
+  - "Nivel de ruido no documentado con precisión por el fabricante"
+  - "Precio actual no verificable de forma estable en Amazon.es"
+fuenteSpecs: "Ficha de Amazon.es (ASIN B077JPC7PK: 160 kg, 3 columnas, 2 motores, 62-127 cm, 4 botones de memoria) + web oficial FlexiSpot España (velocidad 3,5 cm/s, garantía 5 años estructura / 3 años motor, anticolisión) + reseña escritorioelevable.net (consumo standby <0,5W, opinión de solidez)."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "FlexiSpot EC5 PRO"
+  veredicto: "The EC5 PRO is one of the longest-running dual-motor frames in FlexiSpot's lineup: three telescopic columns, 160 kg max load and a 3.5 cm/s lift speed that was once marketed as 70% faster than rivals. The 62-127 cm range is wide enough to suit almost any height, and the anti-collision system and memory presets work well day to day. Its weak spot, per user reviews, is a slight loss of rigidity at maximum height, common in frames at this price point. For anyone who doesn't need FlexiSpot's newest E7 generation and wants a dual motor with solid load capacity without overpaying, it delivers comfortably."
+  idealPara: "Anyone wanting a dual-motor frame with high load capacity at a mid-range price"
+  comunidad: "Available reviews (escritorioelevable.net and Amazon buyer feedback) highlight the frame's overall solidity, FlexiSpot's good customer service and a balanced price-to-quality ratio. The most repeated criticism is that the desk loses some rigidity at maximum height, especially with wide tabletops, though vibration is minimal for everyday office use."
+  resumenCompra:
+    mejorPara: "Anyone wanting a dual motor and 160 kg load capacity without paying premium-tier prices."
+    evitarSi: "You need maximum rigidity at full height or will regularly load very heavy equipment."
+    alternativaDirecta: "FlexiSpot E7 if you want more structural stability and can pay more."
+    decisionRapida: "A reliable dual-motor frame with good load capacity for anyone who prioritizes price over the latest finish."
+  puntosFuertes:
+    - "Dual motor with 160 kg maximum load"
+    - "Wide height range: 62-127 cm"
+    - "3.5 cm/s lift speed"
+    - "Anti-collision system and height memory presets"
+    - "5-year frame warranty, 3-year motor warranty"
+  puntosDebiles:
+    - "Slight loss of rigidity at maximum height"
+    - "Noise level not precisely documented by the manufacturer"
+    - "Current price not reliably verifiable on Amazon.es"
+  paraQuienSi:
+    - "Anyone wanting a dual motor and 160 kg max load without paying premium-tier prices"
+    - "Very tall or short people needing a wide height range (62-127 cm)"
+    - "Anyone prioritizing price over FlexiSpot's latest finish"
+  paraQuienNo:
+    - "Anyone regularly using very wide or heavy tabletops who needs maximum rigidity"
+    - "Anyone needing detailed certified noise or material specifications"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.tableroMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 35
+  nivelRuidoDb: null
+  segmentosColumna: 3
+  alturaMinCm: 62
+  alturaMaxCm: 127
+  cargaMaxKg: 160
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "boton"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

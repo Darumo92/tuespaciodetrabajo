@@ -1,0 +1,150 @@
+tipo: "escritorio"
+nombre: "FlexiSpot E1 PRO"
+marca: "FlexiSpot"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico FlexiSpot E1 PRO estructura clásica de doble motor"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6.5
+  capacidadCarga: 5.5
+  rangoAltura: 5.5
+  materiales: 6
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "FlexiSpot E1 Pro escritorio elevable"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es/estructura-de-escritorio-elevable-clasico-e1"
+idealPara: "Quien quiere entrar en los escritorios elevables con doble motor al precio más bajo del catálogo FlexiSpot"
+veredicto: "El E1 PRO es la puerta de entrada de FlexiSpot al escritorio elevable eléctrico: mantiene el doble motor (uno por pata) en lugar del motor único que usan otros modelos de su rango de precio, con un rango de altura de 70 a 119 cm y hasta 100 kg de carga en movimiento. Es más lento que los modelos superiores (unos 25 mm/s) y no incluye puerto USB ni bloqueo infantil, pero las reseñas coinciden en que el movimiento es suave y sin vibraciones para tareas de oficina normales. Si el presupuesto es la prioridad y no necesitas cargar mucho peso ni subir muy alto, es de las opciones más honestas de su tramo."
+resumenCompra:
+  mejorPara: "Quien quiere el escritorio elevable eléctrico más económico de FlexiSpot sin renunciar al doble motor."
+  evitarSi: "Necesitas cargar más de 100 kg en movimiento, mucha velocidad o alturas por encima de 119 cm."
+  alternativaDirecta: "FlexiSpot EC5 PRO si necesitas más rango de altura y capacidad de carga por un poco más de precio."
+  decisionRapida: "El escritorio elevable de FlexiSpot para quien mira el precio antes que las prestaciones."
+metodologia:
+  - "Specs tomadas de la web oficial de FlexiSpot España, fichas de Amazon.es y la reseña de hogarsys.es sobre el E1 Pro."
+  - "La nota prioriza la relación calidad-precio y penaliza velocidad, capacidad de carga y rango de altura frente a modelos superiores de la propia marca."
+scoreRationale:
+  velocidad: "25 mm/s es la velocidad más baja de los modelos analizados en este lote."
+  estabilidad: "Reseñas describen un movimiento suave y sin vibraciones, aunque la estructura de 2 patas es más simple que las de 4 patas de gama alta."
+  capacidadCarga: "100 kg en movimiento (120 kg estático) es suficiente para un puesto de oficina básico pero queda por debajo de EC5, E7 y Maidesite."
+  rangoAltura: "70-119 cm es el rango más corto de este lote, menos apto para personas muy altas."
+  materiales: "Acero SPCC con estructura reforzada en T, un acabado funcional sin detalles premium."
+  calidadPrecio: "Es el modelo más barato con doble motor de FlexiSpot; buena relación calidad-precio para quien no necesita más prestaciones."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Estructura de Escritorio Elevable Clásico E1 - FlexiSpot España"
+    url: "https://www.flexispot.es/estructura-de-escritorio-elevable-clasico-e1"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "Escritorio elevable FlexiSpot E1 Pro: Review & Opiniones"
+    url: "https://www.hogarsys.es/escritorio-elevable-flexispot-e1-pro/"
+    fechaConsulta: "2026-07-02"
+  - tipo: "tienda"
+    nombre: "FLEXISPOT E1 Pro Electric Lift Desk - Amazon.es"
+    url: "https://www.amazon.es/FLEXISPOT-Escritorio-Metal-Marco-Motores/dp/B071V6N4T2"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "Sin puerto USB ni bloqueo infantil en el panel de control, según hogarsys.es."
+  - "Rango de altura y capacidad de carga inferiores a los demás modelos FlexiSpot de este lote."
+  - "El fabricante no especifica nivel de ruido en dB."
+  - "Precio no verificable de forma estable en Amazon.es (varía mucho entre variantes de color y sets con/sin tablero)."
+alternativas:
+  - slug: "flexispot-ec5-pro"
+    motivo: "Más rango de altura y más capacidad de carga por un poco más de precio."
+  - slug: "flexispot-e7"
+    motivo: "Gama superior con mejor estabilidad y garantía si el presupuesto lo permite."
+  - slug: "maidesite-el2-pro-art"
+    motivo: "Más capacidad de carga (180 kg) y diseño más cuidado a precio similar."
+comunidad: "La reseña de hogarsys.es y las valoraciones de compradores en Amazon coinciden en que el E1 Pro se mueve de forma suave y silenciosa, sin las vibraciones que sí aparecen en escritorios de motor único de precio similar. Las quejas más repetidas apuntan a la falta de USB y bloqueo infantil, y a que el rango de altura se queda corto para personas muy altas."
+paraQuienSi:
+  - "Quien busca el escritorio elevable eléctrico más barato de FlexiSpot con doble motor"
+  - "Puestos de oficina básicos sin equipo pesado ni necesidad de mucha altura"
+  - "Quien prioriza el precio sobre la velocidad o la capacidad de carga"
+paraQuienNo:
+  - "Personas muy altas que necesiten superar los 119 cm de altura de trabajo"
+  - "Quien va a cargar más de 100 kg de forma habitual"
+  - "Quien necesita puerto USB o bloqueo infantil en el panel"
+puntosFuertes:
+  - "Doble motor (uno por pata) en el escalón de entrada de FlexiSpot"
+  - "Movimiento suave y silencioso según reseñas"
+  - "4 memorias de altura y pantalla con lectura exacta en cm"
+  - "Garantía de 5 años en estructura y motores, 3 años en electrónica"
+  - "El precio más bajo del catálogo FlexiSpot con doble motor"
+puntosDebiles:
+  - "Velocidad de elevación baja (25 mm/s)"
+  - "Sin puerto USB ni bloqueo infantil"
+  - "Rango de altura y carga inferiores a los demás modelos de este lote"
+fuenteSpecs: "Web oficial FlexiSpot España (rango 70-119 cm, doble motor, garantía 5 años estructura/motor y 3 años electrónica) + reseña hogarsys.es (velocidad ~25 mm/s, carga estática 120 kg / dinámica 100 kg, pantalla digital, sin USB ni bloqueo infantil) + ficha Amazon.es (ASIN B071V6N4T2, 2 motores y 2 patas, 4 funciones de memoria)."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "FlexiSpot E1 PRO"
+  veredicto: "The E1 PRO is FlexiSpot's entry point into electric standing desks: it keeps the dual motor (one per leg) instead of the single motor many desks at this price use, with a 70-119 cm height range and up to 100 kg of dynamic load. It's slower than the higher-tier models (around 25 mm/s) and skips USB ports and a child lock, but reviews agree the movement is smooth and vibration-free for normal office tasks. If budget is the priority and you don't need to carry much weight or reach very high, it's one of the more honest options in its bracket."
+  idealPara: "Anyone wanting FlexiSpot's cheapest electric standing desk without giving up the dual motor"
+  comunidad: "The hogarsys.es review and Amazon buyer ratings agree the E1 Pro moves smoothly and quietly, without the vibration that appears on similarly priced single-motor desks. The most repeated complaints point to the lack of USB and child lock, and a height range that falls short for very tall people."
+  resumenCompra:
+    mejorPara: "Anyone looking for FlexiSpot's cheapest electric standing desk with a dual motor."
+    evitarSi: "You need to carry more than 100 kg in motion, more speed, or heights above 119 cm."
+    alternativaDirecta: "FlexiSpot EC5 PRO if you need more height range and load capacity for a bit more money."
+    decisionRapida: "The FlexiSpot desk for anyone who looks at price before features."
+  puntosFuertes:
+    - "Dual motor (one per leg) at FlexiSpot's entry tier"
+    - "Smooth, quiet movement per reviews"
+    - "4 height memory presets and a display with exact cm reading"
+    - "5-year warranty on frame and motors, 3 years on electronics"
+    - "The lowest price in FlexiSpot's dual-motor lineup"
+  puntosDebiles:
+    - "Low lift speed (25 mm/s)"
+    - "No USB port or child lock"
+    - "Height range and load capacity below other desks in this batch"
+  paraQuienSi:
+    - "Anyone looking for FlexiSpot's cheapest electric standing desk with a dual motor"
+    - "Basic office setups without heavy equipment or need for extra height"
+    - "Anyone who prioritizes price over speed or load capacity"
+  paraQuienNo:
+    - "Very tall people who need to exceed 119 cm of working height"
+    - "Anyone who will regularly load more than 100 kg"
+    - "Anyone needing a USB port or child lock on the control panel"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.tableroMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 25
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 70
+  alturaMaxCm: 119
+  cargaMaxKg: 100
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: false
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

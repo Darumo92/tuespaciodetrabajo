@@ -1,0 +1,150 @@
+tipo: "escritorio"
+nombre: "SANODESK QS+ 160x60 cm (con tablero)"
+marca: "SANODESK"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico SANODESK QS+ con tablero de 160x60 cm y pantalla de control"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 5.5
+  estabilidad: 6
+  capacidadCarga: 4.5
+  rangoAltura: 5.5
+  materiales: 5.5
+  calidadPrecio: 7.5
+amazon:
+  asin: "B0GN24B9LF"
+  buscar: "SANODESK QS+ 160x60 escritorio elevable eléctrico con tablero"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Teletrabajadores que quieren un escritorio elevable completo (estructura + tablero) barato y con pantalla de memorias"
+veredicto: "El QS+ es la entrada de SANODESK a un precio que roza el límite de lo razonable para un escritorio con tablero incluido: motor único, dos posiciones de memoria con pantalla LED, anticolisión y un tablero de 160x60 cm certificado FSC. La pega principal es la que comparten casi todos los escritorios de esta gama: capacidad de carga limitada (60 kg) y un motor sencillo que no es tan rápido ni tan silencioso como los de doble motor. Para un setup de un monitor y poco peso encima, cumple de sobra; si cargas dos pantallas grandes y accesorios pesados, se queda corto."
+resumenCompra:
+  mejorPara: "Primer escritorio elevable completo con presupuesto ajustado y un solo monitor."
+  evitarSi: "Necesitas cargar más de 60 kg o quieres el ajuste más rápido posible."
+  alternativaDirecta: "ErGear 140x70 si prefieres más carga (80 kg) por un precio similar, aunque con panel más básico."
+  decisionRapida: "Buena opción de entrada si el precio manda y el tablero incluido te ahorra una compra aparte."
+metodologia:
+  - "Specs cruzadas entre varias fichas de Amazon.es/Amazon.de del mismo modelo (ASIN equivalentes 160x60), reseñas especializadas (Xataka, entornoversatil.com) y fichas de tienda (Kaufland.de) que documentan la versión 160x60 con tablero."
+  - "La nota prioriza que sea un pack completo (estructura + tablero) a precio de entrada, penalizando la carga máxima baja y la falta de datos de velocidad exacta."
+scoreRationale:
+  velocidad: "Motor único; no hay dato oficial de mm/s, pero los motores simples de esta gama rinden por debajo de los de doble motor."
+  estabilidad: "Reseñas describen ajuste suave sin tambaleo relevante para un setup ligero, aunque no es una estructura reforzada."
+  capacidadCarga: "60 kg es de lo más bajo del mercado de escritorios elevables; limita a un monitor y accesorios ligeros."
+  rangoAltura: "73,5-118 cm cubre la mayoría de estaturas pero se queda corto frente a rangos de 65-125 cm de otros modelos."
+  materiales: "Tablero de aglomerado certificado FSC con acabado correcto pero sin pretensiones; estructura de acero estándar."
+  calidadPrecio: "Escritorio completo con pantalla, memorias y anticolisión a precio de entrada: buena relación calidad-precio dentro de su categoría."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — SANODESK 160x60 cm Electric Lift Desk with Table Top"
+    url: "https://www.amazon.es/dp/B0GN24B9LF"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "entornoversatil.com — Sanodesk QS: Escritorio Elevable con 5 tamaños reales"
+    url: "https://entornoversatil.com/sanodesk-qs/"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "Xataka — Comprar un escritorio barato no significa renunciar a tener uno elevable"
+    url: "https://www.xataka.com/seleccion/comprar-escritorio-barato-no-significa-renunciar-a-tener-uno-elevable-este-se-queda-debajo-180-euros"
+    fechaConsulta: "2026-07-02"
+  - tipo: "tienda"
+    nombre: "Kaufland.de — SANODESK Höhenverstellbarer Schreibtisch 160x60cm"
+    url: "https://www.kaufland.de/product/474223763/"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "Capacidad de carga de solo 60 kg, de las más bajas de su categoría."
+  - "No hay dato oficial de velocidad de elevación en mm/s ni de grosor exacto del tablero."
+  - "El precio fluctúa con frecuencia entre distintas ofertas de Amazon; verifica el precio actual antes de comprar."
+alternativas:
+  - slug: "ergear-140x70"
+    motivo: "Más capacidad de carga (80 kg) a un precio parecido, aunque con panel de control más básico."
+  - slug: "jummico-140x60"
+    motivo: "Todavía más barato si el presupuesto es la prioridad número uno."
+comunidad: "Las reseñas en tiendas online y blogs especializados en español destacan el ajuste suave y silencioso del motor y valoran que incluya tablero, pantalla de memorias y anticolisión a un precio de entrada. Las críticas se centran en la capacidad de carga limitada y en que el acabado del tablero es correcto pero no destaca frente a opciones de más gama."
+paraQuienSi:
+  - "Quien busca un escritorio elevable completo (estructura + tablero) sin gastar mucho"
+  - "Setups de un monitor con poco peso adicional"
+  - "Quien valora tener pantalla de memorias y anticolisión aunque el motor sea sencillo"
+paraQuienNo:
+  - "Quien necesita cargar más de 60 kg (dos monitores grandes, brazo articulado pesado, impresora)"
+  - "Quien quiere el ajuste más rápido y silencioso posible"
+  - "Quien necesita un tablero de gran fondo (60 cm puede quedarse justo con monitores grandes)"
+puntosFuertes:
+  - "Escritorio completo: estructura + tablero de 160x60 cm incluido"
+  - "Pantalla de control con dos posiciones de memoria"
+  - "Sistema anticolisión"
+  - "Tablero certificado FSC"
+  - "Precio de entrada dentro de los escritorios elevables con tablero"
+puntosDebiles:
+  - "Capacidad de carga de solo 60 kg"
+  - "Motor único, sin dato oficial de velocidad"
+  - "Sin información pública de garantía específica del modelo"
+fuenteSpecs: "Specs cruzadas entre listados de Amazon.es/Amazon.de para el mismo modelo 160x60 con tablero (altura 73,5-118 cm, carga 60 kg, ruido <40 dB, memoria 2 posiciones, anticolisión, seguro infantil), reseña de entornoversatil.com sobre la gama Sanodesk QS (motor único, tablero FSC, hasta 5 tamaños) y Xataka (confirmación de anticolisión y memoria por pantalla). No se ha encontrado velocidad en mm/s ni grosor de tablero verificado, por lo que quedan en null."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "SANODESK QS+ 160x60 cm (with tabletop)"
+  veredicto: "The QS+ is SANODESK's entry point at a price that's hard to beat for a desk that already includes the tabletop: single motor, two memory presets with an LED display, anti-collision, and a 160x60 cm FSC-certified top. The main catch is one shared by most desks in this price bracket: limited load capacity (60 kg) and a single motor that's neither as fast nor as quiet as dual-motor setups. For a single-monitor setup with light accessories it's more than enough; if you're carrying two large screens and heavy accessories, it comes up short."
+  idealPara: "Remote workers who want a complete elevated desk (frame plus tabletop) that's cheap and has a memory display"
+  comunidad: "Reviews on Spanish-language stores and specialist blogs highlight the smooth, quiet motor adjustment and appreciate that it includes tabletop, memory display, and anti-collision at an entry price. Criticism centers on the limited load capacity and a tabletop finish that's fine but doesn't stand out against higher-tier options."
+  resumenCompra:
+    mejorPara: "A first complete standing desk on a tight budget with a single monitor."
+    evitarSi: "You need to hold more than 60 kg or want the fastest possible adjustment."
+    alternativaDirecta: "ErGear 140x70 if you want more load capacity (80 kg) at a similar price, though with a more basic control panel."
+    decisionRapida: "A solid entry-level pick if price is the priority and the included tabletop saves you a separate purchase."
+  puntosFuertes:
+    - "Complete desk: frame plus 160x60 cm tabletop included"
+    - "Control display with two memory presets"
+    - "Anti-collision system"
+    - "FSC-certified tabletop"
+    - "Entry-level price among desks that include a tabletop"
+  puntosDebiles:
+    - "Load capacity of only 60 kg"
+    - "Single motor, no official speed figure published"
+    - "No public warranty information specific to this model"
+  paraQuienSi:
+    - "Anyone wanting a complete elevated desk (frame plus tabletop) without spending much"
+    - "Single-monitor setups with little extra weight"
+    - "Anyone who values a memory display and anti-collision even with a basic single motor"
+  paraQuienNo:
+    - "Anyone needing to hold more than 60 kg (two large monitors, a heavy monitor arm, a printer)"
+    - "Anyone wanting the fastest, quietest possible adjustment"
+    - "Anyone needing a deep tabletop (60 cm can feel tight with large monitors)"
+calidadDatos:
+  score: 66
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 40
+  segmentosColumna: null
+  alturaMinCm: 73.5
+  alturaMaxCm: 118
+  cargaMaxKg: 60
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado certificado FSC"
+  tableroAnchoCm: 160
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 2
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

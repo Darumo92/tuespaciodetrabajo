@@ -1,0 +1,148 @@
+tipo: "escritorio"
+nombre: "ErGear Escritorio Elevable Eléctrico 140x70 cm"
+marca: "ErGear"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico ErGear con tablero ensamblado de 140x70 cm y panel de 4 memorias"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 5.5
+  estabilidad: 6
+  capacidadCarga: 5.5
+  rangoAltura: 5.5
+  materiales: 5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "ErGear escritorio elevable eléctrico 140x70 cm panel 4 memorias"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere probar el trabajo de pie con un escritorio completo y presupuesto ajustado, sin renunciar a memorias de altura"
+veredicto: "El ErGear 140x70 es de los escritorios elevables completos más baratos con buena nota real de usuarios. Motor único que aguanta 80 kg (más que muchos rivales de su precio), panel con 4 memorias y un tablero ya ensamblado que ahorra tiempo de montaje. El gancho lateral para mochila o auriculares es el tipo de detalle que no esperas a este precio. Lo que se resiente es el tablero, dividido en dos piezas que se notan al tacto y algo fino si apoyas mucho peso en el centro, y el ruido del motor, algo más presente que en marcas de gama media como FlexiSpot. Para un primer escritorio elevable sin complicarse, cumple con nota."
+resumenCompra:
+  mejorPara: "Un primer escritorio elevable completo, con 4 memorias, sin gastar mucho."
+  evitarSi: "Necesitas un tablero de una sola pieza o el motor más silencioso posible."
+  alternativaDirecta: "JUMMICO 140x60 si el precio manda por encima de todo; SANODESK QS+ si prefieres pantalla de memorias en vez de solo botones."
+  decisionRapida: "El más equilibrado en carga (80 kg) y memorias (4) entre los escritorios elevables baratos con tablero incluido."
+metodologia:
+  - "Specs cruzadas entre el listado de Amazon.es del ASIN B0FMQTKZKD, la ficha de tuescritorioelevable.es y la reseña de entornoversatil.com sobre el ErGear compacto."
+  - "La nota prioriza la relación entre capacidad de carga, número de memorias y precio; penaliza el tablero en dos piezas y la falta de anticolisión confirmada."
+scoreRationale:
+  velocidad: "Motor único sin dato oficial de mm/s; reseñas describen el ajuste como fiable pero no rápido."
+  estabilidad: "Marco de acero con buena estabilidad en alturas medias según reseñas; no hay dato de tambaleo en alturas máximas."
+  capacidadCarga: "80 kg es notablemente mejor que otros escritorios de su rango de precio (SANODESK QS+ o JUMMICO, ambos en 60-70 kg)."
+  rangoAltura: "72-118 cm es un rango correcto pero no destaca frente a modelos de gama media (58-125 cm)."
+  materiales: "Tablero en dos piezas con la unión visible al tacto; estructura de acero resistente pero sin acabados premium."
+  calidadPrecio: "Con 4 memorias, 80 kg de carga y tablero ensamblado por debajo de 200 EUR, es de las mejores relaciones calidad-precio de la categoría."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — ErGear Electric Lift Desk 140x70 cm con panel de 4 memorias"
+    url: "https://www.amazon.es/dp/B0FMQTKZKD"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "entornoversatil.com — Compacto, sencillo y barato: Escritorio Elevable ErGear"
+    url: "https://entornoversatil.com/ergear/"
+    fechaConsulta: "2026-07-02"
+  - tipo: "tienda"
+    nombre: "tuescritorioelevable.es — ErGear Escritorio Elevable Eléctrico 140x70 cm"
+    url: "https://tuescritorioelevable.es/products/ergear-escritorio-elevable-electrico-140x70-cm-marron-con-panel-de-4-memorias-y-gancho"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "El tablero viene en dos piezas unidas, algo perceptible al tacto y a la vista."
+  - "No se ha podido confirmar si incluye sistema anticolisión ni el grosor exacto del tablero."
+  - "Sin gestión de cables integrada según reseñas consultadas."
+alternativas:
+  - slug: "sanodesk-qs-plus"
+    motivo: "Pantalla de memorias en lugar de solo botones, aunque con menor capacidad de carga (60 kg)."
+  - slug: "jummico-140x60"
+    motivo: "Todavía más barato y con puerto USB integrado, a cambio de menor capacidad de carga y tablero más estrecho."
+comunidad: "Las reseñas destacan que el motor apenas se nota salvo con carga máxima, que la estabilidad en alturas medias es buena para el precio y que el marco de acero transmite firmeza. Las quejas más repetidas son la falta de gestión de cables integrada y que la unión de las dos piezas del tablero se nota al tacto, aunque no afecta al uso diario."
+paraQuienSi:
+  - "Teletrabajadores con presupuesto limitado que quieren probar un escritorio elevable completo"
+  - "Quien necesita más carga (80 kg) que la media de escritorios de su precio"
+  - "Quien valora el gancho lateral para mochila o auriculares"
+paraQuienNo:
+  - "Quien quiere un tablero de una sola pieza sin junta visible"
+  - "Quien necesita el motor más silencioso del mercado"
+  - "Quien necesita gestión de cables integrada de fábrica"
+puntosFuertes:
+  - "80 kg de capacidad de carga, por encima de la media de su rango de precio"
+  - "Panel con 4 memorias de altura"
+  - "Tablero ensamblado de fábrica, montaje más rápido"
+  - "Gancho lateral para mochila o auriculares"
+  - "Buena relación calidad-precio dentro de los escritorios elevables completos"
+puntosDebiles:
+  - "Tablero en dos piezas con la unión perceptible"
+  - "Motor algo más ruidoso que marcas de gama media"
+  - "Sin gestión de cables integrada"
+fuenteSpecs: "Specs del listado de Amazon.es para el ASIN B0FMQTKZKD (140x70 cm, altura 72-118 cm, carga 80 kg, ruido <50 dB, panel de 4 memorias, marco de acero), contrastadas con la reseña de entornoversatil.com (motor único, estabilidad en alturas medias, tablero en dos piezas, sin gestión de cables) y la ficha de tuescritorioelevable.es. No se ha confirmado anticolisión, grosor de tablero, garantía ni certificaciones, por lo que quedan en null."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "ErGear Electric Standing Desk 140x70 cm"
+  veredicto: "The ErGear 140x70 is one of the cheapest complete standing desks with a solid real-user rating. A single motor that handles 80 kg (more than many rivals at this price), a 4-memory panel, and a pre-assembled tabletop that saves setup time. The side hook for a backpack or headphones is the kind of detail you don't expect at this price. What suffers is the tabletop, split into two pieces you can feel at the seam and somewhat thin if you lean a lot of weight on the center, plus a motor that's a touch louder than mid-range brands like FlexiSpot. As a first standing desk without complications, it delivers."
+  idealPara: "Anyone wanting to try working standing with a complete desk on a tight budget, without giving up height memory presets"
+  comunidad: "Reviews highlight that the motor is barely noticeable except at max load, that stability at mid-heights is good for the price, and that the steel frame feels solid. The most repeated complaints are the lack of built-in cable management and that the join between the two tabletop pieces is noticeable to the touch, though it doesn't affect daily use."
+  resumenCompra:
+    mejorPara: "A first complete standing desk with 4 memory presets without spending much."
+    evitarSi: "You need a single-piece tabletop or the quietest possible motor."
+    alternativaDirecta: "JUMMICO 140x60 if price rules above all; SANODESK QS+ if you prefer a memory display over plain buttons."
+    decisionRapida: "The most balanced pick on load capacity (80 kg) and memory presets (4) among cheap complete standing desks."
+  puntosFuertes:
+    - "80 kg load capacity, above average for its price range"
+    - "4-memory height panel"
+    - "Factory-assembled tabletop, faster setup"
+    - "Side hook for backpack or headphones"
+    - "Strong value for money among complete standing desks"
+  puntosDebiles:
+    - "Two-piece tabletop with a noticeable seam"
+    - "Motor somewhat louder than mid-range brands"
+    - "No built-in cable management"
+  paraQuienSi:
+    - "Remote workers on a tight budget wanting to try a complete standing desk"
+    - "Anyone needing more load capacity (80 kg) than the average desk at this price"
+    - "Anyone who values the side hook for a backpack or headphones"
+  paraQuienNo:
+    - "Anyone wanting a single-piece tabletop without a visible seam"
+    - "Anyone needing the quietest motor on the market"
+    - "Anyone needing factory-built cable management"
+calidadDatos:
+  score: 58
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.tableroMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 118
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: null
+  tableroAnchoCm: 140
+  tableroFondoCm: 70
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

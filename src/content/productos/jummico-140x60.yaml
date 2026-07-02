@@ -1,0 +1,146 @@
+tipo: "escritorio"
+nombre: "JUMMICO Escritorio Elevable Eléctrico 140x60 cm con USB"
+marca: "JUMMICO"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico JUMMICO de 140x60 cm con puerto USB y panel de memorias"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 4.5
+  estabilidad: 4.5
+  capacidadCarga: 4.5
+  rangoAltura: 5.5
+  materiales: 4.5
+  calidadPrecio: 8.5
+amazon:
+  asin: "B0C1WYNCXP"
+  buscar: "JUMMICO escritorio elevable eléctrico 140x60 USB memorias"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://jummico.store/en/"
+idealPara: "Quien quiere probar un escritorio elevable eléctrico completo gastando lo mínimo posible"
+veredicto: "El JUMMICO 140x60 es el escritorio elevable eléctrico más barato de esta comparativa y, aun así, viene con más de lo esperado a este precio: puerto USB integrado, memorias de altura y protección anticolisión certificada TÜV/CE/BIFMA/FSC según el fabricante. La contrapartida es previsible: capacidad de carga limitada (70 kg), tablero de solo 60 cm de fondo que se queda justo con un monitor grande, y menor estabilidad que estructuras más caras. Si lo que necesitas es empezar a alternar sentado y de pie sin gastarte mucho, cumple su función; si buscas una estructura robusta para un setup con varias pantallas, hay opciones mejores por más dinero."
+resumenCompra:
+  mejorPara: "Probar un escritorio elevable eléctrico completo con el mínimo desembolso."
+  evitarSi: "Necesitas cargar mucho peso o un tablero de más de 60 cm de fondo."
+  alternativaDirecta: "ErGear 140x70 si puedes subir un poco el presupuesto y quieres más carga y fondo de tablero."
+  decisionRapida: "El más barato de la comparativa con tablero, USB y anticolisión incluidos; ideal para probar sin comprometerse."
+metodologia:
+  - "Specs cruzadas entre el listado de Amazon.es/Amazon.it/Amazon.de del ASIN B0C1WYNCXP y la web oficial de JUMMICO (jummico.store), que confirma certificaciones TÜV/CE/BIFMA/FSC a nivel de marca."
+  - "La nota prioriza el precio de entrada y las funciones incluidas (USB, anticolisión, memorias) por encima de la capacidad de carga y el fondo de tablero, que son los puntos más débiles del modelo."
+scoreRationale:
+  velocidad: "Motor sencillo sin dato oficial de mm/s; reseñas y comparativas lo describen como más lento que rivales de más precio."
+  estabilidad: "El tablero de 60 cm de fondo y la estructura de entrada dan menos estabilidad que modelos con más carga y columnas más gruesas."
+  capacidadCarga: "70 kg es de lo más bajo de la categoría, similar al SANODESK QS+ y por debajo del ErGear (80 kg)."
+  rangoAltura: "73-118 cm es un rango correcto pero no destaca frente a escritorios de gama media."
+  materiales: "Tablero de madera de acabado básico y estructura metálica de entrada; suficiente para el precio pero sin pretensiones."
+  calidadPrecio: "Con tablero, USB, memorias y anticolisión por el precio más bajo de la comparativa, es la mejor relación calidad-precio pura del mercado."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — JUMMICO Electric Lift Desk with USB Charger 140x60 cm"
+    url: "https://www.amazon.es/dp/B0C1WYNCXP"
+    fechaConsulta: "2026-07-02"
+  - tipo: "oficial"
+    nombre: "JUMMICO Store — Height-adjustable desks"
+    url: "https://jummico.store/en/"
+    fechaConsulta: "2026-07-02"
+  - tipo: "review"
+    nombre: "eTeknix — JUMMICO Electric Standing Desk"
+    url: "https://www.eteknix.com/jummico-electric-standing-desk/"
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - "Capacidad de carga de 70 kg, entre las más bajas de la categoría."
+  - "Tablero de 60 cm de fondo, justo para monitores grandes o brazos articulados."
+  - "No se ha confirmado el grosor exacto del tablero ni la garantía específica de este tamaño."
+alternativas:
+  - slug: "ergear-140x70"
+    motivo: "Más capacidad de carga (80 kg) y tablero más profundo (70 cm) por un poco más de precio."
+  - slug: "sanodesk-qs-plus"
+    motivo: "Pantalla de memorias LED en lugar de solo botones, con tablero algo más ancho."
+comunidad: "Las reseñas de compradores destacan que es un buen primer escritorio elevable: fácil de montar (menos de 30 minutos según varios usuarios), memorias que funcionan bien y una relación calidad-precio muy por encima de lo esperado a este precio. Las quejas más repetidas son la caja de alimentación, que queda colgando sin sujeción bajo el escritorio, y que el tablero se queda corto de fondo con monitores grandes."
+paraQuienSi:
+  - "Quien quiere probar el trabajo de pie sin gastar mucho"
+  - "Quien valora tener puerto USB integrado en la estructura"
+  - "Setups ligeros de un monitor o portátil"
+paraQuienNo:
+  - "Quien necesita cargar más de 70 kg"
+  - "Quien usa un monitor grande o brazo articulado y necesita más de 60 cm de fondo"
+  - "Quien prioriza la máxima estabilidad en posiciones altas"
+puntosFuertes:
+  - "El más barato de la comparativa con tablero incluido"
+  - "Puerto USB de carga integrado en la estructura"
+  - "Panel con memorias de altura y protección anticolisión"
+  - "Certificaciones de marca TÜV/CE/BIFMA/FSC"
+  - "Montaje declarado en menos de 30 minutos"
+puntosDebiles:
+  - "Capacidad de carga de solo 70 kg"
+  - "Tablero de 60 cm de fondo, justo con monitores grandes"
+  - "Caja de alimentación sin sujeción bajo el escritorio, según reseñas de usuarios"
+fuenteSpecs: "Specs del listado de Amazon para el ASIN B0C1WYNCXP (140x60 cm, altura 73-118 cm, ruido <40 dB, USB integrado, memoria y anticolisión), confirmadas y ampliadas con la web oficial de JUMMICO (certificaciones TÜV/CE/BIFMA/FSC, motor probado más de 10.000 ciclos a nivel de marca) y la reseña de eTeknix. No se ha confirmado capacidad de carga exacta de este ASIN concreto (se usa la cifra de 70 kg reportada de forma consistente para el tamaño 140x60 en varias fuentes), grosor de tablero ni garantía específica, por lo que quedan en null donde no hay dato firme."
+verificadoEn: "2026-07-02"
+en:
+  nombreComercial: "JUMMICO Electric Standing Desk 140x60 cm with USB"
+  veredicto: "The JUMMICO 140x60 is the cheapest electric standing desk in this comparison and still comes with more than you'd expect at this price: a built-in USB port, height memory presets, and anti-collision protection, with brand-level TÜV/CE/BIFMA/FSC certification claimed by the manufacturer. The trade-off is predictable: limited load capacity (70 kg), a 60 cm deep tabletop that feels tight with a large monitor, and less stability than pricier frames. If you just need to start alternating sitting and standing without spending much, it does the job; if you want a sturdy frame for a multi-monitor setup, there are better options for more money."
+  idealPara: "Anyone wanting to try a complete electric standing desk while spending as little as possible"
+  comunidad: "Buyer reviews highlight that it's a good first standing desk: easy to assemble (under 30 minutes according to several users), memory presets that work well, and value for money well above what you'd expect at this price. The most repeated complaints are the power brick hanging unsecured under the desk and the tabletop feeling shallow with large monitors."
+  resumenCompra:
+    mejorPara: "Trying a complete electric standing desk with the smallest possible outlay."
+    evitarSi: "You need to carry a lot of weight or a tabletop deeper than 60 cm."
+    alternativaDirecta: "ErGear 140x70 if you can stretch the budget a bit for more load capacity and tabletop depth."
+    decisionRapida: "The cheapest in the comparison with tabletop, USB, and anti-collision included; ideal for trying it out without committing much."
+  puntosFuertes:
+    - "The cheapest in the comparison with tabletop included"
+    - "Built-in USB charging port on the frame"
+    - "Panel with height memory presets and anti-collision protection"
+    - "Brand-level TÜV/CE/BIFMA/FSC certifications"
+    - "Assembly claimed under 30 minutes"
+  puntosDebiles:
+    - "Load capacity of only 70 kg"
+    - "60 cm deep tabletop, tight with large monitors"
+    - "Power brick left unsecured under the desk, per user reviews"
+  paraQuienSi:
+    - "Anyone wanting to try standing work without spending much"
+    - "Anyone who values a built-in USB port on the frame"
+    - "Light setups with a single monitor or laptop"
+  paraQuienNo:
+    - "Anyone needing to carry more than 70 kg"
+    - "Anyone using a large monitor or arm mount needing more than 60 cm of depth"
+    - "Anyone prioritizing maximum stability at tall heights"
+calidadDatos:
+  score: 70
+  confianza: "medio"
+  enriquecidoEn: "2026-07-02"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.tableroMaterial"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 40
+  segmentosColumna: null
+  alturaMinCm: 73
+  alturaMaxCm: 118
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: null
+  tableroAnchoCm: 140
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "boton"
+  memorias: 2
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: null
+  certificacionTuv: true
+  certificacionEmc: null
