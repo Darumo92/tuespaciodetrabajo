@@ -451,13 +451,18 @@ export interface EntradaIndice {
   url: string;
 }
 
+const EN_TIPO_SLUG: Record<string, string> = { silla: 'chairs', escritorio: 'standing-desks' };
+const EN_TIPO_SLUG_REVERSE: Record<string, string> = Object.fromEntries(
+  Object.entries(EN_TIPO_SLUG).map(([es, en]) => [en, es]),
+);
+
 export function localizedTipoSlug(tipo: string, locale: Locale = DEFAULT_LOCALE): string {
-  if (locale === 'en' && tipo === 'silla') return 'chairs';
+  if (locale === 'en') return EN_TIPO_SLUG[tipo] ?? tipo;
   return tipo;
 }
 
 export function sourceTipoSlug(localizedTipo: string, locale: Locale = DEFAULT_LOCALE): string {
-  if (locale === 'en' && localizedTipo === 'chairs') return 'silla';
+  if (locale === 'en') return EN_TIPO_SLUG_REVERSE[localizedTipo] ?? localizedTipo;
   return localizedTipo;
 }
 
