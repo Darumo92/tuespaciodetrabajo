@@ -32,27 +32,27 @@ const paresVs = seleccionarParesVs(productos, 16);
 const itemList = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Ergonomic office chairs for home offices',
+  name: cfg.enLabels.catalogSchemaName,
   numberOfItems: productos.length,
   itemListElement: productos.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${siteUrl}${catalogPath(locale, tipo)}${p.slug}/`, name: localizedProductName(p, locale) })),
 };
 ---
 <Base
-  title="Ergonomic Office Chairs | Product Catalog"
-  description="Compare ergonomic office chairs with verified specs, editorial scores, price tiers and side-by-side product comparisons."
+  title={cfg.enLabels.catalogTitle}
+  description={cfg.enLabels.catalogDescription}
   canonical={absoluteUrl(pagePath)}
   alternates={alternates}
   locale={locale}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(itemList)} slot="head" />
   <div class="container" style="padding: 2rem 0;">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <span>Chairs</span></nav>
-    <h1>Ergonomic office chairs</h1>
-    <p class="cat-intro">Use the filters to compare verified chair specs: backrest type, armrests, weight capacity, recommended user height and editorial scores.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <span>{cfg.enLabels.breadcrumb}</span></nav>
+    <h1>{cfg.enLabels.catalogH1}</h1>
+    <p class="cat-intro">{cfg.enLabels.catalogIntro}</p>
     <CatalogoProductos productos={productos} tipo={tipo} locale={locale} />
     {paresVs.length > 0 && (
       <section class="comparativas-rel" aria-labelledby="comparativas-titulo">
-        <h2 id="comparativas-titulo">Popular chair comparisons</h2>
+        <h2 id="comparativas-titulo">{cfg.enLabels.popularHeading}</h2>
         <ul class="comparativas-lista">
           {paresVs.map(([a, b]) => (
             <li><a href={comparePath(tipo, `${a}-vs-${b}`, locale)}>{porSlug[a] ? localizedProductName(porSlug[a], locale) : a} vs {porSlug[b] ? localizedProductName(porSlug[b], locale) : b}</a></li>

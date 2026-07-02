@@ -4,7 +4,7 @@ import TablaVs from '@/components/producto/TablaVs.astro';
 import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, pathLocaleSegment } from '@/i18n/routes';
-import { TIPOS_CON_DATOS } from '@/lib/tipos';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
 import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, notaGlobal, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
 
 export async function getStaticPaths() {
@@ -27,6 +27,7 @@ export async function getStaticPaths() {
 
 const { locale, tipo: tipoParam, a, b } = Astro.props as { locale: Locale; tipo: string; a: Producto; b: Producto };
 const tipo = sourceTipoSlug(tipoParam, locale);
+const cfg = getTipoConfig(tipo)!;
 const ganadora = (notaGlobal(a) ?? 0) >= (notaGlobal(b) ?? 0) ? a : b;
 const aName = localizedProductName(a, locale);
 const bName = localizedProductName(b, locale);
@@ -37,14 +38,14 @@ const alternates = buildAlternates({
   'es-ES': comparePath(tipo, par, 'es-ES'),
   [locale]: pagePath,
 });
-const title = `${aName} vs ${bName} | Chair Specs`;
-const description = `Compare ${aName} and ${bName}: ergonomics, adjustability, materials, price tier and verified chair specs side by side.`;
+const title = `${aName} vs ${bName} | ${cfg.enLabels.comparePairTitleSuffix}`;
+const description = `Compare ${aName} and ${bName}: ${cfg.enLabels.comparePairAxes} and verified ${cfg.enLabels.singular} specs side by side.`;
 const breadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Catalog', item: absoluteUrl(catalogPath(locale)) },
-    { '@type': 'ListItem', position: 2, name: 'Chairs', item: absoluteUrl(catalogPath(locale, tipo)) },
+    { '@type': 'ListItem', position: 2, name: cfg.enLabels.breadcrumb, item: absoluteUrl(catalogPath(locale, tipo)) },
     { '@type': 'ListItem', position: 3, name: `${aName} vs ${bName}`, item: absoluteUrl(pagePath) },
   ],
 };
@@ -52,9 +53,9 @@ const breadcrumb = {
 <Base title={title} description={description} canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale}>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
   <main class="container" style="padding: 2rem 0;">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>{aName} vs {bName}</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>{cfg.enLabels.breadcrumb}</a> › <span>{aName} vs {bName}</span></nav>
     <h1>{aName} vs {bName}</h1>
-    <p class="vs-intro">Side-by-side comparison of two ergonomic office chairs in a similar buying context. Highlighted cells show the better value for each row.</p>
+    <p class="vs-intro">{cfg.enLabels.comparePairIntro}</p>
     <TablaVs a={a} b={b} tipo={tipo} locale={locale} />
     <div class="vs-veredicto">
       <h2>Which one should you choose?</h2>

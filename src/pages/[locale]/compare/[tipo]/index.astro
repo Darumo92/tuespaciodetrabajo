@@ -4,7 +4,7 @@ import ComparadorProductos from '@/components/producto/ComparadorProductos.astro
 import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
-import { TIPOS_CON_DATOS } from '@/lib/tipos';
+import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
 import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
 
 export async function getStaticPaths() {
@@ -18,6 +18,7 @@ export async function getStaticPaths() {
 
 const { locale, tipo: tipoParam } = Astro.props as { locale: Locale; tipo: string };
 const tipo = sourceTipoSlug(tipoParam, locale);
+const cfg = getTipoConfig(tipo)!;
 const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
 const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
 const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
@@ -29,21 +30,21 @@ const alternates = buildAlternates({
 });
 ---
 <Base
-  title="Office Chair Comparison Tool | Tu Espacio de Trabajo"
-  description="Compare ergonomic office chairs side by side using verified specs, editorial scores, price tiers and adjustment data."
+  title={cfg.enLabels.compareTitle}
+  description={cfg.enLabels.compareDescription}
   canonical={absoluteUrl(pagePath)}
   alternates={alternates}
   locale={locale}
   noindex={true}
 >
   <main class="container" style="padding: 2rem 0;">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>Compare</span></nav>
-    <h1>Compare ergonomic office chairs</h1>
-    <p class="cmp-intro">Choose two to four chairs from the catalog and compare the specs that matter for long home-office sessions.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>{cfg.enLabels.breadcrumb}</a> › <span>Compare</span></nav>
+    <h1>{cfg.enLabels.compareH1}</h1>
+    <p class="cmp-intro">{cfg.enLabels.compareIntro}</p>
     <ComparadorProductos productos={productos} tipo={tipo} locale={locale} />
     {paresVs.length > 0 && (
       <section class="comparativas-prebuilt" aria-labelledby="prebuilt-titulo">
-        <h2 id="prebuilt-titulo">Popular chair comparisons</h2>
+        <h2 id="prebuilt-titulo">{cfg.enLabels.popularHeading}</h2>
         <ul class="comparativas-lista">
           {paresVs.map(([a, b]) => (
             <li><a href={comparePath(tipo, `${a}-vs-${b}`, locale)}>{porSlug[a] ? localizedProductName(porSlug[a], locale) : a} vs {porSlug[b] ? localizedProductName(porSlug[b], locale) : b}</a></li>

@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
 import { catalogPath, localizedProductMeta, localizedProductName, localizedTipoSlug, notaGlobal, productPath, sourceTipoSlug, type Producto } from '@/lib/productos';
+import { getTipoConfig } from '@/lib/tipos';
 
 export async function getStaticPaths() {
   const entries = await getCollection('productos');
@@ -21,6 +22,7 @@ export async function getStaticPaths() {
 
 const { locale, producto } = Astro.props as { locale: Locale; producto: Producto };
 const tipo = sourceTipoSlug(producto.tipo, locale);
+const cfg = getTipoConfig(producto.tipo)!;
 const meta = localizedProductMeta(producto, locale);
 const displayName = localizedProductName(producto, locale);
 const nota = notaGlobal(producto);
@@ -53,7 +55,7 @@ const breadcrumb = {
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: absoluteUrl(localizedPath(locale)) },
     { '@type': 'ListItem', position: 2, name: 'Catalog', item: absoluteUrl(catalogPath(locale)) },
-    { '@type': 'ListItem', position: 3, name: 'Chairs', item: absoluteUrl(catalogPath(locale, tipo)) },
+    { '@type': 'ListItem', position: 3, name: cfg.enLabels.breadcrumb, item: absoluteUrl(catalogPath(locale, tipo)) },
     { '@type': 'ListItem', position: 4, name: displayName, item: absoluteUrl(pagePath) },
   ],
 };
@@ -62,7 +64,7 @@ const breadcrumb = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(productSchema)} slot="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumb)} slot="head" />
   <div class="container" style="padding: 2rem 0;">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>Chairs</a> › <span>{displayName}</span></nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <a href={catalogPath(locale)}>Catalog</a> › <a href={catalogPath(locale, tipo)}>{cfg.enLabels.breadcrumb}</a> › <span>{displayName}</span></nav>
     <FichaProducto producto={producto} locale={locale} />
   </div>
 </Base>

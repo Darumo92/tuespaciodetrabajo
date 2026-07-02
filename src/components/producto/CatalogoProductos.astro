@@ -54,6 +54,18 @@ const labelMap: Record<string, string> = {
   'Ajustable': 'Adjustable',
   'Fijo': 'Fixed',
   'Sin reposacabezas': 'No headrest',
+  // escritorio
+  'Motor': 'Motor',
+  'Tablero incluido': 'Included tabletop',
+  'Soporta 100 kg o más': 'Supports 100 kg+',
+  'Anticolisión': 'Anti-collision',
+  '2+ posiciones de memoria': '2+ memory presets',
+  'Baja hasta (altura mín.)': 'Lowers to (min height)',
+  'Mejor valorados': 'Top rated',
+  'Más rápido': 'Fastest',
+  'Doble motor': 'Dual motor',
+  'Motor simple': 'Single motor',
+  'Manual': 'Manual',
 };
 const tr = (value: string) => isEn ? labelMap[value] ?? value : value;
 
@@ -66,7 +78,7 @@ const panelConfig = {
   // Ids de los filtros que viven en el panel "Más filtros" (para el contador, sin re-leer el DOM).
   idsPanel: grupos.flatMap((g) => g.filtros.map((f) => f.id)),
 };
-const labelPlural = isEn ? 'chairs' : (cfg?.labelPlural ?? 'productos').toLowerCase();
+const labelPlural = isEn ? (cfg?.enLabels.plural ?? 'products') : (cfg?.labelPlural ?? 'productos').toLowerCase();
 const typeSlug = localizedTipoSlug(tipo, locale);
 const compareBase = comparePath(tipo, '', locale);
 ---

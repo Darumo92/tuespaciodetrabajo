@@ -118,6 +118,12 @@ const groupTitleMap: Record<string, string> = {
   'Ergonomía y ajustes': 'Ergonomics and adjustments',
   'Construcción y materiales': 'Build and materials',
   'Dimensiones y garantía': 'Dimensions and warranty',
+  // escritorio
+  'Motor y movimiento': 'Motor and movement',
+  'Altura y carga': 'Height and load',
+  'Tablero': 'Tabletop',
+  'Control y funciones': 'Controls and features',
+  'Garantía y certificación': 'Warranty and certification',
 };
 const rowLabelMap: Record<string, string> = {
   'Soporte lumbar': 'Lumbar support',
@@ -133,6 +139,26 @@ const rowLabelMap: Record<string, string> = {
   'Ancho': 'Width',
   'Fondo': 'Depth',
   'Garantía': 'Warranty',
+  // escritorio
+  'Motor': 'Motor',
+  'Velocidad de subida': 'Lift speed',
+  'Nivel de ruido (dB)': 'Noise level (dB)',
+  'Tramos de columna': 'Column stages',
+  'Altura mínima': 'Minimum height',
+  'Altura máxima': 'Maximum height',
+  'Carga máxima': 'Maximum load',
+  'Material de estructura': 'Frame material',
+  'Tablero incluido': 'Tabletop included',
+  'Material del tablero': 'Tabletop material',
+  'Ancho del tablero': 'Tabletop width',
+  'Fondo del tablero': 'Tabletop depth',
+  'Grosor del tablero': 'Tabletop thickness',
+  'Panel de control': 'Control panel',
+  'Posiciones de memoria': 'Memory presets',
+  'Anticolisión': 'Anti-collision',
+  'Puerto USB': 'USB port',
+  'Certificación TÜV': 'TÜV certification',
+  'Certificación EMC': 'EMC certification',
 };
 const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
   titulo: isEn ? groupTitleMap[g.titulo] ?? g.titulo : g.titulo,

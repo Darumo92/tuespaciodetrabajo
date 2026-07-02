@@ -1,4 +1,5 @@
 import type { ClaveTipo, FiltroConfig, GrupoFiltro, TipoConfig } from './tipos';
+import { getTipoConfig } from './tipos';
 import { buildAmazonSearchUrl, buildAmazonUrl } from '../i18n/amazon';
 import { DEFAULT_LOCALE, type Locale } from '../i18n/locales';
 import { localizedPath } from '../i18n/routes';
@@ -150,6 +151,20 @@ export function formatoSpec(valor: unknown, formato?: string, locale: Locale = D
     sincro: 'synchro',
     basculante: 'tilt',
     multibloqueo: 'multi-lock',
+    // escritorio: motor
+    doble: 'dual motor',
+    simple: 'single motor',
+    manual: 'manual',
+    // escritorio: panel de control
+    ninguna: 'none',
+    boton: 'button',
+    led: 'LED',
+    tactil: 'touchscreen',
+    // escritorio: tablero / estructura
+    'aglomerado certificado fsc': 'FSC-certified particleboard',
+    melamina: 'melamine',
+    bambú: 'bamboo',
+    bambu: 'bamboo',
   };
   switch (formato) {
     case 'kg': return `${valor} kg`;
@@ -510,11 +525,13 @@ export function localizedProductMeta(p: Producto, locale: Locale = DEFAULT_LOCAL
     warranty ? `${warranty}-year warranty` : null,
   ].filter(Boolean);
   const detail = bits.length ? `: ${bits.join(', ')}` : '';
+  const cfg = getTipoConfig(p.tipo);
+  const databaseName = cfg?.enLabels.metaDatabaseName ?? 'Product Database';
   const description = p.en?.veredicto
     ? recortarMeta(p.en.veredicto)
-    : recortarMeta(`${brandedName} review with verified specs${detail}. Compare ergonomics, adjustability, comfort and buying options.`);
+    : recortarMeta(`${brandedName} review with verified specs${detail}. Compare specs, editorial scores and buying options.`);
   return {
-    title: `${name} Specs | Chair Database`,
+    title: `${name} Specs | ${databaseName}`,
     description,
     h1: `${name} review and specs`,
   };

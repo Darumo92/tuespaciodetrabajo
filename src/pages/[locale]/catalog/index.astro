@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
 import { TIPOS, TIPOS_CON_DATOS } from '@/lib/tipos';
-import { catalogPath, localizedTipoSlug } from '@/lib/productos';
+import { catalogPath } from '@/lib/productos';
 
 export async function getStaticPaths() {
   return READY_LOCALES
@@ -24,7 +24,7 @@ const alternates = buildAlternates({
 ---
 <Base
   title="Home Office Product Catalog | Tu Espacio de Trabajo"
-  description="Verified home office product database with ergonomic chair specs, editorial scores and side-by-side comparisons."
+  description="Verified home office product database with ergonomic chairs and standing desks: full specs, editorial scores and side-by-side comparisons."
   canonical={absoluteUrl(pagePath)}
   alternates={alternates}
   locale={locale}
@@ -37,7 +37,7 @@ const alternates = buildAlternates({
       {tarjetas.map(({ cfg, n }) => (
         <a class="cat-hub-card" href={catalogPath(locale, cfg.slug)}>
           <span class="cat-hub-ico" aria-hidden="true">{cfg.icono}</span>
-          <span class="cat-hub-tit">{localizedTipoSlug(cfg.slug, locale) === 'chairs' ? 'Chairs' : cfg.labelPlural}</span>
+          <span class="cat-hub-tit">{cfg.enLabels.breadcrumb}</span>
           <span class="cat-hub-n">{n} products</span>
         </a>
       ))}
