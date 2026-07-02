@@ -3,7 +3,7 @@ import path from 'node:path';
 import yaml from 'js-yaml';
 
 /**
- * Sistema de calidad de datos del catálogo de sillas.
+ * Sistema de calidad de datos del catálogo de productos (sillas y escritorios).
  *
  * Calcula, por producto, un `calidadDatos` con:
  *   - score (0-100): cobertura ponderada de campos importantes.
@@ -24,8 +24,10 @@ const root = process.cwd();
 const dir = path.join(root, 'src/content/productos');
 const HOY = new Date().toISOString().slice(0, 10);
 
-// Campos importantes y su peso. Suman 100. Los críticos para el comparador pesan más.
-const PESOS_SPEC = {
+// Campos importantes y su peso por tipo. Cada set de specs suma ~80; el resto
+// (valoraciones + fuentes + fuente oficial = 18) completa hasta 100.
+// Los críticos para el comparador pesan más.
+const PESOS_SPEC_SILLA = {
   pesoMaxKg: 8,
   alturaAsientoMinCm: 6,
   alturaAsientoMaxCm: 6,
@@ -44,7 +46,35 @@ const PESOS_SPEC = {
   certificacionBifma: 4,
   certificacionEn1335: 3,
 };
-// lumbar / respaldo / reposabrazos son obligatorios en el schema → siempre presentes.
+// motor es obligatorio en el schema → siempre presente.
+const PESOS_SPEC_ESCRITORIO = {
+  cargaMaxKg: 8,
+  alturaMinCm: 6,
+  alturaMaxCm: 6,
+  velocidadMmPorSeg: 6,
+  garantiaAnios: 6,
+  tableroAnchoCm: 5,
+  tableroFondoCm: 5,
+  tableroGrosorCm: 4,
+  tableroMaterial: 4,
+  estructuraMaterial: 4,
+  pesoProductoKg: 4,
+  memorias: 4,
+  anticolision: 4,
+  segmentosColumna: 4,
+  certificacionTuv: 4,
+  nivelRuidoDb: 3,
+  pantallaControl: 3,
+};
+// lumbar / respaldo / reposabrazos (silla) son obligatorios en el schema → siempre presentes.
+const EJES_POR_TIPO = {
+  silla: ['ergonomia', 'ajustabilidad', 'materiales', 'comodidad', 'calidadPrecio'],
+  escritorio: ['velocidad', 'estabilidad', 'capacidadCarga', 'rangoAltura', 'materiales', 'calidadPrecio'],
+};
+const PESOS_SPEC_POR_TIPO = {
+  silla: PESOS_SPEC_SILLA,
+  escritorio: PESOS_SPEC_ESCRITORIO,
+};
 const PESO_VALORACIONES = 6; // ejes de valoración completos
 const PESO_FUENTES = 8; // al menos una fuente estructurada
 const PESO_FUENTE_OFICIAL = 4; // al menos una fuente tipo "oficial"
@@ -53,16 +83,18 @@ const vacio = (v) => v === null || v === undefined || v === '';
 
 function evalua(data) {
   const specs = data.specs ?? {};
+  const tipo = data.tipo ?? 'silla';
+  const pesosSpec = PESOS_SPEC_POR_TIPO[tipo] ?? PESOS_SPEC_SILLA;
+  const ejes = EJES_POR_TIPO[tipo] ?? EJES_POR_TIPO.silla;
   let score = 0;
   const faltantes = [];
 
-  for (const [campo, peso] of Object.entries(PESOS_SPEC)) {
+  for (const [campo, peso] of Object.entries(pesosSpec)) {
     if (!vacio(specs[campo])) score += peso;
     else faltantes.push(`specs.${campo}`);
   }
 
   const val = data.valoraciones ?? {};
-  const ejes = ['ergonomia', 'ajustabilidad', 'materiales', 'comodidad', 'calidadPrecio'];
   const valCompletas = ejes.every((e) => !vacio(val[e]));
   if (valCompletas) score += PESO_VALORACIONES;
   else faltantes.push('valoraciones');

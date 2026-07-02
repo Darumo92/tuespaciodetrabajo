@@ -1,0 +1,119 @@
+# PLANTILLA ficha escritorio elevable — NO es un producto real.
+# Vive en docs/agent-context (fuera de src/content/productos) para no entrar al build.
+# Copiar a src/content/productos/<slug>.yaml y rellenar. Slug = kebab-case marca+modelo.
+#
+# REGLAS:
+# - Bilingüe: prosa editorial en ES base + bloque en: paralelo. Nunca un idioma sin el otro.
+# - Specs técnicas COMPARTIDAS (un solo sitio, en specs:). No duplicar por idioma.
+# - Precio: verificar en Amazon.es o dejar null. Nunca inventar.
+# - Cada spec con fuente marcada en fuentes[] (oficial/review/tienda/manual).
+# - No poner calidadDatos a mano: lo inyecta `node scripts/calidad-datos.mjs --write <slug>`.
+
+tipo: "escritorio"
+nombre: ""                        # ES, nombre comercial tal cual se vende
+marca: ""
+imagen: "/img/productos/<slug>.jpg"
+imagenAlt: ""                     # ES, descriptivo para a11y/SEO
+tramoPrecio: 2                    # 1-4 (€/€€/€€€/€€€€)
+precioMin: null                   # € verificado Amazon.es o null
+precioMax: null
+valoracion: null                  # 0-5 (opcional; la nota real sale de valoraciones)
+valoraciones:                     # ejes 0-10 propios de escritorio (los 6)
+  velocidad: null
+  estabilidad: null
+  capacidadCarga: null
+  rangoAltura: null
+  materiales: null
+  calidadPrecio: null
+amazon:
+  asin: null
+  buscar: ""                      # query de fallback si no hay ASIN
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: ""                     # ES, una frase
+veredicto: ""                     # ES, párrafo de análisis honesto
+resumenCompra:
+  mejorPara: ""
+  evitarSi: ""
+  alternativaDirecta: ""          # "Modelo X si..."
+  decisionRapida: ""
+metodologia:
+  - ""                            # de dónde salen las specs y qué prioriza la nota
+scoreRationale:
+  velocidad: ""
+  estabilidad: ""
+  capacidadCarga: ""
+  rangoAltura: ""
+  materiales: ""
+  calidadPrecio: ""
+fuentes:
+  - tipo: "oficial"               # oficial | review | comunidad | tienda | manual
+    nombre: ""
+    url: ""
+    fechaConsulta: "2026-07-02"
+limitaciones:
+  - ""
+alternativas:
+  - slug: ""
+    motivo: ""
+comunidad: ""                     # ES, síntesis de reseñas reales
+paraQuienSi:
+  - ""
+paraQuienNo:
+  - ""
+puntosFuertes:
+  - ""
+puntosDebiles:
+  - ""
+fuenteSpecs: ""                   # resumen en texto de fuentes de specs (como en sillas)
+verificadoEn: "2026-07-02"
+en:                               # bloque inglés paralelo (specs NO se duplican aquí)
+  nombreComercial: ""
+  veredicto: ""
+  idealPara: ""
+  comunidad: ""
+  resumenCompra:
+    mejorPara: ""
+    evitarSi: ""
+    alternativaDirecta: ""
+    decisionRapida: ""
+  puntosFuertes:
+    - ""
+  puntosDebiles:
+    - ""
+  paraQuienSi:
+    - ""
+  paraQuienNo:
+    - ""
+specs:
+  tipo: "escritorio"
+  # Motor y movimiento
+  motor: "doble"                  # manual | simple | doble  (OBLIGATORIO)
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null          # 2 o 3 tramos de columna
+  # Rango de altura del conjunto (con tablero)
+  alturaMinCm: null
+  alturaMaxCm: null
+  # Carga y estructura
+  cargaMaxKg: null
+  estructuraMaterial: null        # p.ej. "acero"
+  pesoProductoKg: null
+  ruedas: null
+  # Tablero
+  tableroIncluido: null
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  # Control y funciones
+  pantallaControl: null           # ninguna | boton | led | tactil
+  memorias: null                  # nº de posiciones memorizables
+  anticolision: null
+  puertoUsb: null
+  # Garantía y certificación
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

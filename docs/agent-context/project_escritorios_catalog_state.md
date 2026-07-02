@@ -1,0 +1,62 @@
+# Proyecto: Catálogo de escritorios elevables
+
+Estado vivo del catálogo estructurado de escritorios elevables (mismo nivel que las
+77 fichas de sillas). Retomar desde aquí entre sesiones. Última actualización: 2026-07-02.
+
+## Objetivo
+50-100 fichas de escritorios elevables en `src/content/productos/*.yaml`, bilingües
+ES/EN, SEO rico (Product schema con specs, rating, oferta cuando haya precio verificado).
+
+## Reglas fijas (no negociables)
+- Bilingüe: prosa editorial en ES base + bloque `en:` paralelo. Nunca un idioma sin el otro.
+- Specs técnicas COMPARTIDAS en `specs:` (un solo sitio, no duplicadas por idioma).
+- Precio: verificar en Amazon.es o dejar `null`. Nunca inventar. Marcar fuente de cada spec.
+- No tocar el patrón i18n de artículos (`articulosI18n/`): esto es catálogo de producto (yaml).
+
+## FASE 0 — Diseño de schema ✅ COMPLETA (2026-07-02)
+- **Set de valoraciones cerrado (6 ejes):** `velocidad`, `estabilidad`, `capacidadCarga`,
+  `rangoAltura`, `materiales`, `calidadPrecio`. (Elegido plan completo; usuario ausente al confirmar.)
+- **`src/content/config.ts`:** `tipo` enum admite `'escritorio'`; `ejesValoracion` y
+  `scoreRationale` ampliados a superset (silla + escritorio, todo nullable/opcional, no rompe
+  sillas); nuevo `specsEscritorio` en la `discriminatedUnion('tipo', [...])`.
+- **`scripts/calidad-datos.mjs`:** pesos y ejes ramificados por `data.tipo`
+  (`PESOS_SPEC_ESCRITORIO`, `EJES_POR_TIPO`). Sillas sin regresión (media 74.0 igual).
+- **Plantilla:** `docs/agent-context/reference_escritorio_ficha_template.yaml`.
+
+### Campos de `specsEscritorio`
+`motor` (manual|simple|doble, OBLIGATORIO), `velocidadMmPorSeg`, `nivelRuidoDb`,
+`segmentosColumna`, `alturaMinCm`, `alturaMaxCm`, `cargaMaxKg`, `estructuraMaterial`,
+`pesoProductoKg`, `ruedas`, `tableroIncluido`, `tableroMaterial`, `tableroAnchoCm`,
+`tableroFondoCm`, `tableroGrosorCm`, `pantallaControl` (ninguna|boton|led|tactil),
+`memorias`, `anticolision`, `puertoUsb`, `garantiaAnios`, `certificacionTuv`, `certificacionEmc`.
+
+## FASES 1-N — Research + creación de fichas ⬜ PENDIENTE
+- Batches de 5-8 escritorios por subagente (general-purpose, run_in_background donde paralelice).
+- Por producto: specs reales (motor, velocidad, rango altura, carga, dimensiones+grosor tablero,
+  memorias, anticolisión, garantía, peso, materiales) desde fuentes oficiales/tiendas. Nunca inventar.
+- Tras cada batch: `node scripts/calidad-datos.mjs --write <slugs>` + `node scripts/validate-productos.mjs`.
+- Commit por fase (no un commit gigante al final).
+
+### Cola prioritaria (ya mencionados en artículos → no perder cobertura indexada)
+FlexiSpot EC5 PRO · FlexiSpot E1 PRO · FlexiSpot E7 · Maidesite EL2 Pro Art ·
+SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
+Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
+
+### Progreso fichas
+- Creadas: 0 / (objetivo 50-100).
+
+## FASE FINAL — Integración ⬜ PENDIENTE
+Acoplamientos silla→escritorio a resolver (diferidos aquí en FASE 0 a propósito):
+- `src/lib/productos.ts`: `Valoraciones` interface + `mediaEjesPresentes` (L7-13, 91-97)
+  promedian solo ejes de silla → escritorios devuelven `null` y `notaGlobal` cae a `valoracion*2`.
+  Ampliar a promedio genérico de ejes presentes o por tipo.
+- `src/lib/productos.ts`: `localizedTipoSlug`/`sourceTipoSlug` (L439-447) solo mapean
+  `silla↔chairs`. Decidir slug EN de escritorio (p.ej. `standing-desks`) y añadir mapping.
+- `src/lib/tipos.ts`: `TipoConfig` (filtros/chips/ordenaciones) — crear config para escritorio.
+- Migrar los 3 artículos de escritorios de `ComparisonTable` inline al catálogo estructurado.
+- `astro build` limpio + recalcular calidad + revisar fichas con score bajo.
+
+## Cómo retomar
+1. Leer este doc + `reference_escritorio_ficha_template.yaml`.
+2. Coger siguiente lote de la cola, research, crear yaml, `--write` calidad, validar.
+3. Actualizar "Progreso fichas" y commitear el lote.

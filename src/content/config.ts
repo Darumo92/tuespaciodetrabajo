@@ -52,12 +52,22 @@ const articulosI18n = defineCollection({
   }),
 });
 
+// Ejes de valoración (0-10). Superset de todas las categorías: cada tipo usa su
+// subconjunto (silla: ergonomia/ajustabilidad/materiales/comodidad/calidadPrecio;
+// escritorio: velocidad/estabilidad/capacidadCarga/rangoAltura/materiales/calidadPrecio).
+// Todo nullable para que una ficha solo rellene los ejes de su tipo.
 const ejesValoracion = z.object({
+  // Comunes / silla
   ergonomia: z.number().min(0).max(10).nullable().default(null),
   ajustabilidad: z.number().min(0).max(10).nullable().default(null),
   materiales: z.number().min(0).max(10).nullable().default(null),
   comodidad: z.number().min(0).max(10).nullable().default(null),
   calidadPrecio: z.number().min(0).max(10).nullable().default(null),
+  // Escritorio elevable
+  velocidad: z.number().min(0).max(10).nullable().default(null),
+  estabilidad: z.number().min(0).max(10).nullable().default(null),
+  capacidadCarga: z.number().min(0).max(10).nullable().default(null),
+  rangoAltura: z.number().min(0).max(10).nullable().default(null),
 }).default({});
 
 const mercadoAmazon = z.object({
@@ -96,10 +106,42 @@ const specsSilla = z.object({
   certificacionEn1335: z.boolean().nullable().default(null),
 });
 
+const specsEscritorio = z.object({
+  tipo: z.literal('escritorio'),
+  // Motor y movimiento
+  motor: z.enum(['manual', 'simple', 'doble']),
+  velocidadMmPorSeg: z.number().nullable().default(null),
+  nivelRuidoDb: z.number().nullable().default(null),
+  segmentosColumna: z.number().int().nullable().default(null), // 2 o 3 tramos
+  // Rango de altura del conjunto (tablero incluido)
+  alturaMinCm: z.number().nullable().default(null),
+  alturaMaxCm: z.number().nullable().default(null),
+  // Carga y estructura
+  cargaMaxKg: z.number().nullable().default(null),
+  estructuraMaterial: z.string().nullable().default(null), // acero, aluminio…
+  pesoProductoKg: z.number().nullable().default(null),
+  ruedas: z.boolean().nullable().default(null),
+  // Tablero
+  tableroIncluido: z.boolean().nullable().default(null),
+  tableroMaterial: z.string().nullable().default(null),
+  tableroAnchoCm: z.number().nullable().default(null),
+  tableroFondoCm: z.number().nullable().default(null),
+  tableroGrosorCm: z.number().nullable().default(null),
+  // Control y funciones
+  pantallaControl: z.enum(['ninguna', 'boton', 'led', 'tactil']).nullable().default(null),
+  memorias: z.number().int().nullable().default(null), // nº de posiciones memorizables
+  anticolision: z.boolean().nullable().default(null),
+  puertoUsb: z.boolean().nullable().default(null),
+  // Garantía y certificación
+  garantiaAnios: z.number().nullable().default(null),
+  certificacionTuv: z.boolean().nullable().default(null),
+  certificacionEmc: z.boolean().nullable().default(null),
+});
+
 const productos = defineCollection({
   type: 'data',
   schema: z.object({
-    tipo: z.enum(['silla']), // ampliar al añadir categorías
+    tipo: z.enum(['silla', 'escritorio']), // ampliar al añadir categorías
     nombre: z.string(),
     marca: z.string(),
     imagen: z.string().default(''),
@@ -127,11 +169,17 @@ const productos = defineCollection({
     }).default({}),
     metodologia: z.array(z.string()).default([]),
     scoreRationale: z.object({
+      // silla
       ergonomia: z.string().optional(),
       ajustabilidad: z.string().optional(),
       materiales: z.string().optional(),
       comodidad: z.string().optional(),
       calidadPrecio: z.string().optional(),
+      // escritorio
+      velocidad: z.string().optional(),
+      estabilidad: z.string().optional(),
+      capacidadCarga: z.string().optional(),
+      rangoAltura: z.string().optional(),
     }).default({}),
     fuentes: z.array(z.object({
       tipo: z.enum(['oficial', 'review', 'comunidad', 'tienda', 'manual']),
@@ -175,7 +223,7 @@ const productos = defineCollection({
       paraQuienSi: z.array(z.string()).default([]),
       paraQuienNo: z.array(z.string()).default([]),
     }).optional(),
-    specs: z.discriminatedUnion('tipo', [specsSilla]),
+    specs: z.discriminatedUnion('tipo', [specsSilla, specsEscritorio]),
   }),
 });
 
