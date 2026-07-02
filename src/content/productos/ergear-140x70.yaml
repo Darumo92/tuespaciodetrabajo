@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "ErGear Escritorio Elevable Eléctrico 140x70 cm"
 marca: "ErGear"
-imagen: ""
+imagen: "/img/productos/ergear-140x70.jpg"
 imagenAlt: "Escritorio elevable eléctrico ErGear con tablero ensamblado de 140x70 cm y panel de 4 memorias"
-tramoPrecio: 1
-precioMin: null
-precioMax: null
+tramoPrecio: 2
+precioMin: 152
+precioMax: 152
 valoracion: null
 valoraciones:
   velocidad: 5.5
@@ -15,7 +15,7 @@ valoraciones:
   materiales: 5
   calidadPrecio: 8
 amazon:
-  asin: null
+  asin: "B0FMQTKZKD"
   buscar: "ErGear escritorio elevable eléctrico 140x70 cm panel 4 memorias"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

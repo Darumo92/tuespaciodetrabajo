@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "FlexiSpot EC5 PRO"
 marca: "FlexiSpot"
-imagen: ""
+imagen: "/img/productos/flexispot-ec5-pro.jpg"
 imagenAlt: "Escritorio elevable eléctrico FlexiSpot EC5 PRO con doble motor y 3 columnas"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 310
+precioMax: 310
 valoracion: null
 valoraciones:
   velocidad: 7
@@ -15,7 +15,7 @@ valoraciones:
   materiales: 6.5
   calidadPrecio: 8
 amazon:
-  asin: "B077JPC7PK"
+  asin: "B09DCLX8CB"
   buscar: "FlexiSpot EC5 Pro escritorio elevable"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "JUMMICO Escritorio Elevable Eléctrico 140x60 cm con USB"
 marca: "JUMMICO"
-imagen: ""
+imagen: "/img/productos/jummico-140x60.jpg"
 imagenAlt: "Escritorio elevable eléctrico JUMMICO de 140x60 cm con puerto USB y panel de memorias"
 tramoPrecio: 1
-precioMin: null
-precioMax: null
+precioMin: 110
+precioMax: 110
 valoracion: null
 valoraciones:
   velocidad: 4.5

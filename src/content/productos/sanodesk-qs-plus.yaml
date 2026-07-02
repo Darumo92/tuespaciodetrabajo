@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "SANODESK QS+ 160x60 cm (con tablero)"
 marca: "SANODESK"
-imagen: ""
+imagen: "/img/productos/sanodesk-qs-plus.jpg"
 imagenAlt: "Escritorio elevable eléctrico SANODESK QS+ con tablero de 160x60 cm y pantalla de control"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 220
+precioMax: 220
 valoracion: null
 valoraciones:
   velocidad: 5.5

@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "FlexiSpot E1 PRO"
 marca: "FlexiSpot"
-imagen: ""
+imagen: "/img/productos/flexispot-e1-pro.jpg"
 imagenAlt: "Escritorio elevable eléctrico FlexiSpot E1 PRO estructura clásica de doble motor"
-tramoPrecio: 1
-precioMin: null
-precioMax: null
+tramoPrecio: 2
+precioMin: 200
+precioMax: 200
 valoracion: null
 valoraciones:
   velocidad: 5
@@ -15,7 +15,7 @@ valoraciones:
   materiales: 6
   calidadPrecio: 8
 amazon:
-  asin: null
+  asin: "B01N31553J"
   buscar: "FlexiSpot E1 Pro escritorio elevable"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

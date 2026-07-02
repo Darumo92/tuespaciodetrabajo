@@ -1,11 +1,11 @@
 tipo: "escritorio"
 nombre: "Maidesite EL2 Pro Art"
 marca: "Maidesite"
-imagen: ""
+imagen: "/img/productos/maidesite-el2-pro-art.jpg"
 imagenAlt: "Escritorio elevable eléctrico Maidesite EL2 Pro Art con patas ovaladas y doble motor"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 300
+precioMax: 300
 valoracion: null
 valoraciones:
   velocidad: 7.5
