@@ -82,8 +82,8 @@ puntosFuertes:
 puntosDebiles:
   - "Capacidad de carga de solo 60 kg"
   - "Motor único, sin dato oficial de velocidad"
-  - "Sin información pública de garantía específica del modelo"
-fuenteSpecs: "Specs cruzadas entre listados de Amazon.es/Amazon.de para el mismo modelo 160x60 con tablero (altura 73,5-118 cm, carga 60 kg, ruido <40 dB, memoria 2 posiciones, anticolisión, seguro infantil), reseña de entornoversatil.com sobre la gama Sanodesk QS (motor único, tablero FSC, hasta 5 tamaños) y Xataka (confirmación de anticolisión y memoria por pantalla). No se ha encontrado velocidad en mm/s ni grosor de tablero verificado, por lo que quedan en null."
+  - "Grosor de tablero no especificado por el fabricante"
+fuenteSpecs: "Specs cruzadas entre listados de Amazon.es/Amazon.de para el mismo modelo 160x60 con tablero (altura 73,5-118 cm, carga 60 kg, ruido <40 dB, memoria 2 posiciones, anticolisión, seguro infantil), reseña de entornoversatil.com sobre la gama Sanodesk QS (motor único, tablero FSC, hasta 5 tamaños) y Xataka (confirmación de anticolisión y memoria por pantalla). Garantía de 5 años en la estructura (2 años en la electrónica) según la política de garantía de SANODESK. No se ha encontrado velocidad en mm/s, grosor de tablero, peso ni segmentos de columna verificados, por lo que quedan en null."
 verificadoEn: "2026-07-02"
 en:
   nombreComercial: "SANODESK QS+ 160x60 cm (with tabletop)"
@@ -104,7 +104,7 @@ en:
   puntosDebiles:
     - "Load capacity of only 60 kg"
     - "Single motor, no official speed figure published"
-    - "No public warranty information specific to this model"
+    - "Tabletop thickness not specified by the manufacturer"
   paraQuienSi:
     - "Anyone wanting a complete elevated desk (frame plus tabletop) without spending much"
     - "Single-monitor setups with little extra weight"
@@ -114,12 +114,11 @@ en:
     - "Anyone wanting the fastest, quietest possible adjustment"
     - "Anyone needing a deep tabletop (60 cm can feel tight with large monitors)"
 calidadDatos:
-  score: 66
+  score: 72
   confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
     - "specs.velocidadMmPorSeg"
-    - "specs.garantiaAnios"
     - "specs.tableroGrosorCm"
     - "specs.pesoProductoKg"
     - "specs.segmentosColumna"
@@ -145,6 +144,6 @@ specs:
   memorias: 2
   anticolision: true
   puertoUsb: null
-  garantiaAnios: null
+  garantiaAnios: 5
   certificacionTuv: null
   certificacionEmc: null

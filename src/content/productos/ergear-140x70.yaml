@@ -79,7 +79,7 @@ puntosDebiles:
   - "Tablero en dos piezas con la unión perceptible"
   - "Motor algo más ruidoso que marcas de gama media"
   - "Sin gestión de cables integrada"
-fuenteSpecs: "Specs del listado de Amazon.es para el ASIN B0FMQTKZKD (140x70 cm, altura 72-118 cm, carga 80 kg, ruido <50 dB, panel de 4 memorias, marco de acero), contrastadas con la reseña de entornoversatil.com (motor único, estabilidad en alturas medias, tablero en dos piezas, sin gestión de cables) y la ficha de tuescritorioelevable.es. No se ha confirmado anticolisión, grosor de tablero, garantía ni certificaciones, por lo que quedan en null."
+fuenteSpecs: "Specs del listado de Amazon.es para el ASIN B0FMQTKZKD (140x70 cm, altura 72-118 cm, carga 80 kg, ruido <50 dB, panel de 4 memorias, marco de acero), contrastadas con la reseña de entornoversatil.com (motor único, estabilidad en alturas medias, tablero en dos piezas, sin gestión de cables) y la ficha de tuescritorioelevable.es. Garantía de 5 años en la estructura (2 años en motor y componentes) según la política de garantía de ErGear; tablero de madera (aglomerado laminado en dos piezas). No se ha confirmado anticolisión, grosor de tablero, velocidad en mm/s, peso, segmentos de columna ni certificaciones, por lo que quedan en null."
 verificadoEn: "2026-07-02"
 en:
   nombreComercial: "ErGear Electric Standing Desk 140x70 cm"
@@ -110,14 +110,12 @@ en:
     - "Anyone needing the quietest motor on the market"
     - "Anyone needing factory-built cable management"
 calidadDatos:
-  score: 58
+  score: 68
   confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
     - "specs.velocidadMmPorSeg"
-    - "specs.garantiaAnios"
     - "specs.tableroGrosorCm"
-    - "specs.tableroMaterial"
     - "specs.pesoProductoKg"
     - "specs.anticolision"
     - "specs.segmentosColumna"
@@ -135,7 +133,7 @@ specs:
   pesoProductoKg: null
   ruedas: null
   tableroIncluido: true
-  tableroMaterial: null
+  tableroMaterial: "madera"
   tableroAnchoCm: 140
   tableroFondoCm: 70
   tableroGrosorCm: null
@@ -143,6 +141,6 @@ specs:
   memorias: 4
   anticolision: null
   puertoUsb: null
-  garantiaAnios: null
+  garantiaAnios: 5
   certificacionTuv: null
   certificacionEmc: null

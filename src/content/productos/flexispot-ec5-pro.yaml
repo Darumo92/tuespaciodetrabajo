@@ -110,14 +110,10 @@ en:
     - "Anyone regularly using very wide or heavy tabletops who needs maximum rigidity"
     - "Anyone needing detailed certified noise or material specifications"
 calidadDatos:
-  score: 69
-  confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  score: 87
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
-    - "specs.tableroAnchoCm"
-    - "specs.tableroFondoCm"
-    - "specs.tableroGrosorCm"
-    - "specs.tableroMaterial"
     - "specs.pesoProductoKg"
     - "specs.certificacionTuv"
     - "specs.nivelRuidoDb"

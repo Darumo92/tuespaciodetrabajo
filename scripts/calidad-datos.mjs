@@ -81,16 +81,23 @@ const PESO_FUENTE_OFICIAL = 4; // al menos una fuente tipo "oficial"
 
 const vacio = (v) => v === null || v === undefined || v === '';
 
+// Campos del tablero: N/A reales cuando el producto se vende solo estructura
+// (tableroIncluido === false). En ese caso el dato es completo ("no incluido"),
+// no un hueco → cuentan como satisfechos y no penalizan el score.
+const CAMPOS_TABLERO = ['tableroAnchoCm', 'tableroFondoCm', 'tableroGrosorCm', 'tableroMaterial'];
+
 function evalua(data) {
   const specs = data.specs ?? {};
   const tipo = data.tipo ?? 'silla';
   const pesosSpec = PESOS_SPEC_POR_TIPO[tipo] ?? PESOS_SPEC_SILLA;
   const ejes = EJES_POR_TIPO[tipo] ?? EJES_POR_TIPO.silla;
+  const sinTablero = tipo === 'escritorio' && specs.tableroIncluido === false;
   let score = 0;
   const faltantes = [];
 
   for (const [campo, peso] of Object.entries(pesosSpec)) {
-    if (!vacio(specs[campo])) score += peso;
+    if (sinTablero && CAMPOS_TABLERO.includes(campo)) score += peso;
+    else if (!vacio(specs[campo])) score += peso;
     else faltantes.push(`specs.${campo}`);
   }
 

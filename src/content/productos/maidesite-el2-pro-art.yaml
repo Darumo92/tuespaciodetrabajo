@@ -111,14 +111,10 @@ en:
     - "Very tall or very short people needing more than a 72-120 cm range"
     - "Anyone who prefers a brand with more proven independent reviews in Spain"
 calidadDatos:
-  score: 68
-  confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  score: 86
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
-    - "specs.tableroAnchoCm"
-    - "specs.tableroFondoCm"
-    - "specs.tableroGrosorCm"
-    - "specs.tableroMaterial"
     - "specs.pesoProductoKg"
     - "specs.segmentosColumna"
     - "specs.certificacionTuv"

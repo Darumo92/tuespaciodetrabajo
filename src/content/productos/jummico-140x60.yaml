@@ -54,7 +54,7 @@ fuentes:
 limitaciones:
   - "Capacidad de carga de 70 kg, entre las más bajas de la categoría."
   - "Tablero de 60 cm de fondo, justo para monitores grandes o brazos articulados."
-  - "No se ha confirmado el grosor exacto del tablero ni la garantía específica de este tamaño."
+  - "No se ha confirmado el grosor exacto del tablero; la garantía de 5 años es la política general de marca, no específica de este tamaño."
 alternativas:
   - slug: "ergear-140x70"
     motivo: "Más capacidad de carga (80 kg) y tablero más profundo (70 cm) por un poco más de precio."
@@ -79,7 +79,7 @@ puntosDebiles:
   - "Capacidad de carga de solo 70 kg"
   - "Tablero de 60 cm de fondo, justo con monitores grandes"
   - "Caja de alimentación sin sujeción bajo el escritorio, según reseñas de usuarios"
-fuenteSpecs: "Specs del listado de Amazon para el ASIN B0C1WYNCXP (140x60 cm, altura 73-118 cm, ruido <40 dB, USB integrado, memoria y anticolisión), confirmadas y ampliadas con la web oficial de JUMMICO (certificaciones TÜV/CE/BIFMA/FSC, motor probado más de 10.000 ciclos a nivel de marca) y la reseña de eTeknix. No se ha confirmado capacidad de carga exacta de este ASIN concreto (se usa la cifra de 70 kg reportada de forma consistente para el tamaño 140x60 en varias fuentes), grosor de tablero ni garantía específica, por lo que quedan en null donde no hay dato firme."
+fuenteSpecs: "Specs del listado de Amazon para el ASIN B0C1WYNCXP (140x60 cm, altura 73-118 cm, ruido <40 dB, USB integrado, memoria y anticolisión), confirmadas y ampliadas con la web oficial de JUMMICO (certificaciones TÜV/CE/BIFMA/FSC, motor probado más de 10.000 ciclos a nivel de marca) y la reseña de eTeknix. No se ha confirmado capacidad de carga exacta de este ASIN concreto (se usa la cifra de 70 kg reportada de forma consistente para el tamaño 140x60 en varias fuentes). Garantía de 5 años según la política de marca de JUMMICO; tablero de madera (aglomerado laminado). Grosor de tablero, velocidad en mm/s, peso y segmentos de columna no se publican, por lo que quedan en null."
 verificadoEn: "2026-07-02"
 en:
   nombreComercial: "JUMMICO Electric Standing Desk 140x60 cm with USB"
@@ -110,14 +110,12 @@ en:
     - "Anyone using a large monitor or arm mount needing more than 60 cm of depth"
     - "Anyone prioritizing maximum stability at tall heights"
 calidadDatos:
-  score: 70
-  confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
     - "specs.velocidadMmPorSeg"
-    - "specs.garantiaAnios"
     - "specs.tableroGrosorCm"
-    - "specs.tableroMaterial"
     - "specs.pesoProductoKg"
     - "specs.segmentosColumna"
 specs:
@@ -133,7 +131,7 @@ specs:
   pesoProductoKg: null
   ruedas: null
   tableroIncluido: true
-  tableroMaterial: null
+  tableroMaterial: "madera"
   tableroAnchoCm: 140
   tableroFondoCm: 60
   tableroGrosorCm: null
@@ -141,6 +139,6 @@ specs:
   memorias: 2
   anticolision: true
   puertoUsb: true
-  garantiaAnios: null
+  garantiaAnios: 5
   certificacionTuv: true
   certificacionEmc: null

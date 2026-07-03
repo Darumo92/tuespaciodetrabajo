@@ -113,14 +113,10 @@ en:
     - "Anyone who doesn't want to deal with a heavier, more demanding assembly"
     - "Anyone needing more than 125 kg of load capacity"
 calidadDatos:
-  score: 76
-  confianza: "medio"
-  enriquecidoEn: "2026-07-02"
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
   camposFaltantes:
-    - "specs.tableroAnchoCm"
-    - "specs.tableroFondoCm"
-    - "specs.tableroGrosorCm"
-    - "specs.tableroMaterial"
     - "specs.segmentosColumna"
 specs:
   tipo: "escritorio"
