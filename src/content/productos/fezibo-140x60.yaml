@@ -1,0 +1,144 @@
+tipo: "escritorio"
+nombre: "FEZIBO Escritorio Elevable 140x60 cm con 2 Cajones"
+marca: "FEZIBO"
+imagen: "/img/productos/fezibo-140x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico FEZIBO de 140x60 cm con dos cajones, soporte para monitor y panel de memorias"
+tramoPrecio: 2
+precioMin: 239
+precioMax: 239
+valoracion: null
+valoraciones:
+  velocidad: 5.5
+  estabilidad: 6
+  capacidadCarga: 6
+  rangoAltura: 6.5
+  materiales: 6.5
+  calidadPrecio: 7.5
+amazon:
+  asin: "B08GL9M1S6"
+  buscar: "FEZIBO escritorio elevable 140x60 2 cajones soporte monitor"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://fezibo.es/"
+idealPara: "Quien quiere un escritorio elevable completo con almacenamiento incorporado (dos cajones) y soporte para monitor, sin montar nada aparte"
+veredicto: "El FEZIBO 140x60 con cajones es un escritorio elevable completo que apuesta por el almacenamiento: viene con tablero, dos cajones bajo la superficie y un soporte para monitor incluido, algo poco común a este precio. El motor es único y sube a unos 30 mm/s, con anticolisión y panel de tres memorias, y aguanta 80 kg sobre un bastidor de acero. No es el más rápido ni el más silencioso —los motores simples de esta gama se quedan por debajo de los dobles—, y el fondo de 60 cm se queda algo justo con un monitor grande y teclado, pero el conjunto cunde: tener cajones y soporte de monitor de fábrica ahorra comprarlos aparte. Para un puesto ordenado en casa, con todo incluido y sin sumar accesorios, es una compra redonda dentro de su precio."
+resumenCompra:
+  mejorPara: "Un puesto completo y ordenado en casa, con cajones y soporte de monitor incluidos."
+  evitarSi: "Necesitas cargar mucho peso, un fondo mayor de 60 cm o el motor más rápido posible."
+  alternativaDirecta: "SANODESK QS+ si prefieres un tablero más ancho; ErGear 140x70 si quieres más carga y fondo, aunque sin cajones."
+  decisionRapida: "El escritorio completo con más equipamiento de fábrica (cajones y soporte de monitor) de su rango de precio."
+metodologia:
+  - "Specs de la ficha oficial de FEZIBO (fezibo.es) y del listado del ASIN B08GL9M1S6, contrastadas con reseñas de compradores del modelo con cajones."
+  - "La nota prioriza el equipamiento incluido (cajones, soporte de monitor, tablero) frente al motor único, la carga y el fondo de 60 cm."
+scoreRationale:
+  velocidad: "Unos 30 mm/s con motor único: correcta para un uso normal, por debajo de los dobles motores de gama media."
+  estabilidad: "Bastidor de acero con 80 kg de carga; suficiente para un setup normal, aunque un motor único y el fondo de 60 cm dan menos firmeza que estructuras más anchas."
+  capacidadCarga: "80 kg cubre monitor, equipo y los cajones cargados; por encima de otros completos budget de 60-70 kg."
+  rangoAltura: "69,5-117 cm cubre la mayoría de estaturas, un pelín corto por arriba frente a rangos de 60-125 cm."
+  materiales: "Tablero de madera con dos cajones y soporte de monitor incluidos; equipamiento por encima de la media de su precio, con acabado sencillo."
+  calidadPrecio: "Escritorio completo con cajones y soporte de monitor por debajo de 250 EUR: mucho equipamiento por el dinero."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FEZIBO España — escritorios elevables (web oficial)"
+    url: "https://fezibo.es/"
+    fechaConsulta: "2026-07-03"
+  - tipo: "tienda"
+    nombre: "Amazon.es — FEZIBO Escritorio de Pie Eléctrico con 2 Cajones 140x60 (B08GL9M1S6)"
+    url: "https://www.amazon.es/dp/B08GL9M1S6"
+    fechaConsulta: "2026-07-03"
+  - tipo: "review"
+    nombre: "escritorioselevables.com — Escritorios elevables FEZIBO"
+    url: "https://escritorioselevables.com/marcas/fezibo/"
+    fechaConsulta: "2026-07-03"
+limitaciones:
+  - "Motor único: subida más lenta y algo más ruidosa que un doble motor."
+  - "Fondo de 60 cm, justo con un monitor grande y teclado por delante."
+  - "No se ha confirmado el grosor del tablero, el peso del producto ni los segmentos de columna."
+alternativas:
+  - slug: "sanodesk-qs-plus"
+    motivo: "Tablero más ancho (160 cm) con pantalla de memorias, aunque sin cajones ni soporte de monitor."
+  - slug: "ergear-140x70"
+    motivo: "Más carga (80 kg) y fondo de 70 cm, a cambio de no llevar cajones."
+comunidad: "Las reseñas destacan que llegue tan equipado —cajones y soporte de monitor incluidos— y que el montaje sea asequible. Las quejas más repetidas son que el motor único sube algo lento, que el fondo de 60 cm se queda corto con monitores grandes y que la gestión de cables es básica."
+paraQuienSi:
+  - "Quien quiere almacenamiento incorporado (dos cajones) en el escritorio"
+  - "Quien valora que venga con soporte de monitor de fábrica"
+  - "Quien busca un puesto completo listo para usar en casa"
+paraQuienNo:
+  - "Quien necesita un fondo mayor de 60 cm"
+  - "Quien quiere el motor más rápido y silencioso"
+  - "Quien va a cargar bastante más de 80 kg"
+puntosFuertes:
+  - "Escritorio completo con tablero, dos cajones y soporte de monitor incluidos"
+  - "80 kg de capacidad de carga, por encima de otros completos budget"
+  - "Panel con 3 memorias y anticolisión"
+  - "Bastidor de acero de grado industrial"
+  - "Mucho equipamiento por debajo de 250 EUR"
+puntosDebiles:
+  - "Motor único: subida más lenta y algo más ruidosa"
+  - "Fondo de 60 cm, justo con monitores grandes"
+  - "Gestión de cables básica"
+fuenteSpecs: "Specs de la ficha oficial de FEZIBO (fezibo.es) y del listado del ASIN B08GL9M1S6 (FEZIBO Escritorio de Pie Eléctrico con 2 Cajones, 140x60 cm, con tablero, soporte para monitor): altura 69,5-117 cm, velocidad unos 30 mm/s (3 cm/s), carga 80 kg, motor único, ruido <50 dB, panel con 3 memorias, anticolisión, bastidor de acero de aleación industrial, tablero de madera de 140x60 cm con dos cajones. Garantía FEZIBO de 5 años en piezas y 2 años en motor y electrónica. No se ha confirmado el grosor del tablero, el peso del producto, los segmentos de columna ni certificaciones, por lo que quedan en null."
+verificadoEn: "2026-07-03"
+en:
+  nombreComercial: "FEZIBO Standing Desk 140x60 cm with 2 Drawers"
+  veredicto: "The FEZIBO 140x60 with drawers is a complete standing desk that leans into storage: it comes with the tabletop, two drawers under the surface, and an included monitor stand, which is uncommon at this price. The motor is single and rises at around 30 mm/s, with anti-collision and a three-memory panel, and it holds 80 kg on a steel frame. It's not the fastest or the quietest —single motors in this class sit below dual ones— and the 60 cm depth feels a little tight with a large monitor and keyboard, but the package delivers: having drawers and a monitor stand from the factory saves buying them separately. For a tidy home workstation with everything included and no extra accessories to add, it's a smart buy for the money."
+  idealPara: "Anyone who wants a complete standing desk with built-in storage (two drawers) and a monitor stand, with nothing to assemble separately"
+  comunidad: "Reviews highlight how well-equipped it arrives —drawers and monitor stand included— and that assembly is manageable. The most repeated complaints are that the single motor rises a bit slowly, that the 60 cm depth is tight with large monitors, and that cable management is basic."
+  resumenCompra:
+    mejorPara: "A complete, tidy home workstation with drawers and a monitor stand included."
+    evitarSi: "You need to carry a lot of weight, a depth greater than 60 cm, or the fastest possible motor."
+    alternativaDirecta: "SANODESK QS+ if you prefer a wider tabletop; ErGear 140x70 for more load and depth, though without drawers."
+    decisionRapida: "The complete desk with the most factory equipment (drawers and monitor stand) in its price range."
+  puntosFuertes:
+    - "Complete desk with tabletop, two drawers, and a monitor stand included"
+    - "80 kg load capacity, above other budget complete desks"
+    - "Panel with 3 memories and anti-collision"
+    - "Industrial-grade steel frame"
+    - "A lot of equipment under 250 EUR"
+  puntosDebiles:
+    - "Single motor: slower and slightly noisier rise"
+    - "60 cm depth, tight with large monitors"
+    - "Basic cable management"
+  paraQuienSi:
+    - "Anyone who wants built-in storage (two drawers) in the desk"
+    - "Anyone who values an included monitor stand from the factory"
+    - "Anyone after a complete workstation ready to use at home"
+  paraQuienNo:
+    - "Anyone who needs a depth greater than 60 cm"
+    - "Anyone who wants the fastest, quietest motor"
+    - "Anyone who will load well over 80 kg"
+calidadDatos:
+  score: 82
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 30
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 69.5
+  alturaMaxCm: 117
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "madera"
+  tableroAnchoCm: 140
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 3
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

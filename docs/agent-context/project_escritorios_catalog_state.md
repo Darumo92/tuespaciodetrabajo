@@ -54,7 +54,13 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 8 / (objetivo 50-100).
+- Creadas: 12 / (objetivo 50-100).
+  - Lote 1 (7, calidad subida a media 82 el 2026-07-03): `flexispot-ec5-pro`, `flexispot-e1-pro`,
+    `flexispot-e7`, `maidesite-el2-pro-art`, `sanodesk-qs-plus`, `ergear-140x70`, `jummico-140x60`.
+  - Lote 2 (5, 2026-07-03, media calidad 94): `flexispot-e8` (98), `flexispot-e5` (94),
+    `maidesite-t2-pro` (94), `sanodesk-e1-pro` (94, estructura dual TÜV), `fezibo-140x60` (82, completo con cajones).
+    Datos Amazon.es (precio/ASIN/título/imagen) los aporta el usuario; specs de oficiales/reseñas, nunca inventadas.
+  - Nota: `calidad-datos.mjs` ya no penaliza campos `tablero*` cuando `tableroIncluido:false` (dato N/A = completo).
 
 ## FASE FINAL — Integración ⬜ PENDIENTE
 Acoplamientos silla→escritorio a resolver (diferidos aquí en FASE 0 a propósito):

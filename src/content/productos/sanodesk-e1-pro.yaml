@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "SANODESK Estructura Elevable 2 Motores (100 kg)"
+marca: "SANODESK"
+imagen: "/img/productos/sanodesk-e1-pro.jpg"
+imagenAlt: "Estructura elevable eléctrica SANODESK blanca de doble motor, columnas de tres tramos y panel LED con memorias"
+tramoPrecio: 2
+precioMin: 195
+precioMax: 195
+valoracion: null
+valoraciones:
+  velocidad: 7
+  estabilidad: 8
+  capacidadCarga: 7.5
+  rangoAltura: 8.5
+  materiales: 7.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "SANODESK estructura elevable 2 motores 100 kg 4 memorias anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://sanodesk.net/"
+idealPara: "Quien quiere una estructura elevable de doble motor con certificación TÜV y elige su propio tablero, sin pasar de 200 euros"
+veredicto: "Esta estructura de SANODESK es una de las formas más baratas de tener un doble motor certificado TÜV Rheinland: por debajo de 200 euros, sin tablero, subes con dos motores a 32 mm/s por columnas de tres tramos, con un rango de 60 a 125 cm que vale para casi cualquier estatura. Aguanta 100 kg, trae panel LED con cuatro memorias, anticolisión y bloqueo infantil, y por debajo de 50 dB apenas se oye. Compite de tú a tú con la FlexiSpot E5: aquí ganas la certificación TÜV explícita en los motores y un precio parecido; pierdes algo de velocidad frente a los 35 mm/s de la E5. Como toda estructura, hay que sumar el tablero aparte. Para montar un elevable de doble motor fiable sin gastar de más, es una compra muy sólida."
+resumenCompra:
+  mejorPara: "Montar un escritorio de doble motor con certificación TÜV gastando poco."
+  evitarSi: "Quieres un escritorio completo listo para usar o la máxima velocidad y carga de la gama alta."
+  alternativaDirecta: "FlexiSpot E5 si prefieres algo más de velocidad (35 mm/s) por precio similar; Maidesite T2 Pro si priorizas la carga máxima (160 kg) y la garantía más larga."
+  decisionRapida: "El doble motor de tres tramos con TÜV más barato; el gasto extra es el tablero."
+metodologia:
+  - "Specs del listado de Amazon.es de la estructura SANODESK de dos motores (100 kg), contrastadas con la imagen de producto (confirma que es solo estructura) y la información de marca de SANODESK."
+  - "La nota prioriza que sea doble motor de tres tramos con certificación TÜV a precio de entrada; penaliza la velocidad algo menor y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "32 mm/s con doble motor: suave y equilibrada, un poco por debajo de la FlexiSpot E5 (35 mm/s) pero muy por encima de los motores simples."
+  estabilidad: "Doble motor y columnas de tres tramos con 100 kg de carga; estable para un setup normal de dos monitores."
+  capacidadCarga: "100 kg cubre dos monitores y accesorios, en línea con las estructuras de doble motor de su precio."
+  rangoAltura: "60-125 cm (solo estructura) es de los rangos más amplios, válido para casi cualquier estatura."
+  materiales: "Acero con motores certificados TÜV Rheinland y panel LED con memorias; buen nivel para el precio, sin acabados premium."
+  calidadPrecio: "Un doble motor de tres tramos con TÜV por debajo de 200 EUR (estructura) es de las mejores relaciones calidad-precio de la categoría."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SANODESK — sitio oficial de la marca (especificaciones y garantía)"
+    url: "https://sanodesk.net/"
+    fechaConsulta: "2026-07-03"
+  - tipo: "tienda"
+    nombre: "Amazon.es — SANODESK Escritorio Elevable Eléctrico con 2 Motores, 4 Memorias, Anti-Colisión, Carga 100 kg (Blanco)"
+    url: "https://www.amazon.es/stores/page/D80ABC2A-DBCE-4B73-9A28-F6F9D723559E"
+    fechaConsulta: "2026-07-03"
+  - tipo: "review"
+    nombre: "levantatuespacio.com — Los mejores escritorios elevables de SANODESK"
+    url: "https://levantatuespacio.com/sanodesk/"
+    fechaConsulta: "2026-07-03"
+limitaciones:
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "Velocidad de 32 mm/s, algo por debajo de otras estructuras de doble motor."
+  - "No se ha confirmado el peso de la estructura ni si el panel incluye puerto USB."
+alternativas:
+  - slug: "flexispot-e5"
+    motivo: "Doble motor de tres tramos algo más rápido (35 mm/s) por precio parecido."
+  - slug: "maidesite-t2-pro"
+    motivo: "Más capacidad de carga (160 kg) y garantía más larga, aunque con motor único."
+comunidad: "Las reseñas de la gama de estructuras de SANODESK destacan el ajuste suave y silencioso del doble motor, la estabilidad de las columnas de tres tramos y el valor de la certificación TÜV al precio que tiene. Las quejas habituales son que hay que comprar el tablero aparte y que sube algo más lento que las estructuras de doble motor más caras."
+paraQuienSi:
+  - "Quien quiere doble motor con certificación TÜV gastando poco"
+  - "Quien necesita rango amplio de altura (60-125 cm)"
+  - "Quien elige su propio tablero"
+paraQuienNo:
+  - "Quien quiere un escritorio completo listo para usar"
+  - "Quien busca la subida más rápida y la máxima carga de la gama alta"
+  - "Quien no quiere sumar el coste del tablero"
+puntosFuertes:
+  - "Doble motor certificado TÜV Rheinland por debajo de 200 EUR (estructura)"
+  - "Columnas de tres tramos con rango 60-125 cm"
+  - "Panel LED con 4 memorias, anticolisión y bloqueo infantil"
+  - "100 kg de capacidad de carga"
+  - "Muy silenciosa (por debajo de 50 dB)"
+puntosDebiles:
+  - "Se vende sin tablero: gasto adicional"
+  - "Velocidad de 32 mm/s, por debajo de otras estructuras de doble motor"
+  - "Acabado sencillo, sin extras premium"
+fuenteSpecs: "Specs del listado de Amazon.es de la estructura SANODESK de dos motores (Blanco): doble motor certificado TÜV Rheinland, velocidad 32 mm/s, altura 60-125 cm (solo estructura), carga 100 kg, columnas de tres tramos, ruido <50 dB, panel LED con 4 memorias, anticolisión y bloqueo infantil, estructura de acero. La imagen de producto confirma que se vende solo estructura (SANODESK Desk Frame), sin tablero. Garantía SANODESK de 5 años en estructura y 3 años en motor y controlador. No se ha confirmado el peso de la estructura ni el puerto USB, y al venderse sin tablero esos campos no aplican, por lo que quedan en null."
+verificadoEn: "2026-07-03"
+en:
+  nombreComercial: "SANODESK Dual-Motor Lifting Frame (100 kg)"
+  veredicto: "This SANODESK frame is one of the cheapest ways to get a TÜV Rheinland-certified dual motor: under 200 euros, without a tabletop, you rise on two motors at 32 mm/s over three-stage columns, with a 60-125 cm range that fits almost any height. It holds 100 kg, comes with an LED panel with four memories, anti-collision, and child lock, and under 50 dB it's barely audible. It goes head to head with the FlexiSpot E5: here you gain explicit TÜV certification on the motors at a similar price, and you lose a little speed versus the E5's 35 mm/s. Like any frame, you add the tabletop separately. To build a reliable dual-motor standing desk without overspending, it's a very solid buy."
+  idealPara: "Anyone who wants a TÜV-certified dual-motor frame and picks their own tabletop, under 200 euros"
+  comunidad: "Reviews of SANODESK's frame range highlight the smooth, quiet dual-motor adjustment, the stability of the three-stage columns, and the value of TÜV certification at this price. The usual complaints are that you have to buy the tabletop separately and that it rises a little slower than pricier dual-motor frames."
+  resumenCompra:
+    mejorPara: "Building a dual-motor desk with TÜV certification while spending little."
+    evitarSi: "You want a complete, ready-to-use desk or the maximum speed and load of the high end."
+    alternativaDirecta: "FlexiSpot E5 for a bit more speed (35 mm/s) at a similar price; Maidesite T2 Pro if you prioritize max load (160 kg) and the longest warranty."
+    decisionRapida: "The cheapest three-stage dual motor with TÜV; the extra cost is the tabletop."
+  puntosFuertes:
+    - "TÜV Rheinland-certified dual motor under 200 EUR (frame)"
+    - "Three-stage columns with a 60-125 cm range"
+    - "LED panel with 4 memories, anti-collision, and child lock"
+    - "100 kg load capacity"
+    - "Very quiet (under 50 dB)"
+  puntosDebiles:
+    - "Sold without a tabletop: extra cost"
+    - "32 mm/s speed, below other dual-motor frames"
+    - "Plain finish, no premium extras"
+  paraQuienSi:
+    - "Anyone who wants a TÜV-certified dual motor on a budget"
+    - "Anyone who needs a wide height range (60-125 cm)"
+    - "Anyone who picks their own tabletop"
+  paraQuienNo:
+    - "Anyone who wants a complete, ready-to-use desk"
+    - "Anyone after the fastest rise and maximum load of the high end"
+    - "Anyone who doesn't want to add the cost of a tabletop"
+calidadDatos:
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 32
+  nivelRuidoDb: 50
+  segmentosColumna: 3
+  alturaMinCm: 60
+  alturaMaxCm: 125
+  cargaMaxKg: 100
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: true
+  certificacionEmc: null

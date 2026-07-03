@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "FlexiSpot E5 Serie Clásicos (estructura)"
+marca: "FlexiSpot"
+imagen: "/img/productos/flexispot-e5.avif"
+imagenAlt: "Estructura elevable eléctrica FlexiSpot E5 de doble motor y columnas de tres tramos con panel de memorias"
+tramoPrecio: 2
+precioMin: 179
+precioMax: 179
+valoracion: null
+valoraciones:
+  velocidad: 7.5
+  estabilidad: 8
+  capacidadCarga: 7.5
+  rangoAltura: 8.5
+  materiales: 7.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "FlexiSpot E5 estructura escritorio elevable doble motor"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es/escritorio-elevable-e5-pro.html"
+idealPara: "Quien quiere un doble motor de tres tramos por poco dinero y elige su propio tablero"
+veredicto: "La E5 es el doble motor de tres tramos más asequible de FlexiSpot: por debajo de 180 euros, en versión estructura, tienes lo que en muchas marcas cuesta bastante más. Sube a 35 mm/s, con transición suave y por debajo de 50 dB, y el rango de 60 a 125 cm es de los amplios, así que vale para casi cualquier estatura. Aguanta 100 kg, suficiente para dos monitores y accesorios, y el bastidor es de acero SPCC de 2 mm. El panel trae cuatro memorias y anticolisión. No es tan estable ni tan rápida como la E8 de patas ovaladas —el acabado es más sencillo y la carga algo menor—, pero por el precio es difícil pedirle más. Como siempre en estructura, el tablero se compra aparte. Con 5 años de garantía, es de las mejores bases para montar un elevable sin gastar de más."
+resumenCompra:
+  mejorPara: "Montar un escritorio de doble motor de tres tramos gastando poco."
+  evitarSi: "Quieres un escritorio completo listo para usar o la máxima estabilidad y carga de la gama alta."
+  alternativaDirecta: "FlexiSpot E8 si quieres patas ovaladas, más carga y más estabilidad; Maidesite T2 Pro si priorizas la carga máxima y la garantía más larga."
+  decisionRapida: "El doble motor de tres tramos más barato; el gasto extra es el tablero."
+metodologia:
+  - "Specs de la ficha oficial de FlexiSpot (España y global) para la serie E5, contrastadas con reseñas independientes (Pro Tool Reviews, MMORPG) y la política de garantía de FlexiSpot ES."
+  - "La nota prioriza que sea doble motor de tres tramos a precio de entrada; penaliza la carga y el acabado frente a la gama alta y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "35 mm/s con doble motor: rápida y suave, por debajo de la E8 (38 mm/s) pero muy por encima de los motores simples."
+  estabilidad: "Bastidor de acero SPCC de 2 mm y columnas de tres tramos con 100 kg de carga; estable para un setup normal, sin llegar a la firmeza de la E8."
+  capacidadCarga: "100 kg cubre dos monitores y accesorios; por debajo de estructuras de gama alta pero de sobra para el uso doméstico."
+  rangoAltura: "60-125 cm (solo estructura) es de los rangos más amplios, válido para casi cualquier estatura."
+  materiales: "Acero SPCC de 2 mm de calidad, panel con memorias y certificaciones de marca; acabado correcto sin pretensiones premium."
+  calidadPrecio: "Un doble motor de tres tramos por debajo de 180 EUR (estructura) es de las mejores relaciones calidad-precio de la categoría."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FlexiSpot ES — Serie de escritorios elevables clásicos (E5)"
+    url: "https://www.flexispot.es/escritorio-elevable-e5-pro.html"
+    fechaConsulta: "2026-07-03"
+  - tipo: "oficial"
+    nombre: "FlexiSpot ES — Garantía de escritorio"
+    url: "https://www.flexispot.es/warranty"
+    fechaConsulta: "2026-07-03"
+  - tipo: "review"
+    nombre: "Pro Tool Reviews — FlexiSpot E5 Pro Standing Desk Review"
+    url: "https://www.protoolreviews.com/flexispot-e5-pro-standing-desk-review/"
+    fechaConsulta: "2026-07-03"
+limitaciones:
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "Menos carga y estabilidad que la E8 de gama alta."
+  - "No se ha confirmado el peso exacto de la estructura ni si el panel incluye puerto USB."
+alternativas:
+  - slug: "flexispot-e8"
+    motivo: "Patas ovaladas, más carga (125 kg) y más estabilidad, a mayor precio."
+  - slug: "maidesite-t2-pro"
+    motivo: "Más capacidad de carga (160 kg) y garantía más larga, aunque con motor único."
+comunidad: "Las reseñas coinciden en que es una de las mejores compras de entrada en doble motor: sube rápido y suave, monta bien y aguanta un setup de dos monitores sin tambaleo relevante. Las quejas se centran en que hay que comprar el tablero aparte y en que, en altura máxima con mucho peso, no es tan firme como las estructuras de gama alta."
+paraQuienSi:
+  - "Quien quiere doble motor de tres tramos gastando poco"
+  - "Quien necesita rango amplio de altura (60-125 cm)"
+  - "Quien elige su propio tablero"
+paraQuienNo:
+  - "Quien quiere un escritorio completo listo para usar"
+  - "Quien necesita la máxima carga y estabilidad de la gama alta"
+  - "Quien no quiere sumar el coste del tablero"
+puntosFuertes:
+  - "Doble motor de tres tramos por debajo de 180 EUR (estructura)"
+  - "Rango de altura amplio (60-125 cm)"
+  - "Sube a 35 mm/s, suave y por debajo de 50 dB"
+  - "Bastidor de acero SPCC de 2 mm"
+  - "5 años de garantía en estructura"
+puntosDebiles:
+  - "Se vende sin tablero: gasto adicional"
+  - "Menos carga (100 kg) y estabilidad que la gama alta"
+  - "Acabado sencillo, sin extras premium"
+fuenteSpecs: "Specs de la ficha oficial de FlexiSpot (España y global) para la serie E5: velocidad 35 mm/s, altura 60-125 cm (solo estructura), carga 100 kg, doble motor, columnas de tres tramos, ruido <50 dB, bastidor de acero SPCC de 2 mm, panel con 4 memorias y anticolisión. Garantía FlexiSpot ES de 5 años en estructura y 3 años en electrónica; certificaciones de marca TÜV/CE/BIFMA. No se ha confirmado el peso exacto de la estructura ni el puerto USB, y al venderse sin tablero esos campos no aplican, por lo que quedan en null. Nota: algunas fichas de FlexiSpot ES citan hasta 140 kg; se usa el valor de 100 kg por ser el consenso de la ficha global y las reseñas independientes."
+verificadoEn: "2026-07-03"
+en:
+  nombreComercial: "FlexiSpot E5 Classic Series (frame only)"
+  veredicto: "The E5 is FlexiSpot's most affordable three-stage dual motor: under 180 euros in frame form, you get what many brands charge a lot more for. It rises at 35 mm/s, smooth and under 50 dB, and the 60-125 cm range is among the wide ones, so it fits almost any height. It holds 100 kg, enough for two monitors and accessories, and the frame is 2 mm SPCC steel. The panel has four memories and anti-collision. It's not as stable or as fast as the oval-legged E8 —the finish is plainer and the load a bit lower— but for the price it's hard to ask for more. As always with a frame, the tabletop is a separate purchase. With a 5-year warranty, it's one of the best bases for building a standing desk without overspending."
+  idealPara: "Anyone who wants a three-stage dual motor for little money and picks their own tabletop"
+  comunidad: "Reviews agree it's one of the best entry buys in dual motor: it rises fast and smooth, assembles well, and holds a two-monitor setup without meaningful wobble. Complaints center on the tabletop being a separate purchase and on it not being as firm as high-end frames at max height under heavy load."
+  resumenCompra:
+    mejorPara: "Building a three-stage dual-motor desk while spending little."
+    evitarSi: "You want a complete, ready-to-use desk or the maximum stability and load of the high end."
+    alternativaDirecta: "FlexiSpot E8 for oval legs, more load, and more stability; Maidesite T2 Pro if you prioritize max load and the longest warranty."
+    decisionRapida: "The cheapest three-stage dual motor; the extra cost is the tabletop."
+  puntosFuertes:
+    - "Three-stage dual motor under 180 EUR (frame)"
+    - "Wide height range (60-125 cm)"
+    - "Rises at 35 mm/s, smooth and under 50 dB"
+    - "2 mm SPCC steel frame"
+    - "5-year warranty on the frame"
+  puntosDebiles:
+    - "Sold without a tabletop: extra cost"
+    - "Less load (100 kg) and stability than the high end"
+    - "Plain finish, no premium extras"
+  paraQuienSi:
+    - "Anyone who wants a three-stage dual motor on a budget"
+    - "Anyone who needs a wide height range (60-125 cm)"
+    - "Anyone who picks their own tabletop"
+  paraQuienNo:
+    - "Anyone who wants a complete, ready-to-use desk"
+    - "Anyone who needs the maximum load and stability of the high end"
+    - "Anyone who doesn't want to add the cost of a tabletop"
+calidadDatos:
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 35
+  nivelRuidoDb: 50
+  segmentosColumna: 3
+  alturaMinCm: 60
+  alturaMaxCm: 125
+  cargaMaxKg: 100
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: true
+  certificacionEmc: null

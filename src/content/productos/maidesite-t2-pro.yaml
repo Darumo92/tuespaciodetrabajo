@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "Maidesite T2 Pro (estructura)"
+marca: "Maidesite"
+imagen: "/img/productos/maidesite-t2-pro.webp"
+imagenAlt: "Estructura elevable eléctrica Maidesite T2 Pro de columnas en dos tramos y panel con memorias"
+tramoPrecio: 3
+precioMin: 329
+precioMax: 329
+valoracion: null
+valoraciones:
+  velocidad: 6.5
+  estabilidad: 8.5
+  capacidadCarga: 9
+  rangoAltura: 7
+  materiales: 8
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Maidesite T2 Pro estructura escritorio elevable eléctrico"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.maidesite.de/en/products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+idealPara: "Quien ya tiene o quiere elegir su propio tablero y busca una estructura elevable robusta, con carga alta y garantía larga"
+veredicto: "La T2 Pro es una estructura (sin tablero) pensada para quien monta su escritorio a medida: eliges tú el tablero y aprovechas un bastidor de acero que aguanta 160 kg, de los más altos de su rango de precio. El motor es único, así que la subida no es tan rápida ni tan repartida como en las estructuras de doble motor, pero el ajuste es suave y silencioso (por debajo de 45 dB) y trae extras que no se ven a este precio: dos puertos USB (A y C) en el panel, anticolisión de tres niveles, arranque suave y bloqueo infantil. Las columnas son de dos tramos, lo que baja un poco el rango de altura frente a las de tres, y al comprarla sin tablero hay que sumar ese gasto aparte. Para un montaje serio y duradero, con 10 años de garantía en la estructura, es de las opciones más sólidas."
+resumenCompra:
+  mejorPara: "Montar un escritorio a medida sobre una estructura robusta con carga alta y garantía larga."
+  evitarSi: "Quieres un escritorio completo listo para usar o el ajuste más rápido de doble motor."
+  alternativaDirecta: "FlexiSpot E5 si prefieres doble motor y columnas de tres tramos por menos dinero; FlexiSpot E8 si buscas el tope de gama en estructura."
+  decisionRapida: "La estructura con más capacidad de carga (160 kg) y garantía más larga (10 años) entre las opciones sin tablero de su precio."
+metodologia:
+  - "Specs tomadas de la ficha oficial de Maidesite (maidesite.de/.co.uk) para la T2 Pro, contrastadas con el manual de usuario del modelo."
+  - "La nota prioriza la capacidad de carga, la garantía y los extras (USB, anticolisión) frente al motor único y las columnas de dos tramos."
+scoreRationale:
+  velocidad: "35 mm/s con motor único: suficiente para un uso normal, pero por debajo de las estructuras de doble motor que rondan los 38 mm/s."
+  estabilidad: "Bastidor de acero con estructura micro-triangular reforzada y 160 kg de carga; muy estable para el rango de precio, aunque las columnas de dos tramos ceden algo frente a las de tres en alturas máximas."
+  capacidadCarga: "160 kg es de lo más alto del mercado de escritorios elevables, muy por encima de los 60-80 kg de los modelos budget."
+  rangoAltura: "72-120 cm (solo estructura) cubre la mayoría de estaturas, pero las columnas de dos tramos limitan el mínimo frente a los diseños de tres tramos."
+  materiales: "Acero recubierto en polvo, dos puertos USB (A y C de 18 W) y anticolisión de tres niveles; acabado por encima de la media de su precio."
+  calidadPrecio: "160 kg de carga y 10 años de garantía en estructura por 329 EUR es una relación difícil de igualar, con la salvedad de tener que comprar el tablero aparte."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Maidesite — T2 Pro Electric Height-Adjustable Frame (ficha oficial)"
+    url: "https://www.maidesite.de/en/products/maidesite-elektrisch-hohenverstellbarer-gestell-t2-pro"
+    fechaConsulta: "2026-07-03"
+  - tipo: "oficial"
+    nombre: "MaidesiteUK — T2 Pro Electric Stand Up Desk Frame"
+    url: "https://www.maidesite.co.uk/products/maidesite-electric-standing-desk-frame-t2-pro"
+    fechaConsulta: "2026-07-03"
+  - tipo: "manual"
+    nombre: "Maidesite T2 Pro — Manual de usuario"
+    url: "https://manuals.plus/asin/B0BK39ZXD6"
+    fechaConsulta: "2026-07-03"
+limitaciones:
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "Motor único y columnas de dos tramos: menos velocidad y rango que las estructuras de doble motor y tres tramos."
+  - "El grosor y material del tablero dependen del que elija cada comprador, no vienen de fábrica."
+alternativas:
+  - slug: "flexispot-e5"
+    motivo: "Doble motor y columnas de tres tramos por menos dinero, aunque con menos capacidad de carga."
+  - slug: "flexispot-e8"
+    motivo: "Estructura de gama superior con doble motor y patas ovaladas, más cara."
+comunidad: "Las reseñas destacan el montaje sencillo, la firmeza del bastidor incluso con dos monitores y la utilidad de los puertos USB integrados. La crítica más repetida es que el motor único sube algo más lento que las estructuras de doble motor, y que hay que contar con el coste del tablero aparte."
+paraQuienSi:
+  - "Quien quiere elegir su propio tablero (medida, material, acabado)"
+  - "Quien necesita cargar mucho peso: varios monitores, brazos articulados, equipo pesado"
+  - "Quien valora una garantía larga (10 años en estructura)"
+paraQuienNo:
+  - "Quien quiere un escritorio completo listo para usar nada más abrir la caja"
+  - "Quien busca la subida más rápida y repartida de un doble motor"
+  - "Quien no quiere sumar el coste del tablero al presupuesto"
+puntosFuertes:
+  - "160 kg de capacidad de carga, de las más altas de su rango"
+  - "10 años de garantía en la estructura"
+  - "Dos puertos USB (A y C de 18 W) en el panel de control"
+  - "Anticolisión de tres niveles, arranque suave y bloqueo infantil"
+  - "Bastidor de acero reforzado, estable con varios monitores"
+puntosDebiles:
+  - "Se vende sin tablero: gasto adicional"
+  - "Motor único: subida más lenta que un doble motor"
+  - "Columnas de dos tramos: menos rango que las de tres tramos"
+fuenteSpecs: "Specs de la ficha oficial de Maidesite (maidesite.de y maidesite.co.uk) para la T2 Pro: velocidad 35 mm/s, altura 72-120 cm (solo estructura), carga 160 kg, peso de la estructura 20,15 kg, motor único, columnas de dos tramos, ruido <45 dB, garantía 10 años, acero recubierto en polvo, anticolisión de tres niveles, arranque suave, bloqueo infantil, 4 memorias y dos puertos USB (A y C de 18 W). Certificación CE/UKCA declarada por el fabricante; no se ha confirmado TÜV ni EMC específicos, por lo que quedan en null. Al venderse sin tablero, los campos de tablero no aplican."
+verificadoEn: "2026-07-03"
+en:
+  nombreComercial: "Maidesite T2 Pro (frame only)"
+  veredicto: "The T2 Pro is a frame (no tabletop) aimed at anyone building a desk to their own spec: you pick the top and get a steel frame that holds 160 kg, one of the highest in its price range. The motor is single, so it doesn't rise as fast or as evenly as dual-motor frames, but the adjustment is smooth and quiet (under 45 dB) and it brings extras you don't expect at this price: two USB ports (A and C) on the panel, three-level anti-collision, soft start, and child lock. The legs are two-stage, which trims the height range slightly versus three-stage designs, and buying it without a top means budgeting for that separately. For a serious, long-lasting build with a 10-year frame warranty, it's one of the sturdiest options."
+  idealPara: "Anyone who wants to choose their own tabletop and needs a sturdy lifting frame with high load capacity and a long warranty"
+  comunidad: "Reviews highlight the easy assembly, the rigidity of the frame even with two monitors, and the usefulness of the built-in USB ports. The most repeated criticism is that the single motor rises a little slower than dual-motor frames, and that you have to factor in the cost of a separate tabletop."
+  resumenCompra:
+    mejorPara: "Building a custom desk on a sturdy frame with high load capacity and a long warranty."
+    evitarSi: "You want a complete, ready-to-use desk or the fastest dual-motor adjustment."
+    alternativaDirecta: "FlexiSpot E5 if you prefer dual motor and three-stage legs for less; FlexiSpot E8 for a top-tier frame."
+    decisionRapida: "The frame with the most load capacity (160 kg) and the longest warranty (10 years) among frame-only options at its price."
+  puntosFuertes:
+    - "160 kg load capacity, among the highest in its range"
+    - "10-year warranty on the frame"
+    - "Two USB ports (A and C, 18 W) on the control panel"
+    - "Three-level anti-collision, soft start, and child lock"
+    - "Reinforced steel frame, stable with multiple monitors"
+  puntosDebiles:
+    - "Sold without a tabletop: extra cost"
+    - "Single motor: slower rise than a dual motor"
+    - "Two-stage legs: less range than three-stage"
+  paraQuienSi:
+    - "Anyone who wants to pick their own tabletop (size, material, finish)"
+    - "Anyone who needs to carry a lot of weight: several monitors, monitor arms, heavy gear"
+    - "Anyone who values a long warranty (10 years on the frame)"
+  paraQuienNo:
+    - "Anyone who wants a complete desk ready to use out of the box"
+    - "Anyone after the faster, more even rise of a dual motor"
+    - "Anyone who doesn't want to add the cost of a tabletop to the budget"
+calidadDatos:
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-03"
+  camposFaltantes:
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 35
+  nivelRuidoDb: 45
+  segmentosColumna: 2
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 160
+  estructuraMaterial: "acero"
+  pesoProductoKg: 20.15
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null
