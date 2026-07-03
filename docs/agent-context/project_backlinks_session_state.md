@@ -5,6 +5,61 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-07-03 - primer plan con link propio en Reddit
+
+Contexto operativo:
+- Karma verificado via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `50`, total `51`. Se levanta la regla anterior de **0 links en Reddit hasta total_karma >=50**.
+- Nueva tactica desde hoy: maximo **1 enlace propio en Reddit por tanda**, solo en hilo EN con encaje fuerte y respuesta util por si el link fuera ignorado. Mantener 2 comentarios Reddit sin link para que el patron de la cuenta no cambie de golpe.
+- La web ya tiene contenido ingles publicado en `/en/`; no hace falta limitarse a hilos/comentarios en espanol para enlazar dominio propio.
+- URLs inglesas verificadas localmente para esta tanda:
+  - `/en/guides/gaming-chair-vs-ergonomic-chair/`
+  - `/en/guides/are-standing-desks-worth-it/`
+  - `/en/chairs/best-ergonomic-office-chairs/`
+  - `/en/guides/how-to-set-up-an-ergonomic-home-office/`
+
+Reddit candidatos verificados con `old.reddit`, textos preparados:
+- Prioridad 1 CON link propio: `r/Ergonomics` `1ulm7x1` — OP pregunta si es mejor office chair o gaming chair para trabajar desde casa 10-12h. Encaje exacto con `/en/guides/gaming-chair-vs-ergonomic-chair/`. Hilo con pocas respuestas; responder con matiz personal, no como comparativa SEO.
+- Prioridad 2 SIN link: `r/Ergonomics` `1ulhw67` — OP trabaja remoto desde Covid, padre reciente, usa standing desk desde hace 2 meses, alterna cada 30-40 min y pregunta si sentarse/de pie ayuda o depende del setup.
+- Prioridad 3 SIN link: `r/OfficeChairs` `1ulnpe2` — OP en EU, max 450 EUR, dolor lumbar/small injury, IKEA mesh le hace deslizarse, no quiere Herman Miller usado, mira SIHOO y estudia/juega 6h+.
+- Backup SIN link: `r/homeoffice` `1ultgx8` — OP empieza WFH y pide experiencias generales de setup: que funciono, arrepentimientos, gasto, inspiracion.
+
+Quora EN:
+- Brave Search devolvio preguntas reales de `quora.com`; Quora directo sigue no verificable por bloqueo/challenge.
+- Prioridad Quora con link: `https://www.quora.com/What-are-the-pros-and-cons-of-a-standing-desk-vs-a-sitting-desk-for-working-and-gaming` -> `/en/guides/are-standing-desks-worth-it/`.
+- Backup Quora silla: `https://www.quora.com/What-is-better-for-a-programmer-a-gamer-chair-or-an-ergonomic-chair` -> `/en/guides/gaming-chair-vs-ergonomic-chair/`.
+- Recomendacion tactica: publicar 3 Reddit (1 con link, 2 sin link) + 1 Quora EN con link si han pasado 24h+ desde la respuesta Quora anterior. Tras publicar, verificar `old.reddit.com/user/Dear_Potato8535/comments/` y registrar IDs visibles; Quora requiere URL exacta de answer copiada por el usuario.
+
+## Update 2026-07-02 - plan Reddit/Quora preparado
+
+Contexto operativo:
+- Karma visible via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `35`, total `36`. Sube +3 respecto al 2026-07-01, pero se mantiene regla **0 links en Reddit hasta total_karma >=50**.
+- Primera pagina de `old.reddit.com/user/Dear_Potato8535/comments/`: comentarios Reddit de 2026-07-01 visibles con `0 children`; no hay reply directo nuevo que requiera contestacion. Aparece un comentario ajeno al proyecto en `r/GatosArgentinos`, ignorar para este estado.
+- Busquedas ES revisadas:
+  - `r/askspain`: mudanza Girona-Palma y borrar contenidos de ordenador; sin encaje ergonomia/home office.
+  - `r/programacion`: paginas de trabajo remoto generico; encaje debil y riesgo de desviarse a empleabilidad.
+- Reddit candidatos verificados con `old.reddit`, textos preparados SIN link:
+  - Prioridad 1: `r/OfficeChairs` `1ul8xqm` — OP mujer 5'3", torso corto, remote tech worker US, jornada completa sentada, cruza piernas, presupuesto <500 USD, Aeron le parecio bien pero no tanto como para pagar mucho, lumbar actual no le encaja.
+  - Prioridad 2: `r/OfficeChairs` `1ul5yzx` — OP 5'6"/170 lb, dolor lumbar y sit bones, lumbar fijo no le encaja, anterior pelvic tilt, duda Libernovo Omni Pro firme vs SE blanda.
+  - Prioridad 3: `r/homeoffice` `1ulc4q8` — pregunta ligera sobre compra aburrida que acabo siendo mejora grande; buen candidato de karma/comunidad sin link.
+- Backups no usados:
+  - `r/Ergonomics` `1ukpy5i` — lumbar agresivo tras horas y duda sobre respaldo dinamico; util si se quiere sustituir uno de los tres, pero hay tono potencialmente promocional alrededor de Lavenne/Kickstarter.
+  - `r/StandingDesks` `1ul9mll` — quiere convertir escritorio en electric standing desk desde India; cuerpo demasiado dependiente de imagen/modelo no visible.
+- Quora ES:
+  - Brave Search por `curl` devolvio challenge, no resultados usables.
+  - Usar backup ya verificado el 2026-07-01 y no marcado como respondido: `https://es.quora.com/Por-qué-no-soporto-ni-10-minutos-en-la-silla-cuando-voy-a-programar-y-me-duele-el-cuello-y-la-espalda` -> `/guias/dolor-espalda-trabajar-casa/`.
+  - Fit del articulo verificado localmente: cubre dolor lumbar/cervical, pantalla a altura de ojos, soporte portatil/teclado externo, pausas cada 50 minutos y red flags medicas.
+- Recomendacion tactica: publicar 3 Reddit sin link + 1 Quora ES con link si han pasado 24h+ desde la respuesta Quora anterior. Tras publicar, verificar perfil `old.reddit` y registrar URLs visibles; Quora requiere URL exacta copiada por el usuario.
+
+Update post-publicacion 2026-07-02:
+- Usuario confirma "todo comentado".
+- Verificacion publica con `old.reddit.com/user/Dear_Potato8535/comments/` y los hilos directos: visibles 3/3 comentarios Reddit.
+- Karma visible tras publicacion: post `1`, comment `35`, total `36`; sin subida inmediata.
+- Publicados SIN link y visibles:
+  - `r/OfficeChairs` `1ul8xqm` visible como `ov2wk4b`: https://www.reddit.com/r/OfficeChairs/comments/1ul8xqm/recommendations_for_petite_woman/ov2wk4b/
+  - `r/OfficeChairs` `1ul5yzx` visible como `ov3120p`: https://www.reddit.com/r/OfficeChairs/comments/1ul5yzx/am_i_better_off_with_a_firm_chair_or_a_soft_one/ov3120p/
+  - `r/homeoffice` `1ulc4q8` visible como `ov36omk`: https://www.reddit.com/r/homeoffice/comments/1ulc4q8/whats_a_boring_purchase_that_turned_out_to_be_a/ov36omk/
+- Quora: publicacion confirmada manualmente por usuario si incluida en "todo comentado"; no verificable desde entorno agente por challenge/403. Pendiente registrar URL exacta de answer si el usuario puede copiarla desde Quora.
+
 ## Update 2026-07-01 - plan Reddit/Quora preparado
 
 Contexto operativo:

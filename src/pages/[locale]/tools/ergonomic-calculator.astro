@@ -255,8 +255,8 @@ const faqs = [
                   <span class="ergo-dolor-label">Shoulders</span>
                   <span class="ergo-dolor-desc">Upper-back tension</span>
                 </label>
-                <label class="ergo-dolor-chip" data-dolor="muñecas">
-                  <input type="checkbox" name="dolor" value="muñecas" />
+                <label class="ergo-dolor-chip" data-dolor="wrists">
+                  <input type="checkbox" name="dolor" value="wrists" />
                   <svg class="ergo-dolor-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3v7"/><path d="M16 3v7"/><path d="M7 10h10l-1 8a3 3 0 0 1-3 3h-2a3 3 0 0 1-3-3z"/></svg>
                   <span class="ergo-dolor-label">Wrists</span>
                   <span class="ergo-dolor-desc">Carpal tunnel, tendinitis</span>
@@ -415,7 +415,7 @@ const faqs = [
       </p>
       <ul>
         <li><strong>80-100 (green):</strong> your setup is reasonable. Fine-tuning chair and monitor height can take it above 95.</li>
-        <li><strong>60-79 (light amber):</strong> there is clear room for improvement. A focused 100-200 EUR investment can usually move you into the green range.</li>
+        <li><strong>60-79 (light amber):</strong> there is clear room for improvement. A focused modest investment can usually move you into the green range.</li>
         <li><strong>40-59 (dark amber):</strong> your setup is taking a toll. If you do not have pain yet, it is likely coming.</li>
         <li><strong>0-39 (red):</strong> high-risk setup. If you will keep working remotely for 5+ hours a day, an ergonomic chair and monitor support are not optional.</li>
       </ul>
@@ -538,7 +538,7 @@ const faqs = [
       const shareModal = $('share-modal');
       const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      const DOLOR_VALID = ['lumbar', 'cervical', 'hombros', 'muñecas', 'ojos', 'ninguno'];
+      const DOLOR_VALID = ['lumbar', 'cervical', 'hombros', 'wrists', 'ojos', 'ninguno'];
 
       // ===== Calc =====
       function clampEstatura(v) { return Math.max(140, Math.min(210, v | 0)); }
@@ -577,7 +577,7 @@ const faqs = [
         if (i.dolor.has('lumbar')) s -= 12;
         if (i.dolor.has('cervical')) s -= 10;
         if (i.dolor.has('hombros')) s -= 6;
-        if (i.dolor.has('muñecas')) s -= 6;
+        if (i.dolor.has('wrists')) s -= 6;
         if (i.dolor.has('ojos')) s -= 6;
         s = Math.max(8, Math.min(100, s));
         const color = s < 40 ? 'red' : s < 70 ? 'amber' : s < 85 ? 'greenLight' : 'green';
@@ -587,7 +587,7 @@ const faqs = [
                     : s < 85 ? 'Reasonable baseline'
                     : 'Excellent setup';
         const desc = s < 40 ? 'If you keep working here for 5+ hours a day, it will likely take a toll. Prioritize the recommendations.'
-                   : s < 70 ? 'A focused 100-250 EUR investment can raise your score by 15-25 points within weeks.'
+                   : s < 70 ? 'A focused modest investment can raise your score by 15-25 points within weeks.'
                    : s < 85 ? 'It works well. Fine-tuning chair and monitor height can move you into the optimal range.'
                    : 'Well-sized setup. Keep it, take active breaks every 45 minutes, and you are in good shape.';
         return { value: s, color, badge, title, desc };
@@ -599,7 +599,7 @@ const faqs = [
         if (i.dolor.has('cervical')) { w.monitor += 4; w.escritorio += 1; }
         if (i.dolor.has('hombros')) { w.monitor += 2; w.escritorio += 1; }
         if (i.dolor.has('ojos')) { w.monitor += 3; w.accesorios += 2; }
-        if (i.dolor.has('muñecas')) w.accesorios += 4;
+        if (i.dolor.has('wrists')) w.accesorios += 4;
         if (i.silla !== 'ergo') w.silla += 2;
         if (i.monitor === 'laptop') { w.monitor += 3; w.accesorios += 1; }
         if (i.estatura < 162 || i.estatura > 188) w.escritorio += 2;
@@ -617,7 +617,7 @@ const faqs = [
         if (i.silla === 'gaming') tips.push({ type: 'info', txt: 'Gaming chairs support a gaming posture, but real lumbar support is often limited. If you feel lower-back pain, consider changing chairs.' });
         if (i.silla === 'ninguna') tips.push({ type: 'warn', txt: 'A dining chair has no lumbar support or meaningful adjustments. No stretching routine will compensate for eight hours there.' });
         if (i.dolor.has('cervical') && i.monitor === 'laptop') tips.push({ type: 'warn', txt: 'Neck pain + laptop without an external monitor is a direct cause. Raising the screen to eye level removes most neck strain.' });
-        if (i.dolor.has('muñecas') && !i.dolor.has('ninguno')) tips.push({ type: 'info', txt: 'For wrist pain: keep elbows around 90-100 degrees, keyboard and mouse close to the body, and consider a <strong>vertical mouse</strong>.' });
+        if (i.dolor.has('wrists') && !i.dolor.has('ninguno')) tips.push({ type: 'info', txt: 'For wrist pain: keep elbows around 90-100 degrees, keyboard and mouse close to the body, and consider a <strong>vertical mouse</strong>.' });
         return tips;
       }
 
@@ -654,9 +654,9 @@ const faqs = [
             color: 'var(--accent)',
           },
           accesorios: {
-            titulo: i.dolor.has('muñecas') ? 'Vertical mouse and ergonomic keyboard' : 'Desk lamp with side lighting',
-            href: i.dolor.has('muñecas') ? '/en/accessories/best-vertical-ergonomic-mice/' : '/en/workspace/best-led-desk-lamps/',
-            razon: i.dolor.has('muñecas') ? 'For wrists: a vertical mouse reduces forearm pronation, and an ergonomic keyboard separates the hands.' :
+            titulo: i.dolor.has('wrists') ? 'Vertical mouse and ergonomic keyboard' : 'Desk lamp with side lighting',
+            href: i.dolor.has('wrists') ? '/en/accessories/best-vertical-ergonomic-mice/' : '/en/workspace/best-led-desk-lamps/',
+            razon: i.dolor.has('wrists') ? 'For wrists: a vertical mouse reduces forearm pronation, and an ergonomic keyboard separates the hands.' :
                    i.dolor.has('ojos') ? 'Eye strain improves with diffuse side lighting that reduces screen glare.' :
                    'Side lighting plus an ergonomic mouse completes the setup.',
             categoria: 'Accessories',
@@ -670,7 +670,7 @@ const faqs = [
         return ctas.slice(0, 4);
       }
 
-      // ===== Render figura SVG — plano técnico blueprint =====
+      // ===== Render SVG figure - technical blueprint =====
       function renderFigure() {
         const m = calcMeasures(S.inputs);
         const i = S.inputs;
@@ -687,7 +687,7 @@ const faqs = [
         const seatY = floorY - m.asiento * SCALE;
         const eyeY = floorY - m.topMonitor * SCALE;
 
-        // Rails (dimensión vertical izquierda)
+        // Rails (left vertical dimension)
         const railMonitor = 38;
         const railDesk = 104;
         const railAsiento = 170;
@@ -711,7 +711,7 @@ const faqs = [
         const shoulderY = neckTopY + neckLen;
         const torsoH = Math.max(40, hipY - shoulderY);
 
-        // Teclado/ratón
+        // Keyboard/mouse
         const kbdX = deskFrontX + 28;
         const kbdW = 100;
         const kbdY = deskTopY - 8;
@@ -787,7 +787,7 @@ const faqs = [
             const backTopY = seatY - 180;
             const backMidY = (backTopY + seatY) / 2;
             return `
-              <!-- reposacabezas (cojín separado) -->
+              <!-- headrest (separate cushion) -->
               <ellipse cx="${seatX + 5}" cy="${backTopY - 14}" rx="15" ry="11" fill="${A}" opacity="0.92"/>
               <ellipse cx="${seatX + 6}" cy="${backTopY - 14}" rx="10" ry="7" fill="${A}" opacity="0.55"/>
               <rect x="${seatX + 3}" y="${backTopY - 4}" width="4" height="10" fill="${A}" opacity="0.8"/>
@@ -795,9 +795,9 @@ const faqs = [
               <path d="M ${seatX + 4} ${backTopY} Q ${seatX - 8} ${backMidY} ${seatX - 2} ${seatY - 2} L ${seatX + 20} ${seatY - 2} L ${seatX + 20} ${backTopY + 8} Z" fill="${A}" opacity="0.88"/>
               <!-- alas laterales del respaldo -->
               <path d="M ${seatX + 4} ${backTopY + 4} Q ${seatX - 12} ${backTopY + 40} ${seatX - 4} ${backTopY + 60}" stroke="${A}" stroke-width="3" fill="none" opacity="0.7"/>
-              <!-- cojín lumbar -->
+              <!-- lumbar cushion -->
               <ellipse cx="${seatX - 3}" cy="${seatY - 85}" rx="9" ry="26" fill="${A}" opacity="0.55"/>
-              <!-- líneas costuras -->
+              <!-- seam lines -->
               <path d="M ${seatX + 10} ${seatY - 14} Q ${seatX} ${backMidY} ${seatX + 10} ${backTopY + 8}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.4"/>
               <!-- asiento -->
               <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="14" rx="3" fill="${A}" opacity="0.95"/>
@@ -806,7 +806,7 @@ const faqs = [
               <!-- reposabrazos con acolchado -->
               <rect x="${seatX + 48}" y="${seatY - 44}" width="34" height="8" rx="3" fill="${A}" opacity="0.8"/>
               <rect x="${seatX + 74}" y="${seatY - 36}" width="6" height="34" fill="${A}" opacity="0.75"/>
-              <!-- pistón gas -->
+              <!-- gas lift -->
               <rect x="${chairCenterX - 4}" y="${seatY + 10}" width="8" height="${floorY - seatY - 24}" fill="${A}" opacity="0.78"/>
               <!-- base 5 patas -->
               <path d="M ${chairCenterX - 46} ${floorY - 10} L ${chairCenterX + 46} ${floorY - 10} L ${chairCenterX + 40} ${floorY - 2} L ${chairCenterX - 40} ${floorY - 2} Z" fill="${A}" opacity="0.8"/>
@@ -831,7 +831,7 @@ const faqs = [
               <path d="M ${seatX + 4} ${seatY - 4} Q ${seatX - 10} ${backMidY} ${seatX + 2} ${backTopY}" stroke="${A}" stroke-width="2.5" fill="none" opacity="0.95"/>
               <!-- marco estructural respaldo -->
               <path d="M ${seatX + 20} ${seatY - 4} L ${seatX + 20} ${backTopY + 2}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.6"/>
-              <!-- malla líneas -->
+              <!-- mesh lines -->
               <path d="M ${seatX + 10} ${seatY - 10} Q ${seatX - 2} ${backMidY} ${seatX + 10} ${backTopY + 4}" stroke="${A}" stroke-width="0.75" fill="none" opacity="0.45"/>
               <path d="M ${seatX + 15} ${seatY - 14} Q ${seatX + 5} ${backMidY} ${seatX + 15} ${backTopY + 6}" stroke="${A}" stroke-width="0.5" fill="none" opacity="0.3"/>
               <!-- soporte lumbar regulable -->
@@ -842,7 +842,7 @@ const faqs = [
               <!-- reposabrazos 4D -->
               <rect x="${seatX + 48}" y="${seatY - 34}" width="32" height="6" rx="2.5" fill="${A}" opacity="0.75"/>
               <rect x="${seatX + 74}" y="${seatY - 30}" width="5" height="28" fill="${A}" opacity="0.75"/>
-              <!-- pistón gas -->
+              <!-- gas lift -->
               <rect x="${chairCenterX - 3}" y="${seatY + 8}" width="6" height="${floorY - seatY - 22}" fill="${A}" opacity="0.78"/>
               <!-- base aluminio pulido -->
               <path d="M ${chairCenterX - 42} ${floorY - 9} L ${chairCenterX + 42} ${floorY - 9} L ${chairCenterX + 36} ${floorY - 2} L ${chairCenterX - 36} ${floorY - 2} Z" fill="${A}" opacity="0.78"/>
@@ -854,17 +854,17 @@ const faqs = [
           if (i.silla === 'basica') {
             const backTopY = seatY - 85;
             return `
-              <!-- respaldo plástico básico -->
+              <!-- basic plastic backrest -->
               <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY} L ${seatX + 16} ${backTopY + 2} L ${seatX + 16} ${seatY - 2} Z" fill="${A}" opacity="0.85"/>
               <path d="M ${seatX + 4} ${seatY - 2} Q ${seatX - 2} ${(backTopY + seatY) / 2} ${seatX + 4} ${backTopY}" stroke="${A}" stroke-width="1.5" fill="none" opacity="0.95"/>
-              <!-- hueco central típico -->
+              <!-- typical central opening -->
               <rect x="${seatX + 8}" y="${seatY - 30}" width="6" height="22" rx="2" fill="var(--surface)" opacity="0.5"/>
               <!-- reposabrazos fijo -->
               <rect x="${seatX + 48}" y="${seatY - 28}" width="24" height="5" rx="1" fill="${A}" opacity="0.75"/>
               <rect x="${seatX + 66}" y="${seatY - 24}" width="4" height="22" fill="${A}" opacity="0.75"/>
               <!-- asiento simple -->
               <rect x="${seatX}" y="${seatY - 4}" width="${seatW}" height="9" rx="2" fill="${A}" opacity="0.95"/>
-              <!-- pistón -->
+              <!-- gas lift -->
               <rect x="${chairCenterX - 3}" y="${seatY + 5}" width="5" height="${floorY - seatY - 20}" fill="${A}" opacity="0.72"/>
               <!-- base simple (menos patas) -->
               <path d="M ${chairCenterX - 32} ${floorY - 7} L ${chairCenterX + 32} ${floorY - 7} L ${chairCenterX + 28} ${floorY - 1} L ${chairCenterX - 28} ${floorY - 1} Z" fill="${A}" opacity="0.72"/>
@@ -958,7 +958,7 @@ const faqs = [
           <path d="M ${kneeX - 14} ${ankleY + 2} L ${toeX} ${floorY - 3} L ${toeX + 2} ${floorY} L ${kneeX - 16} ${floorY} Z" fill="var(--ergo-person-leg-fore)"/>
         `;
 
-        // ===== Ángulos =====
+        // ===== Angles =====
         const anglesSVG = `
           <path d="M ${kneeX - 2} ${kneeY + 16} A 16 16 0 0 0 ${kneeX - 18} ${kneeY}" stroke="#10b981" stroke-width="2.25" fill="none"/>
           <rect x="${kneeX - 58}" y="${kneeY + 22}" width="42" height="22" rx="11" fill="var(--ergo-pill-bg)" stroke="#10b981" stroke-width="1.75"/>
@@ -1057,7 +1057,7 @@ const faqs = [
           <rect x="${deskFrontX + 2}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
           <rect x="${deskFrontX + deskDepth - 21}" y="${floorY - 4}" width="18" height="4" rx="1.5" fill="var(--ergo-desk)"/>
 
-          <!-- Teclado + ratón -->
+          <!-- Keyboard + mouse -->
           <rect x="${kbdX}" y="${kbdY}" width="${kbdW}" height="${kbdH}" rx="1.5" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>
           <rect x="${kbdX}" y="${kbdY + kbdH - 1}" width="${kbdW}" height="1" fill="var(--ergo-desk)" opacity="0.5"/>
           <path d="M ${mouseCx - 10} ${deskTopY} Q ${mouseCx} ${deskTopY - 7} ${mouseCx + 10} ${deskTopY} Z" fill="var(--ergo-kbd)" stroke="var(--ergo-desk)" stroke-width="0.75"/>

@@ -30,6 +30,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Workflow Amazon cache](project_amazon_cache_workflow.md) — Sistema API/cache para separar datos volátiles de Amazon del MDX.
 - [Estado Amazon OneLink](project_amazon_onelink_state.md) — Cuentas internacionales registradas; tag vigente `tuespaciodet-21`; pasos de configuración OneLink.
 - [Cola revisión editorial Amazon](project_amazon_editorial_review_queue.md) — Incidencias de productos que requieren revisión editorial.
+- [Auditoría paridad contenido EN](project_english_localization_audit.md) — Refactor i18n EN completado 03 jul 2026: 30/30 MDX revisados, ratios EN/ES 90%-116%, calculadora EN limpiada.
 - [Estado megarecopilación sillas](../research/sillas/ESTADO.md) — Handoff catálogo 100+ sillas (rama `feat/megarecopilacion-sillas`). Tasks 1-5 hechas, 24 sillas, piloto de 5; bloqueado por Amazon API (403) y SERP. **Leer para retomar el catálogo de sillas.**
 
 ## Persona y coherencia
