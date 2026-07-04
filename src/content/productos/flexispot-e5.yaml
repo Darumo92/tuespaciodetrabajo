@@ -1,5 +1,6 @@
 tipo: "escritorio"
 nombre: "FlexiSpot E5 Serie Clásicos (estructura)"
+tituloCorto: "FlexiSpot E5"
 marca: "FlexiSpot"
 imagen: "/img/productos/flexispot-e5.avif"
 imagenAlt: "Estructura elevable eléctrica FlexiSpot E5 de doble motor y columnas de tres tramos con panel de memorias"
@@ -83,6 +84,7 @@ fuenteSpecs: "Specs de la ficha oficial de FlexiSpot (España y global) para la 
 verificadoEn: "2026-07-03"
 en:
   nombreComercial: "FlexiSpot E5 Classic Series (frame only)"
+  tituloCorto: "FlexiSpot E5"
   veredicto: "The E5 is FlexiSpot's most affordable three-stage dual motor: under 180 euros in frame form, you get what many brands charge a lot more for. It rises at 35 mm/s, smooth and under 50 dB, and the 60-125 cm range is among the wide ones, so it fits almost any height. It holds 100 kg, enough for two monitors and accessories, and the frame is 2 mm SPCC steel. The panel has four memories and anti-collision. It's not as stable or as fast as the oval-legged E8 —the finish is plainer and the load a bit lower— but for the price it's hard to ask for more. As always with a frame, the tabletop is a separate purchase. With a 5-year warranty, it's one of the best bases for building a standing desk without overspending."
   idealPara: "Anyone who wants a three-stage dual motor for little money and picks their own tabletop"
   comunidad: "Reviews agree it's one of the best entry buys in dual motor: it rises fast and smooth, assembles well, and holds a two-monitor setup without meaningful wobble. Complaints center on the tabletop being a separate purchase and on it not being as firm as high-end frames at max height under heavy load."

@@ -1,8 +1,14 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
+
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['aviso-legal']),
+  en: localizedPath('en', ['legal-notice']),
+});
 ---
 
-<Base title="Aviso legal - Tu Espacio de Trabajo" description="Aviso legal de Tu Espacio de Trabajo. Condiciones de uso del sitio web tuespaciodetrabajo.com.">
+<Base title="Aviso legal - Tu Espacio de Trabajo" description="Aviso legal de Tu Espacio de Trabajo: titularidad del sitio, condiciones de uso, propiedad intelectual y responsabilidad del contenido publicado." canonical={absoluteUrl(localizedPath('es-ES', ['aviso-legal']))} alternates={alternates}>
   <article class="container legal-page">
     <h1>Aviso legal</h1>
     <p><strong>Última actualización:</strong> marzo 2026</p>

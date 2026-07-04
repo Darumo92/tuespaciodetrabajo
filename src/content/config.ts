@@ -143,6 +143,9 @@ const productos = defineCollection({
   schema: z.object({
     tipo: z.enum(['silla', 'escritorio']), // ampliar al añadir categorías
     nombre: z.string(),
+    // Nombre corto (marca + modelo) para <title> y comparativas: mantiene el
+    // title ≤ 60 caracteres. Fallback a `nombre` si no se define.
+    tituloCorto: z.string().optional(),
     marca: z.string(),
     imagen: z.string().default(''),
     imagenAlt: z.string().default(''),
@@ -209,6 +212,7 @@ const productos = defineCollection({
     // son compartidas. Si falta, la ficha EN usa el fallback generado de specs.
     en: z.object({
       nombreComercial: z.string().optional(),
+      tituloCorto: z.string().optional(),
       veredicto: z.string().optional(),
       idealPara: z.string().optional(),
       comunidad: z.string().optional(),

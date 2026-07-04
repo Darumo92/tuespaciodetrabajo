@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, pathLocaleSegment } from '@/i18n/routes';
 import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
-import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, notaGlobal, seleccionarParesVs, sourceTipoSlug, type Producto } from '@/lib/productos';
+import { catalogPath, comparePath, localizedProductName, localizedTipoSlug, notaGlobal, seleccionarParesVs, sourceTipoSlug, tituloProductoCorto, type Producto } from '@/lib/productos';
 
 export async function getStaticPaths() {
   const paths: any[] = [];
@@ -38,8 +38,8 @@ const alternates = buildAlternates({
   'es-ES': comparePath(tipo, par, 'es-ES'),
   [locale]: pagePath,
 });
-const title = `${aName} vs ${bName} | ${cfg.enLabels.comparePairTitleSuffix}`;
-const description = `Compare ${aName} and ${bName}: ${cfg.enLabels.comparePairAxes} and verified ${cfg.enLabels.singular} specs side by side.`;
+const title = `${tituloProductoCorto(a, locale)} vs ${tituloProductoCorto(b, locale)} | ${cfg.enLabels.comparePairTitleSuffix}`;
+const description = `Compare ${tituloProductoCorto(a, locale)} vs ${tituloProductoCorto(b, locale)}: verified ${cfg.enLabels.singular} specs, price tier and editorial scores side by side.`;
 const breadcrumb = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',

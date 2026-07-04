@@ -184,6 +184,10 @@ function buildHreflangMap() {
     en: absoluteUrl(localizedPath('en', ['catalog', 'chairs'])),
   });
   addGroup({
+    'es-ES': absoluteUrl(localizedPath('es-ES', ['catalogo', 'escritorio'])),
+    en: absoluteUrl(localizedPath('en', ['catalog', 'standing-desks'])),
+  });
+  addGroup({
     'es-ES': absoluteUrl(localizedPath('es-ES', ['sobre-mi'])),
     en: absoluteUrl(localizedPath('en', ['about'])),
   });
@@ -218,8 +222,9 @@ function buildHreflangMap() {
     });
   }
 
+  const EN_TIPO_SLUG = { silla: 'chairs', escritorio: 'standing-desks' };
   for (const product of collectProducts()) {
-    const enTipo = product.tipo === 'silla' ? 'chairs' : product.tipo;
+    const enTipo = EN_TIPO_SLUG[product.tipo] ?? product.tipo;
     addGroup({
       'es-ES': absoluteUrl(localizedPath('es-ES', ['catalogo', product.tipo, product.slug])),
       en: absoluteUrl(localizedPath('en', ['catalog', enTipo, product.slug])),

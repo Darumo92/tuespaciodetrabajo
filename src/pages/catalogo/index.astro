@@ -8,7 +8,7 @@ import { absoluteUrl, buildAlternates } from '@/i18n/routes';
 const productos = await getCollection('productos');
 const conteo = (tipo: string) => productos.filter((p) => p.data.tipo === tipo).length;
 const tarjetas = TIPOS_CON_DATOS.map((slug) => ({ cfg: TIPOS[slug], n: conteo(slug) }));
-const titulo = 'Catálogo de equipamiento para home office | Tu Espacio de Trabajo';
+const titulo = 'Catálogo para home office | Tu Espacio de Trabajo';
 const descripcion = 'Base de datos comparativa de equipamiento de home office: sillas ergonómicas y más, con specs verificadas, valoración por ejes y comparador.';
 const pagePath = catalogPath('es-ES');
 const alternates = buildAlternates({

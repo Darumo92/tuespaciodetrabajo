@@ -3,7 +3,8 @@ import Base from '@/layouts/Base.astro';
 import ComparadorProductos from '@/components/producto/ComparadorProductos.astro';
 import { getCollection } from 'astro:content';
 import { TIPOS_CON_DATOS, getTipoConfig } from '@/lib/tipos';
-import { seleccionarParesVs, type Producto } from '@/lib/productos';
+import { seleccionarParesVs, comparePath, type Producto } from '@/lib/productos';
+import { absoluteUrl, buildAlternates } from '@/i18n/routes';
 
 export async function getStaticPaths() {
   return TIPOS_CON_DATOS.map((tipo) => ({ params: { tipo } }));
@@ -14,8 +15,13 @@ const entries = await getCollection('productos', (p) => p.data.tipo === tipo);
 const productos = entries.map((e) => ({ slug: e.id.replace(/\.(ya?ml|json)$/, ''), ...e.data })) as unknown as Producto[];
 const porSlug = Object.fromEntries(productos.map((p) => [p.slug, p]));
 const paresVs = seleccionarParesVs(productos, 16);
+const pagePath = comparePath(tipo as string, '', 'es-ES');
+const alternates = buildAlternates({
+  'es-ES': pagePath,
+  en: comparePath(tipo as string, '', 'en'),
+});
 ---
-<Base title={`Comparador de ${cfg.labelPlural.toLowerCase()} | Tu Espacio de Trabajo`} description={`Compara ${cfg.labelPlural.toLowerCase()} lado a lado: valoración por ejes, precio y specs, resaltando la mejor de cada criterio.`} noindex={true}>
+<Base title={`Comparador de ${cfg.labelPlural.toLowerCase()} | Tu Espacio de Trabajo`} description={`Compara ${cfg.labelPlural.toLowerCase()} lado a lado: valoración por ejes, precio y specs, resaltando la mejor de cada criterio.`} canonical={absoluteUrl(pagePath)} alternates={alternates} noindex={true}>
   <main class="container" style="padding: 2rem 0;">
     <nav class="breadcrumb" aria-label="Migas de pan"><a href="/catalogo/">Catálogo</a> › <a href={`/catalogo/${tipo}/`}>{cfg.labelPlural}</a> › <span>Comparar</span></nav>
     <h1>Comparativa de {cfg.labelPlural.toLowerCase()}</h1>

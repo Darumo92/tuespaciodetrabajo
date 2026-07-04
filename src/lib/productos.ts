@@ -17,6 +17,7 @@ export interface Producto {
   slug: string;
   tipo: ClaveTipo;
   nombre: string;
+  tituloCorto?: string;
   marca: string;
   imagen: string;
   imagenAlt: string;
@@ -68,6 +69,7 @@ export interface Producto {
   };
   en?: {
     nombreComercial?: string;
+    tituloCorto?: string;
     veredicto?: string;
     idealPara?: string;
     comunidad?: string;
@@ -502,6 +504,13 @@ export function localizedProductName(p: Pick<Producto, 'nombre' | 'marca' | 'en'
     .trim();
 }
 
+// Nombre compacto para <title> y comparativas (evita títulos > 60 caracteres).
+// ES: tituloCorto || nombre. EN: en.tituloCorto || tituloCorto || nombre localizado.
+export function tituloProductoCorto(p: Pick<Producto, 'nombre' | 'marca' | 'tituloCorto' | 'en'>, locale: Locale = DEFAULT_LOCALE): string {
+  if (locale === DEFAULT_LOCALE) return p.tituloCorto ?? p.nombre;
+  return p.en?.tituloCorto ?? p.tituloCorto ?? localizedProductName(p, locale);
+}
+
 function productNameWithBrand(p: Producto, locale: Locale = DEFAULT_LOCALE): string {
   const name = localizedProductName(p, locale);
   return name.toLocaleLowerCase().startsWith(p.marca.toLocaleLowerCase()) ? name : `${p.marca} ${name}`;
@@ -511,7 +520,7 @@ export function localizedProductMeta(p: Producto, locale: Locale = DEFAULT_LOCAL
   if (locale === DEFAULT_LOCALE) {
     const description = p.veredicto ? recortarMeta(p.veredicto) : `Análisis de ${p.nombre}: specs verificadas y valoración por ejes.`;
     return {
-      title: `${p.nombre} — análisis y specs | Tu Espacio de Trabajo`,
+      title: `${tituloProductoCorto(p, locale)} — análisis y specs`,
       description,
       h1: p.nombre,
     };
@@ -536,7 +545,7 @@ export function localizedProductMeta(p: Producto, locale: Locale = DEFAULT_LOCAL
     ? recortarMeta(p.en.veredicto)
     : recortarMeta(`${brandedName} review with verified specs${detail}. Compare specs, editorial scores and buying options.`);
   return {
-    title: `${name} Specs | ${databaseName}`,
+    title: `${tituloProductoCorto(p, locale)} Specs | ${databaseName}`,
     description,
     h1: `${name} review and specs`,
   };

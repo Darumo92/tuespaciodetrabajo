@@ -1,8 +1,13 @@
 ---
 import Base from '@/layouts/Base.astro';
+import { buildAlternates, localizedPath } from '@/i18n/routes';
 
 const siteUrl = 'https://tuespaciodetrabajo.com';
 const pageUrl = `${siteUrl}/herramientas/`;
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['herramientas']),
+  en: localizedPath('en', ['tools']),
+});
 
 const herramientas = [
   {
@@ -27,6 +32,7 @@ const breadcrumbSchema = {
   title="Herramientas para home office | Tu Espacio de Trabajo"
   description="Calculadoras y utilidades gratis para montar tu home office: calcula alturas ergonómicas, compara productos y más."
   canonical={pageUrl}
+  alternates={alternates}
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 

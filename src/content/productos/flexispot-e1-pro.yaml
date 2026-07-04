@@ -1,5 +1,6 @@
 tipo: "escritorio"
 nombre: "FlexiSpot E1 PRO"
+tituloCorto: "FlexiSpot E1 PRO"
 marca: "FlexiSpot"
 imagen: "/img/productos/flexispot-e1-pro.jpg"
 imagenAlt: "Escritorio elevable eléctrico FlexiSpot E1 PRO estructura clásica de doble motor"
@@ -86,6 +87,7 @@ fuenteSpecs: "Web oficial FlexiSpot España (rango 70-119 cm, doble motor, garan
 verificadoEn: "2026-07-02"
 en:
   nombreComercial: "FlexiSpot E1 PRO"
+  tituloCorto: "FlexiSpot E1 PRO"
   veredicto: "The E1 PRO is FlexiSpot's entry point into electric standing desks: it keeps the dual motor (one per leg) instead of the single motor many desks at this price use, with a 70-119 cm height range and up to 100 kg of dynamic load. It's slower than the higher-tier models (around 25 mm/s) and skips USB ports and a child lock, but reviews agree the movement is smooth and vibration-free for normal office tasks. If budget is the priority and you don't need to carry much weight or reach very high, it's one of the more honest options in its bracket."
   idealPara: "Anyone wanting FlexiSpot's cheapest electric standing desk without giving up the dual motor"
   comunidad: "The hogarsys.es review and Amazon buyer ratings agree the E1 Pro moves smoothly and quietly, without the vibration that appears on similarly priced single-motor desks. The most repeated complaints point to the lack of USB and child lock, and a height range that falls short for very tall people."

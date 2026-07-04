@@ -1,5 +1,6 @@
 tipo: "escritorio"
 nombre: "FlexiSpot E7"
+tituloCorto: "FlexiSpot E7"
 marca: "FlexiSpot"
 imagen: "/img/productos/flexispot-e7.jpg"
 imagenAlt: "Escritorio elevable eléctrico FlexiSpot E7 con estructura de acero y panel táctil LED"
@@ -86,6 +87,7 @@ fuenteSpecs: "Reseña técnica Sedda.es (doble motor, 3,8 cm/s, 58-123 cm, 125 k
 verificadoEn: "2026-07-02"
 en:
   nombreComercial: "FlexiSpot E7"
+  tituloCorto: "FlexiSpot E7"
   veredicto: "The E7 is FlexiSpot's flagship model: laser-welded carbon steel frame, vertically mounted motors that the manufacturer says improve lateral stability by 42%, and a 3.8 cm/s lift speed that doesn't drop even at full 125 kg load. The 58-123 cm range is generous, the touch panel with LED display and USB-A charging is one of the most complete on the market, and on forums like Reddit users report no wobble even with heavy monitors. It costs more than the rest of the FlexiSpot lineup and assembly is more demanding given the frame's weight (31.5 kg), but the 7-year frame/motor warranty and TÜV Rheinland certification back up the investment."
   idealPara: "Anyone wanting FlexiSpot's most stable desk for dual monitors or heavy equipment"
   comunidad: "On Reddit (as compiled by redditrecs.com) users mainly highlight stability — 'no wobble at all' even while typing with monitors mounted — and value the up-to-15-year warranty on some E7-family versions. The most repeated complaints are a tricky assembly due to the frame's weight and the lower metal crossbars making cable management a bit harder."

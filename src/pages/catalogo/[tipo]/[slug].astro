@@ -2,7 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import FichaProducto from '@/components/producto/FichaProducto.astro';
 import { getCollection } from 'astro:content';
-import { notaGlobal, productPath, recortarMeta, type Producto } from '@/lib/productos';
+import { notaGlobal, productPath, recortarMeta, tituloProductoCorto, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
 import { absoluteUrl, buildAlternates } from '@/i18n/routes';
 
@@ -54,7 +54,7 @@ const breadcrumb = {
 };
 ---
 <Base
-  title={`${producto.nombre} — análisis y specs | Tu Espacio de Trabajo`}
+  title={`${tituloProductoCorto(producto, 'es-ES')} — análisis y specs`}
   description={producto.veredicto ? recortarMeta(producto.veredicto) : `Análisis de ${producto.nombre}: specs verificadas y valoración por ejes.`}
   canonical={absoluteUrl(pagePath)}
   alternates={alternates}
