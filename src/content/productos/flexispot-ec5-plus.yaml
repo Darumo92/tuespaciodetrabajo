@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "FlexiSpot EC5 Plus Estructura Elevable Eléctrica Doble Motor"
+tituloCorto: "FlexiSpot EC5 Plus"
+marca: "FlexiSpot"
+imagen: "/img/productos/flexispot-ec5-plus.jpg"
+imagenAlt: "Estructura elevable eléctrica FlexiSpot EC5 Plus de doble motor con patas en T de acero y panel de memorias"
+tramoPrecio: 3
+precioMin: 399.99
+precioMax: 399.99
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 8
+  capacidadCarga: 8
+  rangoAltura: 8.5
+  materiales: 7.5
+  calidadPrecio: 8.5
+amazon:
+  asin: "B0FDPSYQ9Y"
+  buscar: "FlexiSpot EC5 Plus estructura escritorio elevable doble motor patas en T acero"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es"
+idealPara: "Quien quiere dar el salto a doble motor de tres tramos con buena carga y estabilidad, a precio de gama media, y elige su propio tablero"
+veredicto: "El EC5 Plus es el escalón robusto de la familia EC de FlexiSpot: un doble motor de tres etapas con patas en T y marco de acero, pensado para quien quiere estabilidad real de pie sin pagar la gama E premium. Aguanta 120 kg, sube de 60 a 125 cm —un rango amplio que sirve de estaturas bajas a altas— y trae panel con cuatro memorias, anticolisión y puerto de carga USB C/A. Su punto flojo es la velocidad: 25 mm/s con doble motor no es rápido, se nota frente a los 38-50 mm/s de la gama alta. Frente al EC5 Pro que ya tenemos, el Plus refuerza estructura y carga; frente a los elevables de entrada de un motor, es otro nivel de firmeza. Se vende como estructura, sin tablero, así que hay que sumar ese gasto. Para un setup serio a precio contenido, es una base muy equilibrada."
+resumenCompra:
+  mejorPara: "Dar el salto a doble motor de tres tramos con buena carga y estabilidad, sin pagar gama premium."
+  evitarSi: "Quieres la subida rápida de la gama alta o un escritorio completo listo para usar."
+  alternativaDirecta: "FlexiSpot E7 Pro si quieres más velocidad y carga; Maidesite T2 Pro Plus si prefieres tablero incluido y 160 kg."
+  decisionRapida: "Doble motor de tres tramos con patas en T, 120 kg y rango 60-125 cm a precio de gama media; el pero es que sube lento (25 mm/s) y sin tablero."
+metodologia:
+  - "Specs de la ficha del EC5 Plus en Amazon.es y de la gama EC de FlexiSpot, contrastadas con la política de garantía de FlexiSpot ES y reseñas de la serie EC."
+  - "La nota prioriza la estabilidad, la carga y el rango del doble motor de tres tramos; penaliza la velocidad baja y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "25 mm/s con doble motor: correcto pero lento frente a la gama alta; la transición sentado-pie se hace de rogar."
+  estabilidad: "Patas en T y columnas de tres etapas de acero con 120 kg de carga; muy poco tambaleo a altura de pie."
+  capacidadCarga: "120 kg cubren varios monitores, brazos articulados y equipo pesado con holgura."
+  rangoAltura: "60-125 cm es un rango amplio, válido para estaturas bajas sentadas y altas de pie."
+  materiales: "Marco de acero de tres secciones con patas en T; sólido, un peldaño por debajo de la gama E premium."
+  calidadPrecio: "Doble motor de tres tramos con 120 kg a precio de gama media es muy competitivo, aunque hay que sumar el tablero."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — FLEXISPOT EC5 Plus Escritorio Elevable Eléctrico, 2 motores, 3 etapas, carga 120 kg"
+    url: "https://www.amazon.es/FLEXISPOT-Escritorio-Ajustable-autom%C3%A1tica-Inteligente/dp/B077JPC7PK"
+    fechaConsulta: "2026-07-08"
+  - tipo: "oficial"
+    nombre: "FlexiSpot ES — Garantía de escritorio"
+    url: "https://www.flexispot.es/warranty"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Velocidad de 25 mm/s: lenta frente a la gama alta de doble motor."
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "El nivel de ruido y el peso de la estructura no constan con cifra: quedan en null."
+alternativas:
+  - slug: "flexispot-ec5-pro"
+    motivo: "El hermano de la misma familia EC, con estructura y carga algo distintas."
+  - slug: "flexispot-e7-pro"
+    motivo: "Más velocidad (50 mm/s) y carga (180 kg) si el presupuesto sube."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Tablero incluido, 160 kg y 10 años de garantía."
+comunidad: "Las reseñas de la serie EC destacan la robustez del marco de acero de tres secciones y las patas en T, la estabilidad a altura de pie y el buen panel con memorias y USB. La crítica recurrente es la velocidad de subida, más lenta que en la gama E, y que el tablero se compra aparte. Para el precio, la valoración es alta."
+paraQuienSi:
+  - "Quien quiere doble motor de tres tramos sin pagar gama premium"
+  - "Quien monta varios monitores o equipo pesado (hasta 120 kg)"
+  - "Quien elige su propio tablero y valora la estabilidad de pie"
+paraQuienNo:
+  - "Quien quiere la subida rápida de la gama alta"
+  - "Quien busca un escritorio completo listo para usar"
+  - "Quien no quiere sumar el gasto del tablero"
+puntosFuertes:
+  - "Doble motor de tres etapas con patas en T de acero"
+  - "Carga de 120 kg y rango amplio (60-125 cm)"
+  - "Panel con 4 memorias, anticolisión y USB C/A"
+  - "Muy estable a altura de pie a precio de gama media"
+puntosDebiles:
+  - "Velocidad lenta (25 mm/s) para ser doble motor"
+  - "Se vende sin tablero: gasto adicional"
+  - "Nivel de ruido y peso no publicados"
+fuenteSpecs: "Specs de la ficha del EC5 Plus en Amazon.es y de la gama EC de FlexiSpot: doble motor de tres etapas, velocidad 25 mm/s, columnas de tres secciones con patas en T, altura 60-125 cm (solo estructura), carga 120 kg, estructura de acero, panel con 4 memorias, anticolisión, puerto USB C/A, compatible con tableros de 120-180 x 60-80 cm. Garantía FlexiSpot ES habitual de 5 años en estructura. El nivel de ruido, el peso de la estructura y el grosor de tablero (se vende sin tablero) no constan, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "FlexiSpot EC5 Plus Dual-Motor Standing Desk Frame"
+  tituloCorto: "FlexiSpot EC5 Plus"
+  veredicto: "The EC5 Plus is the sturdy step of FlexiSpot's EC family: a three-stage dual motor with T-legs and a steel frame, aimed at anyone who wants real standing stability without paying the premium E range. It holds 120 kg, rises from 60 to 125 cm —a wide range from short to tall users— and brings a four-memory panel, anti-collision, and a USB-C/USB-A charging port. Its weak point is speed: 25 mm/s with a dual motor isn't fast, and it shows against the 38-50 mm/s of the high end. Against the EC5 Pro we already list, the Plus reinforces frame and load; against single-motor entry desks, it's another level of firmness. It's sold as a frame, no tabletop, so you have to budget for that. For a serious setup at a contained price, it's a very balanced base."
+  idealPara: "Anyone stepping up to a three-stage dual motor with good load and stability at a mid-range price, picking their own tabletop"
+  comunidad: "EC-series reviews highlight the sturdiness of the three-section steel frame and T-legs, standing stability, and the good panel with memories and USB. The recurring criticism is the lift speed, slower than the E range, and that the tabletop is bought separately. For the price, the rating is high."
+  resumenCompra:
+    mejorPara: "Stepping up to a three-stage dual motor with good load and stability, without paying premium."
+    evitarSi: "You want the high end's fast rise or a complete, ready-to-use desk."
+    alternativaDirecta: "FlexiSpot E7 Pro for more speed and load; Maidesite T2 Pro Plus for a tabletop included and 160 kg."
+    decisionRapida: "Three-stage dual motor with T-legs, 120 kg, and a 60-125 cm range at a mid-range price; the catch is the slow rise (25 mm/s) and no tabletop."
+  puntosFuertes:
+    - "Three-stage dual motor with steel T-legs"
+    - "120 kg load and wide range (60-125 cm)"
+    - "Panel with 4 memories, anti-collision, and USB-C/USB-A"
+    - "Very stable at standing height at a mid-range price"
+  puntosDebiles:
+    - "Slow speed (25 mm/s) for a dual motor"
+    - "Sold without a tabletop: extra cost"
+    - "Noise level and weight not published"
+  paraQuienSi:
+    - "Anyone who wants a three-stage dual motor without paying premium"
+    - "Anyone running several monitors or heavy gear (up to 120 kg)"
+    - "Anyone picking their own tabletop who values standing stability"
+  paraQuienNo:
+    - "Anyone who wants the high end's fast rise"
+    - "Anyone after a complete, ready-to-use desk"
+    - "Anyone who doesn't want to add the tabletop cost"
+calidadDatos:
+  score: 87
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 25
+  nivelRuidoDb: null
+  segmentosColumna: 3
+  alturaMinCm: 60
+  alturaMaxCm: 125
+  cargaMaxKg: 120
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

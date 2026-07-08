@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "FlexiSpot E7Q Odin Estructura Elevable de Cuatro Patas"
+tituloCorto: "FlexiSpot E7Q"
+marca: "FlexiSpot"
+imagen: "/img/productos/flexispot-e7q.jpg"
+imagenAlt: "Estructura elevable eléctrica FlexiSpot E7Q Odin de cuatro patas y cuatro motores en acero al carbono"
+tramoPrecio: 4
+precioMin: 799.99
+precioMax: 989.98
+valoracion: null
+valoraciones:
+  velocidad: 8.5
+  estabilidad: 10
+  capacidadCarga: 10
+  rangoAltura: 8.5
+  materiales: 9
+  calidadPrecio: 7
+amazon:
+  asin: "B0C7ZK4HTQ"
+  buscar: "FlexiSpot E7Q Odin estructura escritorio elevable cuatro patas cuatro motores"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.com/flexispot-odin-4-leg-standing-desk"
+idealPara: "Quien necesita la máxima estabilidad y carga: una estructura de cuatro patas y cuatro motores para tableros grandes, montajes de varios monitores o mesas en L"
+veredicto: "El E7Q Odin es la bestia de carga de FlexiSpot: en lugar de las dos patas habituales, monta cuatro columnas en U de tres tramos con cuatro motores y acero al carbono, para ofrecer la base más estable y con más capacidad de la marca. Elimina el tambaleo que arrastran todos los elevables de dos patas y aguanta hasta 200 kg (según configuración, incluso más), con un rango de 68 a 133 cm y una subida de unos 38 mm/s pese al tamaño. Está pensado para tableros grandes, mesas en L o setups de varios monitores y equipo pesado que las estructuras de dos patas no cubren con la misma firmeza. El precio es su gran pero: es de lo más caro de la categoría y, como el resto de la gama, se vende como estructura sin tablero. Si necesitas una base a prueba de todo para una superficie grande, no hay mucho que se le acerque."
+resumenCompra:
+  mejorPara: "La máxima estabilidad y carga: tableros grandes, mesas en L o montajes pesados de varios monitores."
+  evitarSi: "Tienes un setup normal de un tablero estándar: pagarías de más por capacidad que no vas a usar."
+  alternativaDirecta: "FlexiSpot E7 Pro si un doble motor de dos patas te basta y quieres gastar bastante menos; Maidesite T2 Pro Plus si buscas tablero incluido y buena carga."
+  decisionRapida: "La estructura de cuatro patas y cuatro motores más estable y con más carga de FlexiSpot; el pero es el precio alto y que va sin tablero."
+metodologia:
+  - "Specs de la ficha oficial del FlexiSpot Odin E7Q y de distribuidores (Office Depot, Staples), contrastadas con reseñas internacionales (AppleInsider)."
+  - "La nota prioriza la estabilidad y la carga de la base de cuatro patas; penaliza el precio alto y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "Unos 38 mm/s (1,5 pulgadas/s): rápido teniendo en cuenta el tamaño y los cuatro motores que mueve."
+  estabilidad: "Cuatro patas de tres tramos en acero al carbono: elimina el tambaleo de las estructuras de dos patas, la base más firme de la marca."
+  capacidadCarga: "Hasta 200 kg (más en algunas configuraciones): de las cargas más altas del mercado, para tableros y montajes grandes."
+  rangoAltura: "68-133 cm (solo estructura) es un rango muy amplio, válido de estaturas bajas a muy altas."
+  materiales: "Acero al carbono macizo y columnas en U de tres tramos; construcción de nivel muy alto."
+  calidadPrecio: "Prestaciones de referencia, pero a un precio de los más altos de la categoría y sin tablero incluido."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FlexiSpot — Odin 4-Leg Standing Desk E7Q"
+    url: "https://www.flexispot.com/flexispot-odin-4-leg-standing-desk"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "AppleInsider — FlexiSpot Odin E7Q review: A heavy-duty standing desk"
+    url: "https://appleinsider.com/articles/23/04/02/flexispot-odin-e7q-review-a-heavy-duty-standing-desk"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Precio de los más altos de la categoría."
+  - "Se vende solo estructura: el tablero (grande) es un gasto aparte y notable."
+  - "El nivel de ruido y el peso de la estructura no constan con cifra; la carga máxima exacta varía según configuración (hasta 200 kg o más)."
+alternativas:
+  - slug: "flexispot-e7-pro"
+    motivo: "Doble motor de dos patas, muy estable y bastante más barato para setups normales."
+  - slug: "flexispot-e8"
+    motivo: "Estructura premium de dos patas ovaladas, más contenida de precio."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Tablero incluido y 160 kg de carga por mucho menos."
+comunidad: "Las reseñas coinciden en que es la base más estable que se puede comprar, sin el tambaleo de las estructuras de dos patas, y en su enorme capacidad de carga para tableros grandes y mesas en L. La pega unánime es el precio y que, al ser una estructura grande de cuatro patas, el montaje es más laborioso y pesa mucho."
+paraQuienSi:
+  - "Quien necesita la máxima estabilidad y carga del mercado"
+  - "Quien monta tableros grandes, mesas en L o varios monitores pesados"
+  - "Quien elige su propio tablero y prioriza una base a prueba de todo"
+paraQuienNo:
+  - "Quien tiene un setup normal de un tablero estándar"
+  - "Quien busca ajustar el presupuesto"
+  - "Quien no quiere lidiar con una estructura grande y pesada al montar"
+puntosFuertes:
+  - "Cuatro patas y cuatro motores: la base más estable de FlexiSpot"
+  - "Carga altísima (hasta 200 kg o más)"
+  - "Columnas en U de tres tramos en acero al carbono"
+  - "Rango amplio 68-133 cm, ideal para tableros grandes y mesas en L"
+puntosDebiles:
+  - "Precio de los más altos de la categoría"
+  - "Se vende sin tablero: gasto adicional notable"
+  - "Estructura grande y pesada, montaje laborioso"
+fuenteSpecs: "Specs de la ficha oficial del FlexiSpot Odin E7Q y de distribuidores (Office Depot, Staples), contrastadas con reseñas internacionales: base de cuatro patas con cuatro motores (registrado en el campo motor como 'doble' por límite del esquema, que no contempla cuádruple), columnas en U de tres tramos, velocidad ~38 mm/s (1,5 pulgadas/s), altura 68-133 cm (solo estructura), carga hasta 200 kg (mayor en algunas configuraciones), estructura de acero al carbono, panel táctil con 4 memorias, anticolisión. El nivel de ruido, el peso, el puerto USB y el grosor/tablero (se vende sin tablero) no constan o no aplican, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "FlexiSpot E7Q Odin 4-Leg Standing Desk Frame"
+  tituloCorto: "FlexiSpot E7Q"
+  veredicto: "The E7Q Odin is FlexiSpot's load beast: instead of the usual two legs, it mounts four three-stage U-shaped columns with four motors and carbon steel to deliver the brand's most stable, highest-capacity base. It kills the jiggle every two-leg standing desk carries and holds up to 200 kg (even more in some configurations), with a 68 to 133 cm range and a roughly 38 mm/s rise despite its size. It's built for large tops, L-shaped desks, or multi-monitor, heavy-gear setups that two-leg frames don't cover as firmly. Price is its big catch: it's among the most expensive in the category and, like the rest of the range, sold as a frame without a top. If you need a bulletproof base for a large surface, little else comes close."
+  idealPara: "Anyone who needs maximum stability and load: a four-leg, four-motor frame for large tops, multi-monitor setups, or L-shaped desks"
+  comunidad: "Reviews agree it's the most stable base you can buy, without the jiggle of two-leg frames, and on its huge load capacity for large tops and L-shaped desks. The unanimous downside is the price and that, being a large four-leg frame, assembly is more laborious and it's very heavy."
+  resumenCompra:
+    mejorPara: "Maximum stability and load: large tops, L-shaped desks, or heavy multi-monitor setups."
+    evitarSi: "You have a normal single standard-top setup: you'd overpay for capacity you won't use."
+    alternativaDirecta: "FlexiSpot E7 Pro if a two-leg dual motor is enough and you want to spend much less; Maidesite T2 Pro Plus for a tabletop included and good load."
+    decisionRapida: "FlexiSpot's most stable, highest-load four-leg, four-motor frame; the catch is the high price and no tabletop."
+  puntosFuertes:
+    - "Four legs and four motors: FlexiSpot's most stable base"
+    - "Very high load (up to 200 kg or more)"
+    - "Three-stage U-shaped columns in carbon steel"
+    - "Wide 68-133 cm range, ideal for large tops and L-shaped desks"
+  puntosDebiles:
+    - "Among the highest prices in the category"
+    - "Sold without a tabletop: notable extra cost"
+    - "Large, heavy frame, laborious assembly"
+  paraQuienSi:
+    - "Anyone who needs the market's maximum stability and load"
+    - "Anyone with large tops, L-shaped desks, or heavy multi-monitor setups"
+    - "Anyone picking their own top who prioritizes a bulletproof base"
+  paraQuienNo:
+    - "Anyone with a normal single standard-top setup"
+    - "Anyone on a tight budget"
+    - "Anyone who doesn't want to wrangle a large, heavy frame during assembly"
+calidadDatos:
+  score: 81
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 38
+  nivelRuidoDb: null
+  segmentosColumna: 3
+  alturaMinCm: 68
+  alturaMaxCm: 133
+  cargaMaxKg: 200
+  estructuraMaterial: "acero al carbono"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

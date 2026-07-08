@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "FlexiSpot Comhar EG8 Escritorio Elevable Todo en Uno con Cajón"
+tituloCorto: "FlexiSpot Comhar EG8"
+marca: "FlexiSpot"
+imagen: "/img/productos/flexispot-comhar-eg8.jpg"
+imagenAlt: "Escritorio elevable eléctrico FlexiSpot Comhar EG8 todo en uno con tablero de vidrio templado, cajón y puertos USB"
+tramoPrecio: 2
+precioMin: 299.99
+precioMax: 299.99
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 7
+  capacidadCarga: 5
+  rangoAltura: 6.5
+  materiales: 7.5
+  calidadPrecio: 7.5
+amazon:
+  asin: "B08PFH81J6"
+  buscar: "FlexiSpot Comhar EG8 escritorio elevable todo en uno vidrio templado cajón USB"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.flexispot.es/standing-desk-comhar-eg8.html"
+idealPara: "Quien quiere un escritorio elevable compacto, completo y bonito, con tablero de vidrio, cajón y cargadores USB integrados, listo para usar de una pieza"
+veredicto: "El Comhar EG8 es la apuesta de FlexiSpot por el todo en uno: un escritorio elevable compacto de 120x60 cm que llega de una pieza, con tablero de vidrio templado, un cajón integrado y tres puertos de carga USB (dos A y uno C) en el propio tablero. Es el más cómodo de instalar de la gama —viene casi montado— y el más resultón de tener encima de la mesa, con panel táctil, cuatro memorias y anticolisión. A cambio hay que asumir sus límites: es de motor único, sube a 25 mm/s y el tablero soporta 50 kg, así que es un escritorio para un setup ligero-medio, no para montajes pesados de varios monitores. Frente a las estructuras de la gama E, pierde en carga y velocidad, pero gana en diseño, cajón y en no tener que comprar ni montar un tablero aparte. Para un home office con estilo y poco espacio, es de lo más apetecible."
+resumenCompra:
+  mejorPara: "Un escritorio elevable compacto, completo y con diseño, con cajón y USB integrados, listo para usar."
+  evitarSi: "Montas varios monitores o equipo pesado, o quieres un rango de carga y velocidad de gama alta."
+  alternativaDirecta: "FlexiSpot EC5 Plus si prefieres estructura robusta de doble motor y eliges tablero; Devoko 120x60 si quieres un completo más barato."
+  decisionRapida: "El todo en uno compacto con vidrio, cajón y USB, listo de una pieza; el pero es el motor único, 25 mm/s y 50 kg de carga."
+metodologia:
+  - "Specs de la ficha oficial de FlexiSpot España del Comhar EG8 y de la ficha global EG8/EW8, contrastadas con reseñas internacionales (TechRadar, Laptop Mag)."
+  - "La nota valora el formato todo en uno, el cajón, los USB y el diseño; penaliza el motor único, la velocidad baja y la carga limitada del tablero."
+scoreRationale:
+  velocidad: "25 mm/s con motor único: correcto para un compacto, pero lento frente a la gama alta."
+  estabilidad: "Estructura de acero estable para un formato compacto y una carga de 50 kg; no es una base para altura de pie exigente."
+  capacidadCarga: "El tablero soporta 50 kg: suficiente para un monitor, portátil y accesorios, corto para montajes pesados."
+  rangoAltura: "72-121 cm cubre bien el trabajo sentado y de pie a estaturas medias."
+  materiales: "Tablero de vidrio templado con bordes redondeados, cajón integrado y panel táctil; acabado cuidado y de buen ver."
+  calidadPrecio: "Un todo en uno con vidrio, cajón y USB integrados a precio de gama media-alta; se paga el diseño y la comodidad."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FlexiSpot ES — Comhar EG8, escritorio de pie con tapa de vidrio, cajón y cargadores USB"
+    url: "https://www.flexispot.es/standing-desk-comhar-eg8.html"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "TechRadar — FlexiSpot EG8 Comhar standing desk review"
+    url: "https://www.techradar.com/reviews/flexispot-eg8-comhar-standing-desk"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Motor único y carga de tablero de 50 kg: no apto para montajes pesados de varios monitores."
+  - "Formato compacto fijo de 120x60 cm: no se elige tablero ni tamaño."
+  - "El peso del producto y el grosor del tablero de vidrio no constan con cifra: quedan en null."
+alternativas:
+  - slug: "flexispot-ec5-plus"
+    motivo: "Estructura de doble motor robusta si priorizas carga y estabilidad y eliges tablero."
+  - slug: "devoko-120x60"
+    motivo: "Otro completo compacto de 120x60, más barato, aunque sin cajón ni vidrio."
+  - slug: "flexispot-e8"
+    motivo: "Estructura premium si buscas rango y carga altos con tu propio tablero."
+comunidad: "Las reseñas destacan lo cómodo de recibirlo casi montado, el diseño del tablero de vidrio y la utilidad del cajón y los USB integrados. Las críticas van por la carga limitada del tablero y por ser de motor único, con una subida lenta. Como escritorio compacto con estilo, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere un elevable compacto y completo, listo de una pieza"
+  - "Quien valora tablero de vidrio, cajón y USB integrados"
+  - "Quien tiene poco espacio y un setup ligero-medio"
+paraQuienNo:
+  - "Quien monta varios monitores o equipo pesado"
+  - "Quien quiere elegir tablero o un tamaño mayor"
+  - "Quien busca la velocidad y carga de la gama alta"
+puntosFuertes:
+  - "Todo en uno: llega casi montado, listo para usar"
+  - "Tablero de vidrio templado con cajón integrado"
+  - "Tres puertos de carga USB (2 A + 1 C) en el tablero"
+  - "Panel táctil con 4 memorias y anticolisión"
+puntosDebiles:
+  - "Motor único y subida lenta (25 mm/s)"
+  - "Carga de tablero limitada a 50 kg"
+  - "Formato fijo 120x60, no se elige tablero"
+fuenteSpecs: "Specs de la ficha oficial de FlexiSpot España del Comhar EG8 y de la ficha global EG8/EW8: motor único, velocidad 25 mm/s, altura 72-121 cm, tablero de 120x60 cm de vidrio templado (EW8 en madera), carga del tablero 50 kg, estructura de acero, panel táctil con 4 memorias, anticolisión, tres puertos de carga USB (dos tipo A y uno tipo C), cajón integrado, garantía FlexiSpot ES habitual de 5 años en estructura. El peso del producto y el grosor del tablero no constan con cifra, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "FlexiSpot Comhar EG8 All-in-One Standing Desk with Drawer"
+  tituloCorto: "FlexiSpot Comhar EG8"
+  veredicto: "The Comhar EG8 is FlexiSpot's take on all-in-one: a compact 120x60 cm standing desk that arrives in one piece, with a tempered-glass top, a built-in drawer, and three USB charging ports (two A, one C) right on the top. It's the easiest in the range to install —it comes nearly assembled— and the nicest to have on your desk, with a touch panel, four memories, and anti-collision. In exchange you accept its limits: it's single-motor, rises at 25 mm/s, and the top supports 50 kg, so it's a desk for a light-to-medium setup, not heavy multi-monitor rigs. Against the E-range frames it loses on load and speed, but wins on design, the drawer, and not having to buy or assemble a separate top. For a stylish, small-space home office, it's very appealing."
+  idealPara: "Anyone who wants a compact, complete, good-looking standing desk with a glass top, drawer, and built-in USB chargers, ready to use in one piece"
+  comunidad: "Reviews highlight how convenient it is to receive nearly assembled, the glass-top design, and the usefulness of the built-in drawer and USB ports. Criticisms are the limited top load and being single-motor with a slow rise. As a stylish compact desk, the rating is good."
+  resumenCompra:
+    mejorPara: "A compact, complete, well-designed standing desk with a drawer and USB built in, ready to use."
+    evitarSi: "You run several monitors or heavy gear, or want high-end load and speed."
+    alternativaDirecta: "FlexiSpot EC5 Plus for a sturdy dual-motor frame where you pick the top; Devoko 120x60 for a cheaper complete desk."
+    decisionRapida: "The compact all-in-one with glass, drawer, and USB, ready in one piece; the catch is the single motor, 25 mm/s, and 50 kg load."
+  puntosFuertes:
+    - "All-in-one: arrives nearly assembled, ready to use"
+    - "Tempered-glass top with a built-in drawer"
+    - "Three USB charging ports (2 A + 1 C) on the top"
+    - "Touch panel with 4 memories and anti-collision"
+  puntosDebiles:
+    - "Single motor and slow rise (25 mm/s)"
+    - "Top load limited to 50 kg"
+    - "Fixed 120x60 format, no choice of top"
+  paraQuienSi:
+    - "Anyone who wants a compact, complete standing desk, ready in one piece"
+    - "Anyone who values a glass top, drawer, and built-in USB"
+    - "Anyone with little space and a light-to-medium setup"
+  paraQuienNo:
+    - "Anyone running several monitors or heavy gear"
+    - "Anyone who wants to choose the top or a larger size"
+    - "Anyone after high-end speed and load"
+calidadDatos:
+  score: 83
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 25
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 72
+  alturaMaxCm: 121
+  cargaMaxKg: 50
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "vidrio templado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null
