@@ -1,0 +1,139 @@
+tipo: "escritorio"
+nombre: "Maidesite T1 Pro Marco de Escritorio Elevable Eléctrico"
+tituloCorto: "Maidesite T1 Pro"
+marca: "Maidesite"
+imagen: "/img/productos/maidesite-t1-pro.jpg"
+imagenAlt: "Estructura elevable eléctrica Maidesite T1 Pro de un motor con panel de memorias y puerto USB-C"
+tramoPrecio: 2
+precioMin: 199.99
+precioMax: 199.99
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6.5
+  capacidadCarga: 7
+  rangoAltura: 6.5
+  materiales: 7
+  calidadPrecio: 8
+amazon:
+  asin: "B08DXZ6JJ5"
+  buscar: "Maidesite T1 Pro marco escritorio elevable eléctrico un motor 100 kg USB-C"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://maidesite.es/products/maidesite-t1-basic-marco-de-escritorio-elevable-en-altura"
+idealPara: "Quien quiere una estructura elevable barata pero bien equipada, de un motor con 100 kg de carga, USB-C y 10 años de garantía, para poner su propio tablero"
+veredicto: "El T1 Pro es la estructura de entrada de Maidesite, pero con más equipamiento del que suele traer la gama baja. Es de un solo motor —sube a 25 mm/s y por debajo de 50 dB— pero aguanta 100 kg, más que muchos elevables de un motor, y se vende como marco extensible (96-160 cm) para poner el tablero que quieras, con compatibilidades desde 100x60 hasta 180x80 cm. Lo que lo diferencia es el detalle: panel con memorias, anticolisión de tres niveles de sensibilidad, arranque y parada suaves, puerto USB-C de 18 W y, sobre todo, 10 años de garantía en la estructura, algo impropio de este precio. Frente al T2 Pro de doble motor, cede en velocidad y suavidad; frente a los marcos baratos de la competencia, gana en carga, equipamiento y garantía. Para un primer elevable sobre el que montar tu propio tablero sin gastar mucho, es de lo más recomendable."
+resumenCompra:
+  mejorPara: "Una estructura de un motor barata pero bien equipada, con 100 kg, USB-C y 10 años de garantía, para tu propio tablero."
+  evitarSi: "Quieres la suavidad y velocidad de un doble motor o un escritorio completo listo para usar."
+  alternativaDirecta: "Maidesite SN1 si prefieres doble motor y tablero incluido; Maidesite T2 Pro Plus si buscas 160 kg y doble motor."
+  decisionRapida: "El marco de un motor mejor equipado por el precio: 100 kg, USB-C y 10 años de garantía; el pero es que sube lento y va sin tablero."
+metodologia:
+  - "Specs de la ficha oficial de Maidesite España del T1 Pro, contrastadas con reseñas y comparativas de la marca (ofitempo)."
+  - "La nota valora la carga, el equipamiento y la garantía de 10 años a precio de entrada; penaliza el motor único lento y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "25 mm/s con motor único: lento, propio de la gama de entrada; arranque y parada suaves lo hacen más llevadero."
+  estabilidad: "Marco de acero con recubrimiento en polvo para 100 kg; correcto para un motor, sin la firmeza de un doble motor de tres tramos."
+  capacidadCarga: "100 kg es alta para un elevable de un solo motor; cubre monitor grande, portátil y equipo con margen."
+  rangoAltura: "72-120 cm es un rango de trabajo válido a estaturas medias, algo justo para muy altos de pie."
+  materiales: "Acero con recubrimiento en polvo, anticolisión de tres niveles, arranque suave y USB-C de 18 W; muy equipado para el precio."
+  calidadPrecio: "Marco de 100 kg con USB-C y 10 años de garantía a precio de entrada: relación calidad-precio sobresaliente."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Maidesite ES — T1 Pro Marco de Escritorio Elevable en Altura"
+    url: "https://maidesite.es/products/maidesite-t1-basic-marco-de-escritorio-elevable-en-altura"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "ofitempo — Comparativa de escritorios regulables Maidesite"
+    url: "https://ofitempo.com/escritorio-regulable-altura-maidesite/"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Motor único: sube lento (25 mm/s) frente a los de doble motor."
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "El nivel de memorias del panel varía según versión (3-4); se toma 4 de las fichas más recientes."
+alternativas:
+  - slug: "maidesite-sn1"
+    motivo: "Doble motor con tablero incluido si prefieres suavidad y no montar tablero."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor de tres tramos con 160 kg si necesitas más carga y velocidad."
+  - slug: "duronic-tm00"
+    motivo: "Marco aún más barato si te vale un manual sin motor."
+comunidad: "Las reseñas destacan la carga de 100 kg poco habitual en un motor, el buen equipamiento (USB-C, anticolisión ajustable, arranque suave) y sobre todo los 10 años de garantía a este precio. La crítica recurrente es la velocidad de subida y que el tablero se compra aparte. Como marco de entrada, la valoración es muy buena."
+paraQuienSi:
+  - "Quien quiere un marco de un motor barato pero bien equipado"
+  - "Quien va a poner su propio tablero (compatibilidades amplias)"
+  - "Quien valora 100 kg de carga, USB-C y 10 años de garantía"
+paraQuienNo:
+  - "Quien quiere la suavidad y velocidad de un doble motor"
+  - "Quien busca un escritorio completo listo para usar"
+  - "Quien no quiere sumar el gasto del tablero"
+puntosFuertes:
+  - "100 kg de carga, alta para un solo motor"
+  - "Marco extensible (96-160 cm) para tableros de 100x60 a 180x80"
+  - "Panel con memorias, anticolisión ajustable y USB-C de 18 W"
+  - "10 años de garantía en la estructura"
+puntosDebiles:
+  - "Motor único y subida lenta (25 mm/s)"
+  - "Se vende sin tablero: gasto adicional"
+  - "Rango de altura estándar (72-120 cm)"
+fuenteSpecs: "Specs de la ficha oficial de Maidesite España del T1 Pro: motor único, velocidad 25 mm/s, ruido <50 dB, altura 72-120 cm, carga 100 kg, marco de acero con recubrimiento en polvo extensible de 96 a 160 cm (compatible con tableros de 100x60 a 180x80 cm), panel con memorias, anticolisión de tres niveles de sensibilidad, arranque y parada suaves, puerto USB-C de 18 W, peso de la estructura de unos 20 kg, garantía de 10 años. El número de memorias varía según versión (3-4); se toma 4 de las fichas más recientes. El tablero (se vende sin él) y las certificaciones quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Maidesite T1 Pro Electric Standing Desk Frame"
+  tituloCorto: "Maidesite T1 Pro"
+  veredicto: "The T1 Pro is Maidesite's entry frame, but with more kit than the budget tier usually brings. It's single-motor —rising at 25 mm/s and under 50 dB— but holds 100 kg, more than many single-motor desks, and is sold as an extendable frame (96-160 cm) to take whatever top you want, fitting 100x60 up to 180x80 cm. What sets it apart is the detail: a memory panel, three-sensitivity anti-collision, soft start and stop, an 18 W USB-C port, and above all a 10-year frame warranty, unusual at this price. Against the dual-motor T2 Pro, it gives up speed and smoothness; against cheap competitor frames, it wins on load, kit, and warranty. For a first standing base to put your own top on without spending much, it's highly recommendable."
+  idealPara: "Anyone who wants a cheap but well-equipped single-motor frame, with 100 kg, USB-C, and a 10-year warranty, for their own tabletop"
+  comunidad: "Reviews highlight the 100 kg load uncommon for a single motor, the good kit (USB-C, adjustable anti-collision, soft start), and above all the 10-year warranty at this price. The recurring criticism is the lift speed and that the top is bought separately. As an entry frame, the rating is very good."
+  resumenCompra:
+    mejorPara: "A cheap but well-equipped single-motor frame, with 100 kg, USB-C, and a 10-year warranty, for your own top."
+    evitarSi: "You want the smoothness and speed of a dual motor or a complete, ready-to-use desk."
+    alternativaDirecta: "Maidesite SN1 for a dual motor with tabletop included; Maidesite T2 Pro Plus for 160 kg and a dual motor."
+    decisionRapida: "The best-equipped single-motor frame for the price: 100 kg, USB-C, and a 10-year warranty; the catch is the slow rise and no top."
+  puntosFuertes:
+    - "100 kg load, high for a single motor"
+    - "Extendable frame (96-160 cm) for 100x60 to 180x80 tops"
+    - "Memory panel, adjustable anti-collision, and 18 W USB-C"
+    - "10-year frame warranty"
+  puntosDebiles:
+    - "Single motor and slow rise (25 mm/s)"
+    - "Sold without a tabletop: extra cost"
+    - "Standard height range (72-120 cm)"
+  paraQuienSi:
+    - "Anyone who wants a cheap but well-equipped single-motor frame"
+    - "Anyone putting their own top on (wide compatibility)"
+    - "Anyone who values 100 kg load, USB-C, and a 10-year warranty"
+  paraQuienNo:
+    - "Anyone who wants the smoothness and speed of a dual motor"
+    - "Anyone after a complete, ready-to-use desk"
+    - "Anyone who doesn't want to add the tabletop cost"
+calidadDatos:
+  score: 94
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 25
+  nivelRuidoDb: 50
+  segmentosColumna: 2
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 100
+  estructuraMaterial: "acero"
+  pesoProductoKg: 20
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null

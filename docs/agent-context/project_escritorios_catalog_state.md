@@ -59,7 +59,11 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 21 / (objetivo 50-100).
+- Creadas: 23 / (objetivo 50-100).
+  - Lote 5 (2, 2026-07-08, media calidad 87.0): `maidesite-t1-pro` (94, marco 1 motor 100kg/USB-C 18W/10 años),
+    `maidesite-sn1` (80, completo doble motor 80kg/4 memorias/3 tamaños). Specs de fuentes oficiales/reseñas.
+    S2 Pro Plus **saltado**: = marco T2 Pro Plus + tablero → duplicaría `maidesite-t2-pro-plus`.
+    **Datos Amazon.es rellenados 2026-07-08**: sn1 (B0B4JQMYGK, precio no disponible → null), t1-pro (B08DXZ6JJ5, 199.99€). Ambas con imagen.
   - Lote 4 (4, 2026-07-08, media calidad 86.3): FlexiSpot resto de gama, specs de fuentes oficiales/reseñas.
     `flexispot-e7-pro` (94, doble motor autobloqueo 50mm/s/180kg/TÜV/10 años), `flexispot-ec5-plus` (87,
     doble motor 3 etapas patas T 120kg), `flexispot-comhar-eg8` (83, todo-en-uno vidrio+cajón+USB, motor único),

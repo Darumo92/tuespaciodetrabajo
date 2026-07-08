@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "Maidesite SN1 Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "Maidesite SN1"
+marca: "Maidesite"
+imagen: "/img/productos/maidesite-sn1.jpg"
+imagenAlt: "Escritorio elevable eléctrico Maidesite SN1 de doble motor con panel táctil LED y tablero"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 7
+  capacidadCarga: 6.5
+  rangoAltura: 6.5
+  materiales: 7
+  calidadPrecio: 8
+amazon:
+  asin: "B0B4JQMYGK"
+  buscar: "Maidesite SN1 escritorio elevable eléctrico doble motor 4 memorias USB"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://maidesite.es/products/maidesite-sn1-escritorio-elevable-electrico-regulable-en-altura"
+idealPara: "Quien quiere un escritorio completo de doble motor silencioso, con panel táctil de 4 memorias y varios tamaños, sin pagar la gama T2"
+veredicto: "El SN1 es el escritorio completo de gama media-baja de Maidesite: un doble motor silencioso (por debajo de 50 dB) que llega con tablero incluido y en tres tamaños (100x60, 120x60 y 140x70), para cubrir desde un rincón compacto hasta un setup de doble monitor. Frente a los elevables de entrada de un motor, gana en suavidad y en tener dos motores; frente al T2 Pro Plus de la casa, cede en carga (80 kg contra 160) y en garantía, pero cuesta bastante menos. Trae teclado táctil LED con cuatro memorias, carga USB, anticolisión y bloqueo infantil, lo que a este precio no es poco. No es una base para equipo pesado ni para trabajar de pie a mucha altura si mides bastante, pero como escritorio completo de doble motor para un uso normal, con 5 años de garantía, es una compra muy sensata."
+resumenCompra:
+  mejorPara: "Un escritorio completo de doble motor silencioso, con 4 memorias y varios tamaños, para un uso normal."
+  evitarSi: "Necesitas mucha carga o un rango de altura amplio: el T2 Pro Plus u otros de 160 kg te encajarán mejor."
+  alternativaDirecta: "Maidesite T2 Pro Plus si quieres 160 kg y 10 años de garantía; Devoko 120x60 si buscas un completo más barato aunque de un motor."
+  decisionRapida: "Escritorio completo de doble motor silencioso con 4 memorias y tres tamaños a precio contenido; el pero es la carga de 80 kg."
+metodologia:
+  - "Specs de la ficha oficial de Maidesite España del SN1 y de reseñas en medios españoles (entornoversatil), contrastadas con la política de garantía de Maidesite."
+  - "La nota valora el doble motor silencioso, el panel de 4 memorias y la variedad de tamaños; penaliza la carga limitada frente a la gama alta."
+scoreRationale:
+  velocidad: "Doble motor silencioso por debajo de 50 dB; la velocidad exacta no se publica, se toma como correcta para la gama media-baja."
+  estabilidad: "Doble motor con 80 kg de carga: estable para un uso normal, sin la firmeza de las estructuras de 160 kg."
+  capacidadCarga: "80 kg cubren monitor, portátil y periféricos con margen; corto para montajes de varios monitores pesados."
+  rangoAltura: "72-120 cm es un rango de trabajo válido sentado y de pie a estaturas medias."
+  materiales: "Estructura de acero con teclado táctil LED, carga USB, anticolisión y bloqueo infantil; buen equipamiento para el precio."
+  calidadPrecio: "Escritorio completo de doble motor con 4 memorias y tres tamaños a precio contenido: muy buena relación calidad-precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Maidesite ES — SN1 Escritorio Elevable Eléctrico Regulable en Altura"
+    url: "https://maidesite.es/products/maidesite-sn1-escritorio-elevable-electrico-regulable-en-altura"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "entornoversatil — MAIDeSITe SN1, el escritorio elevable ideal para trabajar"
+    url: "https://entornoversatil.com/maidesite-sn1/"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Carga de 80 kg: insuficiente para montajes de varios monitores pesados."
+  - "La velocidad de elevación en mm/s no se publica: queda en null."
+  - "El peso del producto y las certificaciones no constan: quedan en null."
+alternativas:
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía si necesitas más carga."
+  - slug: "maidesite-t1-pro"
+    motivo: "El marco de un motor de la casa, con 100 kg y 10 años, si prefieres elegir tablero."
+  - slug: "devoko-120x60"
+    motivo: "Escritorio completo más barato, aunque de un solo motor."
+comunidad: "Las reseñas destacan lo silencioso del doble motor, el buen panel táctil con memorias y la utilidad de tener tres tamaños y bloqueo infantil, algo poco común en la gama. Las críticas se centran en la carga limitada frente a los modelos de 160 kg. Para un home office normal, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere un completo de doble motor silencioso para un uso normal"
+  - "Quien necesita elegir tamaño (100, 120 o 140 cm)"
+  - "Quien valora 4 memorias, USB, anticolisión y bloqueo infantil"
+paraQuienNo:
+  - "Quien monta varios monitores o equipo pesado (más de 80 kg)"
+  - "Quien mide bastante y quiere mucho rango de altura de pie"
+  - "Quien busca la carga y garantía de la gama alta"
+puntosFuertes:
+  - "Doble motor silencioso (<50 dB) con tablero incluido"
+  - "Teclado táctil LED con 4 memorias"
+  - "Tres tamaños disponibles (100x60, 120x60, 140x70)"
+  - "Carga USB, anticolisión y bloqueo infantil"
+puntosDebiles:
+  - "Carga limitada a 80 kg"
+  - "Velocidad de elevación no publicada"
+  - "Rango de altura estándar (72-120 cm)"
+fuenteSpecs: "Specs de la ficha oficial de Maidesite España del SN1 y de reseñas españolas: doble motor silencioso por debajo de 50 dB, altura 72-120 cm, carga 80 kg, estructura de acero, tablero incluido en tres tamaños (100x60, 120x60, 140x70 cm), teclado táctil LED con 4 memorias, carga USB, anticolisión y bloqueo infantil, garantía de 5 años. La velocidad en mm/s, el peso del producto, los segmentos de columna y las certificaciones no constan, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Maidesite SN1 Dual-Motor Electric Standing Desk"
+  tituloCorto: "Maidesite SN1"
+  veredicto: "The SN1 is Maidesite's lower-mid-range complete desk: a quiet dual motor (under 50 dB) that ships with a tabletop and in three sizes (100x60, 120x60, and 140x70), covering everything from a compact corner to a dual-monitor setup. Against single-motor entry desks, it wins on smoothness and having two motors; against the house's T2 Pro Plus, it gives up load (80 kg versus 160) and warranty, but costs quite a bit less. It brings an LED touch keypad with four memories, USB charging, anti-collision, and child lock, which at this price is no small thing. It's not a base for heavy gear or for standing tall if you're quite tall, but as a complete dual-motor desk for normal use, with a 5-year warranty, it's a very sensible buy."
+  idealPara: "Anyone who wants a complete, quiet dual-motor desk with a 4-memory touch panel and several sizes, without paying for the T2 range"
+  comunidad: "Reviews highlight how quiet the dual motor is, the good touch panel with memories, and the usefulness of three sizes and a child lock, uncommon in this range. Criticisms center on the limited load versus 160 kg models. For a normal home office, the rating is good."
+  resumenCompra:
+    mejorPara: "A complete, quiet dual-motor desk with 4 memories and several sizes, for normal use."
+    evitarSi: "You need heavy load or a wide height range: the T2 Pro Plus or other 160 kg models fit better."
+    alternativaDirecta: "Maidesite T2 Pro Plus for 160 kg and a 10-year warranty; Devoko 120x60 for a cheaper complete desk, though single-motor."
+    decisionRapida: "A complete quiet dual-motor desk with 4 memories and three sizes at a contained price; the catch is the 80 kg load."
+  puntosFuertes:
+    - "Quiet dual motor (<50 dB) with tabletop included"
+    - "LED touch keypad with 4 memories"
+    - "Three sizes available (100x60, 120x60, 140x70)"
+    - "USB charging, anti-collision, and child lock"
+  puntosDebiles:
+    - "Load limited to 80 kg"
+    - "Lift speed not published"
+    - "Standard height range (72-120 cm)"
+  paraQuienSi:
+    - "Anyone who wants a complete, quiet dual-motor desk for normal use"
+    - "Anyone who needs to choose a size (100, 120, or 140 cm)"
+    - "Anyone who values 4 memories, USB, anti-collision, and child lock"
+  paraQuienNo:
+    - "Anyone running several monitors or heavy gear (over 80 kg)"
+    - "Anyone quite tall who wants a lot of standing range"
+    - "Anyone after high-end load and warranty"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 50
+  segmentosColumna: 2
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null
