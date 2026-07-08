@@ -1,0 +1,149 @@
+tipo: "escritorio"
+nombre: "Duronic TM00 Marco de Escritorio Elevable Manual (estructura)"
+tituloCorto: "Duronic TM00"
+marca: "Duronic"
+imagen: "/img/productos/duronic-tm00.jpg"
+imagenAlt: "Estructura de escritorio elevable manual Duronic TM00 con manivela y ancho extensible, sin tablero"
+tramoPrecio: 2
+precioMin: 214.99
+precioMax: 214.99
+valoracion: null
+valoraciones:
+  velocidad: 3
+  estabilidad: 6.5
+  capacidadCarga: 5.5
+  rangoAltura: 6
+  materiales: 6.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: "Duronic TM00 marco escritorio elevable manual manivela sin tablero"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://duronic.es"
+idealPara: "Quien quiere un elevable barato sin depender de un enchufe ni de la electrónica, con manivela manual y estructura de acero para poner su propio tablero"
+veredicto: "El Duronic TM00 es la rareza útil del catálogo: un escritorio elevable manual, de manivela, sin motor ni electrónica que se pueda estropear. Es la opción para quien no quiere cables, no tiene un enchufe cerca o simplemente busca lo más barato y sencillo. Sube de 71 a 116 cm girando la manivela, aguanta 60 kg y la estructura de acero se extiende de 108 a 187 cm para adaptarse a casi cualquier tablero (que se compra aparte, porque se vende solo el marco). A cambio de ese precio bajo y esa fiabilidad de 'no hay nada que falle', renuncias a todo lo cómodo: no hay memorias, ni subida rápida, ni anticolisión, y cambiar de sentado a de pie cuesta girar unas cuantas vueltas. Si vas a alternar postura muchas veces al día, un eléctrico te compensará; pero como base barata, robusta y a prueba de averías para un tablero propio, el TM00 tiene su hueco. Duronic también vende versiones eléctricas (TM12, TM22, TM51) si prefieres motor."
+resumenCompra:
+  mejorPara: "Un elevable barato, robusto y sin electrónica, con manivela manual y estructura para tu propio tablero."
+  evitarSi: "Vas a alternar sentado-de pie muchas veces al día: girar la manivela cada vez se hace pesado; mejor un eléctrico."
+  alternativaDirecta: "Duronic TM22/TM51 si quieres la misma marca pero con motor; Devoko 120x60 si prefieres un eléctrico completo barato con tablero incluido."
+  decisionRapida: "El elevable manual más simple y barato, sin nada que se estropee; el pero es que hay que girar la manivela y comprar el tablero aparte."
+metodologia:
+  - "Specs de la ficha de producto de Duronic (duronic.es) y de tiendas que lo distribuyen en España (Leroy Merlin, MediaMarkt, PcComponentes) para el TM00, versión manual."
+  - "La nota valora la fiabilidad sin electrónica, la robustez del acero y el precio bajo; penaliza que sea manual (subida lenta), sin tablero y con carga limitada."
+scoreRationale:
+  velocidad: "Ajuste manual por manivela: cambiar de altura cuesta varias vueltas, lo más lento posible frente a cualquier motor."
+  estabilidad: "Estructura de acero extensible correcta para 60 kg; robusta, aunque sin la firmeza de una columna motorizada de tres tramos."
+  capacidadCarga: "60 kg cubren un monitor, portátil y periféricos; justa para montajes con equipo pesado."
+  rangoAltura: "71-116 cm es un rango de trabajo válido a estaturas medias, algo justo para muy altos de pie."
+  materiales: "Acero con ancho extensible de 108 a 187 cm; construcción sencilla y fiable, sin electrónica que falle."
+  calidadPrecio: "Estructura manual de acero muy barata, pero hay que sumar el tablero y se renuncia a toda comodidad eléctrica."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Duronic ES — Gama de marcos de escritorio TM (TM00 manual y variantes eléctricas)"
+    url: "https://duronic.es"
+    fechaConsulta: "2026-07-06"
+  - tipo: "tienda"
+    nombre: "Leroy Merlin — Duronic TM00 WE Marco de Escritorio Altura Ajustable Manual 71-116 cm"
+    url: "https://www.leroymerlin.es/productos/duronic-tm00-we-marco-de-escritorio-con-altura-ajustable-71-cm-116-cm-manual-2-niveles-de-altura-estacion-de-trabajo-ergonomica-robusta-blanco-84254094.html"
+    fechaConsulta: "2026-07-06"
+  - tipo: "tienda"
+    nombre: "PcComponentes — Duronic TM00WE Marco de Escritorio Elevable 71-116 cm"
+    url: "https://www.pccomponentes.com/duronic-tm00we-marco-de-escritorio-elevable-con-altura-ajustable-71-a-116cm-blanco"
+    fechaConsulta: "2026-07-06"
+limitaciones:
+  - "Es manual: cambiar de altura exige girar la manivela, incómodo si alternas postura a menudo."
+  - "Se vende solo la estructura: el tablero es un gasto aparte."
+  - "Sin memorias, anticolisión, USB ni pantalla: no aplican por ser manual (quedan en null)."
+alternativas:
+  - slug: "devoko-120x60"
+    motivo: "Eléctrico completo barato con tablero, memorias y USB si no te importa depender de un enchufe."
+  - slug: "flexispot-e8"
+    motivo: "Estructura premium eléctrica de doble motor si quieres poner tu propio tablero pero con motor."
+  - slug: "songmics-lsd132"
+    motivo: "Eléctrico de entrada con tablero incluido y 4 memorias."
+comunidad: "Las reseñas valoran la robustez de la estructura de acero, lo fiable que es al no tener motor y el precio bajo, además de la comodidad de no depender de un enchufe. Las críticas son las esperables en un manual: girar la manivela cansa si se cambia de postura a menudo y hay que comprar el tablero por separado. Para quien busca simplicidad y durabilidad, cumple."
+paraQuienSi:
+  - "Quien quiere un elevable barato sin electrónica que se estropee"
+  - "Quien no tiene un enchufe cerca o no quiere cables"
+  - "Quien va a poner su propio tablero sobre la estructura"
+paraQuienNo:
+  - "Quien alterna sentado-de pie muchas veces al día"
+  - "Quien quiere memorias, subida rápida o anticolisión"
+  - "Quien busca un escritorio completo listo para usar"
+puntosFuertes:
+  - "Manual: sin motor ni electrónica que falle, muy fiable"
+  - "No depende de un enchufe: se coloca en cualquier sitio"
+  - "Estructura de acero extensible (108-187 cm) para casi cualquier tablero"
+  - "Precio muy bajo"
+puntosDebiles:
+  - "Cambiar de altura exige girar la manivela (lento e incómodo)"
+  - "Se vende sin tablero: gasto aparte"
+  - "Carga limitada a 60 kg y sin funciones electrónicas"
+fuenteSpecs: "Specs de la ficha de producto de Duronic (duronic.es) y de tiendas que lo distribuyen en España (Leroy Merlin, MediaMarkt, PcComponentes) para el TM00 manual: mecanismo manual por manivela, altura 71-116 cm, carga 60 kg, estructura de acero con ancho extensible de 108 a 187 cm, se vende solo el marco (sin tablero). Al ser manual no aplican velocidad, ruido, memorias, anticolisión, USB ni pantalla de control, por lo que quedan en null; el peso del producto y la garantía no constan y quedan también en null."
+verificadoEn: "2026-07-06"
+en:
+  nombreComercial: "Duronic TM00 Manual Height-Adjustable Desk Frame (frame only)"
+  tituloCorto: "Duronic TM00"
+  veredicto: "The Duronic TM00 is the catalog's useful oddity: a manual, crank-operated standing desk with no motor or electronics to break. It's the choice for anyone who doesn't want cables, has no outlet nearby, or simply wants the cheapest, simplest option. It rises from 71 to 116 cm by turning the crank, holds 60 kg, and the steel frame extends from 108 to 187 cm to fit almost any tabletop (bought separately, since only the frame is sold). In exchange for that low price and 'nothing to fail' reliability, you give up everything convenient: no memories, no fast rise, no anti-collision, and switching from sitting to standing takes a few turns of the crank. If you'll change posture many times a day, an electric one is worth it; but as a cheap, sturdy, failure-proof base for your own tabletop, the TM00 has its place. Duronic also sells electric versions (TM12, TM22, TM51) if you prefer a motor."
+  idealPara: "Anyone who wants a cheap standing desk without relying on an outlet or electronics, with a manual crank and a steel frame for their own tabletop"
+  comunidad: "Reviews value the sturdiness of the steel frame, how reliable it is without a motor, and the low price, plus the convenience of not needing an outlet. Criticisms are the expected ones for a manual: cranking gets tiring if you change posture often, and you have to buy the top separately. For anyone after simplicity and durability, it delivers."
+  resumenCompra:
+    mejorPara: "A cheap, sturdy, electronics-free standing desk, with a manual crank and a frame for your own tabletop."
+    evitarSi: "You'll switch sit-stand many times a day: cranking each time gets tiring; go electric instead."
+    alternativaDirecta: "Duronic TM22/TM51 for the same brand but with a motor; Devoko 120x60 for a cheap complete electric desk with tabletop included."
+    decisionRapida: "The simplest, cheapest manual standing desk with nothing to break; the catch is cranking the handle and buying the top separately."
+  puntosFuertes:
+    - "Manual: no motor or electronics to fail, very reliable"
+    - "No outlet needed: place it anywhere"
+    - "Extendable steel frame (108-187 cm) for almost any tabletop"
+    - "Very low price"
+  puntosDebiles:
+    - "Changing height means cranking the handle (slow and awkward)"
+    - "Sold without a tabletop: separate cost"
+    - "Load limited to 60 kg and no electronic features"
+  paraQuienSi:
+    - "Anyone who wants a cheap standing desk with no electronics to break"
+    - "Anyone with no nearby outlet or who wants no cables"
+    - "Anyone putting their own tabletop on the frame"
+  paraQuienNo:
+    - "Anyone who switches sit-stand many times a day"
+    - "Anyone who wants memories, fast rise, or anti-collision"
+    - "Anyone after a complete, ready-to-use desk"
+calidadDatos:
+  score: 67
+  confianza: "medio"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "manual"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 71
+  alturaMaxCm: 116
+  cargaMaxKg: 60
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "ninguna"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

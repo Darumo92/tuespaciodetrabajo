@@ -41,6 +41,11 @@ ES/EN, SEO rico (Product schema con specs, rating, oferta cuando haya precio ver
   `segmentosColumna`, certificaciones → subir score en pasada de enriquecido posterior.
 - `imagen: ""` en las 8 (sin imágenes aún).
 
+## Lista de modelos candidatos (lotes 3-7)
+Ver `plan_escritorios_modelos_candidatos.md` (recopilación 2026-07-06 de foros +
+comparativas ES/int). Lote 3 = best-sellers Amazon.es de volumen (Devoko 120x60,
+SONGMICS LSD, Maidesite T2 Pro Plus, Duronic TM00, ErGear 120x60).
+
 ## FASES 2-N — Research + creación de fichas ⬜ PENDIENTE
 - Batches de 5-8 escritorios por subagente (general-purpose, run_in_background donde paralelice).
 - Por producto: specs reales (motor, velocidad, rango altura, carga, dimensiones+grosor tablero,
@@ -54,7 +59,14 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 12 / (objetivo 50-100).
+- Creadas: 17 / (objetivo 50-100).
+  - Lote 3 (5, 2026-07-06, media calidad 72.6): `maidesite-t2-pro-plus` (86, doble motor 160kg/10 años),
+    `devoko-120x60` (72), `ergear-120x60` (72), `songmics-lsd132` (66), `duronic-tm00` (66, manual/manivela).
+    Specs de fuentes oficiales/reseñas. **Datos Amazon.es rellenados 2026-07-08** (usuario): ASIN+precio+imagen
+    en devoko (B0CKVPFSTD, 114€), songmics (B0CV4W77FK, 95.99€), maidesite-t2-pro-plus (B087JF3B5S, 339.99€),
+    ergear (B0D9MGDDHD, 109.99€). Duronic TM00 no está en Amazon.es → `asin: null` + `amazon.buscar`, precio 214.99€
+    (imagen sí subida). Las 5 fichas con imagen. Devoko corregido a variante real del ASIN (73-118cm, 2 memorias, USB no confirmado).
+    API Amazon Creators sigue dando 403 AssociateNotEligible (revalidado 2026-07-08) → datos los aporta el usuario.
   - Lote 1 (7, calidad subida a media 82 el 2026-07-03): `flexispot-ec5-pro`, `flexispot-e1-pro`,
     `flexispot-e7`, `maidesite-el2-pro-art`, `sanodesk-qs-plus`, `ergear-140x70`, `jummico-140x60`.
   - Lote 2 (5, 2026-07-03, media calidad 94): `flexispot-e8` (98), `flexispot-e5` (94),

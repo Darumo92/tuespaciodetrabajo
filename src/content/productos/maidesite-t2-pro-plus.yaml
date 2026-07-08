@@ -1,0 +1,147 @@
+tipo: "escritorio"
+nombre: "Maidesite T2 Pro Plus Escritorio Eléctrico Elevable Doble Motor"
+tituloCorto: "Maidesite T2 Pro Plus"
+marca: "Maidesite"
+imagen: "/img/productos/maidesite-t2-pro-plus.jpg"
+imagenAlt: "Escritorio elevable eléctrico Maidesite T2 Pro Plus de doble motor con estructura de acero triangular y tablero"
+tramoPrecio: 3
+precioMin: 339.99
+precioMax: 339.99
+valoracion: null
+valoraciones:
+  velocidad: 8.5
+  estabilidad: 9
+  capacidadCarga: 9.5
+  rangoAltura: 9
+  materiales: 8
+  calidadPrecio: 8.5
+amazon:
+  asin: "B087JF3B5S"
+  buscar: "Maidesite T2 Pro Plus escritorio eléctrico elevable doble motor 160 kg"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://maidesite.es/products/maidesite-t2-pro-plus-escritorio-electrico-elevable-en-altura-140-120-cm"
+idealPara: "Quien quiere el mejor equilibrio estabilidad-precio en doble motor, con 160 kg de carga, rango de altura amplio y 10 años de garantía"
+veredicto: "El Maidesite T2 Pro Plus es el escritorio que recomienda medio mercado por una razón: es un doble motor de verdad —columnas de tres tramos, estructura de acero con refuerzo triangular— por un precio de gama media, no premium. Sube rápido (38 mm/s), se mantiene por debajo de 45 dB y aguanta 160 kg, así que da igual que le pongas varios monitores, brazos articulados y un PC pesado: no se inmuta. El rango de 64 a 129 cm es de los más amplios y cubre desde estaturas bajas sentadas hasta muy altas de pie. Trae panel con memorias, puerto USB de carga y, lo que lo separa de casi todo lo demás, 10 años de garantía en la estructura probada a más de 10.000 ciclos. Frente a la gama de entrada (Devoko, SONGMICS) es otro nivel de estabilidad y velocidad; frente a la E8 de FlexiSpot, gana en carga y garantía aunque pierde algo en acabado. Si buscas un elevable serio para años sin pagar precio premium, es la referencia."
+resumenCompra:
+  mejorPara: "Un escritorio de doble motor serio, muy estable y con carga y garantía sobresalientes, sin pagar gama premium."
+  evitarSi: "Solo quieres lo más barato para un uso ligero: la gama de entrada te basta y cuesta menos."
+  alternativaDirecta: "FlexiSpot E8 si priorizas el acabado premium de las patas ovaladas; FlexiSpot E5 si buscas doble motor de tres tramos algo más barato."
+  decisionRapida: "El mejor equilibrio estabilidad-carga-garantía en doble motor de gama media; 160 kg y 10 años son su gran baza."
+metodologia:
+  - "Specs de la ficha oficial de Maidesite España (maidesite.es) para el T2 Pro Plus, contrastadas con las fichas en Amazon.es y reseñas en medios españoles (entornoversatil, escritorioselevables, ofitempo)."
+  - "La nota prioriza la velocidad, la estabilidad, la carga y el rango del doble motor de tres tramos, además de la garantía de 10 años."
+scoreRationale:
+  velocidad: "38 mm/s con doble motor: transición sentado-pie casi instantánea, al nivel de la gama alta."
+  estabilidad: "Columnas de tres tramos y estructura de acero con refuerzo triangular; muy poco tambaleo incluso a 160 kg y altura máxima."
+  capacidadCarga: "160 kg es de lo más alto de la categoría; cubre varios monitores pesados, brazos y equipo con holgura enorme."
+  rangoAltura: "64-129 cm es uno de los rangos más amplios, válido de estaturas bajas sentadas a muy altas de pie."
+  materiales: "Acero robusto y triple sección; acabado sólido de gama media, un peldaño por debajo del premium en detalle."
+  calidadPrecio: "Doble motor, 160 kg y 10 años de garantía a precio de gama media: relación calidad-precio excelente."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Maidesite ES — Escritorio Eléctrico Elevable Doble Motor T2 Pro Plus (140/120 cm)"
+    url: "https://maidesite.es/products/maidesite-t2-pro-plus-escritorio-electrico-elevable-en-altura-140-120-cm"
+    fechaConsulta: "2026-07-06"
+  - tipo: "review"
+    nombre: "escritorioselevables — Reseña Maidesite T2 Pro Plus"
+    url: "https://escritorioselevables.com/resenas/maidesite-t2-pro-plus-2/"
+    fechaConsulta: "2026-07-06"
+  - tipo: "review"
+    nombre: "entornoversatil — Análisis Maidesite T2 Pro"
+    url: "https://entornoversatil.com/maidesite-t2-pro/"
+    fechaConsulta: "2026-07-06"
+limitaciones:
+  - "El tablero se ofrece en 120x60 y 140x70; el grosor exacto no está publicado (queda en null)."
+  - "El peso del producto y las certificaciones TÜV/EMC no aparecen en la ficha oficial: quedan en null."
+  - "Precio de gama media: por encima de los elevables de entrada de un solo motor."
+alternativas:
+  - slug: "flexispot-e8"
+    motivo: "Acabado premium de patas ovaladas, pero se vende sin tablero y con menos carga (125 kg)."
+  - slug: "flexispot-e5"
+    motivo: "Doble motor de tres tramos algo más barato, con menos carga."
+  - slug: "maidesite-t2-pro"
+    motivo: "El hermano estructura (marco) de un solo motor, más barato si no necesitas doble motor."
+comunidad: "Con más de 1.700 valoraciones y una media en torno a 4,8 estrellas, las reseñas lo señalan como uno de los mejores en relación estabilidad-precio: destacan lo firme que es a plena carga, la rapidez del doble motor y la garantía de 10 años. Las pocas quejas son sobre el peso al montarlo y que el cable de gestión es básico. Es un habitual de las comparativas de escritorios elevables en español."
+paraQuienSi:
+  - "Quien quiere un doble motor serio y muy estable sin pagar premium"
+  - "Quien monta varios monitores o equipo pesado (hasta 160 kg)"
+  - "Quien valora una garantía larga (10 años) y un rango de altura amplio"
+paraQuienNo:
+  - "Quien solo busca lo más barato para un uso ligero"
+  - "Quien necesita el acabado más premium del mercado"
+  - "Quien monta solo y no quiere lidiar con una estructura pesada"
+puntosFuertes:
+  - "Doble motor rápido (38 mm/s) y silencioso (<45 dB)"
+  - "Columnas de tres tramos con rango amplio (64-129 cm)"
+  - "Carga de 160 kg, de las más altas de la categoría"
+  - "Estructura de acero con refuerzo triangular, muy estable"
+  - "10 años de garantía, probado a más de 10.000 ciclos"
+puntosDebiles:
+  - "Precio de gama media, por encima de la entrada de un motor"
+  - "Grosor del tablero y peso no publicados"
+  - "Gestión de cables básica"
+fuenteSpecs: "Specs de la ficha oficial de Maidesite España para el T2 Pro Plus, contrastadas con Amazon.es y reseñas: doble motor, velocidad 38 mm/s, ruido <45 dB, columnas de tres tramos, altura 64-129 cm, carga 160 kg, estructura de acero con refuerzo triangular, tablero incluido en 120x60 o 140x70 cm, panel con 4 memorias, puerto USB de carga, garantía de 10 años y más de 10.000 ciclos de prueba. No se han confirmado el grosor del tablero, el peso del producto ni las certificaciones TÜV/EMC, por lo que quedan en null."
+verificadoEn: "2026-07-06"
+en:
+  nombreComercial: "Maidesite T2 Pro Plus Dual-Motor Electric Standing Desk"
+  tituloCorto: "Maidesite T2 Pro Plus"
+  veredicto: "The Maidesite T2 Pro Plus is the desk half the market recommends for a reason: it's a real dual motor —three-stage columns, steel frame with triangular reinforcement— at a mid-range price, not premium. It rises fast (38 mm/s), stays under 45 dB, and holds 160 kg, so it doesn't flinch at several monitors, monitor arms, and a heavy PC. The 64-129 cm range is among the widest, covering short seated users up to very tall standing ones. It brings a memory panel, a USB charging port, and —what sets it apart from almost everything else— a 10-year warranty on a frame tested past 10,000 cycles. Against the entry tier (Devoko, SONGMICS) it's another level of stability and speed; against FlexiSpot's E8, it wins on load and warranty though it gives up a little finish. If you want a serious standing desk to last years without paying premium, it's the benchmark."
+  idealPara: "Anyone who wants the best stability-to-price balance in a dual motor, with 160 kg load, a wide height range, and a 10-year warranty"
+  comunidad: "With over 1,700 ratings and around 4.8 stars, reviews call it one of the best on stability-to-price: they highlight how firm it is at full load, the speed of the dual motor, and the 10-year warranty. The few complaints are about the weight during assembly and the basic cable management. It's a regular in Spanish standing-desk comparisons."
+  resumenCompra:
+    mejorPara: "A serious, very stable dual-motor desk with outstanding load and warranty, without paying premium."
+    evitarSi: "You just want the cheapest thing for light use: the entry tier is enough and costs less."
+    alternativaDirecta: "FlexiSpot E8 if you prioritize the premium oval-leg finish; FlexiSpot E5 for a slightly cheaper three-stage dual motor."
+    decisionRapida: "The best stability-load-warranty balance in a mid-range dual motor; 160 kg and 10 years are its big edge."
+  puntosFuertes:
+    - "Fast dual motor (38 mm/s) and quiet (<45 dB)"
+    - "Three-stage columns with a wide range (64-129 cm)"
+    - "160 kg load, among the highest in the category"
+    - "Steel frame with triangular reinforcement, very stable"
+    - "10-year warranty, tested past 10,000 cycles"
+  puntosDebiles:
+    - "Mid-range price, above single-motor entry desks"
+    - "Tabletop thickness and weight not published"
+    - "Basic cable management"
+  paraQuienSi:
+    - "Anyone who wants a serious, very stable dual motor without paying premium"
+    - "Anyone running several monitors or heavy gear (up to 160 kg)"
+    - "Anyone who values a long warranty (10 years) and a wide height range"
+  paraQuienNo:
+    - "Anyone who just wants the cheapest thing for light use"
+    - "Anyone who needs the most premium finish on the market"
+    - "Anyone assembling solo who doesn't want a heavy frame"
+calidadDatos:
+  score: 86
+  confianza: "alto"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 38
+  nivelRuidoDb: 45
+  segmentosColumna: 3
+  alturaMinCm: 64
+  alturaMaxCm: 129
+  cargaMaxKg: 160
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 140
+  tableroFondoCm: 70
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null

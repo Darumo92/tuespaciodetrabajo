@@ -1,0 +1,143 @@
+tipo: "escritorio"
+nombre: "Devoko Escritorio Elevable Eléctrico 120x60 cm con Tablero"
+tituloCorto: "Devoko 120x60"
+marca: "Devoko"
+imagen: "/img/productos/devoko-120x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico Devoko de 120x60 cm con tablero, panel de 2 memorias y anticolisión"
+tramoPrecio: 1
+precioMin: 114
+precioMax: 114
+valoracion: null
+valoraciones:
+  velocidad: 4
+  estabilidad: 6
+  capacidadCarga: 6
+  rangoAltura: 6.5
+  materiales: 6
+  calidadPrecio: 8.5
+amazon:
+  asin: "B0CKVPFSTD"
+  buscar: "Devoko escritorio elevable eléctrico 120x60 con tablero memoria anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere estrenarse en los escritorios elevables gastando lo mínimo, con tablero incluido y sin renunciar a la anticolisión con retroceso"
+veredicto: "El Devoko 120x60 es la puerta de entrada más barata a la categoría: un escritorio elevable completo, con tablero incluido, por unos 114 euros —menos de lo que cuesta solo la estructura de gama alta—. A cambio se nota que es gama básica: un único motor que sube despacio (20 mm/s), 70 kg de carga y un rango de 73 a 118 cm que cubre bien a la mayoría pero se queda corto para personas muy altas de pie. Lo que sí trae, y no siempre está en este precio, es panel con 2 memorias y anticolisión con retroceso automático. Con miles de valoraciones y una media alta en Amazon, es el best-seller de la gama de entrada por una razón: cumple para un home office normal. No lo compres si vas a subir y bajar el escritorio muchas veces al día o piensas cargarlo con varios monitores y equipo pesado: para eso necesitas doble motor. Como primer elevable y por precio, es imbatible."
+resumenCompra:
+  mejorPara: "Estrenarse en los elevables con un escritorio completo y barato para un uso normal de teletrabajo."
+  evitarSi: "Subes y bajas muchas veces al día o cargas varios monitores y equipo pesado: te hará falta doble motor."
+  alternativaDirecta: "SONGMICS LSD132 si quieres 4 memorias y USB-C por un precio parecido; Maidesite T2 Pro Plus si puedes estirar el presupuesto a doble motor y 160 kg."
+  decisionRapida: "El elevable completo más barato que aún trae memorias y anticolisión; el pero es el motor único y lento."
+metodologia:
+  - "Specs de la ficha de producto de Devoko en Amazon.es (ASIN B0CKVPFSTD) y tiendas oficiales (tuescritorioelevable.es), contrastadas con reseñas en medios de análisis españoles (entornoversatil, elevaescritorio)."
+  - "La nota prioriza que sea un escritorio completo listo para usar al precio más bajo; penaliza el motor único lento y la carga limitada frente a los de doble motor."
+scoreRationale:
+  velocidad: "20 mm/s con motor único: de lo más lento de la categoría, la transición sentado-pie se hace de rogar."
+  estabilidad: "Estructura de acero correcta para 70 kg, pero con algo de tambaleo en altura máxima propio de la gama de entrada."
+  capacidadCarga: "70 kg cubren monitor, portátil y periféricos; se queda corto para montajes de varios monitores pesados."
+  rangoAltura: "73-118 cm sirve para trabajar sentado y de pie a estaturas medias; los muy altos se quedan justos de pie."
+  materiales: "Acero y tablero de aglomerado de gama básica; acabado correcto para el precio, sin lujos."
+  calidadPrecio: "Escritorio completo con tablero, 2 memorias y anticolisión por unos 114 EUR: la mejor relación calidad-precio en la gama de entrada."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — Devoko Escritorio Elevable Eléctrico 120x60 cm con Tablero, 2 memorias, anticolisión (B0CKVPFSTD)"
+    url: "https://www.amazon.es/dp/B0CKVPFSTD"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "entornoversatil — Devoko, el modelo eléctrico más barato"
+    url: "https://entornoversatil.com/devoko/"
+    fechaConsulta: "2026-07-06"
+limitaciones:
+  - "Motor único y lento (20 mm/s): la subida y bajada es notablemente más lenta que en los de doble motor."
+  - "Carga de 70 kg: insuficiente para montajes de varios monitores pesados."
+  - "No se ha confirmado el grosor del tablero, el puerto USB ni la garantía oficial de esta variante: quedan en null."
+alternativas:
+  - slug: "songmics-lsd132"
+    motivo: "Precio parecido pero con 4 memorias, panel digital y puerto USB-C."
+  - slug: "jummico-140x60"
+    motivo: "Más superficie (140 cm) por poco más, también gama de entrada con tablero incluido."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Con miles de valoraciones y una media en torno a 4,4 estrellas, las reseñas destacan lo barato que es para ser un escritorio elevable completo, el montaje sencillo y que el motor es discreto. Las quejas recurrentes son la lentitud de la subida y que la estabilidad en altura máxima no es la de un doble motor; nadie espera un mueble premium a este precio y por eso las valoraciones son altas."
+paraQuienSi:
+  - "Quien se estrena en los elevables y quiere gastar lo mínimo"
+  - "Quien busca un escritorio completo listo para usar, con tablero incluido"
+  - "Quien hace un uso normal de teletrabajo con un monitor"
+paraQuienNo:
+  - "Quien sube y baja el escritorio muchas veces al día"
+  - "Quien monta varios monitores o equipo pesado"
+  - "Quien mide bastante y quiere trabajar de pie con holgura"
+puntosFuertes:
+  - "El escritorio elevable completo más barato con tablero incluido"
+  - "Trae 2 memorias y anticolisión con retroceso"
+  - "Miles de valoraciones con media alta: best-seller de la gama de entrada"
+  - "Montaje sencillo y motor discreto"
+puntosDebiles:
+  - "Motor único y lento (20 mm/s)"
+  - "Carga limitada a 70 kg"
+  - "Estabilidad justa en altura máxima frente a un doble motor"
+fuenteSpecs: "Specs de la ficha de producto de Devoko en Amazon.es (ASIN B0CKVPFSTD, versión blanca con tablero) y tiendas oficiales, contrastadas con reseñas españolas: motor único, velocidad 20 mm/s, ruido <50 dB, altura 73-118 cm con tablero, carga 70 kg, estructura de acero, tablero incluido de 120x60 cm, panel LED con 2 memorias y anticolisión con retroceso automático. No se han confirmado el grosor del tablero, el puerto USB de esta variante, el peso del producto, los segmentos de columna ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Devoko Electric Standing Desk 120x60 cm with Tabletop"
+  tituloCorto: "Devoko 120x60"
+  veredicto: "The Devoko 120x60 is the cheapest way into the category: a complete standing desk, tabletop included, for around 114 euros —less than a high-end frame alone costs. In return it's clearly entry-level: a single motor that rises slowly (20 mm/s), 70 kg of load, and a 73-118 cm range that suits most people but falls short for very tall users standing up. What it does bring, and not everything at this price does, is a 2-memory panel and anti-collision with auto-reverse. With thousands of ratings and a high average on Amazon, it's the entry-level best-seller for a reason: it does the job for a normal home office. Don't buy it if you'll raise and lower the desk many times a day or load it with several heavy monitors: for that you need a dual motor. As a first standing desk and on price, it's unbeatable."
+  idealPara: "Anyone starting out with standing desks on the smallest budget, tabletop included, without giving up anti-collision with auto-reverse"
+  comunidad: "With thousands of ratings and around 4.4 stars, reviews highlight how cheap it is for a complete standing desk, the easy assembly, and the quiet motor. The recurring complaints are the slow rise and that stability at full height isn't that of a dual motor; nobody expects a premium desk at this price, which is why ratings stay high."
+  resumenCompra:
+    mejorPara: "Getting into standing desks with a complete, cheap desk for normal remote work."
+    evitarSi: "You raise and lower many times a day or load several heavy monitors: you'll want a dual motor."
+    alternativaDirecta: "SONGMICS LSD132 for 4 memories and USB-C at a similar price; Maidesite T2 Pro Plus if you can stretch to a dual motor and 160 kg."
+    decisionRapida: "The cheapest complete standing desk that still brings memories and anti-collision; the catch is the single, slow motor."
+  puntosFuertes:
+    - "The cheapest complete standing desk with tabletop included"
+    - "Includes 2 memories and anti-collision with auto-reverse"
+    - "Thousands of ratings with a high average: entry-level best-seller"
+    - "Easy assembly and a quiet motor"
+  puntosDebiles:
+    - "Single, slow motor (20 mm/s)"
+    - "Load limited to 70 kg"
+    - "Stability is tight at full height versus a dual motor"
+  paraQuienSi:
+    - "Anyone starting out with standing desks on the smallest budget"
+    - "Anyone who wants a complete, ready-to-use desk with tabletop"
+    - "Anyone doing normal remote work with a single monitor"
+  paraQuienNo:
+    - "Anyone who raises and lowers the desk many times a day"
+    - "Anyone running several monitors or heavy gear"
+    - "Anyone quite tall who wants to stand with headroom"
+calidadDatos:
+  score: 72
+  confianza: "medio"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 20
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 73
+  alturaMaxCm: 118
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 2
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

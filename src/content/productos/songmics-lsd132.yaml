@@ -1,0 +1,149 @@
+tipo: "escritorio"
+nombre: "SONGMICS Escritorio Eléctrico Regulable en Altura 120x60 cm (LSD132)"
+tituloCorto: "SONGMICS LSD132"
+marca: "SONGMICS"
+imagen: "/img/productos/songmics-lsd132.jpg"
+imagenAlt: "Escritorio elevable eléctrico SONGMICS LSD132 de 120x60 cm con panel digital de 4 memorias y puerto USB-C"
+tramoPrecio: 1
+precioMin: 95.99
+precioMax: 95.99
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6.5
+  capacidadCarga: 6
+  rangoAltura: 6.5
+  materiales: 7
+  calidadPrecio: 8.5
+amazon:
+  asin: "B0CV4W77FK"
+  buscar: "SONGMICS escritorio eléctrico regulable altura 120x60 LSD132 4 memorias USB-C"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.songmics.es/products/songmics-escritorio-electrico-regulable-en-altura-60-x-120-x-72-120-cm-lsd132"
+idealPara: "Quien quiere un escritorio elevable completo y barato pero con panel digital de 4 memorias y puerto USB-C, y agradece la variedad de tamaños y colores"
+veredicto: "El SONGMICS LSD132 es el rival directo del Devoko en la gama de entrada, y le gana en electrónica: por un precio parecido trae panel digital con cuatro memorias, atenuación continua de la altura y puerto USB-C, además de venderse en muchos tamaños (120, 140, 160, 180 cm) y colores. Sigue siendo un escritorio de motor único, así que la subida no es rápida y la carga se queda en 70 kg, pero el marco de acero y la superficie gruesa aguantan bien un uso normal y el ruido se mantiene por debajo de 48 dB. Es la opción lógica si el Devoko se te queda corto de memorias o quieres USB-C, o si necesitas un ancho concreto que la competencia barata no ofrece. No es un escritorio para subir y bajar todo el día ni para montajes pesados —para eso hace falta doble motor— pero como primer elevable con mejor panel que la media de su precio, es de lo más recomendable."
+resumenCompra:
+  mejorPara: "Un primer escritorio elevable barato pero con 4 memorias, USB-C y muchos tamaños/colores a elegir."
+  evitarSi: "Necesitas subir y bajar constantemente o cargar equipo pesado: el motor único y los 70 kg se quedan cortos."
+  alternativaDirecta: "Devoko 120x60 si te basta con menos memorias y quieres gastar aún menos; Maidesite T2 Pro Plus si buscas doble motor y 160 kg."
+  decisionRapida: "El elevable de entrada con mejor panel (4 memorias + USB-C) y más variedad de tamaños; el pero sigue siendo el motor único."
+metodologia:
+  - "Specs de la ficha oficial de SONGMICS España (songmics.es) y de las fichas de la serie LSD132/134 en Amazon.es, contrastadas con el manual de instalación público (manuals.plus) y reseñas españolas."
+  - "La nota valora el panel digital, el USB-C y la variedad de formatos al precio de entrada; penaliza el motor único lento y la carga limitada."
+scoreRationale:
+  velocidad: "Motor único con ajuste uniforme y silencioso (<48 dB), pero sin la rapidez de un doble motor; velocidad concreta no publicada."
+  estabilidad: "Marco de acero y superficie gruesa correctos para 70 kg, con el tambaleo esperable de la gama de entrada en altura alta."
+  capacidadCarga: "70 kg cubren un setup de un monitor y periféricos; insuficiente para varios monitores pesados."
+  rangoAltura: "72-120 cm es un rango de trabajo válido sentado y de pie a estaturas medias."
+  materiales: "Acero, superficie gruesa y panel digital con atenuación continua y USB-C: mejor electrónica que la media de su precio."
+  calidadPrecio: "Panel de 4 memorias y USB-C en un elevable completo por menos de 100 EUR, con muchos tamaños: relación calidad-precio sobresaliente."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SONGMICS ES — Escritorio Eléctrico Regulable en Altura 60x120 cm (LSD132)"
+    url: "https://www.songmics.es/products/songmics-escritorio-electrico-regulable-en-altura-60-x-120-x-72-120-cm-lsd132"
+    fechaConsulta: "2026-07-06"
+  - tipo: "tienda"
+    nombre: "Amazon.es — SONGMICS Escritorio Eléctrico 120x60 cm, 4 memorias, USB-C (LSD132K01)"
+    url: "https://www.amazon.es/SONGMICS-Escritorio-El%C3%A9ctrico-Regulable-Almacenamiento/dp/B0CV4VYX7H"
+    fechaConsulta: "2026-07-06"
+  - tipo: "manual"
+    nombre: "SONGMICS LSD132 Standing Desk — Guía de instalación"
+    url: "https://manuals.plus/songmics/lsd132-standing-desk-manual"
+    fechaConsulta: "2026-07-06"
+limitaciones:
+  - "Motor único: subida más lenta que un doble motor y velocidad exacta no publicada (queda en null)."
+  - "Carga de 70 kg: insuficiente para montajes de varios monitores pesados."
+  - "No se han confirmado anticolisión, segmentos de columna ni garantía oficial: quedan en null."
+alternativas:
+  - slug: "devoko-120x60"
+    motivo: "Aún más barato si te basta con menos memorias; misma liga de motor único."
+  - slug: "ergear-120x60"
+    motivo: "Otro compacto 120x60 con 4 memorias, algo más de carga (80 kg)."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía."
+comunidad: "Las reseñas destacan el buen panel digital, el USB-C y la enorme variedad de tamaños y acabados, junto con un montaje asequible y un motor silencioso. Las críticas van por donde toca en la gama de entrada: la subida no es rápida y la carga es limitada. Para un home office de un monitor, la valoración media es alta."
+paraQuienSi:
+  - "Quien quiere un primer elevable barato pero con 4 memorias y USB-C"
+  - "Quien necesita un ancho o color concreto de la serie (120-180 cm)"
+  - "Quien hace un uso normal de teletrabajo con un monitor"
+paraQuienNo:
+  - "Quien sube y baja el escritorio constantemente"
+  - "Quien monta varios monitores o equipo pesado"
+  - "Quien quiere la subida rápida de un doble motor"
+puntosFuertes:
+  - "Panel digital con 4 memorias y atenuación continua"
+  - "Puerto USB-C integrado, raro a este precio"
+  - "Gran variedad de tamaños (120-180 cm) y colores"
+  - "Motor silencioso (<48 dB) y marco de acero robusto"
+puntosDebiles:
+  - "Motor único: subida lenta"
+  - "Carga limitada a 70 kg"
+  - "Anticolisión y garantía no confirmadas"
+fuenteSpecs: "Specs de la ficha oficial de SONGMICS España para el LSD132 (120x60) y de la serie en Amazon.es, con el manual de instalación público: motor único, ruido <48 dB, altura 72-120 cm, carga 70 kg, estructura de acero, tablero incluido de 120x60 cm (también 140/160/180), panel digital LED con 4 memorias y atenuación continua, puerto USB-C. No se han confirmado la velocidad en mm/s, la anticolisión, los segmentos de columna, el peso ni la garantía, por lo que quedan en null."
+verificadoEn: "2026-07-06"
+en:
+  nombreComercial: "SONGMICS Electric Height-Adjustable Desk 120x60 cm (LSD132)"
+  tituloCorto: "SONGMICS LSD132"
+  veredicto: "The SONGMICS LSD132 is the Devoko's direct rival in the entry tier, and it wins on electronics: for a similar price it brings a digital panel with four memories, continuous height dimming, and a USB-C port, and it's sold in many sizes (120, 140, 160, 180 cm) and colors. It's still a single-motor desk, so the rise isn't fast and load tops out at 70 kg, but the steel frame and thick surface handle normal use well and noise stays under 48 dB. It's the logical pick if the Devoko runs short on memories or you want USB-C, or if you need a specific width the cheap competition doesn't offer. It's not a desk for raising and lowering all day or for heavy setups —that needs a dual motor— but as a first standing desk with a better panel than its price average, it's highly recommendable."
+  idealPara: "Anyone who wants a complete, cheap standing desk but with a digital 4-memory panel and USB-C, and values the range of sizes and colors"
+  comunidad: "Reviews highlight the good digital panel, the USB-C, and the huge range of sizes and finishes, along with affordable assembly and a quiet motor. Criticisms land where they should for the entry tier: the rise isn't fast and load is limited. For a single-monitor home office, the average rating is high."
+  resumenCompra:
+    mejorPara: "A first, cheap standing desk but with 4 memories, USB-C, and many sizes/colors to choose from."
+    evitarSi: "You need to raise and lower constantly or load heavy gear: the single motor and 70 kg fall short."
+    alternativaDirecta: "Devoko 120x60 if fewer memories are fine and you want to spend even less; Maidesite T2 Pro Plus for a dual motor and 160 kg."
+    decisionRapida: "The entry-level desk with the best panel (4 memories + USB-C) and most size variety; the catch is still the single motor."
+  puntosFuertes:
+    - "Digital panel with 4 memories and continuous dimming"
+    - "Built-in USB-C port, rare at this price"
+    - "Wide range of sizes (120-180 cm) and colors"
+    - "Quiet motor (<48 dB) and sturdy steel frame"
+  puntosDebiles:
+    - "Single motor: slow rise"
+    - "Load limited to 70 kg"
+    - "Anti-collision and warranty not confirmed"
+  paraQuienSi:
+    - "Anyone who wants a cheap first standing desk but with 4 memories and USB-C"
+    - "Anyone needing a specific width or color in the range (120-180 cm)"
+    - "Anyone doing normal single-monitor remote work"
+  paraQuienNo:
+    - "Anyone who raises and lowers the desk constantly"
+    - "Anyone running several monitors or heavy gear"
+    - "Anyone who wants the fast rise of a dual motor"
+calidadDatos:
+  score: 66
+  confianza: "medio"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 48
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: null
+  puertoUsb: true
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

@@ -1,0 +1,143 @@
+tipo: "escritorio"
+nombre: "ErGear Escritorio Elevable Eléctrico 120x60 cm con Panel de 4 Memorias"
+tituloCorto: "ErGear 120x60"
+marca: "ErGear"
+imagen: "/img/productos/ergear-120x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico ErGear de 120x60 cm con panel LED de 4 memorias y tablero ensamblado"
+tramoPrecio: 1
+precioMin: 109.99
+precioMax: 109.99
+valoracion: null
+valoraciones:
+  velocidad: 4.5
+  estabilidad: 6
+  capacidadCarga: 6.5
+  rangoAltura: 6
+  materiales: 6
+  calidadPrecio: 8
+amazon:
+  asin: "B0D9MGDDHD"
+  buscar: "ErGear escritorio elevable eléctrico 120x60 panel 4 memorias tablero ensamblado"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien busca un elevable compacto y barato para espacios reducidos, con panel de 4 memorias y tablero ya ensamblado para montar en minutos"
+veredicto: "El ErGear 120x60 es la versión compacta y aún más barata del ErGear 140x70 que ya tenemos en catálogo, pensada para escritorios pequeños y primeros compradores. Es un elevable de motor único, así que sube despacio y se queda por debajo de 50 dB, pero a cambio trae panel LED con cuatro memorias —algo que muchos rivales de su precio no ofrecen— y viene con el tablero ya ensamblado, lo que reduce el montaje a atornillar las patas. Aguanta 80 kg, algo más que el Devoko, con un rango de 72 a 118 cm y un marco de aleación de 65 mm sobre tablero de 15 mm. No es un escritorio para subir y bajar todo el día ni para montajes de varios monitores pesados, y no consta anticolisión, pero para un home office compacto con un monitor y presupuesto ajustado cumple de sobra. Si el 140x70 se te va de tamaño o de precio, este es su hermano pequeño lógico."
+resumenCompra:
+  mejorPara: "Un elevable compacto y barato para espacios reducidos, con 4 memorias y tablero ya ensamblado."
+  evitarSi: "Necesitas subir y bajar constantemente, más superficie o anticolisión: mira modelos de doble motor."
+  alternativaDirecta: "Devoko 120x60 si quieres gastar aún menos (con anticolisión y USB); ErGear 140x70 si necesitas más superficie de la misma marca."
+  decisionRapida: "El compacto barato con 4 memorias y tablero ensamblado; el pero es el motor único lento y sin anticolisión confirmada."
+metodologia:
+  - "Specs de la ficha de producto de ErGear en Amazon.es (versión 120x60 con tablero ensamblado y panel de 4 memorias), contrastadas con reseñas españolas (entornoversatil, Xataka)."
+  - "La nota valora el panel de 4 memorias y el tablero preensamblado al precio de entrada; penaliza el motor único lento y la falta de anticolisión confirmada."
+scoreRationale:
+  velocidad: "Motor único silencioso (<50 dB) pero lento; velocidad exacta no publicada, propia de la gama de entrada."
+  estabilidad: "Marco de aleación de 65 mm correcto para 80 kg, con el tambaleo esperable en altura alta de un solo motor."
+  capacidadCarga: "80 kg cubren un monitor y periféricos con algo de margen; insuficiente para varios monitores pesados."
+  rangoAltura: "72-118 cm es un rango de trabajo válido a estaturas medias, algo justo para muy altos de pie."
+  materiales: "Marco de aleación de 65 mm y tablero de 15 mm; acabado correcto para el precio, tablero preensamblado."
+  calidadPrecio: "Panel de 4 memorias y tablero ensamblado en un compacto por poco más de 100 EUR: buena relación calidad-precio."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — ErGear Escritorio Elevable Eléctrico 120x60 cm, panel 4 memorias, tablero ensamblado"
+    url: "https://www.chollometro.com/ofertas/ergear-escritorio-elevable-electrico-ajustable-en-altura-120-x-60-cm-mesa-elevable-con-panel-inteligente-de-4-memoriasblanco-descripcion-1765398"
+    fechaConsulta: "2026-07-06"
+  - tipo: "review"
+    nombre: "entornoversatil — ErGear, compacto, sencillo y barato"
+    url: "https://entornoversatil.com/ergear/"
+    fechaConsulta: "2026-07-06"
+limitaciones:
+  - "Motor único: subida lenta y velocidad exacta no publicada (queda en null)."
+  - "No consta anticolisión ni puerto USB: quedan en null."
+  - "Rango de 72-118 cm algo justo para trabajar de pie a estaturas altas."
+alternativas:
+  - slug: "devoko-120x60"
+    motivo: "Aún más barato y con anticolisión y USB, aunque solo 2-3 memorias."
+  - slug: "ergear-140x70"
+    motivo: "El hermano mayor de la misma marca con más superficie (140x70)."
+  - slug: "songmics-lsd132"
+    motivo: "Compacto 120x60 con 4 memorias, USB-C y muchos tamaños."
+comunidad: "Las reseñas destacan lo compacto que es para espacios pequeños, el montaje rápido gracias al tablero ya ensamblado y el panel de 4 memorias poco habitual a este precio. Las críticas van por la lentitud del motor único y por la estabilidad justa en altura máxima. Para un primer elevable compacto, la valoración media es buena."
+paraQuienSi:
+  - "Quien tiene poco espacio y quiere un elevable compacto (120x60)"
+  - "Quien valora 4 memorias y montaje rápido con tablero ensamblado"
+  - "Quien hace un uso normal de teletrabajo con un monitor"
+paraQuienNo:
+  - "Quien sube y baja el escritorio constantemente"
+  - "Quien necesita más superficie o anticolisión"
+  - "Quien monta varios monitores o equipo pesado"
+puntosFuertes:
+  - "Compacto (120x60), ideal para espacios reducidos"
+  - "Panel LED con 4 memorias, poco habitual a este precio"
+  - "Tablero ya ensamblado: montaje rápido"
+  - "Carga de 80 kg, algo más que la media de la gama de entrada"
+puntosDebiles:
+  - "Motor único: subida lenta"
+  - "Sin anticolisión ni USB confirmados"
+  - "Rango de altura algo justo para muy altos"
+fuenteSpecs: "Specs de la ficha de producto de ErGear en Amazon.es (versión 120x60 con tablero ensamblado y panel de 4 memorias), contrastadas con reseñas españolas: motor único, ruido <50 dB, altura 72-118 cm, carga 80 kg, marco de aleación de 65 mm, tablero incluido de 120x60 cm y 15 mm de grosor, panel LED con 4 memorias, garantía de 3 años. No se han confirmado la velocidad en mm/s, la anticolisión, el puerto USB, los segmentos de columna ni el peso, por lo que quedan en null."
+verificadoEn: "2026-07-06"
+en:
+  nombreComercial: "ErGear Electric Standing Desk 120x60 cm with 4-Memory Panel"
+  tituloCorto: "ErGear 120x60"
+  veredicto: "The ErGear 120x60 is the compact, even cheaper version of the ErGear 140x70 already in our catalog, aimed at small desks and first-time buyers. It's a single-motor desk, so it rises slowly and stays under 50 dB, but in return it brings an LED panel with four memories —something many rivals at its price don't offer— and it ships with the tabletop pre-assembled, cutting setup down to bolting on the legs. It holds 80 kg, a bit more than the Devoko, with a 72-118 cm range and a 65 mm alloy frame over a 15 mm top. It's not a desk for raising and lowering all day or for heavy multi-monitor setups, and anti-collision isn't listed, but for a compact single-monitor home office on a tight budget it's more than enough. If the 140x70 is too big or too pricey, this is its logical little brother."
+  idealPara: "Anyone after a compact, cheap standing desk for tight spaces, with a 4-memory panel and a pre-assembled top to set up in minutes"
+  comunidad: "Reviews highlight how compact it is for small spaces, the quick setup thanks to the pre-assembled top, and the 4-memory panel that's uncommon at this price. Criticisms are about the slow single motor and the tight stability at full height. For a first compact standing desk, the average rating is good."
+  resumenCompra:
+    mejorPara: "A compact, cheap standing desk for tight spaces, with 4 memories and a pre-assembled top."
+    evitarSi: "You need to raise and lower constantly, more surface, or anti-collision: look at dual-motor models."
+    alternativaDirecta: "Devoko 120x60 to spend even less (with anti-collision and USB); ErGear 140x70 if you need more surface from the same brand."
+    decisionRapida: "The cheap compact with 4 memories and a pre-assembled top; the catch is the slow single motor and no confirmed anti-collision."
+  puntosFuertes:
+    - "Compact (120x60), ideal for tight spaces"
+    - "LED panel with 4 memories, uncommon at this price"
+    - "Pre-assembled tabletop: quick setup"
+    - "80 kg load, a bit above the entry-tier average"
+  puntosDebiles:
+    - "Single motor: slow rise"
+    - "No confirmed anti-collision or USB"
+    - "Height range a bit tight for very tall users"
+  paraQuienSi:
+    - "Anyone with little space who wants a compact standing desk (120x60)"
+    - "Anyone who values 4 memories and quick setup with a pre-assembled top"
+    - "Anyone doing normal single-monitor remote work"
+  paraQuienNo:
+    - "Anyone who raises and lowers the desk constantly"
+    - "Anyone who needs more surface or anti-collision"
+    - "Anyone running several monitors or heavy gear"
+calidadDatos:
+  score: 72
+  confianza: "medio"
+  enriquecidoEn: "2026-07-08"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 118
+  cargaMaxKg: 80
+  estructuraMaterial: "aleación de acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: 1.5
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: 3
+  certificacionTuv: null
+  certificacionEmc: null
