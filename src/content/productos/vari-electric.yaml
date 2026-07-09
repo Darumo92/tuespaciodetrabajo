@@ -1,0 +1,144 @@
+tipo: "escritorio"
+nombre: "Vari Electric Standing Desk con ComfortEdge"
+tituloCorto: "Vari Electric"
+marca: "Vari"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico Vari con borde curvo ComfortEdge, doble motor y panel de memorias"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 8
+  capacidadCarga: 7
+  rangoAltura: 9
+  materiales: 8.5
+  calidadPrecio: 6
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.vari.com/electric-standing-desk-with-comfortedge-60x30/FD-ESDCE6030.html"
+idealPara: "Quien quiere un elevable completo de marca estadounidense con montaje muy rápido, borde ergonómico ComfortEdge, rango de altura amplísimo y garantía de por vida"
+veredicto: "El Vari Electric Standing Desk es el elevable de una de las marcas más conocidas de Estados Unidos, y sus señas de identidad son tres: montaje rapidísimo (llega casi armado), el borde ergonómico ComfortEdge —una curva delantera que evita que la muñeca sufra el canto del tablero— y una garantía de por vida contra defectos, algo casi único. Monta doble motor, un rango de altura amplísimo de 63,5 a 128 cm y una carga de unos 90 kg (según medida), con panel de cuatro memorias y gestión de cables. No destaca en carga máxima ni en velocidad frente a la gama alta china, pero sí en comodidad de compra y uso y en el respaldo de marca. El pero para el comprador español es la logística: se vende desde Estados Unidos (vari.com), con envío internacional, aduanas y plazos, y a un precio de gama alta. Para quien valora el ComfortEdge, el montaje exprés y la garantía de por vida, es una opción muy sólida; si buscas comprar en España, Maidesite o Ergotopia lo ponen más fácil."
+resumenCompra:
+  mejorPara: "Un elevable completo de marca con montaje exprés, borde ergonómico ComfortEdge, rango amplio y garantía de por vida."
+  evitarSi: "Quieres comprar cómodo en Amazon.es sin aduanas, buscas la máxima carga o el mejor precio."
+  alternativaDirecta: "UPLIFT V3 si priorizas carga y una garantía larga con más prestaciones; Ergotopia Desktopia Lite si quieres doble motor de marca en Amazon.es por menos."
+  decisionRapida: "El completo de Vari con ComfortEdge, montaje exprés y garantía de por vida; el pero es la carga media, el precio alto y comprar desde Estados Unidos."
+metodologia:
+  - "Specs de la ficha oficial de Vari (vari.com) del Electric Standing Desk con ComfortEdge, contrastadas con reseñas internacionales (TechRadar, The Work Medic)."
+  - "La nota valora el rango de altura, el ComfortEdge, el montaje rápido y la garantía de por vida; penaliza la carga media, el precio alto y que se compre desde Estados Unidos."
+scoreRationale:
+  velocidad: "Doble motor con marcha suave; la velocidad exacta en mm/s no se publica, se toma como correcta para la gama."
+  estabilidad: "Doble motor con patas en T de acero; estable para su carga, sin ser el más firme a plena altura frente a los de tres tramos."
+  capacidadCarga: "Unos 90 kg (200 lb) según medida cubren un setup normal; por debajo de los 150-160 kg de la gama alta."
+  rangoAltura: "63,5-128 cm es uno de los rangos más amplios del mercado, válido para cualquier estatura."
+  materiales: "Borde ergonómico ComfortEdge, montaje exprés, gestión de cables y garantía de por vida; acabado y experiencia de marca cuidados."
+  calidadPrecio: "Experiencia y garantía de marca, pero a precio de gama alta y sumando envío internacional y aduanas desde Estados Unidos."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Vari — Electric Standing Desk with ComfortEdge (60x30)"
+    url: "https://www.vari.com/electric-standing-desk-with-comfortedge-60x30/FD-ESDCE6030.html"
+    fechaConsulta: "2026-07-09"
+  - tipo: "review"
+    nombre: "TechRadar — Vari 80x80 L-shaped electric standing desk review"
+    url: "https://www.techradar.com/pro/vari-80x80-l-shaped-electric-standing-desk-review"
+    fechaConsulta: "2026-07-09"
+limitaciones:
+  - "Se compra desde Estados Unidos (vari.com): envío internacional, aduanas y plazos."
+  - "Carga de unos 90 kg: por debajo de la gama alta de 150-160 kg."
+  - "La velocidad en mm/s, el nivel de ruido y el peso no se publican con cifra: quedan en null; la garantía es 'de por vida' (no un número de años)."
+alternativas:
+  - slug: "uplift-v3"
+    motivo: "Más carga (161 kg) y garantía de 15 años con más prestaciones."
+  - slug: "ergotopia-desktopia-lite"
+    motivo: "Doble motor de marca por menos, comprado en Amazon.es."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía, disponible en Amazon.es."
+comunidad: "Las reseñas destacan lo rápido que se monta (casi armado), la comodidad del borde ComfortEdge y la tranquilidad de la garantía de por vida, junto con un rango de altura amplísimo. Las críticas van por la carga, media frente a la gama alta, el precio y la logística de importarlo desde Estados Unidos. Como completo de marca fácil de usar, la valoración es buena."
+paraQuienSi:
+  - "Quien valora el montaje exprés y el borde ergonómico ComfortEdge"
+  - "Quien quiere un rango de altura amplísimo y garantía de por vida"
+  - "Quien prefiere una marca conocida y no le frena importar"
+paraQuienNo:
+  - "Quien quiere comprar cómodo en Amazon.es sin aduanas"
+  - "Quien necesita más de 90 kg de carga"
+  - "Quien busca ajustar el precio"
+puntosFuertes:
+  - "Borde ergonómico ComfortEdge, cómodo para muñecas y antebrazos"
+  - "Montaje exprés: llega casi armado"
+  - "Rango de altura amplísimo (63,5-128 cm)"
+  - "Garantía de por vida contra defectos"
+puntosDebiles:
+  - "Se compra desde Estados Unidos: aduanas y envío internacional"
+  - "Carga media (unos 90 kg) frente a la gama alta"
+  - "Precio de gama alta; velocidad y ruido no publicados"
+fuenteSpecs: "Specs de la ficha oficial de Vari (vari.com) del Electric Standing Desk con ComfortEdge, contrastadas con reseñas: doble motor, altura 63,5-128 cm (25-50,5 pulgadas), carga de unos 90 kg (200 lb) en 60x30 —hasta 100 kg en medidas menores y 82 kg en 72x30—, estructura de acero con patas en T, tablero incluido (varios acabados, incluido madera reciclada), borde ergonómico ComfortEdge, panel con 4 memorias, anticolisión, gestión de cables, montaje rápido, garantía de por vida contra defectos. La velocidad en mm/s, el nivel de ruido, el peso, el grosor del tablero y el precio (varía en la tienda oficial de EE. UU., no se fija aquí) quedan en null; la garantía de por vida no se expresa como número de años."
+verificadoEn: "2026-07-09"
+en:
+  nombreComercial: "Vari Electric Standing Desk with ComfortEdge"
+  tituloCorto: "Vari Electric"
+  veredicto: "The Vari Electric Standing Desk comes from one of the best-known US brands, and its hallmarks are three: super-fast assembly (it arrives nearly built), the ComfortEdge ergonomic edge —a front curve that keeps your wrist from digging into the desk edge— and a lifetime warranty against defects, almost unique. It mounts a dual motor, a very wide 63.5 to 128 cm range, and around 90 kg of load (by size), with a four-memory panel and cable management. It doesn't stand out on max load or speed versus the Chinese high end, but it does on buying and use convenience and brand backing. The catch for a Spanish buyer is logistics: it ships from the United States (vari.com), with international shipping, customs, and lead times, and at a high-end price. For anyone who values the ComfortEdge, express assembly, and a lifetime warranty, it's a very solid option; if you want to buy in Spain, Maidesite or Ergotopia make it easier."
+  idealPara: "Anyone who wants a complete US-brand desk with very fast assembly, the ComfortEdge ergonomic edge, a very wide height range, and a lifetime warranty"
+  comunidad: "Reviews highlight how fast it assembles (nearly built), the comfort of the ComfortEdge, and the peace of mind of the lifetime warranty, along with a very wide height range. Criticisms are the load, mid-range versus the high end, the price, and the logistics of importing from the United States. As an easy-to-use brand desk, the rating is good."
+  resumenCompra:
+    mejorPara: "A complete brand-name desk with express assembly, the ComfortEdge ergonomic edge, a wide range, and a lifetime warranty."
+    evitarSi: "You want to buy conveniently on Amazon.es without customs, want maximum load, or the best price."
+    alternativaDirecta: "UPLIFT V3 if you prioritize load and a long warranty with more features; Ergotopia Desktopia Lite for a brand-name dual motor on Amazon.es for less."
+    decisionRapida: "Vari's complete desk with ComfortEdge, express assembly, and a lifetime warranty; the catch is mid-range load, high price, and buying from the United States."
+  puntosFuertes:
+    - "ComfortEdge ergonomic edge, easy on wrists and forearms"
+    - "Express assembly: arrives nearly built"
+    - "Very wide height range (63.5-128 cm)"
+    - "Lifetime warranty against defects"
+  puntosDebiles:
+    - "Bought from the United States: customs and international shipping"
+    - "Mid-range load (about 90 kg) versus the high end"
+    - "High-end price; speed and noise not published"
+  paraQuienSi:
+    - "Anyone who values express assembly and the ComfortEdge edge"
+    - "Anyone who wants a very wide height range and a lifetime warranty"
+    - "Anyone who prefers a known brand and doesn't mind importing"
+  paraQuienNo:
+    - "Anyone who wants to buy conveniently on Amazon.es without customs"
+    - "Anyone who needs more than 90 kg of load"
+    - "Anyone watching the price"
+calidadDatos:
+  score: 71
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 63.5
+  alturaMaxCm: 128
+  cargaMaxKg: 90
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "madera"
+  tableroAnchoCm: 152
+  tableroFondoCm: 76
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

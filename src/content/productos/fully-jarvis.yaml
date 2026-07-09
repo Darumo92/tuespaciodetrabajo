@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "Fully Jarvis Bamboo Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "Fully Jarvis"
+marca: "Fully"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico Fully Jarvis con tablero de bambú, doble motor silencioso y panel de memorias"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 8
+  estabilidad: 9
+  capacidadCarga: 9.5
+  rangoAltura: 9
+  materiales: 9
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://store.hermanmiller.com/standing-desks/jarvis-bamboo-standing-desk/2542428.html"
+idealPara: "Quien quiere un escritorio elevable de referencia con tablero de bambú, doble motor muy silencioso, carga altísima y el respaldo de Herman Miller"
+veredicto: "El Fully Jarvis es uno de los escritorios elevables más recomendados del mercado anglosajón, hoy bajo el paraguas de Herman Miller, y su fama viene de un conjunto muy equilibrado con un tablero de bambú que se ha convertido en icono. Monta doble motor de tecnología propia, de los más silenciosos que existen, columnas de tres tramos, 159 kg de carga y un rango amplísimo: de serie 76 a 125 cm, ampliable con opción a 65-130 cm, que cubre a cualquiera. La garantía es de 7 años en estructura, motores y electrónica y 5 en el tablero, con enorme personalización de medidas, colores de patas y accesorios. El pero para el comprador español es logístico: se vende desde Estados Unidos (Herman Miller / Fully), así que hay envío internacional, aduanas y plazos. Si lo que quieres es una base premium con tablero de bambú, marca de prestigio y silencio de verdad, es de las mejores; si buscas comodidad de compra en España, Maidesite o Ergotopia te lo ponen más fácil."
+resumenCompra:
+  mejorPara: "Una base premium con tablero de bambú, doble motor muy silencioso, carga altísima y el respaldo de Herman Miller."
+  evitarSi: "Quieres comprar cómodo en Amazon.es sin aduanas ni envío internacional, o buscas ajustar el precio."
+  alternativaDirecta: "UPLIFT V3 si priorizas la garantía más larga (15 años); Ergotopia Desktopia Pro X si quieres tablero de madera premium comprado en Amazon.es."
+  decisionRapida: "El elevable de bambú de referencia con doble motor silencioso, 159 kg y 7 años de garantía; el pero es comprar desde Estados Unidos (aduanas y envío)."
+metodologia:
+  - "Specs de la ficha oficial de Herman Miller / Fully del Jarvis Bamboo, contrastadas con reseñas internacionales (Tom's Guide, Laptop Mag, T3)."
+  - "La nota valora el doble motor silencioso, el tablero de bambú, la carga, el rango y la personalización; penaliza que se compre desde Estados Unidos, con aduanas y envío."
+scoreRationale:
+  velocidad: "Doble motor de tecnología propia de los más silenciosos, con velocidad de unos 38 mm/s (1,5 pulgadas/s); rápido y casi imperceptible."
+  estabilidad: "Columnas de tres tramos y estructura de acero con 159 kg de carga; muy estable a plena altura."
+  capacidadCarga: "159 kg (350 lb) cubren con enorme holgura varios monitores, brazos y equipo pesado."
+  rangoAltura: "76-125 cm de serie, ampliable a 65-130 cm; de los rangos más amplios, válido para cualquier estatura."
+  materiales: "Tablero de bambú icónico, enorme personalización de medidas, colores y accesorios, con garantía de 7 años en estructura; acabado premium."
+  calidadPrecio: "Prestaciones y acabado de referencia, pero hay que sumar envío internacional y aduanas desde Estados Unidos."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Herman Miller — Jarvis Bamboo Standing Desk"
+    url: "https://store.hermanmiller.com/standing-desks/jarvis-bamboo-standing-desk/2542428.html"
+    fechaConsulta: "2026-07-09"
+  - tipo: "review"
+    nombre: "Tom's Guide — Fully Jarvis Bamboo standing desk review"
+    url: "https://www.tomsguide.com/reviews/fully-jarvis-bamboo-standing-desk"
+    fechaConsulta: "2026-07-09"
+limitaciones:
+  - "Se compra desde Estados Unidos (Herman Miller / Fully): envío internacional, aduanas y plazos."
+  - "Precio de gama alta, al que hay que sumar la logística internacional."
+  - "El nivel de ruido exacto y el peso no se detallan con cifra cerrada: quedan en null."
+alternativas:
+  - slug: "uplift-v3"
+    motivo: "Referencia USA con la garantía más larga del mercado (15 años)."
+  - slug: "ergotopia-desktopia-pro-x"
+    motivo: "Tablero de madera premium con OLED y 9 memorias, comprado en Amazon.es."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía, disponible en Amazon.es."
+comunidad: "Las reseñas internacionales destacan el silencio casi total del doble motor, la calidad del tablero de bambú y la enorme personalización, además del respaldo de Herman Miller. La crítica para el comprador europeo es la logística de importarlo desde Estados Unidos. Como base premium de bambú, la valoración es de las más altas."
+paraQuienSi:
+  - "Quien quiere un tablero de bambú icónico y marca de prestigio"
+  - "Quien valora un doble motor casi imperceptible y carga altísima"
+  - "Quien busca máxima personalización y no le frena importar"
+paraQuienNo:
+  - "Quien quiere comprar cómodo en Amazon.es sin aduanas"
+  - "Quien busca ajustar el precio"
+  - "Quien no quiere lidiar con envío internacional y plazos"
+puntosFuertes:
+  - "Tablero de bambú icónico y muy personalizable"
+  - "Doble motor de tecnología propia, de los más silenciosos"
+  - "Carga altísima de 159 kg y rango amplísimo (hasta 65-130 cm)"
+  - "Respaldo de Herman Miller con 7 años de garantía en estructura"
+puntosDebiles:
+  - "Se compra desde Estados Unidos: aduanas y envío internacional"
+  - "Precio de gama alta más logística"
+  - "Ruido exacto y peso no publicados con cifra cerrada"
+fuenteSpecs: "Specs de la ficha oficial de Herman Miller / Fully del Jarvis Bamboo, contrastadas con reseñas: doble motor de tecnología propia muy silencioso, velocidad de unos 38 mm/s (1,5 pulgadas/s), columnas de tres tramos, altura 76-125 cm de serie (ampliable a 65-130 cm), carga 159 kg (350 lb), estructura de acero, tablero de bambú incluido con enorme personalización de medidas y colores, panel de memorias con 4 posiciones, anticolisión, garantía de 7 años en estructura, motores y electrónica, 5 años en el tablero. El nivel de ruido exacto, el peso, el grosor del tablero y el precio (varía en la tienda oficial de EE. UU., no se fija aquí) quedan en null."
+verificadoEn: "2026-07-09"
+en:
+  nombreComercial: "Fully Jarvis Bamboo Dual-Motor Electric Standing Desk"
+  tituloCorto: "Fully Jarvis"
+  veredicto: "The Fully Jarvis is one of the most recommended standing desks in the English-speaking market, now under Herman Miller, and its reputation comes from a very balanced package with a bamboo top that's become an icon. It mounts a proprietary dual motor, among the quietest out there, three-stage columns, 159 kg of load, and a very wide range: 76 to 125 cm as standard, expandable to 65-130 cm, covering anyone. The warranty is 7 years on frame, motors, and electronics and 5 on the top, with huge customization of sizes, leg colors, and accessories. The catch for a Spanish buyer is logistical: it ships from the United States (Herman Miller / Fully), so there's international shipping, customs, and lead times. If you want a premium base with a bamboo top, a prestige brand, and real quietness, it's among the best; if you want buying convenience in Spain, Maidesite or Ergotopia make it easier."
+  idealPara: "Anyone who wants a benchmark standing desk with a bamboo top, a very quiet dual motor, very high load, and Herman Miller's backing"
+  comunidad: "International reviews highlight the near-total quietness of the dual motor, the quality of the bamboo top, and the huge customization, plus Herman Miller's backing. The criticism for a European buyer is the logistics of importing from the United States. As a premium bamboo base, the rating is among the highest."
+  resumenCompra:
+    mejorPara: "A premium base with a bamboo top, a very quiet dual motor, very high load, and Herman Miller's backing."
+    evitarSi: "You want to buy conveniently on Amazon.es without customs or international shipping, or you're watching the price."
+    alternativaDirecta: "UPLIFT V3 if you prioritize the longest warranty (15 years); Ergotopia Desktopia Pro X for a premium wood top bought on Amazon.es."
+    decisionRapida: "The benchmark bamboo standing desk with a quiet dual motor, 159 kg, and a 7-year warranty; the catch is buying from the United States (customs and shipping)."
+  puntosFuertes:
+    - "Iconic, highly customizable bamboo top"
+    - "Proprietary dual motor, among the quietest"
+    - "Very high 159 kg load and very wide range (up to 65-130 cm)"
+    - "Herman Miller backing with a 7-year frame warranty"
+  puntosDebiles:
+    - "Bought from the United States: customs and international shipping"
+    - "High-end price plus logistics"
+    - "Exact noise and weight not published as fixed figures"
+  paraQuienSi:
+    - "Anyone who wants an iconic bamboo top and a prestige brand"
+    - "Anyone who values a near-imperceptible dual motor and very high load"
+    - "Anyone after maximum customization who doesn't mind importing"
+  paraQuienNo:
+    - "Anyone who wants to buy conveniently on Amazon.es without customs"
+    - "Anyone watching the price"
+    - "Anyone who doesn't want to deal with international shipping and lead times"
+calidadDatos:
+  score: 83
+  confianza: "alto"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 38
+  nivelRuidoDb: null
+  segmentosColumna: 3
+  alturaMinCm: 65
+  alturaMaxCm: 130
+  cargaMaxKg: 159
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "bambú"
+  tableroAnchoCm: 152
+  tableroFondoCm: 76
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 7
+  certificacionTuv: null
+  certificacionEmc: null

@@ -59,7 +59,10 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 35 / (objetivo 50-100).
+- Creadas: 37 / (objetivo 50-100).
+  - Lote 11 (2, 2026-07-09, media calidad 77.0): autoridad/editorial marcas USA, specs de oficiales/reseñas.
+    `fully-jarvis` (83, Herman Miller bambú 159kg/7 años), `vari-electric` (71, ComfortEdge/montaje exprés/
+    garantía de por vida → garantiaAnios null). Ambas tienda oficial EE.UU., sin Amazon.es, sin imagen ni precio.
   - Lote 10 (2, 2026-07-08, media calidad 86.0): specs de oficiales/reseñas.
     `uplift-v3` (86, referencia USA 2026 161kg/15 años garantía; renombrado de V2 → V3 porque el V2 está
     descatalogado, el V3 unifica V2+V2-Commercial; tienda oficial EE.UU., no Amazon.es, sin imagen),
