@@ -1,0 +1,143 @@
+tipo: "escritorio"
+nombre: "Ergotopia Desktopia Pro X Escritorio Elevable Eléctrico Premium"
+tituloCorto: "Ergotopia Desktopia Pro X"
+marca: "Ergotopia"
+imagen: "/img/productos/ergotopia-desktopia-pro-x.jpg"
+imagenAlt: "Escritorio elevable eléctrico Ergotopia Desktopia Pro X con pantalla OLED, doble motor y tablero de madera"
+tramoPrecio: 4
+precioMin: 979
+precioMax: 979
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 8
+  capacidadCarga: 8
+  rangoAltura: 8.5
+  materiales: 9
+  calidadPrecio: 7
+amazon:
+  asin: "B09ZYF6NRK"
+  buscar: "Ergotopia Desktopia Pro X escritorio elevable eléctrico OLED 9 memorias"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ergotopia.es"
+idealPara: "Quien quiere un elevable completo premium de marca alemana, con doble motor silencioso, pantalla OLED, 9 memorias, recordatorios de postura y 7 años de garantía"
+veredicto: "El Desktopia Pro X es el elevable premium de Ergotopia, marca alemana especializada en ergonomía, y se nota en el detalle: doble motor ErgoQuiet silencioso con arranque suave y anticolisión, pantalla OLED de bajo consumo con indicador de altura preciso, nada menos que 9 memorias y perfiles, y una función de recordatorio inteligente que te avisa para alternar postura por luz o vibración. Sube de 62 a 127 cm —de los rangos más amplios—, aguanta 120 kg y llega completo, con tablero de madera real (bambú, haya o nogal) en muchas medidas, hasta 180x80 cm. Su respaldo es una garantía de 7 años, por encima de casi toda la competencia. El pero es el precio: es de gama alta y se paga. Frente a las estructuras chinas de doble motor, ofrece mejor tablero, más memorias, OLED y recordatorios; frente a IKEA, gana en prestaciones y garantía. Para quien quiere un escritorio ergonómico serio, completo y de marca, es una de las mejores opciones."
+resumenCompra:
+  mejorPara: "Un elevable premium completo de marca ergonómica, con doble motor silencioso, OLED, 9 memorias y recordatorios de postura."
+  evitarSi: "Buscas el mejor precio: hay doble motor por bastante menos si renuncias al tablero de madera y la OLED."
+  alternativaDirecta: "Maidesite T2 Pro Plus si quieres doble motor y 160 kg por menos; IKEA MITTZON si prefieres comprar en IKEA."
+  decisionRapida: "El completo premium de Ergotopia con doble motor, OLED, 9 memorias, recordatorios y 7 años de garantía; el pero es el precio de gama alta."
+metodologia:
+  - "Specs de la ficha del Desktopia Pro X en Amazon.es y de la web de Ergotopia, contrastadas con reseñas de la marca (escritorioselevables)."
+  - "La nota valora el doble motor silencioso, la pantalla OLED, las 9 memorias, el tablero de madera y la garantía de 7 años; penaliza el precio de gama alta."
+scoreRationale:
+  velocidad: "Doble motor ErgoQuiet silencioso con arranque suave; la velocidad exacta en mm/s no se publica, se toma como correcta para la gama."
+  estabilidad: "Doble motor con 120 kg de carga y tablero de madera real; construcción sólida de gama alta."
+  capacidadCarga: "120 kg cubren varios monitores, brazos articulados y equipo pesado con holgura."
+  rangoAltura: "62-127 cm es de los rangos más amplios, válido de estaturas bajas a muy altas."
+  materiales: "Tablero de madera real (bambú, haya o nogal), pantalla OLED, 9 memorias y recordatorios; acabado y equipamiento premium."
+  calidadPrecio: "Prestaciones y garantía de gama alta, pero a un precio premium frente a las estructuras de doble motor más baratas."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — Ergotopia Desktopia Pro X, 9 memorias, OLED, recordatorio inteligente (180x80 cm)"
+    url: "https://www.amazon.es/Ergotopia%C2%AE-Desktopia-Pro-recordatorio-inteligente/dp/B09ZYDRTVT"
+    fechaConsulta: "2026-07-08"
+  - tipo: "oficial"
+    nombre: "Ergotopia — Desktopia Pro X escritorio elevable"
+    url: "https://www.ergotopia.es"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Precio de gama alta frente a estructuras de doble motor más baratas."
+  - "La velocidad en mm/s y el nivel de ruido exacto no se publican con cifra: quedan en null."
+  - "El peso del producto y el grosor del tablero no constan: quedan en null."
+alternativas:
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía por bastante menos."
+  - slug: "ikea-mittzon"
+    motivo: "Doble motor de IKEA más barato si priorizas la marca y el precio."
+  - slug: "flexispot-e7-pro"
+    motivo: "Estructura premium de doble motor si prefieres elegir tablero."
+comunidad: "Las reseñas destacan lo silencioso del doble motor, la pantalla OLED, las 9 memorias y perfiles, los recordatorios de postura y el tablero de madera real, además de los 7 años de garantía. La crítica constante es el precio, de gama alta. Como elevable ergonómico premium, la valoración es muy buena."
+paraQuienSi:
+  - "Quien quiere un completo premium de marca ergonómica alemana"
+  - "Quien valora OLED, 9 memorias y recordatorios de postura"
+  - "Quien busca tablero de madera real y 7 años de garantía"
+paraQuienNo:
+  - "Quien busca el mejor precio por prestaciones"
+  - "Quien no necesita tablero de madera ni pantalla OLED"
+  - "Quien prefiere comprar una estructura y su propio tablero"
+puntosFuertes:
+  - "Doble motor ErgoQuiet silencioso con arranque suave y anticolisión"
+  - "Pantalla OLED con 9 memorias y perfiles"
+  - "Recordatorio inteligente de postura (luz o vibración)"
+  - "Tablero de madera real y 7 años de garantía"
+puntosDebiles:
+  - "Precio de gama alta"
+  - "Velocidad y ruido exactos no publicados"
+  - "Peso y grosor del tablero no constan"
+fuenteSpecs: "Specs de la ficha del Desktopia Pro X en Amazon.es y de la web de Ergotopia: doble motor ErgoQuiet silencioso con arranque suave y protección anticolisión, altura 62-127 cm, carga 120 kg, estructura de acero, tablero incluido de madera real (bambú, haya o nogal) en varias medidas hasta 180x80 cm, pantalla OLED con 9 memorias y perfiles, función de recordatorio de postura (luz o vibración), garantía de 7 años. La velocidad en mm/s, el nivel de ruido exacto, el peso del producto y el grosor del tablero no constan, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Ergotopia Desktopia Pro X Premium Electric Standing Desk"
+  tituloCorto: "Ergotopia Desktopia Pro X"
+  veredicto: "The Desktopia Pro X is Ergotopia's premium standing desk —a German ergonomics specialist— and it shows in the detail: a quiet ErgoQuiet dual motor with soft start and anti-collision, a low-power OLED display with a precise height indicator, no fewer than 9 memories and profiles, and a smart reminder function that nudges you to switch posture via light or vibration. It rises from 62 to 127 cm —among the widest ranges— holds 120 kg, and arrives complete, with a real wood top (bamboo, beech, or walnut) in many sizes up to 180x80 cm. Its backing is a 7-year warranty, above almost all competitors. The catch is the price: it's high-end and you pay for it. Against Chinese dual-motor frames, it offers a better top, more memories, OLED, and reminders; against IKEA, it wins on features and warranty. For anyone who wants a serious, complete, brand-name ergonomic desk, it's one of the best options."
+  idealPara: "Anyone who wants a premium complete standing desk from a German ergonomics brand, with a quiet dual motor, OLED, 9 memories, posture reminders, and a 7-year warranty"
+  comunidad: "Reviews highlight how quiet the dual motor is, the OLED display, the 9 memories and profiles, the posture reminders, and the real wood top, plus the 7-year warranty. The constant criticism is the high-end price. As a premium ergonomic standing desk, the rating is very good."
+  resumenCompra:
+    mejorPara: "A complete premium standing desk from an ergonomics brand, with a quiet dual motor, OLED, 9 memories, and posture reminders."
+    evitarSi: "You want the best price: there's dual motor for much less if you skip the wood top and OLED."
+    alternativaDirecta: "Maidesite T2 Pro Plus for a dual motor and 160 kg for less; IKEA MITTZON if you prefer buying at IKEA."
+    decisionRapida: "Ergotopia's premium complete desk with dual motor, OLED, 9 memories, reminders, and a 7-year warranty; the catch is the high-end price."
+  puntosFuertes:
+    - "Quiet ErgoQuiet dual motor with soft start and anti-collision"
+    - "OLED display with 9 memories and profiles"
+    - "Smart posture reminder (light or vibration)"
+    - "Real wood top and 7-year warranty"
+  puntosDebiles:
+    - "High-end price"
+    - "Exact speed and noise not published"
+    - "Weight and top thickness not listed"
+  paraQuienSi:
+    - "Anyone who wants a premium complete desk from a German ergonomics brand"
+    - "Anyone who values OLED, 9 memories, and posture reminders"
+    - "Anyone after a real wood top and a 7-year warranty"
+  paraQuienNo:
+    - "Anyone after the best price per feature"
+    - "Anyone who doesn't need a wood top or OLED display"
+    - "Anyone who prefers to buy a frame and their own top"
+calidadDatos:
+  score: 77
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 3
+  alturaMinCm: 62
+  alturaMaxCm: 127
+  cargaMaxKg: 120
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "bambú"
+  tableroAnchoCm: 160
+  tableroFondoCm: 80
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 9
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 7
+  certificacionTuv: null
+  certificacionEmc: null

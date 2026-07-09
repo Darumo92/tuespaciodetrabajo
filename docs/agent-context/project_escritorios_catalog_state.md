@@ -59,7 +59,12 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 29 / (objetivo 50-100).
+- Creadas: 31 / (objetivo 50-100).
+  - Lote 8 premium/editorial (2, 2026-07-08, media calidad 78.5): specs de oficiales/reseñas.
+    `secretlab-magnus-pro` (80, metálico gestión cables magnética; sucesor Magnus Evo 2025 → sin Amazon, precio tienda),
+    `ergotopia-desktopia-pro-x` (77, premium alemán OLED/9 memorias/7 años, Amazon.es).
+    **Datos rellenados 2026-07-08**: ergotopia (B09ZYF6NRK, 979€), secretlab-magnus-pro (B0G1SCVHQ7, 1039€
+    — sí está en Amazon.es). Ambas con imagen.
   - Lote 7 IKEA (3, 2026-07-08, media calidad 65.0): specs+precio de IKEA.es (público, NO Amazon → asin null).
     `ikea-idasen` (69, eléctrico app Bluetooth 63-127cm/70kg, 579€), `ikea-trotten` (69, manual manivela 50kg, 189€),
     `ikea-mittzon` (57, doble motor 2 memorias/detección colisión, 379€; IKEA no publica carga/velocidad → null).
