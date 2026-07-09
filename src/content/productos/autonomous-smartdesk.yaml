@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "Autonomous SmartDesk Core Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "Autonomous SmartDesk Core"
+marca: "Autonomous"
+imagen: "/img/productos/autonomous-smartdesk.webp"
+imagenAlt: "Escritorio elevable eléctrico Autonomous SmartDesk Core de doble motor con panel de memorias y tablero"
+tramoPrecio: 2
+precioMin: 250
+precioMax: 250
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 8
+  capacidadCarga: 8.5
+  rangoAltura: 6.5
+  materiales: 7.5
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: "Autonomous SmartDesk Core escritorio elevable doble motor"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.autonomous.ai/standing-desks"
+idealPara: "Quien quiere un elevable completo de doble motor de una marca de referencia internacional, muy silencioso y con carga alta, comprado en la tienda oficial"
+veredicto: "El SmartDesk Core es el elevable más vendido de Autonomous, una de las marcas de referencia en el mundo del standing desk, y su fama viene de un equilibrio muy sólido: doble motor de los más silenciosos del mercado (por debajo de 45 dB), 113 kg de carga —alta para un completo— y un panel con cuatro memorias, todo por un precio contenido para lo que ofrece. Llega completo, con tablero incluido, y sube de unos 72 a 121 cm, un rango correcto aunque no de los más amplios para personas muy altas. Su gran baza es lo callado que es y la reputación de durabilidad de la marca; el pero, que se compra en la tienda oficial de Autonomous (no en Amazon.es), con los tiempos y gastos de envío que eso supone, y que el rango de altura se queda algo corto arriba. Existe también el SmartDesk Pro, con más rango y garantía de 7 años en la estructura. Como completo de doble motor silencioso de marca reconocida, es una referencia."
+resumenCompra:
+  mejorPara: "Un completo de doble motor muy silencioso y con carga alta, de una marca internacional de referencia."
+  evitarSi: "Mides bastante y necesitas mucho rango de pie, o quieres comprarlo en Amazon.es con envío rápido."
+  alternativaDirecta: "Autonomous SmartDesk Pro si quieres más rango y 7 años de garantía; Maidesite T2 Pro Plus si priorizas carga y precio en Amazon.es."
+  decisionRapida: "El completo de doble motor más silencioso de Autonomous, con 113 kg de carga; el pero es el rango de altura justo arriba y que se compra en tienda oficial."
+metodologia:
+  - "Specs de la ficha oficial de Autonomous del SmartDesk Core, contrastadas con reseñas internacionales lab-tested (WorkWhileWalking, Windows Central, PC Gamer)."
+  - "La nota valora el doble motor silencioso, la carga alta y la reputación de marca; penaliza el rango de altura justo y que no esté en Amazon.es."
+scoreRationale:
+  velocidad: "Doble motor de los más silenciosos del mercado (<45 dB); la velocidad no destaca especialmente, se toma como correcta."
+  estabilidad: "Doble motor con 113 kg de carga y estructura de acero; estable y con reputación de durabilidad en pruebas de laboratorio."
+  capacidadCarga: "113 kg (250 lb) cubren varios monitores, brazos y equipo pesado con holgura."
+  rangoAltura: "Unos 72-121 cm cubren bien a la mayoría, pero se quedan algo cortos arriba para personas muy altas."
+  materiales: "Estructura de acero, tablero incluido y panel con 4 memorias; acabado sólido de marca reconocida."
+  calidadPrecio: "Doble motor silencioso y carga alta a precio contenido, aunque hay que sumar el envío desde la tienda oficial."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Autonomous — SmartDesk Core (standing desks)"
+    url: "https://www.autonomous.ai/standing-desks"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "WorkWhileWalking — Autonomous SmartDesk Core Standing Desk Review (lab tested)"
+    url: "https://www.workwhilewalking.com/autonomous-smartdesk-core-standing-desk-workstation-reviews-2"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Se compra en la tienda oficial de Autonomous, no en Amazon.es: tiempos y gastos de envío aparte."
+  - "El rango de altura se queda algo corto arriba para personas muy altas."
+  - "La velocidad en mm/s, el peso y el grosor del tablero no constan con cifra: quedan en null."
+alternativas:
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía, disponible en Amazon.es."
+  - slug: "flexispot-e7-pro"
+    motivo: "Estructura premium de doble motor con más rango de altura."
+  - slug: "ergotopia-desktopia-lite"
+    motivo: "Completo de doble motor de marca por menos, en Amazon.es."
+comunidad: "Las reseñas internacionales lab-tested destacan lo silencioso que es —de los que no se oyen— y la reputación de durabilidad de Autonomous, además de una carga alta para un completo. Las críticas van por el rango de altura, algo justo arriba, y por la logística de comprar en la tienda oficial. Como completo de doble motor de marca reconocida, la valoración es muy buena."
+paraQuienSi:
+  - "Quien quiere un completo de doble motor muy silencioso"
+  - "Quien valora la reputación y durabilidad de una marca internacional"
+  - "Quien necesita carga alta (113 kg) para varios monitores"
+paraQuienNo:
+  - "Quien mide bastante y necesita mucho rango de pie"
+  - "Quien quiere comprarlo en Amazon.es con envío rápido"
+  - "Quien busca lo más barato posible"
+puntosFuertes:
+  - "Doble motor de los más silenciosos del mercado (<45 dB)"
+  - "Carga alta de 113 kg para un escritorio completo"
+  - "Panel con 4 memorias y reputación de durabilidad"
+  - "Marca internacional de referencia en standing desks"
+puntosDebiles:
+  - "Se compra en la tienda oficial, no en Amazon.es"
+  - "Rango de altura algo justo arriba"
+  - "Velocidad, peso y grosor de tablero no publicados"
+fuenteSpecs: "Specs de la ficha oficial de Autonomous del SmartDesk Core, contrastadas con reseñas lab-tested: doble motor silencioso (<45 dB), altura de unos 72-121 cm, carga 113 kg (250 lb), estructura de acero, tablero incluido, panel con 4 memorias programables y anticolisión, garantía de la estructura (el SmartDesk Pro ofrece 7 años en estructura y 1 en tablero). La velocidad en mm/s, el nivel de ruido exacto por debajo de 45 dB, el peso, el grosor del tablero y el precio (varía en la tienda oficial, no se fija aquí) quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Autonomous SmartDesk Core Dual-Motor Electric Standing Desk"
+  tituloCorto: "Autonomous SmartDesk Core"
+  veredicto: "The SmartDesk Core is Autonomous's best-selling standing desk —one of the reference brands in the standing-desk world— and its reputation comes from a very solid balance: a dual motor among the quietest on the market (under 45 dB), 113 kg of load —high for a complete desk— and a four-memory panel, all at a contained price for what it offers. It arrives complete, with a tabletop, and rises from about 72 to 121 cm, a fine range though not among the widest for very tall people. Its big draw is how quiet it is and the brand's reputation for durability; the catch is that it's bought from Autonomous's own store (not Amazon.es), with the lead times and shipping that entails, and that the height range runs a bit short up top. There's also the SmartDesk Pro, with more range and a 7-year frame warranty. As a quiet dual-motor complete desk from a well-known brand, it's a benchmark."
+  idealPara: "Anyone who wants a complete dual-motor desk from a reference international brand, very quiet and with high load, bought from the official store"
+  comunidad: "Lab-tested international reviews highlight how quiet it is —one you don't hear— and Autonomous's reputation for durability, plus high load for a complete desk. Criticisms are the height range, a bit short up top, and the logistics of buying from the official store. As a complete dual-motor desk from a well-known brand, the rating is very good."
+  resumenCompra:
+    mejorPara: "A very quiet, high-load dual-motor complete desk from a reference international brand."
+    evitarSi: "You're quite tall and need lots of standing range, or you want to buy on Amazon.es with fast shipping."
+    alternativaDirecta: "Autonomous SmartDesk Pro for more range and a 7-year warranty; Maidesite T2 Pro Plus for load and price on Amazon.es."
+    decisionRapida: "Autonomous's quietest dual-motor complete desk, with 113 kg load; the catch is the tight upper range and buying from the official store."
+  puntosFuertes:
+    - "Dual motor among the quietest on the market (<45 dB)"
+    - "High 113 kg load for a complete desk"
+    - "4-memory panel and reputation for durability"
+    - "Reference international standing-desk brand"
+  puntosDebiles:
+    - "Bought from the official store, not Amazon.es"
+    - "Height range a bit short up top"
+    - "Speed, weight, and top thickness not published"
+  paraQuienSi:
+    - "Anyone who wants a very quiet dual-motor complete desk"
+    - "Anyone who values an international brand's reputation and durability"
+    - "Anyone who needs high load (113 kg) for several monitors"
+  paraQuienNo:
+    - "Anyone quite tall who needs lots of standing range"
+    - "Anyone who wants to buy on Amazon.es with fast shipping"
+    - "Anyone after the lowest possible price"
+calidadDatos:
+  score: 80
+  confianza: "alto"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 45
+  segmentosColumna: 2
+  alturaMinCm: 72
+  alturaMaxCm: 121
+  cargaMaxKg: 113
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 135
+  tableroFondoCm: 70
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

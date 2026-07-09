@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "Ergotopia Desktopia Lite Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "Ergotopia Desktopia Lite"
+marca: "Ergotopia"
+imagen: "/img/productos/ergotopia-desktopia-lite.jpg"
+imagenAlt: "Escritorio elevable eléctrico Ergotopia Desktopia Lite de doble motor con pantalla LED y tablero de madera"
+tramoPrecio: 3
+precioMin: 499
+precioMax: 499
+valoracion: null
+valoraciones:
+  velocidad: 7
+  estabilidad: 7.5
+  capacidadCarga: 6.5
+  rangoAltura: 8
+  materiales: 8
+  calidadPrecio: 8
+amazon:
+  asin: "B09X1GPGJZ"
+  buscar: "Ergotopia Desktopia Lite escritorio elevable doble motor 4 memorias anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ergotopia.es"
+idealPara: "Quien quiere un elevable completo de doble motor de marca ergonómica alemana, con tablero de madera y buen equipamiento, sin pagar el precio del Pro X"
+veredicto: "El Desktopia Lite es la versión asequible del elevable de Ergotopia, y sorprende por lo bien que cumple sin irse de precio. Es doble motor de verdad —sube rápido, a 35 mm/s, y silencioso— con un rango amplio de 62,5 a 125 cm que cubre a casi cualquiera, y aguanta 80 kg en movimiento (100 estáticos). Trae lo importante: panel LED con 4 memorias, anticolisión regulable en tres niveles, arranque y parada suaves, bloqueo y apagado automático, además de tablero de madera (haya o nogal) en varias medidas. Frente al Pro X pierde la pantalla OLED, las 9 memorias y los recordatorios, pero conserva el doble motor y la garantía de 5 años por bastante menos dinero. Frente a la gama de entrada china, gana en marca, doble motor rápido y acabado de madera. Para un home office completo de doble motor sin gastar de más, es de las compras más redondas."
+resumenCompra:
+  mejorPara: "Un elevable completo de doble motor rápido, de marca ergonómica, con tablero de madera y buen equipamiento a precio contenido."
+  evitarSi: "Quieres OLED, 9 memorias y recordatorios (Pro X) o necesitas más de 80-100 kg de carga."
+  alternativaDirecta: "Ergotopia Desktopia Pro X si quieres OLED y 9 memorias; Maidesite T2 Pro Plus si priorizas 160 kg de carga."
+  decisionRapida: "Doble motor rápido (35 mm/s) de marca, con tablero de madera, 4 memorias y 5 años de garantía a buen precio; el pero es la carga de 80 kg."
+metodologia:
+  - "Specs de la ficha del Desktopia Lite en Amazon.es y de la hoja de datos oficial de Ergotopia, contrastadas con reseñas (Applesfera)."
+  - "La nota valora el doble motor rápido, el tablero de madera, las 4 memorias, la anticolisión ajustable y la garantía de 5 años; penaliza la carga de gama media."
+scoreRationale:
+  velocidad: "35 mm/s con doble motor: rápido para su precio, con arranque y parada suaves."
+  estabilidad: "Doble motor con 80 kg dinámicos (100 estáticos) y estructura de acero; estable para un uso normal."
+  capacidadCarga: "80 kg en movimiento cubren monitor, portátil y periféricos; corto para montajes de varios monitores pesados."
+  rangoAltura: "62,5-125 cm es un rango amplio, válido de estaturas bajas a altas."
+  materiales: "Tablero de madera (haya o nogal), pantalla LED, bloqueo y apagado automático; buen acabado de marca para el precio."
+  calidadPrecio: "Doble motor rápido de marca con tablero de madera y 5 años de garantía a precio contenido: relación calidad-precio sobresaliente."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — Ergotopia Desktopia Lite, doble motor, 4 memorias, anticolisión, 5 años de garantía"
+    url: "https://www.amazon.es/Ergotopia-Desktopia-Lite-Escritorio-estructura/dp/B08K8PNWFN"
+    fechaConsulta: "2026-07-08"
+  - tipo: "oficial"
+    nombre: "Ergotopia — Hoja de datos Desktopia Lite"
+    url: "https://info.ergotopia.de/anleitungen/Datenblatt-Desktopia-Lite.pdf"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Carga de 80 kg dinámica: insuficiente para montajes de varios monitores pesados."
+  - "Sin pantalla OLED ni recordatorios de postura (eso es del Pro X)."
+  - "El nivel de ruido exacto, el peso y el grosor del tablero no constan: quedan en null."
+alternativas:
+  - slug: "ergotopia-desktopia-pro-x"
+    motivo: "El hermano premium con OLED, 9 memorias y recordatorios de postura."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía."
+  - slug: "ikea-mittzon"
+    motivo: "Doble motor de IKEA si prefieres comprar en tienda física."
+comunidad: "Las reseñas lo señalan como uno de los elevables mejor valorados de Amazon: destacan el doble motor rápido y silencioso, el tablero de madera, las 4 memorias y la garantía de 5 años a un precio muy competitivo. Las críticas son menores y van por la carga de gama media. Como completo de doble motor de marca, la valoración es muy alta."
+paraQuienSi:
+  - "Quien quiere un completo de doble motor de marca sin gastar de más"
+  - "Quien valora tablero de madera, 4 memorias y anticolisión ajustable"
+  - "Quien busca 5 años de garantía a precio contenido"
+paraQuienNo:
+  - "Quien quiere OLED, 9 memorias o recordatorios (Pro X)"
+  - "Quien monta varios monitores o equipo pesado (más de 80 kg)"
+  - "Quien busca lo más barato posible sin importar la marca"
+puntosFuertes:
+  - "Doble motor rápido (35 mm/s) y silencioso"
+  - "Rango amplio (62,5-125 cm) y tablero de madera"
+  - "Panel LED con 4 memorias y anticolisión de 3 niveles"
+  - "Marca ergonómica alemana con 5 años de garantía"
+puntosDebiles:
+  - "Carga de 80 kg dinámica (gama media)"
+  - "Sin OLED ni recordatorios de postura"
+  - "Ruido exacto, peso y grosor de tablero no publicados"
+fuenteSpecs: "Specs de la ficha del Desktopia Lite en Amazon.es y de la hoja de datos oficial de Ergotopia: doble motor silencioso, velocidad 35 mm/s, altura 62,5-125 cm, carga 80 kg dinámica (100 kg estática), estructura de acero, tablero incluido de madera (haya o nogal) en varias medidas (120x80, 160x80), pantalla LED con 4 memorias, anticolisión regulable en 3 niveles, arranque y parada suaves, bloqueo y apagado automático, garantía de 5 años. El nivel de ruido exacto, el peso del producto y el grosor del tablero no constan, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Ergotopia Desktopia Lite Dual-Motor Electric Standing Desk"
+  tituloCorto: "Ergotopia Desktopia Lite"
+  veredicto: "The Desktopia Lite is the affordable version of Ergotopia's standing desk, and it's surprisingly capable without a high price. It's a real dual motor —rising fast at 35 mm/s and quietly— with a wide 62.5 to 125 cm range covering almost anyone, and it holds 80 kg in motion (100 kg static). It brings the essentials: an LED panel with 4 memories, three-level adjustable anti-collision, soft start and stop, a lock, and auto-off, plus a wood top (beech or walnut) in several sizes. Against the Pro X it loses the OLED display, 9 memories, and reminders, but keeps the dual motor and the 5-year warranty for much less. Against the Chinese entry tier, it wins on brand, a fast dual motor, and a wood finish. For a complete dual-motor home office without overspending, it's one of the most well-rounded buys."
+  idealPara: "Anyone who wants a complete dual-motor desk from a German ergonomics brand, with a wood top and good kit, without paying the Pro X's price"
+  comunidad: "Reviews call it one of Amazon's best-rated standing desks: they highlight the fast, quiet dual motor, the wood top, the 4 memories, and the 5-year warranty at a very competitive price. Criticisms are minor and about the mid-range load. As a brand-name dual-motor complete desk, the rating is very high."
+  resumenCompra:
+    mejorPara: "A complete, fast dual-motor desk from an ergonomics brand, with a wood top and good kit at a contained price."
+    evitarSi: "You want OLED, 9 memories, and reminders (Pro X) or need more than 80-100 kg of load."
+    alternativaDirecta: "Ergotopia Desktopia Pro X for OLED and 9 memories; Maidesite T2 Pro Plus if you prioritize 160 kg load."
+    decisionRapida: "A fast (35 mm/s) brand-name dual motor, with a wood top, 4 memories, and a 5-year warranty at a good price; the catch is the 80 kg load."
+  puntosFuertes:
+    - "Fast (35 mm/s) and quiet dual motor"
+    - "Wide range (62.5-125 cm) and wood top"
+    - "LED panel with 4 memories and 3-level anti-collision"
+    - "German ergonomics brand with a 5-year warranty"
+  puntosDebiles:
+    - "80 kg dynamic load (mid-range)"
+    - "No OLED or posture reminders"
+    - "Exact noise, weight, and top thickness not published"
+  paraQuienSi:
+    - "Anyone who wants a brand-name dual-motor complete desk without overspending"
+    - "Anyone who values a wood top, 4 memories, and adjustable anti-collision"
+    - "Anyone after a 5-year warranty at a contained price"
+  paraQuienNo:
+    - "Anyone who wants OLED, 9 memories, or reminders (Pro X)"
+    - "Anyone running several monitors or heavy gear (over 80 kg)"
+    - "Anyone after the lowest possible price regardless of brand"
+calidadDatos:
+  score: 83
+  confianza: "alto"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 35
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 62.5
+  alturaMaxCm: 125
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "haya"
+  tableroAnchoCm: 160
+  tableroFondoCm: 80
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null
