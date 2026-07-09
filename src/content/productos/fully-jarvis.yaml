@@ -2,11 +2,11 @@ tipo: "escritorio"
 nombre: "Fully Jarvis Bamboo Escritorio Elevable Eléctrico Doble Motor"
 tituloCorto: "Fully Jarvis"
 marca: "Fully"
-imagen: ""
+imagen: "/img/productos/fully-jarvis.webp"
 imagenAlt: "Escritorio elevable eléctrico Fully Jarvis con tablero de bambú, doble motor silencioso y panel de memorias"
 tramoPrecio: 4
-precioMin: null
-precioMax: null
+precioMin: 1465
+precioMax: 1465
 valoracion: null
 valoraciones:
   velocidad: 8

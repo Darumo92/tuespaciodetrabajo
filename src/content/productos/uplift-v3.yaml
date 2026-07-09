@@ -2,11 +2,11 @@ tipo: "escritorio"
 nombre: "UPLIFT V3 Escritorio Elevable Eléctrico Doble Motor"
 tituloCorto: "UPLIFT V3"
 marca: "UPLIFT"
-imagen: ""
+imagen: "/img/productos/uplift-v3.jpg"
 imagenAlt: "Escritorio elevable eléctrico UPLIFT V3 de doble motor con columnas de tres tramos, marco reforzado y gestor de cables"
 tramoPrecio: 4
-precioMin: null
-precioMax: null
+precioMin: 600
+precioMax: 600
 valoracion: null
 valoraciones:
   velocidad: 9

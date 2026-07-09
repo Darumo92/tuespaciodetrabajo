@@ -5,8 +5,8 @@ marca: "Maidesite"
 imagen: "/img/productos/maidesite-sn1.jpg"
 imagenAlt: "Escritorio elevable eléctrico Maidesite SN1 de doble motor con panel táctil LED y tablero"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 269
+precioMax: 269
 valoracion: null
 valoraciones:
   velocidad: 6
@@ -110,7 +110,7 @@ en:
 calidadDatos:
   score: 80
   confianza: "alto"
-  enriquecidoEn: "2026-07-08"
+  enriquecidoEn: "2026-07-09"
   camposFaltantes:
     - "specs.velocidadMmPorSeg"
     - "specs.tableroGrosorCm"

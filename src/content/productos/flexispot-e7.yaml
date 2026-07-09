@@ -5,8 +5,8 @@ marca: "FlexiSpot"
 imagen: "/img/productos/flexispot-e7.jpg"
 imagenAlt: "Escritorio elevable eléctrico FlexiSpot E7 con estructura de acero y panel táctil LED"
 tramoPrecio: 3
-precioMin: null
-precioMax: null
+precioMin: 299.99
+precioMax: 429
 valoracion: null
 valoraciones:
   velocidad: 8
@@ -117,7 +117,7 @@ en:
 calidadDatos:
   score: 94
   confianza: "alto"
-  enriquecidoEn: "2026-07-03"
+  enriquecidoEn: "2026-07-09"
   camposFaltantes:
     - "specs.segmentosColumna"
 specs:

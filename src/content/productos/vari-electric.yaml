@@ -2,11 +2,11 @@ tipo: "escritorio"
 nombre: "Vari Electric Standing Desk con ComfortEdge"
 tituloCorto: "Vari Electric"
 marca: "Vari"
-imagen: ""
+imagen: "/img/productos/vari-electric.jpg"
 imagenAlt: "Escritorio elevable eléctrico Vari con borde curvo ComfortEdge, doble motor y panel de memorias"
 tramoPrecio: 4
-precioMin: null
-precioMax: null
+precioMin: 700
+precioMax: 700
 valoracion: null
 valoraciones:
   velocidad: 6
