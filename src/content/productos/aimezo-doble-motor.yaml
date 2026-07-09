@@ -1,0 +1,140 @@
+tipo: "escritorio"
+nombre: "AIMEZO Marco de Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "AIMEZO doble motor"
+marca: "AIMEZO"
+imagen: "/img/productos/aimezo-doble-motor.jpg"
+imagenAlt: "Estructura elevable eléctrica AIMEZO de doble motor con patas de tres secciones, doble viga y panel de memorias"
+tramoPrecio: 3
+precioMin: 319
+precioMax: 319
+valoracion: null
+valoraciones:
+  velocidad: 8
+  estabilidad: 8
+  capacidadCarga: 8
+  rangoAltura: 6
+  materiales: 7
+  calidadPrecio: 8
+amazon:
+  asin: "B0D1KB6GV2"
+  buscar: "AIMEZO marco escritorio elevable eléctrico doble motor 120 kg 4 memorias anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere una estructura de doble motor de tres tramos con buena carga y velocidad a precio ajustado, para poner su propio tablero"
+veredicto: "El AIMEZO es una de esas estructuras que dan más de lo que su precio sugiere: doble motor de tres secciones que sube rápido, a 38 mm/s y por debajo de 50 dB, con 120 kg de carga y una construcción de acero de doble viga que aguanta bien a plena altura. Trae panel con cuatro memorias, anticolisión y, en varias versiones, puerto USB, con 5 años de garantía en la estructura. Se vende como marco (sin tablero), así que hay que sumar ese gasto, y su punto flojo es el rango de altura: 69 a 115 cm es más corto que el de la gama alta, algo justo para personas muy altas de pie. Frente a las estructuras de un motor, gana en velocidad y firmeza; frente a FlexiSpot o Maidesite, cede en rango y garantía pero cuesta menos. Para un doble motor de tres tramos barato sobre el que montar tu tablero, es una compra muy sensata en Amazon.es."
+resumenCompra:
+  mejorPara: "Una estructura de doble motor de tres tramos con buena carga y velocidad, barata, para tu propio tablero."
+  evitarSi: "Mides bastante y necesitas mucho rango de pie, o quieres un escritorio completo listo para usar."
+  alternativaDirecta: "FlexiSpot EC5 Plus si quieres más rango de altura; Maidesite T2 Pro Plus si prefieres tablero incluido y 160 kg."
+  decisionRapida: "Doble motor de tres tramos rápido (38 mm/s) con 120 kg a precio ajustado; el pero es el rango corto (69-115 cm) y que va sin tablero."
+metodologia:
+  - "Specs de las fichas de AIMEZO en Amazon.es (marco de doble motor con memorias y anticolisión), contrastadas entre variantes de la marca."
+  - "La nota valora la velocidad, la carga y el precio del doble motor de tres tramos; penaliza el rango de altura corto y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "38 mm/s con doble motor de tres secciones: rápido para su precio, transición sentado-pie ágil."
+  estabilidad: "Estructura de acero de doble viga con 120 kg de carga; firme incluso a altura de pie."
+  capacidadCarga: "120 kg cubren varios monitores, brazos y equipo pesado con holgura."
+  rangoAltura: "69-115 cm es un rango corto frente a la gama alta, algo justo para trabajar de pie a estaturas altas."
+  materiales: "Acero de doble viga y patas de tres secciones, panel con memorias y USB en varias versiones; buen equipamiento para el precio."
+  calidadPrecio: "Doble motor de tres tramos con 120 kg y 5 años de garantía a precio ajustado: muy buena relación calidad-precio."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — AIMEZO Marco Escritorio Eléctrico Regulable, motor dual, 120 kg, memoria y anticolisión"
+    url: "https://www.amazon.es/AIMEZO-Escritorio-El%C3%A9ctrico-Regulable-Anticolisi%C3%B3n/dp/B09TW4LBDF"
+    fechaConsulta: "2026-07-08"
+  - tipo: "tienda"
+    nombre: "Amazon.es — AIMEZO Marco de Escritorio Elevable Doble Motor 69-115 cm, control de memoria"
+    url: "https://www.amazon.es/AIMEZO-Escritorio-Elevable-El%C3%A9ctrico-Regulable/dp/B0D1KB6GV2"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Rango de altura corto (69-115 cm): justo para trabajar de pie a estaturas altas."
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "El USB depende de la versión; el peso y los certificados no constan: quedan en null."
+alternativas:
+  - slug: "flexispot-ec5-plus"
+    motivo: "Doble motor de tres tramos con más rango de altura (60-125 cm)."
+  - slug: "maidesite-t1-pro"
+    motivo: "Marco de un motor con 100 kg y 10 años de garantía si te vale un motor."
+  - slug: "desktronic"
+    motivo: "Otra estructura de doble motor con pantalla táctil y USB."
+comunidad: "Las reseñas en Amazon.es destacan lo rápido y firme que es para el precio, la construcción de doble viga y el buen panel con memorias, además de los 5 años de garantía en la estructura. Las críticas van por el rango de altura corto y por comprar el tablero aparte. Como marco de doble motor barato, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere doble motor de tres tramos rápido y barato"
+  - "Quien va a poner su propio tablero sobre la estructura"
+  - "Quien valora 120 kg de carga y 5 años de garantía a precio ajustado"
+paraQuienNo:
+  - "Quien mide bastante y necesita mucho rango de pie"
+  - "Quien quiere un escritorio completo listo para usar"
+  - "Quien no quiere sumar el gasto del tablero"
+puntosFuertes:
+  - "Doble motor de tres secciones rápido (38 mm/s)"
+  - "Estructura de acero de doble viga con 120 kg de carga"
+  - "Panel con 4 memorias, anticolisión y USB (según versión)"
+  - "5 años de garantía en la estructura a precio ajustado"
+puntosDebiles:
+  - "Rango de altura corto (69-115 cm)"
+  - "Se vende sin tablero: gasto adicional"
+  - "USB según versión; peso y certificados no publicados"
+fuenteSpecs: "Specs de las fichas de AIMEZO en Amazon.es (marco de doble motor con memorias y anticolisión): doble motor de tres secciones, velocidad 38 mm/s, ruido <50 dB, altura 69-115 cm, carga 120 kg, estructura de acero de doble viga con patas telescópicas de tres secciones, panel con 4 memorias, anticolisión, puerto USB (según versión), garantía de 5 años en la estructura y 2 en la parte eléctrica. Se vende sin tablero. El peso del producto y las certificaciones no constan, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "AIMEZO Dual-Motor Electric Standing Desk Frame"
+  tituloCorto: "AIMEZO dual motor"
+  veredicto: "The AIMEZO is one of those frames that give more than their price suggests: a three-section dual motor that rises fast, at 38 mm/s and under 50 dB, with 120 kg of load and a double-beam steel build that holds well at full height. It brings a four-memory panel, anti-collision, and, on several versions, a USB port, with a 5-year frame warranty. It's sold as a frame (no top), so you have to budget for that, and its weak point is the height range: 69 to 115 cm is shorter than the high end, a bit tight for very tall people standing. Against single-motor frames it wins on speed and firmness; against FlexiSpot or Maidesite it gives up range and warranty but costs less. For a cheap three-stage dual motor to put your own top on, it's a very sensible buy on Amazon.es."
+  idealPara: "Anyone who wants a three-stage dual-motor frame with good load and speed at a low price, for their own tabletop"
+  comunidad: "Amazon.es reviews highlight how fast and firm it is for the price, the double-beam build, and the good memory panel, plus the 5-year frame warranty. Criticisms are the short height range and buying the top separately. As a cheap dual-motor frame, the rating is good."
+  resumenCompra:
+    mejorPara: "A three-stage dual-motor frame with good load and speed, cheap, for your own top."
+    evitarSi: "You're quite tall and need lots of standing range, or you want a complete, ready-to-use desk."
+    alternativaDirecta: "FlexiSpot EC5 Plus for more height range; Maidesite T2 Pro Plus for a tabletop included and 160 kg."
+    decisionRapida: "A fast (38 mm/s) three-stage dual motor with 120 kg at a low price; the catch is the short range (69-115 cm) and no top."
+  puntosFuertes:
+    - "Fast three-section dual motor (38 mm/s)"
+    - "Double-beam steel frame with 120 kg load"
+    - "Panel with 4 memories, anti-collision, and USB (by version)"
+    - "5-year frame warranty at a low price"
+  puntosDebiles:
+    - "Short height range (69-115 cm)"
+    - "Sold without a tabletop: extra cost"
+    - "USB by version; weight and certifications not published"
+  paraQuienSi:
+    - "Anyone who wants a fast, cheap three-stage dual motor"
+    - "Anyone putting their own top on the frame"
+    - "Anyone who values 120 kg load and a 5-year warranty at a low price"
+  paraQuienNo:
+    - "Anyone quite tall who needs lots of standing range"
+    - "Anyone who wants a complete, ready-to-use desk"
+    - "Anyone who doesn't want to add the tabletop cost"
+calidadDatos:
+  score: 86
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 38
+  nivelRuidoDb: 50
+  segmentosColumna: 3
+  alturaMinCm: 69
+  alturaMaxCm: 115
+  cargaMaxKg: 120
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "UPLIFT V3 Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "UPLIFT V3"
+marca: "UPLIFT"
+imagen: ""
+imagenAlt: "Escritorio elevable eléctrico UPLIFT V3 de doble motor con columnas de tres tramos, marco reforzado y gestor de cables"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 9
+  estabilidad: 9.5
+  capacidadCarga: 9.5
+  rangoAltura: 8.5
+  materiales: 9
+  calidadPrecio: 7
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.upliftdesk.com/2-leg-standing-desk/"
+idealPara: "Quien quiere la referencia estadounidense actual en escritorios elevables: doble motor rápido, marco reforzado, carga altísima y la garantía más larga del mercado (15 años)"
+veredicto: "El UPLIFT V3 es la generación de 2026 del que buena parte de la prensa considera el mejor escritorio elevable del mercado, y sustituye al V2 unificando en un solo marco lo que antes eran el V2 y el V2-Commercial. Mantiene lo que hizo famoso al V2 —doble motor rápido (50 mm/s), columnas de tres tramos, 161 kg de carga, menos de 48 dB y 15 años de garantía— y mejora lo que se le pedía: marco de acero reforzado con más estabilidad, montaje en unos 10 minutos (frente a los 45 del V2) y gestor de cables FlexMount incluido de serie. La garantía de 15 años ahora cubre estructura, motores, electrónica y hasta el tablero (incluidas grietas en el de bambú). Llega completo, con una enorme variedad de tableros y medidas. El pero para el comprador español sigue siendo logístico: UPLIFT vende desde Estados Unidos, así que hay que contar con envío internacional, aduanas y plazos. Si eso no te frena y quieres una base para toda la vida con la mejor garantía, es la referencia; si buscas comodidad de compra y precio, Maidesite o FlexiSpot te lo ponen más fácil en España."
+resumenCompra:
+  mejorPara: "Una base para toda la vida con doble motor rápido, marco reforzado, carga altísima y la garantía más larga del mercado (15 años)."
+  evitarSi: "Quieres comprar cómodo en Amazon.es sin aduanas ni envío internacional, o buscas ajustar el precio."
+  alternativaDirecta: "Maidesite T2 Pro Plus si quieres doble motor y 160 kg en Amazon.es; FlexiSpot E7 Pro si prefieres estructura premium local."
+  decisionRapida: "La referencia USA de 2026 con doble motor de tres tramos, 161 kg, montaje rápido y 15 años de garantía; el pero es comprar desde Estados Unidos (aduanas y envío)."
+metodologia:
+  - "Specs de la ficha oficial de UPLIFT Desk del V3 y de su hoja de datos (FV3-200C), contrastadas con reseñas internacionales (TechRadar, Forbes Vetted, RemoteOfficeGuy)."
+  - "La nota valora la velocidad, la estabilidad del marco reforzado, la carga y la garantía de 15 años; penaliza que se compre desde Estados Unidos, con aduanas y envío."
+scoreRationale:
+  velocidad: "50 mm/s (2 pulgadas/s) con doble motor de tres tramos: de lo más rápido de la categoría."
+  estabilidad: "Marco de acero reforzado y columnas de tres tramos con 161 kg de carga; de los más estables a plena altura, mejorado sobre el V2."
+  capacidadCarga: "161 kg (355 lb) cubren con enorme holgura varios monitores, brazos y equipo pesado."
+  rangoAltura: "Unos 57-124 cm (con tablero) cubren a cualquiera sentado o de pie."
+  materiales: "Enorme variedad de tableros, marco reforzado y gestor de cables FlexMount incluido, con garantía de 15 años que cubre hasta el tablero; construcción de referencia."
+  calidadPrecio: "Prestaciones y garantía de las mejores del mercado, pero hay que sumar envío internacional y aduanas desde Estados Unidos."
+fuentes:
+  - tipo: "oficial"
+    nombre: "UPLIFT Desk — V3 Standing Desk Frame (hoja de datos FV3-200C)"
+    url: "https://www.content.upliftdesk.com/content/pdfs/desks-and-frames/FV3-200C-v3-standing-desk-frame-specs.pdf"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "TechRadar — I tested the Uplift V3 Standing Desk"
+    url: "https://www.techradar.com/pro/uplift-v3-standing-desk-review"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Se compra desde Estados Unidos (upliftdesk.com): envío internacional, aduanas y plazos."
+  - "Precio de gama alta, al que hay que sumar la logística internacional."
+  - "El nivel de ruido exacto (<48 dB) y el peso no se detallan con cifra cerrada: quedan en null."
+alternativas:
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía, disponible en Amazon.es."
+  - slug: "flexispot-e7-pro"
+    motivo: "Estructura premium de doble motor con compra y garantía locales."
+  - slug: "flexispot-e7q"
+    motivo: "Cuatro patas y carga máxima si buscas la mayor estabilidad."
+comunidad: "Las reseñas internacionales de 2026 destacan que el V3 mejora todo lo bueno del V2 —montaje mucho más rápido, marco más estable y gestor de cables incluido— sin tocar la garantía de 15 años, que ahora cubre también el tablero. La crítica para el comprador europeo sigue siendo la logística de importarlo desde Estados Unidos. Como base premium para toda la vida, la valoración es de las más altas."
+paraQuienSi:
+  - "Quien quiere la referencia actual del mercado con la garantía más larga (15 años)"
+  - "Quien monta equipo pesado o varios monitores (hasta 161 kg)"
+  - "Quien valora la variedad de tableros y accesorios y no le frena importar"
+paraQuienNo:
+  - "Quien quiere comprar cómodo en Amazon.es sin aduanas"
+  - "Quien busca ajustar el precio"
+  - "Quien no quiere lidiar con envío internacional y plazos"
+puntosFuertes:
+  - "Doble motor rápido (50 mm/s) y columnas de tres tramos"
+  - "Marco de acero reforzado y montaje en unos 10 minutos"
+  - "Gestor de cables FlexMount incluido de serie"
+  - "Garantía de 15 años que cubre estructura, motores, electrónica y tablero"
+puntosDebiles:
+  - "Se compra desde Estados Unidos: aduanas y envío internacional"
+  - "Precio de gama alta más logística"
+  - "Ruido exacto y peso no publicados con cifra cerrada"
+fuenteSpecs: "Specs de la ficha oficial de UPLIFT Desk del V3 y de su hoja de datos (FV3-200C), contrastadas con reseñas: doble motor, velocidad 50 mm/s (2 pulgadas/s), ruido <48 dB, columnas de tres tramos, altura de unos 57-124 cm con tablero, carga 161 kg (355 lb), marco de acero reforzado, tablero incluido con enorme variedad de medidas, panel de memorias con 4 posiciones, anticolisión, gestor de cables FlexMount incluido, montaje en unos 10 minutos, garantía de 15 años que cubre estructura, motores, electrónica y tablero. El V3 unifica en un solo marco los antiguos V2 y V2-Commercial. El nivel de ruido exacto, el peso, el grosor del tablero y el precio (varía en la tienda oficial de EE. UU., no se fija aquí) quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "UPLIFT V3 Dual-Motor Electric Standing Desk"
+  tituloCorto: "UPLIFT V3"
+  veredicto: "The UPLIFT V3 is the 2026 generation of what much of the press considers the best standing desk on the market, replacing the V2 by consolidating what used to be the V2 and V2-Commercial into a single frame. It keeps what made the V2 famous —a fast dual motor (50 mm/s), three-stage columns, 161 kg of load, under 48 dB, and a 15-year warranty— and improves what people asked for: a reinforced steel frame with more stability, assembly in about 10 minutes (versus the V2's 45), and a FlexMount cable manager included as standard. The 15-year warranty now covers frame, motors, electronics, and even the desktop (including cracks on the bamboo one). It arrives complete, with a huge variety of tops and sizes. The catch for a Spanish buyer is still logistical: UPLIFT ships from the United States, so factor in international shipping, customs, and lead times. If that doesn't stop you and you want a base for life with the best warranty, it's the benchmark; if you want buying convenience and price, Maidesite or FlexiSpot make it easier in Spain."
+  idealPara: "Anyone who wants the current US benchmark in standing desks: a fast dual motor, reinforced frame, very high load, and the longest warranty on the market (15 years)"
+  comunidad: "2026 international reviews highlight that the V3 improves everything good about the V2 —much faster assembly, a more stable frame, and an included cable manager— without touching the 15-year warranty, which now also covers the desktop. The criticism for a European buyer is still the logistics of importing from the United States. As a premium base for life, the rating is among the highest."
+  resumenCompra:
+    mejorPara: "A base for life with a fast dual motor, reinforced frame, very high load, and the longest warranty on the market (15 years)."
+    evitarSi: "You want to buy conveniently on Amazon.es without customs or international shipping, or you're watching the price."
+    alternativaDirecta: "Maidesite T2 Pro Plus for a dual motor and 160 kg on Amazon.es; FlexiSpot E7 Pro for a premium frame bought locally."
+    decisionRapida: "The 2026 US benchmark with a three-stage dual motor, 161 kg, fast assembly, and a 15-year warranty; the catch is buying from the United States (customs and shipping)."
+  puntosFuertes:
+    - "Fast dual motor (50 mm/s) and three-stage columns"
+    - "Reinforced steel frame and ~10-minute assembly"
+    - "FlexMount cable manager included as standard"
+    - "15-year warranty covering frame, motors, electronics, and desktop"
+  puntosDebiles:
+    - "Bought from the United States: customs and international shipping"
+    - "High-end price plus logistics"
+    - "Exact noise and weight not published as fixed figures"
+  paraQuienSi:
+    - "Anyone who wants the current market benchmark with the longest warranty (15 years)"
+    - "Anyone running heavy gear or several monitors (up to 161 kg)"
+    - "Anyone who values the variety of tops and accessories and doesn't mind importing"
+  paraQuienNo:
+    - "Anyone who wants to buy conveniently on Amazon.es without customs"
+    - "Anyone watching the price"
+    - "Anyone who doesn't want to deal with international shipping and lead times"
+calidadDatos:
+  score: 86
+  confianza: "alto"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 50
+  nivelRuidoDb: 48
+  segmentosColumna: 3
+  alturaMinCm: 57
+  alturaMaxCm: 124
+  cargaMaxKg: 161
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "madera"
+  tableroAnchoCm: 152
+  tableroFondoCm: 76
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 15
+  certificacionTuv: null
+  certificacionEmc: null
