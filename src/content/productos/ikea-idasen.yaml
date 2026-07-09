@@ -1,0 +1,145 @@
+tipo: "escritorio"
+nombre: "IKEA IDÅSEN Escritorio Elevable Eléctrico con App"
+tituloCorto: "IKEA Idåsen"
+marca: "IKEA"
+imagen: "/img/productos/ikea-idasen.avif"
+imagenAlt: "Escritorio elevable eléctrico IKEA IDÅSEN con control por app Bluetooth y gestión de cables"
+tramoPrecio: 3
+precioMin: 579
+precioMax: 579
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 7
+  capacidadCarga: 5.5
+  rangoAltura: 8
+  materiales: 8
+  calidadPrecio: 6
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/idasen-escritorio-elevable-negro-gris-oscuro-s19280939/"
+idealPara: "Quien quiere un elevable de marca conocida, completo y bien acabado, con control por app desde el móvil y la garantía y las certificaciones de oficina de IKEA"
+veredicto: "El IDÅSEN es el escritorio elevable premium de IKEA y su gran baza es la tranquilidad de marca: llega completo, con buen acabado, gestión de cables integrada, 10 años de garantía y homologación de uso profesional (EN 527-2 y BIFMA). Su rango de 63 a 127 cm es de los más amplios, cubre a cualquiera sentado o de pie, y se controla desde el móvil con la app Desk Control por Bluetooth, algo poco habitual. A cambio hay que asumir dos cosas: aguanta 70 kg, una carga modesta que lo deja fuera de los montajes pesados, y cuesta 579 euros, un precio alto para lo que ofrece en el papel frente a las estructuras chinas de doble motor. Lo compras por el respaldo de IKEA, el acabado, la app y la disponibilidad en tienda, no por ganar en carga o velocidad. Para quien valora comprar en IKEA con garantía larga y montaje conocido, es una opción sólida."
+resumenCompra:
+  mejorPara: "Un elevable de marca conocida, completo, con app y 10 años de garantía, comprado en IKEA."
+  evitarSi: "Buscas mucha carga o el mejor precio por prestaciones: las estructuras de doble motor dan más por menos."
+  alternativaDirecta: "IKEA MITTZON si quieres doble motor de IKEA más barato; Maidesite T2 Pro Plus si priorizas carga (160 kg) y precio."
+  decisionRapida: "El elevable premium de IKEA con app Bluetooth, rango amplio y 10 años de garantía; el pero es la carga de 70 kg y el precio de 579 EUR."
+metodologia:
+  - "Specs y precio de la ficha oficial de IKEA España del IDÅSEN (120x70 cm), contrastadas con guías de comparativa españolas (Xataka)."
+  - "La nota valora el respaldo de marca, el rango de altura, la app y las certificaciones; penaliza la carga modesta y el precio alto frente a la competencia."
+scoreRationale:
+  velocidad: "Elevación motorizada con app; la velocidad exacta en mm/s no la publica IKEA, se toma como correcta para la gama."
+  estabilidad: "Homologado para uso profesional (EN 527-2 y BIFMA), con buen acabado y gestión de cables; estable, sin ser el más firme a plena carga."
+  capacidadCarga: "70 kg es una carga modesta: cubre un monitor y periféricos, pero deja fuera montajes pesados."
+  rangoAltura: "63-127 cm es de los rangos más amplios, válido de estaturas bajas a muy altas."
+  materiales: "Acabado premium de IKEA, control por app Bluetooth, gestión de cables y certificaciones de oficina."
+  calidadPrecio: "579 EUR es un precio alto para 70 kg de carga; se paga la marca, la app y el respaldo de IKEA."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA ES — IDÅSEN escritorio elevable (120x70 cm)"
+    url: "https://www.ikea.com/es/es/p/idasen-escritorio-elevable-negro-gris-oscuro-s19280939/"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "Xataka — Mejores escritorios elevables: cuál comprar"
+    url: "https://www.xataka.com/seleccion/mejores-escritorios-elevables-cual-comprar-seis-modelos-recomendados-195-euros"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Carga de 70 kg: modesta, fuera de montajes pesados de varios monitores."
+  - "Precio de 579 EUR: alto frente a estructuras de doble motor con más carga."
+  - "IKEA no publica velocidad ni número exacto de motores en la ficha: quedan estimados/null."
+alternativas:
+  - slug: "ikea-mittzon"
+    motivo: "Doble motor de IKEA más barato (379 EUR)."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg y 10 años de garantía por menos."
+  - slug: "flexispot-e8"
+    motivo: "Estructura premium si quieres elegir tablero y ganar en carga y velocidad."
+comunidad: "Las reseñas y foros destacan la comodidad de la app, el acabado y la tranquilidad de comprar en IKEA con 10 años de garantía y recambios accesibles. Las críticas se centran en la carga de 70 kg y en el precio, considerado alto frente a las estructuras chinas de doble motor que ofrecen más por menos. Como compra 'de marca', la valoración es buena."
+paraQuienSi:
+  - "Quien quiere comprar en IKEA con garantía larga y montaje conocido"
+  - "Quien valora el control por app desde el móvil"
+  - "Quien necesita un rango de altura amplio (63-127 cm)"
+paraQuienNo:
+  - "Quien monta varios monitores o equipo pesado (más de 70 kg)"
+  - "Quien busca el mejor precio por prestaciones"
+  - "Quien prefiere elegir su propio tablero"
+puntosFuertes:
+  - "Marca IKEA con 10 años de garantía y certificación de oficina"
+  - "Control por app Bluetooth (Desk Control)"
+  - "Rango de altura amplio (63-127 cm)"
+  - "Completo, con buen acabado y gestión de cables"
+puntosDebiles:
+  - "Carga modesta de 70 kg"
+  - "Precio alto (579 EUR)"
+  - "Velocidad y número de motores no publicados por IKEA"
+fuenteSpecs: "Specs y precio de la ficha oficial de IKEA España del IDÅSEN (120x70 cm): elevación eléctrica motorizada con control por app Bluetooth (Desk Control), altura 63-127 cm, carga 70 kg, tablero incluido de 120x70 cm (también 160x80), gestión de cables integrada, homologado para uso profesional (EN 527-2 y ANSI/BIFMA X5.5), garantía de 10 años, precio 579 EUR. La velocidad en mm/s, el nivel de ruido y el número exacto de motores no los publica IKEA; se registra el motor como 'simple' (carga de 70 kg coherente con un solo actuador) y el resto queda en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "IKEA IDÅSEN App-Controlled Electric Standing Desk"
+  tituloCorto: "IKEA Idåsen"
+  veredicto: "The IDÅSEN is IKEA's premium standing desk, and its big draw is brand peace of mind: it arrives complete, with a good finish, integrated cable management, a 10-year warranty, and professional-use certification (EN 527-2 and BIFMA). Its 63 to 127 cm range is among the widest, covering anyone seated or standing, and it's controlled from your phone with the Desk Control app over Bluetooth, which is uncommon. In exchange you accept two things: it holds 70 kg, a modest load that rules out heavy setups, and it costs 579 euros, a high price for what it offers on paper versus Chinese dual-motor frames. You buy it for IKEA's backing, the finish, the app, and in-store availability, not to win on load or speed. For anyone who values buying at IKEA with a long warranty and familiar assembly, it's a solid option."
+  idealPara: "Anyone who wants a known-brand, complete, well-finished standing desk with phone app control and IKEA's office warranty and certifications"
+  comunidad: "Reviews and forums highlight the convenience of the app, the finish, and the peace of mind of buying at IKEA with a 10-year warranty and accessible spares. Criticisms center on the 70 kg load and the price, seen as high versus Chinese dual-motor frames that offer more for less. As a brand purchase, the rating is good."
+  resumenCompra:
+    mejorPara: "A known-brand, complete standing desk with an app and a 10-year warranty, bought at IKEA."
+    evitarSi: "You want heavy load or the best price per feature: dual-motor frames give more for less."
+    alternativaDirecta: "IKEA MITTZON for a cheaper IKEA dual motor; Maidesite T2 Pro Plus if you prioritize load (160 kg) and price."
+    decisionRapida: "IKEA's premium standing desk with Bluetooth app, wide range, and a 10-year warranty; the catch is the 70 kg load and the 579 EUR price."
+  puntosFuertes:
+    - "IKEA brand with a 10-year warranty and office certification"
+    - "Bluetooth app control (Desk Control)"
+    - "Wide height range (63-127 cm)"
+    - "Complete, with good finish and cable management"
+  puntosDebiles:
+    - "Modest 70 kg load"
+    - "High price (579 EUR)"
+    - "Speed and motor count not published by IKEA"
+  paraQuienSi:
+    - "Anyone who wants to buy at IKEA with a long warranty and familiar assembly"
+    - "Anyone who values phone app control"
+    - "Anyone who needs a wide height range (63-127 cm)"
+  paraQuienNo:
+    - "Anyone running several monitors or heavy gear (over 70 kg)"
+    - "Anyone after the best price per feature"
+    - "Anyone who prefers to choose their own tabletop"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 63
+  alturaMaxCm: 127
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 70
+  tableroGrosorCm: null
+  pantallaControl: "boton"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null

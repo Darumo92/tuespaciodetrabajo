@@ -1,0 +1,142 @@
+tipo: "escritorio"
+nombre: "IKEA MITTZON Escritorio Elevable Eléctrico Doble Motor"
+tituloCorto: "IKEA Mittzon"
+marca: "IKEA"
+imagen: "/img/productos/ikea-mittzon.avif"
+imagenAlt: "Escritorio elevable eléctrico IKEA MITTZON de doble motor con mando de control y organizador de cables"
+tramoPrecio: 3
+precioMin: 379
+precioMax: 379
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 7.5
+  capacidadCarga: 6.5
+  rangoAltura: 6.5
+  materiales: 8
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/mittzon-escritorio-elevable-electrico-blanco-s89526122/"
+idealPara: "Quien quiere un elevable de IKEA de doble motor, completo y homologado para oficina, con memorias y detección de colisión, sin irse al precio del IDÅSEN"
+veredicto: "El MITTZON es el elevable eléctrico intermedio de IKEA y, para muchos, el más equilibrado de su catálogo: doble motor, mando con dos memorias, detección de colisión y organizador de cables, homologado para uso profesional y con 10 años de garantía. Llega completo y en muchas medidas (120x60, 140x60, 120x80, 140x80, 160x80) y acabados, así que encaja en casi cualquier hueco. Frente al IDÅSEN, pierde la app pero gana el doble motor y baja a 379 euros; frente a las estructuras chinas de doble motor, iguala en prestaciones y suma el respaldo de IKEA, aunque IKEA no publica la carga máxima ni la velocidad en su ficha. Es la opción lógica dentro de IKEA para quien quiere motor de verdad sin pagar el premium del IDÅSEN, con la comodidad de comprarlo y montarlo como cualquier mueble de la marca."
+resumenCompra:
+  mejorPara: "Un elevable de IKEA de doble motor, completo y con memorias, sin pagar el precio del IDÅSEN."
+  evitarSi: "Necesitas datos de carga y velocidad garantizados o el mejor precio por prestaciones."
+  alternativaDirecta: "IKEA IDÅSEN si quieres app y acabado premium; Maidesite T2 Pro Plus si priorizas 160 kg de carga y precio."
+  decisionRapida: "El elevable de doble motor de IKEA con memorias, detección de colisión y 10 años de garantía a 379 EUR; el pero es que IKEA no publica carga ni velocidad."
+metodologia:
+  - "Specs y precio de la ficha oficial de IKEA España del MITTZON (120x60 cm, doble motor), contrastadas con la descripción de la gama."
+  - "La nota valora el doble motor, las memorias, la detección de colisión y el respaldo de IKEA; penaliza que IKEA no publique carga máxima ni velocidad."
+scoreRationale:
+  velocidad: "Doble motor con transición fluida sentado-pie; IKEA no publica la velocidad en mm/s, se toma como correcta para la gama."
+  estabilidad: "Doble motor homologado para uso profesional; diseño resistente y detección de colisión, estable en uso normal."
+  capacidadCarga: "IKEA no publica la carga máxima; el doble motor y la homologación de oficina sugieren una capacidad holgada para un uso normal."
+  rangoAltura: "Rango de trabajo sentado-de pie apto para estaturas medias; IKEA no detalla los valores exactos en cm."
+  materiales: "Acabado IKEA en muchas medidas, mando con 2 memorias, detección de colisión y organizador de cables; buen equipamiento."
+  calidadPrecio: "Doble motor de marca con memorias y garantía de 10 años a 379 EUR: competitivo dentro de la oferta de IKEA."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA ES — MITTZON escritorio elevable eléctrico (120x60 cm)"
+    url: "https://www.ikea.com/es/es/p/mittzon-escritorio-elevable-electrico-blanco-s89526122/"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "IKEA no publica la carga máxima en kg ni la velocidad en mm/s: quedan en null."
+  - "Sin app (el IDÅSEN sí la tiene); el control es por mando con 2 memorias."
+  - "El nivel de ruido, el peso y las certificaciones no constan con cifra: quedan en null."
+alternativas:
+  - slug: "ikea-idasen"
+    motivo: "El premium de IKEA con app Bluetooth y acabado superior."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor con 160 kg de carga y 10 años de garantía por menos."
+  - slug: "flexispot-ec5-plus"
+    motivo: "Estructura de doble motor con 120 kg si prefieres elegir tablero."
+comunidad: "Las reseñas destacan que es el elevable más equilibrado de IKEA: doble motor, memorias y detección de colisión a un precio razonable, con la variedad de medidas típica de la marca. Las críticas van por la falta de datos de carga y velocidad en la ficha y por no tener app como el IDÅSEN. Como doble motor de marca, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere doble motor de IKEA sin pagar el precio del IDÅSEN"
+  - "Quien valora memorias, detección de colisión y organizador de cables"
+  - "Quien necesita una medida o acabado concreto de la amplia gama"
+paraQuienNo:
+  - "Quien exige datos de carga y velocidad garantizados"
+  - "Quien quiere control por app"
+  - "Quien busca el mejor precio por prestaciones"
+puntosFuertes:
+  - "Doble motor de IKEA, completo y homologado para oficina"
+  - "Mando con 2 memorias y detección de colisión"
+  - "Muchas medidas y acabados (120-160 cm)"
+  - "10 años de garantía y organizador de cables"
+puntosDebiles:
+  - "IKEA no publica carga máxima ni velocidad"
+  - "Sin app (a diferencia del IDÅSEN)"
+  - "Precio por encima de estructuras chinas equivalentes"
+fuenteSpecs: "Specs y precio de la ficha oficial de IKEA España del MITTZON (120x60 cm): doble motor, mando de control con 2 memorias, detección de colisión, organizador de cables, tablero incluido de 120x60 cm (también 140x60, 120x80, 140x80, 160x80), homologado para uso profesional, garantía de 10 años, precio 379 EUR. IKEA no publica en la ficha la altura mín-máx exacta en cm, la carga máxima en kg, la velocidad en mm/s, el nivel de ruido ni el peso, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "IKEA MITTZON Dual-Motor Electric Standing Desk"
+  tituloCorto: "IKEA Mittzon"
+  veredicto: "The MITTZON is IKEA's mid-range electric standing desk and, for many, the most balanced in its catalog: dual motor, a handset with two memories, collision detection, and a cable organizer, certified for professional use and with a 10-year warranty. It arrives complete and in many sizes (120x60, 140x60, 120x80, 140x80, 160x80) and finishes, so it fits almost any spot. Against the IDÅSEN, it loses the app but gains the dual motor and drops to 379 euros; against Chinese dual-motor frames, it matches on features and adds IKEA's backing, though IKEA doesn't publish the max load or speed on its page. It's the logical IKEA pick for anyone who wants a real motor without paying the IDÅSEN premium, with the convenience of buying and assembling it like any of the brand's furniture."
+  idealPara: "Anyone who wants an IKEA dual-motor desk, complete and office-certified, with memories and collision detection, without going to the IDÅSEN's price"
+  comunidad: "Reviews call it the most balanced IKEA standing desk: dual motor, memories, and collision detection at a reasonable price, with the brand's typical size variety. Criticisms are the lack of load and speed data on the page and no app like the IDÅSEN. As a brand-name dual motor, the rating is good."
+  resumenCompra:
+    mejorPara: "An IKEA dual-motor, complete desk with memories, without paying the IDÅSEN's price."
+    evitarSi: "You need guaranteed load and speed figures or the best price per feature."
+    alternativaDirecta: "IKEA IDÅSEN for an app and premium finish; Maidesite T2 Pro Plus if you prioritize 160 kg load and price."
+    decisionRapida: "IKEA's dual-motor desk with memories, collision detection, and a 10-year warranty at 379 EUR; the catch is IKEA not publishing load or speed."
+  puntosFuertes:
+    - "IKEA dual motor, complete and office-certified"
+    - "Handset with 2 memories and collision detection"
+    - "Many sizes and finishes (120-160 cm)"
+    - "10-year warranty and cable organizer"
+  puntosDebiles:
+    - "IKEA doesn't publish max load or speed"
+    - "No app (unlike the IDÅSEN)"
+    - "Priced above equivalent Chinese frames"
+  paraQuienSi:
+    - "Anyone who wants an IKEA dual motor without the IDÅSEN's price"
+    - "Anyone who values memories, collision detection, and a cable organizer"
+    - "Anyone needing a specific size or finish from the wide range"
+  paraQuienNo:
+    - "Anyone who demands guaranteed load and speed figures"
+    - "Anyone who wants app control"
+    - "Anyone after the best price per feature"
+calidadDatos:
+  score: 57
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.cargaMaxKg"
+    - "specs.alturaMinCm"
+    - "specs.alturaMaxCm"
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: null
+  alturaMaxCm: null
+  cargaMaxKg: null
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "boton"
+  memorias: 2
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null

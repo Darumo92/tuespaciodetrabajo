@@ -59,7 +59,16 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 23 / (objetivo 50-100).
+- Creadas: 29 / (objetivo 50-100).
+  - Lote 7 IKEA (3, 2026-07-08, media calidad 65.0): specs+precio de IKEA.es (público, NO Amazon → asin null).
+    `ikea-idasen` (69, eléctrico app Bluetooth 63-127cm/70kg, 579€), `ikea-trotten` (69, manual manivela 50kg, 189€),
+    `ikea-mittzon` (57, doble motor 2 memorias/detección colisión, 379€; IKEA no publica carga/velocidad → null).
+    **Pendiente**: imágenes (de IKEA.es; precio ya puesto, sin ASIN por no estar en Amazon).
+  - Lote 6 (3, 2026-07-08, media calidad 67.0): marcas secundarias Amazon.es, specs de oficiales/reseñas.
+    `costway-120x60` (77, completo 1 motor 4 memorias/USB/anticol 9 niveles), `desktronic` (63, estructura
+    doble motor pantalla táctil/USB-C), `fezibo-l-shape` (61, forma de L esquina doble motor — único en L).
+    HOMALL **saltado** (datos insuficientes). **Datos Amazon.es rellenados 2026-07-08**: costway (B0DGG91LBG, 150€),
+    fezibo-l-shape (B0B9GV9HP3, 399.99€), desktronic (B08XNVZ3B3, 249.99€ — marco pantalla táctil). Las 3 con imagen.
   - Lote 5 (2, 2026-07-08, media calidad 87.0): `maidesite-t1-pro` (94, marco 1 motor 100kg/USB-C 18W/10 años),
     `maidesite-sn1` (80, completo doble motor 80kg/4 memorias/3 tamaños). Specs de fuentes oficiales/reseñas.
     S2 Pro Plus **saltado**: = marco T2 Pro Plus + tablero → duplicaría `maidesite-t2-pro-plus`.

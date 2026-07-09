@@ -1,0 +1,146 @@
+tipo: "escritorio"
+nombre: "FEZIBO Escritorio Elevable Eléctrico en Forma de L (esquina)"
+tituloCorto: "FEZIBO forma L"
+marca: "FEZIBO"
+imagen: "/img/productos/fezibo-l-shape.jpg"
+imagenAlt: "Escritorio elevable eléctrico FEZIBO en forma de L para esquina, con doble motor, ganchos y bandeja de cables"
+tramoPrecio: 3
+precioMin: 399.99
+precioMax: 399.99
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 7
+  capacidadCarga: 6.5
+  rangoAltura: 6.5
+  materiales: 7
+  calidadPrecio: 7.5
+amazon:
+  asin: "B0B9GV9HP3"
+  buscar: "FEZIBO escritorio elevable eléctrico forma L esquina doble motor cajones"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://fezibo.es/products/escritorio-elevable-en-forma-de-l-para-esquina"
+idealPara: "Quien tiene una esquina que aprovechar y quiere un elevable grande en forma de L, completo y con doble motor, para trabajar con mucha superficie"
+veredicto: "El FEZIBO en forma de L es la respuesta a un problema que las estructuras rectas no resuelven: aprovechar una esquina con mucha superficie de trabajo y, además, que suba y baje. Es un escritorio completo de doble motor, con tablero en L reversible (se monta a izquierda o derecha), tres memorias, anticolisión, ganchos para colgar cosas y bandeja de gestión de cables. Aguanta 80 kg y sube de unos 67,5 a 115,5 cm. Su ventaja es única en el catálogo —forma de L y tamaño grande— pero hay que asumir sus límites: la carga es de gama media y, al ser una superficie tan grande, el montaje es más laborioso que el de un escritorio recto. FEZIBO también tiene versiones de triple motor con más carga (hasta 150 kg) si necesitas más. Para una esquina de home office con doble monitor y sitio para todo, es de lo más práctico."
+resumenCompra:
+  mejorPara: "Aprovechar una esquina con un elevable grande en forma de L, completo y de doble motor."
+  evitarSi: "Tienes poco espacio o quieres un escritorio recto sencillo de montar."
+  alternativaDirecta: "FEZIBO 140x60 recto si no necesitas la forma de L; Maidesite T2 Pro Plus si priorizas carga y garantía sobre el formato."
+  decisionRapida: "El elevable completo en forma de L para esquinas, con doble motor, ganchos y bandeja de cables; el pero es la carga media y el montaje grande."
+metodologia:
+  - "Specs de la ficha oficial de FEZIBO España del escritorio en forma de L (modelo Powell), contrastadas con reseñas de la marca (elevaescritorio, escritorioselevables)."
+  - "La nota valora el formato en L reversible y el equipamiento; penaliza la carga de gama media y el montaje laborioso del formato grande."
+scoreRationale:
+  velocidad: "Doble motor con marcha correcta; la velocidad exacta en mm/s no se publica para este modelo."
+  estabilidad: "Doble motor y estructura de acero para 80 kg; estable, aunque una superficie en L tan grande exige buen montaje."
+  capacidadCarga: "80 kg cubren un setup de doble monitor y periféricos; las versiones de triple motor suben hasta 150 kg."
+  rangoAltura: "67,5-115,5 cm es un rango de trabajo válido sentado y de pie a estaturas medias."
+  materiales: "Estructura de acero, tablero en L reversible, ganchos y bandeja de cables; buen equipamiento para el formato."
+  calidadPrecio: "Un elevable completo en forma de L de doble motor a precio de gama media-alta; se paga el formato y la superficie."
+fuentes:
+  - tipo: "oficial"
+    nombre: "FEZIBO ES — Escritorio Elevable en Altura en Forma de L para Esquina (Powell)"
+    url: "https://fezibo.es/products/escritorio-elevable-en-forma-de-l-para-esquina"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "elevaescritorio — Escritorios Elevables FEZIBO: análisis y modelos"
+    url: "https://elevaescritorio.com/fezibo/"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Carga de 80 kg (doble motor): las versiones de triple motor suben hasta 150 kg."
+  - "Superficie grande en L: montaje más laborioso que un escritorio recto."
+  - "La velocidad, el nivel de ruido, el USB y la garantía no constan con cifra: quedan en null."
+alternativas:
+  - slug: "fezibo-140x60"
+    motivo: "El FEZIBO recto de 140x60 si no necesitas la forma de L."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Más carga (160 kg) y 10 años de garantía en formato recto."
+  - slug: "flexispot-e7q"
+    motivo: "Estructura de cuatro patas si quieres montar un tablero grande propio con máxima carga."
+comunidad: "Las reseñas destacan lo bien que aprovecha una esquina, la comodidad del tablero en L reversible y detalles como los ganchos y la bandeja de cables. Las críticas van por el montaje, más laborioso al ser una superficie grande, y por la carga de gama media frente a las versiones de triple motor. Como elevable en L, la valoración es buena."
+paraQuienSi:
+  - "Quien tiene una esquina que aprovechar con mucha superficie"
+  - "Quien quiere un elevable completo en forma de L con doble motor"
+  - "Quien valora ganchos, bandeja de cables y tablero reversible"
+paraQuienNo:
+  - "Quien tiene poco espacio o quiere un escritorio recto"
+  - "Quien necesita más de 80 kg de carga (mira el triple motor)"
+  - "Quien quiere un montaje rápido y sencillo"
+puntosFuertes:
+  - "Formato en L reversible: aprovecha esquinas con mucha superficie"
+  - "Doble motor completo con tablero incluido"
+  - "3 memorias y anticolisión"
+  - "Ganchos para colgar y bandeja de gestión de cables"
+puntosDebiles:
+  - "Carga de 80 kg (gama media)"
+  - "Montaje laborioso por el tamaño en L"
+  - "Velocidad, USB y garantía no publicados con cifra"
+fuenteSpecs: "Specs de la ficha oficial de FEZIBO España del escritorio en forma de L (modelo Powell) y de reseñas: doble motor, altura 67,5-115,5 cm, carga 80 kg, estructura de acero, tablero en L reversible (montaje a izquierda o derecha) incluido, panel con 3 memorias, anticolisión, ganchos para colgar y bandeja de gestión de cables. FEZIBO ofrece además versiones de triple motor con hasta 150 kg. La velocidad en mm/s, el nivel de ruido, el puerto USB, la garantía, el peso, los segmentos de columna y las dimensiones exactas del tablero en L no constan con cifra, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "FEZIBO L-Shaped Electric Standing Desk (corner)"
+  tituloCorto: "FEZIBO L-shaped"
+  veredicto: "The L-shaped FEZIBO answers a problem straight frames don't solve: making the most of a corner with lots of work surface that also rises and lowers. It's a complete dual-motor desk, with a reversible L-shaped top (mounts left or right), three memories, anti-collision, hooks to hang things, and a cable management tray. It holds 80 kg and rises from about 67.5 to 115.5 cm. Its edge is unique in the catalog —L shape and large size— but you accept its limits: mid-range load and, being such a large surface, a more laborious assembly than a straight desk. FEZIBO also has triple-motor versions with more load (up to 150 kg) if you need it. For a home-office corner with dual monitors and room for everything, it's very practical."
+  idealPara: "Anyone with a corner to use who wants a large L-shaped standing desk, complete and dual-motor, for lots of work surface"
+  comunidad: "Reviews highlight how well it uses a corner, the convenience of the reversible L top, and details like the hooks and cable tray. Criticisms are the assembly, more laborious given the large surface, and the mid-range load versus the triple-motor versions. As an L-shaped standing desk, the rating is good."
+  resumenCompra:
+    mejorPara: "Making the most of a corner with a large L-shaped, complete, dual-motor standing desk."
+    evitarSi: "You have little space or want a simple-to-assemble straight desk."
+    alternativaDirecta: "FEZIBO 140x60 straight if you don't need the L shape; Maidesite T2 Pro Plus if you prioritize load and warranty over format."
+    decisionRapida: "The complete L-shaped standing desk for corners, with dual motor, hooks, and a cable tray; the catch is mid-range load and a large assembly."
+  puntosFuertes:
+    - "Reversible L format: uses corners with lots of surface"
+    - "Complete dual motor with tabletop included"
+    - "3 memories and anti-collision"
+    - "Hooks to hang things and cable management tray"
+  puntosDebiles:
+    - "80 kg load (mid-range)"
+    - "Laborious assembly due to the L size"
+    - "Speed, USB, and warranty not published as figures"
+  paraQuienSi:
+    - "Anyone with a corner to use for lots of surface"
+    - "Anyone who wants a complete L-shaped dual-motor standing desk"
+    - "Anyone who values hooks, a cable tray, and a reversible top"
+  paraQuienNo:
+    - "Anyone with little space or who wants a straight desk"
+    - "Anyone who needs more than 80 kg (see the triple motor)"
+    - "Anyone who wants a quick, simple assembly"
+calidadDatos:
+  score: 61
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 67.5
+  alturaMaxCm: 115.5
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 3
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

@@ -1,0 +1,143 @@
+tipo: "escritorio"
+nombre: "Costway Escritorio Elevable Eléctrico 120x60 cm con Tablero y USB"
+tituloCorto: "Costway 120x60"
+marca: "Costway"
+imagen: "/img/productos/costway-120x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico Costway de 120x60 cm con tablero, panel de 4 memorias, puerto USB y ganchos"
+tramoPrecio: 2
+precioMin: 150
+precioMax: 150
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6
+  capacidadCarga: 6.5
+  rangoAltura: 7
+  materiales: 6.5
+  calidadPrecio: 7.5
+amazon:
+  asin: "B0DGG91LBG"
+  buscar: "Costway escritorio elevable eléctrico 120x60 con tablero USB 4 memorias anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.costway.es"
+idealPara: "Quien quiere un escritorio elevable completo de precio contenido, con 4 memorias, puerto USB, anticolisión ajustable y ganchos, para un uso normal"
+veredicto: "El Costway 120x60 es un elevable completo de gama media pensado para cubrir lo esencial sin complicarse: tablero incluido, panel con cuatro memorias, puerto USB, anticolisión regulable en varios niveles de sensibilidad y un par de ganchos para colgar cosas. Es de motor único —sube a unos 24 mm/s— pero con un rango generoso de 73 a 122 cm que da holgura tanto sentado como de pie, y aguanta 80 kg. Frente a los best-sellers de entrada (Devoko, SONGMICS), compite de tú a tú en equipamiento; frente a los de doble motor, cede en velocidad y firmeza. Costway lo vende tanto en su tienda como en Amazon, con varias medidas y colores. No es un escritorio para montajes pesados ni para subir y bajar todo el día, pero como completo equilibrado para teletrabajar, cumple sin sustos."
+resumenCompra:
+  mejorPara: "Un escritorio completo de precio contenido con 4 memorias, USB y anticolisión ajustable, para un uso normal."
+  evitarSi: "Necesitas doble motor, más carga o subir y bajar constantemente."
+  alternativaDirecta: "SONGMICS LSD132 si quieres USB-C y más variedad de tamaños; Devoko 120x60 si buscas gastar aún menos."
+  decisionRapida: "Completo de un motor con 4 memorias, USB, anticolisión ajustable y buen rango de altura; el pero es el motor único y los 80 kg."
+metodologia:
+  - "Specs de la ficha de Costway en su tienda (costway.es) y en Amazon.es para el modelo 120x60 con 4 memorias y USB, contrastadas entre variantes de la marca."
+  - "La nota valora el equipamiento (4 memorias, USB, anticolisión ajustable) y el rango de altura al precio; penaliza el motor único y la carga limitada."
+scoreRationale:
+  velocidad: "Unos 24 mm/s con motor único: lento, propio de la gama de entrada-media."
+  estabilidad: "Estructura de acero correcta para 80 kg, con el tambaleo esperable de un solo motor en altura alta."
+  capacidadCarga: "80 kg cubren monitor, portátil y periféricos; corto para montajes de varios monitores pesados."
+  rangoAltura: "73-122 cm es un rango generoso, con buena holgura tanto sentado como de pie."
+  materiales: "Acero y tablero de aglomerado con 4 memorias, USB, anticolisión ajustable y ganchos; buen equipamiento para el precio."
+  calidadPrecio: "Escritorio completo bien equipado a precio de gama media; competitivo, aunque de un solo motor."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Costway ES — Escritorio Eléctrico de Oficina Mesa Elevable con Tablero, 4 Memorias, 2 Ganchos (120x60)"
+    url: "https://www.costway.es/escritorio-electrico-de-oficina-mesa-elevable-con-tablero-4-funciones-de-memoria-2-ganchos-para-colgar-120-x-60-x-73-122-cm.html"
+    fechaConsulta: "2026-07-08"
+  - tipo: "tienda"
+    nombre: "Costway ES — Escritorio Elevable Eléctrico con Puerto USB, anticolisión 9 niveles (120x60)"
+    url: "https://www.costway.es/costway-escritorio-elevable-electrico-con-puerto-usb-mesa-de-ordenador-ergonomico-altura-regulable-para-casa-oficina-marron-120-x-60-x-73-122-cm.html"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Motor único: sube lento (~24 mm/s) frente a los de doble motor."
+  - "Carga de 80 kg: insuficiente para montajes de varios monitores pesados."
+  - "El nivel de ruido, la garantía y el peso no constan con cifra: quedan en null."
+alternativas:
+  - slug: "songmics-lsd132"
+    motivo: "Completo de un motor con USB-C, 4 memorias y más variedad de tamaños."
+  - slug: "devoko-120x60"
+    motivo: "Completo más barato si quieres gastar lo mínimo."
+  - slug: "maidesite-sn1"
+    motivo: "Doble motor completo si prefieres más suavidad."
+comunidad: "Las reseñas destacan el buen equipamiento para el precio —4 memorias, USB, anticolisión ajustable y ganchos— y el rango de altura generoso. Las críticas van por la velocidad del motor único y por la estabilidad justa en altura máxima. Para un home office normal, la valoración es correcta."
+paraQuienSi:
+  - "Quien quiere un completo bien equipado a precio contenido"
+  - "Quien valora 4 memorias, USB y anticolisión ajustable"
+  - "Quien agradece un rango de altura amplio (73-122 cm)"
+paraQuienNo:
+  - "Quien quiere doble motor o subir y bajar constantemente"
+  - "Quien monta varios monitores o equipo pesado"
+  - "Quien busca la firmeza de la gama alta"
+puntosFuertes:
+  - "Escritorio completo con tablero, 4 memorias y USB"
+  - "Anticolisión regulable en varios niveles de sensibilidad"
+  - "Rango de altura amplio (73-122 cm)"
+  - "Ganchos para colgar y varias medidas/colores"
+puntosDebiles:
+  - "Motor único y subida lenta (~24 mm/s)"
+  - "Carga limitada a 80 kg"
+  - "Estabilidad justa en altura máxima"
+fuenteSpecs: "Specs de la ficha de Costway en su tienda (costway.es) y en Amazon.es para el modelo 120x60 con 4 memorias y USB: motor único, velocidad unos 24 mm/s, altura 73-122 cm, carga 80 kg, estructura de acero, tablero incluido de 120x60 cm, panel con 4 memorias, puerto USB, anticolisión regulable en varios niveles de sensibilidad, 2 ganchos para colgar. El nivel de ruido, la garantía, el peso y los segmentos de columna no constan con cifra, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Costway Electric Standing Desk 120x60 cm with Tabletop and USB"
+  tituloCorto: "Costway 120x60"
+  veredicto: "The Costway 120x60 is a mid-range complete standing desk built to cover the essentials without fuss: tabletop included, a four-memory panel, a USB port, anti-collision adjustable across several sensitivity levels, and a pair of hooks to hang things. It's single-motor —rising at about 24 mm/s— but with a generous 73 to 122 cm range that gives headroom both seated and standing, and it holds 80 kg. Against the entry best-sellers (Devoko, SONGMICS), it competes head-to-head on kit; against dual-motor desks, it gives up speed and firmness. Costway sells it both in its store and on Amazon, in several sizes and colors. It's not a desk for heavy setups or for raising and lowering all day, but as a balanced complete desk for remote work, it delivers without surprises."
+  idealPara: "Anyone who wants a complete standing desk at a contained price, with 4 memories, USB, adjustable anti-collision, and hooks, for normal use"
+  comunidad: "Reviews highlight the good kit for the price —4 memories, USB, adjustable anti-collision, and hooks— and the generous height range. Criticisms are the single-motor speed and the tight stability at full height. For a normal home office, the rating is fair."
+  resumenCompra:
+    mejorPara: "A complete, well-equipped standing desk at a contained price with 4 memories, USB, and adjustable anti-collision, for normal use."
+    evitarSi: "You need a dual motor, more load, or to raise and lower constantly."
+    alternativaDirecta: "SONGMICS LSD132 for USB-C and more size variety; Devoko 120x60 to spend even less."
+    decisionRapida: "A single-motor complete desk with 4 memories, USB, adjustable anti-collision, and a good height range; the catch is the single motor and 80 kg."
+  puntosFuertes:
+    - "Complete desk with tabletop, 4 memories, and USB"
+    - "Anti-collision adjustable across several sensitivity levels"
+    - "Wide height range (73-122 cm)"
+    - "Hooks to hang things and several sizes/colors"
+  puntosDebiles:
+    - "Single motor and slow rise (~24 mm/s)"
+    - "Load limited to 80 kg"
+    - "Tight stability at full height"
+  paraQuienSi:
+    - "Anyone who wants a well-equipped complete desk at a contained price"
+    - "Anyone who values 4 memories, USB, and adjustable anti-collision"
+    - "Anyone who appreciates a wide height range (73-122 cm)"
+  paraQuienNo:
+    - "Anyone who wants a dual motor or to raise and lower constantly"
+    - "Anyone running several monitors or heavy gear"
+    - "Anyone after high-end firmness"
+calidadDatos:
+  score: 77
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 24
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 73
+  alturaMaxCm: 122
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

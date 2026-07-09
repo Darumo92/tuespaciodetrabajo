@@ -1,0 +1,145 @@
+tipo: "escritorio"
+nombre: "IKEA TROTTEN Escritorio Elevable Manual con Manivela"
+tituloCorto: "IKEA Trotten"
+marca: "IKEA"
+imagen: "/img/productos/ikea-trotten.avif"
+imagenAlt: "Escritorio elevable manual IKEA TROTTEN con manivela reversible bajo el tablero"
+tramoPrecio: 2
+precioMin: 189
+precioMax: 189
+valoracion: null
+valoraciones:
+  velocidad: 3
+  estabilidad: 6.5
+  capacidadCarga: 5
+  rangoAltura: 6.5
+  materiales: 7
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: ""
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.ikea.com/es/es/p/trotten-escritorio-elevable-blanco-s99429578/"
+idealPara: "Quien quiere un elevable de IKEA barato y sin electrónica, con manivela reversible y 10 años de garantía, para alternar sentado y de pie sin depender de un enchufe"
+veredicto: "El TROTTEN es la puerta de entrada de IKEA a los escritorios elevables y su gracia es hacer lo justo por poco dinero: un escritorio completo, de manivela manual, que sube de 70 a 120 cm girando el mango, sin motor ni electrónica que se estropee ni cables que enchufar. La manivela se monta a izquierda o derecha y se esconde bajo el tablero cuando no se usa, y las patas se regulan para nivelarlo en suelos irregulares. Como todo IKEA de oficina, llega con 10 años de garantía y homologación profesional (EN 527-2 y BIFMA). Los peros son los propios de un manual: aguanta 50 kg —lo justo para un monitor y poco más— y cambiar de altura cuesta girar unas cuantas vueltas, así que no es para quien alterna postura a todas horas. Pero como elevable de marca, fiable y barato para empezar, es de lo más sensato."
+resumenCompra:
+  mejorPara: "Un elevable de IKEA barato y sin electrónica, con manivela y 10 años de garantía, para un uso tranquilo."
+  evitarSi: "Alternas sentado-de pie muchas veces al día o cargas más de 50 kg: mejor un eléctrico."
+  alternativaDirecta: "IKEA MITTZON o IDÅSEN si quieres motor de IKEA; Duronic TM00 si buscas un marco manual aún más barato sin tablero."
+  decisionRapida: "El elevable de IKEA más barato, manual y fiable, con 10 años de garantía; el pero es girar la manivela y los 50 kg de carga."
+metodologia:
+  - "Specs y precio de la ficha oficial de IKEA España del TROTTEN (120x70 cm), contrastadas con comparativas de elevables manuales (Ofitempo)."
+  - "La nota valora el precio, la fiabilidad sin electrónica y el respaldo de IKEA; penaliza que sea manual (lento) y la carga limitada."
+scoreRationale:
+  velocidad: "Ajuste manual por manivela: cambiar de altura cuesta varias vueltas, lo más lento frente a cualquier motor."
+  estabilidad: "Homologado para uso profesional (EN 527-2 y BIFMA) con patas regulables para nivelar; estable para su carga."
+  capacidadCarga: "50 kg es una carga baja: cubre un monitor y poco más, no montajes con equipo pesado."
+  rangoAltura: "70-120 cm es un rango de trabajo válido a estaturas medias."
+  materiales: "Acabado IKEA con manivela reversible ocultable y patas niveladoras; construcción fiable sin electrónica."
+  calidadPrecio: "189 EUR por un elevable completo de marca con 10 años de garantía es muy competitivo dentro de lo manual."
+fuentes:
+  - tipo: "oficial"
+    nombre: "IKEA ES — TROTTEN escritorio elevable (120x70 cm)"
+    url: "https://www.ikea.com/es/es/p/trotten-escritorio-elevable-blanco-s99429578/"
+    fechaConsulta: "2026-07-08"
+  - tipo: "review"
+    nombre: "Ofitempo — Comparativa escritorio regulable en altura manual"
+    url: "https://ofitempo.com/escritorio-regulable-altura-manual/"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Es manual: cambiar de altura exige girar la manivela, incómodo si alternas postura a menudo."
+  - "Carga de 50 kg: baja, solo para un monitor y poco más."
+  - "IKEA no publica velocidad ni peso del producto: quedan en null."
+alternativas:
+  - slug: "ikea-mittzon"
+    motivo: "Doble motor de IKEA si quieres subir y bajar con un botón."
+  - slug: "duronic-tm00"
+    motivo: "Marco manual aún más barato si te vale poner tu propio tablero."
+  - slug: "ikea-idasen"
+    motivo: "El eléctrico premium de IKEA con app si el presupuesto sube."
+comunidad: "Las reseñas destacan lo barato y fiable que es para ser de IKEA, con 10 años de garantía, y detalles como la manivela reversible ocultable y las patas niveladoras. Las críticas son las de cualquier manual: girar la manivela cansa si se cambia de postura a menudo y la carga es baja. Como primer elevable de marca, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere un elevable de IKEA barato y sin electrónica"
+  - "Quien no quiere depender de un enchufe ni de motores"
+  - "Quien hace un uso tranquilo, sin alternar postura a todas horas"
+paraQuienNo:
+  - "Quien alterna sentado-de pie muchas veces al día"
+  - "Quien carga más de 50 kg"
+  - "Quien quiere memorias, subida rápida o motor"
+puntosFuertes:
+  - "Manual: sin motor ni electrónica que falle, muy fiable"
+  - "Manivela reversible que se esconde bajo el tablero"
+  - "Marca IKEA con 10 años de garantía y certificación de oficina"
+  - "Precio bajo (189 EUR) para un completo de marca"
+puntosDebiles:
+  - "Cambiar de altura exige girar la manivela (lento)"
+  - "Carga baja de 50 kg"
+  - "Sin memorias ni funciones eléctricas"
+fuenteSpecs: "Specs y precio de la ficha oficial de IKEA España del TROTTEN (120x70 cm): mecanismo manual por manivela reversible (montaje a izquierda o derecha, ocultable bajo el tablero), altura 70-120 cm, carga 50 kg, tablero incluido de 120x70 cm (también 160x80), patas regulables de 115 a 138 cm de ancho y niveladoras, homologado para uso profesional (EN 527-2 y ANSI/BIFMA X5.5), garantía de 10 años, precio 189 EUR. Al ser manual no aplican velocidad, ruido, memorias, anticolisión ni USB; el peso del producto no consta, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "IKEA TROTTEN Manual Crank Standing Desk"
+  tituloCorto: "IKEA Trotten"
+  veredicto: "The TROTTEN is IKEA's entry into standing desks, and its charm is doing just enough for little money: a complete desk, manual crank, that rises from 70 to 120 cm by turning the handle, with no motor or electronics to break and no cables to plug in. The crank mounts left or right and tucks under the top when not in use, and the legs adjust to level it on uneven floors. Like all IKEA office furniture, it comes with a 10-year warranty and professional certification (EN 527-2 and BIFMA). The catches are those of any manual: it holds 50 kg —enough for a monitor and little more— and changing height takes a few turns, so it's not for anyone switching posture constantly. But as a reliable, cheap brand-name standing desk to start with, it's very sensible."
+  idealPara: "Anyone who wants a cheap, electronics-free IKEA standing desk, with a reversible crank and a 10-year warranty, to switch sit-stand without relying on an outlet"
+  comunidad: "Reviews highlight how cheap and reliable it is for an IKEA product, with a 10-year warranty, and details like the reversible tuck-away crank and leveling legs. Criticisms are those of any manual: cranking gets tiring if you switch posture often, and load is low. As a first brand-name standing desk, the rating is good."
+  resumenCompra:
+    mejorPara: "A cheap, electronics-free IKEA standing desk, with a crank and a 10-year warranty, for calm use."
+    evitarSi: "You switch sit-stand many times a day or load over 50 kg: go electric."
+    alternativaDirecta: "IKEA MITTZON or IDÅSEN for an IKEA motor; Duronic TM00 for an even cheaper manual frame without a top."
+    decisionRapida: "IKEA's cheapest, reliable manual standing desk with a 10-year warranty; the catch is cranking the handle and the 50 kg load."
+  puntosFuertes:
+    - "Manual: no motor or electronics to fail, very reliable"
+    - "Reversible crank that hides under the top"
+    - "IKEA brand with a 10-year warranty and office certification"
+    - "Low price (189 EUR) for a complete brand-name desk"
+  puntosDebiles:
+    - "Changing height means cranking the handle (slow)"
+    - "Low 50 kg load"
+    - "No memories or electronic features"
+  paraQuienSi:
+    - "Anyone who wants a cheap, electronics-free IKEA standing desk"
+    - "Anyone who doesn't want to rely on an outlet or motors"
+    - "Anyone with calm use, not switching posture constantly"
+  paraQuienNo:
+    - "Anyone who switches sit-stand many times a day"
+    - "Anyone loading over 50 kg"
+    - "Anyone who wants memories, fast rise, or a motor"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "manual"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: 2
+  alturaMinCm: 70
+  alturaMaxCm: 120
+  cargaMaxKg: 50
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 70
+  tableroGrosorCm: null
+  pantallaControl: "ninguna"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: 10
+  certificacionTuv: null
+  certificacionEmc: null

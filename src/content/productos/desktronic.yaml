@@ -1,0 +1,141 @@
+tipo: "escritorio"
+nombre: "Desktronic Estructura Elevable Eléctrica con Pantalla Táctil"
+tituloCorto: "Desktronic"
+marca: "Desktronic"
+imagen: "/img/productos/desktronic.jpg"
+imagenAlt: "Estructura elevable eléctrica Desktronic de doble motor con pantalla táctil y puertos de carga USB"
+tramoPrecio: 2
+precioMin: 249.99
+precioMax: 249.99
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 7
+  capacidadCarga: 6.5
+  rangoAltura: 6.5
+  materiales: 7.5
+  calidadPrecio: 7.5
+amazon:
+  asin: "B08XNVZ3B3"
+  buscar: "Desktronic estructura escritorio elevable doble motor pantalla táctil USB-C"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere una estructura de doble motor con pantalla táctil y puertos USB/USB-C, bien acabada y sin tambaleo, para poner su propio tablero"
+veredicto: "El Desktronic es una estructura elevable de doble motor que juega la carta del acabado: pantalla táctil con tres memorias, puertos de carga USB y USB-C integrados y un marco de acero con conectores de columna reforzados que la marca dice probados 100.000 veces. Sube y baja sin el tambaleo típico de las estructuras baratas, aguanta 80 kg y cubre un rango de unos 72 a 118 cm. Frente a los marcos de doble motor más básicos, gana en electrónica y en la sensación de calidad; frente a la gama alta de FlexiSpot o Maidesite, se queda por debajo en carga y en garantía documentada. Como el resto de estructuras, se vende sin tablero, así que hay que sumar ese gasto. Es una buena base de doble motor para quien valora la pantalla táctil y los USB integrados sin irse a la gama premium."
+resumenCompra:
+  mejorPara: "Una estructura de doble motor bien acabada, con pantalla táctil y USB/USB-C, para poner tu propio tablero."
+  evitarSi: "Necesitas mucha carga o un escritorio completo listo para usar."
+  alternativaDirecta: "FlexiSpot EC5 Plus si quieres más carga (120 kg) de doble motor; Maidesite T1 Pro si te vale un motor con 100 kg y 10 años de garantía."
+  decisionRapida: "Estructura de doble motor con pantalla táctil y USB/USB-C, sin tambaleo; el pero es la carga de 80 kg y que va sin tablero."
+metodologia:
+  - "Specs de la ficha de Desktronic en Amazon.es, contrastadas con la descripción de producto de la marca."
+  - "La nota valora la electrónica (pantalla táctil, USB-C) y el acabado sin tambaleo; penaliza la carga limitada y que el tablero se compre aparte."
+scoreRationale:
+  velocidad: "Doble motor con marcha suave; la velocidad exacta en mm/s no se publica, se toma como correcta para la gama."
+  estabilidad: "Marco de acero con conectores de columna reforzados probados 100.000 veces; sin el tambaleo de las estructuras baratas."
+  capacidadCarga: "80 kg cubren monitor, portátil y periféricos; corto para montajes de varios monitores pesados."
+  rangoAltura: "Unos 72-118 cm es un rango de trabajo válido a estaturas medias."
+  materiales: "Acero con pantalla táctil, tres memorias y puertos USB/USB-C integrados; acabado por encima de la media de su precio."
+  calidadPrecio: "Doble motor con buena electrónica a precio de gama media; hay que sumar el tablero al desembolso."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — Desktronic Estructura de Escritorio Eléctrica Ajustable con Pantalla Táctil y Puertos de Carga"
+    url: "https://www.amazon.es/Desktronic-Estructura-escritorio-el%C3%A9ctrica-ajustable/dp/B08XNVZ3B3"
+    fechaConsulta: "2026-07-08"
+limitaciones:
+  - "Se vende solo estructura: el tablero es un gasto aparte."
+  - "Carga de 80 kg: insuficiente para montajes de varios monitores pesados."
+  - "La velocidad, la garantía y los segmentos de columna no constan con cifra: quedan en null."
+alternativas:
+  - slug: "flexispot-ec5-plus"
+    motivo: "Doble motor con más carga (120 kg) y rango más amplio."
+  - slug: "maidesite-t1-pro"
+    motivo: "Marco de un motor con 100 kg y 10 años de garantía documentada."
+  - slug: "flexispot-e8"
+    motivo: "Estructura premium si buscas rango y carga altos."
+comunidad: "Las reseñas destacan la pantalla táctil, los puertos USB y USB-C integrados y lo estable que se mantiene sin tambaleo, además de un montaje razonable. Las críticas van por la carga limitada frente a la gama alta y por comprar el tablero aparte. Para el precio, la valoración es buena."
+paraQuienSi:
+  - "Quien quiere una estructura de doble motor con pantalla táctil y USB/USB-C"
+  - "Quien valora un acabado sin tambaleo por encima de la media"
+  - "Quien elige su propio tablero"
+paraQuienNo:
+  - "Quien necesita más de 80 kg de carga"
+  - "Quien quiere un escritorio completo listo para usar"
+  - "Quien busca la garantía larga y documentada de la gama alta"
+puntosFuertes:
+  - "Doble motor con pantalla táctil y 3 memorias"
+  - "Puertos de carga USB y USB-C integrados"
+  - "Marco de acero sin tambaleo, probado 100.000 veces"
+  - "Buen acabado para su precio"
+puntosDebiles:
+  - "Carga limitada a 80 kg"
+  - "Se vende sin tablero: gasto adicional"
+  - "Velocidad y garantía no publicadas con cifra"
+fuenteSpecs: "Specs de la ficha de Desktronic en Amazon.es y de la descripción de la marca: doble motor, altura de unos 72-118 cm, carga 80 kg (176 lb), estructura de acero con conectores de columna reforzados probados 100.000 veces y motor probado 50.000 veces, pantalla táctil con 3 memorias, puertos de carga USB y USB-C. La velocidad en mm/s, el nivel de ruido, la garantía, el peso, los segmentos de columna y el tablero (se vende sin él) no constan o no aplican, por lo que quedan en null."
+verificadoEn: "2026-07-08"
+en:
+  nombreComercial: "Desktronic Electric Standing Desk Frame with Touch Screen"
+  tituloCorto: "Desktronic"
+  veredicto: "The Desktronic is a dual-motor standing desk frame that plays the finish card: a touch screen with three memories, built-in USB and USB-C charging ports, and a steel frame with reinforced column connectors the brand says are tested 100,000 times. It rises and lowers without the wobble typical of cheap frames, holds 80 kg, and covers roughly 72 to 118 cm. Against more basic dual-motor frames, it wins on electronics and the sense of quality; against FlexiSpot's or Maidesite's high end, it falls short on load and documented warranty. Like every frame, it's sold without a top, so you have to budget for that. It's a good dual-motor base for anyone who values the touch screen and built-in USB without going premium."
+  idealPara: "Anyone who wants a dual-motor frame with a touch screen and USB/USB-C, well finished and wobble-free, for their own tabletop"
+  comunidad: "Reviews highlight the touch screen, the built-in USB and USB-C ports, and how stable it stays without wobble, plus a reasonable assembly. Criticisms are the limited load versus the high end and buying the top separately. For the price, the rating is good."
+  resumenCompra:
+    mejorPara: "A well-finished dual-motor frame with a touch screen and USB/USB-C, for your own top."
+    evitarSi: "You need heavy load or a complete, ready-to-use desk."
+    alternativaDirecta: "FlexiSpot EC5 Plus for more dual-motor load (120 kg); Maidesite T1 Pro if a single motor with 100 kg and a 10-year warranty is enough."
+    decisionRapida: "A dual-motor frame with touch screen and USB/USB-C, wobble-free; the catch is the 80 kg load and no top."
+  puntosFuertes:
+    - "Dual motor with touch screen and 3 memories"
+    - "Built-in USB and USB-C charging ports"
+    - "Steel frame with no wobble, tested 100,000 times"
+    - "Good finish for the price"
+  puntosDebiles:
+    - "Load limited to 80 kg"
+    - "Sold without a tabletop: extra cost"
+    - "Speed and warranty not published as figures"
+  paraQuienSi:
+    - "Anyone who wants a dual-motor frame with a touch screen and USB/USB-C"
+    - "Anyone who values an above-average, wobble-free finish"
+    - "Anyone picking their own tabletop"
+  paraQuienNo:
+    - "Anyone who needs more than 80 kg of load"
+    - "Anyone who wants a complete, ready-to-use desk"
+    - "Anyone after the high end's long, documented warranty"
+calidadDatos:
+  score: 63
+  confianza: "medio"
+  enriquecidoEn: "2026-07-09"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 118
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 3
+  anticolision: null
+  puertoUsb: true
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null
