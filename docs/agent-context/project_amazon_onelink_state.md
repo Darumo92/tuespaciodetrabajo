@@ -2,6 +2,10 @@
 
 Última actualización: 2026-06-22
 
+## Confirmación más reciente (2026-07-10)
+
+- El usuario confirma que OneLink ya está implementado. Esta confirmación prevalece sobre las notas anteriores que trataban la configuración US/CA como pendiente; cualquier auditoría de precios debe seguir verificando por separado listing, importe, moneda y disponibilidad en cada mercado.
+
 ## Estado confirmado por el usuario
 
 - El usuario ha registrado cuentas de Amazon Afiliados para todos los países disponibles que quería usar con OneLink.

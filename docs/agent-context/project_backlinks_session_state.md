@@ -5,6 +5,84 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-07-10 - plan Reddit/Quora parcial (2 de 4 publicados)
+
+Contexto operativo:
+- Karma via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `56`, total `57`. Subida +3 desde 09 jul.
+- Mantener regla: maximo **1 enlace propio en Reddit por tanda**, espaciado (no en tandas consecutivas).
+- Hoy sin link en Reddit (la tanda 09 jul llevo link).
+
+Publicados hoy y visibles en old.reddit:
+
+1. `r/OfficeChairs` `1ush0zh` — SIN link, EN
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1ush0zh/what_chair_would_you_pick_for_work_and_gaming_at/
+   - Visible como `owoffaz`: https://www.reddit.com/r/OfficeChairs/comments/1ush0zh/what_chair_would_you_pick_for_work_and_gaming_at/owoffaz/
+   - OP: PapaScho, 6'3", busca silla para home office + gaming, duda Libernovo Maxis vs Secretlab Atlas. Enfoque: seat height como dealbreaker, synchro-tilt vs recline gaming, Leap/Fern usadas como alternativa.
+
+2. Quora ES — CON link
+   - URL: https://es.quora.com/A-qué-distancia-es-recomendable-usar-el-monitor-de-la-computadrora-pc
+   - Publicacion confirmada manualmente por usuario.
+   - Pregunta nueva no usada antes. Link a `/accesorios/mejor-monitor-trabajar-desde-casa/`.
+
+Pendiente (espaciar publicacion):
+- `r/Ergonomics` `1uqmnrd` — SIN link. OP merry_woki, frustrado con sillas. Enfoque: desk height como root cause, ajustes no usados.
+- `r/Ergonomics` `1uposfw` — SIN link. OP Stankbananas, pregunta gear upgrades. Enfoque: monitor height, lumbar agresivo, anti-fatigue mat.
+
+## Update 2026-07-09 - plan Reddit/Quora ejecutado
+
+Contexto operativo:
+- Karma via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `53`, total `54`. Sin cambio inmediato post-publicacion (esperable).
+- Mantener regla: maximo **1 enlace propio en Reddit por tanda**, solo si encaje fuerte. 2+ comentarios sin link.
+- El plan del 2026-07-06 quedo ejecutado en su momento; hoy es tanda nueva.
+
+Publicados hoy y visibles en old.reddit:
+
+1. `r/askspain` `1upqhmn` — SIN link, ES
+   - URL: https://www.reddit.com/r/askspain/comments/1upqhmn/recomendación_silla_oficina/
+   - Visible como `owgc8n4`: https://www.reddit.com/r/askspain/comments/1upqhmn/recomendación_silla_oficina/owgc8n4/
+   - OP: 1.77m/90kg, ya compro silla Amazon. Enfoque: chequeos durante ventana de devolucion (profundidad asiento, lumbar, reposabrazos).
+
+2. `r/OfficeChairs` `1urhz4i` — SIN link, EN
+   - URL: https://www.reddit.com/r/OfficeChairs/comments/1urhz4i/omni_se_or_refurbished_leap_v2/
+   - Visible como `owgjbgf`: https://www.reddit.com/r/OfficeChairs/comments/1urhz4i/omni_se_or_refurbished_leap_v2/owgjbgf/
+   - OP: duda Omni SE vs Leap V2 refurb. Enfoque: tradeoff new-gamble vs known-refurb, seat depth como dealbreaker, orden de compra.
+
+3. `r/homeoffice` `1uq6un5` — CON link, EN
+   - URL: https://www.reddit.com/r/homeoffice/comments/1uq6un5/working_on_setting_up_a_home_office_and_need_desk/
+   - Visible como `owgvk5y`: https://www.reddit.com/r/homeoffice/comments/1uq6un5/working_on_setting_up_a_home_office_and_need_desk/owgvk5y/
+   - OP: setup from scratch, oak floors, fireplace, executive feel. Enfoque: escritorio madera maciza 60-72", profundidad minima 28-30", opcion standing frame + butcher block. Link a `/en/guides/how-to-set-up-an-ergonomic-home-office/`.
+
+4. Quora ES — CON link
+   - URL: https://es.quora.com/Qué-es-mejor-a-largo-plazo-para-alguien-que-trabaja-de-8-a-10-horas-al-día-trabajando-frente-a-una-PC-un-escritorio-o-un-escritorio-de-pie
+   - Publicacion confirmada manualmente por usuario; no verificable desde entorno agente por challenge/403.
+   - Pregunta nueva no usada antes. Link a `/escritorios/mejor-escritorio-elevable-electrico/`.
+
+Pendiente: verificar replies en 24-48h. Mantener 1 link por tanda.
+
+## Update 2026-07-06 - control SEO + plan Reddit/Quora del dia
+
+Contexto recovery:
+- GSC `2026-06-03` -> `2026-07-05`: 0 clics, 1 impresion total, solo en home (`2026-06-30`). Internas siguen sin recovery.
+- URL test `/guias/ergonomia-teletrabajo-postura-correcta/`: `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-06-03T10:43:49Z`, referrer Quora ES detectado.
+- Trust pages `/metodologia-editorial/`, `/como-probamos-productos/`, `/sobre-mi/`: rastreadas pero no indexadas.
+- GA4 en el mismo periodo no devolvio sesiones. Cloudflare MCP sigue con `Authentication error` (`10000`).
+- Decision: mantener pausa editorial y ejecutar backlinks, no articulos nuevos.
+
+Contexto Reddit:
+- Karma verificado via `old.reddit.com/user/Dear_Potato8535/`: post `1`, comment `54`, total `55`.
+- Regla actual: permitido usar maximo **1 enlace propio en Reddit por tanda**, solo si el encaje es fuerte. Mantener 2 comentarios sin link para no cambiar el patron de cuenta.
+- Recon old.reddit `2026-07-06`:
+  - `r/Ergonomics` `1uoqscq` — OP pregunta si conviene invertir en gear ergonomico o moverse mas. Hilo nuevo, 1 punto, sin comentarios visibles en old.reddit al revisar. Candidato con link opcional a guia EN general solo si se responde de forma muy poco promocional.
+  - `r/OfficeChairs` `1uoqt68` — OP petite woman, price not issue, probo Musso E80 Muse y busca silla ergonomica. Hilo nuevo con engagement inicial. Candidato SIN link.
+  - `r/homeoffice` `1unrvb8` — OP tiene allowance de £120 / ₹15,000 para portable monitor, wireless mouse y over-ear headphones compatibles con MacBook. RSS verifico body completo; candidato SIN link.
+  - `r/StandingDesks` `1unphpb` — OP tiene tablero custom 98"x26"x1" y busca frame para standing desk. Hilo con body en meta; candidato backup SIN link.
+  - `r/Ergonomics` `1uo5pz3` — posture correctors vs desk ergonomics; ya tiene respuesta de otro usuario, candidato backup SIN link si se quiere comentario corto.
+- Plan recomendado hoy:
+  1. Publicar en `r/Ergonomics` `1uoqscq` con link propio opcional a `/en/guides/how-to-set-up-an-ergonomic-home-office/`.
+  2. Publicar en `r/OfficeChairs` `1uoqt68` sin link.
+  3. Publicar en `r/homeoffice` `1unrvb8` sin link.
+  4. Quora EN opcional si han pasado 24h+ desde la ultima respuesta: usar candidato ya verificado `https://www.quora.com/What-are-the-pros-and-cons-of-a-standing-desk-vs-a-sitting-desk-for-working-and-gaming` -> `/en/guides/are-standing-desks-worth-it/`. Quora directo no verificable por bloqueo; pedir URL exacta de answer tras publicacion.
+
 ## Update 2026-07-03 - primer plan con link propio en Reddit
 
 Contexto operativo:

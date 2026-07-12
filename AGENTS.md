@@ -112,6 +112,7 @@ Cuando haya información nueva que deba persistir: escribir/actualizar en `docs/
 - **Imágenes artículo: máximo 800px ancho**
 - **COHERENCIA OBLIGATORIA entre artículos** — leer artículos existentes antes de escribir experiencias personales, datos del autor, anécdotas
 - **Humanizar todo contenido público** antes de publicar (aplicar `.seo-engine/templates/humanization-guide.md`)
+- **Siempre presentar borradores con URL pública** — Reddit con `www.reddit.com` (no `old.reddit.com`) y Quora con URL completa. El link old.reddit se usa solo para recon interno, nunca para entregar al usuario.
 
 ---
 

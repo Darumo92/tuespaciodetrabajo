@@ -4,6 +4,21 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Update 2026-07-06 — control recovery + plan del dia
+
+- GSC Search Analytics `2026-06-03` -> `2026-07-05`:
+  - dimension `date`: 0 clics; solo 1 impresion el `2026-06-30`.
+  - dimension `page`: la unica URL con impresion fue `https://tuespaciodetrabajo.com/`.
+  - Lectura: no hay recovery de internas; la pausa editorial sigue vigente.
+- GSC URL Inspection live:
+  - `/guias/ergonomia-teletrabajo-postura-correcta/`: `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-06-03T10:43:49Z`, canonical propia, fetch OK, robots allowed. Referrer detectado: Quora ES `Qué aspectos hay que tener en cuenta a la hora de comprar una silla ergonómica para escritorio`.
+  - `/metodologia-editorial/`: `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-06-01T14:37:22Z`, canonical propia, fetch OK, robots allowed.
+  - `/como-probamos-productos/`: `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-06-03T10:41:49Z`, canonical propia, fetch OK, robots allowed.
+  - `/sobre-mi/`: `Rastreada: actualmente sin indexar`, ultimo rastreo `2026-06-03T10:41:49Z`, canonical propia, fetch OK, robots allowed. Referrers internos detectados: `/guias/`, `/cookies/`, `/`.
+- GA4 `2026-06-03` -> `2026-07-05`: `run_report` por `sessionDefaultChannelGroup/sourceMedium` no devolvio filas; sin sesiones medibles en el periodo.
+- Cloudflare MCP/API: sigue fallando con `Authentication error` (`10000`). No cambia el diagnostico porque GSC confirma rastreo/fetch correcto.
+- Decision: no publicar articulos nuevos. Foco del dia: backlinks/Reddit/Quora, no mas retoques internos salvo evidencia nueva.
+
 ## Update 2026-06-03 — Recovery v2 Dia 2
 
 - Deploy Cloudflare resuelto: produccion ya sirve la seccion `Plan de 7 dias para corregir tu postura sin comprar nada` en la URL test y el sitemap live tiene `lastmod 2026-06-02T13:57:51.914Z`.
