@@ -1,0 +1,163 @@
+---
+import type { Locale } from '@/i18n/locales';
+import type { ReadonlySelectorQuestion } from '@/lib/selector/config';
+
+interface Props {
+  question: ReadonlySelectorQuestion;
+  tipo: string;
+  locale: Locale;
+  hidden?: boolean;
+}
+
+const { question, tipo, locale, hidden = true } = Astro.props;
+const baseId = `selector-${tipo}-${question.id}`;
+const name = `${baseId}-answer`;
+const title = question.title[locale];
+const help = question.help?.[locale];
+const describedBy = help ? `${baseId}-help ${baseId}-error` : `${baseId}-error`;
+const neutralLabel = locale === 'en' ? 'I am not sure' : 'No lo sé';
+const supportsNeutral = Object.prototype.hasOwnProperty.call(question, 'neutralValue')
+  && question.neutralValue === null;
+const optionToken = (value: unknown) => value === null ? '_' : String(value);
+const dimensions = question.kind === 'dimensions'
+  ? Object.entries(question.validation.components)
+  : [];
+---
+
+<section class="selector-question" data-question-panel={question.id} data-question-kind={question.kind} hidden={hidden}>
+  <fieldset data-question-fieldset={question.id} aria-describedby={describedBy}>
+    <legend id={`${baseId}-legend`} tabindex="-1">{title}</legend>
+    {help && <p class="question-help" id={`${baseId}-help`}>{help}</p>}
+
+    {(question.kind === 'single' || question.kind === 'multi') && (
+      <div class="question-options">
+        {question.options.map((option, index) => (
+          <label class="question-option" for={`${baseId}-${index}`}>
+            <input
+              id={`${baseId}-${index}`}
+              type={question.kind === 'single' ? 'radio' : 'checkbox'}
+              name={question.kind === 'single' ? name : `${name}[]`}
+              value={optionToken(option.value)}
+              data-answer-control
+              required={question.kind === 'single'}
+            />
+            <span class="option-copy">
+              <strong>{option.label[locale]}</strong>
+              {option.description && <small>{option.description[locale]}</small>}
+            </span>
+          </label>
+        ))}
+      </div>
+    )}
+
+    {question.kind === 'number' && (
+      <div class="measurement-group">
+        <label class="number-field" for={`${baseId}-value`}>
+          <span>{question.inputLabel[locale]}{question.unit?.[locale] && <small class="field-unit"> ({question.unit[locale]})</small>}</span>
+          <input
+            id={`${baseId}-value`}
+            type="number"
+            name={name}
+            min={question.validation?.min}
+            max={question.validation?.max}
+            step={question.validation?.step}
+            data-answer-number
+            required
+          />
+        </label>
+        {supportsNeutral && (
+          <label class="neutral-control" for={`${baseId}-neutral`}>
+            <input id={`${baseId}-neutral`} type="checkbox" value="_" data-answer-neutral />
+            <span>{neutralLabel}</span>
+          </label>
+        )}
+      </div>
+    )}
+
+    {question.kind === 'dimensions' && (
+      <div class="measurement-group" data-dimensions>
+        <div class="dimension-fields">
+          {dimensions.map(([key, validation]) => (
+            <label class="number-field" for={`${baseId}-${key}`}>
+              <span>{validation.label[locale]}{validation.unit?.[locale] && <small class="field-unit"> ({validation.unit[locale]})</small>}</span>
+              <input
+                id={`${baseId}-${key}`}
+                type="number"
+                name={`${name}-${key}`}
+                min={validation.min}
+                max={validation.max}
+                step={validation.step}
+                data-answer-dimension={key}
+                required
+              />
+            </label>
+          ))}
+        </div>
+        {supportsNeutral && (
+          <label class="neutral-control" for={`${baseId}-neutral`}>
+            <input id={`${baseId}-neutral`} type="checkbox" value="_" data-answer-neutral />
+            <span>{neutralLabel}</span>
+          </label>
+        )}
+      </div>
+    )}
+
+    <p class="question-error" id={`${baseId}-error`} data-question-error role="alert" aria-live="polite" hidden></p>
+  </fieldset>
+</section>
+
+<style>
+  .selector-question,
+  fieldset { border: 0; min-width: 0; }
+  legend {
+    max-width: 32ch;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  .question-help { max-width: 64ch; margin-top: 0.55rem; color: var(--ink-muted); font-size: 0.92rem; line-height: 1.55; text-wrap: pretty; }
+  .question-options { display: grid; gap: 0.65rem; margin-top: 1.4rem; }
+  .question-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    min-height: 3.4rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    transition: border-color var(--dur-hover) var(--ease-out), background-color var(--dur-hover) var(--ease-out);
+  }
+  .question-option:hover { border-color: var(--border-strong); background: var(--surface-muted); }
+  .question-option:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+  .question-option:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .question-option input { width: 1.1rem; height: 1.1rem; margin-top: 0.12rem; flex: 0 0 auto; accent-color: var(--accent); }
+  .option-copy { display: grid; gap: 0.15rem; line-height: 1.35; }
+  .option-copy strong { font-size: 0.95rem; font-weight: 680; }
+  .option-copy small { color: var(--ink-muted); font-size: 0.8rem; line-height: 1.45; }
+  .measurement-group { display: grid; gap: 1rem; margin-top: 1.4rem; }
+  .dimension-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 0.75rem; }
+  .number-field { display: grid; gap: 0.4rem; color: var(--ink-muted); font-size: 0.82rem; font-weight: 650; }
+  .field-unit { font: inherit; color: var(--ink-muted); }
+  .number-field input {
+    width: 100%; min-height: 2.9rem; padding: 0.55rem 0.75rem;
+    border: 1px solid var(--border-strong); border-radius: var(--radius);
+    background: var(--surface); color: var(--ink); font: inherit; font-variant-numeric: tabular-nums;
+  }
+  .number-field input:invalid:not(:placeholder-shown) { border-color: #b42318; }
+  .neutral-control { display: inline-flex; align-items: center; gap: 0.6rem; width: fit-content; min-height: 2.75rem; cursor: pointer; color: var(--ink-muted); font-size: 0.88rem; }
+  .neutral-control input { width: 1.05rem; height: 1.05rem; accent-color: var(--accent); }
+  .measurement-group:has([data-answer-neutral]:checked) .number-field { opacity: 0.55; }
+  .question-error { margin-top: 0.85rem; color: #b42318; font-size: 0.84rem; font-weight: 650; }
+  [data-theme="dark"] .question-error { color: #ffb4ab; }
+  @media (max-width: 560px) {
+    legend { font-size: 1.25rem; }
+    .question-option { min-height: 3.75rem; }
+  }
+</style>

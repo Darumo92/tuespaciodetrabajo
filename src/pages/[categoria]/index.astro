@@ -3,8 +3,11 @@ import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import SmoothScroll from '@/components/SmoothScroll.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getCollection } from 'astro:content';
 import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
+import type { Producto } from '@/lib/productos';
+import { SELECTOR_CONFIGS, resolveEligibleSelectorConfig } from '@/lib/selector/config';
 
 export async function getStaticPaths() {
   return [
@@ -74,6 +77,18 @@ const articulosOrdenados = articulos.sort(
 );
 
 const destacados = articulosOrdenados.filter(a => a.data.destacado).slice(0, 3);
+const productEntries = await getCollection('productos');
+const selectorProducts = productEntries.map((e) => ({
+  slug: e.id.replace(/\.(ya?ml|json)$/, ''),
+  ...e.data,
+})) as Producto[];
+const selectorConfig = resolveEligibleSelectorConfig(
+  SELECTOR_CONFIGS,
+  selectorProducts,
+  (config) => config.routes.editorialCategories['es-ES'].includes(categoria as string),
+  5,
+);
+const selectorTipo = selectorConfig?.tipo;
 
 // Categorías sin artículos → noindex para evitar thin content
 const esVacia = articulosOrdenados.length === 0;
@@ -130,6 +145,8 @@ const breadcrumbSchema = {
     <div class="category-intro">
       <p>{info.intro}</p>
     </div>
+
+    {selectorTipo && <SelectorCta locale="es-ES" tipo={selectorTipo} variant="compact" />}
 
     {articulosOrdenados.length > 0 ? (
       <>

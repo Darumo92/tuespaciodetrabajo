@@ -45,9 +45,32 @@ const base = (over: Partial<Producto> = {}): Producto => ({
 });
 
 describe('mediaEjesPresentes', () => {
-  it('promedia solo ejes con valor', () => {
+  it('mantiene la media de los ejes de silla', () => {
     expect(mediaEjesPresentes(COMPLETOS)).toBe(8);
     expect(mediaEjesPresentes(PARCIALES)).toBe(7.5);
+  });
+  it('promedia los seis ejes presentes de escritorio', () => {
+    expect(mediaEjesPresentes({
+      ergonomia: null, ajustabilidad: null, comodidad: null,
+      materiales: 10, calidadPrecio: 10, velocidad: 2,
+      estabilidad: 4, capacidadCarga: 6, rangoAltura: 8,
+    })).toBe(6.7);
+  });
+  it('ignora ejes null sin excluir los ejes de escritorio', () => {
+    expect(mediaEjesPresentes({
+      ergonomia: null, ajustabilidad: null, materiales: 8, comodidad: null,
+      calidadPrecio: null, velocidad: null, estabilidad: 6,
+      capacidadCarga: null, rangoAltura: null,
+    })).toBe(7);
+  });
+  it('incluye futuros ejes numéricos sin cambiar la función', () => {
+    expect(mediaEjesPresentes({ ...VACIOS, ergonomia: 8, sostenibilidad: 10 })).toBe(9);
+  });
+  it('ignora defensivamente valores no numéricos y no finitos', () => {
+    const malformed = {
+      ...VACIOS, ergonomia: 8, texto: '10', infinito: Number.POSITIVE_INFINITY,
+    } as unknown as Valoraciones;
+    expect(mediaEjesPresentes(malformed)).toBe(8);
   });
   it('null si no hay ejes', () => {
     expect(mediaEjesPresentes(VACIOS)).toBeNull();
@@ -57,6 +80,13 @@ describe('mediaEjesPresentes', () => {
 
 describe('notaGlobal', () => {
   it('usa media de ejes', () => { expect(notaGlobal(base({ valoraciones: PARCIALES }))).toBe(7.5); });
+  it('usa todos los ejes de escritorio sin duplicar lógica', () => {
+    expect(notaGlobal(base({ valoraciones: {
+      ergonomia: null, ajustabilidad: null, comodidad: null,
+      materiales: 10, calidadPrecio: 10, velocidad: 2,
+      estabilidad: 4, capacidadCarga: 6, rangoAltura: 8,
+    } }))).toBe(6.7);
+  });
   it('fallback valoracion*2', () => { expect(notaGlobal(base({ valoracion: 4.5, valoraciones: VACIOS }))).toBe(9); });
 });
 

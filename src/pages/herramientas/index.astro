@@ -9,15 +9,6 @@ const alternates = buildAlternates({
   en: localizedPath('en', ['tools']),
 });
 
-const herramientas = [
-  {
-    titulo: 'Calculadora de ergonomía',
-    descripcion: 'Calcula la altura exacta de silla, escritorio y monitor según tu estatura. Con figura interactiva y recomendaciones personalizadas.',
-    href: '/herramientas/calculadora-ergonomia/',
-    etiqueta: 'Gratis',
-  },
-];
-
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -36,32 +27,24 @@ const breadcrumbSchema = {
 >
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} slot="head" />
 
-  <article class="container tool-page">
-    <nav class="breadcrumb" aria-label="Migas de pan">
-      <a href="/">Inicio</a>
-      <span class="breadcrumb-sep" aria-hidden="true">›</span>
-      <span>Herramientas</span>
-    </nav>
-
-    <header class="tool-header">
-      <h1>Herramientas para tu home office</h1>
-      <p class="lead">
-        Utilidades gratuitas para ayudarte a tomar decisiones sobre tu espacio de trabajo.
-        Sin registro, sin spam, sin trampa.
-      </p>
-    </header>
-
-    <section class="related-links" style="margin-top:2rem">
-      <ul class="related-links">
-        {herramientas.map((h) => (
-          <li>
-            <a href={h.href}>
-              <strong>{h.titulo}</strong>
-              <span style="display:block;font-size:0.9rem;color:var(--ink-muted);margin-top:0.25rem;font-weight:400">{h.descripcion}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
-  </article>
+  <main class="container section">
+    <nav class="breadcrumb" aria-label="Migas de pan"><a href={localizedPath('es-ES')}>Inicio</a> › <span>Herramientas</span></nav>
+    <h1>Herramientas</h1>
+    <div class="tool-grid">
+      <a class="tool-card" href={localizedPath('es-ES', ['herramientas', 'calculadora-ergonomia'])}>
+        <h2>Calculadora de ergonomía</h2>
+        <p>Calcula los rangos de altura de silla, escritorio y monitor para trabajar con una postura más saludable.</p>
+      </a>
+      <a class="tool-card" href={localizedPath('es-ES', ['herramientas', 'selector'])}>
+        <h2>Recomendador de sillas y escritorios</h2>
+        <p>Responde unas preguntas y encuentra las sillas o escritorios que mejor encajan con tu cuerpo, espacio y presupuesto.</p>
+      </a>
+    </div>
+  </main>
 </Base>
+
+<style>
+  .tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+  .tool-card { display: block; padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: inherit; background: var(--surface); }
+  .tool-card p { color: var(--ink-muted); }
+</style>

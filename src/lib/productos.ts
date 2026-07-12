@@ -11,6 +11,11 @@ export interface Valoraciones {
   materiales: number | null;
   comodidad: number | null;
   calidadPrecio: number | null;
+  velocidad?: number | null;
+  estabilidad?: number | null;
+  capacidadCarga?: number | null;
+  rangoAltura?: number | null;
+  [eje: string]: number | null | undefined;
 }
 
 export interface Producto {
@@ -93,13 +98,13 @@ export const AMAZON_TAG = 'tuespaciodet-21';
 
 export function mediaEjesPresentes(v?: Valoraciones): number | null {
   if (!v) return null;
-  const vals = [v.ergonomia, v.ajustabilidad, v.materiales, v.comodidad, v.calidadPrecio]
-    .filter((n): n is number => n != null);
+  const vals = Object.values(v)
+    .filter((value): value is number => typeof value === 'number' && Number.isFinite(value));
   if (vals.length === 0) return null;
   return Math.round((vals.reduce((a, b) => a + b, 0) / vals.length) * 10) / 10;
 }
 
-export function notaGlobal(p: Producto): number | null {
+export function notaGlobal(p: Pick<Producto, 'valoracion' | 'valoraciones'>): number | null {
   const media = mediaEjesPresentes(p.valoraciones);
   if (media != null) return media;
   if (p.valoracion != null) return Math.round(p.valoracion * 2 * 10) / 10;
@@ -120,7 +125,7 @@ export function ganadoresPorValor(
 }
 
 /** Lee una ruta tipo 'specs.garantiaAnios' o 'tramoPrecio'. Devuelve null si no existe. */
-export function getCampo(p: Producto, ruta: string): unknown {
+export function getCampo(p: object, ruta: string): unknown {
   const val = ruta.split('.').reduce<unknown>((o, k) => {
     if (o != null && typeof o === 'object' && k in (o as Record<string, unknown>)) {
       return (o as Record<string, unknown>)[k];

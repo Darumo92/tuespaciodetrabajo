@@ -188,6 +188,18 @@ function buildHreflangMap() {
     en: absoluteUrl(localizedPath('en', ['catalog', 'standing-desks'])),
   });
   addGroup({
+    'es-ES': absoluteUrl(localizedPath('es-ES', ['herramientas'])),
+    en: absoluteUrl(localizedPath('en', ['tools'])),
+  });
+  addGroup({
+    'es-ES': absoluteUrl(localizedPath('es-ES', ['herramientas', 'calculadora-ergonomia'])),
+    en: absoluteUrl(localizedPath('en', ['tools', 'ergonomic-calculator'])),
+  });
+  addGroup({
+    'es-ES': absoluteUrl(localizedPath('es-ES', ['herramientas', 'selector'])),
+    en: absoluteUrl(localizedPath('en', ['tools', 'selector'])),
+  });
+  addGroup({
     'es-ES': absoluteUrl(localizedPath('es-ES', ['sobre-mi'])),
     en: absoluteUrl(localizedPath('en', ['about'])),
   });
@@ -252,7 +264,6 @@ export default defineConfig({
         !page.includes('/en/privacy-policy/') &&
         !page.includes('/buscar/') &&
         !page.includes('/en/search/') &&
-        !page.includes('/en/tools/') &&
         !page.includes('/en/news/') &&
         !page.includes('/en/updates/') &&
         !page.includes('/tags') &&

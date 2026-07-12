@@ -2,7 +2,7 @@
 import LogoIcon from './LogoIcon.astro';
 import LanguageSelector from './LanguageSelector.astro';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
-import { localizedPath, type AlternateLink } from '@/i18n/routes';
+import { activeNavigationHref, localizedPath, type AlternateLink } from '@/i18n/routes';
 import { t } from '@/i18n/ui';
 
 interface Props {
@@ -33,6 +33,7 @@ const navLinks = locale === DEFAULT_LOCALE
       { href: localizedPath(locale, ['articles']), label: ui.footer.allArticles },
       { href: localizedPath(locale, ['tools']), label: ui.nav.tools },
     ];
+const activeHref = activeNavigationHref(currentPath, navLinks.map((link) => link.href));
 
 const searchPath = locale === DEFAULT_LOCALE
   ? localizedPath(DEFAULT_LOCALE, ['buscar'])
@@ -59,7 +60,7 @@ const searchPath = locale === DEFAULT_LOCALE
         {navLinks.map(link => (
           <a
             href={link.href}
-            class={`nav-link ${currentPath.startsWith(link.href) ? 'active' : ''}`}
+            class={`nav-link ${link.href === activeHref ? 'active' : ''}`}
             {...(currentPath === link.href ? { 'aria-current': 'page' } : {})}
           >
             {link.label}
