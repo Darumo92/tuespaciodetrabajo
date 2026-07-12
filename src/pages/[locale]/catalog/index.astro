@@ -1,10 +1,12 @@
 ---
 import Base from '@/layouts/Base.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getCollection } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
 import { TIPOS, TIPOS_CON_DATOS } from '@/lib/tipos';
-import { catalogPath } from '@/lib/productos';
+import { catalogPath, type Producto } from '@/lib/productos';
+import { SELECTOR_CONFIGS, resolveEligibleSelectorConfigs } from '@/lib/selector/config';
 
 export async function getStaticPaths() {
   return READY_LOCALES
@@ -16,6 +18,11 @@ const { locale } = Astro.props as { locale: Locale };
 const productos = await getCollection('productos');
 const conteo = (tipo: string) => productos.filter((p) => p.data.tipo === tipo).length;
 const tarjetas = TIPOS_CON_DATOS.map((slug) => ({ cfg: TIPOS[slug], n: conteo(slug) }));
+const selectorProducts = productos.map((e) => ({
+  slug: e.id.replace(/\.(ya?ml|json)$/, ''),
+  ...e.data,
+})) as Producto[];
+const eligibleSelectorConfigs = resolveEligibleSelectorConfigs(SELECTOR_CONFIGS, selectorProducts, 5);
 const pagePath = catalogPath(locale);
 const alternates = buildAlternates({
   'es-ES': localizedPath('es-ES', ['catalogo']),
@@ -33,6 +40,7 @@ const alternates = buildAlternates({
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Catalog</span></nav>
     <h1>Product catalog</h1>
     <p class="cat-sub">Verified specs, editorial scoring and comparison tools for home office equipment.</p>
+    {eligibleSelectorConfigs.length > 0 && <SelectorCta locale={locale} variant="compact" />}
     <div class="cat-hub">
       {tarjetas.map(({ cfg, n }) => (
         <a class="cat-hub-card" href={catalogPath(locale, cfg.slug)}>

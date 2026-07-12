@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { READY_LOCALES, type Locale } from '@/i18n/locales';
@@ -189,6 +190,8 @@ const categories = [
       </div>
     </div>
   </section>
+
+  <SelectorCta locale={locale} variant="home" />
 
   <section class="section home-bento-section">
     <div class="container">

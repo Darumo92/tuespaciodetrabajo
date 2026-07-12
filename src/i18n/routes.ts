@@ -30,6 +30,13 @@ export function navigationHref(href: string): string {
   return href;
 }
 
+export function activeNavigationHref(currentPath: string, hrefs: readonly string[]): string | undefined {
+  const pathname = currentPath.split(/[?#]/, 1)[0];
+  return hrefs
+    .filter((href) => pathname === href || pathname.startsWith(href.endsWith('/') ? href : `${href}/`))
+    .sort((left, right) => right.length - left.length)[0];
+}
+
 export function localizedPath(locale: Locale, segments: string[] = []): string {
   const clean = segments.filter(Boolean).map((segment) => segment.replace(/^\/+|\/+$/g, ''));
   const prefix = localePrefix(locale).replace(/^\/+|\/+$/g, '');

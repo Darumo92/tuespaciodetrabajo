@@ -2,6 +2,7 @@
 import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { absoluteUrl, buildAlternates, localizedPath } from '@/i18n/routes';
@@ -170,6 +171,8 @@ const categorias = [
       </div>
     </div>
   </section>
+
+  <SelectorCta locale="es-ES" variant="home" />
 
   <!-- Categorías (bento, celdas exactas, fondo diverso) -->
   <section class="section home-bento-section">

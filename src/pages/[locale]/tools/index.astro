@@ -15,7 +15,7 @@ const alternates = buildAlternates({
   [locale]: pagePath,
 });
 ---
-<Base title="Home Office Tools | Tu Espacio de Trabajo" description="Useful calculators and tools for planning an ergonomic home office setup." canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale} noindex={true}>
+<Base title="Home Office Tools | Tu Espacio de Trabajo" description="Useful calculators and tools for planning an ergonomic home office setup." canonical={absoluteUrl(pagePath)} alternates={alternates} locale={locale}>
   <main class="container section">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href={localizedPath(locale)}>Home</a> › <span>Tools</span></nav>
     <h1>Tools</h1>
@@ -23,6 +23,10 @@ const alternates = buildAlternates({
       <a class="tool-card" href={localizedPath(locale, ['tools', 'ergonomic-calculator'])}>
         <h2>Ergonomic calculator</h2>
         <p>Estimate chair, desk and monitor setup ranges for a healthier working posture.</p>
+      </a>
+      <a class="tool-card" href={localizedPath(locale, ['tools', 'selector'])}>
+        <h2>Chair & standing desk finder</h2>
+        <p>Answer a few questions and find the chairs or desks that best fit your body, space and budget.</p>
       </a>
     </div>
   </main>

@@ -1,0 +1,160 @@
+---
+import { localizedPath } from '@/i18n/routes';
+
+type SelectorCtaLocale = 'es-ES' | 'en';
+type SelectorCtaVariant = 'home' | 'compact';
+
+interface Props {
+  locale: SelectorCtaLocale;
+  tipo?: string;
+  variant?: SelectorCtaVariant;
+}
+
+const { locale, tipo, variant = 'compact' } = Astro.props;
+const SELECTOR_PATHS: Record<SelectorCtaLocale, string> = {
+  'es-ES': localizedPath('es-ES', ['herramientas', 'selector']),
+  en: localizedPath('en', ['tools', 'selector']),
+};
+const COPY: Record<SelectorCtaLocale, Record<SelectorCtaVariant, { title: string; text: string; button: string }>> = {
+  'es-ES': {
+    home: {
+      title: '¿No sabes qué silla o escritorio comprar?',
+      text: 'En menos de 2 minutos te recomendamos las tres opciones que mejor encajan contigo.',
+      button: 'Encontrar mi equipo ideal',
+    },
+    compact: {
+      title: 'Recomendador de sillas y escritorios',
+      text: 'Responde unas preguntas y reduce el catálogo a las opciones que mejor encajan contigo.',
+      button: 'Usar el recomendador',
+    },
+  },
+  en: {
+    home: {
+      title: 'Not sure which chair or desk to buy?',
+      text: 'In less than 2 minutes, we’ll recommend the three options that best fit your needs.',
+      button: 'Find my ideal setup',
+    },
+    compact: {
+      title: 'Chair & standing desk finder',
+      text: 'Answer a few questions and narrow the catalog down to the options that fit you best.',
+      button: 'Use the finder',
+    },
+  },
+};
+const selectorPath = SELECTOR_PATHS[locale];
+const searchParams = new URLSearchParams();
+if (tipo) searchParams.set('tipo', tipo);
+const href = tipo ? `${selectorPath}?${searchParams}` : selectorPath;
+const copy = COPY[locale][variant];
+---
+
+<aside class={`selector-cta selector-cta--${variant}`}>
+  <div class="selector-cta__inner">
+    <div class="selector-cta__copy">
+      <h2>{copy.title}</h2>
+      <p>{copy.text}</p>
+    </div>
+    <a class="selector-cta__link" href={href}>{copy.button}</a>
+  </div>
+</aside>
+
+<style>
+  .selector-cta {
+    width: 100%;
+  }
+  .selector-cta__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  .selector-cta__copy h2 {
+    margin: 0;
+    font-family: var(--font-display);
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .selector-cta__copy p {
+    margin: 0.35rem 0 0;
+    color: var(--ink-muted);
+    line-height: 1.55;
+  }
+  .selector-cta__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    min-height: 2.75rem;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--accent);
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: var(--accent-ink);
+    font-weight: 750;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    transition: background var(--dur-hover) var(--ease-out), border-color var(--dur-hover) var(--ease-out), transform var(--dur-press) var(--ease-out);
+  }
+  .selector-cta__link:hover {
+    border-color: var(--accent-hover);
+    background: var(--accent-hover);
+    color: var(--accent-ink);
+  }
+  .selector-cta__link:active {
+    transform: scale(0.98);
+  }
+  .selector-cta__link:focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+  }
+  .selector-cta--home {
+    padding: 2.5rem var(--container-padding);
+    background: var(--surface-muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .selector-cta--home .selector-cta__inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+  }
+  .selector-cta--home .selector-cta__copy h2 {
+    font-size: clamp(1.35rem, 3vw, 1.8rem);
+  }
+  .selector-cta--home .selector-cta__copy p {
+    max-width: 62ch;
+  }
+  .selector-cta--home .selector-cta__link {
+    min-height: 3.1rem;
+    padding-inline: 1.5rem;
+    font-size: 1rem;
+  }
+  .selector-cta--compact {
+    margin: 0 0 2rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-muted);
+  }
+  .selector-cta--compact .selector-cta__copy h2 {
+    font-size: 1rem;
+  }
+  .selector-cta--compact .selector-cta__copy p {
+    font-size: 0.88rem;
+  }
+  .selector-cta--compact .selector-cta__link {
+    min-height: 2.4rem;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.84rem;
+  }
+  @media (max-width: 640px) {
+    .selector-cta__inner {
+      align-items: stretch;
+      flex-direction: column;
+    }
+    .selector-cta__link {
+      width: 100%;
+    }
+  }
+</style>

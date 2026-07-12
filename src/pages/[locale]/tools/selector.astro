@@ -1,0 +1,15 @@
+---
+import SelectorPage from '@/components/selector/SelectorPage.astro';
+import { READY_LOCALES } from '@/i18n/locales';
+import { pathLocaleSegment } from '@/i18n/routes';
+
+export function getStaticPaths() {
+  return READY_LOCALES
+    .filter((locale): locale is 'en' => locale !== 'es-ES' && locale === 'en')
+    .map((locale) => ({ params: { locale: pathLocaleSegment(locale) }, props: { locale } }));
+}
+
+const { locale } = Astro.props as { locale: 'en' };
+---
+
+<SelectorPage locale={locale} />

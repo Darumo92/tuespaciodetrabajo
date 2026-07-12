@@ -1,0 +1,576 @@
+---
+import PasoPregunta from './PasoPregunta.astro';
+import ResultadoTop3 from './ResultadoTop3.astro';
+import type { Locale } from '@/i18n/locales';
+import type { Producto } from '@/lib/productos';
+import type { ReadonlyResolvedSelectorConfig } from '@/lib/selector/config';
+import { projectSelectorProduct, serializeSelectorPayload } from '@/lib/selector/payload';
+
+export interface SelectorOffer {
+  priceAmount: number;
+  currency: string;
+  sourceUrl?: string;
+  url?: string;
+  seller?: string;
+}
+
+interface Props {
+  products: Producto[];
+  configs: readonly ReadonlyResolvedSelectorConfig[];
+  locale: Locale;
+  offersBySlug: Readonly<Record<string, SelectorOffer | null>>;
+}
+
+const { products, configs, locale, offersBySlug } = Astro.props;
+const serializableConfigs = configs.map(({ products: configProducts, ...config }) => ({
+  ...config,
+  productCount: configProducts.length,
+}));
+const selectorProducts = products.map((product) => projectSelectorProduct(product, locale));
+const isEn = locale === 'en';
+const copy = isEn ? {
+  typeTitle: 'What are you looking for?', typeHelp: 'Choose a product type to tailor the questions.',
+  continue: 'Continue', back: 'Back', step: 'Step', of: 'of', remaining: 'remaining',
+  required: 'Choose an option before continuing.', invalid: 'Check this answer before continuing.',
+  recovery: 'We could not read one answer from this link. Please answer it again.',
+  copied: 'Link copied', copyError: 'We could not copy the link.',
+  rank: 'Choice', fallback: 'No image available', progressLabel: 'Selection progress',
+} : {
+  typeTitle: '¿Qué estás buscando?', typeHelp: 'Elige un tipo de producto para adaptar las preguntas.',
+  continue: 'Continuar', back: 'Atrás', step: 'Paso', of: 'de', remaining: 'Quedan',
+  required: 'Elige una opción antes de continuar.', invalid: 'Revisa esta respuesta antes de continuar.',
+  recovery: 'No hemos podido leer una respuesta de este enlace. Vuelve a responderla.',
+  copied: 'Enlace copiado', copyError: 'No hemos podido copiar el enlace.',
+  rank: 'Opción', fallback: 'Sin imagen disponible', progressLabel: 'Progreso de selección',
+};
+const payloadJson = serializeSelectorPayload({
+  products: selectorProducts,
+  configs: serializableConfigs,
+  offers: offersBySlug,
+  copy,
+  locale,
+});
+---
+
+<section
+  class="selector"
+  data-selector-root
+  aria-label={isEn ? 'Chair and standing desk finder' : 'Recomendador de sillas y escritorios'}
+>
+  <script is:inline type="application/json" data-selector-payload set:html={payloadJson}></script>
+  <div class="selector-progress" data-selector-progress>
+    <p data-progress-copy aria-live="polite"></p>
+    <div class="progress-track" role="progressbar" aria-label={copy.progressLabel} aria-valuemin="0" aria-valuenow="0" aria-valuemax="1" data-progressbar>
+      <span data-progress-fill></span>
+    </div>
+  </div>
+
+  <p class="selector-recovery" data-selector-recovery role="status" aria-live="polite" hidden></p>
+
+  <section class="type-step" data-type-step>
+    <fieldset aria-describedby="selector-type-help selector-type-error">
+      <legend id="selector-type-legend" tabindex="-1">{copy.typeTitle}</legend>
+      <p id="selector-type-help">{copy.typeHelp}</p>
+      <div class="type-options">
+        {configs.map((config, index) => (
+          <label for={`selector-type-${index}`}>
+            <input id={`selector-type-${index}`} type="radio" name="selector-type" value={config.tipo} required />
+            <span><strong>{config.labels.singular[locale]}</strong><small>{config.products.length} {config.labels.plural[locale].toLocaleLowerCase(locale)}</small></span>
+          </label>
+        ))}
+      </div>
+      <p id="selector-type-error" class="selector-error" data-type-error role="alert" aria-live="polite" hidden></p>
+    </fieldset>
+  </section>
+
+  <div data-question-steps>
+    {configs.map((config) => config.questions.map((question) => (
+      <PasoPregunta question={question} tipo={config.tipo} locale={locale} />
+    )))}
+  </div>
+
+  <div class="selector-nav" data-selector-nav>
+    <button class="nav-back" type="button" data-selector-back hidden>{copy.back}</button>
+    <button class="nav-continue" type="button" data-selector-continue>{copy.continue}</button>
+  </div>
+
+  <ResultadoTop3 locale={locale} />
+</section>
+
+<style>
+  .selector { max-width: 68rem; margin-inline: auto; color: var(--ink); }
+  .selector-progress { margin-bottom: 1.5rem; }
+  .selector-progress p { margin-bottom: 0.45rem; color: var(--ink-muted); font-size: 0.78rem; font-weight: 650; }
+  .progress-track { height: 0.3rem; overflow: hidden; border-radius: var(--radius-full); background: var(--surface-subtle); }
+  .progress-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--accent); transition: width 220ms var(--ease-out); }
+  .selector-recovery { margin-bottom: 1rem; padding: 0.75rem 0.85rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface-muted); color: var(--ink-muted); font-size: 0.84rem; }
+  .type-step fieldset { border: 0; min-width: 0; }
+  .type-step legend { font-family: var(--font-display); font-size: 1.45rem; font-weight: 750; line-height: 1.2; letter-spacing: -0.025em; }
+  .type-step fieldset > p:not(.selector-error) { margin-top: 0.55rem; color: var(--ink-muted); font-size: 0.92rem; }
+  .type-options { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.4rem; }
+  .type-options label { flex: 1 1 14rem; display: flex; align-items: flex-start; gap: 0.75rem; min-height: 4.4rem; padding: 0.9rem 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); cursor: pointer; }
+  .type-options label:hover { border-color: var(--border-strong); background: var(--surface-muted); }
+  .type-options label:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+  .type-options label:has(input:focus-visible) { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .type-options input { width: 1.1rem; height: 1.1rem; margin-top: 0.15rem; accent-color: var(--accent); }
+  .type-options span { display: grid; line-height: 1.35; }
+  .type-options strong { font-size: 0.95rem; }
+  .type-options small { margin-top: 0.15rem; color: var(--ink-muted); font-size: 0.76rem; }
+  .selector-nav { display: flex; justify-content: space-between; gap: 0.65rem; margin-top: 1.4rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .selector-nav button { min-height: 2.8rem; padding: 0.6rem 1.1rem; border-radius: var(--radius); font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; }
+  .nav-back { border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink); }
+  .nav-back:hover { border-color: var(--accent); color: var(--accent); }
+  .nav-continue { margin-left: auto; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); }
+  .nav-continue:hover { background: var(--accent-hover); }
+  .selector-error { margin-top: 0.75rem; color: #b42318; font-size: 0.84rem; font-weight: 650; }
+  [data-theme="dark"] .selector-error { color: #ffb4ab; }
+  @media (max-width: 560px) { .selector { width: 100%; } .type-step legend { font-size: 1.25rem; } .selector-nav button { flex: 1; } }
+  @media (prefers-reduced-motion: reduce) { .progress-track span { transition: none; } }
+</style>
+
+<script>
+  import { scoreProducts } from '@/lib/selector/scoring';
+  import { generateProductExplanation } from '@/lib/selector/razones';
+  import { parseSelectorUrl, serializeSelectorState } from '@/lib/selector/url';
+  import { previousSelectorState, targetTabIndex } from '@/lib/selector/ui-state';
+  import { firstUnansweredQuestionIndex } from '@/lib/selector/ui-state';
+  import { copyText } from '@/lib/selector/clipboard';
+  import type { ClipboardDocumentAdapter } from '@/lib/selector/clipboard';
+  import {
+    cloneSelectorAnswers,
+    createCalculationGuard,
+    initialRecoveryState,
+    resultLayoutState,
+    selectorProgressState,
+    selectorUrl,
+    transitionRecoveryState,
+  } from '@/lib/selector/controller';
+  import type { RecoveryAction } from '@/lib/selector/controller';
+  import { catalogPath, comparePath, productPath, tramoTexto } from '@/lib/productos';
+  import type { SelectorProductPayload } from '@/lib/selector/payload';
+  import type { SelectorTypeConfig } from '@/lib/selector/config';
+
+  type RuntimeOffer = { priceAmount: number; currency: string; sourceUrl?: string; url?: string; seller?: string };
+  type RuntimeCopy = Record<'typeTitle' | 'typeHelp' | 'continue' | 'back' | 'step' | 'of' | 'remaining' | 'required' | 'invalid' | 'recovery' | 'copied' | 'copyError' | 'rank' | 'fallback', string>;
+  type RuntimePayload = {
+    products: SelectorProductPayload[];
+    configs: SelectorTypeConfig[];
+    offers: Record<string, RuntimeOffer | null>;
+    copy: RuntimeCopy;
+    locale: 'es-ES' | 'en';
+  };
+
+  document.querySelectorAll<HTMLElement>('[data-selector-root]').forEach((root) => {
+    const payloadElement = root.querySelector<HTMLScriptElement>('[data-selector-payload]')!;
+    const payload = JSON.parse(payloadElement.textContent ?? '{}') as RuntimePayload;
+    const { products, configs, offers, copy, locale } = payload;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const resultMedia = window.matchMedia('(max-width: 720px)');
+    const typeStep = root.querySelector<HTMLElement>('[data-type-step]')!;
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('[data-question-panel]'));
+    const progressCopy = root.querySelector<HTMLElement>('[data-progress-copy]')!;
+    const progressbar = root.querySelector<HTMLElement>('[data-progressbar]')!;
+    const progressFill = root.querySelector<HTMLElement>('[data-progress-fill]')!;
+    const nav = root.querySelector<HTMLElement>('[data-selector-nav]')!;
+    const back = root.querySelector<HTMLButtonElement>('[data-selector-back]')!;
+    const next = root.querySelector<HTMLButtonElement>('[data-selector-continue]')!;
+    const output = root.querySelector<HTMLElement>('[data-selector-output]')!;
+    const calculating = root.querySelector<HTMLElement>('[data-calculating]')!;
+    const resultsBox = root.querySelector<HTMLElement>('[data-results]')!;
+    const emptyBox = root.querySelector<HTMLElement>('[data-result-empty]')!;
+    const resultsGrid = root.querySelector<HTMLElement>('[data-results-grid]')!;
+    const cardTemplate = root.querySelector<HTMLTemplateElement>('[data-selector-card-template]')!;
+    const recovery = root.querySelector<HTMLElement>('[data-selector-recovery]')!;
+    const resultFeedback = root.querySelector<HTMLElement>('[data-result-feedback]')!;
+    const tabsContainer = root.querySelector<HTMLElement>('[data-result-tabs]')!;
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('[data-result-tab]'));
+
+    let tipo: string | null = null;
+    let step = -1;
+    let answers: Record<string, unknown> = {};
+    let mode: 'type' | 'question' | 'calculating' | 'results' | 'error' = 'type';
+    let calculationTimer: ReturnType<typeof setTimeout> | null = null;
+    let selectedSlugs: string[] = [];
+    let activeResultIndex = 0;
+    let recoveryQuestionId: string | null = null;
+    let invalidReason: 'unknown-type' | 'invalid-answer' | null = null;
+    const calculationGuard = createCalculationGuard();
+
+    const currentConfig = () => configs.find((config) => config.tipo === tipo);
+    const clearResultSchema = () => {
+      root.dispatchEvent(new CustomEvent('selector:clear-results', { bubbles: true }));
+    };
+    const clearTimer = () => {
+      calculationGuard.cancel();
+      if (calculationTimer) clearTimeout(calculationTimer);
+      calculationTimer = null;
+    };
+    const canonicalize = () => {
+      const config = currentConfig();
+      const query = config && tipo ? serializeSelectorState(tipo, answers, config).toString() : '';
+      history.replaceState(null, '', selectorUrl(window.location.pathname, query, window.location.hash));
+    };
+    const focusWithoutScroll = (element: HTMLElement | null) => element?.focus({ preventScroll: true });
+    const clearRecovery = (action: Exclude<RecoveryAction, 'back'>) => {
+      const cleared = transitionRecoveryState(
+        { questionId: recoveryQuestionId, invalidReason },
+        action,
+      );
+      recoveryQuestionId = cleared.questionId;
+      invalidReason = cleared.invalidReason;
+      recovery.hidden = true;
+      recovery.textContent = '';
+      root.querySelectorAll<HTMLElement>('[data-question-error]').forEach((error) => {
+        error.hidden = true;
+        error.textContent = '';
+      });
+    };
+
+    const showProgress = () => {
+      const config = currentConfig();
+      const progress = selectorProgressState(step, config?.questions.length ?? 0);
+      progressCopy.textContent = step < 0 ? copy.typeTitle : locale === 'en'
+        ? `${copy.step} ${progress.current} ${copy.of} ${progress.total} · ${progress.remaining} ${copy.remaining}`
+        : `${copy.step} ${progress.current} ${copy.of} ${progress.total} · ${copy.remaining} ${progress.remaining}`;
+      progressbar.setAttribute('aria-valuemin', '0');
+      progressbar.setAttribute('aria-valuemax', String(progress.total));
+      progressbar.setAttribute('aria-valuenow', String(progress.current));
+      progressFill.style.width = `${progress.percent}%`;
+    };
+
+    const hideAll = () => {
+      typeStep.hidden = true;
+      panels.forEach((panel) => { panel.hidden = true; });
+      output.hidden = true;
+    };
+
+    const showType = () => {
+      clearTimer();
+      hideAll();
+      typeStep.hidden = false;
+      nav.hidden = false;
+      back.hidden = true;
+      step = -1;
+      mode = 'type';
+      showProgress();
+      focusWithoutScroll(root.querySelector('#selector-type-legend'));
+    };
+
+    const setNeutralInputs = (panel: HTMLElement, neutral: boolean) => {
+      panel.querySelectorAll<HTMLInputElement>('[data-answer-number], [data-answer-dimension]').forEach((input) => {
+        input.disabled = neutral;
+        input.required = !neutral;
+        if (neutral) input.setCustomValidity('');
+      });
+    };
+
+    const syncPanel = (panel: HTMLElement, question: SelectorTypeConfig['questions'][number]) => {
+      const hasAnswer = Object.prototype.hasOwnProperty.call(answers, question.id);
+      const answer = answers[question.id];
+      panel.querySelectorAll<HTMLInputElement>('[data-answer-control]').forEach((input) => {
+        input.checked = Array.isArray(answer) ? answer.includes(input.value) : String(answer) === input.value;
+      });
+      const neutral = panel.querySelector<HTMLInputElement>('[data-answer-neutral]');
+      if (neutral) {
+        neutral.checked = hasAnswer && answer === null;
+        setNeutralInputs(panel, neutral.checked);
+      }
+      const number = panel.querySelector<HTMLInputElement>('[data-answer-number]');
+      if (number) number.value = typeof answer === 'number' ? String(answer) : '';
+      if (answer && typeof answer === 'object' && !Array.isArray(answer)) {
+        panel.querySelectorAll<HTMLInputElement>('[data-answer-dimension]').forEach((input) => {
+          const value = (answer as Record<string, unknown>)[input.dataset.answerDimension ?? ''];
+          input.value = typeof value === 'number' ? String(value) : '';
+        });
+      }
+    };
+
+    const showError = (panel: HTMLElement, message: string) => {
+      const error = panel.querySelector<HTMLElement>('[data-question-error]');
+      if (error) { error.textContent = message; error.hidden = false; }
+    };
+
+    const showQuestion = (index: number) => {
+      clearTimer();
+      const config = currentConfig();
+      if (!config) return showType();
+      const question = config.questions[index];
+      const panel = panels.find((candidate) => candidate.dataset.questionPanel === question.id && candidate.querySelector(`[id^="selector-${config.tipo}-"]`));
+      if (!panel) return;
+      hideAll();
+      panel.hidden = false;
+      nav.hidden = false;
+      back.hidden = false;
+      step = index;
+      mode = 'question';
+      syncPanel(panel, question);
+      showProgress();
+      if (recoveryQuestionId === question.id) {
+        delete answers[question.id];
+        syncPanel(panel, question);
+        showError(panel, copy.recovery);
+        focusWithoutScroll(panel.querySelector<HTMLInputElement>('input:not([disabled])'));
+      } else focusWithoutScroll(panel.querySelector('legend'));
+    };
+
+    const readAnswer = (panel: HTMLElement, question: SelectorTypeConfig['questions'][number]): unknown | undefined => {
+      const neutral = panel.querySelector<HTMLInputElement>('[data-answer-neutral]');
+      if (neutral?.checked) return null;
+      if (question.kind === 'single') {
+        const input = panel.querySelector<HTMLInputElement>('[data-answer-control]:checked');
+        if (!input) return undefined;
+        const parsed = parseSelectorUrl(`tipo=${tipo}&${question.id}=${encodeURIComponent(input.value)}`, [currentConfig()!]);
+        return parsed.answers[question.id];
+      }
+      if (question.kind === 'multi') {
+        return Array.from(panel.querySelectorAll<HTMLInputElement>('[data-answer-control]:checked')).map((input) => input.value);
+      }
+      if (question.kind === 'number') {
+        const input = panel.querySelector<HTMLInputElement>('[data-answer-number]')!;
+        if (!input.checkValidity()) { input.reportValidity(); return undefined; }
+        return Number(input.value);
+      }
+      const values: Record<string, number> = {};
+      for (const input of panel.querySelectorAll<HTMLInputElement>('[data-answer-dimension]')) {
+        if (!input.checkValidity()) { input.reportValidity(); return undefined; }
+        values[input.dataset.answerDimension ?? ''] = Number(input.value);
+      }
+      return values;
+    };
+
+    const activateTab = (index: number, focus = false) => {
+      const cards = Array.from(resultsGrid.querySelectorAll<HTMLElement>('[data-result-card]'));
+      const layout = resultLayoutState(resultMedia.matches, index, cards.length);
+      activeResultIndex = layout.activeIndex;
+      if (layout.tablistRole) {
+        tabsContainer.setAttribute('role', layout.tablistRole);
+        tabsContainer.setAttribute('aria-label', tabsContainer.dataset.label ?? '');
+      } else {
+        tabsContainer.removeAttribute('role');
+        tabsContainer.removeAttribute('aria-label');
+      }
+      tabs.forEach((tab, tabIndex) => {
+        const state = layout.tabs[tabIndex];
+        if (state.role) tab.setAttribute('role', state.role); else tab.removeAttribute('role');
+        if (state.selected === null) tab.removeAttribute('aria-selected');
+        else tab.setAttribute('aria-selected', String(state.selected));
+        tab.tabIndex = state.tabIndex;
+        tab.hidden = state.hidden;
+      });
+      cards.forEach((card, cardIndex) => {
+        const state = layout.cards[cardIndex];
+        if (state.role) card.setAttribute('role', state.role); else card.removeAttribute('role');
+        if (state.labelledBy) card.setAttribute('aria-labelledby', state.labelledBy);
+        else card.removeAttribute('aria-labelledby');
+        card.hidden = state.hidden;
+      });
+      if (focus && resultMedia.matches) tabs[layout.activeIndex]?.focus();
+    };
+
+    const showImageFallback = (card: HTMLElement, product: SelectorProductPayload, image: HTMLImageElement) => {
+      image.hidden = true;
+      const fallback = card.querySelector<HTMLElement>('[data-card-image-fallback]')!;
+      fallback.hidden = false;
+      fallback.setAttribute('aria-label', `${product.marca} ${product.nombre}: ${copy.fallback}`);
+      card.querySelector<HTMLElement>('[data-card-fallback-brand]')!.textContent = product.marca;
+      card.querySelector<HTMLElement>('[data-card-fallback-name]')!.textContent = product.nombre;
+    };
+
+    const fillCard = (scored: ReturnType<typeof scoreProducts>[number], rank: number) => {
+      const fragment = cardTemplate.content.cloneNode(true) as DocumentFragment;
+      const card = fragment.querySelector<HTMLElement>('[data-result-card]')!;
+      const product = scored.producto;
+      const name = product.nombre;
+      const explanation = generateProductExplanation(scored, locale, { maxReasons: 3 });
+      card.id = `selector-result-${rank}`;
+      card.querySelector<HTMLElement>('[data-card-rank]')!.textContent = `${copy.rank} ${rank}`;
+      card.querySelector<HTMLElement>('[data-card-score]')!.textContent = String(scored.score);
+      card.querySelector<HTMLElement>('[data-card-brand]')!.textContent = product.marca;
+      card.querySelector<HTMLElement>('[data-card-name]')!.textContent = name;
+      card.querySelectorAll<HTMLAnchorElement>('[data-card-link]').forEach((link) => { link.href = productPath(product, locale); });
+      const image = card.querySelector<HTMLImageElement>('[data-card-image]')!;
+      if (product.imagen?.trim()) {
+        image.src = product.imagen;
+        image.alt = locale === 'en' ? `${product.marca} ${name} product image` : product.imagenAlt || name;
+        image.addEventListener('error', () => showImageFallback(card, product, image), { once: true });
+      } else showImageFallback(card, product, image);
+      const offer = offers[product.slug];
+      card.querySelector<HTMLElement>('[data-card-price]')!.textContent = offer && Number.isFinite(offer.priceAmount)
+        ? new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'es-ES', { style: 'currency', currency: offer.currency }).format(offer.priceAmount)
+        : tramoTexto(product.tramoPrecio, locale);
+      const reasonItems = Array.from(card.querySelectorAll<HTMLElement>('[data-card-reason]'));
+      reasonItems.forEach((item, index) => { item.textContent = explanation.reasons[index] ?? ''; item.hidden = !explanation.reasons[index]; });
+      const warning = card.querySelector<HTMLElement>('[data-card-warning]')!;
+      warning.textContent = explanation.warning ?? '';
+      warning.hidden = !explanation.warning;
+      return { fragment, eventResult: { slug: product.slug, score: scored.score, reasons: [...explanation.reasons], warning: explanation.warning } };
+    };
+
+    const finishCalculation = () => {
+      const config = currentConfig();
+      if (!config || !tipo) return;
+      const candidates = products.filter((product) => product.tipo === tipo);
+      const scored = scoreProducts(candidates, answers, config, 3);
+      resultsGrid.replaceChildren();
+      selectedSlugs = scored.map((entry) => entry.producto.slug);
+      const eventResults: { slug: string; score: number; reasons: string[]; warning: string | null }[] = [];
+      scored.forEach((entry, index) => {
+        const rendered = fillCard(entry, index + 1);
+        resultsGrid.append(rendered.fragment);
+        eventResults.push(rendered.eventResult);
+      });
+      calculating.hidden = true;
+      emptyBox.hidden = scored.length > 0;
+      resultsBox.hidden = scored.length === 0;
+      mode = scored.length > 0 ? 'results' : 'error';
+      root.querySelector<HTMLAnchorElement>('[data-action-compare]')!.href = `${comparePath(tipo, '', locale)}?s=${selectedSlugs.join(',')}`;
+      root.querySelector<HTMLAnchorElement>('[data-action-catalog]')!.href = catalogPath(locale, tipo);
+      activateTab(0);
+      focusWithoutScroll(scored.length ? root.querySelector('[data-results-heading]') : root.querySelector('[data-result-empty-heading]'));
+      // selector:results exposes serializable recommendation data for later page-schema integration.
+      root.dispatchEvent(new CustomEvent('selector:results', { detail: { tipo, answers: cloneSelectorAnswers(answers), results: eventResults }, bubbles: true }));
+    };
+
+    const startCalculation = () => {
+      const config = currentConfig();
+      if (!config) return;
+      const unanswered = firstUnansweredQuestionIndex(config.questions, answers);
+      if (unanswered >= 0) { showQuestion(unanswered); return; }
+      clearResultSchema();
+      clearTimer();
+      hideAll();
+      output.hidden = false;
+      calculating.hidden = false;
+      resultsBox.hidden = true;
+      emptyBox.hidden = true;
+      nav.hidden = false;
+      back.hidden = false;
+      next.hidden = true;
+      mode = 'calculating';
+      canonicalize();
+      const generation = calculationGuard.begin();
+      calculationTimer = setTimeout(() => {
+        if (calculationGuard.isCurrent(generation)) finishCalculation();
+      }, reducedMotion ? 100 : 1500);
+    };
+
+    const reset = () => {
+      clearResultSchema();
+      clearTimer();
+      tipo = null;
+      answers = {};
+      selectedSlugs = [];
+      next.hidden = false;
+      root.querySelectorAll<HTMLInputElement>('input').forEach((input) => { input.checked = false; if (input.type === 'number') input.value = ''; });
+      history.replaceState(null, '', selectorUrl(window.location.pathname, '', window.location.hash));
+      clearRecovery('reset');
+      resultFeedback.textContent = '';
+      showType();
+    };
+
+    root.querySelectorAll<HTMLInputElement>('[data-answer-neutral]').forEach((control) => {
+      control.addEventListener('change', () => setNeutralInputs(control.closest<HTMLElement>('[data-question-panel]')!, control.checked));
+    });
+    root.querySelectorAll<HTMLInputElement>('[data-question-kind="multi"] [data-answer-control]').forEach((control) => {
+      control.addEventListener('change', () => {
+        const panel = control.closest<HTMLElement>('[data-question-panel]')!;
+        const config = currentConfig();
+        const question = config?.questions.find((entry) => entry.id === panel.dataset.questionPanel);
+        if (!question || question.kind !== 'multi' || !Array.isArray(question.neutralValue)) return;
+        const neutralValues = new Set(question.neutralValue.map(String));
+        panel.querySelectorAll<HTMLInputElement>('[data-answer-control]').forEach((input) => {
+          if (control.checked && (neutralValues.has(control.value) || !neutralValues.has(control.value) && neutralValues.has(input.value))) input.checked = input === control;
+        });
+      });
+    });
+
+    next.addEventListener('click', () => {
+      if (step < 0) {
+        const selected = root.querySelector<HTMLInputElement>('input[name="selector-type"]:checked');
+        const error = root.querySelector<HTMLElement>('[data-type-error]')!;
+        if (!selected) { error.textContent = copy.required; error.hidden = false; return; }
+        error.hidden = true;
+        if (tipo !== selected.value) {
+          clearResultSchema();
+          clearTimer();
+          clearRecovery('change-type');
+          answers = {};
+        }
+        tipo = selected.value;
+        canonicalize();
+        showQuestion(0);
+        return;
+      }
+      const config = currentConfig();
+      const question = config?.questions[step];
+      const panel = question && panels.find((candidate) => !candidate.hidden && candidate.dataset.questionPanel === question.id);
+      if (!config || !question || !panel) return;
+      const answer = readAnswer(panel, question);
+      if (answer === undefined) { showError(panel, copy.invalid); return; }
+      const validationParams = serializeSelectorState(tipo!, { [question.id]: answer }, config);
+      const validated = parseSelectorUrl(validationParams, [config]);
+      if (!Object.prototype.hasOwnProperty.call(validated.answers, question.id)) { showError(panel, copy.invalid); return; }
+      const error = panel.querySelector<HTMLElement>('[data-question-error]');
+      if (error) error.hidden = true;
+      answers[question.id] = validated.answers[question.id];
+      if (recoveryQuestionId === question.id) clearRecovery('correct');
+      canonicalize();
+      if (step + 1 < config.questions.length) showQuestion(step + 1); else startCalculation();
+    });
+
+    back.addEventListener('click', () => {
+      if (mode === 'calculating' || mode === 'results' || mode === 'error') clearResultSchema();
+      clearTimer();
+      next.hidden = false;
+      const previous = previousSelectorState({ mode, step }, currentConfig()?.questions.length ?? 0);
+      if (previous.mode === 'type') showType(); else showQuestion(previous.step);
+    });
+    root.querySelector<HTMLButtonElement>('[data-action-reset]')?.addEventListener('click', reset);
+    root.querySelector<HTMLButtonElement>('[data-action-copy]')?.addEventListener('click', async () => {
+      try {
+        await copyText(
+          window.location.href,
+          navigator.clipboard,
+          document as unknown as ClipboardDocumentAdapter,
+        );
+        resultFeedback.textContent = copy.copied;
+      } catch { resultFeedback.textContent = copy.copyError; }
+    });
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => activateTab(index));
+      tab.addEventListener('keydown', (event) => {
+        const isNavigationKey = event.key === 'ArrowRight' || event.key === 'ArrowLeft'
+          || event.key === 'Home' || event.key === 'End';
+        if (!isNavigationKey) return;
+        const target = targetTabIndex(index, event.key, selectedSlugs.length);
+        if (target === null) return;
+        event.preventDefault(); activateTab(target, true);
+      });
+    });
+    resultMedia.addEventListener('change', () => activateTab(activeResultIndex));
+
+    const parsed = parseSelectorUrl(window.location.search, configs);
+    if (parsed.canonicalSearch !== window.location.search.replace(/^\?/, '')) {
+      history.replaceState(null, '', selectorUrl(window.location.pathname, parsed.canonicalSearch, window.location.hash));
+    }
+    if (parsed.status === 'invalid') {
+      recovery.textContent = copy.recovery;
+      recovery.hidden = false;
+      const initialRecovery = initialRecoveryState(
+        parsed.invalidReason === 'invalid-answer' ? parsed.invalidKey : null,
+        parsed.invalidReason,
+      );
+      recoveryQuestionId = initialRecovery.questionId;
+      invalidReason = initialRecovery.invalidReason;
+    }
+    if (parsed.tipo) {
+      tipo = parsed.tipo;
+      answers = { ...parsed.answers };
+      const typeInput = root.querySelector<HTMLInputElement>(`input[name="selector-type"][value="${CSS.escape(tipo)}"]`);
+      if (typeInput) typeInput.checked = true;
+      const config = currentConfig()!;
+      if (parsed.status === 'complete') startCalculation();
+      else showQuestion(Math.max(0, config.questions.findIndex((question) => question.id === parsed.nextQuestionId)));
+    } else showType();
+  });
+</script>

@@ -3,9 +3,12 @@ import Base from '@/layouts/Base.astro';
 import ArticleCard from '@/components/ArticleCard.astro';
 import CategoryIcon from '@/components/CategoryIcon.astro';
 import SmoothScroll from '@/components/SmoothScroll.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getCollection } from 'astro:content';
 import { LOCALES, READY_LOCALES, type Locale } from '@/i18n/locales';
 import { absoluteUrl, buildAlternates, localizedPath, pathLocaleSegment } from '@/i18n/routes';
+import type { Producto } from '@/lib/productos';
+import { SELECTOR_CONFIGS, resolveEligibleSelectorConfig } from '@/lib/selector/config';
 
 export async function getStaticPaths() {
   const fallbackCategoriesByLocale: Partial<Record<Locale, string[]>> = {
@@ -36,6 +39,18 @@ const articles = await getCollection('articulosI18n', ({ data }) =>
 );
 const ordered = articles.sort((a, b) => b.data.fecha.getTime() - a.data.fecha.getTime());
 const destacados = ordered.filter(a => a.data.destacado).slice(0, 3);
+const productEntries = await getCollection('productos');
+const selectorProducts = productEntries.map((e) => ({
+  slug: e.id.replace(/\.(ya?ml|json)$/, ''),
+  ...e.data,
+})) as Producto[];
+const selectorConfig = resolveEligibleSelectorConfig(
+  SELECTOR_CONFIGS,
+  selectorProducts,
+  (config) => config.routes.editorialCategories[locale].includes(categoria),
+  5,
+);
+const selectorTipo = selectorConfig?.tipo;
 
 const categoryInfo: Record<string, { es: string; title: string; description: string; intro: string; icon: string }> = {
   chairs: {
@@ -137,6 +152,8 @@ const collectionSchema = {
     <div class="category-intro">
       <p>{info.intro}</p>
     </div>
+
+    {selectorTipo && <SelectorCta locale={locale} tipo={selectorTipo} variant="compact" />}
 
     {ordered.length > 0 ? (
       <>

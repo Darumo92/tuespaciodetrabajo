@@ -1,0 +1,146 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '@/layouts/Base.astro';
+import SelectorProductos from './SelectorProductos.astro';
+import { buildAlternates, absoluteUrl, localizedPath } from '@/i18n/routes';
+import { getProductOffer } from '@/lib/product-offers';
+import type { Producto } from '@/lib/productos';
+import { SELECTOR_CONFIGS, resolveEligibleSelectorConfigs } from '@/lib/selector/config';
+import {
+  buildSelectorPageDescription,
+  buildSelectorPageSchemas,
+  serializeJsonForHtml,
+  type SelectorLocale,
+} from '@/lib/selector/schema';
+
+interface Props {
+  locale: SelectorLocale;
+}
+
+const { locale } = Astro.props;
+const isEn = locale === 'en';
+const entries = await getCollection('productos');
+const products = entries.map((e) => ({
+  slug: e.id.replace(/\.(ya?ml|json)$/, ''),
+  ...e.data,
+})) as Producto[];
+const configs = resolveEligibleSelectorConfigs(SELECTOR_CONFIGS, products, 5);
+const eligibleProducts = [...new Map(
+  configs.flatMap((config) => config.products).map((product) => [product.slug, product]),
+).values()];
+
+const marketOffers = Object.fromEntries(eligibleProducts.map((product) => [
+  product.slug,
+  getProductOffer(product.slug, locale),
+]));
+const offersBySlug = Object.fromEntries(eligibleProducts.map((product) => {
+  const offer = marketOffers[product.slug];
+  return [product.slug, offer ? {
+    priceAmount: offer.priceAmount as number,
+    currency: offer.currency,
+    sourceUrl: offer.url ?? undefined,
+    url: offer.url ?? undefined,
+    seller: offer.seller ?? undefined,
+  } : null];
+}));
+
+const pagePath = isEn
+  ? localizedPath('en', ['tools', 'selector'])
+  : localizedPath('es-ES', ['herramientas', 'selector']);
+const canonicalUrl = absoluteUrl(pagePath);
+const title = isEn
+  ? 'Chair & Standing Desk Finder | Tu Espacio de Trabajo'
+  : 'Recomendador de sillas y escritorios para home office';
+const description = buildSelectorPageDescription(eligibleProducts.length, locale);
+if (description.length < 140 || description.length > 155) {
+  throw new Error(`Selector meta description must be 140-155 characters; got ${description.length}`);
+}
+const alternates = buildAlternates({
+  'es-ES': localizedPath('es-ES', ['herramientas', 'selector']),
+  en: localizedPath('en', ['tools', 'selector']),
+});
+const schemas = buildSelectorPageSchemas(locale, canonicalUrl, description);
+const webApplicationJson = serializeJsonForHtml(schemas.webApplication);
+const breadcrumbJson = serializeJsonForHtml(schemas.breadcrumb);
+const copy = isEn ? {
+  breadcrumbLabel: 'Breadcrumb', home: 'Home', tools: 'Tools', current: 'Chair & standing desk finder',
+  heading: 'Find the chair or standing desk that fits you best',
+  lead: `Answer a few focused questions. We compare real specifications across ${eligibleProducts.length} eligible chairs and desks, then show your three strongest matches.`,
+  shellLabel: 'Interactive chair and standing desk finder',
+} : {
+  breadcrumbLabel: 'Migas de pan', home: 'Inicio', tools: 'Herramientas', current: 'Recomendador de sillas y escritorios',
+  heading: 'Encuentra la silla o el escritorio que mejor encaja contigo',
+  lead: `Responde unas preguntas concretas. Comparamos las especificaciones reales de ${eligibleProducts.length} sillas y escritorios aptos y te mostramos tus tres mejores opciones.`,
+  shellLabel: 'Recomendador interactivo de sillas y escritorios',
+};
+---
+
+<Base title={title} description={description} canonical={canonicalUrl} alternates={alternates} locale={locale}>
+  <script is:inline type="application/ld+json" set:html={webApplicationJson} slot="head"></script>
+  <script is:inline type="application/ld+json" set:html={breadcrumbJson} slot="head"></script>
+
+  <div class="container selector-page">
+    <nav class="breadcrumb" aria-label={copy.breadcrumbLabel}>
+      <a href={localizedPath(locale)}>{copy.home}</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href={isEn ? localizedPath('en', ['tools']) : localizedPath('es-ES', ['herramientas'])}>{copy.tools}</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span>{copy.current}</span>
+    </nav>
+
+    <header class="selector-page-header">
+      <h1>{copy.heading}</h1>
+      <p>{copy.lead}</p>
+    </header>
+
+    <section class="selector-shell" aria-label={copy.shellLabel}>
+      <SelectorProductos
+        products={eligibleProducts}
+        configs={configs}
+        locale={locale}
+        offersBySlug={offersBySlug}
+      />
+    </section>
+  </div>
+</Base>
+
+<style>
+  .selector-page { padding-block: 1.5rem 4rem; }
+  .selector-page-header { max-width: 52rem; margin: 2.5rem auto 2rem; text-align: center; }
+  .selector-page-header h1 { margin: 0; font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.045em; }
+  .selector-page-header p { max-width: 45rem; margin: 1rem auto 0; color: var(--ink-muted); font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.65; }
+  .selector-shell { max-width: 72rem; margin-inline: auto; padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--surface); }
+  @media (max-width: 560px) { .selector-page { padding-top: 1rem; } .selector-page-header { margin-block: 1.8rem 1.5rem; text-align: left; } .selector-shell { padding: 1rem; } }
+</style>
+
+<script>
+  import { buildSelectorResultSchemaFromPayload, syncSelectorResultSchema } from '@/lib/selector/schema';
+  import type { SelectorEventResult, SelectorLocale, SelectorSchemaDocumentAdapter } from '@/lib/selector/schema';
+  import type { SelectorPayloadOffer, SelectorProductPayload } from '@/lib/selector/payload';
+
+  interface RuntimePayload {
+    products: SelectorProductPayload[];
+    offers: Record<string, SelectorPayloadOffer | null>;
+    locale: SelectorLocale;
+  }
+
+  const payloadElement = document.querySelector<HTMLScriptElement>('[data-selector-payload]');
+  const payload = JSON.parse(payloadElement?.textContent ?? '{}') as RuntimePayload;
+  const schemaDocument = document as unknown as SelectorSchemaDocumentAdapter;
+
+  document.addEventListener('selector:results', (event: Event) => {
+    const results = (event as CustomEvent<{ results: SelectorEventResult[] }>).detail?.results ?? [];
+    const schema = buildSelectorResultSchemaFromPayload(
+      results,
+      payload.products,
+      payload.offers,
+      payload.locale,
+      window.location.origin,
+    );
+    syncSelectorResultSchema(schemaDocument, schema);
+  });
+
+  document.addEventListener('selector:clear-results', () => {
+    syncSelectorResultSchema(schemaDocument, null);
+  });
+</script>

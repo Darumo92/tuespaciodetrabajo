@@ -1,0 +1,57 @@
+<template data-selector-card-template>
+  <article class="selector-card" data-result-card>
+    <header class="card-heading">
+      <span class="card-rank" data-card-rank></span>
+      <span class="card-score"><strong data-card-score></strong><span>/100</span></span>
+    </header>
+    <div class="card-product">
+      <a class="card-image-link" data-card-link tabindex="-1">
+        <img data-card-image src="" alt="" width="180" height="180" loading="lazy" decoding="async" />
+        <span class="card-image-fallback" data-card-image-fallback role="img" hidden>
+          <strong data-card-fallback-brand></strong>
+          <span data-card-fallback-name></span>
+        </span>
+      </a>
+      <div class="card-identity">
+        <span class="card-brand" data-card-brand></span>
+        <h3><a data-card-name data-card-link></a></h3>
+        <p class="card-price" data-card-price></p>
+      </div>
+    </div>
+    <ul class="card-reasons" data-card-reasons>
+      <li data-card-reason></li>
+      <li data-card-reason></li>
+      <li data-card-reason></li>
+    </ul>
+    <p class="card-warning" data-card-warning hidden></p>
+  </article>
+</template>
+
+<style>
+  .selector-card {
+    height: 100%; padding: 1.15rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--surface); color: var(--ink);
+  }
+  .card-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--border); }
+  .card-rank { font-size: 0.78rem; font-weight: 750; color: var(--ink-muted); }
+  .card-score { color: var(--ink-muted); font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+  .card-score strong { color: var(--accent); font-family: var(--font-display); font-size: 1.3rem; line-height: 1; }
+  .card-product { display: grid; grid-template-columns: 6.2rem 1fr; gap: 0.9rem; align-items: center; padding: 1rem 0; }
+  .card-image-link { display: block; color: inherit; }
+  .card-image-link img, .card-image-fallback { width: 6.2rem; height: 6.2rem; border-radius: var(--radius); border: 1px solid var(--border); background: #fff; object-fit: contain; }
+  .card-image-fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.15rem; padding: 0.45rem; text-align: center; background: var(--surface-muted); }
+  .card-image-fallback strong { font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--ink-muted); }
+  .card-image-fallback span { font-size: 0.72rem; font-weight: 650; line-height: 1.2; }
+  .card-brand { color: var(--ink-muted); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  h3 { margin-top: 0.15rem; font-family: var(--font-display); font-size: 1rem; line-height: 1.25; letter-spacing: -0.015em; }
+  h3 a { color: var(--ink); text-decoration: none; }
+  h3 a:hover { color: var(--accent); }
+  .card-price { margin-top: 0.35rem; color: var(--ink); font-size: 0.9rem; font-weight: 750; }
+  .card-reasons { display: grid; gap: 0.45rem; margin: 0; padding: 0; list-style: none; }
+  .card-reasons li { position: relative; padding-left: 1.05rem; color: var(--ink-muted); font-size: 0.82rem; line-height: 1.45; }
+  .card-reasons li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 750; }
+  .card-warning { margin-top: 0.8rem; padding-top: 0.75rem; border-top: 1px solid var(--border); color: var(--ink-muted); font-size: 0.78rem; line-height: 1.45; }
+  .card-warning::before { content: '! '; color: #9a6700; font-weight: 800; }
+  @media (max-width: 420px) { .card-product { grid-template-columns: 5.2rem 1fr; } .card-image-link img, .card-image-fallback { width: 5.2rem; height: 5.2rem; } }
+</style>

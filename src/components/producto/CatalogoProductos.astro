@@ -1,11 +1,13 @@
 ---
 import TarjetaProducto from './TarjetaProducto.astro';
 import FiltroPill from './FiltroPill.astro';
+import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getTipoConfig, GRUPOS_FILTRO } from '@/lib/tipos';
 import { claveData, opcionesMarca, filtrosVisibles, agruparFiltros, comparePath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 import { t } from '@/i18n/ui';
+import { SELECTOR_CONFIGS, resolveEligibleSelectorConfig } from '@/lib/selector/config';
 
 interface Props {
   productos: Producto[];
@@ -81,13 +83,22 @@ const panelConfig = {
 const labelPlural = isEn ? (cfg?.enLabels.plural ?? 'products') : (cfg?.labelPlural ?? 'productos').toLowerCase();
 const typeSlug = localizedTipoSlug(tipo, locale);
 const compareBase = comparePath(tipo, '', locale);
+const selectorConfig = resolveEligibleSelectorConfig(
+  SELECTOR_CONFIGS,
+  productos.filter((product) => product.tipo === tipo),
+  (config) => config.tipo === tipo,
+  5,
+);
 ---
 
 <section class="catalogo" data-catalogo-root data-tipo={typeSlug} data-catalogo-config={JSON.stringify(panelConfig)} data-catalogo-copy={JSON.stringify(ui.catalog)} data-locale={locale} data-compare-base={compareBase}>
-  <div class="cat-search" role="search">
-    <span class="cat-search-icon" aria-hidden="true">🔍</span>
-    <input type="search" class="cat-search-input" data-busqueda
-      placeholder={ui.catalog.searchPlaceholder} aria-label={ui.catalog.searchLabel} autocomplete="off" />
+  <div class="cat-discovery">
+    <div class="cat-search" role="search">
+      <span class="cat-search-icon" aria-hidden="true">🔍</span>
+      <input type="search" class="cat-search-input" data-busqueda
+        placeholder={ui.catalog.searchPlaceholder} aria-label={ui.catalog.searchLabel} autocomplete="off" />
+    </div>
+    {selectorConfig && <SelectorCta locale={locale} tipo={tipo} variant="compact" />}
   </div>
 
   <div class="cat-bar">
@@ -173,7 +184,9 @@ const compareBase = comparePath(tipo, '', locale);
   .catalogo { position: relative; padding-bottom: 4.5rem; }
 
   /* Búsqueda */
-  .cat-search { position: relative; max-width: 28rem; margin-bottom: 1rem; }
+  .cat-discovery { display: grid; grid-template-columns: minmax(16rem, 28rem) minmax(18rem, 1fr); gap: 1rem; align-items: stretch; }
+  .cat-discovery > :global(.selector-cta) { margin-bottom: 1rem; }
+  .cat-search { position: relative; margin-bottom: 1rem; }
   .cat-search-icon { position: absolute; left: 0.7rem; top: 50%; transform: translateY(-50%); font-size: 0.9rem; opacity: 0.6; }
   .cat-search-input {
     width: 100%; min-height: 2.5rem; padding: 0 0.8rem 0 2.1rem;
@@ -321,6 +334,7 @@ const compareBase = comparePath(tipo, '', locale);
   /* Móvil: hoja de filtros a pantalla completa, facetas como secciones */
   @media (max-width: 768px) {
     .catalogo { padding-bottom: 8.5rem; }
+    .cat-discovery { grid-template-columns: 1fr; gap: 0; }
 
     /* Barra de acción: Filtrar | Ordenar */
     .cat-actionbar { display: flex; gap: 0.5rem; }
