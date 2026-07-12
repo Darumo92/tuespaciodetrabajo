@@ -36,6 +36,8 @@ Thumbs.db
 !.claude/settings.json
 .superpowers/
 .agents/
+.opencode/
+.security/
 
 # claude-environment skill copies (reproducible via setup.sh)
 claude-environment/skills/
