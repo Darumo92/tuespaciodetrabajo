@@ -1,0 +1,146 @@
+tipo: "escritorio"
+nombre: "Eleva Pro — Escritorio Elevable Eléctrico Fabricado en España"
+tituloCorto: "Eleva Pro"
+marca: "Eleva"
+imagen: "/img/productos/eleva-pro.jpg"
+imagenAlt: "Escritorio elevable eléctrico Eleva Pro fabricado en España con doble motor, panel de 4 memorias y carga USB/USB-C"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 6.5
+  estabilidad: 8
+  capacidadCarga: 7.5
+  rangoAltura: 9
+  materiales: 8
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: "escritorio elevable eléctrico doble motor fabricado España tablero madera"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://elevadesk.com/products/eleva-pro"
+idealPara: "Quien quiere un elevable de gama media-alta con fabricación europea, tableros hechos en España y un rango de altura enorme, comprando a una marca nacional con 100 días de prueba"
+veredicto: "Eleva es una marca española que diseña y fabrica sus elevables con componentes europeos y tableros hechos en España, algo poco habitual en un mercado dominado por marcas asiáticas de Amazon. El Eleva Pro es su tope de gama: doble motor, 100 kg de carga y, sobre todo, un rango de altura excepcional de unos 60 a 126 cm —de los más amplios que se ven—, que va desde estaturas bajas trabajando sentadas hasta personas muy altas de pie, e incluso permite montarlo como escritorio para trabajar sentado en el suelo o de pie con holgura. Sube a 38 mm/s con 4 memorias y sistema anticolisión, y admite tableros de hasta 2 metros de largo, ideal para setups grandes o multimonitor. Frente a un FlexiSpot o Maidesite de precio parecido, el argumento de Eleva es la proximidad (soporte y garantía nacionales, 5 años, 100 días de prueba) y la fabricación europea del tablero. No es la opción más barata ni la más rápida, pero es de las pocas formas de comprar un elevable serio a una marca española con acabado de calidad. Para quien valora comprar nacional y un rango de altura que no se le quede corto, es una gran elección."
+resumenCompra:
+  mejorPara: "Quien quiere un elevable de gama media-alta de marca española, con tableros fabricados en España, rango de altura enorme y garantía/soporte nacionales."
+  evitarSi: "Buscas el precio más bajo o la subida más rápida: hay elevables asiáticos más baratos y algún doble motor sube antes."
+  alternativaDirecta: "FlexiSpot E7 Pro o Maidesite T2 Pro Plus si priorizas precio o carga máxima; Oakywood Standing Desk Pro si quieres madera maciza premium por más dinero."
+  decisionRapida: "El elevable serio de marca española con el rango de altura más amplio (60-126 cm) y 5 años de garantía; el pero es que no es el más barato ni el más rápido."
+metodologia:
+  - "Specs de la ficha oficial de Eleva (elevadesk.com, modelo Eleva Pro) y de la comparativa de su gama (One, Go, 3.0, Pro), contrastadas con la información de fabricación y garantía de la marca."
+  - "La nota premia el rango de altura, la fabricación europea del tablero y el soporte/garantía nacionales; penaliza que no sea el más barato ni el de subida más rápida."
+scoreRationale:
+  velocidad: "38 mm/s con doble motor: correcta para la gama media-alta, aunque por debajo de los dobles motores más rápidos (50-60 mm/s)."
+  estabilidad: "Doble motor y componentes europeos sobre estructura robusta; admite tableros de hasta 2 m, buena base para multimonitor."
+  capacidadCarga: "100 kg cubren con holgura un setup completo con varios monitores y equipo."
+  rangoAltura: "Unos 60-126 cm: de los rangos más amplios del mercado, cubre desde estaturas bajas sentadas hasta muy altas de pie."
+  materiales: "Componentes de procedencia europea y tableros fabricados en España: un plus de trazabilidad y acabado frente a la media de Amazon."
+  calidadPrecio: "Gama media-alta con soporte y garantía nacionales (5 años, 100 días de prueba): buena relación si valoras comprar en España, algo por encima de rivales asiáticos en precio."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Eleva — Escritorio Elevable Eleva Pro"
+    url: "https://elevadesk.com/products/eleva-pro"
+    fechaConsulta: "2026-07-13"
+  - tipo: "oficial"
+    nombre: "Eleva — Guía del comprador y gama de escritorios elevables"
+    url: "https://elevadesk.com/en/pages/guia-del-comprador"
+    fechaConsulta: "2026-07-13"
+limitaciones:
+  - "No es la opción más barata: rivales asiáticos de doble motor cuestan menos."
+  - "Velocidad de 38 mm/s: por debajo de los dobles motores más rápidos del mercado."
+  - "No se vende en Amazon.es: se compra en la tienda oficial de Eleva (el botón enlaza a búsqueda)."
+  - "No se han confirmado el grosor del tablero del Pro, el peso del producto ni las medidas concretas de cada configuración: quedan en null."
+alternativas:
+  - slug: "flexispot-e7-pro"
+    motivo: "Doble motor con más velocidad y carga por un precio parecido o menor, aunque de marca asiática."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Doble motor y 160 kg de carga con 10 años de garantía a menor precio."
+  - slug: "oakywood-standing-desk-pro"
+    motivo: "Madera maciza premium y acabado de diseño si puedes subir el presupuesto."
+comunidad: "Eleva se apoya en su condición de marca española: destaca la fabricación de los tableros en España, los componentes europeos, la garantía de 5 años y los 100 días de prueba gratis como diferenciales frente a comprar a marcas asiáticas por Amazon. Es una propuesta pensada para quien prefiere soporte nacional y trazabilidad de materiales antes que el precio mínimo."
+paraQuienSi:
+  - "Quien quiere comprar un elevable serio a una marca española"
+  - "Quien necesita un rango de altura muy amplio (personas muy altas o muy bajas)"
+  - "Quien valora garantía y soporte nacionales y los 100 días de prueba"
+paraQuienNo:
+  - "Quien busca el precio más bajo posible"
+  - "Quien quiere la subida más rápida del mercado"
+  - "Quien prefiere comprar en Amazon.es con envío y devolución exprés"
+puntosFuertes:
+  - "Marca española con tableros fabricados en España y componentes europeos"
+  - "Rango de altura excepcional (unos 60-126 cm)"
+  - "Doble motor, 100 kg de carga y tableros de hasta 2 m"
+  - "5 años de garantía y 100 días de prueba gratis"
+puntosDebiles:
+  - "No es la opción más barata de la gama media-alta"
+  - "Velocidad de 38 mm/s, por debajo de los dobles motores más rápidos"
+  - "No disponible en Amazon.es"
+fuenteSpecs: "Specs de la ficha oficial de Eleva (elevadesk.com, Eleva Pro) y de la comparativa de su gama: doble motor, carga 100 kg, rango de altura aproximado 60-126 cm, velocidad 38 mm/s, panel con 4 memorias, sistema anticolisión, carga USB/USB-C, admite tableros de hasta 2 m de largo, componentes de procedencia europea y tableros fabricados en España, garantía de 5 años y 100 días de prueba. No se han confirmado el grosor del tablero del modelo Pro, el peso del producto, los segmentos de columna ni las medidas concretas de cada configuración, por lo que quedan en null."
+verificadoEn: "2026-07-13"
+en:
+  nombreComercial: "Eleva Pro — Electric Standing Desk Made in Spain"
+  tituloCorto: "Eleva Pro"
+  veredicto: "Eleva is a Spanish brand that designs and manufactures its standing desks with European components and tabletops made in Spain, uncommon in a market dominated by Asian Amazon brands. The Eleva Pro is its flagship: dual motor, 100 kg of load and, above all, an exceptional height range of about 60 to 126 cm —among the widest you'll see—, spanning short users working seated to very tall people standing, and even lets you set it up for floor-seated or standing work with headroom. It rises at 38 mm/s with 4 memories and an anti-collision system, and takes tabletops up to 2 meters long, ideal for large or multi-monitor setups. Versus a similarly priced FlexiSpot or Maidesite, Eleva's argument is proximity (national support and warranty, 5 years, 100-day trial) and the European manufacture of the tabletop. It isn't the cheapest or the fastest, but it's one of the few ways to buy a serious standing desk from a Spanish brand with quality finish. For anyone who values buying local and a height range that won't fall short, it's a great choice."
+  idealPara: "Anyone who wants a mid-to-high-end standing desk with European manufacturing, tabletops made in Spain and a huge height range, buying from a national brand with a 100-day trial"
+  comunidad: "Eleva leans on its status as a Spanish brand: it highlights Spanish-made tabletops, European components, the 5-year warranty and the free 100-day trial as differentiators over buying Asian brands on Amazon. It's a proposition for anyone who prefers national support and material traceability over the lowest price."
+  resumenCompra:
+    mejorPara: "Anyone who wants a mid-to-high-end standing desk from a Spanish brand, with Spanish-made tabletops, a huge height range and national warranty/support."
+    evitarSi: "You're after the lowest price or the fastest rise: there are cheaper Asian standing desks and some dual motors rise faster."
+    alternativaDirecta: "FlexiSpot E7 Pro or Maidesite T2 Pro Plus if you prioritize price or maximum load; Oakywood Standing Desk Pro if you want premium solid wood for more money."
+    decisionRapida: "The serious Spanish-brand standing desk with the widest height range (60-126 cm) and 5-year warranty; the catch is it's neither the cheapest nor the fastest."
+  puntosFuertes:
+    - "Spanish brand with Spanish-made tabletops and European components"
+    - "Exceptional height range (about 60-126 cm)"
+    - "Dual motor, 100 kg load and tabletops up to 2 m"
+    - "5-year warranty and free 100-day trial"
+  puntosDebiles:
+    - "Not the cheapest option in the mid-to-high-end tier"
+    - "38 mm/s speed, below the fastest dual motors"
+    - "Not available on Amazon.es"
+  paraQuienSi:
+    - "Anyone who wants to buy a serious standing desk from a Spanish brand"
+    - "Anyone who needs a very wide height range (very tall or very short users)"
+    - "Anyone who values national warranty and support and the 100-day trial"
+  paraQuienNo:
+    - "Anyone after the lowest possible price"
+    - "Anyone who wants the fastest rise on the market"
+    - "Anyone who prefers to buy on Amazon.es with express shipping and returns"
+calidadDatos:
+  score: 69
+  confianza: "medio"
+  enriquecidoEn: "2026-07-13"
+  camposFaltantes:
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 38
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 60
+  alturaMaxCm: 126
+  cargaMaxKg: 100
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: false
+  tableroIncluido: true
+  tableroMaterial: "madera"
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 4
+  anticolision: true
+  puertoUsb: true
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

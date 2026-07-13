@@ -1,7 +1,7 @@
 # Proyecto: Catálogo de escritorios elevables
 
 Estado vivo del catálogo estructurado de escritorios elevables (mismo nivel que las
-77 fichas de sillas). Retomar desde aquí entre sesiones. Última actualización: 2026-07-02.
+77 fichas de sillas). Retomar desde aquí entre sesiones. Última actualización: 2026-07-13.
 
 ## Objetivo
 50-100 fichas de escritorios elevables en `src/content/productos/*.yaml`, bilingües
@@ -59,7 +59,16 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 37 / (objetivo 50-100).
+- Creadas: 42 / (objetivo 50-100).
+  - Lote 12 (5, 2026-07-13, media calidad 68.4): spread premium→económico, marcas más buscadas
+    sin ficha (research fresco foros + comparativas ES/int 2026). Specs de oficiales/reseñas, nunca inventadas.
+    `vasagle-lsd112` (72, SONGMICS/VASAGLE 1 motor 25mm/s/80kg/4 mem/enchufe+cajón, Amazon.es → asin null + buscar),
+    `homall-120x60` (63, 1 motor 72-116cm/80kg/4 mem/anticol/ganchos, Amazon.es → asin null + buscar),
+    `devaise-120x60` (66, ultraeconómico ~76€ 1 motor 72-118cm/70kg/3 mem/anticol, Amazon.es → asin null + buscar),
+    `oakywood-standing-desk-pro` (72, premium MADERA MACIZA doble motor 1200N/60mm/s/app/5 años, tienda oficial → no Amazon, buscar),
+    `eleva-pro` (69, premium ES fabricado España doble motor 60-126cm/100kg/USB-C/5 años/100 días prueba, tienda oficial → no Amazon, buscar).
+    ODK y Sweetcrispy **descartados** (productos famosos son mesas gaming/sillas, no elevables); Boomchair sin datos.
+    **Pendiente datos usuario**: ASIN+precio Amazon.es de las 3 económicas (vasagle/homall/devaise); imágenes de las 5 (nombre=slug).
   - Lote 11 (2, 2026-07-09, media calidad 77.0): autoridad/editorial marcas USA, specs de oficiales/reseñas.
     `fully-jarvis` (83, Herman Miller bambú 159kg/7 años), `vari-electric` (71, ComfortEdge/montaje exprés/
     garantía de por vida → garantiaAnios null). Ambas tienda oficial EE.UU., sin Amazon.es, sin imagen ni precio.

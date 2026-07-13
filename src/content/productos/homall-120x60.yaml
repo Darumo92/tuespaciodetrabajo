@@ -1,0 +1,145 @@
+tipo: "escritorio"
+nombre: "HOMALL Escritorio Elevable Eléctrico 120x60 cm con Tablero y 4 Memorias"
+tituloCorto: "HOMALL 120x60"
+marca: "HOMALL"
+imagen: "/img/productos/homall-120x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico HOMALL de 120x60 cm con tablero, panel LED de 4 memorias, ganchos y anticolisión"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 4.5
+  estabilidad: 5.5
+  capacidadCarga: 6.5
+  rangoAltura: 6
+  materiales: 5.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "HOMALL escritorio elevable eléctrico 120x60 con tablero 4 memorias anticolisión ganchos"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien busca un elevable barato con estética gaming/minimalista, tablero incluido, 4 memorias y anticolisión, para un home office o setup con un uso normal"
+veredicto: "HOMALL es una de esas marcas de Amazon.es que copan la gama baja de escritorios elevables, y su modelo de 120x60 es un habitual en las listas de más vendidos. La propuesta es la de siempre en este tramo: un único motor que sube de 72 a 116 cm de forma silenciosa, 80 kg de carga y tablero incluido, con la ventaja de traer panel LED con 4 memorias, anticolisión que se detiene al topar con un obstáculo y un par de ganchos para colgar auriculares o mochila. La estructura es de dos patas de acero con doble refuerzo diagonal y, pese a ello, los usuarios coinciden en que aguanta estable incluso en alto para un uso normal. Frente a rivales como Devoko o DEVAISE, HOMALL juega la carta del diseño (acabados blanco/negro que encajan en setups gaming) y las 4 memorias. Sus límites son los de la gama de entrada: el motor único no está pensado para alternar sentado-de pie decenas de veces al día ni para cargar varios monitores pesados. Como elevable económico para empezar, cumple de sobra."
+resumenCompra:
+  mejorPara: "Un home office o setup gaming económico con tablero incluido, 4 memorias, anticolisión y ganchos."
+  evitarSi: "Vas a alternar sentado-de pie muchas veces al día o cargar varios monitores pesados: el motor único se queda corto."
+  alternativaDirecta: "Devoko 120x60 o DEVAISE 120x60 si buscas el precio mínimo; VASAGLE LSD112 si prefieres enchufe y cajón; Maidesite T2 Pro Plus para dar el salto a doble motor y 160 kg."
+  decisionRapida: "Elevable barato con estética gaming, 4 memorias, anticolisión y ganchos; el pero es el motor único y el rango algo corto (72-116)."
+metodologia:
+  - "Specs de las fichas de producto de HOMALL en Amazon.es (variantes 120x60 y 140x70) y de tiendas que lo distribuyen (Leroy Merlin), contrastadas con reseñas de usuarios y comparativas españolas (escritorioselevables, elevaescritorio)."
+  - "La nota valora que sea un escritorio completo con extras (4 memorias, anticolisión, ganchos) al precio de la gama de entrada; penaliza el motor único y el rango de altura algo más corto que la media."
+scoreRationale:
+  velocidad: "Motor único: subida lenta y silenciosa; la marca no publica la velocidad exacta en mm/s."
+  estabilidad: "Dos patas de acero con doble refuerzo diagonal; los usuarios la ven estable en alto para un uso normal, aunque sin la firmeza de un doble motor."
+  capacidadCarga: "80 kg cubren monitor, portátil y periféricos con margen para la gama de entrada."
+  rangoAltura: "72-116 cm: suficiente de sentado a de pie a estaturas medias, pero de los rangos más cortos de su categoría."
+  materiales: "Acero y tablero de aglomerado de gama básica con acabados blanco/negro; correcto para el precio."
+  calidadPrecio: "Escritorio completo con 4 memorias, anticolisión y ganchos a precio de gama de entrada: muy buena relación calidad-precio."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — HOMALL 120x60 cm Escritorio Elevable Regulable en Altura con tablero"
+    url: "https://www.amazon.es/s?k=HOMALL+escritorio+elevable+120x60"
+    fechaConsulta: "2026-07-13"
+  - tipo: "review"
+    nombre: "elevaescritorio.com — Escritorios elevables Homall"
+    url: "https://elevaescritorio.com/homall/"
+    fechaConsulta: "2026-07-13"
+limitaciones:
+  - "Motor único: subida lenta frente a los de doble motor."
+  - "Rango de altura 72-116 cm: de los más cortos de la categoría; los muy altos se quedan justos de pie."
+  - "No se han confirmado la velocidad exacta (mm/s), el nivel de ruido, el grosor del tablero, el puerto USB, el peso ni la garantía oficial: quedan en null."
+alternativas:
+  - slug: "devoko-120x60"
+    motivo: "Marca con miles de reseñas y media alta por un precio similar, también con tablero incluido."
+  - slug: "vasagle-lsd112"
+    motivo: "Enchufe y cajón integrados y rango de altura algo mayor (72-120) por un precio parecido."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Las reseñas coinciden en que es sorprendentemente estable pese a las dos patas, que el montaje es sencillo con instrucciones claras y que da muy buena sensación para lo que cuesta. Valoran las 4 memorias, la anticolisión y los ganchos. Sobre el ruido las opiniones se dividen: la mayoría lo describe como leve, algunos lo notan más que en otros modelos. Nadie espera un mueble premium a este precio."
+paraQuienSi:
+  - "Quien quiere un elevable barato con estética gaming/minimalista"
+  - "Quien busca tablero incluido con 4 memorias, anticolisión y ganchos"
+  - "Quien hace un uso normal de teletrabajo o gaming con uno o dos monitores"
+paraQuienNo:
+  - "Quien alterna sentado-de pie muchas veces al día"
+  - "Quien monta varios monitores pesados"
+  - "Quien mide bastante y quiere trabajar de pie con holgura (rango 72-116)"
+puntosFuertes:
+  - "Estética gaming/minimalista con acabados blanco y negro"
+  - "Tablero incluido con 4 memorias, anticolisión y ganchos"
+  - "Estable en alto para dos patas, según las reseñas"
+  - "Montaje sencillo con instrucciones claras"
+puntosDebiles:
+  - "Motor único y lento"
+  - "Rango de altura corto (72-116 cm)"
+  - "Nivel de ruido con opiniones divididas"
+fuenteSpecs: "Specs de las fichas de producto de HOMALL en Amazon.es (variante 120x60) y tiendas que lo distribuyen: motor simple, altura 72-116 cm, carga máx. 80 kg, panel LED con 4 memorias, anticolisión que se detiene al topar con un obstáculo, estructura de acero de dos patas con doble refuerzo diagonal, tablero de aglomerado 120x60 cm incluido, dos ganchos. No se han confirmado la velocidad exacta en mm/s, el nivel de ruido, el grosor del tablero, el puerto USB, el peso del producto, los segmentos de columna ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-13"
+en:
+  nombreComercial: "HOMALL Electric Standing Desk 120x60 cm with Tabletop and 4 Memories"
+  tituloCorto: "HOMALL 120x60"
+  veredicto: "HOMALL is one of those Amazon.es brands that dominate the budget standing-desk tier, and its 120x60 model is a regular on the best-seller lists. The pitch is the usual one in this bracket: a single motor that rises quietly from 72 to 116 cm, 80 kg of load, and a tabletop included, with the bonus of an LED panel with 4 memories, anti-collision that stops on hitting an obstacle, and a couple of hooks for headphones or a bag. The frame is two steel legs with double diagonal bracing and, even so, users agree it stays stable at height for normal use. Versus rivals like Devoko or DEVAISE, HOMALL plays the design card (white/black finishes that fit gaming setups) and the 4 memories. Its limits are the entry-level's: the single motor isn't meant to switch sit-stand dozens of times a day or carry several heavy monitors. As a budget standing desk to start out, it more than does the job."
+  idealPara: "Anyone after a cheap standing desk with gaming/minimalist looks, tabletop included, 4 memories and anti-collision, for a home office or setup with normal use"
+  comunidad: "Reviews agree it's surprisingly stable despite the two legs, that assembly is easy with clear instructions, and that it feels great for the price. They value the 4 memories, anti-collision and hooks. On noise opinions split: most describe it as slight, some notice it more than on other models. Nobody expects a premium desk at this price."
+  resumenCompra:
+    mejorPara: "A cheap home office or gaming setup with tabletop included, 4 memories, anti-collision and hooks."
+    evitarSi: "You'll switch sit-stand many times a day or carry several heavy monitors: the single motor falls short."
+    alternativaDirecta: "Devoko 120x60 or DEVAISE 120x60 for the lowest price; VASAGLE LSD112 for a socket and drawer; Maidesite T2 Pro Plus to move up to a dual motor and 160 kg."
+    decisionRapida: "Cheap standing desk with gaming looks, 4 memories, anti-collision and hooks; the catch is the single motor and the shortish range (72-116)."
+  puntosFuertes:
+    - "Gaming/minimalist looks with white and black finishes"
+    - "Tabletop included with 4 memories, anti-collision and hooks"
+    - "Stable at height for two legs, per reviews"
+    - "Easy assembly with clear instructions"
+  puntosDebiles:
+    - "Single, slow motor"
+    - "Short height range (72-116 cm)"
+    - "Noise level draws divided opinions"
+  paraQuienSi:
+    - "Anyone who wants a cheap standing desk with gaming/minimalist looks"
+    - "Anyone after a tabletop included with 4 memories, anti-collision and hooks"
+    - "Anyone doing normal remote work or gaming with one or two monitors"
+  paraQuienNo:
+    - "Anyone who switches sit-stand many times a day"
+    - "Anyone running several heavy monitors"
+    - "Anyone quite tall who wants to stand with headroom (72-116 range)"
+calidadDatos:
+  score: 63
+  confianza: "medio"
+  enriquecidoEn: "2026-07-13"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 116
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

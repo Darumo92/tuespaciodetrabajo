@@ -1,0 +1,144 @@
+tipo: "escritorio"
+nombre: "DEVAISE Escritorio Elevable Eléctrico 120x60 cm con Tablero y 3 Memorias"
+tituloCorto: "DEVAISE 120x60"
+marca: "DEVAISE"
+imagen: "/img/productos/devaise-120x60.jpg"
+imagenAlt: "Escritorio elevable eléctrico DEVAISE de 120x60 cm con tablero ensamblado, panel inteligente de 3 memorias y anticolisión"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 4.5
+  estabilidad: 5.5
+  capacidadCarga: 6
+  rangoAltura: 6.5
+  materiales: 5.5
+  calidadPrecio: 9
+amazon:
+  asin: null
+  buscar: "DEVAISE escritorio elevable eléctrico 120x60 con tablero 3 memorias anticolisión"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Quien quiere el escritorio elevable completo más barato posible, con tablero ya ensamblado y anticolisión, para estrenarse en el standing desk sin apenas gastar"
+veredicto: "El DEVAISE 120x60 es de los elevables eléctricos más baratos que existen en Amazon.es: se ha visto por debajo de 80 euros con tablero ya ensamblado, algo que a este precio no siempre incluye la competencia. Por dentro es gama de entrada pura: un único motor, 70 kg de carga y un rango de 72 a 118 cm que cubre a la mayoría trabajando sentado y de pie, pero se queda justo para personas muy altas. Lo que sorprende para el precio es que trae panel con 3 memorias (72, 95 y 118 cm de fábrica, reprogramables) y anticolisión con retroceso de unos 2 cm, un extra de seguridad que muchos rivales de gama baja omiten. La estructura es de metal y aguanta bien, aunque en altura máxima tiembla más que un doble motor. No lo compres si vas a montar varios monitores pesados o subes y bajas el escritorio decenas de veces al día: para eso necesitas doble motor y más carga. Como primer elevable y por precio, es casi imbatible."
+resumenCompra:
+  mejorPara: "Estrenarse en los elevables gastando lo mínimo, con tablero ensamblado y anticolisión incluidos."
+  evitarSi: "Cargas varios monitores pesados o subes y bajas el escritorio muchas veces al día: te hará falta doble motor."
+  alternativaDirecta: "Devoko 120x60 si prefieres una marca con miles de reseñas por precio similar; SONGMICS LSD132 si quieres 4 memorias y USB-C; Maidesite T2 Pro Plus si puedes estirar a doble motor y 160 kg."
+  decisionRapida: "El elevable completo más barato con anticolisión y 3 memorias; el pero es el motor único y los 70 kg de carga."
+metodologia:
+  - "Specs de las fichas de producto de DEVAISE en Amazon.es (variantes B0F9L774RG, B0F9L3BQ9J, B0FS155N3Q) y agregadores de ofertas españoles, contrastadas con reseñas de usuarios."
+  - "La nota prioriza que sea un escritorio completo y funcional al precio más bajo posible; penaliza el motor único, la carga limitada y la ausencia de datos de velocidad y garantía oficial."
+scoreRationale:
+  velocidad: "Motor único: la subida y bajada es lenta, típica de la gama de entrada; la marca no publica la velocidad exacta en mm/s."
+  estabilidad: "Estructura de metal correcta para 70 kg, con algo de tambaleo en altura máxima propio de un solo motor."
+  capacidadCarga: "70 kg cubren monitor, portátil y periféricos; insuficiente para montajes de varios monitores pesados."
+  rangoAltura: "72-118 cm sirve para trabajar sentado y de pie a estaturas medias; los muy altos se quedan justos de pie."
+  materiales: "Marco de metal y tablero de aglomerado de gama básica; acabado correcto para el precio, sin lujos."
+  calidadPrecio: "Escritorio completo con tablero, 3 memorias y anticolisión por menos de 90 EUR: de lo mejor en relación calidad-precio de la gama de entrada."
+fuentes:
+  - tipo: "tienda"
+    nombre: "Amazon.es — DEVAISE Escritorio Elevable Eléctrico 120x60 cm con 3 memorias, tablero ensamblado (B0F9L774RG)"
+    url: "https://www.amazon.es/dp/B0F9L774RG"
+    fechaConsulta: "2026-07-13"
+  - tipo: "comunidad"
+    nombre: "chollo.es — DEVAISE escritorio elevable 120x60 con 3 memorias por 75,98 EUR"
+    url: "https://www.chollo.es/amazon/devaise-escritorio-elevable-electrico-120-x-60cm-con-3-memorias-por-7598eur-1110338"
+    fechaConsulta: "2026-07-13"
+limitaciones:
+  - "Motor único: la subida y bajada es lenta frente a los de doble motor."
+  - "Carga de 70 kg: insuficiente para montajes de varios monitores pesados."
+  - "No se han confirmado la velocidad exacta (mm/s), el grosor del tablero, el puerto USB, el peso del producto ni la garantía oficial: quedan en null."
+alternativas:
+  - slug: "devoko-120x60"
+    motivo: "Marca con miles de reseñas y media alta por un precio similar, también con tablero incluido."
+  - slug: "songmics-lsd132"
+    motivo: "4 memorias, panel digital y puerto USB-C por poco más."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Las reseñas destacan lo increíblemente barato que es para ser un escritorio elevable completo con tablero ensamblado, el montaje sencillo y que el ajuste es silencioso. Los usuarios valoran que a este precio traiga anticolisión y 3 memorias. Las quejas recurrentes son la lentitud de la subida y que la estabilidad en altura máxima no es la de un doble motor, algo esperable en la gama de entrada."
+paraQuienSi:
+  - "Quien se estrena en los elevables y quiere gastar lo mínimo"
+  - "Quien busca un escritorio completo con tablero ya ensamblado"
+  - "Quien hace un uso normal de teletrabajo con uno o dos monitores ligeros"
+paraQuienNo:
+  - "Quien monta varios monitores pesados o equipo de gaming pesado"
+  - "Quien sube y baja el escritorio muchas veces al día"
+  - "Quien mide bastante y quiere trabajar de pie con holgura"
+puntosFuertes:
+  - "De los escritorios elevables completos más baratos de Amazon.es"
+  - "Tablero ya ensamblado: menos montaje"
+  - "Trae 3 memorias y anticolisión con retroceso, raro a este precio"
+  - "Ajuste silencioso y montaje sencillo"
+puntosDebiles:
+  - "Motor único y lento"
+  - "Carga limitada a 70 kg"
+  - "Estabilidad justa en altura máxima frente a un doble motor"
+fuenteSpecs: "Specs de las fichas de producto de DEVAISE en Amazon.es (variantes B0F9L774RG, B0F9L3BQ9J, B0FS155N3Q, tablero ensamblado 120x60) y agregadores de ofertas: motor simple, altura 72-118 cm (presets de fábrica 72, 95 y 118 cm), carga máx. 70 kg, nivel de ruido <50 dB, panel inteligente con 3 memorias, anticolisión con retroceso de ~2 cm, estructura de metal, tablero de aglomerado 120x60 cm ya ensamblado. No se han confirmado la velocidad exacta en mm/s, el grosor del tablero, el puerto USB, el peso del producto, los segmentos de columna ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-13"
+en:
+  nombreComercial: "DEVAISE Electric Standing Desk 120x60 cm with Tabletop and 3 Memories"
+  tituloCorto: "DEVAISE 120x60"
+  veredicto: "The DEVAISE 120x60 is one of the cheapest electric standing desks on Amazon.es: it has been seen under 80 euros with the tabletop already assembled, which rivals don't always include at this price. Inside it's pure entry-level: a single motor, 70 kg of load, and a 72-118 cm range that suits most people sitting and standing but falls short for very tall users. What surprises for the price is the 3-memory panel (72, 95 and 118 cm from the factory, reprogrammable) and anti-collision with a ~2 cm retract, a safety extra many budget rivals skip. The metal frame holds up well, though it wobbles more than a dual motor at full height. Don't buy it if you'll run several heavy monitors or raise and lower the desk dozens of times a day: for that you need a dual motor and more load. As a first standing desk and on price, it's almost unbeatable."
+  idealPara: "Anyone who wants the cheapest possible complete standing desk, with the tabletop already assembled and anti-collision, to start standing without spending much"
+  comunidad: "Reviews highlight how incredibly cheap it is for a complete standing desk with an assembled tabletop, the easy assembly, and the quiet adjustment. Users value that it includes anti-collision and 3 memories at this price. The recurring complaints are the slow rise and that stability at full height isn't that of a dual motor, expected in the entry-level."
+  resumenCompra:
+    mejorPara: "Getting into standing desks on the smallest budget, with an assembled tabletop and anti-collision included."
+    evitarSi: "You run several heavy monitors or raise and lower the desk many times a day: you'll want a dual motor."
+    alternativaDirecta: "Devoko 120x60 for a brand with thousands of reviews at a similar price; SONGMICS LSD132 for 4 memories and USB-C; Maidesite T2 Pro Plus if you can stretch to a dual motor and 160 kg."
+    decisionRapida: "The cheapest complete standing desk with anti-collision and 3 memories; the catch is the single motor and 70 kg load."
+  puntosFuertes:
+    - "One of the cheapest complete standing desks on Amazon.es"
+    - "Tabletop already assembled: less setup"
+    - "Includes 3 memories and anti-collision with retract, rare at this price"
+    - "Quiet adjustment and easy assembly"
+  puntosDebiles:
+    - "Single, slow motor"
+    - "Load limited to 70 kg"
+    - "Stability is tight at full height versus a dual motor"
+  paraQuienSi:
+    - "Anyone starting out with standing desks on the smallest budget"
+    - "Anyone who wants a complete desk with the tabletop already assembled"
+    - "Anyone doing normal remote work with one or two light monitors"
+  paraQuienNo:
+    - "Anyone running several heavy monitors or heavy gaming gear"
+    - "Anyone who raises and lowers the desk many times a day"
+    - "Anyone quite tall who wants to stand with headroom"
+calidadDatos:
+  score: 66
+  confianza: "medio"
+  enriquecidoEn: "2026-07-13"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 118
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 3
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

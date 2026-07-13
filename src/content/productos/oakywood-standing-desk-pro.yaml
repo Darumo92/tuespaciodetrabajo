@@ -1,0 +1,148 @@
+tipo: "escritorio"
+nombre: "Oakywood Standing Desk Pro — Escritorio Elevable de Madera Maciza"
+tituloCorto: "Oakywood Standing Desk Pro"
+marca: "Oakywood"
+imagen: "/img/productos/oakywood-standing-desk-pro.jpg"
+imagenAlt: "Escritorio elevable de madera maciza Oakywood Standing Desk Pro con doble motor, control por app y panel de 4 memorias"
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 9
+  estabilidad: 8.5
+  capacidadCarga: 6.5
+  rangoAltura: 8.5
+  materiales: 9.5
+  calidadPrecio: 6
+amazon:
+  asin: null
+  buscar: "escritorio elevable madera maciza roble nogal doble motor premium"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://oakywood.shop/products/standing-desk-pro"
+idealPara: "Quien quiere un escritorio elevable de madera maciza de verdad, con acabado de mueble de diseño y mecánica premium, y está dispuesto a pagar el ticket alto de un objeto para años"
+veredicto: "El Oakywood Standing Desk Pro juega en otra liga que los elevables de aglomerado: es un escritorio de madera maciza (roble o nogal), tratada con aceite OSMO Topoil que conserva el color y la textura naturales, sobre una estructura elevable con doble motor de 1200 N que sube a 60 mm/s —de lo más rápido del mercado— y por debajo de 40 dB. Trae panel con 4 memorias, sensores anticolisión y control por app, con un rango de altura de unos 63 a 128 cm que cubre desde estaturas bajas sentadas hasta muy altas de pie. Las reseñas internacionales (Tom's Guide, TechRadar) lo describen como \"el último escritorio que comprarás\": el acabado y la mecánica están a la altura del precio, que es alto y lo posiciona como objeto premium más que como compra utilitaria. No está pensado para quien solo quiere una superficie que suba y baje barata: para eso hay decenas de elevables de aglomerado a una fracción del precio. El Oakywood Pro es para quien valora la madera maciza, el diseño y una garantía de 5 años, y quiere un mueble que dure y se vea bien durante años."
+resumenCompra:
+  mejorPara: "Quien quiere un elevable de madera maciza con acabado de diseño y mecánica premium, y prioriza materiales y estética sobre precio."
+  evitarSi: "Solo necesitas una superficie que suba y baje: los elevables de aglomerado hacen ese trabajo por una fracción del precio."
+  alternativaDirecta: "Eleva Pro si buscas madera y fabricación en España a menor precio; FlexiSpot E7 Pro o Maidesite T2 Pro Plus si priorizas mecánica sobre material del tablero; Fully Jarvis en bambú como referencia premium alternativa."
+  decisionRapida: "El elevable de madera maciza más deseable, con doble motor rapidísimo (60 mm/s) y app; el pero es el precio premium."
+metodologia:
+  - "Specs de la ficha oficial de Oakywood (oakywood.shop, Standing Desk Pro), contrastadas con reseñas internacionales de análisis (Tom's Guide, TechRadar, Luxe Digital)."
+  - "La nota premia materiales (madera maciza), velocidad (60 mm/s) y acabado de diseño; penaliza la relación calidad-precio por el ticket alto y una carga que no destaca frente a la de rivales de acero."
+scoreRationale:
+  velocidad: "60 mm/s con doble motor de 1200 N: de las subidas más rápidas del mercado, muy por encima de la media."
+  estabilidad: "Doble motor sobre estructura robusta; estable en altura según las reseñas, a la altura de su categoría premium."
+  capacidadCarga: "En torno a 70-80 kg: suficiente para un setup completo, aunque no destaca frente a rivales de acero que llegan a 120-160 kg."
+  rangoAltura: "Unos 63-128 cm: uno de los rangos más amplios, cubre desde estaturas bajas sentadas hasta muy altas de pie."
+  materiales: "Madera maciza (roble o nogal) tratada con aceite OSMO Topoil: acabado de mueble de diseño, muy por encima del aglomerado habitual."
+  calidadPrecio: "Objeto premium con ticket alto: excelente si valoras la madera maciza y el diseño, caro si solo buscas funcionalidad."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Oakywood — High-End Standing Desk Pro"
+    url: "https://oakywood.shop/products/standing-desk-pro"
+    fechaConsulta: "2026-07-13"
+  - tipo: "review"
+    nombre: "Tom's Guide — Oakywood Standing Desk Pro review: The last desk you'll ever buy"
+    url: "https://www.tomsguide.com/home/home-office/oakywood-standing-desk-pro-review"
+    fechaConsulta: "2026-07-13"
+  - tipo: "review"
+    nombre: "TechRadar — Oakywood Standing Desk Pro review"
+    url: "https://www.techradar.com/pro/oakywood-standing-desk-pro-review"
+    fechaConsulta: "2026-07-13"
+limitaciones:
+  - "Ticket premium: cuesta varias veces más que un elevable de aglomerado equivalente en función."
+  - "No se vende en Amazon.es: se compra en la tienda oficial de Oakywood (el botón enlaza a búsqueda)."
+  - "No se han confirmado el grosor exacto del tablero, el peso del producto ni las medidas concretas de cada configuración: quedan en null."
+alternativas:
+  - slug: "eleva-pro"
+    motivo: "Madera y fabricación en España con mecánica de doble motor por un precio más contenido."
+  - slug: "fully-jarvis"
+    motivo: "Referencia premium alternativa en bambú, con excelente calidad de construcción."
+  - slug: "flexispot-e7-pro"
+    motivo: "Si priorizas mecánica y carga sobre el material del tablero, por mucho menos dinero."
+comunidad: "Las reseñas internacionales lo tratan como un mueble aspiracional: destacan la calidad de la madera maciza, el acabado con aceite OSMO, lo silencioso y rápido del doble motor y la sensación de objeto para toda la vida. La crítica recurrente es el precio, que lo saca del alcance de quien busca un elevable utilitario, y que la carga no es tan alta como la de estructuras de acero premium."
+paraQuienSi:
+  - "Quien quiere madera maciza de verdad (roble o nogal), no aglomerado"
+  - "Quien valora el acabado de diseño y una mecánica premium (60 mm/s, app)"
+  - "Quien busca un mueble para años y acepta el ticket alto"
+paraQuienNo:
+  - "Quien solo quiere una superficie que suba y baje al menor precio"
+  - "Quien necesita carga muy alta (varios monitores pesados de gran formato)"
+  - "Quien prefiere comprar en Amazon.es con envío y devolución exprés"
+puntosFuertes:
+  - "Tablero de madera maciza (roble/nogal) con acabado de diseño"
+  - "Doble motor de 1200 N muy rápido (60 mm/s) y silencioso (<40 dB)"
+  - "Control por app, 4 memorias y sensores anticolisión"
+  - "Rango de altura amplio y garantía de 5 años"
+puntosDebiles:
+  - "Precio premium, muy por encima de los elevables de aglomerado"
+  - "Carga en torno a 70-80 kg, no destaca frente a estructuras de acero"
+  - "No disponible en Amazon.es"
+fuenteSpecs: "Specs de la ficha oficial de Oakywood (Standing Desk Pro) y reseñas internacionales (Tom's Guide, TechRadar): estructura elevable de doble motor de 1200 N, velocidad 60 mm/s, nivel de ruido <40 dB, rango de altura aproximado 63-128 cm, carga en torno a 70-80 kg, tablero de madera maciza (roble o nogal) tratado con aceite OSMO Topoil, panel con 4 memorias, sensores anticolisión, control por app, garantía de 5 años. No se han confirmado el grosor exacto del tablero, el peso del producto, los segmentos de columna ni las medidas concretas de cada configuración, por lo que quedan en null."
+verificadoEn: "2026-07-13"
+en:
+  nombreComercial: "Oakywood Standing Desk Pro — Solid Wood Electric Standing Desk"
+  tituloCorto: "Oakywood Standing Desk Pro"
+  veredicto: "The Oakywood Standing Desk Pro plays in a different league from chipboard standing desks: it's a solid-wood desk (oak or walnut), treated with OSMO Topoil that preserves the natural color and texture, on a height-adjustable frame with a 1200 N dual motor that rises at 60 mm/s —among the fastest on the market— and under 40 dB. It brings a 4-memory panel, anti-collision sensors and app control, with a height range of roughly 63 to 128 cm that covers short users seated to very tall standing. International reviews (Tom's Guide, TechRadar) call it \"the last desk you'll ever buy\": the finish and mechanics live up to the price, which is high and positions it as a premium object rather than a utilitarian buy. It's not meant for anyone who just wants a cheap surface that goes up and down: for that there are dozens of chipboard desks at a fraction of the price. The Oakywood Pro is for anyone who values solid wood, design and a 5-year warranty, and wants a piece that lasts and looks good for years."
+  idealPara: "Anyone who wants a genuinely solid-wood standing desk, with design-furniture finish and premium mechanics, and is willing to pay the high ticket of an object built to last"
+  comunidad: "International reviews treat it as an aspirational piece: they highlight the solid-wood quality, the OSMO-oil finish, how quiet and fast the dual motor is, and the sense of a lifetime object. The recurring criticism is the price, which puts it out of reach for anyone after a utilitarian desk, and that the load isn't as high as premium steel frames."
+  resumenCompra:
+    mejorPara: "Anyone who wants a solid-wood standing desk with design finish and premium mechanics, prioritizing materials and looks over price."
+    evitarSi: "You just need a surface that goes up and down: chipboard standing desks do that job for a fraction of the price."
+    alternativaDirecta: "Eleva Pro for wood and Spanish manufacturing at a lower price; FlexiSpot E7 Pro or Maidesite T2 Pro Plus if you prioritize mechanics over tabletop material; Fully Jarvis in bamboo as an alternative premium reference."
+    decisionRapida: "The most desirable solid-wood standing desk, with a very fast dual motor (60 mm/s) and app; the catch is the premium price."
+  puntosFuertes:
+    - "Solid-wood tabletop (oak/walnut) with design finish"
+    - "Very fast 1200 N dual motor (60 mm/s) and quiet (<40 dB)"
+    - "App control, 4 memories and anti-collision sensors"
+    - "Wide height range and 5-year warranty"
+  puntosDebiles:
+    - "Premium price, well above chipboard standing desks"
+    - "Load around 70-80 kg, doesn't stand out versus steel frames"
+    - "Not available on Amazon.es"
+  paraQuienSi:
+    - "Anyone who wants genuine solid wood (oak or walnut), not chipboard"
+    - "Anyone who values design finish and premium mechanics (60 mm/s, app)"
+    - "Anyone after a piece for years who accepts the high ticket"
+  paraQuienNo:
+    - "Anyone who just wants a surface that goes up and down at the lowest price"
+    - "Anyone who needs very high load (several large heavy monitors)"
+    - "Anyone who prefers to buy on Amazon.es with express shipping and returns"
+calidadDatos:
+  score: 72
+  confianza: "medio"
+  enriquecidoEn: "2026-07-13"
+  camposFaltantes:
+    - "specs.tableroAnchoCm"
+    - "specs.tableroFondoCm"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: 60
+  nivelRuidoDb: 40
+  segmentosColumna: null
+  alturaMinCm: 63
+  alturaMaxCm: 128
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: false
+  tableroIncluido: true
+  tableroMaterial: "madera maciza"
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "tactil"
+  memorias: 4
+  anticolision: true
+  puertoUsb: null
+  garantiaAnios: 5
+  certificacionTuv: null
+  certificacionEmc: null

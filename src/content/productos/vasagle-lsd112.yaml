@@ -1,0 +1,144 @@
+tipo: "escritorio"
+nombre: "VASAGLE Escritorio Elevable Eléctrico LSD112 120x60 cm con Enchufe y Cajón"
+tituloCorto: "VASAGLE LSD112"
+marca: "VASAGLE"
+imagen: "/img/productos/vasagle-lsd112.jpg"
+imagenAlt: "Escritorio elevable eléctrico VASAGLE LSD112 de 120x60 cm con enchufe integrado, cajón y panel de 4 memorias"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 4.5
+  estabilidad: 6
+  capacidadCarga: 6.5
+  rangoAltura: 7
+  materiales: 6.5
+  calidadPrecio: 8.5
+amazon:
+  asin: null
+  buscar: "VASAGLE escritorio elevable eléctrico LSD112 120x60 enchufe cajón 4 memorias"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.songmics.es/products/vasagle-escritorio-electrico-ajustable-en-altura-lsd112"
+idealPara: "Quien busca un elevable de gama de entrada con diseño industrial cuidado, enchufe y cajón integrados y 4 memorias, sin pasar de un motor único"
+veredicto: "VASAGLE es la marca de mobiliario de SONGMICS, y el LSD112 es uno de sus elevables más vendidos en Amazon.es por una mezcla difícil de batir: diseño industrial (marrón rústico, roble, blanco…), 4 memorias, enchufe y cajón integrados, y un precio que ronda los 110-125 euros con el tablero incluido. Es gama de entrada honesta: un único motor a 25 mm/s —lento pero silencioso, por debajo de 50 dB—, 80 kg de carga y un rango de 72 a 120 cm que cubre de sentado a de pie a la mayoría. Frente al Devoko o el DEVAISE, el LSD112 sube algo la apuesta con 4 memorias en vez de 2-3, más carga (80 kg) y detalles de acabado que se notan, además del enchufe y el cajón que muchos rivales no traen. Lo que no cambia es la limitación del motor único: si vas a alternar sentado-de pie muchas veces al día o cargar varios monitores pesados, un doble motor te dará más soltura y estabilidad en altura. Como primer elevable con buen diseño y extras, es de los más equilibrados de la gama baja."
+resumenCompra:
+  mejorPara: "Un primer elevable con diseño cuidado, enchufe, cajón y 4 memorias sin salir de la gama de entrada."
+  evitarSi: "Alternas sentado-de pie muchas veces al día o cargas varios monitores pesados: el motor único se queda corto."
+  alternativaDirecta: "SONGMICS LSD132 (misma casa) si quieres USB-C; Devoko 120x60 o DEVAISE 120x60 si buscas el precio mínimo; Maidesite T2 Pro Plus para dar el salto a doble motor y 160 kg."
+  decisionRapida: "El elevable de entrada mejor rematado: diseño, enchufe, cajón y 4 memorias; el pero sigue siendo el motor único lento."
+metodologia:
+  - "Specs de la ficha oficial de VASAGLE/SONGMICS (songmics.es, modelo LSD112) y de las variantes en Amazon.es, contrastadas con reseñas de usuarios y comparativas españolas (elevaescritorio)."
+  - "La nota valora el equilibrio entre diseño, extras (enchufe/cajón/4 memorias) y precio de gama de entrada; penaliza el motor único lento frente a los de doble motor."
+scoreRationale:
+  velocidad: "25 mm/s con motor único: lento, aunque silencioso; la transición sentado-de pie se hace de rogar frente a un doble motor."
+  estabilidad: "Estructura de acero correcta para 80 kg; algo de tambaleo en altura máxima propio de la gama de entrada."
+  capacidadCarga: "80 kg, algo por encima de la media de la gama baja: cubren monitor, portátil y periféricos con margen."
+  rangoAltura: "72-120 cm, de los rangos más amplios de la gama de entrada; sirve bien de sentado a de pie a casi todas las estaturas."
+  materiales: "Acero y tablero de aglomerado con acabados de diseño (varios colores); un punto por encima del acabado básico de sus rivales directos."
+  calidadPrecio: "Diseño, enchufe, cajón y 4 memorias por unos 110-125 EUR con tablero: muy buena relación calidad-precio en la gama de entrada."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SONGMICS/VASAGLE — Escritorio eléctrico ajustable en altura LSD112"
+    url: "https://www.songmics.es/products/vasagle-escritorio-electrico-ajustable-en-altura-lsd112"
+    fechaConsulta: "2026-07-13"
+  - tipo: "review"
+    nombre: "elevaescritorio.com — Escritorios elevables VASAGLE (2026)"
+    url: "https://elevaescritorio.com/vasagle/"
+    fechaConsulta: "2026-07-13"
+limitaciones:
+  - "Motor único a 25 mm/s: subida lenta frente a los de doble motor."
+  - "Estabilidad justa en altura máxima, propia de la gama de entrada."
+  - "No se han confirmado el grosor del tablero, el puerto USB, el peso del producto ni la garantía oficial de esta variante: quedan en null."
+alternativas:
+  - slug: "songmics-lsd132"
+    motivo: "De la misma casa (SONGMICS), con panel digital y puerto USB-C por un precio parecido."
+  - slug: "devaise-120x60"
+    motivo: "Más barato aún si el diseño y las 4 memorias no son prioridad."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Las reseñas destacan el diseño y la variedad de colores, que el enchufe y el cajón integrados son muy prácticos, y que el motor es silencioso pese a ser único. La marca (respaldada por SONGMICS) da confianza en la gama baja. Las quejas recurrentes son la lentitud de la subida y que en altura máxima no es tan firme como un doble motor, algo esperable a este precio."
+paraQuienSi:
+  - "Quien quiere un primer elevable con diseño y variedad de colores"
+  - "Quien valora enchufe y cajón integrados en el propio escritorio"
+  - "Quien hace un uso normal de teletrabajo y quiere 4 memorias"
+paraQuienNo:
+  - "Quien alterna sentado-de pie muchas veces al día"
+  - "Quien monta varios monitores pesados"
+  - "Quien quiere la máxima firmeza en altura máxima"
+puntosFuertes:
+  - "Diseño industrial cuidado con varios acabados de color"
+  - "Enchufe y cajón integrados, poco habituales en la gama de entrada"
+  - "4 memorias y 80 kg de carga, por encima de sus rivales directos"
+  - "Motor silencioso (<50 dB) y respaldo de la marca SONGMICS"
+puntosDebiles:
+  - "Motor único y lento (25 mm/s)"
+  - "Estabilidad justa en altura máxima"
+  - "Sin puerto USB confirmado (trae enchufe, no carga USB)"
+fuenteSpecs: "Specs de la ficha oficial de VASAGLE/SONGMICS (LSD112) y variantes en Amazon.es: motor simple, velocidad 25 mm/s, nivel de ruido <50 dB, altura 72-120 cm, carga máx. 80 kg (estática), estructura de acero, tablero de aglomerado 120x60 cm incluido (también disponible en 140x60 y 160x70), panel LED con 4 memorias, enchufe y cajón integrados según variante, protección contra sobrecalentamiento tras 2 min de uso continuo. No se han confirmado el grosor del tablero, el puerto USB, el peso del producto, los segmentos de columna ni la garantía oficial de esta variante, por lo que quedan en null."
+verificadoEn: "2026-07-13"
+en:
+  nombreComercial: "VASAGLE LSD112 Electric Standing Desk 120x60 cm with Socket and Drawer"
+  tituloCorto: "VASAGLE LSD112"
+  veredicto: "VASAGLE is SONGMICS' furniture brand, and the LSD112 is one of its best-selling standing desks on Amazon.es thanks to a hard-to-beat mix: industrial design (rustic brown, oak, white…), 4 memories, integrated socket and drawer, and a price around 110-125 euros with the tabletop included. It's honest entry-level: a single motor at 25 mm/s —slow but quiet, under 50 dB—, 80 kg of load, and a 72-120 cm range that covers sitting to standing for most people. Versus the Devoko or DEVAISE, the LSD112 raises the bar with 4 memories instead of 2-3, more load (80 kg) and noticeable finish details, plus the socket and drawer many rivals lack. What doesn't change is the single-motor limitation: if you'll switch sit-stand many times a day or load several heavy monitors, a dual motor gives you more ease and stability at height. As a first standing desk with good design and extras, it's one of the most balanced in the budget tier."
+  idealPara: "Anyone after an entry-level desk with careful industrial design, integrated socket and drawer and 4 memories, without moving up from a single motor"
+  comunidad: "Reviews highlight the design and color variety, that the integrated socket and drawer are very handy, and that the motor is quiet despite being single. The brand (backed by SONGMICS) inspires confidence in the budget tier. The recurring complaints are the slow rise and that at full height it isn't as firm as a dual motor, expected at this price."
+  resumenCompra:
+    mejorPara: "A first standing desk with design, socket, drawer and 4 memories without leaving the entry-level tier."
+    evitarSi: "You switch sit-stand many times a day or load several heavy monitors: the single motor falls short."
+    alternativaDirecta: "SONGMICS LSD132 (same maker) for USB-C; Devoko 120x60 or DEVAISE 120x60 for the lowest price; Maidesite T2 Pro Plus to move up to a dual motor and 160 kg."
+    decisionRapida: "The best-finished entry-level desk: design, socket, drawer and 4 memories; the catch is still the slow single motor."
+  puntosFuertes:
+    - "Careful industrial design with several color finishes"
+    - "Integrated socket and drawer, uncommon in the entry-level"
+    - "4 memories and 80 kg load, above its direct rivals"
+    - "Quiet motor (<50 dB) and SONGMICS brand backing"
+  puntosDebiles:
+    - "Single, slow motor (25 mm/s)"
+    - "Stability is tight at full height"
+    - "No confirmed USB port (it has a socket, not USB charging)"
+  paraQuienSi:
+    - "Anyone who wants a first standing desk with design and color variety"
+    - "Anyone who values an integrated socket and drawer in the desk itself"
+    - "Anyone doing normal remote work who wants 4 memories"
+  paraQuienNo:
+    - "Anyone who switches sit-stand many times a day"
+    - "Anyone running several heavy monitors"
+    - "Anyone who wants maximum firmness at full height"
+calidadDatos:
+  score: 72
+  confianza: "medio"
+  enriquecidoEn: "2026-07-13"
+  camposFaltantes:
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: 25
+  nivelRuidoDb: 50
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null
