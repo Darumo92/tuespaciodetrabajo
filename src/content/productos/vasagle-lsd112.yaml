@@ -4,9 +4,9 @@ tituloCorto: "VASAGLE LSD112"
 marca: "VASAGLE"
 imagen: "/img/productos/vasagle-lsd112.jpg"
 imagenAlt: "Escritorio elevable eléctrico VASAGLE LSD112 de 120x60 cm con enchufe integrado, cajón y panel de 4 memorias"
-tramoPrecio: 1
-precioMin: null
-precioMax: null
+tramoPrecio: 2
+precioMin: 200
+precioMax: 200
 valoracion: null
 valoraciones:
   velocidad: 4.5
@@ -14,16 +14,16 @@ valoraciones:
   capacidadCarga: 6.5
   rangoAltura: 7
   materiales: 6.5
-  calidadPrecio: 8.5
+  calidadPrecio: 6.5
 amazon:
-  asin: null
+  asin: "B0BDKS7SVW"
   buscar: "VASAGLE escritorio elevable eléctrico LSD112 120x60 enchufe cajón 4 memorias"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []
 oneLinkReady: false
 webOficial: "https://www.songmics.es/products/vasagle-escritorio-electrico-ajustable-en-altura-lsd112"
 idealPara: "Quien busca un elevable de gama de entrada con diseño industrial cuidado, enchufe y cajón integrados y 4 memorias, sin pasar de un motor único"
-veredicto: "VASAGLE es la marca de mobiliario de SONGMICS, y el LSD112 es uno de sus elevables más vendidos en Amazon.es por una mezcla difícil de batir: diseño industrial (marrón rústico, roble, blanco…), 4 memorias, enchufe y cajón integrados, y un precio que ronda los 110-125 euros con el tablero incluido. Es gama de entrada honesta: un único motor a 25 mm/s —lento pero silencioso, por debajo de 50 dB—, 80 kg de carga y un rango de 72 a 120 cm que cubre de sentado a de pie a la mayoría. Frente al Devoko o el DEVAISE, el LSD112 sube algo la apuesta con 4 memorias en vez de 2-3, más carga (80 kg) y detalles de acabado que se notan, además del enchufe y el cajón que muchos rivales no traen. Lo que no cambia es la limitación del motor único: si vas a alternar sentado-de pie muchas veces al día o cargar varios monitores pesados, un doble motor te dará más soltura y estabilidad en altura. Como primer elevable con buen diseño y extras, es de los más equilibrados de la gama baja."
+veredicto: "VASAGLE es la marca de mobiliario de SONGMICS, y el LSD112 es uno de sus elevables más vendidos en Amazon.es por una mezcla difícil de batir: diseño industrial (marrón rústico, roble, blanco…), 4 memorias, enchufe y cajón integrados, y un precio en torno a los 200 euros con el tablero incluido —más que un elevable de aglomerado pelado, porque aquí pagas el diseño, el enchufe y el cajón—. Es mecánica de entrada honesta: un único motor a 25 mm/s —lento pero silencioso, por debajo de 50 dB—, 80 kg de carga y un rango de 72 a 120 cm que cubre de sentado a de pie a la mayoría. Frente al Devoko o el DEVAISE, el LSD112 sube algo la apuesta con 4 memorias en vez de 2-3, más carga (80 kg) y detalles de acabado que se notan, además del enchufe y el cajón que muchos rivales no traen. Lo que no cambia es la limitación del motor único: si vas a alternar sentado-de pie muchas veces al día o cargar varios monitores pesados, un doble motor te dará más soltura y estabilidad en altura. Como primer elevable con buen diseño y extras, es de los más equilibrados de la gama baja."
 resumenCompra:
   mejorPara: "Un primer elevable con diseño cuidado, enchufe, cajón y 4 memorias sin salir de la gama de entrada."
   evitarSi: "Alternas sentado-de pie muchas veces al día o cargas varios monitores pesados: el motor único se queda corto."
@@ -38,7 +38,7 @@ scoreRationale:
   capacidadCarga: "80 kg, algo por encima de la media de la gama baja: cubren monitor, portátil y periféricos con margen."
   rangoAltura: "72-120 cm, de los rangos más amplios de la gama de entrada; sirve bien de sentado a de pie a casi todas las estaturas."
   materiales: "Acero y tablero de aglomerado con acabados de diseño (varios colores); un punto por encima del acabado básico de sus rivales directos."
-  calidadPrecio: "Diseño, enchufe, cajón y 4 memorias por unos 110-125 EUR con tablero: muy buena relación calidad-precio en la gama de entrada."
+  calidadPrecio: "En torno a 200 EUR con tablero, enchufe y cajón: pagas por el diseño y los extras más que por la mecánica (motor único). Correcto si valoras esos extras; hay elevables de aglomerado a la mitad si solo quieres que suba y baje."
 fuentes:
   - tipo: "oficial"
     nombre: "SONGMICS/VASAGLE — Escritorio eléctrico ajustable en altura LSD112"
@@ -82,7 +82,7 @@ verificadoEn: "2026-07-13"
 en:
   nombreComercial: "VASAGLE LSD112 Electric Standing Desk 120x60 cm with Socket and Drawer"
   tituloCorto: "VASAGLE LSD112"
-  veredicto: "VASAGLE is SONGMICS' furniture brand, and the LSD112 is one of its best-selling standing desks on Amazon.es thanks to a hard-to-beat mix: industrial design (rustic brown, oak, white…), 4 memories, integrated socket and drawer, and a price around 110-125 euros with the tabletop included. It's honest entry-level: a single motor at 25 mm/s —slow but quiet, under 50 dB—, 80 kg of load, and a 72-120 cm range that covers sitting to standing for most people. Versus the Devoko or DEVAISE, the LSD112 raises the bar with 4 memories instead of 2-3, more load (80 kg) and noticeable finish details, plus the socket and drawer many rivals lack. What doesn't change is the single-motor limitation: if you'll switch sit-stand many times a day or load several heavy monitors, a dual motor gives you more ease and stability at height. As a first standing desk with good design and extras, it's one of the most balanced in the budget tier."
+  veredicto: "VASAGLE is SONGMICS' furniture brand, and the LSD112 is one of its best-selling standing desks on Amazon.es thanks to a hard-to-beat mix: industrial design (rustic brown, oak, white…), 4 memories, integrated socket and drawer, and a price around 200 euros with the tabletop included —more than a bare chipboard desk, because here you pay for the design, the socket and the drawer—. It's honest entry-level mechanics: a single motor at 25 mm/s —slow but quiet, under 50 dB—, 80 kg of load, and a 72-120 cm range that covers sitting to standing for most people. Versus the Devoko or DEVAISE, the LSD112 raises the bar with 4 memories instead of 2-3, more load (80 kg) and noticeable finish details, plus the socket and drawer many rivals lack. What doesn't change is the single-motor limitation: if you'll switch sit-stand many times a day or load several heavy monitors, a dual motor gives you more ease and stability at height. As a first standing desk with good design and extras, it's one of the most balanced in the budget tier."
   idealPara: "Anyone after an entry-level desk with careful industrial design, integrated socket and drawer and 4 memories, without moving up from a single motor"
   comunidad: "Reviews highlight the design and color variety, that the integrated socket and drawer are very handy, and that the motor is quiet despite being single. The brand (backed by SONGMICS) inspires confidence in the budget tier. The recurring complaints are the slow rise and that at full height it isn't as firm as a dual motor, expected at this price."
   resumenCompra:

@@ -5,8 +5,8 @@ marca: "DEVAISE"
 imagen: "/img/productos/devaise-120x60.jpg"
 imagenAlt: "Escritorio elevable eléctrico DEVAISE de 120x60 cm con tablero ensamblado, panel inteligente de 3 memorias y anticolisión"
 tramoPrecio: 1
-precioMin: null
-precioMax: null
+precioMin: 75.99
+precioMax: 75.99
 valoracion: null
 valoraciones:
   velocidad: 4.5
@@ -16,7 +16,7 @@ valoraciones:
   materiales: 5.5
   calidadPrecio: 9
 amazon:
-  asin: null
+  asin: "B0F9L3BQ9J"
   buscar: "DEVAISE escritorio elevable eléctrico 120x60 con tablero 3 memorias anticolisión"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

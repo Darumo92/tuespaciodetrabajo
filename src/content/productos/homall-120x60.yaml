@@ -5,8 +5,8 @@ marca: "HOMALL"
 imagen: "/img/productos/homall-120x60.jpg"
 imagenAlt: "Escritorio elevable eléctrico HOMALL de 120x60 cm con tablero, panel LED de 4 memorias, ganchos y anticolisión"
 tramoPrecio: 1
-precioMin: null
-precioMax: null
+precioMin: 110
+precioMax: 110
 valoracion: null
 valoraciones:
   velocidad: 4.5
@@ -16,7 +16,7 @@ valoraciones:
   materiales: 5.5
   calidadPrecio: 8.5
 amazon:
-  asin: null
+  asin: "B0CCJ5F67S"
   buscar: "HOMALL escritorio elevable eléctrico 120x60 con tablero 4 memorias anticolisión ganchos"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

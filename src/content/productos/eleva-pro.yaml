@@ -5,8 +5,8 @@ marca: "Eleva"
 imagen: "/img/productos/eleva-pro.jpg"
 imagenAlt: "Escritorio elevable eléctrico Eleva Pro fabricado en España con doble motor, panel de 4 memorias y carga USB/USB-C"
 tramoPrecio: 3
-precioMin: null
-precioMax: null
+precioMin: 515
+precioMax: 515
 valoracion: null
 valoraciones:
   velocidad: 6.5
