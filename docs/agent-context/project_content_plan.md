@@ -26,7 +26,7 @@
 1. **Bilingüe ES+EN** siempre (`src/content/articulos/<slug>.mdx` + `src/content/articulosI18n/en/<slug-en>.mdx`). Nunca uno sin el otro.
 2. **Humanizer** obligatorio sobre ES y EN antes de cerrar.
 3. **Datos SERP los aporta el usuario** (keyword, volumen ES, KD, intención, SERP features). No inventar. Pedírselos antes de redactar cada artículo.
-4. **Imágenes las genera el agente** (skill `image`), en `/images/articulos/<slug>.webp`, como el resto de artículos.
+4. **Imágenes se descargan de Pexels** con `node scripts/pexels-download.mjs "<query>" <slug> [--list] [--index=N]` (API key en `.env`, licencia libre). NO se generan con IA. Salida: `public/images/articulos/<slug>.webp`.
 5. **Dudas primero**: preguntar antes de redactar si hay duda de enfoque/alcance.
 6. Densidad afiliada ≤5/1000w · `fecha` = commit real · lunes preferente, nunca 2 días seguidos ni fin de semana · enlaces internos a artículos CONCRETOS + fichas + comparador · metodología visible + señal personal de David Rubio · componentes `TopPick`/`ComparisonTable`/`AffiliateButton` con `/dp/<ASIN>`, nunca URL Amazon a pelo.
 
@@ -37,7 +37,7 @@
 3. Research real (WebSearch/WebFetch + oficiales/reseñas). Specs/precios nunca inventados; precios orientativos verificados en Amazon.es. Reutilizar ASIN de fichas existentes.
 4. Redactar ES: frontmatter completo (fecha = hoy), intro con señal personal antes de afiliados, metodología visible, "para quién sí/no" por producto, 3+ enlaces internos + comparador, 4-6 FAQs.
 5. Redactar EN paralelo (`locale:en, translationOf, localizedSlug, categoriaSlug` de un EN de la misma categoría, `keywords`, `marketNotes`).
-6. Generar imagen (skill `image`) → `/images/articulos/<slug>.webp`.
+6. Descargar imagen: `node scripts/pexels-download.mjs "<query en inglés>" <slug> --list` para ver opciones, luego con `--index=N` para bajar la elegida → `public/images/articulos/<slug>.webp`.
 7. `humanizer` sobre ES y EN.
 8. `npx astro build` limpio.
 9. Commit (ES+EN+imagen), fecha real. Marcar fila de la cola como ✅.
@@ -59,7 +59,7 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 
 | # | Slug ES | Slug EN | Rol | Enruta a | Estado |
 |---|---------|---------|-----|----------|--------|
-| 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 (imagen pendiente) |
+| 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 |
 | 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ⬜ |
 | 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ⬜ |
 | 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ⬜ |
