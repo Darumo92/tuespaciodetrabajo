@@ -5,6 +5,33 @@ type: project
 originSessionId: b310feb8-fb2f-489f-8def-6e3b39b32271
 ---
 
+## Update 2026-07-21 - control recovery + plan Reddit/Quora
+
+Control SEO:
+- GSC `2026-07-05` -> `2026-07-21`: 0 clics y 2 impresiones, una en home y una en `/guias/ergonomia-teletrabajo-postura-correcta/`.
+- URL test sigue `Crawled - currently not indexed`; ultimo rastreo `2026-06-03T10:43:49Z`, canonical/robots/fetch correctos y referrer Quora detectado.
+- Home sigue indexada; ultimo rastreo `2026-06-12T16:51:37Z`.
+- Silla pillar sigue sin indexar; ultimo rastreo `2026-05-13T09:10:44Z`.
+- GA4: 5 sesiones Direct, 2 Organic Search y 1 AI Assistant en el periodo. Hay actividad organica aislada, pero no recovery de indexacion.
+- Decision: mantener pausa editorial; hoy toca backlinks.
+
+Contexto Reddit:
+- Karma: post `1`, comment `60`, total `61`.
+- Desde el registro del 10 jul se detectaron 12 comentarios no documentados: 11 sin link y 1 con link a `/en/guides/gaming-chair-vs-ergonomic-chair/`.
+- Incidente relevante: en `r/OfficeChairs` `1uuiuo2` acusaron a la cuenta de usar IA. La respuesta propia lo reconocio como ayuda para ordenar ideas y fue defensiva. Desde hoy: comentarios mas cortos, menos estructura de ensayo, menos cadenas de diagnostico y no responder en caliente a acusaciones.
+- Tanda recomendada hoy: 3 Reddit, maximo 1 link propio.
+  1. `r/homeoffice` `1v1hut7`, CON link a `/en/accessories/best-monitor-arms/`: setup de ingeniero software + produccion musical con dos pantallas y dos monitores de estudio.
+  2. `r/OfficeChairs` `1v1ohbi`, SIN link: Aeron 400 EUR vs Embody 800 EUR; priorizar talla/configuracion y proteccion del comprador.
+  3. `r/StandingDesks` `1v0u3tg`, SIN link: explicar single vs dual motor sin confundir motores con estabilidad.
+- Quora ES nueva: `https://es.quora.com/Cu%C3%A1l-es-la-mejor-iluminaci%C3%B3n-para-una-oficina-en-casa-Luz-blanca-o-luz-c%C3%A1lida` -> `/guias/mejorar-iluminacion-espacio-trabajo/`. No consta como usada ni propuesta antes.
+
+## Update 2026-07-14 - actividad Reddit no registrada del 11 al 14 jul
+
+- Karma al revisar el 21 jul: post `1`, comment `60`, total `61`.
+- Comentarios SIN link detectados: `1uqsc7b/owun9x3`, `1usk0kf/owumhvp`, `1uta8pj/owuj2mc`, `1uposfw/owp33xm`, `1uqmnrd/owok3a3`, `1uswunw/owutb1j`, `1ut8k09/ox5ehqt`, `1uulfb3/ox5lp3e`, `1uuiuo2/ox5p022`, reply `1uuiuo2/ox7z9i7` y `1uuld5i/ox9drkk`.
+- Comentario CON link: `r/OfficeChairs` `1uv4brw/ox985lh` -> `/en/guides/gaming-chair-vs-ergonomic-chair/`.
+- El reply `1uuiuo2/ox7z9i7` registra el incidente de acusacion de IA y debe usarse como referencia anti-patron.
+
 ## Update 2026-07-10 - plan Reddit/Quora parcial (2 de 4 publicados)
 
 Contexto operativo:

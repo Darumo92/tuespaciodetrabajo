@@ -5,8 +5,8 @@ marca: "Duronic"
 imagen: "/img/productos/duronic-tm61.jpg"
 imagenAlt: "Marco de escritorio elevable eléctrico Duronic TM61 con doble motor, memorias de altura y estructura de acero, sin tablero"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 175.99
+precioMax: 175.99
 valoracion: null
 valoraciones:
   velocidad: 6
@@ -16,7 +16,7 @@ valoraciones:
   materiales: 6.5
   calidadPrecio: 7.5
 amazon:
-  asin: null
+  asin: "B0C34FB93G"
   buscar: "Duronic TM61 marco escritorio eléctrico elevable doble motor 72-120 memoria"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

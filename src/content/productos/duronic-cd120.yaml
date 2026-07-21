@@ -5,8 +5,8 @@ marca: "Duronic"
 imagen: "/img/productos/duronic-cd120.jpg"
 imagenAlt: "Escritorio elevable eléctrico Duronic CD120 de 120x60 cm con tablero, patas de altura regulable y estructura de acero"
 tramoPrecio: 2
-precioMin: null
-precioMax: null
+precioMin: 187.99
+precioMax: 187.99
 valoracion: null
 valoraciones:
   velocidad: 5
@@ -16,7 +16,7 @@ valoraciones:
   materiales: 6.5
   calidadPrecio: 8
 amazon:
-  asin: null
+  asin: "B0DKJPZWW9"
   buscar: "Duronic CD120 escritorio elevable eléctrico 120x60 con tablero regulable altura"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

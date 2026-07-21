@@ -5,8 +5,8 @@ marca: "SONGMICS"
 imagen: "/img/productos/songmics-lsd134.jpg"
 imagenAlt: "Escritorio elevable eléctrico SONGMICS LSD134 de 140x60 cm con puerto USB-C, panel de 4 memorias y organizador de cables"
 tramoPrecio: 1
-precioMin: null
-precioMax: null
+precioMin: 125.99
+precioMax: 125.99
 valoracion: null
 valoraciones:
   velocidad: 5
@@ -16,7 +16,7 @@ valoraciones:
   materiales: 6.5
   calidadPrecio: 9
 amazon:
-  asin: null
+  asin: "B0CV4VM2TR"
   buscar: "SONGMICS escritorio elevable eléctrico LSD134 140x60 USB-C 4 memorias organizador cables"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []

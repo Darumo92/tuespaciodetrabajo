@@ -4,9 +4,9 @@ tituloCorto: "FlexiSpot Q8"
 marca: "FlexiSpot"
 imagen: "/img/productos/flexispot-q8.jpg"
 imagenAlt: "Escritorio elevable FlexiSpot Q8 de bambú con doble motor, cajón, carga inalámbrica y panel táctil integrado"
-tramoPrecio: 3
-precioMin: null
-precioMax: null
+tramoPrecio: 4
+precioMin: 699.99
+precioMax: 699.99
 valoracion: null
 valoraciones:
   velocidad: 7.5
@@ -14,21 +14,21 @@ valoraciones:
   capacidadCarga: 7.5
   rangoAltura: 8.5
   materiales: 8.5
-  calidadPrecio: 7.5
+  calidadPrecio: 7
 amazon:
-  asin: null
+  asin: "B0FH2GJ32K"
   buscar: "FlexiSpot Q8 Comhar Pro escritorio elevable bambú doble motor cajón carga inalámbrica"
 amazonPrimaryMarket: "ES"
 mercadosAmazon: []
 oneLinkReady: false
 webOficial: "https://www.flexispot.es"
 idealPara: "Quien quiere un elevable todo-en-uno premium listo para usar, con tablero de bambú, cajón, carga inalámbrica y doble motor, sin montar estructura ni elegir tablero"
-veredicto: "El FlexiSpot Q8 (también llamado Comhar Pro Q8) es el todo-en-uno premium de la marca: llega con tablero de bambú de calidad —resistente al agua, a arañazos y a la polilla—, cajón integrado, carga inalámbrica en la superficie y puerto USB, todo montado de fábrica sin tener que elegir estructura y tablero por separado. Por dentro es un doble motor de 3 etapas que cubre un rango amplio de 61 a 125 cm, soporta 100 kg y trae panel táctil con display LED que muestra la altura al centímetro y 4 memorias, además de anticolisión. La garantía de 10 años y los 60 días de prueba lo colocan como una compra tranquila. Ronda los 550 euros: no es barato, pero por debajo de él tienes que sumar estructura + tablero + accesorios para igualar lo que el Q8 trae de serie. No es para quien solo quiere lo más barato que suba y baje —para eso está el E7 o la gama de entrada—, sino para quien valora el bambú, el cajón y la carga inalámbrica en un mueble que se ve y se usa como premium desde el primer día."
+veredicto: "El FlexiSpot Q8 (también llamado Comhar Pro Q8) es el todo-en-uno premium de la marca: llega con tablero de bambú de calidad —resistente al agua, a arañazos y a la polilla—, cajón integrado, carga inalámbrica en la superficie y puerto USB, todo montado de fábrica sin tener que elegir estructura y tablero por separado. Por dentro es un doble motor de 3 etapas que cubre un rango amplio de 61 a 125 cm, soporta 100 kg y trae panel táctil con display LED que muestra la altura al centímetro y 4 memorias, además de anticolisión. La garantía de 10 años y los 60 días de prueba lo colocan como una compra tranquila. Ronda los 700 euros: no es barato, pero por debajo de él tienes que sumar estructura + tablero + accesorios para igualar lo que el Q8 trae de serie. No es para quien solo quiere lo más barato que suba y baje —para eso está el E7 o la gama de entrada—, sino para quien valora el bambú, el cajón y la carga inalámbrica en un mueble que se ve y se usa como premium desde el primer día."
 resumenCompra:
   mejorPara: "Un elevable premium listo para usar con bambú, cajón y carga inalámbrica, sin montar estructura ni elegir tablero."
   evitarSi: "Solo quieres lo más barato que suba y baje o prefieres elegir tu propio tablero: mira el E7 o un marco suelto."
   alternativaDirecta: "FlexiSpot E7 o E7 Pro si prefieres elegir tablero y ahorrar; Oakywood Standing Desk Pro si quieres madera maciza por más dinero; Maidesite T2 Pro Plus si priorizas carga máxima."
-  decisionRapida: "El todo-en-uno de bambú de FlexiSpot con cajón y carga inalámbrica; premium y completo, pero ronda los 550 EUR."
+  decisionRapida: "El todo-en-uno de bambú de FlexiSpot con cajón y carga inalámbrica; premium y completo, pero ronda los 700 EUR."
 metodologia:
   - "Specs de la ficha oficial de FlexiSpot (flexispot.es, Q8/Comhar Pro) y reseñas de análisis (TechRadar, Profesional Review, escritorioselevables), contrastadas entre sí."
   - "La nota premia el equipamiento todo-en-uno (bambú, cajón, carga inalámbrica, panel táctil) y la garantía de 10 años; penaliza el precio frente a un marco+tablero que iguale funciones por menos."
@@ -38,7 +38,7 @@ scoreRationale:
   capacidadCarga: "100 kg de carga cubren con holgura un setup completo con monitores y equipo."
   rangoAltura: "61-125 cm: rango muy amplio, cubre desde estaturas bajas sentadas hasta muy altas de pie."
   materiales: "Tablero de bambú tratado (resistente al agua, arañazos y polilla) y estructura robusta: acabado premium."
-  calidadPrecio: "Todo-en-uno con bambú, cajón y carga inalámbrica por unos 550 EUR: caro en absoluto, razonable por lo que integra de serie."
+  calidadPrecio: "Todo-en-uno con bambú, cajón y carga inalámbrica por unos 700 EUR: caro en absoluto, razonable por lo que integra de serie."
 fuentes:
   - tipo: "oficial"
     nombre: "FlexiSpot España — Escritorio elevable (gama Q8/Comhar Pro)"
@@ -53,7 +53,7 @@ fuentes:
     url: "https://escritorioselevables.com/resenas/flexispot-q8/"
     fechaConsulta: "2026-07-21"
 limitaciones:
-  - "Precio alto (~550€): un marco + tablero puede igualar funciones por menos si renuncias al bambú y el cajón."
+  - "Precio alto (~700€): un marco + tablero puede igualar funciones por menos si renuncias al bambú y el cajón."
   - "Todo-en-uno: no puedes elegir tu propio tablero como en el E7."
   - "No se han confirmado la velocidad exacta (mm/s), el nivel de ruido, el grosor del tablero ni el peso del producto: quedan en null."
 alternativas:
@@ -78,7 +78,7 @@ puntosFuertes:
   - "Panel táctil con display al centímetro y 4 memorias"
   - "Garantía de 10 años y 60 días de prueba"
 puntosDebiles:
-  - "Precio alto (~550€)"
+  - "Precio alto (~700€)"
   - "Tablero no personalizable (todo-en-uno)"
   - "Velocidad, ruido y grosor de tablero sin confirmar"
 fuenteSpecs: "Specs de la ficha oficial de FlexiSpot (Q8/Comhar Pro) y reseñas (TechRadar, Profesional Review, escritorioselevables): doble motor de 3 etapas, rango de altura 61-125 cm, carga 100 kg, tablero de bambú tratado (resistente al agua, arañazos y polilla), cajón integrado, carga inalámbrica y puerto USB en la superficie, panel táctil con display LED al centímetro y 4 memorias, anticolisión, garantía de 10 años y 60 días de prueba. No se han confirmado la velocidad exacta en mm/s, el nivel de ruido, el grosor del tablero, el peso del producto ni las medidas exactas del tablero de cada configuración, por lo que quedan en null."
@@ -86,21 +86,21 @@ verificadoEn: "2026-07-21"
 en:
   nombreComercial: "FlexiSpot Q8 (Comhar Pro) Bamboo Standing Desk with Drawer and Wireless Charging"
   tituloCorto: "FlexiSpot Q8"
-  veredicto: "The FlexiSpot Q8 (also called Comhar Pro Q8) is the brand's premium all-in-one: it arrives with a quality bamboo tabletop —water-, scratch- and moth-resistant—, an integrated drawer, wireless charging on the surface and a USB port, all factory-assembled without choosing frame and tabletop separately. Inside it's a 3-stage dual motor covering a wide 61 to 125 cm range, supporting 100 kg, with a touch panel with LED display showing height to the centimeter and 4 memories, plus anti-collision. The 10-year warranty and 60-day trial make it a low-stress purchase. It runs around 550 euros: not cheap, but below it you'd have to add frame + tabletop + accessories to match what the Q8 includes as standard. It's not for anyone who just wants the cheapest thing that goes up and down —that's the E7 or the entry-level— but for anyone who values bamboo, a drawer and wireless charging in a piece that looks and feels premium from day one."
+  veredicto: "The FlexiSpot Q8 (also called Comhar Pro Q8) is the brand's premium all-in-one: it arrives with a quality bamboo tabletop —water-, scratch- and moth-resistant—, an integrated drawer, wireless charging on the surface and a USB port, all factory-assembled without choosing frame and tabletop separately. Inside it's a 3-stage dual motor covering a wide 61 to 125 cm range, supporting 100 kg, with a touch panel with LED display showing height to the centimeter and 4 memories, plus anti-collision. The 10-year warranty and 60-day trial make it a low-stress purchase. It runs around 700 euros: not cheap, but below it you'd have to add frame + tabletop + accessories to match what the Q8 includes as standard. It's not for anyone who just wants the cheapest thing that goes up and down —that's the E7 or the entry-level— but for anyone who values bamboo, a drawer and wireless charging in a piece that looks and feels premium from day one."
   idealPara: "Anyone who wants a premium all-in-one standing desk ready to use, with bamboo top, drawer, wireless charging and dual motor, without assembling a frame or choosing a tabletop"
   comunidad: "Reviews agree the Q8 is among FlexiSpot's most complete: they highlight the bamboo top, the drawer and wireless charging as differentiators that avoid buying accessories separately, plus the touch panel with centimeter display. The usual criticism is the price and that, being all-in-one, you can't customize the tabletop. The 10-year warranty adds peace of mind."
   resumenCompra:
     mejorPara: "A premium ready-to-use standing desk with bamboo, drawer and wireless charging, without assembling a frame or choosing a tabletop."
     evitarSi: "You just want the cheapest thing that goes up and down, or prefer to choose your own tabletop: look at the E7 or a bare frame."
     alternativaDirecta: "FlexiSpot E7 or E7 Pro to choose your tabletop and save; Oakywood Standing Desk Pro for solid wood at more money; Maidesite T2 Pro Plus if you prioritize maximum load."
-    decisionRapida: "FlexiSpot's bamboo all-in-one with drawer and wireless charging; premium and complete, but around 550 EUR."
+    decisionRapida: "FlexiSpot's bamboo all-in-one with drawer and wireless charging; premium and complete, but around 700 EUR."
   puntosFuertes:
     - "Bamboo all-in-one with integrated drawer and wireless charging"
     - "3-stage dual motor, 100 kg and 61-125 cm range"
     - "Touch panel with centimeter display and 4 memories"
     - "10-year warranty and 60-day trial"
   puntosDebiles:
-    - "High price (~550€)"
+    - "High price (~700€)"
     - "Non-customizable tabletop (all-in-one)"
     - "Speed, noise and tabletop thickness unconfirmed"
   paraQuienSi:
