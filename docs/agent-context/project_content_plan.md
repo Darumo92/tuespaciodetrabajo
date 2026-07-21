@@ -59,7 +59,7 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 
 | # | Slug ES | Slug EN | Rol | Enruta a | Estado |
 |---|---------|---------|-----|----------|--------|
-| 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | 🔬 |
+| 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 (imagen pendiente) |
 | 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ⬜ |
 | 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ⬜ |
 | 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ⬜ |
