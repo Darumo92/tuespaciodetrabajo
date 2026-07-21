@@ -1,0 +1,146 @@
+tipo: "escritorio"
+nombre: "Duronic TM61 Marco de Escritorio Eléctrico Elevable con Doble Motor"
+tituloCorto: "Duronic TM61"
+marca: "Duronic"
+imagen: "/img/productos/duronic-tm61.jpg"
+imagenAlt: "Marco de escritorio elevable eléctrico Duronic TM61 con doble motor, memorias de altura y estructura de acero, sin tablero"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 6
+  estabilidad: 7
+  capacidadCarga: 6.5
+  rangoAltura: 7
+  materiales: 6.5
+  calidadPrecio: 7.5
+amazon:
+  asin: null
+  buscar: "Duronic TM61 marco escritorio eléctrico elevable doble motor 72-120 memoria"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://duronic.es"
+idealPara: "Quien ya tiene o quiere elegir su propio tablero y busca una estructura elevable eléctrica de doble motor a buen precio, de una marca muy asentada en Amazon.es"
+veredicto: "El Duronic TM61 es una estructura elevable eléctrica (sin tablero) de doble motor, pensada para quien quiere reutilizar su tablero actual o elegir uno a medida. Duronic es una marca británica con enorme presencia en Amazon.es, y el TM61 sube la apuesta frente a marcos más básicos: doble motor con rango de 72 a 120 cm, hasta 80 kg de carga y panel con memorias de altura. Al ser marco, el ancho se ajusta a distintos tableros, lo que le da flexibilidad para montajes en L o superficies grandes. No incluye tablero, así que hay que sumarlo al presupuesto (propio o comprado aparte), y tampoco es la estructura más rápida ni la de mayor carga del mercado —para eso están los marcos de 120-160 kg de gama alta—. Pero como doble motor asequible de una marca contrastada, es una base sólida para montar tu escritorio elevable a tu gusto."
+resumenCompra:
+  mejorPara: "Montar un elevable a medida reutilizando o eligiendo tu propio tablero, con doble motor y a buen precio."
+  evitarSi: "Quieres un escritorio completo listo para usar: necesitas un modelo con tablero incluido."
+  alternativaDirecta: "Duronic CD120 si prefieres el mismo aire de marca pero con tablero incluido; Maidesite T1 Pro si buscas un marco con USB-C y 10 años; FlexiSpot E7 para dar el salto a estructura de gama alta con más carga."
+  decisionRapida: "Marco eléctrico de doble motor de Duronic para poner tu propio tablero; sólido y asequible, pero sin tablero incluido."
+metodologia:
+  - "Specs de la ficha oficial de Duronic (duronic.es) y de la variante en Amazon.es (TM61), contrastadas con el resto de la gama de marcos de la marca (TM51, TM22)."
+  - "La nota valora el doble motor y la flexibilidad de marco a buen precio; penaliza que no incluya tablero y que no destaque en velocidad ni en carga máxima frente a la gama alta."
+scoreRationale:
+  velocidad: "Doble motor: subida a ritmo correcto, por encima de un motor único, aunque la marca no publica la velocidad exacta."
+  estabilidad: "Estructura de acero con doble motor; estable en altura para un uso normal, buena base para tableros grandes."
+  capacidadCarga: "Hasta 80 kg: suficiente para un setup completo, sin llegar a los 120-160 kg de los marcos de gama alta."
+  rangoAltura: "72-120 cm: rango amplio que cubre de sentado a de pie a casi todas las estaturas."
+  materiales: "Acero de marca contrastada; acabado correcto, aunque el tablero corre por tu cuenta."
+  calidadPrecio: "Doble motor de una marca muy vendida a precio contenido: buena base, recordando que hay que sumar el tablero."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Duronic España — Marco de escritorio eléctrico TM61"
+    url: "https://duronic.es/products/duronic-tm61-bk-marco-de-escritorio-electrico-escritorio-ajustable-en-altura-72-120cm-memoria-para-ajustar-la-altura-ideal-capacidad-de-peso-hasta-80-kg-maximo-potente-motor-color-negro"
+    fechaConsulta: "2026-07-21"
+  - tipo: "tienda"
+    nombre: "Amazon.es — Duronic TM61 Marco de Escritorio Eléctrico Ajustable 72-120 cm, 80 kg"
+    url: "https://www.amazon.es/Duronic-TM61-Escritorio-El%C3%A9ctrico-Ajustable/dp/B0C34CGRHX"
+    fechaConsulta: "2026-07-21"
+limitaciones:
+  - "No incluye tablero: hay que reutilizar el propio o comprarlo aparte."
+  - "Ni la velocidad más alta ni la mayor carga del mercado (80 kg frente a 120-160 kg de la gama alta)."
+  - "No se han confirmado la velocidad exacta (mm/s), el nivel de ruido, el nº de memorias exacto, la anticolisión, el puerto USB, el peso ni la garantía oficial: quedan en null."
+alternativas:
+  - slug: "duronic-tm00"
+    motivo: "De la misma marca pero manual (manivela), más barato si no necesitas motor."
+  - slug: "duronic-cd120"
+    motivo: "De la misma marca pero completo, con tablero de 120x60 incluido."
+  - slug: "maidesite-t1-pro"
+    motivo: "Marco con USB-C, 100 kg y 10 años de garantía si quieres subir de nivel."
+comunidad: "Duronic es de las marcas de estructuras elevables más vendidas y valoradas en Amazon.es. Las reseñas de sus marcos destacan la solidez del acero, la sencillez del montaje y la relación calidad-precio; el TM61, al ser doble motor, se percibe como un paso adelante frente a los marcos de un solo motor de la propia marca. La pega habitual es recordar que el tablero no viene incluido."
+paraQuienSi:
+  - "Quien ya tiene un tablero que quiere reutilizar"
+  - "Quien quiere elegir su propio tablero (medida, material, forma en L)"
+  - "Quien busca doble motor de una marca contrastada a buen precio"
+paraQuienNo:
+  - "Quien quiere un escritorio completo listo para usar"
+  - "Quien necesita carga muy alta (varios monitores pesados de gran formato)"
+  - "Quien quiere la subida más rápida del mercado"
+puntosFuertes:
+  - "Estructura de doble motor a precio contenido"
+  - "Marca británica muy asentada y valorada en Amazon.es"
+  - "Rango amplio 72-120 cm y hasta 80 kg de carga"
+  - "Flexible: admite tu propio tablero, incluso montajes en L"
+puntosDebiles:
+  - "No incluye tablero"
+  - "Carga y velocidad por debajo de los marcos de gama alta"
+  - "Detalles como memorias, USB o anticolisión sin confirmar"
+fuenteSpecs: "Specs de la ficha oficial de Duronic (TM61) y de la variante en Amazon.es: estructura (marco sin tablero) de doble motor, rango de altura 72-120 cm, carga máx. 80 kg, panel con memorias de altura, estructura de acero de ancho ajustable para distintos tableros. No se han confirmado la velocidad exacta en mm/s, el nivel de ruido, el nº exacto de memorias, la anticolisión, el puerto USB, los segmentos de columna, el peso del producto ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-21"
+en:
+  nombreComercial: "Duronic TM61 Electric Standing Desk Frame with Dual Motor"
+  tituloCorto: "Duronic TM61"
+  veredicto: "The Duronic TM61 is an electric standing-desk frame (no tabletop) with a dual motor, meant for anyone who wants to reuse their current tabletop or fit a custom one. Duronic is a British brand with a huge presence on Amazon.es, and the TM61 raises the bar over more basic frames: a dual motor with a 72 to 120 cm range, up to 80 kg of load and a panel with height memories. Being a frame, the width adjusts to different tabletops, giving flexibility for L-shaped or large setups. It doesn't include a tabletop, so you must add that to the budget (your own or bought separately), and it isn't the fastest or highest-capacity frame around —that's the 120-160 kg high-end frames. But as an affordable dual motor from a proven brand, it's a solid base to build your standing desk your way."
+  idealPara: "Anyone who already has, or wants to choose, their own tabletop and is after an affordable dual-motor electric standing-desk frame from a well-established Amazon.es brand"
+  comunidad: "Duronic is among the best-selling and best-rated standing-desk frame brands on Amazon.es. Reviews of its frames highlight the sturdy steel, easy assembly and value; the TM61, being dual-motor, is seen as a step up from the brand's single-motor frames. The usual caveat is remembering the tabletop isn't included."
+  resumenCompra:
+    mejorPara: "Building a custom standing desk reusing or choosing your own tabletop, with a dual motor and at a good price."
+    evitarSi: "You want a complete ready-to-use desk: you need a model with the tabletop included."
+    alternativaDirecta: "Duronic CD120 for the same brand feel but with a tabletop included; Maidesite T1 Pro for a frame with USB-C and 10 years; FlexiSpot E7 to step up to a high-end frame with more load."
+    decisionRapida: "Duronic's dual-motor electric frame to fit your own tabletop; solid and affordable, but no tabletop included."
+  puntosFuertes:
+    - "Dual-motor frame at a contained price"
+    - "British brand well established and rated on Amazon.es"
+    - "Wide 72-120 cm range and up to 80 kg load"
+    - "Flexible: takes your own tabletop, even L-shaped setups"
+  puntosDebiles:
+    - "No tabletop included"
+    - "Load and speed below high-end frames"
+    - "Details like memories, USB or anti-collision unconfirmed"
+  paraQuienSi:
+    - "Anyone who already has a tabletop to reuse"
+    - "Anyone who wants to choose their own tabletop (size, material, L-shape)"
+    - "Anyone after a dual motor from a proven brand at a good price"
+  paraQuienNo:
+    - "Anyone who wants a complete ready-to-use desk"
+    - "Anyone who needs very high load (several large heavy monitors)"
+    - "Anyone who wants the fastest rise on the market"
+calidadDatos:
+  score: 63
+  confianza: "medio"
+  enriquecidoEn: "2026-07-21"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "doble"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 80
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: false
+  tableroMaterial: null
+  tableroAnchoCm: null
+  tableroFondoCm: null
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

@@ -1,0 +1,147 @@
+tipo: "escritorio"
+nombre: "Duronic CD120 Escritorio Elevable Eléctrico 120x60 cm con Tablero"
+tituloCorto: "Duronic CD120"
+marca: "Duronic"
+imagen: "/img/productos/duronic-cd120.jpg"
+imagenAlt: "Escritorio elevable eléctrico Duronic CD120 de 120x60 cm con tablero, patas de altura regulable y estructura de acero"
+tramoPrecio: 2
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6.5
+  capacidadCarga: 6
+  rangoAltura: 6.5
+  materiales: 6.5
+  calidadPrecio: 8
+amazon:
+  asin: null
+  buscar: "Duronic CD120 escritorio elevable eléctrico 120x60 con tablero regulable altura"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://duronic.es"
+idealPara: "Quien quiere un escritorio elevable eléctrico completo, con tablero de 120x60 incluido, de una marca muy asentada en Amazon.es, sin complicarse eligiendo estructura y tablero por separado"
+veredicto: "El Duronic CD120 es la versión completa —con tablero de 120x60 cm incluido— de la gama elevable de Duronic, una marca británica muy presente y bien valorada en Amazon.es. A diferencia de sus marcos (que se venden sin tablero), el CD120 llega listo para usar: eléctrico, con rango de altura de 72 a 118 cm y hasta 70 kg de carga, sobre patas de altura regulable que ayudan a nivelarlo en suelos irregulares. Es una propuesta de gama media-baja pensada para el teletrabajo cotidiano: cumple para alternar sentado y de pie con un monitor y periféricos, sin las prestaciones de un doble motor de gama alta (más velocidad, más carga y mayor firmeza en altura). Su baza es la sencillez: un escritorio elevable completo de una marca contrastada, sin tener que elegir ni montar tablero aparte. Si necesitas más carga o alternas postura muchas veces al día, mira un doble motor; para un uso normal, es una compra segura."
+resumenCompra:
+  mejorPara: "Un escritorio elevable completo y sencillo para teletrabajo diario, con tablero incluido y de marca contrastada."
+  evitarSi: "Alternas postura muchas veces al día o cargas equipo pesado: te conviene un doble motor de más carga."
+  alternativaDirecta: "Duronic TM61 si prefieres elegir tu propio tablero con doble motor; SONGMICS LSD132 o Devoko 120x60 si buscas el mismo formato completo más barato; Maidesite T2 Pro Plus para dar el salto a doble motor y 160 kg."
+  decisionRapida: "Elevable eléctrico completo de Duronic con tablero de 120x60; sencillo y de marca fiable, pero motor de gama media-baja."
+metodologia:
+  - "Specs de la ficha oficial de Duronic (duronic.es, CD120) y del resto de su gama elevable, contrastadas con las variantes de color en tienda oficial y Amazon.es."
+  - "La nota valora que sea un escritorio completo listo para usar de una marca contrastada a precio medio; penaliza que el motor y la carga no lleguen a los de un doble motor de gama alta."
+scoreRationale:
+  velocidad: "Elevación eléctrica de gama media-baja: subida correcta pero no destaca; la marca no publica la velocidad exacta."
+  estabilidad: "Estructura de acero con patas de altura regulable para nivelar en suelos irregulares; estable para un uso normal."
+  capacidadCarga: "Hasta 70 kg: cubren monitor, portátil y periféricos, sin margen para montajes muy pesados."
+  rangoAltura: "72-118 cm: cubre de sentado a de pie a estaturas medias; los muy altos se quedan algo justos de pie."
+  materiales: "Acero y tablero de aglomerado de 120x60 de marca contrastada; acabado correcto para el precio."
+  calidadPrecio: "Escritorio completo con tablero de una marca fiable a precio medio: buena compra para un uso normal."
+fuentes:
+  - tipo: "oficial"
+    nombre: "Duronic España — Escritorio eléctrico regulable CD120 con tablero 120x60"
+    url: "https://duronic.es/products/duronic-cd120-bt-escritorio-electrico-regulable-72-118-cm-con-tablero-120-x-60-cm-y-patas-con-altura-regulable-max-70-kg-escritorio-elevable-electrico-puesto-de-trabajo-ideal-para-casa-y-teletrabajo-copy"
+    fechaConsulta: "2026-07-21"
+  - tipo: "tienda"
+    nombre: "Amazon.es — Duronic CD120 Escritorio Elevable Eléctrico 120x60 cm con tablero"
+    url: "https://www.amazon.es/s?k=Duronic+CD120+escritorio+elevable"
+    fechaConsulta: "2026-07-21"
+limitaciones:
+  - "Motor y carga de gama media-baja: no llega a las prestaciones de un doble motor de gama alta."
+  - "Rango 72-118 cm: los muy altos se quedan algo justos de pie."
+  - "No se han confirmado la velocidad exacta (mm/s), el nivel de ruido, el nº de memorias, la anticolisión, el puerto USB, el grosor del tablero, el peso ni la garantía oficial: quedan en null."
+alternativas:
+  - slug: "duronic-tm61"
+    motivo: "De la misma marca pero marco de doble motor, para poner tu propio tablero."
+  - slug: "songmics-lsd132"
+    motivo: "Mismo formato completo 120x60 con USB-C y 4 memorias, más barato."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Duronic es de las marcas más vendidas en Amazon.es para escritorios elevables y estructuras. Las reseñas de su gama destacan la solidez del acero, la sencillez del montaje y la relación calidad-precio; el CD120, al venir completo con tablero, gusta a quien no quiere complicarse eligiendo estructura y tablero por separado. La pega habitual es que el motor y la carga son de gama media, no de doble motor premium."
+paraQuienSi:
+  - "Quien quiere un elevable completo listo para usar, sin elegir tablero aparte"
+  - "Quien busca una marca contrastada en Amazon.es a precio medio"
+  - "Quien hace un uso normal de teletrabajo con un monitor"
+paraQuienNo:
+  - "Quien alterna postura muchas veces al día"
+  - "Quien monta equipo pesado o varios monitores"
+  - "Quien mide bastante y quiere trabajar de pie con holgura (rango 72-118)"
+puntosFuertes:
+  - "Escritorio elevable completo con tablero de 120x60 incluido"
+  - "Marca británica muy asentada y valorada en Amazon.es"
+  - "Patas de altura regulable para nivelar en suelos irregulares"
+  - "Listo para usar sin elegir ni montar tablero aparte"
+puntosDebiles:
+  - "Motor y carga de gama media-baja (70 kg)"
+  - "Rango de altura algo corto en el tope (118 cm)"
+  - "Detalles como memorias, USB o anticolisión sin confirmar"
+fuenteSpecs: "Specs de la ficha oficial de Duronic (CD120) y de sus variantes de color: escritorio elevable eléctrico completo, rango de altura 72-118 cm, carga máx. 70 kg, tablero de aglomerado 120x60 cm incluido, patas de altura regulable para nivelar, estructura de acero. No se han confirmado la velocidad exacta en mm/s, el nivel de ruido, el nº de memorias, la anticolisión, el puerto USB, el grosor del tablero, los segmentos de columna, el peso del producto ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-21"
+en:
+  nombreComercial: "Duronic CD120 Electric Standing Desk 120x60 cm with Tabletop"
+  tituloCorto: "Duronic CD120"
+  veredicto: "The Duronic CD120 is the complete version —with a 120x60 cm tabletop included— of Duronic's standing range, a British brand very present and well rated on Amazon.es. Unlike its frames (sold without a tabletop), the CD120 arrives ready to use: electric, with a 72 to 118 cm height range and up to 70 kg of load, on height-adjustable feet that help level it on uneven floors. It's a mid-to-low-end proposition for everyday remote work: it does the job for sitting and standing with a monitor and peripherals, without the perks of a high-end dual motor (more speed, more load and greater firmness at height). Its strength is simplicity: a complete standing desk from a proven brand, without choosing or assembling a separate tabletop. If you need more load or switch posture many times a day, look at a dual motor; for normal use, it's a safe buy."
+  idealPara: "Anyone who wants a complete electric standing desk, with a 120x60 tabletop included, from a well-established Amazon.es brand, without the hassle of choosing frame and tabletop separately"
+  comunidad: "Duronic is among the best-selling brands on Amazon.es for standing desks and frames. Reviews of its range highlight the sturdy steel, easy assembly and value; the CD120, arriving complete with a tabletop, appeals to anyone who doesn't want the hassle of choosing frame and tabletop separately. The usual caveat is that the motor and load are mid-range, not premium dual-motor."
+  resumenCompra:
+    mejorPara: "A complete, simple standing desk for daily remote work, tabletop included and from a proven brand."
+    evitarSi: "You switch posture many times a day or load heavy gear: you'll want a higher-capacity dual motor."
+    alternativaDirecta: "Duronic TM61 if you prefer to choose your own tabletop with a dual motor; SONGMICS LSD132 or Devoko 120x60 for the same complete format cheaper; Maidesite T2 Pro Plus to move up to a dual motor and 160 kg."
+    decisionRapida: "Duronic's complete electric standing desk with a 120x60 tabletop; simple and from a reliable brand, but mid-to-low-end motor."
+  puntosFuertes:
+    - "Complete standing desk with a 120x60 tabletop included"
+    - "British brand well established and rated on Amazon.es"
+    - "Height-adjustable feet to level on uneven floors"
+    - "Ready to use without choosing or assembling a separate tabletop"
+  puntosDebiles:
+    - "Mid-to-low-end motor and load (70 kg)"
+    - "Somewhat short top height (118 cm)"
+    - "Details like memories, USB or anti-collision unconfirmed"
+  paraQuienSi:
+    - "Anyone who wants a complete ready-to-use desk without choosing a separate tabletop"
+    - "Anyone after a proven Amazon.es brand at a mid price"
+    - "Anyone doing normal remote work with one monitor"
+  paraQuienNo:
+    - "Anyone who switches posture many times a day"
+    - "Anyone loading heavy gear or several monitors"
+    - "Anyone quite tall who wants to stand with headroom (72-118 range)"
+calidadDatos:
+  score: 59
+  confianza: "medio"
+  enriquecidoEn: "2026-07-21"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 118
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 120
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

@@ -1,0 +1,148 @@
+tipo: "escritorio"
+nombre: "IKEA BEKANT Escritorio para Trabajar Sentado/De Pie (descatalogado)"
+tituloCorto: "IKEA Bekant"
+marca: "IKEA"
+imagen: "/img/productos/ikea-bekant.jpg"
+imagenAlt: "Escritorio elevable IKEA BEKANT para trabajar sentado o de pie, con tablero de 160x80 cm y red organizadora de cables"
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 4
+  estabilidad: 6.5
+  capacidadCarga: 6
+  rangoAltura: 8.5
+  materiales: 6.5
+  calidadPrecio: 6
+amazon:
+  asin: null
+  buscar: null
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: null
+idealPara: "Referencia histórica: quien busca datos del BEKANT sentado/de pie de IKEA para comparar (ya descatalogado en España) o valorar una unidad de segunda mano"
+veredicto: "El IKEA BEKANT sentado/de pie fue durante años el escritorio elevable eléctrico de referencia de IKEA y una comparación obligada en el mercado español, hasta su descatalogación. Lo incluimos como ficha histórica: ya no se vende nuevo en IKEA España, así que aquí no hay botón de compra, solo los datos para comparar o para quien valore una unidad de segunda mano. Su punto fuerte era el rango de altura, de 65 a 125 cm —de los más amplios—, con control eléctrico por botón, tablero de 160x80 cm de bordes redondeados para proteger antebrazos y muñecas, y una red bajo el tablero para organizar cables. Estaba certificado según las normas EN 527-2 y ANSI/BIFMA X5.5, un aval de durabilidad de mobiliario de oficina que muchos rivales de Amazon no tienen. Sus pegas conocidas eran una subida lenta y que IKEA no publicaba carga ni velocidad con detalle. Se ofertó entre unos 359 y 549 euros según versión. Como referencia para comparativas (por ejemplo frente al FlexiSpot E7) sigue siendo útil; como compra nueva, ya no es una opción."
+resumenCompra:
+  mejorPara: "Consultar datos históricos para comparar o valorar una unidad de segunda mano del BEKANT."
+  evitarSi: "Quieres comprarlo nuevo: está descatalogado en IKEA España; mira alternativas actuales con tablero incluido."
+  alternativaDirecta: "IKEA Idåsen o IKEA Mittzon como sustitutos actuales de IKEA; FlexiSpot E7 o Maidesite T2 Pro Plus si quieres un elevable nuevo con más prestaciones."
+  decisionRapida: "Ficha histórica del elevable de IKEA con rango 65-125 cm y certificación de oficina; descatalogado, sin compra nueva."
+metodologia:
+  - "Specs de las fichas históricas de IKEA (BEKANT sentado/de pie) y reseñas de la época (Xataka Home), contrastadas con listados de oferta históricos."
+  - "La nota es orientativa por ser producto descatalogado: premia el rango de altura y la certificación de oficina; penaliza la subida lenta y la falta de datos oficiales de carga y velocidad."
+scoreRationale:
+  velocidad: "Reseñas de la época coincidían en que la subida era lenta; IKEA no publicaba la velocidad en mm/s."
+  estabilidad: "Escritorio de oficina certificado (EN 527-2, BIFMA X5.5): estable para uso profesional en su día."
+  capacidadCarga: "IKEA no publicaba la carga máxima con detalle; valoración orientativa para un escritorio de oficina."
+  rangoAltura: "65-125 cm de ajuste eléctrico: de los rangos más amplios, cubría desde estaturas bajas sentadas hasta muy altas de pie."
+  materiales: "Tablero de 160x80 cm con bordes redondeados y red de cables; acabado de mobiliario de oficina."
+  calidadPrecio: "Se ofertó entre ~359 y 549 EUR; valoración orientativa al estar descatalogado."
+fuentes:
+  - tipo: "review"
+    nombre: "Xataka Home — Probamos el BEKANT de IKEA, escritorio para trabajar sentado o de pie"
+    url: "https://www.xatakahome.com/diseno-y-arquitectura/bekant-de-ikea-probamos-el-escritorio-para-trabajar-sentado-o-de-pie"
+    fechaConsulta: "2026-07-21"
+  - tipo: "comunidad"
+    nombre: "ofertitas.es — Histórico de oferta del escritorio elevable IKEA BEKANT"
+    url: "https://www.ofertitas.es/escritorio-elevable-ikea-bekant/765751/"
+    fechaConsulta: "2026-07-21"
+limitaciones:
+  - "Descatalogado en IKEA España: no se vende nuevo (sin botón de compra)."
+  - "Subida lenta, según las reseñas de la época."
+  - "IKEA no publicaba la carga máxima, la velocidad exacta, el nº de motores ni memorias: quedan en null."
+alternativas:
+  - slug: "ikea-idasen"
+    motivo: "Sustituto actual de IKEA: eléctrico premium con control por app Bluetooth."
+  - slug: "ikea-mittzon"
+    motivo: "Sustituto actual de IKEA: doble motor con memorias y detección de colisión."
+  - slug: "flexispot-e7"
+    motivo: "Alternativa nueva muy comparada con el BEKANT, con más prestaciones y tablero a elegir."
+comunidad: "El BEKANT fue uno de los elevables más comentados en foros y comparativas españolas por ser 'el de IKEA': se valoraba el rango de altura, el diseño limpio y la certificación de oficina, y se criticaba la lentitud de la subida y algún aviso de que el tablero podía abollarse con el uso. Tras su descatalogación, sigue apareciendo en comparativas históricas y en el mercado de segunda mano."
+paraQuienSi:
+  - "Quien busca datos del BEKANT para una comparativa"
+  - "Quien valora una unidad de segunda mano y quiere conocer sus specs"
+  - "Quien quiere entender la referencia histórica de IKEA en elevables"
+paraQuienNo:
+  - "Quien quiere comprarlo nuevo (descatalogado)"
+  - "Quien necesita subida rápida o datos de carga garantizados"
+  - "Quien prefiere un modelo actual con memorias y anticolisión"
+puntosFuertes:
+  - "Rango de altura muy amplio (65-125 cm)"
+  - "Certificación de mobiliario de oficina (EN 527-2, BIFMA X5.5)"
+  - "Tablero de 160x80 cm con bordes redondeados y red de cables"
+  - "Referencia histórica útil para comparativas"
+puntosDebiles:
+  - "Descatalogado: no se compra nuevo"
+  - "Subida lenta según reseñas"
+  - "IKEA no publicaba carga ni velocidad"
+fuenteSpecs: "Specs de las fichas históricas de IKEA (BEKANT sentado/de pie) y reseñas de la época: control de altura eléctrico de 65 a 125 cm, tablero de 160x80 cm con bordes redondeados, red organizadora de cables bajo el tablero, certificación EN 527-2 y ANSI/BIFMA X5.5. IKEA no publicaba la carga máxima, la velocidad exacta, el nº de motores, las memorias ni la anticolisión, por lo que quedan en null. Producto descatalogado en España; precio histórico orientativo entre ~359 y 549 EUR según versión."
+verificadoEn: "2026-07-21"
+en:
+  nombreComercial: "IKEA BEKANT Sit/Stand Desk (discontinued)"
+  tituloCorto: "IKEA Bekant"
+  veredicto: "The IKEA BEKANT sit/stand was for years IKEA's reference electric standing desk and a must-compare in the Spanish market, until it was discontinued. We include it as a historical entry: it's no longer sold new at IKEA Spain, so there's no buy button here, just the data to compare or for anyone considering a second-hand unit. Its strong point was the height range, 65 to 125 cm —among the widest—, with electric button control, a 160x80 cm tabletop with rounded edges to protect forearms and wrists, and a net under the tabletop to organize cables. It was certified to EN 527-2 and ANSI/BIFMA X5.5, an office-furniture durability seal many Amazon rivals lack. Its known drawbacks were a slow rise and that IKEA didn't publish load or speed in detail. It was offered between roughly 359 and 549 euros depending on version. As a reference for comparisons (for example versus the FlexiSpot E7) it's still useful; as a new purchase, it's no longer an option."
+  idealPara: "Historical reference: anyone looking for BEKANT sit/stand data to compare (now discontinued in Spain) or to assess a second-hand unit"
+  comunidad: "The BEKANT was one of the most discussed standing desks in Spanish forums and comparisons for being 'the IKEA one': people valued the height range, the clean design and the office certification, and criticized the slow rise and occasional warnings that the tabletop could dent with use. After being discontinued, it still appears in historical comparisons and on the second-hand market."
+  resumenCompra:
+    mejorPara: "Checking historical data to compare or to assess a second-hand BEKANT unit."
+    evitarSi: "You want to buy it new: it's discontinued at IKEA Spain; look at current alternatives with a tabletop included."
+    alternativaDirecta: "IKEA Idåsen or IKEA Mittzon as current IKEA replacements; FlexiSpot E7 or Maidesite T2 Pro Plus for a new standing desk with more features."
+    decisionRapida: "Historical entry for IKEA's standing desk with a 65-125 cm range and office certification; discontinued, no new purchase."
+  puntosFuertes:
+    - "Very wide height range (65-125 cm)"
+    - "Office-furniture certification (EN 527-2, BIFMA X5.5)"
+    - "160x80 cm tabletop with rounded edges and cable net"
+    - "Useful historical reference for comparisons"
+  puntosDebiles:
+    - "Discontinued: not bought new"
+    - "Slow rise per reviews"
+    - "IKEA didn't publish load or speed"
+  paraQuienSi:
+    - "Anyone looking for BEKANT data for a comparison"
+    - "Anyone assessing a second-hand unit who wants its specs"
+    - "Anyone wanting to understand IKEA's historical standing-desk reference"
+  paraQuienNo:
+    - "Anyone who wants to buy it new (discontinued)"
+    - "Anyone who needs a fast rise or guaranteed load data"
+    - "Anyone who prefers a current model with memories and anti-collision"
+calidadDatos:
+  score: 47
+  confianza: "bajo"
+  enriquecidoEn: "2026-07-21"
+  camposFaltantes:
+    - "specs.cargaMaxKg"
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.memorias"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+    - "specs.nivelRuidoDb"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: null
+  segmentosColumna: null
+  alturaMinCm: 65
+  alturaMaxCm: 125
+  cargaMaxKg: null
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: false
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 160
+  tableroFondoCm: 80
+  tableroGrosorCm: null
+  pantallaControl: "boton"
+  memorias: null
+  anticolision: null
+  puertoUsb: null
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

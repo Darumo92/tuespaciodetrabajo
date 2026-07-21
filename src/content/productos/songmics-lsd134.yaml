@@ -1,0 +1,145 @@
+tipo: "escritorio"
+nombre: "SONGMICS Escritorio Elevable Eléctrico LSD134 140x60 cm con USB-C y 4 Memorias"
+tituloCorto: "SONGMICS LSD134"
+marca: "SONGMICS"
+imagen: "/img/productos/songmics-lsd134.jpg"
+imagenAlt: "Escritorio elevable eléctrico SONGMICS LSD134 de 140x60 cm con puerto USB-C, panel de 4 memorias y organizador de cables"
+tramoPrecio: 1
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones:
+  velocidad: 5
+  estabilidad: 6
+  capacidadCarga: 6
+  rangoAltura: 7
+  materiales: 6.5
+  calidadPrecio: 9
+amazon:
+  asin: null
+  buscar: "SONGMICS escritorio elevable eléctrico LSD134 140x60 USB-C 4 memorias organizador cables"
+amazonPrimaryMarket: "ES"
+mercadosAmazon: []
+oneLinkReady: false
+webOficial: "https://www.songmics.es"
+idealPara: "Quien quiere el elevable completo más vendido de Amazon.es en 140 cm, con USB-C y 4 memorias, por un precio de gama de entrada"
+veredicto: "El SONGMICS LSD134 es, con diferencia, uno de los escritorios elevables más vendidos de Amazon.es: acumula miles de valoraciones con una media alta (en torno a 4,5 estrellas sobre más de 3.000 reseñas) y es la referencia de la marca en 140x60 cm. La fórmula es la de la gama de entrada bien hecha: motor único que sube de 72 a 120 cm de forma silenciosa (por debajo de 48 dB), tablero de 140 cm incluido —más superficie que el habitual 120x60 por poco más—, panel con 4 memorias, puerto USB-C para cargar, y organizador de cables con ganchos. Los 70 kg de carga y el motor único son su techo: no está pensado para alternar sentado-de pie decenas de veces al día ni para montajes de varios monitores pesados. Pero como primer elevable amplio, con USB-C y de una marca contrastada por volumen de ventas, es de las apuestas más seguras de la gama baja. Si dudas entre este y el LSD132, la diferencia es el tamaño: el 134 es el de 140 cm; el 132, el de 120 cm."
+resumenCompra:
+  mejorPara: "Un primer elevable amplio (140 cm) con USB-C y 4 memorias, de un best-seller contrastado, gastando poco."
+  evitarSi: "Alternas sentado-de pie muchas veces al día o cargas varios monitores pesados: el motor único y los 70 kg se quedan cortos."
+  alternativaDirecta: "SONGMICS LSD132 si te basta con 120 cm; VASAGLE LSD112 (misma casa) si quieres enchufe y cajón; Maidesite T2 Pro Plus para dar el salto a doble motor y 160 kg."
+  decisionRapida: "El elevable de 140 cm más vendido de Amazon.es, con USB-C y 4 memorias; el pero es el motor único y los 70 kg."
+metodologia:
+  - "Specs de la ficha oficial de SONGMICS (songmics.es) y de las variantes en Amazon.es (LSD134B01, LSD134W01, LSD134K01), contrastadas con el volumen y la media de reseñas."
+  - "La nota prioriza que sea un escritorio completo de 140 cm con USB-C al precio de la gama de entrada y con un historial de ventas enorme; penaliza el motor único y la carga de 70 kg."
+scoreRationale:
+  velocidad: "Motor único: subida silenciosa (<48 dB) pero lenta, típica de la gama de entrada."
+  estabilidad: "Estructura de acero correcta para 70 kg; algo de tambaleo en altura máxima propio de un solo motor."
+  capacidadCarga: "70 kg cubren monitor, portátil y periféricos; se queda corto para montajes de varios monitores pesados."
+  rangoAltura: "72-120 cm, de los rangos amplios de la gama de entrada; sirve bien de sentado a de pie a casi todas las estaturas."
+  materiales: "Acero y tablero de aglomerado de 140 cm con varios acabados; correcto para el precio, con USB-C como plus."
+  calidadPrecio: "Tablero de 140 cm, USB-C y 4 memorias a precio de gama de entrada, respaldado por miles de reseñas: relación calidad-precio sobresaliente."
+fuentes:
+  - tipo: "oficial"
+    nombre: "SONGMICS — Escritorio eléctrico regulable en altura (serie LSD)"
+    url: "https://www.songmics.es"
+    fechaConsulta: "2026-07-21"
+  - tipo: "tienda"
+    nombre: "Amazon.es — SONGMICS Escritorio Eléctrico 140x60 cm LSD134B01"
+    url: "https://www.amazon.es/SONGMICS-Escritorio-El%C3%A9ctrico-Almacenamiento-LSD134B01/dp/B0CV4VM2TR"
+    fechaConsulta: "2026-07-21"
+limitaciones:
+  - "Motor único: subida lenta frente a los de doble motor."
+  - "Carga de 70 kg: insuficiente para montajes de varios monitores pesados."
+  - "No se han confirmado la velocidad exacta (mm/s), el grosor del tablero, el peso del producto ni la garantía oficial: quedan en null."
+alternativas:
+  - slug: "songmics-lsd132"
+    motivo: "Misma serie en 120x60 si no necesitas los 140 cm de ancho."
+  - slug: "vasagle-lsd112"
+    motivo: "De la misma casa (SONGMICS), con enchufe y cajón integrados."
+  - slug: "maidesite-t2-pro-plus"
+    motivo: "Salto a doble motor, 160 kg y 10 años de garantía si el presupuesto lo permite."
+comunidad: "Con más de 3.000 valoraciones y una media en torno a 4,5 estrellas, es de los elevables más comprados de Amazon.es. Las reseñas destacan lo amplio del tablero de 140 cm por su precio, el USB-C, el montaje sencillo y que el motor es silencioso. Las quejas recurrentes son la lentitud de la subida y que la estabilidad en altura máxima no es la de un doble motor, algo esperable en la gama de entrada."
+paraQuienSi:
+  - "Quien quiere un tablero amplio de 140 cm gastando poco"
+  - "Quien valora USB-C y 4 memorias en un elevable de entrada"
+  - "Quien prefiere un best-seller contrastado por miles de reseñas"
+paraQuienNo:
+  - "Quien alterna sentado-de pie muchas veces al día"
+  - "Quien monta varios monitores pesados"
+  - "Quien quiere la máxima firmeza en altura máxima"
+puntosFuertes:
+  - "Uno de los elevables más vendidos de Amazon.es (3.000+ reseñas, ~4,5★)"
+  - "Tablero amplio de 140 cm incluido por precio de gama de entrada"
+  - "Puerto USB-C y 4 memorias"
+  - "Motor silencioso (<48 dB) y montaje sencillo"
+puntosDebiles:
+  - "Motor único y lento"
+  - "Carga limitada a 70 kg"
+  - "Estabilidad justa en altura máxima frente a un doble motor"
+fuenteSpecs: "Specs de la ficha oficial de SONGMICS (serie LSD) y variantes en Amazon.es (LSD134B01/W01/K01): motor simple, altura 72-120 cm, carga máx. 70 kg (estática), nivel de ruido <48 dB, tablero de aglomerado 140x60 cm incluido, panel LED con 4 memorias, puerto USB-C, organizador de cables con ganchos y 2 orificios pasacables. No se han confirmado la velocidad exacta en mm/s, el grosor del tablero, el peso del producto, los segmentos de columna, la anticolisión ni la garantía oficial, por lo que quedan en null."
+verificadoEn: "2026-07-21"
+en:
+  nombreComercial: "SONGMICS LSD134 Electric Standing Desk 140x60 cm with USB-C and 4 Memories"
+  tituloCorto: "SONGMICS LSD134"
+  veredicto: "The SONGMICS LSD134 is, by a wide margin, one of the best-selling standing desks on Amazon.es: it racks up thousands of ratings with a high average (around 4.5 stars over 3,000+ reviews) and is the brand's 140x60 cm reference. The formula is well-executed entry-level: a single motor rising quietly from 72 to 120 cm (under 48 dB), a 140 cm tabletop included —more surface than the usual 120x60 for a little more—, a 4-memory panel, a USB-C port for charging, and a cable organizer with hooks. Its 70 kg load and single motor are the ceiling: it's not meant to switch sit-stand dozens of times a day or for several heavy monitors. But as a first, wide standing desk with USB-C from a brand proven by sales volume, it's one of the safest bets in the budget tier. If you're torn between this and the LSD132, the difference is size: the 134 is the 140 cm; the 132, the 120 cm."
+  idealPara: "Anyone who wants the best-selling complete standing desk on Amazon.es in 140 cm, with USB-C and 4 memories, at an entry-level price"
+  comunidad: "With 3,000+ ratings and around 4.5 stars, it's among the most-bought standing desks on Amazon.es. Reviews highlight the wide 140 cm tabletop for the price, the USB-C, easy assembly and the quiet motor. Recurring complaints are the slow rise and that stability at full height isn't that of a dual motor, expected in the entry-level."
+  resumenCompra:
+    mejorPara: "A first wide standing desk (140 cm) with USB-C and 4 memories, a proven best-seller, spending little."
+    evitarSi: "You switch sit-stand many times a day or load several heavy monitors: the single motor and 70 kg fall short."
+    alternativaDirecta: "SONGMICS LSD132 if 120 cm is enough; VASAGLE LSD112 (same maker) for a socket and drawer; Maidesite T2 Pro Plus to move up to a dual motor and 160 kg."
+    decisionRapida: "The best-selling 140 cm standing desk on Amazon.es, with USB-C and 4 memories; the catch is the single motor and 70 kg."
+  puntosFuertes:
+    - "One of the best-selling standing desks on Amazon.es (3,000+ reviews, ~4.5★)"
+    - "Wide 140 cm tabletop included at an entry-level price"
+    - "USB-C port and 4 memories"
+    - "Quiet motor (<48 dB) and easy assembly"
+  puntosDebiles:
+    - "Single, slow motor"
+    - "Load limited to 70 kg"
+    - "Stability is tight at full height versus a dual motor"
+  paraQuienSi:
+    - "Anyone who wants a wide 140 cm tabletop spending little"
+    - "Anyone who values USB-C and 4 memories in an entry-level desk"
+    - "Anyone who prefers a best-seller proven by thousands of reviews"
+  paraQuienNo:
+    - "Anyone who switches sit-stand many times a day"
+    - "Anyone running several heavy monitors"
+    - "Anyone who wants maximum firmness at full height"
+calidadDatos:
+  score: 66
+  confianza: "medio"
+  enriquecidoEn: "2026-07-21"
+  camposFaltantes:
+    - "specs.velocidadMmPorSeg"
+    - "specs.garantiaAnios"
+    - "specs.tableroGrosorCm"
+    - "specs.pesoProductoKg"
+    - "specs.anticolision"
+    - "specs.segmentosColumna"
+    - "specs.certificacionTuv"
+specs:
+  tipo: "escritorio"
+  motor: "simple"
+  velocidadMmPorSeg: null
+  nivelRuidoDb: 48
+  segmentosColumna: null
+  alturaMinCm: 72
+  alturaMaxCm: 120
+  cargaMaxKg: 70
+  estructuraMaterial: "acero"
+  pesoProductoKg: null
+  ruedas: null
+  tableroIncluido: true
+  tableroMaterial: "aglomerado"
+  tableroAnchoCm: 140
+  tableroFondoCm: 60
+  tableroGrosorCm: null
+  pantallaControl: "led"
+  memorias: 4
+  anticolision: null
+  puertoUsb: true
+  garantiaAnios: null
+  certificacionTuv: null
+  certificacionEmc: null

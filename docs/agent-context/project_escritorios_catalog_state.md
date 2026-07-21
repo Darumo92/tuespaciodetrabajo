@@ -1,7 +1,7 @@
 # Proyecto: Catálogo de escritorios elevables
 
 Estado vivo del catálogo estructurado de escritorios elevables (mismo nivel que las
-77 fichas de sillas). Retomar desde aquí entre sesiones. Última actualización: 2026-07-13.
+77 fichas de sillas). Retomar desde aquí entre sesiones. Última actualización: 2026-07-21.
 
 ## Objetivo
 50-100 fichas de escritorios elevables en `src/content/productos/*.yaml`, bilingües
@@ -59,7 +59,15 @@ SANODESK QS+ · ErGear 140x70 · JUMMICO 140x60 · IKEA Bekant.
 Artículos fuente: `mejor-escritorio-elevable-electrico.mdx`, `ikea-bekant-vs-flexispot-e7.mdx`.
 
 ### Progreso fichas
-- Creadas: 42 / (objetivo 50-100).
+- Creadas: 47 / (objetivo 50-100).
+  - Lote 13 (5, 2026-07-21, media calidad 62.4): completar FlexiSpot ancla + best-sellers Amazon.es
+    sin ficha + histórico. Specs de oficiales/reseñas, nunca inventadas.
+    `flexispot-q8` (77, Comhar Pro bambú doble motor 3 etapas 61-125cm/100kg/carga inalámbrica+cajón/10 años, tramo 3, Amazon.es → asin null + buscar),
+    `songmics-lsd134` (66, #1 más vendido Amazon.es 3300 reseñas 4.5★, 140x60 1 motor 72-120cm/70kg/USB-C/4 mem, tramo 1),
+    `duronic-tm61` (63, marco eléctrico doble motor 72-120cm/80kg, tramo 2, Amazon.es B0C34CGRHX; complementa TM00 manual),
+    `duronic-cd120` (59, completo eléctrico 120x60 1 motor 72-118cm/70kg/patas nivelables, tramo 2),
+    `ikea-bekant` (47 bajo, HISTÓRICO descatalogado: eléctrico 65-125cm/tablero 160x80/cert. EN 527-2+BIFMA; sin botón compra, amazon.buscar:null, precio null).
+    **Pendiente datos usuario**: ASIN+precio Amazon.es de q8/songmics-lsd134/tm61/cd120; imágenes de las 5 (nombre=slug).
   - Lote 12 (5, 2026-07-13, media calidad 68.4): spread premium→económico, marcas más buscadas
     sin ficha (research fresco foros + comparativas ES/int 2026). Specs de oficiales/reseñas, nunca inventadas.
     `vasagle-lsd112` (72, SONGMICS/VASAGLE 1 motor 25mm/s/80kg/4 mem/enchufe+cajón, Amazon.es → asin null + buscar),
