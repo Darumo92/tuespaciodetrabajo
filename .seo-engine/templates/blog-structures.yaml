@@ -9,25 +9,27 @@ comparativa:
   description: "Análisis detallado de productos con tabla comparativa y recomendación destacada"
   humanization:
     intro_variation: true  # Obligatorio: intro diferente a otros artículos de la misma categoría
-    min_personal_experience: 2  # Mínimo 2 inserciones de experiencia personal
+    verified_eeat_signal: true
+    personal_experience: "only_if_verified"
+    methodology_disclosure: "required_without_verified_experience"
     asymmetric_lists: true  # Pros/contras con número variable por producto
     variable_faq_count: "3-7"  # No siempre 5
   structure:
+    - section: "Introducción"
+      description: "Primera frase citable con respuesta directa a la pregunta del título, sin adelantar una recomendación de producto. Sin experiencia directa verificada, declarar después límites y metodología; un dato con fuente no sustituye esa declaración. Solo entonces resumir producto destacado, contexto y keyword principal, antes de TopPick."
+      eeat_injection: true  # señal verificable: metodología, dato o experiencia documentada
     - section: "TopPick"
       description: "Producto destacado con componente TopPick"
       eeat_injection: false
-    - section: "Introducción"
-      description: "Frase-resumen citable con respuesta directa (rango de precios, producto destacado, cifra clave). Después contexto del problema y keyword principal. VARIAR formato: pregunta, anécdota, dato, recomendación directa. GEO: la primera frase debe ser extractable por IA."
-      eeat_injection: true  # experiencia personal con tu setup
     - section: "ComparisonTable"
       description: "Tabla comparativa con todos los productos"
       eeat_injection: false
     - section: "Análisis detallado"
       description: "Review individual de cada producto: pros, contras, para quién es ideal. GEO: cada H3 de producto debe empezar con dato clave (precio + característica diferencial) antes de narrativa personal."
-      eeat_injection: true  # experiencia de uso, datos reales, referencia a tu setup
+      eeat_injection: true  # datos verificados y metodología; uso propio solo si está documentado
     - section: "Guía de compra"
       description: "Criterios ergonómicos y prácticos para elegir: qué mirar, errores comunes, medidas del espacio"
-      eeat_injection: true  # consejos basados en errores propios
+      eeat_injection: true  # criterios verificables; errores propios solo si están documentados
     - section: "Nuestra recomendación"
       description: "Resumen final con recomendación por caso de uso (presupuesto, espacio disponible, tipo de trabajo)"
       eeat_injection: false
@@ -37,27 +39,29 @@ comparativa:
 
 informativo:
   name: "Guía informativa / Tutorial"
-  voice: "profesor paciente, usa 'yo', comparte experiencia con su propio setup"
+  voice: "profesor paciente, distingue experiencia directa de investigación documental"
   word_count: "1500-2500"
   description: "Guía paso a paso sobre ergonomía, productividad o configuración del espacio de trabajo"
   humanization:
     intro_variation: true
-    min_personal_experience: 3  # Guías deben ser muy personales
+    verified_eeat_signal: true
+    personal_experience: "only_if_verified"
+    methodology_disclosure: "required_without_verified_experience"
     asymmetric_lists: true
     variable_faq_count: "3-7"
   structure:
     - section: "Introducción"
-      description: "Por qué es importante, contexto del teletrabajo. VARIAR: pregunta, dato, anécdota personal."
-      eeat_injection: true  # experiencia personal
+      description: "Respuesta directa y contexto del teletrabajo. Sin experiencia directa verificada, declarar aquí límites y metodología; un dato con fuente no sustituye esa declaración. VARIAR el formato sin forzar anécdotas."
+      eeat_injection: true  # señal verificable y metodología transparente
     - section: "Conceptos clave"
       description: "Lo que necesitas entender antes de actuar"
       eeat_injection: false
     - section: "Paso a paso / Desarrollo"
       description: "Instrucciones detalladas o explicación en profundidad"
-      eeat_injection: true  # tips de experiencia propia
+      eeat_injection: true  # instrucciones respaldadas; experiencia propia solo si está documentada
     - section: "Errores comunes"
-      description: "Qué evitar y por qué — con ejemplos reales"
-      eeat_injection: true  # "yo cometí este error cuando..."
+      description: "Qué evitar y por qué — con ejemplos verificables"
+      eeat_injection: true  # evidencia real, sin fabricar errores personales
     - section: "Recomendaciones de productos (si aplica)"
       description: "Productos que ayudan, sin ser una comparativa completa. Solo si el artículo lo requiere."
       eeat_injection: false
@@ -67,24 +71,26 @@ informativo:
 
 pilar:
   name: "Página pilar / Hub"
-  voice: "enciclopédico pero personal, autoridad con cercanía"
+  voice: "enciclopédico pero cercano, autoridad basada en evidencia y metodología"
   word_count: "3000-5000"
   description: "Página central de un cluster temático. Cubre el tema ampliamente y enlaza a todos los artículos del cluster."
   humanization:
     intro_variation: true
-    min_personal_experience: 3
+    verified_eeat_signal: true
+    personal_experience: "only_if_verified"
+    methodology_disclosure: "required_without_verified_experience"
     asymmetric_lists: true
     variable_faq_count: "5-8"
   structure:
     - section: "Introducción"
-      description: "Qué es [tema] y por qué importa para teletrabajadores"
+      description: "Qué es [tema] y por qué importa. Sin experiencia directa verificada, declarar aquí límites y metodología; un dato con fuente no sustituye esa declaración."
       eeat_injection: true
     - section: "Definición"
       description: "Qué es exactamente [tema] — los cluster pages enlazan aquí"
       eeat_injection: false
     - section: "Por qué importa"
       description: "Impacto en salud, productividad, bienestar"
-      eeat_injection: true  # experiencia personal
+      eeat_injection: true  # dato, metodología o experiencia documentada
     - section: "Tipos / Categorías"
       description: "Diferentes tipos de [tema] — cada uno enlaza a un cluster page"
       eeat_injection: false
@@ -92,7 +98,7 @@ pilar:
       description: "Criterios, medidas, presupuesto"
       eeat_injection: true
     - section: "Mejores prácticas"
-      description: "Consejos de experto y ergónomo"
+      description: "Consejos respaldados por expertos u organismos reales"
       eeat_injection: false
     - section: "Errores comunes"
       description: "Lo que la mayoría hace mal"
@@ -108,7 +114,7 @@ experiencia:
   name: "Experiencia personal / Review en profundidad"
   voice: "reviewer honesto, admite inconvenientes, muy específico, cuenta su historia"
   word_count: "2000-3000"
-  description: "Análisis basado en experiencia personal con un producto o setup concreto"
+  description: "Análisis basado en experiencia directa documentada con un producto o setup concreto. No usar este formato sin experiencia directa verificable."
   humanization:
     intro_variation: true
     min_personal_experience: 5  # Este formato ES experiencia personal
@@ -119,25 +125,25 @@ experiencia:
       description: "Veredicto en 2-3 frases para quien tiene prisa"
       eeat_injection: false
     - section: "Por qué lo compré / elegí"
-      description: "Contexto personal: qué problema tenía, qué buscaba"
+      description: "Contexto personal documentado: motivo real de la elección y criterios de compra"
       eeat_injection: true
     - section: "Primeras impresiones"
-      description: "Unboxing, montaje, calidad percibida"
+      description: "Unboxing o montaje solo si se realizó y puede describirse con precisión; calidad percibida real"
       eeat_injection: true
     - section: "Uso diario"
-      description: "Cómo es usarlo 8 horas al día, durante semanas/meses"
+      description: "Uso real durante el periodo que pueda confirmarse, sin ampliar horas ni duración"
       eeat_injection: true
     - section: "Puntos fuertes"
-      description: "Lo mejor, con datos concretos y comparación con lo anterior"
+      description: "Lo mejor del producto actual, con datos concretos; comparar con el setup anterior solo si está documentado"
       eeat_injection: true
     - section: "Puntos débiles"
       description: "Lo peor, sin disimular. Qué cambiarías."
       eeat_injection: true
     - section: "Alternativas que consideré"
-      description: "Vs 2-3 opciones que descartaste y por qué"
+      description: "Alternativas verificadas; no afirmar que se consideraron o descartaron si no está documentado"
       eeat_injection: false
-    - section: "Veredicto después de X meses"
-      description: "¿Lo volverías a comprar? ¿Para quién sí y para quién no?"
+    - section: "Veredicto tras el uso documentado"
+      description: "Valoración limitada al periodo real que pueda confirmarse. ¿Para quién sí y para quién no?"
       eeat_injection: false
     - section: "FAQs"
       description: "3-6 preguntas frecuentes"
@@ -147,7 +153,7 @@ setup:
   name: "Setup / Showcase de espacio de trabajo"
   voice: "entusiasta pero práctico, comparte detalles útiles, inspira sin presumir"
   word_count: "1500-2500"
-  description: "Presentación de un setup de home office completo con análisis de cada componente"
+  description: "Presentación de un setup de home office real con análisis de cada componente. No usar este formato sin experiencia directa verificable."
   humanization:
     intro_variation: true
     min_personal_experience: 4
@@ -155,10 +161,10 @@ setup:
     variable_faq_count: "3-5"
   structure:
     - section: "Visión general"
-      description: "Foto del setup completo y contexto: qué tipo de trabajo, espacio disponible, presupuesto total"
+      description: "Foto real del setup y contexto documentado: tipo de trabajo y espacio disponible; presupuesto solo si está confirmado"
       eeat_injection: true
     - section: "La silla"
-      description: "Qué silla, por qué, experiencia, precio"
+      description: "Silla real, motivo documentado, experiencia directa y precio solo si está confirmado"
       eeat_injection: true
     - section: "El escritorio"
       description: "Tipo, medidas, organización"
@@ -170,13 +176,13 @@ setup:
       description: "Teclado, ratón, webcam, micro"
       eeat_injection: false
     - section: "Iluminación y ambiente"
-      description: "Luz natural, artificial, temperatura, plantas"
+      description: "Condiciones reales y verificables de luz y ambiente; no añadir elementos que el setup no tiene"
       eeat_injection: true
     - section: "Lo que cambiaría"
-      description: "Errores cometidos y próximas mejoras planeadas"
+      description: "Limitaciones observadas y mejoras solo si están realmente planeadas"
       eeat_injection: true
     - section: "Presupuesto desglosado"
-      description: "Tabla con coste de cada elemento"
+      description: "Tabla con costes únicamente cuando existen importes verificables; omitir cifras no confirmadas"
       eeat_injection: false
     - section: "FAQs"
       description: "3-5 preguntas frecuentes"

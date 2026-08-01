@@ -37,6 +37,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | ikea-bekant-vs-flexispot-e7 | ikea-bekant-vs-flexispot-e7.webp | 7899239 | Josh Sorenson | https://www.pexels.com/photo/7899239/ |
 | trabajar-desde-casa-calor | trabajar-desde-casa-calor.webp | 31517321 | Bingqian Li | https://www.pexels.com/photo/31517321/ |
 | mejor-ventilador-silencioso-oficina | mejor-ventilador-silencioso-oficina.webp | 5850340 | FOX ^.ᆽ.^= ∫ | https://www.pexels.com/photo/antique-fan-and-a-radio-on-a-desk-5850340/ |
+| marco-vs-escritorio-elevable-completo | marco-vs-escritorio-elevable-completo.webp | 4554421 | cottonbro studio | https://www.pexels.com/photo/woman-in-white-crew-neck-t-shirt-holding-red-and-white-plastic-toy-4554421/ |
 
 ---
 
@@ -166,6 +167,17 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | TONFARY Silla Ergonómica | B0D8K66SJ3 | /dp/B0D8K66SJ3 | https://m.media-amazon.com/images/I/51jCTR-KvQL._AC_SL300_.jpg | ~180 EUR | verificado (sustituye FelixKing, no disponible) |
 | Hbada Silla Ergonómica | B0CH7RBQQ7 | /dp/B0CH7RBQQ7 | https://m.media-amazon.com/images/I/61L8eCtWCFL._AC_SL1500_.jpg | ~190 EUR | verificado |
 | SIHOO M102C | B0CLLRNFB8 | /dp/B0CLLRNFB8 | https://m.media-amazon.com/images/I/31pKOaVpQiL._AC_SL300_.jpg | ~190 EUR | verificado 2026-05-24 |
+
+### marco-vs-escritorio-elevable-completo
+Artículo informativo. Sin botones de afiliación. Productos citados como ejemplos con enlaces internos a fichas:
+
+| Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
+|----------|------|-----------|--------|--------|--------|
+| Duronic TM61 (solo estructura) | B0C34FB93G | /dp/B0C34FB93G | — | no mostrado | disponible 2026-08-01; discrepancia fuente/ASIN en YAML |
+| AIMEZO doble motor (solo estructura) | B0D1KB6GV2 | — | — | no mostrado | no disponible 2026-08-01 |
+| Maidesite T1 Pro (solo estructura) | B08DXZ6JJ5 | — | — | no mostrado | deriva de versión; velocidad omitida |
+| Duronic CD120 (con tablero 120x60) | B0DKJPZWW9 | — | — | no mostrado | no disponible 2026-08-01 |
+
 
 ### ikea-bekant-vs-flexispot-e7
 **Productos comparados (descatalogados, sin afiliación directa):**

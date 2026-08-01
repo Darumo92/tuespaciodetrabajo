@@ -1,15 +1,13 @@
 # Plan de contenidos — 1 artículo/semana (roadmap por fases)
 
-> Creado 2026-07-21. Reemplaza al calendario antiguo (`project_content_calendar.md`
-> queda DEPRECADO: su PAUSA y fechas ya no aplican — decisión del usuario "olvidar
-> planes antiguos").
+> Creado 2026-07-21 y reafirmado por el usuario el 2026-08-01. Es la única cola
+> editorial vigente. Los calendarios anteriores se eliminaron del repositorio.
 
 ## Estrategia (por qué así)
 
-- **Google no indexa / Bing sí** (117/120 indexadas en Bing, tendencia al alza). El
-  techo real es **backlinks = 0**. El usuario ya publica en Reddit/Quora a diario →
-  eso corre en paralelo. El contenido no bloquea por Google: optimizamos para lo que
-  convierte (Bing + autoridad) y aplicamos buenas prácticas Google cuando salen gratis.
+- **Cadencia decidida: 1 artículo/semana.** Se mantiene aunque Google o Bing tengan
+  fluctuaciones de visibilidad; recovery, backlinks y monitorización corren en paralelo
+  y no sustituyen esta cola salvo nueva decisión explícita del usuario.
 - **El artículo NO duplica al catálogo/comparador.** El catálogo + `/herramientas/selector/`
   ya cubren la intención "mejor X / A vs B" (comercial/transaccional). El artículo cubre
   lo que el catálogo no puede: **informacional / problema / guía-embudo** que rankea la
@@ -60,7 +58,7 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 | # | Slug ES | Slug EN | Rol | Enruta a | Estado |
 |---|---------|---------|-----|----------|--------|
 | 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 |
-| 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ⬜ |
+| 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ✍️ borrador ES+EN en human-review |
 | 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ⬜ |
 | 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ⬜ |
 
@@ -103,3 +101,18 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 
 "Vamos con el artículo de esta semana" → coger el primer slug no ✅ de la Fase activa →
 seguir el **Checklist de publicación** de arriba (empezando por pedir el SERP al usuario).
+
+## Handoff 2026-08-01 — artículo #2 en revisión humana
+
+Las SERP ES y GB se investigaron con Google y Keyword Surfer (Playwright) el 2026-08-01:
+
+- ES: `mesa escritorio elevable` 1.600, `estructura mesa elevable` 210, `patas escritorio elevable` 210, `estructura escritorio elevable` 170, `escritorio elevable sin tablero` 10. Intención comercial/transaccional.
+- GB: `standing desk legs` 1.000, `standing desk frame` 880, `sit stand desk frame` 170, `electric standing desk frame` 90, `standing desk frame only` 20. Intención comercial/transaccional.
+- Enfoque aprobado: guía híbrida que responde marco vs completo con coste total, compatibilidad y ejemplos del catálogo. Sin precios inventados, sin prueba de producto. ES+EN ≈2.100w.
+- Borrador ES+EN en human-review. Pendiente aprobación del contenido.
+
+Productos ya identificados para el artículo nuevo:
+
+- Marcos: `duronic-tm61`, `aimezo-doble-motor`, `maidesite-t1-pro`.
+- Contraste completo directo: `duronic-cd120`; ampliar solo con fichas existentes si la SERP lo justifica.
+- Ángulo personal honesto: David conoce el montaje de un tablero propio por su escritorio fijo DIY, pero no ha probado una estructura elevable.

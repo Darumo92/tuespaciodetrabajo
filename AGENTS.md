@@ -86,10 +86,11 @@ Cuando haya información nueva que deba persistir: escribir/actualizar en `docs/
 
 | Tarea | Cargar |
 |-------|--------|
-| Escribir/auditar/evaluar artículo | `reference_seo_workflows.md` + `reference_article_checklists.md` |
+| Planificar/escribir artículo nuevo | `project_content_plan.md` + `reference_seo_workflows.md` + `reference_article_checklists.md` |
+| Auditar/evaluar artículo | `reference_seo_workflows.md` + `reference_article_checklists.md` |
 | Productos Amazon / comparativas | `reference_amazon_rules.md` |
 | Backlinks / foros / Reddit | `project_backlinks_plan.md` + `project_backlinks_session_state.md` |
-| Recovery / indexación | `project_recovery_plan.md` + `project_recovery_session_state.md` |
+| Recovery / indexación | `project_recovery_session_state.md` |
 | Coherencia de persona | `project_author_persona.md` |
 | Humanización de texto | `.seo-engine/templates/humanization-guide.md` |
 

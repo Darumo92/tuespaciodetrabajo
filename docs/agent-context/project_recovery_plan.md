@@ -1,10 +1,12 @@
 ---
-name: Plan Recovery Indexación activo
-description: Estado del plan recovery tras colapso indexación 2026-05-06. Causas, acciones aplicadas, bloques pendientes. Cuando el usuario pregunte por SEO/indexación/GSC, consultar primero este memo y docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md
+name: Plan Recovery Indexación histórico
+description: Evidencia histórica del plan tras el colapso de indexación del 2026-05-06. Para el estado vigente consultar project_recovery_session_state.md
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
-## Override vigente — auditoría live 2026-05-24
+> **ARCHIVO HISTÓRICO.** No ejecutar las instrucciones de este documento. El cuerpo se conserva para reconstruir las decisiones de mayo de 2026. Estado vigente: `project_recovery_session_state.md`.
+
+## Override histórico — auditoría live 2026-05-24
 
 Fuente completa: `seo-indexing-audit/audit-2026-05-24.md`.
 
@@ -36,8 +38,8 @@ Site colapsó: 20 indexadas (08 abr) → 2 indexadas (01 may). 17 URLs en "Rastr
 
 ## Bloques pendientes (paralelos)
 
-### Bloque A — Cadencia escalonada
-Calendario nuevo en `project_content_calendar.md`. Recovery 1/sem hasta 02 jun.
+### Bloque A — Cadencia escalonada histórica
+El calendario de mayo fue retirado. La cola editorial vigente está en `project_content_plan.md`.
 
 ### Bloque B — Diluir densidad afiliada (urgente, sem 1-2)
 Refactor para bajar a ≤5 affiliates/1000w:

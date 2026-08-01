@@ -1,5 +1,7 @@
 # Prioritized content ideas
 # Status: planned | in-progress | published | rejected
+# Inventario histórico hasta mayo de 2026. No usar para elegir el siguiente artículo.
+# Cola vigente: docs/agent-context/project_content_plan.md
 queue:
   - slug: mi-setup-home-office-2026
     title: "Mi setup de home office 2026: qué uso y por qué"
@@ -230,6 +232,15 @@ queue:
     date_planned: 2026-05-11
     date_published: 2026-05-11
     notes: "Artículo #29 (cluster ambiente, estacional jun-ago). Primer artículo post-recovery indexación. SERP top 5 (eltiempo, pagepersonnel, grupoclave, hola.com, rrhhdigital) intent INFORMATIONAL puro — sin product pages, sin PAA, sin búsquedas relacionadas. Volúmenes Keyword Surfer 2026-05-10: primary 'trabajar desde casa calor' 0, todas candidatas 0. Head term real con volumen masivo: 'ventilador silencioso' 9900 (precarga #30 mejor-ventilador-silencioso-oficina del 18 may). Estrategia: artículo Info ambiente con sección dedicada 'Ventilador silencioso para teletrabajar' que prepara cluster bridge a #30. Ángulo único frente a SERP: las 5 top dan consejos genéricos (pausas, hidratación, persianas) sin datos técnicos (CFM, dB, watts radiados). #29 incluye: temperatura confort INSST 23-26°C (RD 486/1997), datos AEMET centro/sur 25-30 días/año >35°C, citas Helsinki University of Technology (caída 2%/grado tareas cognitivas), IDAE (consumo AC +7-10% por grado <25°C), watts radiados monitor 4K (35-50W), torre PC (80-200W), bombilla halógena (90% calor) vs LED (<20%). Estructura no estándar (variación cumple regla anti-IA): intro anecdótica → realidad térmica España → 3 capas en orden coste/efecto (bloquear/circular/climatizar) → ventilador silencioso bridge → errores contraintuitivos → rutina térmica diaria Rubí → cuándo AC ya no opcional → más allá del aire → resumen. NO usa esquema 'Qué es X / Tipos / FAQ'. ~2200 palabras. 6 FAQs (variable, no 5). 4 internal links: mejor-escritorio-elevable-electrico, mejor-monitor-trabajar-desde-casa, insonorizar-home-office, productividad-en-casa-entorno-fisico. Coherencia persona: David Rubio Rubí 9m² norte, BenQ PD2705U, lector Sevilla con ventilador 56dB, fisioterapeuta Pep contractura trapecio derecho hace dos veranos. Imagen Pexels pendiente."
+
+  - slug: marco-vs-escritorio-elevable-completo
+    title: "Estructura de escritorio elevable o mesa completa"
+    type: informativo
+    category: escritorios
+    priority: high
+    status: human-review
+    date_created: 2026-08-01
+    notes: "Artículo #2 del plan semanal 2026. SERP ES/GB 2026-08-01: intención comercial/transaccional. Gap: guía híbrida que responde marco vs completo con coste total, compatibilidad y montaje. Productos citados como ejemplos: Duronic TM61 (disponible, discrepancia fuente/ASIN), AIMEZO doble motor y Duronic CD120 (no disponibles), Maidesite T1 Pro (deriva de versión, velocidad omitida). Sin afirmaciones de prueba ni precios actuales. Imagen Pexels 4554421 (cottonbro studio). Borrador ES+EN en human-review."
 
   - slug: mejor-ventilador-silencioso-oficina
     title: "Mejor ventilador silencioso para oficina 2026"

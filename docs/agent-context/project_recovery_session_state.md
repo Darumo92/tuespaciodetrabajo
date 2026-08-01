@@ -4,6 +4,32 @@ description: Handoff entre sesiones del plan recovery. Cuando el usuario abra nu
 type: project
 originSessionId: c08b5d9c-873e-4ee4-be4b-27dda7bb729a
 ---
+## Update 2026-08-01 — decisión editorial vigente
+
+- El usuario reafirma el plan de `project_content_plan.md`: publicar una pareja ES+EN por semana.
+- La volatilidad de Google/Bing y las acciones de recovery se monitorizan en paralelo, pero ya no pausan por defecto la cola editorial.
+- Cualquier nota anterior que diga "pausa editorial vigente" queda superada por esta decisión.
+
+---
+## Update 2026-07-28 — corte aparente en Bing Webmaster Tools
+
+- CSV de Search Performance exportado el 28 jul: 34 clics y ~1,7K impresiones en 90 dias. Ultimo dia con datos: 22 jul (2 clics, 66 impresiones); 23-25 jul aparecen como ceros y el archivo no incluye 26-28 jul.
+- `patasyhogar.com` si tiene datos de Bing actualizados en el mismo periodo, por lo que se descarta un retraso general de Bing. Siguen abiertas dos hipotesis: fallo de informe limitado a esta propiedad o caida real por reevaluacion de indexacion/calidad.
+- Comprobacion tecnica live con user-agent Bingbot: `/`, `robots.txt`, `sitemap-0.xml`, una comparativa y una guia responden HTTP 200. `robots.txt` permite el rastreo; la home tiene canonical propia y no tiene `noindex`.
+- No hubo cambios en robots, cabeceras, layout o configuracion SEO despues del deploy editorial del 21 jul. Google rastreo la home con exito el 23 jul, lo que descarta una indisponibilidad general del sitio en esa fecha.
+- Diferencia temporal relevante: el workflow IndexNow perdio su cache el 21 jul y envio 420 paginas como nuevas (HTTP 200), seguido de otras tandas de 62 y 39 URLs. El sitio habia crecido de 49 a 423 HTML entre el 1 jun y el 21 jul; 316 de las 405 URLs del sitemap son fichas de producto o comparaciones generadas. Esto puede haber provocado una reevaluacion de calidad, pero no prueba una penalizacion.
+- Evidencia Bing Webmaster Tools aportada por el usuario el 28 jul:
+  - Home: `Indexed successfully`, crawl/fetch/indexacion permitidos; ultimo rastreo 06 jul.
+  - `/sillas/mejor-silla-ergonomica-calidad-precio/`: `Indexed successfully`, sin issues SEO/GEO; ultimo rastreo 13 jul.
+  - `/catalogo/escritorio/flexispot-e7/`: `Discovered but not crawled` desde 04 jul. Es un problema previo de absorcion del catalogo, no una desindexacion ocurrida el 23 jul.
+  - Site Explorer: 180 indexadas, 0 errores, 5 warnings y 49 excluidas sobre 233 URLs mostradas.
+  - Sitemaps: 0 errores/warnings, 406 URLs descubiertas; Bing rastreo con exito el sitemap de 405 URLs el 26 jul, despues del corte de rendimiento.
+- Prueba SERP manual aportada por el usuario: la consulta unica de marca `tuespaciodetrabajo` no muestra el dominio. Junto con el blackout de impresiones, esto descarta que sea solo un retraso de Search Performance.
+- Segunda prueba SERP manual en incognito: `site:tuespaciodetrabajo.com` devuelve aproximadamente 43.500 resultados ajenos al dominio y ninguna URL propia. La consulta esta bien formada; Bing ignora el filtro al no tener resultados servibles para el host.
+- Diagnostico actualizado: supresion site-wide en la capa de resultados/ranking de Bing desde el 23 jul. Bing conserva al menos 180 URLs en su indice tecnico y sigue rastreando el sitemap, por lo que no es una desindexacion tecnica completa ni un bloqueo de Bingbot. La causa mas plausible es una reevaluacion de calidad tras el crecimiento programatico 49 -> 423 HTML y la notificacion masiva de IndexNow del 21 jul; IndexNow seria el posible disparador del recrawl, no la causa de calidad subyacente.
+- No solicitar indexacion masiva ni tocar robots/canonicals. Siguiente trabajo: diseñar una contencion reversible del footprint programatico, empezando por comparaciones generadas y URLs de catalogo de menor calidad, y corregir IndexNow para que solo envie URLs indexables/cambiadas sin depender de una cache efimera.
+
+---
 ## Update 2026-07-06 — control recovery + plan del dia
 
 - GSC Search Analytics `2026-06-03` -> `2026-07-05`:
@@ -422,8 +448,8 @@ GSC → Inspección URL → Solicitar indexación:
 
 ## Documentación de referencia
 
-- Plan completo: `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md`
-- Calendario: `project_content_calendar.md`
+- Plan editorial vigente: `project_content_plan.md`
+- Recovery histórico de mayo: `docs/PLAN_RECOVERY_INDEXACION_2026-05-06.md`
 - Persona autor: `project_author_persona.md`
 - Backlinks: `docs/PLAN_BACKLINKS_TIER1.md`
 - Sesión backlinks pendiente: `docs/SESION_1_BACKLINKS_PAQUETE.md`

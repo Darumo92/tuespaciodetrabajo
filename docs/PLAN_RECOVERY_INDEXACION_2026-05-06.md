@@ -1,6 +1,6 @@
 # Plan Recovery Indexación — 2026-05-06
 
-**Estado:** activo. Reemplaza calendario de `PLAN_v2_2026-04-12.md` desde semana 5 may en adelante.
+**Estado:** histórico. Conservado como evidencia del incidente de mayo; no ejecutar como calendario ni plan vigente.
 **Causa raíz:** colapso indexación 20 → 2 páginas indexadas (08 abr → 01 may), 17 URLs en "Rastreada-no-indexada".
 
 ---

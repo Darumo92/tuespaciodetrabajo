@@ -31,6 +31,9 @@ Thumbs.db
 # IndexNow
 .indexnow-state.json
 
+# Playwright browser sessions
+.playwright-mcp/
+
 # Claude Code / Opencode
 .claude/*
 !.claude/settings.json

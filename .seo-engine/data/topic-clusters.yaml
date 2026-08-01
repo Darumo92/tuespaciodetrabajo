@@ -74,6 +74,10 @@ clusters:
         title: "Home office en piso pequeño: ideas y soluciones que funcionan"
         keyword: "home office piso pequeño"
         status: published
+      - slug: marco-vs-escritorio-elevable-completo
+        title: "Estructura de escritorio elevable o mesa completa"
+        keyword: "estructura escritorio elevable"
+        status: human-review
     notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio."
 
   - name: perifericos

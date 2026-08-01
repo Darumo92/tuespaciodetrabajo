@@ -1,13 +1,15 @@
 ---
-name: Plan Recovery Indexacion v2
-description: Sprint agresivo 10-14 dias tras comprobar que Google recrawleo la home el 2026-05-31 pero las internas siguen sin indexar. Sustituye la rutina diaria basada en espera/warmup como centro operativo.
+name: Plan Recovery Indexacion v2 historico
+description: Sprint ejecutado en junio de 2026. Conservado como evidencia; para el estado vigente consultar project_recovery_session_state.md.
 type: project
 updated: 2026-06-01
 ---
 
+> **ARCHIVO HISTÓRICO.** No ejecutar las instrucciones de este documento. El cuerpo se conserva como evidencia del sprint de junio de 2026. Estado vigente: `project_recovery_session_state.md`.
+
 # Plan Recovery Indexacion v2
 
-## Decision ejecutiva
+## Decision ejecutiva historica
 
 Cambiar la estrategia ya. No seguir igual otros 14 dias.
 
@@ -404,7 +406,7 @@ Reset selectivo si no hay cambio:
 - Considerar noindex temporal o despublicacion de piezas mas debiles solo si hay evidencia clara y tras revisar una por una.
 - No hacer bulk masivo sin poder atribuir efecto.
 
-## Decision editorial durante sprint
+## Decision editorial historica durante el sprint
 
 Recomendacion clara:
 

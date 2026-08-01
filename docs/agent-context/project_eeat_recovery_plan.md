@@ -1,14 +1,16 @@
 ---
-name: Plan recuperación E-E-A-T tras colapso indexación abril 2026
-description: Estado del plan de refuerzo E-E-A-T para sacar 15 páginas de "Rastreada-no-indexada" en GSC. Artículos pendientes, patrón de cambios y reglas de cadencia
+name: Plan recuperación E-E-A-T histórico
+description: Plan de mayo de 2026 conservado como evidencia. No usar como cola vigente ni como fuente canónica de hechos personales.
 type: project
 originSessionId: 526f9e83-434f-4fe7-8dcd-23c58725559b
 ---
+> **ARCHIVO HISTÓRICO.** No ejecutar las instrucciones de este documento ni reutilizar sus anécdotas como hechos. Estado vigente: `project_recovery_session_state.md`; hechos canónicos: `.seo-engine/config.yaml` y `project_author_persona.md`.
+
 **Why:** GSC reportó colapso de indexación 2026-04-10 → 2026-04-24 (20 → 4 páginas indexadas, -80%). Causa raíz = veredicto Google de baja calidad / E-E-A-T débil sobre 15 páginas en "Rastreada: actualmente sin indexar". Ningún fix técnico recupera indexación; hace falta refuerzo de contenido + autor.
 
-**How to apply:** Cuando el usuario diga "vamos con E-E-A-T" o "siguiente artículo del plan recovery" o "el de [slug]", retomar este plan en el siguiente artículo pendiente. Aplicar SIEMPRE el patrón de refuerzo descrito abajo. Respetar la cadencia (1-2 artículos/día) — NO hacer todos de golpe.
+**No ejecutar como plan vigente.** Consultar `project_recovery_session_state.md` para indexación y `project_content_plan.md` para artículos nuevos.
 
-## Cadencia vigente (actualizada 2026-05-19)
+## Cadencia histórica (actualizada 2026-05-19)
 
 - **No aplicar todos los artículos de golpe.** Decisión del usuario 2026-05-19 tras auditoría live: trabajar en tandas pequeñas para poder medir qué ayuda a indexar.
 - **Ritmo operativo:** 1 URL prioritaria por día normal. Máximo 2-3 URLs por tanda si los cambios son mecánicos y de bajo riesgo.

@@ -995,6 +995,25 @@ articles:
       - fatiga-visual-pantalla
     internal_links_from:
       - trabajar-desde-casa-calor
+  - slug: marco-vs-escritorio-elevable-completo
+    title: "Estructura de escritorio elevable o mesa completa"
+    path: src/content/articulos/marco-vs-escritorio-elevable-completo.mdx
+    type: informativo
+    category: escritorios
+    primary_keyword: "estructura escritorio elevable"
+    secondary_keywords:
+      - estructura mesa elevable
+      - patas escritorio elevable
+      - mesa escritorio elevable
+      - escritorio elevable sin tablero
+    cluster: escritorios
+    status: human-review
+    date: 2026-08-01
+    has_eeat_signals: true
+    internal_links_to:
+      - como-elegir-escritorio-elevable
+      - altura-correcta-escritorio-silla
+    internal_links_from: []
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

@@ -55,7 +55,7 @@ Campos esperados por producto:
 2. **Nombre real y autoría desde el día 1.** Todos los artículos firmados con nombre REAL. Página "Sobre nosotros" con foto real. Schema Person en cada artículo. Google valora E-E-A-T.
 3. **Ratio de contenido equilibrado.** 50% guías informativas · 35% comparativas · 15% hubs/pilares. Si todo es comparativa, Google sospecha sitio de afiliados puro.
 4. **Nunca la misma estructura en todos los artículos.** Variar el orden de secciones. Al menos 1 de cada 3 con estructura diferente al estándar.
-5. **Experiencia personal en CADA artículo.** Mínimo 2 inserciones de experiencia personal por artículo. Basadas en la persona de config.yaml. Si no has probado un producto, declararlo.
+5. **Señal E-E-A-T verificable en CADA artículo.** Usar experiencia personal solo si está documentada en `.seo-engine/config.yaml` y `project_author_persona.md`; si no hay uso directo, declararlo y explicar la metodología de análisis. Nunca inventar anécdotas, lectores, familiares, lesiones o citas.
 6. **Fotos propias siempre que sea posible.** Al menos "Sobre nosotros" y setup propio reales. Para artículos: combinar propias + Pexels/Unsplash. Imágenes Amazon OK para hotlinking.
 7. **Fechas de publicación escalonadas y reales.** NO publicar todos el mismo día. Escalonar en 2-4 semanas. Nunca `actualizadoEn` en bulk.
 8. **Longitud variada entre artículos.** Comparativas: 2000-3500. Guías: 1500-2500. Pilares: 3000-5000. Variación natural.
@@ -80,7 +80,7 @@ Antes de publicar CUALQUIER artículo, verificar TODOS estos puntos:
 - [ ] Todas las imágenes de producto cargan correctamente
 - [ ] Precios orientativos (~) verificados en Amazon.es
 - [ ] Nombres de producto coinciden con los de Amazon.es
-- [ ] Al menos 2 inserciones de experiencia personal
+- [ ] Hay una señal E-E-A-T verificable; la experiencia personal está documentada o, si no hubo uso directo, se declaran las limitaciones y la metodología sin inventar personas, pruebas, compras, lesiones, métricas ni citas
 - [ ] Intro diferente a artículos recientes de la misma categoría
 - [ ] Pros/contras con número variable por producto
 - [ ] Internal links a 2+ artículos relacionados (a artículos concretos, no a páginas de categoría)
@@ -90,7 +90,7 @@ Antes de publicar CUALQUIER artículo, verificar TODOS estos puntos:
 - [ ] Autor con nombre real
 - [ ] No hay keyword stuffing
 - [ ] Medidas y dimensiones incluidas donde sean relevantes
-- [ ] Coherencia entre artículos verificada (experiencias, datos del autor, anécdotas, datos de productos)
+- [ ] Coherencia entre artículos verificada contra las fuentes canónicas (experiencia real, datos del autor y datos de productos)
 - [ ] Imagen de artículo verificada <= 800px de ancho
 - [ ] No hay emails en texto plano en el MDX (usar link a `/sobre-mi/`)
 - [ ] Meta description entre 120-155 caracteres

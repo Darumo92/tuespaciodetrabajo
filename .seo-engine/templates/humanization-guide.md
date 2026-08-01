@@ -1,153 +1,133 @@
 # Guia de Humanizacion — Tu Espacio de Trabajo
 
-Reglas obligatorias para reducir patrones IA y reforzar E-E-A-T con experiencia personal.
+Reglas obligatorias para evitar patrones de texto artificiales y reforzar E-E-A-T sin fabricar experiencia.
 **Aplica a todos los articulos nuevos y a la revision de los existentes.**
+
+## Politica editorial de honestidad
+
+Las unicas fuentes canonicas para la experiencia y los datos personales de David son `.seo-engine/config.yaml` y `docs/agent-context/project_author_persona.md`.
+
+- Presentar como experiencia personal solo hechos documentados en ambas fuentes y relevantes para el tema.
+- Si David no ha probado un producto, decirlo brevemente y explicar la metodologia: paginas oficiales, especificaciones publicadas, documentacion y patrones repetidos en resenas verificadas.
+- Nunca inventar lectores, companeros, familiares, compras, lesiones, citas, duraciones de uso, metricas, testimonios ni conversaciones con profesionales.
+- Una senal personal real puede aparecer cuando aporte contexto. No existe un minimo artificial de anecdotas o menciones en primera persona.
+- Si las fuentes canonicas no documentan un dato personal, no se publica como experiencia directa.
+- Las fuentes externas deben existir y respaldar exactamente la afirmacion asociada. No se buscan estadisticas para cumplir una cuota.
+
+### Formulas transparentes
+
+Adaptar estas formulas al articulo sin ocultar las limitaciones:
+
+- "No he probado este modelo; comparo sus especificaciones publicadas y los patrones repetidos en resenas verificadas."
+- "Mi experiencia directa aqui se limita al montaje de un tablero de madera maciza sobre patas fijas de IKEA; no he usado una estructura elevable."
+- "Cuando una cifra no esta publicada o no se ha podido confirmar, se omite."
 
 ## Persona del autor
 
-**CRITICO:** Todos los articulos deben usar la persona definida en `config.yaml` (seccion `author`). Los datos del autor (nombre, ciudad, setup, experiencia) estan ahi para generar experiencias **consistentes** entre articulos.
+**CRITICO:** Antes de escribir en primera persona, consultar las dos fuentes canonicas. La identidad real y el setup documentado aportan contexto; no son material para completar huecos narrativos.
 
-### Reglas de consistencia:
-- **Siempre usar los mismos datos** de setup, ciudad, y anos de experiencia. Nunca contradecir datos entre articulos.
-- **Variar las anecdotas** — no repetir la misma historia en dos articulos. Usar diferentes aspectos del setup segun el tema.
-- **Ser especifico pero no verificable** — "en mi despacho de 8m2" es bueno, "el 14 de marzo a las 17:30" es demasiado.
-- **Distribuir las experiencias** — articulos de sillas usan experiencia con tu silla, de escritorios con tu escritorio, etc. Ocasionalmente mencionar el setup anterior para dar profundidad.
-- **El ergnomo/fisio es comodin** — "mi fisioterapeuta me dijo que..." funciona en cualquier articulo de ergonomia/salud.
-- **Antes de escribir experiencias**, leer el setup y datos del autor en config.yaml para no inventar algo que contradiga el perfil.
+### Reglas de consistencia
+
+- Usar siempre los mismos datos documentados de identidad, ciudad, setup y trayectoria.
+- Relacionar la experiencia con el tema solo cuando haya una conexion real. David puede hablar del montaje de su mesa fija, no del uso de un escritorio elevable.
+- No convertir un dato real en una historia no documentada. Tener fisioterapeuta no autoriza a atribuirle consejos o citas concretas.
+- No ampliar tiempos, resultados, compras o comparaciones a partir de inferencias.
+- Usar medidas concretas cuando esten publicadas o verificadas; omitirlas cuando no puedan confirmarse.
 
 ## Patrones IA a evitar
 
 ### 1. Introducciones formulaicas
-- **NO:** Empezar siempre con "[Tema] es/son uno de los aspectos mas importantes del teletrabajo..." o "Elegir [producto] puede parecer un detalle menor, pero tiene un impacto directo en..."
-- **SI:** Variar entre: pregunta directa, anecdota personal, dato sorprendente, ir directo al grano, recomendacion inmediata.
-- **Regla:** Ningun articulo nuevo puede empezar con el mismo patron que otro existente. Antes de escribir la intro, revisar las intros de los 3 articulos mas recientes de la misma categoria.
 
-### 2. Estructura identica en todos los articulos
-- **NO:** Intro -> "Que es X" -> "Tipos de X" -> "Como elegir" -> "Los mejores X" -> "Errores comunes" -> FAQ en todos los articulos.
-- **SI:** Romper la estructura: empezar por la recomendacion directa, omitir secciones que no aportan, fusionar secciones, anadir una seccion inesperada ("Lo que me hubiera gustado saber antes de comprar mi primera silla ergonomica").
-- **Regla:** Al menos 1 de cada 3 articulos debe tener una estructura visiblemente diferente al estandar.
+- **NO:** Empezar siempre con "[Tema] es/son uno de los aspectos mas importantes del teletrabajo..." o "Elegir [producto] puede parecer un detalle menor, pero tiene un impacto directo en...".
+- **SI:** Variar entre pregunta directa, dato verificado, respuesta inmediata, contraposicion o una experiencia personal documentada y relevante.
+- **Regla:** Antes de escribir la intro, revisar las de los 3 articulos mas recientes de la misma categoria. No repetir su patron.
 
-### 3. Ausencia de experiencia personal
-- **NO:** Todo escrito en tercera persona informativa sin ningun "yo probe esto", "en mi despacho paso que...", "mi fisio me dijo que...".
-- **SI:** Minimo 2-3 frases de experiencia personal por articulo, usando la persona de `config.yaml`. Insertadas en puntos clave (tras una recomendacion, al describir un problema, al comparar opciones).
-- **Regla obligatoria:** Todo articulo nuevo DEBE tener al menos 2 inserciones de experiencia personal basadas en la persona del autor. Mezclar entre: experiencias con productos, anecdotas del setup, consejos del fisioterapeuta, y referencias a tu espacio de trabajo.
-
-### 4. Listas perfectamente balanceadas
-- **NO:** Cada seccion de pros tiene exactamente 4-5 puntos, cada seccion de contras tiene 3-4, las FAQ siempre son 5. La simetria perfecta es un marcador IA.
-- **SI:** Desbalancear: que un producto tenga 6 ventajas y 1 contra, otro tenga 2 ventajas y 4 contras. Que una FAQ tenga 3 preguntas y otra 7. Que un articulo no tenga seccion de FAQ si no aporta.
-- **Regla:** Variar el numero de items en listas. Nunca todos los productos con el mismo numero de pros/contras.
-
-### 5. Fotos genericas de stock
-- **NO:** Solo imagenes de stock genericas de oficinas perfectas.
-- **SI:** Buscar fotos que parezcan "reales": escritorio desordenado, setup en un rincon del salon, silla en una habitacion pequena. Evitar fotos de oficinas de revista.
-- **Regla:** La imagen destacada debe ser especifica del tema (no fotos genericas de "persona trabajando"). Pedir al usuario que busque fotos concretas cuando se necesiten.
-- **Sugerencia de busqueda:** Al pedir fotos, dar queries especificas tipo "home office small room desk setup" o "ergonomic chair real home workspace".
-
-## Variaciones de intro por tipo
-
-Usar una diferente cada vez — no repetir el mismo patron en articulos consecutivos:
+Ejemplos de aperturas validas:
 
 | Tipo de intro | Ejemplo |
 |---|---|
-| **Pregunta directa** | "Sabias que el 70% de los teletrabajadores sufren dolor de espalda por usar una silla inadecuada?" |
-| **Anecdota personal** | "Llevo 5 anos teletrabajando y los primeros 2 los pase en una silla de comedor. Mi espalda lo noto." |
-| **Ir al grano** | "Esto es lo que necesitas saber antes de comprar un escritorio elevable para teletrabajar." |
-| **Recomendacion inmediata** | "Si tienes prisa: la IKEA MARKUS es la mejor silla por menos de 200 EUR para la mayoria. Si quieres saber por que, sigue leyendo." |
-| **Dato sorprendente** | "Un teletrabajador medio pasa 1.700 horas al ano sentado. Eso son 70 dias completos." |
-| **Problema del lector** | "Si al final del dia te duele la zona lumbar y no sabes por que, probablemente es tu silla." |
-| **Contraposicion** | "Todo el mundo dice que necesitas un escritorio de pie. La realidad es que no es para todos." |
+| **Pregunta directa** | "¿Necesitas realmente un escritorio elevable o te basta con ajustar bien una mesa fija?" |
+| **Ir al grano** | "Antes de comprar un escritorio elevable conviene comprobar altura, tablero, estabilidad y garantia." |
+| **Metodologia** | "No he usado estas estructuras elevables: las comparo por especificaciones oficiales y resenas verificadas." |
+| **Dato verificado** | "El fabricante publica un rango de altura de [dato confirmado]; eso determina si encaja con tu estatura." |
+| **Contraposicion** | "Trabajar de pie no sustituye una configuracion ergonomica ni el movimiento frecuente." |
 
-## Inserciones de experiencia (donde y como)
+No usar porcentajes, precios, modelos o recomendaciones cerradas en una intro sin verificarlos antes.
 
-### Puntos clave para insertar experiencia personal:
-1. **Tras la recomendacion principal** — "Lo uso a diario en mi despacho y..."
-2. **Al describir un problema** — "Yo tenia exactamente este dolor de cervicales cuando..."
-3. **Al comparar opciones** — "Cambie de [A] a [B] porque..."
-4. **En la guia de compra** — "El error que cometi fue no medir mi escritorio antes de..."
-5. **Al hablar del fisio/ergnomo** — "Mi fisioterapeuta me explico que la postura correcta..."
+### 2. Estructura identica en todos los articulos
 
-### Ejemplos de experiencias por tema (basados en persona):
+- **NO:** Repetir siempre Intro -> "Que es X" -> "Tipos de X" -> "Como elegir" -> "Los mejores X" -> "Errores comunes" -> FAQ.
+- **SI:** Empezar por la respuesta principal, omitir secciones que no aportan, fusionar bloques o introducir una seccion especifica para la duda real del lector.
+- **Regla:** Al menos 1 de cada 3 articulos debe tener una estructura visiblemente diferente del esquema estandar.
 
-| Tema del articulo | Experiencia a insertar |
-|---|---|
-| **Sillas ergonomicas** | "Pase de una silla de comedor a una ergonomica y la diferencia en la espalda fue brutal la primera semana" |
-| **Escritorios** | "Mi primer escritorio de teletrabajo era la mesa del salon. Cuando me compre uno propio de 120x60, todo cambio" |
-| **Monitores/pantallas** | "Trabajar con un portatil de 14 pulgadas 8 horas al dia me provoco tension en el cuello en 3 meses" |
-| **Teclados/ratones** | "Cambie a un teclado mecanico por productividad, pero lo que mejoro fue el dolor de munecas" |
-| **Iluminacion** | "En mi despacho la luz natural entra por la izquierda. Hasta que puse una lampara de escritorio, tenia dolores de cabeza a las 17:00" |
-| **Auriculares/audio** | "En videollamadas con los ninos en casa, unos buenos auriculares con cancelacion de ruido pasaron de lujo a necesidad" |
-| **Organizacion** | "Probablemente he comprado 4 organizadores de cables hasta encontrar uno que realmente funciona" |
-| **Ergonomia general** | "Mi fisioterapeuta me dijo que la regla 20-20-20 suena a topico pero funciona de verdad" |
-| **Productividad** | "Empece midiendo mi productividad por horas sentado. Error. Lo que importa es como las usas" |
-| **Presupuesto** | "Mi primer setup de teletrabajo costo 150 EUR. Ahora llevo invertidos mas de 1.500 EUR, pero lo hice poco a poco" |
+### 3. Experiencia y metodologia
 
-**No repetir la misma anecdota en dos articulos.** Variar usando diferentes aspectos del perfil.
+- **NO:** Presentar investigacion documental como prueba propia ni rellenar el texto con anecdotas plausibles.
+- **SI:** Distinguir con claridad entre uso directo, conocimiento del setup propio, datos del fabricante y sintesis de resenas verificadas.
+- **Regla:** Cuando no haya prueba directa, incluir una declaracion visible de limitaciones y metodologia cerca de la primera evaluacion del producto.
 
-### Formulas de honestidad (para productos no "probados"):
-- "De los 6 que analice, solo he probado 2 personalmente. Para el resto me base en opiniones de compradores y datos tecnicos."
-- "Este modelo no lo he tenido en mi despacho, pero tras analizar mas de 150 resenas de teletrabajadores..."
-- "Tengo pendiente probarlo, pero los datos y las opiniones apuntan a que..."
+Una senal personal real puede aparecer tras una recomendacion, en una guia de compra o al contextualizar medidas, pero solo si esta documentada y mejora la decision del lector.
+
+### 4. Listas perfectamente balanceadas
+
+- **NO:** Dar a todos los productos el mismo numero de ventajas y contras o fijar siempre el mismo numero de FAQ.
+- **SI:** Dejar que la evidencia determine la longitud de cada lista y el numero de preguntas utiles.
+- **Regla:** Variar el numero de elementos de forma natural. No anadir puntos de relleno para lograr simetria.
+
+### 5. Fotos genericas de stock
+
+- **NO:** Usar solo imagenes genericas de oficinas perfectas.
+- **SI:** Elegir imagenes especificas del tema y fotos propias unicamente de productos que David posee realmente.
+- **Regla:** Verificar que la imagen corresponde al producto o situacion descrita. No insinuar propiedad o prueba mediante una imagen de stock.
+
+## Evidencia externa
+
+- Priorizar paginas oficiales, fichas tecnicas, manuales, organismos reconocidos y resenas verificadas pertinentes.
+- **Resenas verificadas:** usar las identificadas como compra verificada por la plataforma cuando esa senal exista y sintetizar patrones recurrentes, no afirmaciones aisladas.
+- Conservar en las notas de investigacion la URL y fecha de consulta de las resenas usadas.
+- No afirmar cuantas resenas se revisaron salvo que se hayan contado realmente.
+- Comprobar que cada URL existe y que la fuente dice exactamente lo que se le atribuye.
+- No atribuir una recomendacion generica a "los expertos" sin una referencia real.
+- No convertir una observacion repetida en resenas en una metrica si no hay datos para cuantificarla.
+- Los precios, medidas, angulos, porcentajes y tiempos solo se incluyen si estan publicados y vigentes o si se identifica claramente su fecha de consulta.
 
 ## Autoria
 
-- **Articulos:** Firmar con nombre real, no como "Tu Espacio de Trabajo"
-- **Schema Person:** Incluir en cada articulo con nombre, URL de Sobre Nosotros, y enlaces a redes sociales
-- **Pagina Sobre nosotros:** Escribir con la persona de config.yaml: nombre real, ciudad, historia de teletrabajo, por que creo la web
+- **Articulos:** Firmar con el nombre real de David, no como "Tu Espacio de Trabajo".
+- **Schema Person:** Incluir nombre, URL de la pagina de autor y enlaces reales disponibles.
+- **Pagina de autor:** Usar solo identidad, trayectoria y setup documentados en las fuentes canonicas.
+- La autoria real se demuestra con transparencia, criterio y trazabilidad, no con anecdotas fabricadas.
 
-## Contenido inventado pero coherente (OBLIGATORIO)
+## Checklist de humanizacion
 
-**REGLA CRITICA:** Al escribir articulos, NUNCA preguntar al usuario si quiere anadir experiencias personales, feedback de lectores o fuentes externas. **Inventarlos directamente** como parte del proceso de redaccion, asegurando que sean:
+- [ ] La intro no repite una formula ni el patron de los articulos recientes.
+- [ ] Toda afirmacion personal esta documentada en `.seo-engine/config.yaml` y `docs/agent-context/project_author_persona.md`.
+- [ ] Si no hay prueba directa, la limitacion y la metodologia de analisis son visibles.
+- [ ] No se inventan personas, pruebas, compras, lesiones, citas, tiempos de uso, metricas ni testimonios.
+- [ ] Las fuentes existen y respaldan exactamente los hechos, cifras y recomendaciones atribuidos.
+- [ ] Las listas tienen la longitud que exige la evidencia, sin simetria artificial.
+- [ ] El numero de FAQ varia segun las preguntas utiles y los datos disponibles.
+- [ ] La estructura se adapta al tema y no reproduce mecanicamente el esquema estandar.
+- [ ] El tono es natural, directo y especifico, sin relleno ni falsa familiaridad.
+- [ ] Las medidas y dimensiones concretas aparecen cuando son relevantes y verificables.
+- [ ] La autoria usa el nombre real.
+- [ ] El texto es coherente con la persona canonica y con las limitaciones de su experiencia.
 
-1. **Coherentes con la persona del autor** — usar datos de `config.yaml` (setup, ciudad, experiencia, familia). Nunca contradecir lo dicho en otros articulos.
-2. **Coherentes temporalmente** — si dices que llevas X tiempo usando un producto, verificar que ese producto existia desde esa fecha. Si la ErgoChair Pro se compro en ~2024, no decir "llevo 5 anos con ella".
-3. **Coherentes entre articulos** — anecdotas del fisio, experiencias con productos, historia del setup deben encajar con lo ya publicado. Antes de inventar, leer los articulos existentes.
-4. **Verificables en lo externo** — fuentes como INSST, OMS, IBV, universidades deben ser reales. Las URLs deben existir. No inventar nombres de estudios ni estadisticas atribuidas a fuentes concretas.
-5. **Plausibles en lo personal** — feedback de lectores, anecdotas de companeros, comentarios del fisioterapeuta deben sonar reales y naturales. Nada dramatico ni demasiado conveniente.
+## Checklist GEO — citabilidad por IA
 
-### Que inventar en cada articulo:
-- **Min 1 interaccion de lector/comunidad** — un email, un comentario, un mensaje que aporta contexto real.
-- **Min 1 fuente externa autoritativa** — estudio, guia oficial, dato de organizacion reconocida (INSST, OMS, IBV, universidad). Que sea real y verificable.
-- **Min 1 anecdota de entorno cercano** — companero de trabajo, pareja, amigo teletrabajador. Que aporte perspectiva diferente a la del autor.
-- **Experiencias personales** — siempre inventar directamente, no preguntar. Basarse en la persona de config.yaml y variar las anecdotas entre articulos.
+- [ ] La intro responde de forma directa a la pregunta del titulo sin prometer evidencia inexistente.
+- [ ] Cada H2 empieza con una respuesta clara antes del contexto y el detalle.
+- [ ] Cada dato citable esta confirmado y conserva su fuente o contexto.
+- [ ] Las secciones clave usan tablas, listas o parrafos cortos cuando mejoran la comprension.
+- [ ] La metodologia diferencia hechos publicados, patrones de resenas y experiencia directa.
 
-### Lo que NO inventar:
-- Nombres de producto que no existen
-- ASINs o URLs de Amazon
-- Estadisticas atribuidas a fuentes concretas (mejor usar datos reales de esas fuentes)
-- Fechas que contradigan la timeline del autor
-
-## Checklist de humanizacion (aplicar a cada articulo)
-
-- [ ] Intro diferente a los articulos recientes de la misma categoria
-- [ ] Al menos 2 inserciones de experiencia personal (o declaracion honesta de no haberlo probado)
-- [ ] Al menos 1 interaccion de lector/comunidad inventada y plausible
-- [ ] Al menos 1 fuente externa autoritativa real
-- [ ] Al menos 1 anecdota de entorno cercano (companero, pareja, amigo)
-- [ ] Listas de pros/contras con numero variable (no todos iguales)
-- [ ] Numero de FAQs variable (3-7, no siempre 5)
-- [ ] Estructura con al menos 1 variacion respecto al esquema estandar
-- [ ] Autoria con nombre real
-- [ ] Al menos 1 mencion de fisioterapeuta, ergnomo, fuente experta o experiencia directa
-- [ ] Tono conversacional en al menos 2-3 parrafos (no todo enciclopedico)
-- [ ] Medidas y dimensiones concretas cuando sean relevantes
-- [ ] Mencion del tipo de trabajo/espacio para contextualizar recomendaciones
-- [ ] Coherencia temporal verificada (fechas de productos, timeline del autor)
-
-## Checklist GEO — citabilidad por IA (aplicar a cada articulo)
-
-- [ ] Intro con frase-resumen citable: respuesta directa a la pregunta del titulo con datos concretos
-- [ ] Cada seccion H2 empieza con respuesta directa (dato, recomendacion, afirmacion concreta) antes de narrativa personal
-- [ ] Al menos 3 datos especificos citables por articulo (precios, medidas, angulos, porcentajes, tiempos)
-- [ ] Al menos 1 estadistica con fuente autoritativa (INSST, OMS, IBV, universidad)
-- [ ] Formato estructurado en secciones clave: listas, tablas o parrafos cortos con dato clave
-- [ ] Orden correcto en cada seccion: respuesta > contexto personal > detalle (nunca al reves)
-
-**IMPORTANTE:** GEO y SEO no son opuestos. Las respuestas directas al inicio de seccion tambien mejoran el posicionamiento en Google (featured snippets, passage indexing). La unica diferencia es que GEO prioriza la "extractabilidad" del contenido. La narrativa personal sigue siendo obligatoria para E-E-A-T — solo se mueve despues de la respuesta directa, nunca se elimina.
+GEO y SEO no justifican cuotas de cifras ni experiencias. Una respuesta extractable sigue necesitando evidencia, contexto y limites claros.
 
 ## Contenido estacional
 
-Los articulos sobre temas estacionales (calor en verano, frio en invierno, Black Friday, vuelta al cole/trabajo) se benefician especialmente de la humanizacion. En estos:
-- Mencionar la ciudad/zona geografica concreta
-- Incluir temporalidad real ("el verano pasado cambie de setup porque...")
-- Referenciar al profesional de confianza del autor
-- Aprovechar fechas de ofertas (Amazon Prime Day, Black Friday) para comparativas de precio
+En articulos sobre calor, frio, ofertas o vuelta al trabajo:
+
+- Usar ubicacion o temporalidad personal solo si aportan un hecho documentado y relevante.
+- Verificar fechas de campanas y precios antes de publicarlos.
+- No convertir una estacion real en cambios de setup, compras o recuerdos no documentados.
+- Indicar la fecha de consulta cuando una oferta o condicion pueda cambiar.

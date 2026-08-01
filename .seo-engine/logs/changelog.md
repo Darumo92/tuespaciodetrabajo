@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-08-01
+**Action:** Borrador ES+EN — estructura elevable frente a escritorio completo (plan semanal #2)
+**Files:** src/content/articulos/marco-vs-escritorio-elevable-completo.mdx, src/content/articulosI18n/en/standing-desk-frame-vs-complete.mdx, public/images/articulos/marco-vs-escritorio-elevable-completo.webp, .seo-engine/data/features.yaml, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, .seo-engine/templates/humanization-guide.md, .seo-engine/templates/tone-guide.md, .seo-engine/templates/blog-structures.yaml, docs/agent-context/reference_seo_workflows.md, docs/agent-context/reference_article_checklists.md, PRODUCTOS.md
+**Summary:** Creada guía informativa ES+EN (≈2.100w) comparando estructura elevable y mesa completa a partir de coste, compatibilidad, estabilidad, montaje y garantía, con tabla de decisión y checklist. Metodología honesta basada en la persona canónica (David usa mesa fija DIY, no un elevable). Cuatro productos citados solo como ejemplos de catálogo con avisos de disponibilidad y versionado; sin precios ficticios, sin componentes afiliados ni afirmaciones de prueba. Imagen Pexels 4554421 (cottonbro studio, 800x400). Endurecida la política editorial para prohibir la invención de experiencias en los templates de tono, humanización, estructuras, workflow SEO y checklists. Borrador en human-review; sin commits.
+**Triggered by:** user
+
 ## 2026-05-26
 **Action:** Mejora editorial recovery — mejor-monitor-trabajar-desde-casa
 **Files:** src/content/articulos/mejor-monitor-trabajar-desde-casa.mdx, src/data/amazon-products.json, PRODUCTOS.md, .seo-engine/data/content-queue.yaml, docs/agent-context/project_amazon_editorial_review_queue.md, reports/amazon-products/audit-2026-05-26.md
@@ -201,4 +207,10 @@
 **Action:** Recovery v2 Dia 1 — mejora profunda URL test ergonomia
 **Files:** src/content/articulos/ergonomia-teletrabajo-postura-correcta.mdx, docs/agent-context/project_recovery_session_state.md, logs/changelog.md
 **Summary:** GSC/GA4 siguen sin recovery; se mejora la URL test informacional con una seccion accionable de plan de 7 dias para diagnosticar postura antes de comprar, y se anade `actualizadoEn: 2026-06-02` por cambio sustancial. Build OK, 49 paginas.
+**Triggered by:** user
+
+## 2026-08-01
+**Action:** Consolidación de la planificación editorial vigente
+**Files:** AGENTS.md, docs/agent-context/INDEX.md, docs/agent-context/project_content_plan.md, docs/agent-context/reference_seo_workflows.md, .seo-engine/data/content-queue.yaml y documentos recovery históricos
+**Summary:** Se fija `project_content_plan.md` como única cola de artículos nuevos a una pareja ES+EN por semana, se retiran calendarios deprecados y se separa el estado recovery vigente de la evidencia histórica.
 **Triggered by:** user

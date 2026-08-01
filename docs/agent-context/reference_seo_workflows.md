@@ -19,24 +19,24 @@ El motor SEO vive en `.seo-engine/`. Usarlo para todas las tareas de blog y SEO.
 | `data/competitors.yaml` | Competitor matrix | Antes de comparaciones |
 | `data/seo-keywords.csv` | Keywords + SERP data | Antes de elegir temas |
 | `data/content-map.yaml` | Blog ↔ feature ↔ keyword map | Antes de escribir |
-| `data/content-queue.yaml` | Prioritized ideas | Cuando se decide qué escribir |
+| `data/content-queue.yaml` | Inventario histórico/editorial | Para consultar estado previo; la cola vigente está en `project_content_plan.md` |
 | `data/topic-clusters.yaml` | Pillar/cluster architecture | Antes de escribir |
 | `templates/blog-frontmatter.yaml` | Frontmatter format | Al generar |
 | `templates/blog-structures.yaml` | Outlines by type | Al estructurar |
 | `templates/tone-guide.md` | Style + E-E-A-T rules | Antes de escribir |
-| `templates/humanization-guide.md` | Anti-IA patterns + experiencia personal | Antes de escribir y revisar |
+| `templates/humanization-guide.md` | Anti-IA patterns + integridad de experiencia y fuentes | Antes de escribir y revisar |
 | `templates/comparison-template.md` | Comparativa template | Al escribir comparativas |
 | `logs/changelog.md` | Audit trail | Tras cada acción |
 
 ### Core Rules
 
-1. **Leer antes de escribir.** Siempre leer: config, features, content-map, content-queue, topic-clusters, tone-guide, humanization-guide.
+1. **Leer antes de escribir.** Siempre leer: `project_content_plan.md`, config, features, content-map, content-queue, topic-clusters, tone-guide y humanization-guide. Para elegir el siguiente artículo manda `project_content_plan.md`.
 2. **Nunca fabricar features.** Solo referenciar lo que está en features.yaml.
 3. **Las afirmaciones sobre competidores necesitan confianza.** Si "unverified" o 90+ días, matizar o redirigir al lector a la página del competidor.
 4. **No web search para SERP data.** NUNCA usar la herramienta web search nativa para investigar keywords o resultados SERP. Produce datos genéricos que llevan a contenido genérico. SIEMPRE pedir al usuario datos reales de Google SERP (top results, PAA, related searches). Única excepción: tener conectado un MCP/herramienta SEO dedicado (Semrush, Ahrefs).
 5. **Cannibalization check antes de cada blog.** Buscar en content-map por keywords solapadas. Si hay conflicto, recomendar actualizar blog existente. Solo proceder si el ángulo es genuinamente distinto.
 6. **Cada blog necesita un ángulo único.** Definir qué lo diferencia de lo que ranquea. "Más completo" NO es un ángulo.
-7. **E-E-A-T obligatorio.** Cada blog incluye al menos uno: testimonial, métrica, experiencia, o link a review desde config.trust_signals. Si config no tiene trust signals todavía, pedir uno al usuario antes de publicar.
+7. **E-E-A-T obligatorio.** Cada blog incluye al menos una señal verificable: experiencia real documentada, dato respaldado, metodología transparente o referencia a un experto real. Si no existe una señal suficiente, pedir evidencia al usuario o retirar la afirmación antes de publicar.
 8. **Revisión humana requerida.** Guardar blogs como `status: "human-review"`. Nunca autopublicar. Alertar al usuario para revisión.
 9. **Respetar linking pillar/cluster.** Cluster pages enlazan al pillar. Pillar enlaza a todos los cluster pages. No negociable.
 10. **Actualizar todos los archivos tras escribir:**
@@ -69,7 +69,7 @@ Al analizar datos SERP, clasificar el intent ANTES de decidir estructura del con
 **STEP 1: Pre-Writing Research** (sub-agents para tareas paralelas)
 
 a) Leer todos los data files
-b) Elegir tema: de queue (mayor prioridad "planned") o petición del usuario
+b) Elegir tema: primer pendiente de `project_content_plan.md` o petición explícita del usuario. No elegir desde la cola histórica de `.seo-engine`.
 c) **Cannibalization check** — escanear content-map por keywords solapadas. Si conflicto: recomendar update. Si procede: documentar por qué en queue.
 d) **SERP Analysis — REGLA CRÍTICA:**
    - **NO usar la herramienta web search built-in para SERP research.**
@@ -113,10 +113,12 @@ e) Escribir blog:
    - Secondary keywords naturales
    - FAQ desde datos People Also Ask (count variable 3-7, NO siempre 5)
    - Internal links: priorizar pillar (si cluster page), luego blogs relevantes. Anchor text variado.
-   - External links: 1-2 autoritativos (no competidores)
-   - **Humanización:** Intro variada, mín 2 inserciones de experiencia personal, pros/contras asimétricos, al menos 1 variación estructural
-   - **Contenido inventado coherente (NO preguntar al usuario):** Inventar directamente experiencias personales, feedback de lectores, anécdotas de entorno cercano y fuentes externas autoritativas. Todo debe ser coherente con la persona de config.yaml, la timeline del autor, y lo publicado en otros artículos. Ver `humanization-guide.md` sección "Contenido inventado pero coherente".
-f) **Inyectar E-E-A-T:** nombre del autor (nombre real, no marca), testimonial/métrica/experiencia de config, link a review
+   - External links: incluir fuentes autoritativas cuando respalden una afirmación concreta; verificar que existan y digan exactamente lo citado
+   - **Humanización:** Intro variada, pros/contras asimétricos y al menos 1 variación estructural. Experiencia personal solo si está documentada en `config.yaml` y `project_author_persona.md`.
+   - **Sin uso directo:** Incluir una declaración visible de limitaciones y metodología: páginas oficiales, especificaciones, documentación y patrones repetidos en reseñas verificadas.
+   - **Reseñas verificadas:** Priorizar las marcadas como compra verificada por la plataforma cuando exista esa señal; sintetizar patrones recurrentes, guardar URL y fecha de consulta en las notas, y no afirmar una cantidad salvo que se haya contado realmente.
+   - **Integridad editorial:** Nunca inventar lectores, compañeros, familiares, compras, lesiones, citas, duraciones de uso, métricas, testimonios ni fuentes. Omitir cualquier cifra o afirmación que no pueda confirmarse.
+f) **Inyectar E-E-A-T verificable:** nombre real del autor y al menos una de estas señales: experiencia documentada, dato respaldado, metodología transparente o referencia a un experto real
 
 **STEP 3: Post-Writing** (sub-agents — todos en paralelo)
 
@@ -143,7 +145,7 @@ c) **Alertar:**
 6. Competitor data freshness (90+ días)
 7. Internal linking gaps
 8. E-E-A-T gaps (has_eeat_signals: false)
-9. Humanization gaps (intros formulaicas, sin experiencia personal, listas simétricas, estructura idéntica)
+9. Humanization gaps (intros formulaicas, experiencia no verificada, metodología ausente, listas simétricas, estructura idéntica)
 10. Report + update queue + log
 
 ---
@@ -159,7 +161,7 @@ Cuando se pida evaluar, revisar, analizar o dar feedback sobre un blog (existent
    - **Keyword cannibalization:** ¿Otro blog targets la misma keyword?
    - **Feature accuracy:** ¿Todas las features mencionadas están en features.yaml?
    - **Competitor accuracy:** ¿Las afirmaciones de competidores tienen respaldo en competitors.yaml?
-   - **E-E-A-T signals:** ¿El blog incluye testimoniales, métricas, experiencia o links a reviews?
+   - **E-E-A-T signals:** ¿El blog incluye experiencia real documentada, datos verificables, metodología transparente o una referencia experta real?
    - **Cluster alignment:** ¿Es parte de un cluster? ¿Enlaza a su pillar?
    - **Internal linking:** ¿Links a al menos 2 otros blogs? ¿Anchor text variado y contextual?
    - **Unique angle:** ¿Cuál es el ángulo? ¿Genuinamente distinto de lo que ranquea?
@@ -170,7 +172,7 @@ Cuando se pida evaluar, revisar, analizar o dar feedback sobre un blog (existent
    - **SERP intent match:** ¿El formato hace match con lo que Google recompensa para esta keyword?
    - **FAQ quality:** ¿Las preguntas FAQ vienen de People Also Ask real o son genéricas?
    - **Humanización — intro:** ¿La intro es formulaica o repite el patrón de otros artículos?
-   - **Humanización — experiencia:** ¿Tiene al menos 2 inserciones de experiencia personal?
+   - **Humanización — experiencia y límites:** ¿Toda experiencia está documentada? Si no hubo uso directo, ¿declara de forma visible las limitaciones y la metodología?
    - **Humanización — asimetría:** ¿Las listas de pros/contras tienen número variable?
    - **Humanización — estructura:** ¿Sigue exactamente el esquema estándar o tiene variación?
    - **Humanización — autoría:** ¿Firma con nombre real?

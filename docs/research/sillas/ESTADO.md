@@ -1,6 +1,6 @@
 # Estado megarecopilación sillas — handoff
 
-> Documento de continuidad para retomar en otra sesión/PC. Última actualización: **2026-06-18**.
+> Documento de continuidad para retomar en otra sesión/PC. Última actualización: **2026-07-31**.
 > Plan ejecutado: `docs/superpowers/plans/2026-06-18-megarecopilacion-sillas-100-plus.md`.
 > Rama de trabajo: **`feat/megarecopilacion-sillas`** (sin push ni merge todavía).
 
@@ -10,7 +10,7 @@ Infraestructura del catálogo terminada; catálogo en **67 sillas** tras oleadas
 
 ## Decisiones tomadas por el usuario
 
-- **Amazon:** de momento **solo search fallback** (sin ASIN directo). La API Creators está inhabilitada (ver Bloqueos). No inventar ASINs.
+- **Amazon:** Creators API operativa desde la comprobación del 2026-07-31. Ya se pueden verificar ASINs, precios y disponibilidad; no inventar datos. Las fichas existentes siguen con search fallback hasta revisión explícita.
 - **Oleadas:** backlog + **una oleada piloto** (hecha, 5 fichas). No volcar 100 URLs de golpe.
 - **Hbada:** corregir specs al **modelo P5** (hecho).
 - **Imágenes:** el usuario las sube manualmente a `public/img/productos/`. Las 5 piloto ya están (webp/jpg/avif, no todas jpg).
@@ -53,9 +53,9 @@ URL de ficha: `/catalogo/silla/<slug>/`. Build = 93 páginas.
 
 ## Bloqueos (qué falta para seguir)
 
-1. **Amazon Creators API → 403 `AssociateNotEligible`.** `scripts/amazon-lookup.mjs` obtiene OAuth pero `getItems`/`searchItems` fallan (cuenta no elegible por umbral de ventas). Sin esto NO se pueden verificar ASINs/precios/disponibilidad por mercado. Mientras: fichas con **Amazon search fallback** (OneLink-routable), sin afirmar ASIN ni disponibilidad por mercado, y sin inventar ASINs (regla AGENTS.md). Reevaluar si el usuario confirma elegibilidad.
+1. **Amazon Creators API desbloqueada (2026-07-31).** Verificación real con `scripts/amazon-lookup.mjs`: `getItems` devolvió correctamente el ASIN `B0C3T865C2` con precio, disponibilidad e imagen; `searchItems` devolvió 5 resultados para `silla ergonomica`. El entorno selecciona Creators API porque las credenciales de PA-API v5 no están configuradas. Ya no aplica el antiguo `403 AssociateNotEligible`.
 2. **SERP real para hubs (Task 10).** Regla del proyecto: WebSearch/WebFetch NO valen como datos SERP. Para escribir un hub el usuario debe aportar, por keyword: top 3-5 resultados Google, PAA, búsquedas relacionadas y volúmenes Keyword Surfer. Hub recomendado para empezar: **"sillas ergonómicas personas altas"** (ya hay fichas que encajan: HERO, Series 1, Aeron talla C). Otros candidatos: malla, espalda, reposabrazos abatibles, 150 kg.
-3. **Aviso de estrategia (auditoría indexación vigente):** pausar artículos nuevos hasta señal de recovery; Task 11 condiciona escalar a que GSC indexe esta primera tanda. Meter hubs ahora puede ir contra esa decisión.
+3. **Estrategia editorial actualizada (2026-08-01):** el usuario mantiene una pareja ES+EN por semana según `docs/agent-context/project_content_plan.md`. La expansión masiva del catálogo sigue siendo una decisión separada y debe evaluarse con el estado de indexación vigente.
 
 ## Fix del filtrado (regresión que introduje en Task 3)
 
@@ -66,8 +66,8 @@ URL de ficha: `/catalogo/silla/<slug>/`. Build = 93 páginas.
 
 ## Próximos pasos posibles
 
-- **A)** Usuario aporta SERP de "personas altas" → escribir ese hub (Task 10). Choca con la pausa de indexación.
-- **B)** Seguir con **batch 2 de candidatas** (Task 6) y/o más fichas piloto research-only (sin ASIN), respetando la pausa.
+- **A)** Usuario aporta SERP de "personas altas" → valorar ese hub dentro de la cola editorial vigente.
+- **B)** Seguir con **batch 2 de candidatas** (Task 6) y/o más fichas piloto research-only (sin ASIN), sin confundir expansión de catálogo con la cadencia semanal de artículos.
 - **C)** Task 8: añadir búsqueda por texto y grupos de filtros al catálogo (no necesita datos externos) — buena mejora estructural sin riesgo de indexación.
 - **D)** Poblar `alturaRecomendadaMin/MaxCm` y otras specs nuevas en las 19 fichas existentes para que los filtros nuevos sean útiles.
 
