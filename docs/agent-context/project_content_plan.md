@@ -58,8 +58,8 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 | # | Slug ES | Slug EN | Rol | Enruta a | Estado |
 |---|---------|---------|-----|----------|--------|
 | 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 |
-| 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ✍️ borrador ES+EN en human-review |
-| 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ⬜ |
+| 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ✅ 2026-08-01 |
+| 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ✅ 2026-08-06 |
 | 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ⬜ |
 
 ### FASE 2 — Sillas (catálogo ya grande · evitar duplicar comparativas existentes)
@@ -100,19 +100,13 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 ## Cómo retomar cada semana
 
 "Vamos con el artículo de esta semana" → coger el primer slug no ✅ de la Fase activa →
-seguir el **Checklist de publicación** de arriba (empezando por pedir el SERP al usuario).
+seguir el **Checklist de publicación** de arriba. Los datos SERP se investigan con Playwright + Keyword Surfer (cambiar país en KS según idioma de la búsqueda).
 
-## Handoff 2026-08-01 — artículo #2 en revisión humana
+## Handoff 2026-08-06 — artículo #3 publicado ✅
 
-Las SERP ES y GB se investigaron con Google y Keyword Surfer (Playwright) el 2026-08-01:
+Artículo #3 `cuantas-horas-de-pie-escritorio-elevable` / `how-many-hours-standing-desk` completado y publicado 2026-08-06.
 
-- ES: `mesa escritorio elevable` 1.600, `estructura mesa elevable` 210, `patas escritorio elevable` 210, `estructura escritorio elevable` 170, `escritorio elevable sin tablero` 10. Intención comercial/transaccional.
-- GB: `standing desk legs` 1.000, `standing desk frame` 880, `sit stand desk frame` 170, `electric standing desk frame` 90, `standing desk frame only` 20. Intención comercial/transaccional.
-- Enfoque aprobado: guía híbrida que responde marco vs completo con coste total, compatibilidad y ejemplos del catálogo. Sin precios inventados, sin prueba de producto. ES+EN ≈2.100w.
-- Borrador ES+EN en human-review. Pendiente aprobación del contenido.
-
-Productos ya identificados para el artículo nuevo:
-
-- Marcos: `duronic-tm61`, `aimezo-doble-motor`, `maidesite-t1-pro`.
-- Contraste completo directo: `duronic-cd120`; ampliar solo con fichas existentes si la SERP lo justifica.
-- Ángulo personal honesto: David conoce el montaje de un tablero propio por su escritorio fijo DIY, pero no ha probado una estructura elevable.
+- SERP ES y GB investigados con Playwright + Keyword Surfer (sin pedir datos al usuario). Keywords long-tail con 0 vol, pero PAAs confirman interés real.
+- Ángulo: respuesta directa con datos + metodología honesta (David no usa standing desk). Intro variada del patrón narrativo de los artículos #1 y #2.
+- ES: ~1.829 palabras, EN: ~1.845 palabras. Imagen Pexels de mujer en standing desk (800px).
+- Próximo: artículo #4 `errores-comprar-escritorio-elevable`.
