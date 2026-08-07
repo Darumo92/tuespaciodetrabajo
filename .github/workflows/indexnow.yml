@@ -2,13 +2,17 @@ name: IndexNow
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'src/content/**'
-      - 'src/pages/**'
-      - 'src/layouts/**'
-      - 'src/components/**'
+  # PUSH TRIGGER DESACTIVADO TEMPORALMENTE (2026-08-07)
+  # Motivo: la pérdida de cache el 21 Jul disparó 420 URLs en batch mode
+  # y Bing aplicó supresión algorítmica. Recuperación en curso.
+  # Reactivar solo cuando Bing vuelva a mostrar la web.
+  # push:
+  #   branches: [main]
+  #   paths:
+  #     - 'src/content/**'
+  #     - 'src/pages/**'
+  #     - 'src/layouts/**'
+  #     - 'src/components/**'
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -27,13 +31,11 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build
-
       - name: Restore IndexNow state
         uses: actions/cache/restore@v4
         with:
           path: .indexnow-state.json
-          key: indexnow-state-${{ github.sha }}
+          key: indexnow-state
           restore-keys: |
             indexnow-state-
 
@@ -44,4 +46,4 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: .indexnow-state.json
-          key: indexnow-state-${{ github.sha }}
+          key: indexnow-state-${{ github.run_id }}
