@@ -1014,6 +1014,26 @@ articles:
       - como-elegir-escritorio-elevable
       - altura-correcta-escritorio-silla
     internal_links_from: []
+  - slug: errores-comprar-escritorio-elevable
+    title: "Errores al comprar un escritorio elevable (y cómo evitarlos)"
+    path: src/content/articulos/errores-comprar-escritorio-elevable.mdx
+    type: informativo
+    category: escritorios
+    primary_keyword: "errores comprar escritorio elevable"
+    secondary_keywords:
+      - escritorio elevable
+      - mesa elevable electrica
+      - escritorio elevable electrico
+      - comprar escritorio elevable
+    cluster: escritorios
+    status: human-review
+    date: 2026-08-16
+    has_eeat_signals: true
+    internal_links_to:
+      - como-elegir-escritorio-elevable
+      - marco-vs-escritorio-elevable-completo
+      - altura-correcta-escritorio-silla
+    internal_links_from: []
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

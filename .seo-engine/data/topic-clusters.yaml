@@ -78,7 +78,15 @@ clusters:
         title: "Estructura de escritorio elevable o mesa completa"
         keyword: "estructura escritorio elevable"
         status: human-review
-    notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio."
+      - slug: cuantas-horas-de-pie-escritorio-elevable
+        title: "Cuántas horas estar de pie en un escritorio elevable"
+        keyword: "cuantas horas de pie escritorio elevable"
+        status: published
+      - slug: errores-comprar-escritorio-elevable
+        title: "Errores al comprar un escritorio elevable (y cómo evitarlos)"
+        keyword: "errores comprar escritorio elevable"
+        status: human-review
+    notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio, errores de compra."
 
   - name: perifericos
     pillar:

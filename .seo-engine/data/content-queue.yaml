@@ -252,3 +252,12 @@ queue:
     date_planned: 2026-05-18
     date_published: 2026-05-18
     notes: "Artículo #30 recovery (cluster ambiente, estacional verano). SERP top 5: El Independiente, elEconomista, El Corte Inglés, La Vanguardia y ventiladores.com. Intent COMMERCIAL INVESTIGATION dominante con guías/listicles de producto; gap: enfoque específico para oficina en casa y videollamadas, no dormitorios/salones genéricos. Volúmenes Keyword Surfer 2026-05-18: ventilador silencioso 9900, mejor ventilador silencioso 260, ventilador de torre silencioso 1000, ventilador silencioso para dormir 1600, ventilador bajo consumo 390, ventilador para oficina 0. Productos verificados con Creators API: Philips Serie 2000, Dreo PolyFan, LEVOIT torre, Dreo torre, Cecotec EnergySilence 890, Honeywell TurboForce. Ángulo: ruido usable en llamadas, motor DC, formato para 9-12 m², caudal útil y posición respecto al micrófono. Imagen propia SVG por falta de PEXELS_API_KEY."
+
+  - slug: errores-comprar-escritorio-elevable
+    title: "Errores al comprar un escritorio elevable (y cómo evitarlos)"
+    type: informativo
+    category: escritorios
+    priority: high
+    status: human-review
+    date_created: 2026-08-16
+    notes: "Artículo #4 del plan semanal 2026 (Fase 1 escritorios). SERP ES (Keyword Surfer España 2026-08-16): 'errores comprar escritorio elevable' 0 vol long-tail; head terms 'escritorio elevable' 8100 (KD 0.96), 'mesa elevable electrica' 720, 'escritorio elevable electrico' 110. SERP EN (Keyword Surfer USA): 'standing desk buying mistakes' 0 vol; head terms 'standing desk' 165000 (KD 4.36), 'standing desk review' 720. Top ES: Suspain Técnica, Xataka, Maidesite, Reddit. Top EN: BTOD, Yo-Yo Desk, Vari, Ergo Desks, FlexiSpot UK. Gap: competidores cubren errores de USO (postura, tiempo de pie); este artículo cubre errores de COMPRA (medir, rango de altura, carga vs peso, motor, estabilidad, extras) que no se corrigen con hábito. 6 errores asimétricos + checklist. 6 FAQs (variable). Enlaza pillar, marco-vs, altura-correcta, selector y fichas (SONGMICS LSD134, FlexiSpot E7, Duronic TM61, DEVAISE 120x60). Metodología honesta: David no usa elevable (mesa fija DIY). Imagen Pexels 5691673 (Ksenia Chernaya, midiendo tablero, 800px). Borrador ES+EN en human-review."

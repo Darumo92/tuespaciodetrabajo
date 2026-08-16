@@ -38,6 +38,8 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | trabajar-desde-casa-calor | trabajar-desde-casa-calor.webp | 31517321 | Bingqian Li | https://www.pexels.com/photo/31517321/ |
 | mejor-ventilador-silencioso-oficina | mejor-ventilador-silencioso-oficina.webp | 5850340 | FOX ^.ᆽ.^= ∫ | https://www.pexels.com/photo/antique-fan-and-a-radio-on-a-desk-5850340/ |
 | marco-vs-escritorio-elevable-completo | marco-vs-escritorio-elevable-completo.webp | 4554421 | cottonbro studio | https://www.pexels.com/photo/woman-in-white-crew-neck-t-shirt-holding-red-and-white-plastic-toy-4554421/ |
+| cuantas-horas-de-pie-escritorio-elevable | cuantas-horas-de-pie-escritorio-elevable.webp | — | — | a identificar |
+| errores-comprar-escritorio-elevable | errores-comprar-escritorio-elevable.webp | 5691673 | Ksenia Chernaya | https://www.pexels.com/photo/crop-man-measuring-wooden-board-in-room-5691673/ |
 
 ---
 
