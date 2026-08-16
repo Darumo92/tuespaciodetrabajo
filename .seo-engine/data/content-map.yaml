@@ -1026,7 +1026,7 @@ articles:
       - escritorio elevable electrico
       - comprar escritorio elevable
     cluster: escritorios
-    status: human-review
+    status: published
     date: 2026-08-16
     has_eeat_signals: true
     internal_links_to:

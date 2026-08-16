@@ -60,7 +60,7 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 | 1 | `como-elegir-escritorio-elevable` | `how-to-choose-a-standing-desk` | Pillar guía compra (informativo) | comparador + fichas escritorio | ✅ 2026-07-21 |
 | 2 | `marco-vs-escritorio-elevable-completo` | `standing-desk-frame-vs-complete` | Informativo educativo | fichas marco (duronic-tm61, aimezo, maidesite-t1) vs completos | ✅ 2026-08-01 |
 | 3 | `cuantas-horas-de-pie-escritorio-elevable` | `how-many-hours-standing-desk` | Salud/rutina (informativo) | pillar #1 + fichas | ✅ 2026-08-06 |
-| 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ✍️ |
+| 4 | `errores-comprar-escritorio-elevable` | `mistakes-buying-a-standing-desk` | Informativo compra | comparador | ✅ 2026-08-16 |
 
 ### FASE 2 — Sillas (catálogo ya grande · evitar duplicar comparativas existentes)
 
@@ -102,16 +102,16 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 "Vamos con el artículo de esta semana" → coger el primer slug no ✅ de la Fase activa →
 seguir el **Checklist de publicación** de arriba. Los datos SERP se investigan con Playwright + Keyword Surfer (cambiar país en KS según idioma de la búsqueda).
 
-## Handoff 2026-08-16 — artículo #4 en borrador ✍️
+## Handoff 2026-08-16 — artículo #4 publicado ✅
 
-Artículo #4 `errores-comprar-escritorio-elevable` / `mistakes-buying-a-standing-desk` redactado (ES+EN), pendiente de revisión humana.
+Artículo #4 `errores-comprar-escritorio-elevable` / `mistakes-buying-a-standing-desk` completado y publicado 2026-08-16.
 
 - SERP investigado con Playwright + Keyword Surfer, **bandera España para ES y bandera USA para EN** (no mezclar país/idioma). Long-tail 0 vol: `errores comprar escritorio elevable` / `standing desk buying mistakes`. Head terms con volumen: `escritorio elevable` 8100 (KD 0.96), `mesa elevable electrica` 720, `escritorio elevable electrico` 110 · `standing desk` 165000 (KD 4.36), `standing desk review` 720.
 - Ángulo: los competidores (BTOD, Yo-Yo Desk, Vari, Suspain, Xataka) cubren errores de *uso*; este artículo cubre errores de *compra* que no se corrigen con hábito (medir, rango de altura, carga vs peso, motor, estabilidad, extras). 6 errores asimétricos + checklist.
 - Metodología honesta: David no usa elevable (mesa fija DIY de madera maciza + patas IKEA), declarado en la intro.
 - ES: ~1.500 palabras, EN: ~1.500 palabras. Imagen Pexels #5691673 (Ksenia Chernaya, midiendo tablero, 800px).
 - Enlaza pillar, marco-vs, altura-correcta, selector y 4 fichas (SONGMICS LSD134, FlexiSpot E7, Duronic TM61, DEVAISE 120x60).
-- Próximo: aprobación de este artículo; luego Fase 2 (sillas) con `como-elegir-silla-ergonomica`.
+- Con esto se cierra la FASE 1 (escritorios). Próximo: FASE 2 (sillas) con `como-elegir-silla-ergonomica` (pillar guía compra).
 
 ## Handoff 2026-08-06 — artículo #3 publicado ✅
 

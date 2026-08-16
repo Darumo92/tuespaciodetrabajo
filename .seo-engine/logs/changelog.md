@@ -220,3 +220,9 @@
 **Files:** src/content/articulos/errores-comprar-escritorio-elevable.mdx, src/content/articulosI18n/en/mistakes-buying-a-standing-desk.mdx, public/images/articulos/errores-comprar-escritorio-elevable.webp, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
 **Summary:** Artículo #4 del plan semanal (Fase 1 escritorios). Guía informativa sobre 6 errores de compra (medir el hueco, rango de altura vs estatura, carga del motor vs peso del equipo, motor simple vs uso real, estabilidad a altura máxima, extras innecesarios) + checklist. SERP investigado con Playwright + Keyword Surfer (bandera ES para español, bandera US para inglés): long-tail 0 vol, head terms 'escritorio elevable' 8100 / 'standing desk' 165000. Metodología honesta (David no usa elevable, mesa fija DIY). 6 FAQs. Enlaza pillar, marco-vs, altura-correcta, selector y 4 fichas de catálogo. Imagen Pexels 5691673 (Ksenia Chernaya, 800px). Status: human-review.
 **Triggered by:** user
+
+## 2026-08-16 11:30
+**Action:** Aprobación artículo #4 errores-comprar-escritorio-elevable
+**Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
+**Summary:** Usuario aprobó el artículo #4. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #4 marcada como ✅ publicado en el plan editorial. Se cierra la Fase 1 (escritorios); próximo: Fase 2 (sillas).
+**Triggered by:** user (aprobación)

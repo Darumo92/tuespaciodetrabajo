@@ -85,7 +85,7 @@ clusters:
       - slug: errores-comprar-escritorio-elevable
         title: "Errores al comprar un escritorio elevable (y cómo evitarlos)"
         keyword: "errores comprar escritorio elevable"
-        status: human-review
+        status: published
     notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio, errores de compra."
 
   - name: perifericos
