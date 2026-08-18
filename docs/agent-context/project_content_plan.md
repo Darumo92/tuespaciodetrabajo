@@ -108,7 +108,7 @@ Artículo #5 `como-elegir-silla-ergonomica` / `how-to-choose-an-ergonomic-chair`
 
 - SERP: `como elegir silla ergonómica` 0 vol · head term `silla ergonómica` 1000 (ES) · `how to choose an ergonomic chair` 40 · `ergonomic office chair` 135000 (EN).
 - Ángulo: pillar guía compra informativo (4 ajustes por orden + malla vs tapizado + reclinación sincronizada + franjas de precio). Metodología honesta: David usa Aeron.
-- ES ~1.530 palabras, EN ~1.524. Imagen Pexels 31726663 (Alpha En, 800px).
+- ES ~1.530 palabras, EN ~1.524. Imagen Pexels 4008707 (Elina Fairytale, 800px).
 - Próximo: artículo #6 `silla-ergonomica-dolor-lumbar` (Problema/salud → fichas + pillar).
 
 ## Handoff 2026-08-16 — artículo #4 publicado ✅
