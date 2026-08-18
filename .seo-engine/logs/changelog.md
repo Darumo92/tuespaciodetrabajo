@@ -226,3 +226,15 @@
 **Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
 **Summary:** Usuario aprobó el artículo #4. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #4 marcada como ✅ publicado en el plan editorial. Se cierra la Fase 1 (escritorios); próximo: Fase 2 (sillas).
 **Triggered by:** user (aprobación)
+
+## 2026-08-18 14:30
+**Action:** Blog redactado — Cómo elegir silla ergonómica (ES+EN)
+**Files:** src/content/articulos/como-elegir-silla-ergonomica.mdx, src/content/articulosI18n/en/how-to-choose-an-ergonomic-chair.mdx, public/images/articulos/como-elegir-silla-ergonomica.webp, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, .seo-engine/data/features.yaml, PRODUCTOS.md, logs/changelog.md
+**Summary:** Artículo #5 del plan semanal (Fase 2 sillas, pillar guía compra). Guía informativa sobre los 4 ajustes que deciden la compra (lumbar ajustable, profundidad de asiento, altura, reposabrazos), material malla vs tapizado, mecanismo de reclinación sincronizada, franjas de precio y checklist de compra. SERP investigado con Playwright + Keyword Surfer (bandera España para ES, bandera US para EN): 'como elegir silla ergonómica' 0 vol long-tail; head terms 'silla ergonómica' 1000 (ES) · 'ergonomic office chair' 135000 (EN). Metodología honesta (David usa Aeron; resto por specs + reseñas verificadas). 6 FAQs. Enlaza comparador, comparativas/guías y 7 fichas de catálogo. Imagen Pexels 31726663 (Alpha En, 800px). Status: human-review.
+**Triggered by:** user
+
+## 2026-08-18 14:40
+**Action:** Aprobación artículo #5 como-elegir-silla-ergonomica
+**Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
+**Summary:** Usuario aprobó el artículo #5. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #5 marcada como ✅ publicado en el plan editorial. Próximo: artículo #6 silla-ergonomica-dolor-lumbar (Fase 2, sillas).
+**Triggered by:** user (aprobación)

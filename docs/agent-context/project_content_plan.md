@@ -66,11 +66,11 @@ Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción
 
 Artículos de silla YA existentes (no duplicar): ajustar-silla-oficina, ejercicios-estiramientos-silla, silla-gaming-vs-ergonomica, mejor-silla-ergonomica-calidad-precio, mejor-silla-oficina-menos-200-euros.
 
-| # | Slug ES | Rol | Enruta a |
-|---|---------|-----|----------|
-| 5 | `como-elegir-silla-ergonomica` | Pillar guía compra | comparador + fichas silla |
-| 6 | `silla-ergonomica-dolor-lumbar` | Problema/salud | fichas + pillar |
-| 7 | `cada-cuanto-cambiar-silla-oficina` | Informativo mantenimiento | fichas |
+| # | Slug ES | Rol | Enruta a | Estado |
+|---|---------|-----|----------|--------|
+| 5 | `como-elegir-silla-ergonomica` | Pillar guía compra | comparador + fichas silla | ✅ 2026-08-18 |
+| 6 | `silla-ergonomica-dolor-lumbar` | Problema/salud | fichas + pillar | ⬜ |
+| 7 | `cada-cuanto-cambiar-silla-oficina` | Informativo mantenimiento | fichas | ⬜ |
 
 ### FASE 3+ — Periféricos y otras categorías (CUANDO existan sus fichas)
 
@@ -101,6 +101,15 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 
 "Vamos con el artículo de esta semana" → coger el primer slug no ✅ de la Fase activa →
 seguir el **Checklist de publicación** de arriba. Los datos SERP se investigan con Playwright + Keyword Surfer (cambiar país en KS según idioma de la búsqueda).
+
+## Handoff 2026-08-18 — artículo #5 publicado ✅
+
+Artículo #5 `como-elegir-silla-ergonomica` / `how-to-choose-an-ergonomic-chair` (Fase 2, sillas) aprobado y publicado.
+
+- SERP: `como elegir silla ergonómica` 0 vol · head term `silla ergonómica` 1000 (ES) · `how to choose an ergonomic chair` 40 · `ergonomic office chair` 135000 (EN).
+- Ángulo: pillar guía compra informativo (4 ajustes por orden + malla vs tapizado + reclinación sincronizada + franjas de precio). Metodología honesta: David usa Aeron.
+- ES ~1.530 palabras, EN ~1.524. Imagen Pexels 31726663 (Alpha En, 800px).
+- Próximo: artículo #6 `silla-ergonomica-dolor-lumbar` (Problema/salud → fichas + pillar).
 
 ## Handoff 2026-08-16 — artículo #4 publicado ✅
 

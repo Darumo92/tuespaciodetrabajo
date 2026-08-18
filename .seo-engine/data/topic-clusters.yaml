@@ -38,6 +38,10 @@ clusters:
         title: "Ejercicios y estiramientos en la silla de oficina: guía"
         keyword: "ejercicios en silla"
         status: published
+      - slug: como-elegir-silla-ergonomica
+        title: "Cómo elegir silla ergonómica: guía de compra 2026"
+        keyword: "como elegir silla ergonómica"
+        status: published
     notes: "Pilar comparativo. Cluster pages: comparativas específicas (gaming vs, <200€, altas, dolor), guías de uso y ergonomía."
 
   - name: escritorios

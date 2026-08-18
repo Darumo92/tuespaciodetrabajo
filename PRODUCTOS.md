@@ -40,6 +40,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | marco-vs-escritorio-elevable-completo | marco-vs-escritorio-elevable-completo.webp | 4554421 | cottonbro studio | https://www.pexels.com/photo/woman-in-white-crew-neck-t-shirt-holding-red-and-white-plastic-toy-4554421/ |
 | cuantas-horas-de-pie-escritorio-elevable | cuantas-horas-de-pie-escritorio-elevable.webp | — | — | a identificar |
 | errores-comprar-escritorio-elevable | errores-comprar-escritorio-elevable.webp | 5691673 | Ksenia Chernaya | https://www.pexels.com/photo/crop-man-measuring-wooden-board-in-room-5691673/ |
+| como-elegir-silla-ergonomica | como-elegir-silla-ergonomica.webp | 31726663 | Alpha En | https://www.pexels.com/photo/modern-home-office-with-ergonomic-chair-31726663/ |
 
 ---
 
