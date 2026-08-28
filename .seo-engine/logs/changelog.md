@@ -238,3 +238,15 @@
 **Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
 **Summary:** Usuario aprobó el artículo #5. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #5 marcada como ✅ publicado en el plan editorial. Próximo: artículo #6 silla-ergonomica-dolor-lumbar (Fase 2, sillas).
 **Triggered by:** user (aprobación)
+
+## 2026-08-28 10:15
+**Action:** Blog redactado — Silla ergonómica para el dolor lumbar (ES+EN)
+**Files:** src/content/articulos/silla-ergonomica-dolor-lumbar.mdx, src/content/articulosI18n/en/ergonomic-chair-lower-back-pain.mdx, public/images/articulos/silla-ergonomica-dolor-lumbar.webp, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, logs/changelog.md
+**Summary:** Artículo #6 del plan semanal (Fase 2 sillas, problema/salud). Guía informativa deep-dive lumbar↔silla: por qué duele la lumbar al sentarte, el soporte lumbar en altura/profundidad (fijo vs regulable vs dinámico), los otros tres ajustes que lastran (profundidad de asiento, altura de asiento/pelvis, reclinación), cuándo la silla no es el problema y un mapa de tipos de lumbar→fichas. SERP investigado con Playwright + Keyword Surfer (bandera España para ES, bandera US para EN): silla ergonómica dolor lumbar 0 vol · ergonomic chair lower back pain 2900 (KD 2.15). Metodología honesta (David usa Aeron con PostureFit SL; resto por specs + reseñas verificadas). 5 FAQs. Enlaza pillar, dolor-espalda, ajustar-silla, ejercicios, altura-correcta, comparativa, selector y 5 fichas. Imagen Pexels 7298429 (Kindel Media, 800px). Status: human-review.
+**Triggered by:** user
+
+## 2026-08-28 10:30
+**Action:** Aprobación artículo #6 silla-ergonomica-dolor-lumbar
+**Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
+**Summary:** Usuario aprobó el artículo #6. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #6 marcada como ✅ publicado en el plan editorial. Próximo: artículo #7 cada-cuanto-cambiar-silla-oficina (Fase 2, sillas).
+**Triggered by:** user (aprobación)

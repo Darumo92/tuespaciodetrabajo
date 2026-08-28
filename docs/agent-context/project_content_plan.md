@@ -69,7 +69,7 @@ Artículos de silla YA existentes (no duplicar): ajustar-silla-oficina, ejercici
 | # | Slug ES | Rol | Enruta a | Estado |
 |---|---------|-----|----------|--------|
 | 5 | `como-elegir-silla-ergonomica` | Pillar guía compra | comparador + fichas silla | ✅ 2026-08-18 |
-| 6 | `silla-ergonomica-dolor-lumbar` | Problema/salud | fichas + pillar | ⬜ |
+| 6 | `silla-ergonomica-dolor-lumbar` | Problema/salud | fichas + pillar | ✅ 2026-08-28 |
 | 7 | `cada-cuanto-cambiar-silla-oficina` | Informativo mantenimiento | fichas | ⬜ |
 
 ### FASE 3+ — Periféricos y otras categorías (CUANDO existan sus fichas)
@@ -101,6 +101,15 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 
 "Vamos con el artículo de esta semana" → coger el primer slug no ✅ de la Fase activa →
 seguir el **Checklist de publicación** de arriba. Los datos SERP se investigan con Playwright + Keyword Surfer (cambiar país en KS según idioma de la búsqueda).
+
+## Handoff 2026-08-28 — artículo #6 publicado ✅
+
+Artículo #6 `silla-ergonomica-dolor-lumbar` / `ergonomic-chair-lower-back-pain` (Fase 2, sillas) aprobado y publicado.
+
+- SERP (Playwright + Keyword Surfer, bandera España ES / bandera US EN): `silla ergonómica dolor lumbar` 0 vol · head terms `sillas ergonómicas` 18100, `silla oficina ergonómica` 8100, `silla ergonómica` 1000 · EN `ergonomic chair lower back pain` **2900 (KD 2.15)** · related `best office chair for back pain` 12100, `lumbar support for office chair` 8100, `ergonomic chair for back pain` 5400.
+- Ángulo: deep-dive lumbar↔silla (soporte lumbar en altura/profundidad: fijo vs regulable vs dinámico; los otros 3 ajustes que lastran — profundidad de asiento, altura/pelvis, reclinación; cuándo la silla no es el problema; mapa de tipos de lumbar→fichas). Diferenciado de `dolor-espalda-trabajar-casa` (general).
+- ES ~1.507 palabras, EN ~1.483. Imagen Pexels 7298429 (Kindel Media, 800px). Enlaza pillar, dolor-espalda, ajustar-silla, ejercicios, altura-correcta, comparativa, selector y 5 fichas (Aeron, SIHOO Doro C300, FlexiSpot C7, Hbada E3, Haworth Zody).
+- Próximo: artículo #7 `cada-cuanto-cambiar-silla-oficina` (Informativo mantenimiento → fichas).
 
 ## Handoff 2026-08-18 — artículo #5 publicado ✅
 

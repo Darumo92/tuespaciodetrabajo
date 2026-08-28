@@ -41,6 +41,7 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | cuantas-horas-de-pie-escritorio-elevable | cuantas-horas-de-pie-escritorio-elevable.webp | — | — | a identificar |
 | errores-comprar-escritorio-elevable | errores-comprar-escritorio-elevable.webp | 5691673 | Ksenia Chernaya | https://www.pexels.com/photo/crop-man-measuring-wooden-board-in-room-5691673/ |
 | como-elegir-silla-ergonomica | como-elegir-silla-ergonomica.webp | 4008707 | Elina Fairytale | https://www.pexels.com/photo/woman-working-from-home-4008707/ |
+| silla-ergonomica-dolor-lumbar | silla-ergonomica-dolor-lumbar.webp | 7298429 | Kindel Media | https://www.pexels.com/photo/a-man-touching-his-back-7298429/ |
 
 ---
 
