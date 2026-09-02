@@ -1081,6 +1081,28 @@ articles:
       - ejercicios-estiramientos-silla-oficina
       - mejor-silla-ergonomica-calidad-precio
     internal_links_from: []
+  - slug: cada-cuanto-cambiar-silla-oficina
+    title: "Cada cuánto cambiar la silla de oficina: vida útil y señales"
+    path: src/content/articulos/cada-cuanto-cambiar-silla-oficina.mdx
+    type: informativo
+    category: sillas
+    primary_keyword: "cada cuanto cambiar silla oficina"
+    secondary_keywords:
+      - vida util silla de oficina
+      - cuando cambiar silla de oficina
+      - cuanto dura una silla de oficina
+      - how often should you replace your office chair
+      - how long do office chairs last
+    cluster: sillas
+    status: published
+    date: 2026-09-02
+    has_eeat_signals: true
+    internal_links_to:
+      - ajustar-silla-oficina-correctamente
+      - como-elegir-silla-ergonomica
+      - ejercicios-estiramientos-silla-oficina
+      - mejor-silla-ergonomica-calidad-precio
+    internal_links_from: []
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

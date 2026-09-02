@@ -70,7 +70,7 @@ Artículos de silla YA existentes (no duplicar): ajustar-silla-oficina, ejercici
 |---|---------|-----|----------|--------|
 | 5 | `como-elegir-silla-ergonomica` | Pillar guía compra | comparador + fichas silla | ✅ 2026-08-18 |
 | 6 | `silla-ergonomica-dolor-lumbar` | Problema/salud | fichas + pillar | ✅ 2026-08-28 |
-| 7 | `cada-cuanto-cambiar-silla-oficina` | Informativo mantenimiento | fichas | ⬜ |
+| 7 | `cada-cuanto-cambiar-silla-oficina` | Informativo mantenimiento | fichas | ✅ 2026-09-02 |
 
 ### FASE 3+ — Periféricos y otras categorías (CUANDO existan sus fichas)
 

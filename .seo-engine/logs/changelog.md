@@ -250,3 +250,15 @@
 **Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
 **Summary:** Usuario aprobó el artículo #6. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #6 marcada como ✅ publicado en el plan editorial. Próximo: artículo #7 cada-cuanto-cambiar-silla-oficina (Fase 2, sillas).
 **Triggered by:** user (aprobación)
+
+## 2026-09-02 16:19
+**Action:** Blog redactado — Cada cuánto cambiar la silla de oficina (ES+EN)
+**Files:** src/content/articulos/cada-cuanto-cambiar-silla-oficina.mdx, src/content/articulosI18n/en/how-often-to-replace-office-chair.mdx, public/images/articulos/cada-cuanto-cambiar-silla-oficina.webp, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, PRODUCTOS.md, logs/changelog.md
+**Summary:** Artículo #7 del plan semanal (Fase 2 sillas, informativo mantenimiento → fichas). Guía informativa con ángulo "la vida útil no se mide en años sino por componente": garantía como proxy (3/5/10/12 años), por qué "5-10 años" engaña, tabla de desgaste por pieza (asiento, pistón de gas, ruedas, reposabrazos, mecanismo, base), regla reparar vs reemplazar, mantenimiento y franjas de precio. SERP investigado con Playwright + Keyword Surfer (bandera España para ES, bandera US para EN): 'cada cuanto cambiar silla oficina' 0 vol · 'how often should you replace your office chair' 40 (KD 0) · 'how long do office chairs last' 260 (KD 21.36). Metodología honesta (David usa Aeron con 12 años de garantía como vara de medir; resto por specs + reseñas verificadas). 6 FAQs. Enlaza ajustar-silla, como-elegir-silla, ejercicios, comparativa calidad-precio, selector y 7 fichas (Aeron, Zody, Steelcase Leap V2, FlexiSpot C7, Hbada E3, SIHOO Doro C300, IKEA MARKUS). Imagen Pexels 9381641 (Erik Mclean, tapizado rasgado, 800px). Status: human-review.
+**Triggered by:** user
+
+## 2026-09-02 16:25
+**Action:** Aprobación artículo #7 cada-cuanto-cambiar-silla-oficina
+**Files:** content-map.yaml, content-queue.yaml, topic-clusters.yaml, project_content_plan.md, logs/changelog.md
+**Summary:** Usuario aprobó el artículo #7. Estado cambiado de human-review a published en content-map, content-queue y topic-clusters. Fila #7 marcada como ✅ publicado en el plan editorial. Commit y push. Próximo: Fase 3 periféricos cuando existan sus catálogos.
+**Triggered by:** user (aprobación)
