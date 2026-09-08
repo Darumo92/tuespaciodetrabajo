@@ -528,6 +528,7 @@ articles:
     date: 2026-04-03
     has_eeat_signals: true
     internal_links_to:
+      - como-elegir-escritorio-estudiar
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
       - dolor-cervicales-ordenador
@@ -538,6 +539,7 @@ articles:
       - standing-desk-merece-la-pena
       - tunel-carpiano-teletrabajo-prevencion
     internal_links_from:
+      - como-elegir-escritorio-estudiar
       - ajustar-silla-oficina-correctamente
       - calculadora-ergonomia
       - dolor-cervicales-ordenador
@@ -686,6 +688,7 @@ articles:
     date: 2026-04-07
     has_eeat_signals: true
     internal_links_to:
+      - como-elegir-escritorio-estudiar
       - altura-correcta-escritorio-silla
       - home-office-productivo-500-euros
       - insonorizar-home-office
@@ -696,6 +699,7 @@ articles:
       - productividad-en-casa-entorno-fisico
       - standing-desk-merece-la-pena
     internal_links_from:
+      - como-elegir-escritorio-estudiar
       - guia-completa-home-office
       - home-office-productivo-500-euros
       - insonorizar-home-office
@@ -1103,6 +1107,42 @@ articles:
       - ejercicios-estiramientos-silla-oficina
       - mejor-silla-ergonomica-calidad-precio
     internal_links_from: []
+  - slug: como-elegir-escritorio-elevable
+    title: "Cómo elegir un escritorio elevable en 2026: altura, motor, carga y errores"
+    path: src/content/articulos/como-elegir-escritorio-elevable.mdx
+    type: informativo
+    category: escritorios
+    primary_keyword: "como elegir escritorio elevable"
+    cluster: escritorios-guia-compra
+    internal_links_to:
+      - como-elegir-escritorio-estudiar
+    internal_links_from:
+      - como-elegir-escritorio-estudiar
+    notes: "Pillar existente del plan editorial; registro parcial de enlaces limitado al nuevo borrador ES+EN. No se modifica su estado editorial ni su fecha. Traducción: how-to-choose-a-standing-desk."
+  - slug: como-elegir-escritorio-estudiar
+    title: "Cómo elegir un escritorio para estudiar en casa"
+    path: src/content/articulos/como-elegir-escritorio-estudiar.mdx
+    type: informativo
+    category: escritorios
+    primary_keyword: "cómo elegir un escritorio para estudiar"
+    secondary_keywords:
+      - medidas escritorio para estudiar
+      - medidas mesa estudio
+      - how to choose a study desk
+      - study desk dimensions
+    cluster: escritorios-guia-compra
+    status: published
+    date: 2026-09-08
+    has_eeat_signals: true
+    internal_links_to:
+      - altura-correcta-escritorio-silla
+      - home-office-piso-pequeno
+      - como-elegir-escritorio-elevable
+    internal_links_from:
+      - altura-correcta-escritorio-silla
+      - home-office-piso-pequeno
+      - como-elegir-escritorio-elevable
+    notes: "Publicación bilingüe aprobada por el usuario el 2026-09-08 para subir a main; EN: src/content/articulosI18n/en/how-to-choose-a-study-desk.mdx, URL /en/guides/how-to-choose-a-study-desk/. Grafo de artículos con identificador ES compartido por traducciones. Señal documentada: mesa fija de madera maciza con patas IKEA; fuentes INSST, HSE y OSHA. Sin precios, reseñas ni pruebas de modelos."
 tools:
   - slug: calculadora-ergonomia
     title: "Calculadora de ergonomía: altura silla y escritorio"

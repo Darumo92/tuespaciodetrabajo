@@ -95,6 +95,16 @@ guía-embudo enlazando el futuro catálogo, no crear duplicados.
 - Vuelta al cole/oficina (finales agosto-septiembre): setup teletrabajo, escritorio estudiante.
 - Productividad/salud TOFU que enlace clusters (pausas activas, ergonomía guía definitiva).
 
+### Semana 2026-09-07 a 2026-09-13 — publicación aprobada
+
+- **Tema:** cómo elegir un escritorio para estudiar en casa. Aprobado por el usuario el 2026-09-07 como artículo de esta semana, ES+EN.
+- **Estado:** ES+EN aprobados por el usuario el 2026-09-08 con petición expresa de subir a `main`. Fecha de publicación 2026-09-08, estado editorial `published` para esta entrega. SERP y 14 volúmenes recogidos el 2026-09-07. [Evidencia y fuentes](research_escritorio_estudiar_serp_2026_09_07.md). Confirmar despliegue remoto tras push.
+- **Enfoque propuesto:** universitarios y adultos que combinan estudio y teletrabajo; espacio para portátil y apuntes, fondo útil, hueco para piernas y cuándo compensa una mesa elevable. No otra guía general de compra de elevables ni una lista de productos.
+- **Encaje:** intercalación estacional de septiembre que aprovecha las fichas de escritorios existentes. Fases 1 y 2 completadas; Fase 3 sigue condicionada a crear los catálogos de periféricos.
+- **Artículos:** `como-elegir-escritorio-estudiar` / `how-to-choose-a-study-desk`. Fuentes INSST, OSHA y HSE; método doméstico de distribución con límites explícitos. Imagen Pexels 5185082, cottonbro studio, 800 x 533 px. Enlaces recíprocos ES+EN desde altura-correcta, piso-pequeno y guía de compra elevables.
+- **QA:** 1935/1959 palabras ES/EN; humanizer y revisión independiente con corrección de borde real en el ensayo. `npm run build` OK (437 páginas); ES/EN HTTP 200 en preview, sin desbordamiento a 390/1440 px; imagen cargada, 5 FAQs por idioma, enlaces internos HTTP 200 y canonical/hreflang/BreadcrumbList verificados. YAML del engine válido. Clarity bloqueado por el cliente del navegador, ajeno al artículo.
+- **Siguiente semana:** Fase 3 sigue condicionada al catálogo de periféricos; decidir tema compatible con el catálogo existente o crear primero el de ratones. No duplicar este artículo. Long-tail ES/EN 0; `escritorio para estudiar` 210 ES y `study desk` 6600 US son comerciales; `study desk dimensions` 30 US es informativa.
+
 ---
 
 ## Cómo retomar cada semana

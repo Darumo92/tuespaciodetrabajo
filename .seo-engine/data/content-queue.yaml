@@ -1,8 +1,19 @@
 # Prioritized content ideas
-# Status: planned | in-progress | published | rejected
+# Status: planned | in-progress | human-review | published | rejected
 # Inventario histórico hasta mayo de 2026. No usar para elegir el siguiente artículo.
 # Cola vigente: docs/agent-context/project_content_plan.md
 queue:
+  - slug: como-elegir-escritorio-estudiar
+    title: "Cómo elegir un escritorio para estudiar en casa"
+    type: informativo
+    category: escritorios
+    priority: high
+    status: published
+    date_created: 2026-09-08
+    date_published: 2026-09-08
+    approval: "Usuario aprueba ES+EN y solicita subir a main el 2026-09-08; sustituye la revisión pendiente descrita en las notas de redacción."
+    notes: "Tema semanal aprobado, publicación pendiente de revisión humana. Borradores ES /guias/como-elegir-escritorio-estudiar/ y EN /en/guides/how-to-choose-a-study-desk/ (src/content/articulosI18n/en/how-to-choose-a-study-desk.mdx). Cuerpo 1935/1959 palabras ES/EN, paridad 101.2%; humanizados y QA local completado el 2026-09-08. Investigación Keyword Surfer 2026-09-07: long-tail ES/EN 0; escritorio para estudiar 210 ES, mesa de estudio 2900 ES y study desk 6600 US son comerciales, no volumen de la guía; study desk dimensions 30 US es informativa. KD desconocida. Ángulo: superficie útil para portátil y apuntes, ancho frente a fondo y prueba de distribución. No duplica compra técnica de elevables, ajuste de alturas ni distribución de la habitación. Pillar informativo: como-elegir-escritorio-elevable; enlaces bidireccionales con ese pillar, altura-correcta-escritorio-silla y home-office-piso-pequeno en ES+EN. Experiencia limitada a mesa fija de madera maciza con patas IKEA; fuentes INSST/HSE/OSHA; sin precios, reseñas ni pruebas de modelos."
+
   - slug: mi-setup-home-office-2026
     title: "Mi setup de home office 2026: qué uso y por qué"
     type: informativo
@@ -273,7 +284,7 @@ queue:
     date_published: 2026-08-18
     notes: "Artículo #5 del plan semanal 2026 (Fase 2 sillas, pillar guía compra). SERP ES (Keyword Surfer España 2026-08-18): 'como elegir silla ergonómica' 0 vol long-tail; head term 'silla ergonómica' 1000; variantes 'silla ergonomica escritorio' 170, 'silla oficina ergonómica' 140, 'ergonómica silla' 480. SERP EN (Keyword Surfer USA): 'how to choose an ergonomic chair' 40 vol; head term 'ergonomic office chair' 135000, 'ergonomic chairs' 49500. Top ES: Ofiprix, Leroy Merlin, Reddit r/OfficeChairs, Manutan, Deskidea, ACTIU, Leitz, PcComponentes, Xataka. Top EN: Reddit, safety.pitt.edu, Steelcase, Office Depot, Wired, Forbes, spine-health. Gap: competidores dan checklists genéricos de features; este artículo prioriza 4 ajustes por orden (lumbar, profundidad de asiento, altura, reposabrazos), malla vs tapizado, reclinación sincronizada y franjas de precio con qué se gana/pierde. 6 FAQs (variable). Enlaza selector, mejor-silla-ergonomica-calidad-precio, mejor-silla-oficina-menos-200-euros, silla-gaming-vs-ergonomica, ajustar-silla, altura-correcta y 7 fichas (Aeron, SIHOO Doro C300, FlexiSpot C7, IKEA MARKUS, Steelcase Series 1/Please, Humanscale Freedom). Metodología honesta: David usa Aeron; resto por specs + reseñas verificadas. Imagen Pexels 4008707 (Elina Fairytale, 800px). Borrador ES+EN en human-review."
 
-  -     slug: silla-ergonomica-dolor-lumbar
+  - slug: silla-ergonomica-dolor-lumbar
     title: "Silla ergonómica para el dolor lumbar: qué ajustes importan"
     type: informativo
     category: sillas

@@ -100,6 +100,18 @@ clusters:
         status: published
     notes: "Pilar comparativo. Cluster pages: experiencia standing desk, presupuesto, vs específicos, formatos de escritorio, errores de compra."
 
+  - name: escritorios-guia-compra
+    pillar:
+      slug: como-elegir-escritorio-elevable
+      title: "Cómo elegir un escritorio elevable en 2026: altura, motor, carga y errores"
+      keyword: "como elegir escritorio elevable"
+    cluster_pages:
+      - slug: como-elegir-escritorio-estudiar
+        title: "Cómo elegir un escritorio para estudiar en casa"
+        keyword: "cómo elegir un escritorio para estudiar"
+        status: published
+    notes: "Cluster informativo según el pillar del plan editorial vigente; no sustituye ni reorganiza el cluster comparativo histórico escritorios. Artículo ES+EN aprobado el 2026-09-08 con enlace bidireccional al pillar. EN: how-to-choose-a-standing-desk ↔ how-to-choose-a-study-desk."
+
   - name: perifericos
     pillar:
       slug: mejor-teclado-ergonomico

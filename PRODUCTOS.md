@@ -43,6 +43,9 @@ Registro de fotos hero para evitar imágenes repetidas entre artículos.
 | como-elegir-silla-ergonomica | como-elegir-silla-ergonomica.webp | 4008707 | Elina Fairytale | https://www.pexels.com/photo/woman-working-from-home-4008707/ |
 | silla-ergonomica-dolor-lumbar | silla-ergonomica-dolor-lumbar.webp | 7298429 | Kindel Media | https://www.pexels.com/photo/a-man-touching-his-back-7298429/ |
 | cada-cuanto-cambiar-silla-oficina | cada-cuanto-cambiar-silla-oficina.webp | 9381641 | Erik Mclean | https://www.pexels.com/photo/red-leather-chair-with-ripped-upholstery-9381641/ |
+| como-elegir-escritorio-estudiar | como-elegir-escritorio-estudiar.webp | 5185082 | cottonbro studio | https://www.pexels.com/photo/person-writing-on-a-notebook-5185082/ |
+
+Guía ES+EN `como-elegir-escritorio-estudiar` (borrador 2026-09-08): fotografía ilustrativa compartida, WebP 800 x 533 px, verificada visualmente. Sin ASINs nuevos ni enlaces afiliados directos. Las fichas DEVAISE 120x60 y SONGMICS LSD134 se enlazan únicamente como ejemplos de dimensiones recogidas en julio de 2026; no se han actualizado precios ni disponibilidad.
 
 ---
 

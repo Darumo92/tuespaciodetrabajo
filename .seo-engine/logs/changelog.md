@@ -1,5 +1,29 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-09-08
+**Action:** Aprobación de publicación ES+EN de escritorio para estudiar
+**Files:** .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, docs/agent-context/project_content_plan.md, docs/agent-context/INDEX.md
+**Summary:** El usuario aprueba ambos artículos y autoriza commit y push a main. Fecha real 2026-09-08 conservada en ambos MDX. Registros editoriales pasan a published para la entrega; comprobar despliegue después del push. Excluir cambios ajenos en los estados de backlinks y recovery.
+**Triggered by:** user (puedes subir a main tienes mi aprobación)
+
+## 2026-09-08
+**Action:** Borrador semanal ES+EN: elegir un escritorio para estudiar
+**Files:** src/content/articulos/como-elegir-escritorio-estudiar.mdx, src/content/articulosI18n/en/how-to-choose-a-study-desk.mdx, public/images/articulos/como-elegir-escritorio-estudiar.webp, seis MDX de guías con enlaces recíprocos (alturas, piso pequeño y compra de elevables ES+EN), .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/features.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, PRODUCTOS.md, docs/agent-context/project_content_plan.md, docs/agent-context/INDEX.md, docs/agent-context/research_escritorio_estudiar_serp_2026_09_07.md
+**Summary:** Cuerpos ES 1935 palabras / EN 1959 (101.2%), cinco FAQs por idioma y cuatro fuentes oficiales (INSST/HSE/OSHA). Enfoque práctico en superficie útil para material abierto, con ensayo doméstico y límites explícitos. Humanizer y revisión independiente completados; aclarado que el rectángulo de prueba se alinea con el borde real. Imagen Pexels 5185082 de cottonbro studio, WebP 800x533, verificada y acreditada. Sin precios ni ASINs nuevos; dos fichas elevables sólo como ejemplos documentados. Corregida indentación preexistente de la entrada lumbar para validar toda la cola YAML, sin cambiar su contenido. Build final OK, 437 páginas; preview ES/EN HTTP 200 en móvil/escritorio, enlaces internos válidos, canonical/hreflang/BreadcrumbList correctos e imagen cargada. Clarity bloqueado por el cliente en preview; no se valida analítica. Estado human-review, sin commit ni deploy. Fecha real de creación 2026-09-08; revisar si se publica otro día.
+**Triggered by:** user (seguir con el artículo semanal aprobado)
+
+## 2026-09-07
+**Action:** Investigación SERP ES+EN con Playwright y Keyword Surfer
+**Files:** .seo-engine/data/seo-keywords.csv, docs/agent-context/research_escritorio_estudiar_serp_2026_09_07.md, docs/agent-context/project_content_plan.md, docs/agent-context/INDEX.md
+**Summary:** Recogidos 14 volúmenes con banderas ES/US verificadas, top orgánicos y PAA. Formato de guía validado para consultas de elección; términos principales de producto transaccionales. Oportunidad secundaria EN en study desk dimensions (30). Sin KD inventada ni volumen comercial atribuido a la guía. Bandera restaurada a España. Pendiente investigación de fuentes y redacción.
+**Triggered by:** user (investigar con Playwright y cambiar bandera de Keyword Surfer)
+
+## 2026-09-07
+**Action:** Tema semanal aprobado: escritorio para estudiar en casa
+**Files:** docs/agent-context/project_content_plan.md, docs/agent-context/INDEX.md
+**Summary:** El usuario aprueba intercalar una guía estacional ES+EN para la semana del 7 al 13 de septiembre. Enfoque propuesto en estudiantes universitarios y adultos que combinan estudio y teletrabajo, aprovechando el catálogo de escritorios. Pendiente de datos SERP antes de cerrar keywords, slugs y estructura; no se ha redactado ni aprobado publicación.
+**Triggered by:** user
+
 ## 2026-08-01
 **Action:** Borrador ES+EN — estructura elevable frente a escritorio completo (plan semanal #2)
 **Files:** src/content/articulos/marco-vs-escritorio-elevable-completo.mdx, src/content/articulosI18n/en/standing-desk-frame-vs-complete.mdx, public/images/articulos/marco-vs-escritorio-elevable-completo.webp, .seo-engine/data/features.yaml, .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, .seo-engine/data/seo-keywords.csv, .seo-engine/templates/humanization-guide.md, .seo-engine/templates/tone-guide.md, .seo-engine/templates/blog-structures.yaml, docs/agent-context/reference_seo_workflows.md, docs/agent-context/reference_article_checklists.md, PRODUCTOS.md

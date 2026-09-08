@@ -33,6 +33,7 @@ features:
     blog_refs:
       - ergonomia-teletrabajo-postura-correcta
       - dolor-espalda-trabajar-casa
+      - como-elegir-escritorio-estudiar
 
   - id: salud-visual
     name: "Salud visual y fatiga ocular"

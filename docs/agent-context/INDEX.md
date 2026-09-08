@@ -18,7 +18,8 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 
 ## Estado de proyectos activos
 
-- [Plan editorial vigente](project_content_plan.md) — Única cola de artículos nuevos: 1 artículo bilingüe ES+EN por semana. Reafirmado por el usuario el 01 ago 2026.
+- [Plan editorial vigente](project_content_plan.md) — Única cola de artículos nuevos: 1 artículo bilingüe ES+EN por semana. Escritorio para estudiar: publicación ES+EN aprobada el 08 sep para main, con QA local completo.
+- [SERP escritorio para estudiar](research_escritorio_estudiar_serp_2026_09_07.md) — Google + Keyword Surfer ES/US del 07 sep: 14 volúmenes, resultados, PAA, intención y enfoque propuesto.
 - [Estado recovery e indexación](project_recovery_session_state.md) — Handoff cronológico vigente para Google, Bing e IndexNow. Consultar este archivo, no los planes recovery históricos.
 - [Plan backlinks Tier 1](project_backlinks_plan.md) — Para "vamos con el plan de backlinks".
 - [Estado sesión backlinks](project_backlinks_session_state.md) — Actualizado 27 may: karma Reddit 24; 3 comentarios de warmup sin link publicados y visibles en RSS.
