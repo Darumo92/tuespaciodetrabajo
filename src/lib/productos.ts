@@ -73,6 +73,8 @@ export interface Producto {
     enriquecidoEn: string | null;
   };
   en?: {
+    metodologia?: string[];
+    limitaciones?: string[];
     nombreComercial?: string;
     tituloCorto?: string;
     veredicto?: string;
@@ -174,6 +176,8 @@ export function formatoSpec(valor: unknown, formato?: string, locale: Locale = D
     bambu: 'bamboo',
   };
   switch (formato) {
+    case 'mm': return `${valor} mm`;
+    case 'g': return `${valor} g`;
     case 'kg': return `${valor} kg`;
     case 'grados': return `${valor}°`;
     case 'anios': return isEnglish ? `${valor} year${Number(valor) === 1 ? '' : 's'}` : `${valor} años`;
@@ -184,11 +188,17 @@ export function formatoSpec(valor: unknown, formato?: string, locale: Locale = D
 
 const ETIQUETAS: Record<Locale | 'fallback', Record<string, Record<string, string>>> = {
   'es-ES': {
+    formato: { vertical: 'Vertical', convencional: 'Convencional' },
+    mano: { derecha: 'Derecha', izquierda: 'Izquierda', ambas: 'Ambas' },
+    alimentacion: { aa: 'Pila AA', bateria: 'Batería recargable' },
     lumbar: { fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura', dinamico: 'Dinámico autoajustable', '5d': '5D ajustable' },
     reposabrazos: { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' },
     respaldo: { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' },
   },
   en: {
+    formato: { vertical: 'Vertical', convencional: 'Conventional' },
+    mano: { derecha: 'Right', izquierda: 'Left', ambas: 'Both' },
+    alimentacion: { aa: 'AA battery', bateria: 'Rechargeable battery' },
     lumbar: { fijo: 'Fixed', presion: 'Pressure-adjustable', altura: 'Height-adjustable', dinamico: 'Dynamic self-adjusting', '5d': 'Adjustable 5D' },
     reposabrazos: { ninguno: 'None', fijo: 'Fixed', '1d': '1D height', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Flip-up' },
     respaldo: { malla: 'Mesh', espuma: 'Foam', mixto: 'Mesh + cushion' },
@@ -430,7 +440,8 @@ export type ParVs = [string, string];
  * para URLs estables. Limita a `max` pares.
  */
 export function seleccionarParesVs(productos: Producto[], max: number): ParVs[] {
-  const ordenados = [...productos].sort((a, b) => (b.valoracion ?? 0) - (a.valoracion ?? 0));
+  const ordenados = productos.filter(p => getTipoConfig(p.tipo)?.paresAutomaticos !== false)
+    .sort((a, b) => (b.valoracion ?? 0) - (a.valoracion ?? 0));
   const pares: ParVs[] = [];
   const vistos = new Set<string>();
   for (let i = 0; i < ordenados.length; i++) {
@@ -458,7 +469,7 @@ export interface EntradaIndice {
   url: string;
 }
 
-const EN_TIPO_SLUG: Record<string, string> = { silla: 'chairs', escritorio: 'standing-desks' };
+const EN_TIPO_SLUG: Record<string, string> = { silla: 'chairs', escritorio: 'standing-desks', raton: 'mice' };
 const EN_TIPO_SLUG_REVERSE: Record<string, string> = Object.fromEntries(
   Object.entries(EN_TIPO_SLUG).map(([es, en]) => [en, es]),
 );

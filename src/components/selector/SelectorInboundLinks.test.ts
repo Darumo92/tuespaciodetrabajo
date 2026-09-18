@@ -45,8 +45,8 @@ describe('selector inbound link source contracts', () => {
 
     const catalog = read('components/producto/CatalogoProductos.astro');
     const cta = read('components/selector/SelectorCta.astro');
-    expect(cta).toContain('Recomendador de sillas y escritorios');
-    expect(cta).toContain('Chair & standing desk finder');
+    expect(cta).toContain('Recomendador de sillas, escritorios y ratones');
+    expect(cta).toContain('Chair, desk & mouse finder');
     expect(catalog).toContain('resolveEligibleSelectorConfig');
     expect(catalog).toContain('selectorConfig && <SelectorCta');
     expect(catalog).toContain('tipo={tipo}');
@@ -56,9 +56,9 @@ describe('selector inbound link source contracts', () => {
     const esTools = read('pages/herramientas/index.astro');
     const enTools = read('pages/[locale]/tools/index.astro');
     expect(esTools).toContain("localizedPath('es-ES', ['herramientas', 'selector'])");
-    expect(esTools).toContain('Recomendador de sillas y escritorios');
+    expect(esTools).toContain('Recomendador de sillas, escritorios y ratones');
     expect(enTools).toContain("localizedPath(locale, ['tools', 'selector'])");
-    expect(enTools).toContain('Chair & standing desk finder');
+    expect(enTools).toContain('Chair, desk & mouse finder');
   });
 
   it('uses the same simple tool-card layout in Spanish and English', () => {

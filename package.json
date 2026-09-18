@@ -11,7 +11,8 @@
     "update:amazon-cache": "node scripts/update-amazon-cache.mjs",
     "validate:productos": "node scripts/validate-productos.mjs",
     "validate:offers": "node scripts/validate-product-offers.mjs",
-    "validate:selector-build": "node scripts/validate-selector-build.mjs"
+    "validate:selector-build": "node scripts/validate-selector-build.mjs",
+    "validate:ratones-build": "node scripts/validate-ratones-build.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.0",

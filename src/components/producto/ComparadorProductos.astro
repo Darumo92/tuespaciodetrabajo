@@ -1,5 +1,6 @@
 ---
 import { getTipoConfig } from '@/lib/tipos';
+import { mouseLabelsEn } from '@/lib/tipos-raton';
 import { catalogPath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
@@ -8,6 +9,7 @@ const { productos, tipo, locale = DEFAULT_LOCALE } = Astro.props;
 const isEn = locale === 'en';
 const cfg = getTipoConfig(tipo)!;
 const labelMap: Record<string, string> = {
+  ...mouseLabelsEn,
   'Valoración por ejes': 'Category scores',
   'Precio y garantía': 'Price and warranty',
   'Construcción': 'Build',
@@ -110,9 +112,10 @@ const datos = JSON.stringify({
       function celda(p: Producto, campo: string): string {
         const v = getCampo(p, campo);
         if (campo === 'tramoPrecio') return tramoTexto(Number(v), currentLocale);
-        if (ENUM.has(campo) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v, currentLocale);
+        if ((ENUM.has(campo) || ['specs.formato', 'specs.mano', 'specs.alimentacion'].includes(campo)) && typeof v === 'string') return etiquetaEnum(campo.split('.').pop()!, v, currentLocale);
+        if (typeof v === 'boolean') return formatoSpec(v, 'bool', currentLocale);
         if (campo.startsWith('valoraciones.')) return v == null ? `<span class="cmp-nd">${isEn ? 'not rated' : 'sin valorar'}</span>` : `<b>${Number(v).toFixed(1)}</b>`;
-        const fmt = campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
+        const fmt = campo.endsWith('Mm') ? 'mm' : campo.endsWith('pesoG') ? 'g' : campo.includes('garantia') ? 'anios' : campo.includes('peso') ? 'kg' : campo.includes('reclin') ? 'grados' : undefined;
         return v == null ? `<span class="cmp-nd">${isEn ? 'n/a' : 'n/d'}</span>` : formatoSpec(v, fmt, currentLocale);
       }
       const head = sel.map((p) => {

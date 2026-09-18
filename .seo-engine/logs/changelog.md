@@ -1,5 +1,17 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-09-18
+**Action:** Catálogo de ratones implementado (primer lote)
+**Files:** src/content/config.ts, src/lib/tipos.ts, src/lib/tipos-raton.ts, src/lib/productos.ts, src/lib/selector/config-ratones.ts, 5× src/content/productos/*.yaml, componentes de ficha/catálogo/comparador, páginas de catálogo/selector/tools, comparativa ES+EN, scripts/validate-ratones-build.mjs, tests
+**Summary:** Tipo `raton` añadido con ruta EN `mice`, schema y filtros propios, sin valoraciones numéricas ni pares automáticos (paresAutomaticos:false). Cinco fichas ES+EN con ASINs verificados en Amazon.es (Lift, MX Vertical, MX Master 4, M650, MAYA X). Selector ampliado a ratones con lateralidad/formato/conexión/prioridad y avisos de incompatibilidad. Comparativa vertical ES+EN corregida (relatos no documentados retirados; DPI ProtoArc y pilas Anker corregidos). 473 pruebas pasan; build 451 páginas con 12 URLs indexables de catálogo y 2 comparadores noindex. Verificación local completa. Sin commit ni push.
+**Triggered by:** user (empezar el siguiente catálogo)
+
+## 2026-09-17
+**Action:** Investigación del primer lote de catálogo de ratones
+**Files:** docs/agent-context/project_ratones_catalog_state.md, docs/agent-context/INDEX.md
+**Summary:** Usuario aprueba abrir catálogo con cinco productos. Verificados candidatos Lift, MX Vertical, MX Master 4, MAYA X y M650 en Amazon.es mediante navegador tras 403 AssociateNotEligible de Creators API. Detectados generación automática de pares y afirmaciones no respaldadas en comparativa antigua; propuesta de doce URLs indexables de catálogo ES+EN, dos herramientas noindex y cero pares nuevos. Consulta GSC confirma guía reciente rastreada sin indexar y M57 desconocida. Investigación guardada, implementación y publicación pendientes.
+**Triggered by:** user
+
 ## 2026-09-08
 **Action:** Aprobación de publicación ES+EN de escritorio para estudiar
 **Files:** .seo-engine/data/content-map.yaml, .seo-engine/data/content-queue.yaml, .seo-engine/data/topic-clusters.yaml, docs/agent-context/project_content_plan.md, docs/agent-context/INDEX.md

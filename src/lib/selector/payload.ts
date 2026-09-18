@@ -54,7 +54,7 @@ export function projectSelectorProduct<Locale extends SelectorLocale>(
     valoraciones: product.valoraciones,
     ...(localizedVerdict ? { veredicto: localizedVerdict } : {}),
     idealPara: isEn ? product.en?.idealPara : product.idealPara,
-    limitaciones: isEn ? [] : product.limitaciones ?? [],
+    limitaciones: isEn ? product.en?.limitaciones ?? [] : product.limitaciones ?? [],
     paraQuienSi: isEn ? product.en?.paraQuienSi ?? [] : product.paraQuienSi,
     paraQuienNo: isEn ? product.en?.paraQuienNo ?? [] : product.paraQuienNo,
     puntosFuertes: isEn ? product.en?.puntosFuertes ?? [] : product.puntosFuertes,

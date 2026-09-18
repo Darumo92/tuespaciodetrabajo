@@ -1,4 +1,6 @@
-export type ClaveTipo = 'silla' | 'escritorio';
+import { raton } from './tipos-raton';
+
+export type ClaveTipo = 'silla' | 'escritorio' | 'raton';
 
 export interface EjeConfig { clave: string; etiqueta: string; }
 
@@ -71,6 +73,7 @@ export interface EnLabels {
 }
 
 export interface TipoConfig {
+  paresAutomaticos?: boolean;
   slug: ClaveTipo;
   labelSingular: string;
   labelPlural: string;
@@ -298,8 +301,8 @@ const escritorio: TipoConfig = {
   ],
 };
 
-export const TIPOS: Record<ClaveTipo, TipoConfig> = { silla, escritorio };
-export const TIPOS_CON_DATOS: ClaveTipo[] = ['silla', 'escritorio'];
+export const TIPOS: Record<ClaveTipo, TipoConfig> = { silla, escritorio, raton };
+export const TIPOS_CON_DATOS: ClaveTipo[] = ['silla', 'escritorio', 'raton'];
 
 export function getTipoConfig(slug: string): TipoConfig | undefined {
   return (TIPOS as Record<string, TipoConfig>)[slug];

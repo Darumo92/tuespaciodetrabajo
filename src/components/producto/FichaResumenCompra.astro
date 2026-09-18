@@ -25,8 +25,8 @@ const warranty = p.specs?.garantiaAnios ? `${p.specs.garantiaAnios}-year warrant
             ? <p><strong>Avoid if</strong><span>{p.en.resumenCompra.evitarSi}</span></p>
             : <p><strong>Check before buying</strong><span>Confirm current price, stock, size and return policy on the retailer page.</span></p>}
           {p.en?.resumenCompra?.alternativaDirecta && <p><strong>Direct alternative</strong><span>{p.en.resumenCompra.alternativaDirecta}</span></p>}
-          <p><strong>Verified capacity</strong><span>{support}</span></p>
-          <p><strong>Warranty</strong><span>{warranty}</span></p>
+           {p.tipo !== 'raton' && <><p><strong>Verified capacity</strong><span>{support}</span></p><p><strong>Warranty</strong><span>{warranty}</span></p></>}
+           {p.en?.limitaciones?.length ? <p><strong>Verified limitations</strong><span>{p.en.limitaciones.join(' · ')}</span></p> : null}
         </>
       ) : (
         <>

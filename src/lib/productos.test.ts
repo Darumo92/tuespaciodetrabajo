@@ -12,6 +12,8 @@ import {
   productPath,
   comparePath,
   localizedTipoSlug,
+  sourceTipoSlug,
+  catalogPath,
   localizedProductMeta,
   reposabrazosNivel,
   buildAmazonHref,
@@ -42,6 +44,20 @@ const base = (over: Partial<Producto> = {}): Producto => ({
   tramoPrecio: 2, precioMin: null, precioMax: null, valoracion: 4, valoraciones: VACIOS,
   amazon: { asin: null, buscar: null }, webOficial: null, paraQuienSi: [], paraQuienNo: [],
   puntosFuertes: [], puntosDebiles: [], fuenteSpecs: 'x', specs: { tipo: 'silla', garantiaAnios: 3 } as any, ...over,
+});
+
+describe('catálogo de ratones', () => {
+  it('localiza fichas, listado y comparador con vuelta al tipo original', () => {
+    expect(catalogPath('en', 'raton')).toBe('/en/catalog/mice/');
+    expect(sourceTipoSlug('mice', 'en')).toBe('raton');
+    expect(productPath({ tipo: 'raton', slug: 'lift' }, 'es-ES')).toBe('/catalogo/raton/lift/');
+    expect(comparePath('raton', '', 'en')).toBe('/en/compare/mice/');
+  });
+  it('no genera pares de ratones aunque compartan precio', () => {
+    const ratones = ['a', 'b', 'c'].map(slug => base({ slug, tipo: 'raton' }));
+    expect(seleccionarParesVs(ratones, 16)).toEqual([]);
+    expect(seleccionarParesVs([...ratones, base({ slug: 's1' }), base({ slug: 's2' })], 16)).toEqual([['s1', 's2']]);
+  });
 });
 
 describe('mediaEjesPresentes', () => {

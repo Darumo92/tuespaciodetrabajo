@@ -35,15 +35,15 @@ function pageHtml(locale: 'es-ES' | 'en', counts = { silla: 6, escritorio: 5 }):
   const count = products.length;
   const canonical = en ? `${site}/en/tools/selector/` : `${site}/herramientas/selector/`;
   const title = en
-    ? 'Chair & Standing Desk Finder | Tu Espacio de Trabajo'
-    : 'Recomendador de sillas y escritorios para home office';
+    ? 'Chair, Desk & Mouse Finder | Tu Espacio de Trabajo'
+    : 'Recomendador de sillas, escritorios y ratones';
   const description = en
-    ? `Answer a few questions and we'll recommend the 3 best chairs or desks for your body, space, and budget. Based on real specs from ${count} products.`
-    : `Responde unas preguntas y descubre las 3 mejores sillas o escritorios para tu cuerpo, espacio y presupuesto, usando specs reales de ${count} productos.`;
-  const breadcrumbName = en ? 'Chair & standing desk finder' : 'Recomendador de sillas y escritorios';
+    ? `Find chairs, standing desks and mice for your home office. Compare ${count} products using published specs, your preferences and clear compatibility warnings.`
+    : `Encuentra sillas, escritorios y ratones para teletrabajar. Compara ${count} productos por sus especificaciones, tus preferencias y los límites de cada modelo.`;
+  const breadcrumbName = en ? 'Chair, desk & mouse finder' : 'Recomendador de sillas, escritorios y ratones';
   const app = {
     '@context': 'https://schema.org', '@type': 'WebApplication',
-    name: en ? 'Chair & standing desk finder' : 'Recomendador de sillas y escritorios',
+    name: en ? 'Chair, desk & mouse finder' : 'Recomendador de sillas, escritorios y ratones',
     url: canonical, description, applicationCategory: 'LifestyleApplication', operatingSystem: 'Web',
     isAccessibleForFree: true, inLanguage: locale,
     offers: { '@type': 'Offer', price: 0, priceCurrency: 'EUR' },

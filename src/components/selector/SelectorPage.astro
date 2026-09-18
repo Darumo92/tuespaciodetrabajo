@@ -49,8 +49,8 @@ const pagePath = isEn
   : localizedPath('es-ES', ['herramientas', 'selector']);
 const canonicalUrl = absoluteUrl(pagePath);
 const title = isEn
-  ? 'Chair & Standing Desk Finder | Tu Espacio de Trabajo'
-  : 'Recomendador de sillas y escritorios para home office';
+   ? 'Chair, Desk & Mouse Finder | Tu Espacio de Trabajo'
+   : 'Recomendador de sillas, escritorios y ratones';
 const description = buildSelectorPageDescription(eligibleProducts.length, locale);
 if (description.length < 140 || description.length > 155) {
   throw new Error(`Selector meta description must be 140-155 characters; got ${description.length}`);
@@ -63,15 +63,15 @@ const schemas = buildSelectorPageSchemas(locale, canonicalUrl, description);
 const webApplicationJson = serializeJsonForHtml(schemas.webApplication);
 const breadcrumbJson = serializeJsonForHtml(schemas.breadcrumb);
 const copy = isEn ? {
-  breadcrumbLabel: 'Breadcrumb', home: 'Home', tools: 'Tools', current: 'Chair & standing desk finder',
-  heading: 'Find the chair or standing desk that fits you best',
-  lead: `Answer a few focused questions. We compare real specifications across ${eligibleProducts.length} eligible chairs and desks, then show your three strongest matches.`,
-  shellLabel: 'Interactive chair and standing desk finder',
+   breadcrumbLabel: 'Breadcrumb', home: 'Home', tools: 'Tools', current: 'Chair, desk & mouse finder',
+   heading: 'Find the equipment that fits your workday',
+   lead: `Compare ${eligibleProducts.length} chairs, standing desks and mice using published specifications. Answer a few questions to see options and any fit limitations.`,
+   shellLabel: 'Interactive home-office equipment finder',
 } : {
-  breadcrumbLabel: 'Migas de pan', home: 'Inicio', tools: 'Herramientas', current: 'Recomendador de sillas y escritorios',
-  heading: 'Encuentra la silla o el escritorio que mejor encaja contigo',
-  lead: `Responde unas preguntas concretas. Comparamos las especificaciones reales de ${eligibleProducts.length} sillas y escritorios aptos y te mostramos tus tres mejores opciones.`,
-  shellLabel: 'Recomendador interactivo de sillas y escritorios',
+   breadcrumbLabel: 'Migas de pan', home: 'Inicio', tools: 'Herramientas', current: 'Recomendador de equipo',
+   heading: 'Encuentra el equipo que encaja con tu forma de trabajar',
+   lead: `Compara ${eligibleProducts.length} sillas, escritorios y ratones a partir de sus especificaciones. Responde unas preguntas para ver opciones y sus límites de compatibilidad.`,
+   shellLabel: 'Recomendador interactivo de equipo para teletrabajo',
 };
 ---
 

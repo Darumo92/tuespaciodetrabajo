@@ -31,8 +31,8 @@ export type SelectorLocale = 'es-ES' | 'en';
 
 export function buildSelectorPageDescription(productCount: number, locale: SelectorLocale): string {
   return locale === 'en'
-    ? `Answer a few questions and we'll recommend the 3 best chairs or desks for your body, space, and budget. Based on real specs from ${productCount} products.`
-    : `Responde unas preguntas y descubre las 3 mejores sillas o escritorios para tu cuerpo, espacio y presupuesto, usando specs reales de ${productCount} productos.`;
+    ? `Find chairs, standing desks and mice for your home office. Compare ${productCount} products using published specs, your preferences and clear compatibility warnings.`
+    : `Encuentra sillas, escritorios y ratones para teletrabajar. Compara ${productCount} productos por sus especificaciones, tus preferencias y los límites de cada modelo.`;
 }
 
 export function buildSelectorPageSchemas(
@@ -48,7 +48,7 @@ export function buildSelectorPageSchemas(
     webApplication: {
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
-      name: isEn ? 'Chair & standing desk finder' : 'Recomendador de sillas y escritorios',
+      name: isEn ? 'Chair, desk & mouse finder' : 'Recomendador de sillas, escritorios y ratones',
       url: canonicalUrl,
       description,
       applicationCategory: 'LifestyleApplication',
@@ -63,7 +63,7 @@ export function buildSelectorPageSchemas(
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: isEn ? 'Home' : 'Inicio', item: isEn ? `${siteUrl}/en/` : `${siteUrl}/` },
         { '@type': 'ListItem', position: 2, name: isEn ? 'Tools' : 'Herramientas', item: toolsUrl },
-        { '@type': 'ListItem', position: 3, name: isEn ? 'Chair & standing desk finder' : 'Recomendador de sillas y escritorios', item: canonicalUrl },
+        { '@type': 'ListItem', position: 3, name: isEn ? 'Chair, desk & mouse finder' : 'Recomendador de sillas, escritorios y ratones', item: canonicalUrl },
       ],
     },
   };

@@ -19,15 +19,15 @@ describe('SelectorCta source contract', () => {
 
   it('provides complete native ES and EN copy for home and compact variants', () => {
     const component = source();
-    expect(component).toContain('¿No sabes qué silla o escritorio comprar?');
+    expect(component).toContain('¿No sabes qué equipo elegir?');
     expect(component).toContain('En menos de 2 minutos te recomendamos las tres opciones que mejor encajan contigo.');
     expect(component).toContain('Encontrar mi equipo ideal');
-    expect(component).toContain('Not sure which chair or desk to buy?');
+    expect(component).toContain('Not sure which equipment to choose?');
     expect(component).toContain('In less than 2 minutes, we’ll recommend the three options that best fit your needs.');
     expect(component).toContain('Find my ideal setup');
-    expect(component).toContain('Recomendador de sillas y escritorios');
+    expect(component).toContain('Recomendador de sillas, escritorios y ratones');
     expect(component).toContain('Usar el recomendador');
-    expect(component).toContain('Chair & standing desk finder');
+    expect(component).toContain('Chair, desk & mouse finder');
     expect(component).toContain('Use the finder');
   });
 

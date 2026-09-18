@@ -17,12 +17,12 @@ describe('public selector page source contracts', () => {
     expect(source).toContain('offersBySlug={offersBySlug}');
   });
 
-  it('names the tool after the chair and desk recommendation it provides', () => {
+  it('names the tool after the equipment categories it supports', () => {
     const source = componentSource();
-    expect(source).toContain('Recomendador de sillas y escritorios para home office');
-    expect(source).toContain('Encuentra la silla o el escritorio que mejor encaja contigo');
-    expect(source).toContain('Chair & Standing Desk Finder | Tu Espacio de Trabajo');
-    expect(source).toContain('Find the chair or standing desk that fits you best');
+    expect(source).toContain('Recomendador de sillas, escritorios y ratones');
+    expect(source).toContain('Encuentra el equipo que encaja con tu forma de trabajar');
+    expect(source).toContain('Chair, Desk & Mouse Finder | Tu Espacio de Trabajo');
+    expect(source).toContain('Find the equipment that fits your workday');
     expect(source).not.toContain('Encuentra tu equipo ideal en 2 minutos | Tu Espacio de Trabajo');
   });
 

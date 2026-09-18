@@ -1,0 +1,90 @@
+tipo: raton
+nombre: Logitech MX Master 4
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/618Xy2oRcUL._AC_SL300_.jpg
+imagenAlt: Logitech MX Master 4 negro con rueda lateral para el pulgar
+tramoPrecio: 4
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B0FHHSZ8WM
+webOficial: https://www.logitech.com/es-es/shop/p/mx-master-4.910-007562
+idealPara: Trabajo con documentos largos, hojas de cálculo y atajos configurables
+veredicto: El Logitech MX Master 4 reúne rueda lateral, MagSpeed y atajos con respuesta háptica. Valora sus 150 g y el software que necesitas para aprovecharlo.
+resumenCompra:
+  mejorPara: Quien utiliza desplazamiento horizontal y quiere configurar acciones de sus aplicaciones en Windows o macOS.
+  evitarSi: Priorizas poco peso, eres zurdo o no puedes instalar software en el equipo de empresa.
+  alternativaDirecta: El M650 cubre un uso de oficina más sencillo; el MAYA X prioriza ligereza frente a ruedas y atajos.
+metodologia:
+  - Análisis de especificaciones, contenido de caja y requisitos de software publicados por Logitech. Variante estándar negra verificada en Amazon.es el 17 de septiembre de 2026.
+  - No he probado este modelo. Los porcentajes de productividad del fabricante no se trasladan a una promesa de rendimiento personal.
+limitaciones:
+  - Las funciones avanzadas de Options+ dependen del sistema operativo y de la aplicación; comprueba los permisos de tu ordenador de empresa.
+  - Logitech incluye receptor USB-C Bolt en la versión estándar, pero no cable de carga. La edición para Mac es otra variante.
+paraQuienSi:
+  - Usuarios de hojas de cálculo o editores que aprovechan una rueda horizontal dedicada.
+  - Quien alterna entre hasta tres dispositivos y puede configurar Options+.
+paraQuienNo:
+  - Quien busca un ratón ligero para moverlo con pequeños impulsos de los dedos.
+  - Quien solo necesita clic, rueda y navegación básica.
+  - Usuarios zurdos.
+puntosFuertes:
+  - Rueda MagSpeed y rueda para el pulgar con desplazamiento horizontal.
+  - Actions Ring y respuesta háptica configurable en funciones compatibles.
+  - Bluetooth, compatibilidad Bolt y cambio entre tres dispositivos.
+  - Batería recargable por USB-C.
+puntosDebiles:
+  - Pesa 150 g, bastante más que el resto de este lote.
+  - Parte del atractivo depende de software y de aplicaciones compatibles.
+  - Cable de carga no incluido según la caja estándar descrita por Logitech.
+fuenteSpecs: Logitech MX Master 4 — especificaciones, contenido de caja y requisitos de Options+
+verificadoEn: '2026-09-17'
+fuentes:
+  - tipo: oficial
+    nombre: Logitech MX Master 4 — funciones y ficha técnica
+    url: https://www.logitech.com/es-es/shop/p/mx-master-4.910-007562
+    fechaConsulta: '2026-09-17'
+en:
+  nombreComercial: Logitech MX Master 4
+  idealPara: Long documents, spreadsheets and configurable application shortcuts
+  veredicto: The Logitech MX Master 4 combines a thumb wheel, MagSpeed and haptic shortcuts. Weigh its 150 g body and software requirements before choosing it.
+  resumenCompra:
+    mejorPara: Horizontal scrolling and custom application actions on Windows or macOS.
+    evitarSi: Low weight matters most, you are left-handed, or your work computer blocks software installation.
+    alternativaDirecta: The M650 covers simpler office tasks; the MAYA X prioritizes low weight over extra wheels and shortcuts.
+  metodologia:
+    - Based on Logitech's specifications, box contents and software requirements. The standard black variant was checked on Amazon Spain on 17 September 2026.
+    - I have not tested this model. Manufacturer productivity percentages are not presented as a promise of personal performance.
+  limitaciones:
+    - Advanced Options+ features depend on the operating system and application; check your work computer's software policy.
+    - Logitech lists a USB-C Bolt receiver but no charging cable in the standard package. The Mac edition is a separate variant.
+  paraQuienSi:
+    - Spreadsheet and editor users who benefit from a dedicated horizontal wheel.
+    - People switching between up to three devices who can configure Options+.
+  paraQuienNo:
+    - Anyone seeking a lightweight mouse for fingertip movements.
+    - Users who only need basic clicking, scrolling and navigation.
+    - Left-handed users.
+  puntosFuertes:
+    - MagSpeed scroll wheel and dedicated horizontal thumb wheel.
+    - Actions Ring and configurable haptic feedback in supported features.
+    - Bluetooth, Bolt support and three-device switching.
+    - USB-C rechargeable battery.
+  puntosDebiles:
+    - At 150 g, it is heavier than the other mice in this batch.
+    - Much of its appeal depends on software and supported applications.
+    - Logitech lists no charging cable in the standard package.
+specs:
+  tipo: raton
+  formato: convencional
+  mano: derecha
+  largoMm: 128.15
+  anchoMm: 88.35
+  altoMm: 50.8
+  pesoG: 150
+  bluetooth: true
+  receptor: Logi Bolt
+  cableDatos: null
+  multidispositivo: true
+  alimentacion: bateria
+  clicSilencioso: null

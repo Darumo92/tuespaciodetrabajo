@@ -19,10 +19,12 @@ const isSilla = tipo === 'silla';
 const title = isSilla ? 'Catálogo de sillas ergonómicas para home office' : `${cfg.labelPlural} para home office | Catálogo`;
 const description = isSilla
   ? 'Filtra sillas ergonómicas por marca, precio, respaldo, ajustes, carga máxima y puntuación editorial con specs verificadas.'
+  : tipo === 'raton' ? 'Compara ratones para teletrabajo por formato, tamaño, peso y conexión. Consulta especificaciones verificadas y límites de cada modelo antes de elegir.'
   : `Catálogo comparativo de ${cfg.labelPlural.toLowerCase()} elevables para home office: specs verificadas, precio, garantía y valoración editorial por ejes de cada modelo.`;
 const heading = isSilla ? 'Sillas ergonómicas del catálogo' : cfg.labelPlural;
 const intro = isSilla
   ? 'Filtra por marca, tramo de precio, respaldo, reposabrazos, profundidad regulable, altura recomendada y carga máxima. Todas las fichas usan datos verificables; cuando falta un dato aparece como n/d.'
+  : tipo === 'raton' ? 'Empieza por el formato y la conexión; después comprueba medidas y alimentación. Estas cinco fichas explican qué ganas y qué sacrificas. Los datos sin verificar aparecen como n/d.'
   : 'Filtra productos por specs verificadas, valoración por ejes y comparativas disponibles.';
 const alternates = buildAlternates({
   'es-ES': pagePath,

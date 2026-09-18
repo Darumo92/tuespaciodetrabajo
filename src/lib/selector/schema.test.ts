@@ -187,8 +187,10 @@ describe('selector page metadata and static schema', () => {
     const es = buildSelectorPageDescription(114, 'es-ES');
     const en = buildSelectorPageDescription(114, 'en');
 
-    expect(es).toBe('Responde unas preguntas y descubre las 3 mejores sillas o escritorios para tu cuerpo, espacio y presupuesto, usando specs reales de 114 productos.');
-    expect(en).toBe("Answer a few questions and we'll recommend the 3 best chairs or desks for your body, space, and budget. Based on real specs from 114 products.");
+    expect(es).toContain('sillas, escritorios y ratones');
+    expect(en).toContain('chairs, standing desks and mice');
+    expect(es).toContain('114 productos');
+    expect(en).toContain('114 products');
     expect(es.length).toBeGreaterThanOrEqual(140);
     expect(es.length).toBeLessThanOrEqual(155);
     expect(en.length).toBeGreaterThanOrEqual(140);
@@ -202,7 +204,7 @@ describe('selector page metadata and static schema', () => {
     expect(schemas.webApplication).toMatchObject({
       '@context': 'https://schema.org',
       '@type': 'WebApplication',
-      name: 'Chair & standing desk finder',
+      name: 'Chair, desk & mouse finder',
       url: 'https://tuespaciodetrabajo.com/en/tools/selector/',
       applicationCategory: 'LifestyleApplication',
       operatingSystem: 'Web',
@@ -213,7 +215,7 @@ describe('selector page metadata and static schema', () => {
     expect(schemas.breadcrumb.itemListElement.at(-1)).toEqual({
       '@type': 'ListItem',
       position: 3,
-      name: 'Chair & standing desk finder',
+      name: 'Chair, desk & mouse finder',
       item: 'https://tuespaciodetrabajo.com/en/tools/selector/',
     });
   });

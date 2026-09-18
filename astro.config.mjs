@@ -234,7 +234,11 @@ function buildHreflangMap() {
     });
   }
 
-  const EN_TIPO_SLUG = { silla: 'chairs', escritorio: 'standing-desks' };
+  addGroup({
+    'es-ES': absoluteUrl(localizedPath('es-ES', ['catalogo', 'raton'])),
+    en: absoluteUrl(localizedPath('en', ['catalog', 'mice'])),
+  });
+  const EN_TIPO_SLUG = { silla: 'chairs', escritorio: 'standing-desks', raton: 'mice' };
   for (const product of collectProducts()) {
     const enTipo = EN_TIPO_SLUG[product.tipo] ?? product.tipo;
     addGroup({

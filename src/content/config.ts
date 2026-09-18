@@ -138,10 +138,26 @@ const specsEscritorio = z.object({
   certificacionEmc: z.boolean().nullable().default(null),
 });
 
+const specsRaton = z.object({
+  tipo: z.literal('raton'),
+  formato: z.enum(['vertical', 'convencional']),
+  mano: z.enum(['derecha', 'izquierda', 'ambas']),
+  largoMm: z.number().positive().nullable().default(null),
+  anchoMm: z.number().positive().nullable().default(null),
+  altoMm: z.number().positive().nullable().default(null),
+  pesoG: z.number().positive().nullable().default(null),
+  bluetooth: z.boolean().nullable().default(null),
+  receptor: z.string().nullable().default(null),
+  cableDatos: z.boolean().nullable().default(null),
+  multidispositivo: z.boolean().nullable().default(null),
+  alimentacion: z.enum(['aa', 'bateria']).nullable().default(null),
+  clicSilencioso: z.boolean().nullable().default(null),
+});
+
 const productos = defineCollection({
   type: 'data',
   schema: z.object({
-    tipo: z.enum(['silla', 'escritorio']), // ampliar al añadir categorías
+    tipo: z.enum(['silla', 'escritorio', 'raton']),
     nombre: z.string(),
     // Nombre corto (marca + modelo) para <title> y comparativas: mantiene el
     // title ≤ 60 caracteres. Fallback a `nombre` si no se define.
@@ -211,6 +227,8 @@ const productos = defineCollection({
     // Contenido editorial en inglés. ES vive en los campos base; las specs técnicas
     // son compartidas. Si falta, la ficha EN usa el fallback generado de specs.
     en: z.object({
+      metodologia: z.array(z.string()).optional(),
+      limitaciones: z.array(z.string()).optional(),
       nombreComercial: z.string().optional(),
       tituloCorto: z.string().optional(),
       veredicto: z.string().optional(),
@@ -227,7 +245,7 @@ const productos = defineCollection({
       paraQuienSi: z.array(z.string()).default([]),
       paraQuienNo: z.array(z.string()).default([]),
     }).optional(),
-    specs: z.discriminatedUnion('tipo', [specsSilla, specsEscritorio]),
+    specs: z.discriminatedUnion('tipo', [specsSilla, specsEscritorio, specsRaton]),
   }),
 });
 

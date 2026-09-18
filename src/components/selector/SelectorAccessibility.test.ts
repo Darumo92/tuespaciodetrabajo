@@ -25,8 +25,8 @@ describe('selector accessibility source contracts', () => {
 
   it('uses the recommendation name in the selector region label', () => {
     const source = readSource('./SelectorProductos.astro');
-    expect(source).toContain("'Chair and standing desk finder'");
-    expect(source).toContain("'Recomendador de sillas y escritorios'");
+    expect(source).toContain("'Home-office equipment finder'");
+    expect(source).toContain("'Recomendador de equipo para teletrabajo'");
     expect(source).not.toContain("'Product selector'");
   });
 

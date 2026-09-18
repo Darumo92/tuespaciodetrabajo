@@ -131,6 +131,7 @@ function parseTopLevelCatalogScalar(source: string, key: string): unknown {
 }
 
 function parseCatalogSection(source: string, section: string): Record<string, unknown> {
+  if (source.split('\n').some(line => line.trimEnd() === `${section}: {}`)) return {};
   const lines = source.split('\n');
   const start = lines.findIndex((line) => line.trimEnd() === `${section}:`);
   if (start < 0) throw new Error(`Catalog fixture is missing ${section}`);
@@ -146,7 +147,7 @@ function parseCatalogSection(source: string, section: string): Record<string, un
 
 function parseCatalogProduct(path: string, source: string): Producto {
   const tipo = parseTopLevelCatalogScalar(source, 'tipo');
-  if (tipo !== 'silla' && tipo !== 'escritorio') {
+  if (tipo !== 'silla' && tipo !== 'escritorio' && tipo !== 'raton') {
     throw new Error(`${path} has unsupported tipo ${String(tipo)}`);
   }
   const tramoPrecio = parseTopLevelCatalogScalar(source, 'tramoPrecio');
@@ -1846,9 +1847,9 @@ describe('discoverSelectorConfigs', () => {
   });
 
   it('exposes actual eager-glob discovery through SELECTOR_CONFIGS and getSelectorConfig', () => {
-    expect(SELECTOR_CONFIGS.map((item) => item.tipo)).toEqual(['escritorio', 'silla']);
+    expect(SELECTOR_CONFIGS.map((item) => item.tipo)).toEqual(['escritorio', 'raton', 'silla']);
     expect(Object.isFrozen(SELECTOR_CONFIGS)).toBe(true);
-    expect(getSelectorConfig('silla')).toBe(SELECTOR_CONFIGS[1]);
+    expect(getSelectorConfig('silla')).toBe(SELECTOR_CONFIGS.find(c => c.tipo === 'silla'));
     expect(getSelectorConfig('escritorio')).toBe(SELECTOR_CONFIGS[0]);
     expect(getSelectorConfig('missing-type')).toBeUndefined();
   });
@@ -1962,7 +1963,7 @@ describe('production selector configs', () => {
   });
 
   it('marks common questions always visible and specific questions by useful catalog fields', () => {
-    for (const cfg of SELECTOR_CONFIGS) {
+    for (const cfg of [requiredSelectorConfig('silla'), requiredSelectorConfig('escritorio')]) {
       for (const id of ['presupuesto', 'prioridad', 'horas']) {
         expect(requiredQuestion(cfg, id).visibility?.always).toBe(true);
       }
@@ -1995,7 +1996,7 @@ describe('production selector configs', () => {
   });
 
   it('uses budget weight 2 with stronger tier penalties than preference criteria', () => {
-    for (const cfg of SELECTOR_CONFIGS) {
+    for (const cfg of [requiredSelectorConfig('silla'), requiredSelectorConfig('escritorio')]) {
       for (const tier of ['1', '2', '3', '4']) {
         const [effect] = optionEffects(cfg, 'presupuesto', tier);
         expect(effect).toMatchObject({
@@ -2183,11 +2184,12 @@ describe('production selector configs', () => {
 });
 
 describe('production catalog selector integration', () => {
-  it('loads the approved 114-product inventory split without hiding count drift', () => {
-    expect(Object.keys(rawCatalogModules)).toHaveLength(114);
-    expect(actualCatalogProducts).toHaveLength(114);
+  it('loads the September 2026 inventory including the five approved mice', () => {
+    expect(Object.keys(rawCatalogModules)).toHaveLength(128);
+    expect(actualCatalogProducts).toHaveLength(128);
     expect(actualCatalogProducts.filter((item) => item.tipo === 'silla')).toHaveLength(77);
-    expect(actualCatalogProducts.filter((item) => item.tipo === 'escritorio')).toHaveLength(37);
+    expect(actualCatalogProducts.filter((item) => item.tipo === 'escritorio')).toHaveLength(46);
+    expect(actualCatalogProducts.filter((item) => item.tipo === 'raton')).toHaveLength(5);
   });
 
   it('resolves the approved question IDs in order from actual catalog coverage', () => {

@@ -40,8 +40,10 @@ const INBOUND_LINKS = [
   { file: 'catalogo/escritorio/index.html', selectorPath: '/herramientas/selector/', tipo: 'escritorio' },
   { file: 'en/catalog/chairs/index.html', selectorPath: '/en/tools/selector/', tipo: 'silla' },
   { file: 'en/catalog/standing-desks/index.html', selectorPath: '/en/tools/selector/', tipo: 'escritorio' },
-  { file: 'accesorios/index.html', selectorPath: '/herramientas/selector/', unmapped: true },
-  { file: 'en/accessories/index.html', selectorPath: '/en/tools/selector/', unmapped: true },
+  { file: 'accesorios/index.html', selectorPath: '/herramientas/selector/', optionalTipo: 'raton' },
+  { file: 'en/accessories/index.html', selectorPath: '/en/tools/selector/', optionalTipo: 'raton' },
+  { file: 'catalogo/raton/index.html', selectorPath: '/herramientas/selector/', tipo: 'raton', whenTipo: 'raton' },
+  { file: 'en/catalog/mice/index.html', selectorPath: '/en/tools/selector/', tipo: 'raton', whenTipo: 'raton' },
 ];
 
 function decodeHtml(value) {
@@ -80,8 +82,8 @@ function parseJsonScripts(html, type, file, errors) {
 
 function expectedDescription(locale, count) {
   return locale === 'en'
-    ? `Answer a few questions and we'll recommend the 3 best chairs or desks for your body, space, and budget. Based on real specs from ${count} products.`
-    : `Responde unas preguntas y descubre las 3 mejores sillas o escritorios para tu cuerpo, espacio y presupuesto, usando specs reales de ${count} productos.`;
+    ? `Find chairs, standing desks and mice for your home office. Compare ${count} products using published specs, your preferences and clear compatibility warnings.`
+    : `Encuentra sillas, escritorios y ratones para teletrabajar. Compara ${count} productos por sus especificaciones, tus preferencias y los límites de cada modelo.`;
 }
 
 function visibleText(html) {
@@ -206,13 +208,13 @@ export function validateSelectorBuild(options = {}) {
   const pages = [
     {
       locale: 'es-ES', file: resolve(distDir, 'herramientas/selector/index.html'),
-      title: 'Recomendador de sillas y escritorios para home office', canonical: ES_URL,
-      appName: 'Recomendador de sillas y escritorios', breadcrumbName: 'Recomendador de sillas y escritorios',
+      title: 'Recomendador de sillas, escritorios y ratones', canonical: ES_URL,
+      appName: 'Recomendador de sillas, escritorios y ratones', breadcrumbName: 'Recomendador de sillas, escritorios y ratones',
     },
     {
       locale: 'en', file: resolve(distDir, 'en/tools/selector/index.html'),
-      title: 'Chair & Standing Desk Finder | Tu Espacio de Trabajo', canonical: EN_URL,
-      appName: 'Chair & standing desk finder', breadcrumbName: 'Chair & standing desk finder',
+      title: 'Chair, Desk & Mouse Finder | Tu Espacio de Trabajo', canonical: EN_URL,
+      appName: 'Chair, desk & mouse finder', breadcrumbName: 'Chair, desk & mouse finder',
     },
   ];
   const parsedPages = [];
@@ -352,6 +354,8 @@ export function validateSelectorBuild(options = {}) {
 
     let selectorInboundCount = 0;
     for (const contract of INBOUND_LINKS) {
+      if (contract.whenTipo && !inventory?.eligibleTypes.includes(contract.whenTipo)) continue;
+      const tipo = contract.tipo ?? (inventory?.eligibleTypes.includes(contract.optionalTipo) ? contract.optionalTipo : null);
       const file = resolve(distDir, contract.file);
       const html = readRequired(file, errors);
       if (!html) continue;
@@ -362,11 +366,11 @@ export function validateSelectorBuild(options = {}) {
         const count = bodyHrefs.filter((href) => href === contract.selectorPath).length;
         if (count < 1) errors.push(`${file}: expected a body inbound link to ${contract.selectorPath} independently from the global header`);
         else selectorInboundCount += 1;
-      } else if (contract.tipo) {
-        const expected = `${contract.selectorPath}?tipo=${contract.tipo}`;
+      } else if (tipo) {
+        const expected = `${contract.selectorPath}?tipo=${tipo}`;
         if (!hrefs.includes(expected)) errors.push(`${file}: missing contextual selector inbound link ${expected}`);
         else selectorInboundCount += 1;
-      } else if (contract.unmapped && hrefs.some((href) => href.startsWith(contextualPrefix))) {
+      } else if (contract.optionalTipo && hrefs.some((href) => href.startsWith(contextualPrefix))) {
         errors.push(`${file}: unmapped category must not link to a contextual selector tipo`);
       }
     }

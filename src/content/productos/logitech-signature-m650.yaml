@@ -1,0 +1,86 @@
+tipo: raton
+nombre: Logitech Signature M650
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/6167BQLAieL._AC_SL300_.jpg
+imagenAlt: Logitech Signature M650 gris de tamaño pequeño y mediano
+tramoPrecio: 1
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B07W6G822T
+webOficial: https://www.logitech.com/es-es/shop/p/m650-signature-wireless-mouse
+idealPara: Uso de oficina sencillo con manos pequeñas o medianas y clics silenciosos
+veredicto: El Logitech Signature M650 ofrece clics silenciosos, Bluetooth y rueda SmartWheel en un formato compacto. Comprueba que eliges la talla estándar.
+resumenCompra:
+  mejorPara: Quien quiere un ratón convencional para documentos y navegación, con botones laterales y un presupuesto contenido.
+  evitarSi: Necesitas cambiar continuamente entre ordenadores o buscas recarga por USB-C.
+  alternativaDirecta: El Lift añade formato vertical y Easy-Switch; el MX Master 4 incorpora rueda lateral y funciones más avanzadas.
+metodologia:
+  - Especificaciones oficiales de la talla M650 estándar, no M650 L ni L Left. Modelo y disponibilidad contrastados en Amazon.es el 17 de septiembre de 2026.
+  - No he probado este ratón. La recomendación se basa en conexiones, dimensiones y funciones publicadas, sin atribuirle una comodidad universal.
+limitaciones:
+  - Las tallas L y L Left tienen dimensiones y lateralidad distintas; no comparten esta ficha.
+  - Bluetooth y receptor USB son opciones de conexión, no una confirmación de cambio rápido multidispositivo.
+paraQuienSi:
+  - Manos pequeñas o medianas que prefieren el formato convencional.
+  - Quien busca reducir el ruido de los clics en un despacho compartido.
+  - Usuarios que quieren Bluetooth para no ocupar un puerto USB.
+paraQuienNo:
+  - Quien busca una rueda lateral dedicada para desplazamiento horizontal.
+  - Manos grandes que necesitan comparar la talla M650 L.
+puntosFuertes:
+  - SmartWheel para alternar desplazamiento preciso y rápido.
+  - Clics SilentTouch y dos botones laterales personalizables.
+  - Bluetooth o receptor Logi Bolt, con soporte básico en varios sistemas.
+puntosDebiles:
+  - Pila AA; sin recarga integrada por USB.
+  - No ofrece la rueda horizontal del MX Master 4.
+fuenteSpecs: Logitech Signature M650 — talla estándar, ficha técnica y preguntas frecuentes
+verificadoEn: '2026-09-17'
+fuentes:
+  - tipo: oficial
+    nombre: Logitech Signature M650 — tamaños y especificaciones
+    url: https://www.logitech.com/es-es/shop/p/m650-signature-wireless-mouse
+    fechaConsulta: '2026-09-17'
+en:
+  nombreComercial: Logitech Signature M650
+  idealPara: Straightforward office use with small to medium hands and quiet clicks
+  veredicto: The Logitech Signature M650 offers quiet clicks, Bluetooth and a SmartWheel in a compact body. Check that you are choosing the standard size.
+  resumenCompra:
+    mejorPara: Documents and browsing with side buttons at a lower price tier.
+    evitarSi: You need frequent switching between computers or want USB-C charging.
+    alternativaDirecta: The Lift adds a vertical grip and Easy-Switch; the MX Master 4 adds a thumb wheel and advanced features.
+  metodologia:
+    - Official specifications for the standard M650, not the L or L Left. Model and availability checked on Amazon Spain on 17 September 2026.
+    - I have not tested this mouse. The assessment uses published connections, dimensions and features, without claiming it will fit every hand comfortably.
+  limitaciones:
+    - L and L Left variants have different dimensions and handedness; this profile does not cover them.
+    - Bluetooth and USB receiver support describe connection options, not confirmed quick device switching.
+  paraQuienSi:
+    - Small to medium hands that prefer a conventional mouse.
+    - Shared offices where quieter clicks are useful.
+    - People who want Bluetooth to keep a USB port free.
+  paraQuienNo:
+    - Anyone needing a dedicated horizontal scroll wheel.
+    - Larger hands that should compare the M650 L size.
+  puntosFuertes:
+    - SmartWheel for precise or faster scrolling.
+    - SilentTouch clicks and two customizable side buttons.
+    - Bluetooth or Logi Bolt receiver with basic support across several systems.
+  puntosDebiles:
+    - AA battery with no built-in USB charging.
+    - No horizontal thumb wheel like the MX Master 4.
+specs:
+  tipo: raton
+  formato: convencional
+  mano: derecha
+  largoMm: 108.2
+  anchoMm: 61
+  altoMm: 38.8
+  pesoG: 101.4
+  bluetooth: true
+  receptor: Logi Bolt
+  cableDatos: false
+  multidispositivo: null
+  alimentacion: aa
+  clicSilencioso: true

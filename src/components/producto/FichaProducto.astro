@@ -7,12 +7,13 @@ import ValoracionEjes from './ValoracionEjes.astro';
 import ParaQuien from './ParaQuien.astro';
 import { formatoSpec, etiquetaEnum, getCampo, type Producto } from '@/lib/productos';
 import { getTipoConfig } from '@/lib/tipos';
+import { mouseLabelsEn } from '@/lib/tipos-raton';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
 interface Props { producto: Producto; locale?: Locale; }
 const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
 const isEn = locale === 'en';
 const cfg = getTipoConfig(p.tipo);
-const ENUM_CAMPOS = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo']);
+const ENUM_CAMPOS = new Set(['specs.lumbar', 'specs.reposabrazos', 'specs.respaldo', 'specs.formato', 'specs.mano', 'specs.alimentacion']);
 const TEXT_SPEC_TRANSLATIONS: Record<string, string> = {
   'inclinacion-con-lumbar-adaptativa': 'Adaptive recline with lumbar support',
   'inclinacion-con-lumbar-dinamica': 'Dynamic recline with lumbar support',
@@ -115,6 +116,7 @@ function render(campo: string, formato?: string): string {
   return formatoSpec(v, formato, locale);
 }
 const groupTitleMap: Record<string, string> = {
+  ...mouseLabelsEn,
   'Ergonomía y ajustes': 'Ergonomics and adjustments',
   'Construcción y materiales': 'Build and materials',
   'Dimensiones y garantía': 'Dimensions and warranty',
@@ -126,6 +128,7 @@ const groupTitleMap: Record<string, string> = {
   'Garantía y certificación': 'Warranty and certification',
 };
 const rowLabelMap: Record<string, string> = {
+  ...mouseLabelsEn,
   'Soporte lumbar': 'Lumbar support',
   'Reposabrazos': 'Armrests',
   'Profundidad regulable': 'Adjustable seat depth',
@@ -170,7 +173,7 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
   <FichaResumenCompra producto={p} locale={locale} />
 
   <FichaMetodologiaProducto producto={p} locale={locale} />
-  <ValoracionEjes producto={p} locale={locale} />
+  {cfg?.ejes.length > 0 && <ValoracionEjes producto={p} locale={locale} />}
 
   {isEn ? (
     p.en?.veredicto
@@ -226,8 +229,14 @@ const grupos = (cfg?.fichaSpecs ?? []).map((g) => ({
 
   <FichaFuentes producto={p} locale={locale} />
 
+  {p.tipo === 'raton' && <p>{isEn
+    ? <a href="/en/accessories/best-vertical-ergonomic-mice/">How vertical mice differ and when to consider one</a>
+    : <a href="/accesorios/mejor-raton-vertical-ergonomico/">Qué cambia con un ratón vertical y cuándo valorarlo</a>}</p>}
+
   <p class="ficha-fuente">
-    {isEn
+    {p.tipo === 'raton' ? (isEn
+      ? <>Published specifications checked on {p.verificadoEn}. No hands-on scores are assigned. “n/a” means the data has not been verified.</>
+      : <>Especificaciones publicadas, consultadas el {p.verificadoEn}. Sin notas de pruebas de uso. «n/d» indica un dato no verificado.</>) : isEn
       ? <>Data source: verified product specs{p.verificadoEn ? ` · checked ${p.verificadoEn}` : ''}. Editorial scores are based on specs and category fit. "n/a" means no verified data; check the manufacturer or retailer page before buying.</>
       : <>Datos: {p.fuenteSpecs}{p.verificadoEn ? ` · verificado el ${p.verificadoEn}` : ''}. Las valoraciones por ejes son editoriales (specs + consenso de la comunidad). "n/d" = sin dato verificado; verifica la ficha del fabricante antes de comprar.</>}
   </p>

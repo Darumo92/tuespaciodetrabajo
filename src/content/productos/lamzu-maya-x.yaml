@@ -1,0 +1,88 @@
+tipo: raton
+nombre: LAMZU MAYA X
+marca: LAMZU
+imagen: https://m.media-amazon.com/images/I/61dYQrHhkFL._AC_SL300_.jpg
+imagenAlt: LAMZU MAYA X negro de carcasa simétrica con botones laterales
+tramoPrecio: 4
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B0DFGYHVPZ
+webOficial: https://lamzu.com/products/lamzu-maya-x
+idealPara: Quien prioriza poco peso y comparte el ratón entre trabajo y videojuegos
+veredicto: El LAMZU MAYA X prioriza ligereza con sus 47 g publicados. Compara sus conexiones y botones con un ratón de oficina antes de pagar por prestaciones gaming.
+resumenCompra:
+  mejorPara: Un equipo en el que trabajas y juegas, cuando prefieres un ratón ligero a uno con varias ruedas y muchos atajos.
+  evitarSi: Necesitas Bluetooth, una rueda horizontal dedicada o un cambio rápido entre varios equipos.
+  alternativaDirecta: El MX Master 4 apuesta por ruedas y funciones de productividad; el M650 cubre tareas sencillas con Bluetooth.
+metodologia:
+  - Este es el modelo de ratón que uso, según el setup documentado del proyecto. Esa experiencia no es una prueba comparativa de los otros cuatro modelos.
+  - La ficha separa ese uso propio de los datos publicados por LAMZU y de la variante negra consultada en Amazon.es el 17 de septiembre de 2026. No se han medido latencia ni autonomía.
+limitaciones:
+  - La ficha comercial indica hasta 8000 Hz al usar un receptor 8K; no se ha confirmado el receptor incluido en este ASIN.
+  - La carcasa simétrica no implica botones laterales en ambos lados. Revisa su distribución si lo usarás con la izquierda.
+  - Las medidas no se han confirmado en una fuente legible para esta variante y se dejan sin dato.
+paraQuienSi:
+  - Quien busca un único ratón ligero para trabajar y jugar en el mismo ordenador.
+  - Usuarios que aceptan conexión por receptor o cable en lugar de Bluetooth.
+paraQuienNo:
+  - Quien necesita Bluetooth para conectarse directamente a un portátil o tableta.
+  - Usuarios que priorizan una rueda horizontal, clics silenciosos o cambio rápido entre equipos.
+puntosFuertes:
+  - Peso publicado de 47 g, menor que el de los otros cuatro ratones de este lote.
+  - Conexión por radiofrecuencia y USB en la variante consultada.
+  - Sensor PAW3950 e interruptores ópticos documentados en la ficha comercial.
+puntosDebiles:
+  - La oferta consultada no incluye Bluetooth entre sus conexiones.
+  - Las prestaciones de sensor para videojuegos no sustituyen funciones de oficina como Easy-Switch o una rueda lateral.
+  - Conviene confirmar qué receptor llega en la caja antes de comprar por los 8000 Hz.
+fuenteSpecs: LAMZU MAYA X oficial y ficha Amazon.es B0DFGYHVPZ; datos no confirmados omitidos
+verificadoEn: '2026-09-17'
+fuentes:
+  - tipo: oficial
+    nombre: LAMZU MAYA X — modelo y variantes
+    url: https://lamzu.com/products/lamzu-maya-x
+    fechaConsulta: '2026-09-17'
+en:
+  nombreComercial: LAMZU MAYA X
+  idealPara: Low-weight use across work and gaming on the same computer
+  veredicto: The LAMZU MAYA X prioritizes low weight at a listed 47 g. Compare its connections and controls with an office mouse before paying for gaming features.
+  resumenCompra:
+    mejorPara: A work-and-gaming computer where a lightweight mouse matters more than extra wheels and shortcuts.
+    evitarSi: You need Bluetooth, a dedicated horizontal wheel or quick switching between several devices.
+    alternativaDirecta: The MX Master 4 focuses on productivity wheels and features; the M650 covers simpler tasks with Bluetooth.
+  metodologia:
+    - This is the mouse model I use, as recorded in the project's setup documentation. That does not amount to a hands-on comparison with the other four mice.
+    - Published LAMZU information and the black Amazon Spain variant were checked on 17 September 2026. No latency or battery-life measurements were performed.
+  limitaciones:
+    - The listing states up to 8000 Hz with an 8K receiver; the receiver included with this ASIN has not been confirmed.
+    - A symmetrical shell does not mean side buttons on both sides. Check their layout for left-handed use.
+    - Dimensions have not been confirmed in a readable source for this variant and are left as n/a.
+  paraQuienSi:
+    - People seeking one lightweight mouse for work and gaming on the same computer.
+    - Users happy with a receiver or cable instead of Bluetooth.
+  paraQuienNo:
+    - Anyone needing direct Bluetooth pairing with a laptop or tablet.
+    - Users prioritizing a horizontal wheel, quiet clicks or quick device switching.
+  puntosFuertes:
+    - Listed at 47 g, lighter than the other four mice in this batch.
+    - Radiofrequency and USB connections in the checked variant.
+    - PAW3950 sensor and optical switches documented in the product listing.
+  puntosDebiles:
+    - The checked listing does not include Bluetooth among its connections.
+    - Gaming sensor features do not replace Easy-Switch or a horizontal wheel.
+    - Check the included receiver before buying specifically for 8000 Hz.
+specs:
+  tipo: raton
+  formato: convencional
+  mano: derecha
+  largoMm: null
+  anchoMm: null
+  altoMm: null
+  pesoG: 47
+  bluetooth: false
+  receptor: USB 2.4 GHz
+  cableDatos: true
+  multidispositivo: null
+  alimentacion: bateria
+  clicSilencioso: null

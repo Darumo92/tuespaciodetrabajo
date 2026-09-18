@@ -1,0 +1,86 @@
+tipo: raton
+nombre: Logitech MX Vertical
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/61iiZ-gDYEL._AC_SL300_.jpg
+imagenAlt: Logitech MX Vertical gris con apoyo para el pulgar derecho
+tramoPrecio: 2
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B07FNHV4MW
+webOficial: https://www.logitech.com/es-es/shop/p/mx-vertical-ergonomic-mouse.910-005448
+idealPara: Quien busca un vertical más largo que el Lift y recarga por USB-C
+veredicto: El Logitech MX Vertical ofrece agarre a 57°, batería recargable y tres formas de conexión. Comprueba sus medidas y el receptor antes de comprar.
+resumenCompra:
+  mejorPara: Un puesto fijo con varios equipos donde interesa mantener el mismo ratón y recargar por cable.
+  evitarSi: Buscas un ratón compacto o ya tienes un receptor Bolt y quieres compartirlo.
+  alternativaDirecta: El Lift es más corto y tiene clics silenciosos, pero funciona con una pila AA.
+metodologia:
+  - Ficha elaborada con las especificaciones y funciones publicadas por Logitech, contrastando modelo y stock en Amazon.es el 17 de septiembre de 2026.
+  - No he probado ni poseo el MX Vertical. Mi ratón habitual es un LAMZU MAYA X; esta ficha no describe una prueba de uso.
+limitaciones:
+  - Unifying y Logi Bolt no son el mismo sistema de receptor.
+  - El cambio de postura no garantiza aliviar molestias ni prevenir una lesión.
+paraQuienSi:
+  - Quien encuentra demasiado corta la carcasa del Lift y quiere comparar un vertical de 120 mm de largo.
+  - Usuarios que alternan entre hasta tres equipos mediante Easy-Switch.
+paraQuienNo:
+  - Zurdos; el apoyo y los botones están planteados para la mano derecha.
+  - Quien necesita compartir un receptor Logi Bolt con otro periférico.
+puntosFuertes:
+  - Conexión por Bluetooth, receptor Unifying o cable USB-C, según Logitech.
+  - Batería recargable y posibilidad de usarlo mientras carga.
+  - Cambio de sensibilidad accesible y sensor ajustable de 400 a 4000 DPI.
+puntosDebiles:
+  - Carcasa alta que hay que valorar si transportas el ratón a menudo.
+  - Sistema Unifying distinto del Bolt utilizado por Lift y MX Master 4.
+  - No se ha verificado una función de clic silencioso comparable a SilentTouch.
+fuenteSpecs: Logitech MX Vertical — ficha técnica, funciones y preguntas frecuentes oficiales
+verificadoEn: '2026-09-17'
+fuentes:
+  - tipo: oficial
+    nombre: Logitech MX Vertical — especificaciones y conexiones
+    url: https://www.logitech.com/es-es/shop/p/mx-vertical-ergonomic-mouse.910-005448
+    fechaConsulta: '2026-09-17'
+en:
+  nombreComercial: Logitech MX Vertical
+  idealPara: A longer vertical mouse than the Lift, with USB-C charging
+  veredicto: The Logitech MX Vertical offers a 57-degree grip, a rechargeable battery and three connection options. Check its size and receiver before buying.
+  resumenCompra:
+    mejorPara: A fixed desk with several computers where one rechargeable mouse can move between them.
+    evitarSi: You want a compact mouse or need it to share an existing Bolt receiver.
+    alternativaDirecta: The Lift is shorter and has quiet clicks, but uses an AA battery.
+  metodologia:
+    - Based on Logitech's published specifications and features, with the model and stock checked on Amazon Spain on 17 September 2026.
+    - I have not tested or owned the MX Vertical. I use a LAMZU MAYA X; this is a documentary assessment rather than a hands-on review.
+  limitaciones:
+    - Unifying and Logi Bolt use different receiver systems.
+    - A different grip does not guarantee pain relief or injury prevention.
+  paraQuienSi:
+    - People who find the Lift body too short and want to compare a 120 mm-long vertical mouse.
+    - Users switching between up to three computers through Easy-Switch.
+  paraQuienNo:
+    - Left-handed users; the thumb rest and side buttons are designed for the right hand.
+    - Anyone needing to share a Logi Bolt receiver with another device.
+  puntosFuertes:
+    - Bluetooth, Unifying receiver or USB-C cable connections, according to Logitech.
+    - Rechargeable battery and use while charging.
+    - Accessible sensitivity button and a 400–4000 DPI adjustable sensor.
+  puntosDebiles:
+    - The tall body needs more room in a bag.
+    - Unifying differs from the Bolt system used by the Lift and MX Master 4.
+    - A quiet-click feature comparable to SilentTouch has not been verified.
+specs:
+  tipo: raton
+  formato: vertical
+  mano: derecha
+  largoMm: 120
+  anchoMm: 79
+  altoMm: 78.5
+  pesoG: 125
+  bluetooth: true
+  receptor: Unifying
+  cableDatos: true
+  multidispositivo: true
+  alimentacion: bateria
+  clicSilencioso: null

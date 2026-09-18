@@ -7,7 +7,7 @@ interface Props { producto: Producto; locale?: Locale; }
 const { producto: p, locale = DEFAULT_LOCALE } = Astro.props;
 const isEn = locale === 'en';
 const items = isEn
-  ? [
+  ? p.en?.metodologia ?? [
       'Scores are based on verified specifications, category fit and editorial weighting for remote-work use.',
       'Product pages avoid unverified price claims; always check current price and availability before buying.',
       'English product profiles use structured verified data unless a fully edited product review is available.',

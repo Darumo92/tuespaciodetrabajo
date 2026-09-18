@@ -114,12 +114,23 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 ### mejor-raton-vertical-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
 |----------|------|-----------|--------|--------|--------|
-| Logitech MX Vertical | B07FNHV4MW | /dp/B07FNHV4MW | https://m.media-amazon.com/images/I/51mRzPilrNL._AC_SL300_.jpg | ~66 EUR | verificado |
-| Logitech Lift | B07W4DGC27 | /dp/B07W4DGC27 | https://m.media-amazon.com/images/I/61OkuiCWbDL._AC_SL300_.jpg | ~48 EUR | verificado |
-| ProtoArc EM11 NL | B0D12PGGKK | /dp/B0D12PGGKK | https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg | ~27 EUR | verificado |
-| Trust Verto | B07FM2GLNQ | /dp/B07FM2GLNQ | https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg | ~20 EUR | verificado |
-| Anker AK-UBA Vertical | B00BIFNTMC | /dp/B00BIFNTMC | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | ~19 EUR | verificado |
-| Perixx PERIMICE-513 | B00GZIA2AE | /dp/B00GZIA2AE | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | ~18 EUR | verificado |
+| Logitech MX Vertical | B07FNHV4MW | /dp/B07FNHV4MW | https://m.media-amazon.com/images/I/61iiZ-gDYEL._AC_SL300_.jpg | ~60 EUR | verificado 2026-09-17 |
+| Logitech Lift | B07W4DGC27 | /dp/B07W4DGC27 | https://m.media-amazon.com/images/I/61IuKPhnVJL._AC_SL300_.jpg | ~50 EUR | verificado 2026-09-17 |
+| ProtoArc EM11 NL | B0D12PGGKK | /dp/B0D12PGGKK | https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg | — | verificado 2026-09-17 |
+| Trust Verto | B07FM2GLNQ | /dp/B07FM2GLNQ | https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg | — | verificado 2026-09-17 |
+| Anker AK-UBA Vertical | B00BIFNTMC | /dp/B00BIFNTMC | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | — | verificado 2026-09-17 |
+| Perixx PERIMICE-513 | B00GZIA2AE | /dp/B00GZIA2AE | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | — | verificado 2026-09-17 |
+
+### catálogo de ratones (src/content/productos/*.yaml)
+Cinco fichas ES+EN añadidas el 2026-09-17. Sin notas editoriales numéricas ni precios fijos en el YAML; precios y stock se consultan en Amazon.es.
+
+| Slug | ASIN | Imagen (300 px) | Variante verificada |
+|------|------|------------------|---------------------|
+| logitech-lift | B07W4DGC27 | 61IuKPhnVJL | Lift diestro gris |
+| logitech-mx-vertical | B07FNHV4MW | 61iiZ-gDYEL | MX Vertical gris |
+| logitech-mx-master-4 | B0FHHSZ8WM | 618Xy2oRcUL | MX Master 4 negro estándar |
+| logitech-signature-m650 | B07W6G822T | 6167BQLAieL | M650 talla pequeña/mediana |
+| lamzu-maya-x | B0DFGYHVPZ | 61dYQrHhkFL | MAYA X negro |
 
 ### mejor-teclado-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

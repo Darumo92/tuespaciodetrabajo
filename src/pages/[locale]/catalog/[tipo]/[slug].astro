@@ -37,9 +37,9 @@ const productSchema = {
   '@type': 'Product',
   name: displayName,
   brand: { '@type': 'Brand', name: producto.marca },
-  ...(producto.imagen ? { image: `${siteUrl}${producto.imagen}` } : {}),
+  ...(producto.imagen ? { image: new URL(producto.imagen, siteUrl).href } : {}),
   description: meta.description,
-  review: {
+  ...(nota == null ? {} : { review: {
     '@type': 'Review',
     author: { '@type': 'Person', name: 'David Rubio Mota' },
     publisher: { '@type': 'Organization', name: 'Tu Espacio de Trabajo' },
@@ -47,7 +47,7 @@ const productSchema = {
     ...(nota == null ? {} : {
       reviewRating: { '@type': 'Rating', ratingValue: String(nota), bestRating: '10', worstRating: '0' },
     }),
-  },
+  } }),
 };
 const breadcrumb = {
   '@context': 'https://schema.org',

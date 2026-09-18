@@ -1,0 +1,88 @@
+tipo: raton
+nombre: Logitech Lift
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/61IuKPhnVJL._AC_SL300_.jpg
+imagenAlt: Logitech Lift gris, ratón vertical para la mano derecha
+tramoPrecio: 2
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B07W4DGC27
+webOficial: https://www.logitech.com/es-es/shop/p/lift-vertical-ergonomic-mouse.910-006473
+idealPara: Manos pequeñas o medianas que buscan un vertical con clics discretos
+veredicto: El Logitech Lift combina formato vertical, clics silenciosos y cambio entre tres equipos. Comprueba su tamaño y lateralidad antes de elegir.
+resumenCompra:
+  mejorPara: Alternar entre el portátil de trabajo y el personal sin renunciar a un agarre vertical compacto.
+  evitarSi: Tienes la mano grande o buscas recarga por USB. Este modelo utiliza una pila AA.
+  alternativaDirecta: El MX Vertical es más largo y usa batería recargable; el M650 conserva una postura convencional.
+metodologia:
+  - Análisis documental de la ficha oficial de Logitech y de la variante gris para diestros vendida en Amazon.es, consultadas el 17 de septiembre de 2026.
+  - No he probado el Lift. Mi ratón de uso propio es un LAMZU MAYA X; no atribuyo al Lift resultados de salud ni una nota de comodidad.
+limitaciones:
+  - La versión Lift Left es un producto distinto. El enlace de esta ficha corresponde al modelo diestro.
+  - Logi Options+ permite personalizar funciones en Windows y macOS; no equivale a compatibilidad completa del software en Linux o iPadOS.
+paraQuienSi:
+  - Quien quiere probar un agarre vertical y tiene manos pequeñas o medianas, el perfil indicado por Logitech.
+  - Usuarios que necesitan Bluetooth y cambio entre hasta tres dispositivos.
+  - Espacios compartidos en los que se agradecen clics menos ruidosos.
+paraQuienNo:
+  - Quien quiere cargar el ratón con el mismo cable USB-C del móvil.
+  - Zurdos que estén mirando esta variante concreta.
+puntosFuertes:
+  - Ángulo de 57° y apoyo para el pulgar, con una carcasa más corta que la del MX Vertical.
+  - Bluetooth y receptor Logi Bolt incluido en la versión estándar.
+  - Easy-Switch para tres equipos y botones personalizables con Options+.
+  - Clics silenciosos y rueda SmartWheel.
+puntosDebiles:
+  - La pila AA se sustituye; el ratón no la recarga.
+  - La forma vertical ocupa más altura que un ratón convencional en una funda de transporte.
+fuenteSpecs: Logitech Lift, especificaciones oficiales y variante Amazon.es B07W4DGC27
+verificadoEn: '2026-09-17'
+fuentes:
+  - tipo: oficial
+    nombre: Logitech Lift — especificaciones y compatibilidad
+    url: https://www.logitech.com/es-es/shop/p/lift-vertical-ergonomic-mouse.910-006473
+    fechaConsulta: '2026-09-17'
+en:
+  nombreComercial: Logitech Lift
+  idealPara: Small to medium hands looking for a vertical mouse with quiet clicks
+  veredicto: The Logitech Lift pairs a vertical shape with quiet clicks and switching between three devices. Check the size and handedness before choosing it.
+  resumenCompra:
+    mejorPara: Switching between work and personal laptops with a compact vertical grip.
+    evitarSi: You have large hands or want USB charging. This model uses one AA battery.
+    alternativaDirecta: The MX Vertical is longer and rechargeable; the M650 keeps a conventional grip.
+  metodologia:
+    - Documentary assessment of Logitech's specifications and the right-handed graphite variant listed on Amazon Spain, checked on 17 September 2026.
+    - I have not tested the Lift. My own mouse is a LAMZU MAYA X; this profile makes no health claims or hands-on comfort ratings.
+  limitaciones:
+    - Lift Left is a separate variant. The linked model is right-handed.
+    - Options+ customization is available on Windows and macOS; basic device support on other systems does not include the same software features.
+  paraQuienSi:
+    - Small to medium hands, the size range Logitech recommends for the Lift.
+    - People who need Bluetooth and switching between up to three devices.
+    - Shared workspaces where quieter clicks are useful.
+  paraQuienNo:
+    - Anyone wanting to charge the mouse with a USB-C cable.
+    - Left-handed users considering this particular variant.
+  puntosFuertes:
+    - 57-degree grip and thumb rest in a shorter body than the MX Vertical.
+    - Bluetooth and an included Logi Bolt receiver in the standard version.
+    - Easy-Switch for three devices and Options+ button customization.
+    - Quiet clicks and a SmartWheel scroll wheel.
+  puntosDebiles:
+    - The AA battery must be replaced; the mouse cannot recharge it.
+    - A vertical body takes up more height in a laptop bag than a conventional mouse.
+specs:
+  tipo: raton
+  formato: vertical
+  mano: derecha
+  largoMm: 108
+  anchoMm: 70
+  altoMm: 71
+  pesoG: 125
+  bluetooth: true
+  receptor: Logi Bolt
+  cableDatos: false
+  multidispositivo: true
+  alimentacion: aa
+  clicSilencioso: true

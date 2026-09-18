@@ -3,6 +3,7 @@ import TarjetaProducto from './TarjetaProducto.astro';
 import FiltroPill from './FiltroPill.astro';
 import SelectorCta from '@/components/selector/SelectorCta.astro';
 import { getTipoConfig, GRUPOS_FILTRO } from '@/lib/tipos';
+import { mouseLabelsEn } from '@/lib/tipos-raton';
 import { claveData, opcionesMarca, filtrosVisibles, agruparFiltros, comparePath, localizedTipoSlug } from '@/lib/productos';
 import type { Producto } from '@/lib/productos';
 import { DEFAULT_LOCALE, type Locale } from '@/i18n/locales';
@@ -33,6 +34,7 @@ const grupoLabel = (g: (typeof grupos)[number]) => (isEn ? g.etiquetaEn : g.etiq
 const marcas = opcionesMarca(productos);
 
 const labelMap: Record<string, string> = {
+  ...mouseLabelsEn,
   'Precio máximo': 'Max price tier',
   'Marca': 'Brand',
   'Respaldo': 'Backrest',
