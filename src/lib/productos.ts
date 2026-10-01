@@ -66,6 +66,7 @@ export interface Producto {
   puntosDebiles: string[];
   fuenteSpecs: string;
   verificadoEn?: string;
+  historicalOfferContext?: boolean;
   calidadDatos?: {
     score: number | null;
     confianza: 'alto' | 'medio' | 'bajo' | null;
@@ -190,7 +191,7 @@ const ETIQUETAS: Record<Locale | 'fallback', Record<string, Record<string, strin
   'es-ES': {
     formato: { vertical: 'Vertical', convencional: 'Convencional' },
     mano: { derecha: 'Derecha', izquierda: 'Izquierda', ambas: 'Ambas' },
-    alimentacion: { aa: 'Pila AA', bateria: 'Batería recargable' },
+    alimentacion: { aa: 'Pila AA', aaa: 'Dos pilas AAA', bateria: 'Batería recargable' },
     lumbar: { fijo: 'Fijo', presion: 'Ajustable en presión', altura: 'Ajustable en altura', dinamico: 'Dinámico autoajustable', '5d': '5D ajustable' },
     reposabrazos: { ninguno: 'Ninguno', fijo: 'Fijos', '1d': '1D (altura)', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Abatibles' },
     respaldo: { malla: 'Malla', espuma: 'Espuma', mixto: 'Malla + cojín' },
@@ -198,7 +199,7 @@ const ETIQUETAS: Record<Locale | 'fallback', Record<string, Record<string, strin
   en: {
     formato: { vertical: 'Vertical', convencional: 'Conventional' },
     mano: { derecha: 'Right', izquierda: 'Left', ambas: 'Both' },
-    alimentacion: { aa: 'AA battery', bateria: 'Rechargeable battery' },
+    alimentacion: { aa: 'AA battery', aaa: 'Two AAA batteries', bateria: 'Rechargeable battery' },
     lumbar: { fijo: 'Fixed', presion: 'Pressure-adjustable', altura: 'Height-adjustable', dinamico: 'Dynamic self-adjusting', '5d': 'Adjustable 5D' },
     reposabrazos: { ninguno: 'None', fijo: 'Fixed', '1d': '1D height', '2d': '2D', '3d': '3D', '4d': '4D', abatibles: 'Flip-up' },
     respaldo: { malla: 'Mesh', espuma: 'Foam', mixto: 'Mesh + cushion' },

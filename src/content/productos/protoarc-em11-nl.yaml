@@ -1,0 +1,101 @@
+tipo: raton
+nombre: ProtoArc EM11 NL
+marca: ProtoArc
+imagen: https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg
+imagenAlt: ProtoArc EM11 NL negro, ratón vertical con rueda naranja y apoyo para el pulgar derecho
+tramoPrecio: 1
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B0D12PGGKK
+webOficial: https://www.protoarc.com/products/em11-nl-vertical-mouse
+idealPara: Manos pequeñas o medianas que alternan entre varios equipos
+veredicto: El ProtoArc EM11 NL alterna entre tres equipos y carga por USB-C. Pensado para manos pequeñas o medianas; el cambio de canal es manual.
+resumenCompra:
+  mejorPara: Cambiar entre tres equipos con dos canales Bluetooth y un receptor USB-A, si te encaja el tamaño indicado por ProtoArc.
+  evitarSi: Necesitas usarlo por cable, programar botones o usar avance y retroceso en macOS.
+  alternativaDirecta: El Trust Verto Wireless usa un receptor USB y dos pilas AAA, sin cambio Bluetooth entre equipos.
+  decisionRapida: Mide tu mano hasta la punta del dedo medio y comprueba el alcance de la rueda y los botones; el límite orientativo de ProtoArc ronda los 19 cm, no garantiza un ajuste cómodo.
+metodologia:
+  - Comparamos la ficha y la FAQ de ProtoArc con análisis independientes del EM11 NL, consultados el 30 de septiembre de 2026. No hemos probado el ratón ni medido el ruido de sus botones.
+limitaciones:
+  - Antes de comprar, confirma la variante EM11 NL del anuncio; el precio y las existencias actuales en Amazon.es no se han comprobado.
+  - La página oficial discrepa sobre la versión de Bluetooth; esta ficha no indica una versión concreta.
+  - Según la FAQ de ProtoArc, los botones de avance y retroceso no funcionan en macOS. El puerto USB-C es de carga y no se ha confirmado su uso para mover el cursor por cable.
+  - La variante EM11 NL no tiene iluminación RGB; la EM11 sin NL es un modelo diferente.
+  - ProtoArc describe como silenciosos los clics principales. Un análisis independiente percibió ruido en la rueda y los botones laterales; no supone una medición aplicable a todas las unidades.
+paraQuienSi:
+  - Quien cambia entre portátil, sobremesa y otro dispositivo y acepta pulsar el selector bajo el ratón para cambiar de canal.
+  - Manos pequeñas o medianas dentro del rango orientativo de ProtoArc (menos de unos 19 cm); comprueba que alcanzas rueda y botones sin forzar la mano.
+  - Quien prefiere recargar la batería en lugar de sustituir pilas.
+paraQuienNo:
+  - Quien necesita funcionamiento por cable USB, además de la carga.
+  - Quien necesita reasignar botones o espera que una rueda escalonada gire libremente.
+  - Quien necesita que todos los controles sean discretos en una sala compartida, pues el fabricante solo destaca los clics principales.
+puntosFuertes:
+  - Dos canales Bluetooth y receptor USB-A de 2,4 GHz para tres dispositivos, con cambio manual desde la base.
+  - Batería recargable de 500 mAh y carga mediante USB-C, según ProtoArc.
+  - Tres ajustes de sensibilidad publicados (1000, 1600 y 2400 DPI).
+  - Clics principales descritos como silenciosos por ProtoArc; un análisis del modelo muestra un hueco bajo la base para guardar el receptor.
+puntosDebiles:
+  - La conexión por USB-C para datos no está confirmada; no debe confundirse carga con uso por cable.
+  - La rueda tiene pasos perceptibles y no gira libremente, según la FAQ; un análisis señala que rueda y botones laterales se oyen más que los principales.
+fuenteSpecs: ProtoArc EM11 NL, página de producto y FAQ oficiales, consultadas el 2026-09-30
+verificadoEn: '2026-09-30'
+historicalOfferContext: true
+fuentes:
+  - tipo: oficial
+    nombre: ProtoArc EM11 NL, página de producto
+    url: https://www.protoarc.com/products/em11-nl-vertical-mouse
+    fechaConsulta: '2026-09-30'
+  - tipo: oficial
+    nombre: ProtoArc EM11 NL y EM11, preguntas frecuentes
+    url: https://www.protoarc.com/pages/faq-em11-nl-em11
+    fechaConsulta: '2026-09-30'
+en:
+  nombreComercial: ProtoArc EM11 NL
+  idealPara: Small to medium hands switching between several devices
+  veredicto: The ProtoArc EM11 NL switches between three devices and charges via USB-C. Aimed at small or medium hands; switching channels is manual.
+  resumenCompra:
+    mejorPara: Switching across three devices via two Bluetooth channels and a USB-A receiver, if ProtoArc's suggested size fits your hand.
+    evitarSi: You need wired use, programmable buttons or working forward and back buttons on macOS.
+    alternativaDirecta: The Trust Verto Wireless uses a USB receiver and two AAA batteries, without Bluetooth device switching.
+    decisionRapida: Measure your hand to the middle fingertip and check that the wheel and buttons are within reach. ProtoArc's roughly 19 cm guide is not a comfort guarantee.
+  metodologia:
+    - We compared ProtoArc's product page and FAQ with independent reviews of the EM11 NL, consulted on 30 September 2026. We have not tested the mouse or measured its button noise.
+  limitaciones:
+    - Before buying, confirm the EM11 NL variant; the current Amazon Spain listing, price and stock have not been verified.
+    - ProtoArc's page gives conflicting Bluetooth versions, so no specific version is stated here.
+    - ProtoArc's FAQ says the forward and back buttons do not work on macOS. USB-C is for charging; wired mouse operation has not been confirmed.
+    - EM11 NL has no RGB lighting; the EM11 without NL is a different model.
+    - ProtoArc calls the main clicks quiet. One independent reviewer found the wheel and side buttons audible; this is not a measurement of every unit.
+  paraQuienSi:
+    - People moving between a work laptop, desktop and another device who are happy to press the switch under the mouse to change channels.
+    - Small or medium hands within ProtoArc's indicative under-19 cm guide; check whether you can reach the wheel and buttons without stretching.
+    - People who prefer charging a battery to replacing disposable cells.
+  paraQuienNo:
+    - Anyone who needs wired USB operation rather than charging alone.
+    - People who need button remapping or a free-spinning scroll wheel.
+    - Anyone needing every control to be quiet in a shared room; the manufacturer's quiet-click claim concerns the main buttons.
+  puntosFuertes:
+    - Two Bluetooth channels and a 2.4 GHz USB-A receiver for three devices, selected manually from the underside.
+    - A 500 mAh rechargeable battery and USB-C charging, according to ProtoArc.
+    - Three published sensitivity settings at 1000, 1600 and 2400 DPI.
+    - ProtoArc describes the main clicks as quiet; a review of this model shows an underside slot for storing the receiver.
+  puntosDebiles:
+    - USB-C data operation is not confirmed; charging does not establish wired mouse use.
+    - The wheel has distinct steps rather than free spin, according to the FAQ; one reviewer found the wheel and side buttons more audible than the main clicks.
+specs:
+  tipo: raton
+  formato: vertical
+  mano: derecha
+  largoMm: 138
+  anchoMm: 69.2
+  altoMm: 68.1
+  pesoG: 112
+  bluetooth: true
+  receptor: USB-A 2.4 GHz
+  cableDatos: null
+  multidispositivo: true
+  alimentacion: bateria
+  clicSilencioso: true

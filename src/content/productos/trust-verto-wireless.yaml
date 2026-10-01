@@ -1,0 +1,97 @@
+tipo: raton
+nombre: Trust Verto Wireless
+marca: Trust
+imagen: https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg
+imagenAlt: Trust Verto Wireless negro, ratón vertical con apoyo para el pulgar derecho
+tramoPrecio: 1
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B07FM2GLNQ
+webOficial: https://www.trust.com/en/product/22879-verto-wireless-vertical-ergonomic-mouse
+idealPara: Un equipo con puerto USB libre y preferencia por pilas sustituibles
+veredicto: El Trust Verto Wireless 22879 usa receptor USB y dos pilas AAA. Trust no ofrece recambio del receptor; comprueba el alcance de la rueda y los botones.
+resumenCompra:
+  mejorPara: Un puesto fijo con USB disponible donde importa más sustituir pilas que alternar entre equipos.
+  evitarSi: Necesitas Bluetooth o reasignar botones con software oficial.
+  alternativaDirecta: El ProtoArc EM11 NL ofrece dos canales Bluetooth y batería recargable, además de receptor USB-A.
+  decisionRapida: Comprueba que llegas a la rueda y los botones laterales con tu agarre habitual. Si necesitas cambiar de DPI sin mirar el cursor, este modelo no muestra el nivel seleccionado.
+metodologia:
+  - Revisamos la ficha y el soporte oficiales del Trust 22879 y comentarios limitados de compradores de ese modelo, consultados el 30 de septiembre de 2026. No hemos probado el ratón ni medido su duración.
+limitaciones:
+  - Antes de comprar, confirma que el anuncio corresponde al modelo inalámbrico 22879; el precio y las existencias actuales en Amazon.es no se han comprobado.
+  - Trust no ofrece recambio para el receptor emparejado del 22879; guárdalo con cuidado al transportar el ratón.
+  - La alimentación es mediante dos pilas AAA; no se ha confirmado si vienen incluidas en la oferta enlazada.
+  - No se han confirmado medidas ni peso en una ficha legible para esta variante. Se dejan sin dato, igual que una función de clic silencioso.
+  - Algunos compradores del modelo 22879 mencionan dificultades para alcanzar rueda o botones con manos pequeñas. Son casos individuales, no un límite de talla verificado.
+paraQuienSi:
+  - Quien utiliza normalmente un solo equipo con puerto USB y puede guardar el receptor cuando mueve el ratón.
+  - Quien quiere ajustar la sensibilidad entre 800, 1200 y 1600 DPI.
+  - Quien prefiere sustituir dos pilas AAA y valora un interruptor para apagar el ratón cuando no lo usa.
+paraQuienNo:
+  - Quien necesita conexión Bluetooth sin receptor.
+  - Quien prefiere recargar por USB en lugar de reemplazar dos pilas AAA.
+  - Quien necesita reasignación de botones respaldada por Trust o un indicador visible del nivel de DPI.
+puntosFuertes:
+  - Agarre vertical de 60° publicado por Trust para el modelo 22879.
+  - Receptor USB de 2,4 GHz que se puede guardar en el ratón e interruptor de encendido y apagado.
+  - Botón para alternar entre tres niveles de DPI y dos botones laterales.
+puntosDebiles:
+  - Depende de un puerto USB para el receptor; no se ha documentado Bluetooth para este modelo.
+  - Las dos pilas AAA se sustituyen, no se recargan en el ratón.
+  - No hay indicador visual del DPI elegido ni herramienta oficial de Trust para personalizar los botones.
+fuenteSpecs: Trust Verto Wireless 22879, página oficial consultada el 2026-09-30
+verificadoEn: '2026-09-30'
+historicalOfferContext: true
+fuentes:
+  - tipo: oficial
+    nombre: Trust Verto Wireless, modelo 22879
+    url: https://www.trust.com/en/product/22879-verto-wireless-vertical-ergonomic-mouse
+    fechaConsulta: '2026-09-30'
+en:
+  nombreComercial: Trust Verto Wireless
+  idealPara: A computer with a spare USB port and a preference for replaceable batteries
+  veredicto: The Trust Verto Wireless 22879 uses a USB receiver and two AAA batteries. Trust offers no replacement receiver; check wheel and thumb-button reach.
+  resumenCompra:
+    mejorPara: A mostly fixed computer with a spare USB port where replaceable batteries matter more than switching devices.
+    evitarSi: You need Bluetooth or official button-remapping software.
+    alternativaDirecta: The ProtoArc EM11 NL has two Bluetooth channels and a rechargeable battery, as well as a USB-A receiver.
+    decisionRapida: Check that the wheel and thumb buttons are within reach with your usual grip. The DPI button has no visual indication of the selected setting.
+  metodologia:
+    - We checked Trust's model 22879 product and support pages alongside limited purchaser comments for the same model, consulted on 30 September 2026. We have not tested the mouse or measured its endurance.
+  limitaciones:
+    - Before buying, confirm the wireless model 22879; the current Amazon Spain listing, price and stock have not been verified.
+    - Trust offers no replacement for model 22879's paired receiver; keep it safe when carrying the mouse.
+    - The mouse runs on two AAA batteries; whether they are included with the linked listing is unconfirmed.
+    - Dimensions and weight were not confirmed from a readable specification for this variant. They are left unknown, as is any quiet-click feature.
+    - A few purchasers of model 22879 report difficulty reaching the wheel or thumb buttons with small hands. These are individual reports, not a verified size cutoff.
+  paraQuienSi:
+    - People using one computer with a spare USB port who can keep track of the receiver when moving the mouse.
+    - People who want to select between 800, 1200 and 1600 DPI.
+    - People who prefer replacing two AAA batteries and want an on/off switch for storage.
+  paraQuienNo:
+    - Anyone needing Bluetooth without a receiver.
+    - People who prefer USB charging to replacing two AAA batteries.
+    - Anyone needing Trust-supported button remapping or a visible indicator for the selected DPI.
+  puntosFuertes:
+    - Trust lists a 60-degree vertical grip for model 22879.
+    - The 2.4 GHz USB receiver can be stored inside the mouse; it also has an on/off switch.
+    - A button selects between three DPI settings; there are also two thumb buttons.
+  puntosDebiles:
+    - The receiver needs a USB port; Bluetooth is not documented for this model.
+    - The two AAA batteries must be replaced rather than recharged in the mouse.
+    - There is no visual DPI selection indicator or official Trust utility for remapping buttons.
+specs:
+  tipo: raton
+  formato: vertical
+  mano: derecha
+  largoMm: null
+  anchoMm: null
+  altoMm: null
+  pesoG: null
+  bluetooth: false
+  receptor: USB 2.4 GHz
+  cableDatos: false
+  multidispositivo: false
+  alimentacion: aaa
+  clicSilencioso: null

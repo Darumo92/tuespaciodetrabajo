@@ -3,7 +3,12 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { load } from 'js-yaml';
 
 const site = 'https://tuespaciodetrabajo.com';
-const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x'];
+const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless'];
+const newImages = {
+  'protoarc-em11-nl': 'https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg',
+  'trust-verto-wireless': 'https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg',
+};
+const newAsins = { 'protoarc-em11-nl': 'B0D12PGGKK', 'trust-verto-wireless': 'B07FM2GLNQ' };
 const bases = ['/catalogo/raton/', '/en/catalog/mice/'];
 const sitemap = readFileSync('dist/sitemap-0.xml', 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
@@ -19,6 +24,20 @@ for (const base of bases) {
     const pair = bases.map(b => site + b + (slug ? slug + '/' : ''));
     for (const target of pair) assert.ok(html.includes(`href="${target}"`), route + ' alternate ' + target);
     assert.ok(!html.includes('-vs-'), route + ' must not link to generated mouse pairs');
+    if (slug in newImages) {
+      assert.ok(html.includes(newImages[slug]), route + ' recorded product image');
+      assert.ok(html.includes(`https://www.amazon.es/dp/${newAsins[slug]}?tag=tuespaciodet-21`.replace('&', '&amp;')),
+        route + ' historical ASIN CTA');
+      assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|priceCurrency|lowPrice)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no structured current offer claims');
+      assert.ok(html.includes('Amazon Spain') || html.includes('Amazon.es'), route + ' offer caveat');
+      const hero = html.match(/<header class="ficha-hero"[\s\S]*?<\/header>/)?.[0];
+      assert.ok(hero, route + ' hero present');
+      assert.ok(hero.includes(base.startsWith('/en/') ? 'Indicative historical tier:' : 'Tramo histórico orientativo:'), route + ' historical price tier');
+      assert.ok(hero.includes(base.startsWith('/en/') ? 'Specs checked 2026-09-30' : 'Especificaciones consultadas 2026-09-30'), route + ' specs date');
+      assert.ok(hero.includes(base.startsWith('/en/') ? 'check the exact model, price and availability on Amazon Spain' : 'comprueba el modelo, el precio y la disponibilidad en Amazon.es'), route + ' buyer-facing offer notice');
+      assert.ok(hero.includes(base.startsWith('/en/') ? 'we have not verified the current offer' : 'no hemos verificado la oferta actual'), route + ' unverified offer disclosure');
+      assert.ok(hero.indexOf('ficha-oferta-contexto') < hero.indexOf('data-cta-kind="amazon-product"'), route + ' notice precedes CTA');
+    }
     for (const m of html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
       const schema = JSON.parse(m[1]);
       if (schema['@type'] === 'Product') {
@@ -55,4 +74,4 @@ for (const file of ['src/content/articulos/mejor-raton-vertical-ergonomico.mdx',
   }
   console.log(`${file}: ${words} words, ${affiliateCount} affiliate links, ${meta.faqs.length} FAQs`);
 }
-console.log('OK: 10 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');
+console.log('OK: 14 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');

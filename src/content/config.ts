@@ -150,7 +150,7 @@ const specsRaton = z.object({
   receptor: z.string().nullable().default(null),
   cableDatos: z.boolean().nullable().default(null),
   multidispositivo: z.boolean().nullable().default(null),
-  alimentacion: z.enum(['aa', 'bateria']).nullable().default(null),
+  alimentacion: z.enum(['aa', 'aaa', 'bateria']).nullable().default(null),
   clicSilencioso: z.boolean().nullable().default(null),
 });
 
@@ -218,6 +218,7 @@ const productos = defineCollection({
     puntosDebiles: z.array(z.string()).default([]),
     fuenteSpecs: z.string(),
     verificadoEn: z.string().optional(),
+    historicalOfferContext: z.boolean().default(false),
     calidadDatos: z.object({
       score: z.number().int().min(0).max(100).nullable().default(null),
       confianza: z.enum(['alto', 'medio', 'bajo']).nullable().default(null),

@@ -121,8 +121,8 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Anker AK-UBA Vertical | B00BIFNTMC | /dp/B00BIFNTMC | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | — | verificado 2026-09-17 |
 | Perixx PERIMICE-513 | B00GZIA2AE | /dp/B00GZIA2AE | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | — | verificado 2026-09-17 |
 
-### catálogo de ratones (src/content/productos/*.yaml)
-Cinco fichas ES+EN añadidas el 2026-09-17. Sin notas editoriales numéricas ni precios fijos en el YAML; precios y stock se consultan en Amazon.es.
+### Catálogo de ratones (src/content/productos/*.yaml)
+Cinco fichas ES+EN añadidas el 2026-09-17 y otras dos preparadas el 2026-09-30. Sin notas editoriales numéricas ni precios fijos en el YAML. Los enlaces de las dos fichas nuevas usan ASINs históricos: no se han confirmado la oferta, la variante ni las existencias actuales en Amazon.es. Revisión humana y comprobación comercial pendientes antes de publicar.
 
 | Slug | ASIN | Imagen (300 px) | Variante verificada |
 |------|------|------------------|---------------------|
@@ -131,6 +131,8 @@ Cinco fichas ES+EN añadidas el 2026-09-17. Sin notas editoriales numéricas ni 
 | logitech-mx-master-4 | B0FHHSZ8WM | 618Xy2oRcUL | MX Master 4 negro estándar |
 | logitech-signature-m650 | B07W6G822T | 6167BQLAieL | M650 talla pequeña/mediana |
 | lamzu-maya-x | B0DFGYHVPZ | 61dYQrHhkFL | MAYA X negro |
+| protoarc-em11-nl | B0D12PGGKK | 511qcVCPKbL | Imagen negra contrastada con ProtoArc el 2026-09-30; oferta ES actual no confirmada |
+| trust-verto-wireless | B07FM2GLNQ | 61QNE816-HL | Imagen contrastada con Trust 22879 el 2026-09-30; oferta ES actual no confirmada |
 
 ### mejor-teclado-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |
