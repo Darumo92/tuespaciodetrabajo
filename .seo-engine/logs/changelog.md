@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-09-30
+**Action:** Extend the bilingual mouse catalog with two documentary profiles
+**Files:** src/content/productos/protoarc-em11-nl.yaml, src/content/productos/trust-verto-wireless.yaml, src/content/config.ts, src/lib/productos.ts, src/lib/tipos-raton.ts, mouse catalog tests and validator, PRODUCTOS.md, docs/agent-context/project_ratones_catalog_state.md
+**Summary:** ProtoArc EM11 NL and Trust Verto Wireless 22879 join the existing five mice with Spanish and English text, official sources, unknown specifications left null and dated limits on historically recorded Amazon ASIN links. Two AAA cells are represented separately from one AA cell. Both new heroes distinguish historical price tiers and specification dates from unverified retailer offers. The ES/EN mouse comparisons no longer claim Trust's AAA cells are included and link to the new profiles. Current Amazon Spain offers and exact variants remain unconfirmed; human review is required before publication.
+**Triggered by:** user (two ES+EN mouse profiles with commercial CTAs)
+
 ## 2026-09-18
 **Action:** Catálogo de ratones implementado (primer lote)
 **Files:** src/content/config.ts, src/lib/tipos.ts, src/lib/tipos-raton.ts, src/lib/productos.ts, src/lib/selector/config-ratones.ts, 5× src/content/productos/*.yaml, componentes de ficha/catálogo/comparador, páginas de catálogo/selector/tools, comparativa ES+EN, scripts/validate-ratones-build.mjs, tests

@@ -29,7 +29,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Auditoría paridad contenido EN](project_english_localization_audit.md) — Refactor i18n EN completado 03 jul 2026: 30/30 MDX revisados, ratios EN/ES 90%-116%, calculadora EN limpiada.
 - [Estado catálogo de sillas](../research/sillas/ESTADO.md) — Handoff vivo; leer este archivo para conocer cifras, API y siguiente lote actuales.
 - [Estado catálogo de escritorios](project_escritorios_catalog_state.md) — Handoff vivo del catálogo de escritorios elevables.
-- [Estado catálogo de ratones](project_ratones_catalog_state.md) — Apertura aprobada 17 sep: cinco candidatos verificados en Amazon.es; integración concreta pendiente. API bloqueada por elegibilidad, comprobación manual disponible.
+- [Estado catálogo de ratones](project_ratones_catalog_state.md) — Catálogo ES+EN integrado; dos fichas nuevas ProtoArc y Trust preparadas en rama para revisión editorial. La API Amazon sigue bloqueada por elegibilidad y la oferta actual de esos dos ASIN no está confirmada.
 
 ## Histórico — no ejecutar como plan vigente
 

@@ -1,5 +1,47 @@
 # Catálogo de ratones — primer lote
 
+## Ampliación 2026-09-30 — dos fichas ES+EN en revisión
+
+ProtoArc EM11 NL y Trust Verto Wireless (modelo 22879) se añaden al catálogo
+existente, hasta siete ratones y catorce fichas localizadas. El selector conserva
+cuatro preguntas y no se generan pares estáticos ni notas editoriales numéricas.
+Las fichas se basan en páginas oficiales y en imágenes registradas comparadas
+visualmente con las oficiales; no son pruebas de uso. El esquema distingue las
+dos pilas AAA de Trust de una pila AA. Bluetooth y USB-C del ProtoArc no implican
+uso por cable: USB-C es para cargar, y los botones laterales no funcionan en macOS.
+
+El usuario pidió mantener CTA comercial con los ASINs históricos B0D12PGGKK y
+B07FM2GLNQ, aunque la oferta, la variante y la disponibilidad actuales de
+Amazon.es no pudieron confirmarse. Tampoco se han confirmado precios actuales
+ni si las pilas AAA de Trust están incluidas. Revisar ambas ofertas y el texto
+humano antes de publicar. El registro independiente `product-offers.json` ya
+estaba vacío y caducado antes de estas dos fichas: `validate:offers` no debe
+considerarse aprobado si sigue fallando.
+
+## Internal source ledger — 2026-09-30 buyer guidance
+
+This ledger supports only the new ProtoArc EM11 NL and black Trust 22879
+profiles. Manufacturer statements are attributed, and individual observations
+are not treated as a measured rate or universal fit guarantee. Consultation date
+for every row: **2026-09-30**. No hands-on testing was performed by this site.
+
+| Claim used in ES/EN | Exact source URL | Confidence / scope |
+|---|---|---|
+| ProtoArc targets small/medium hands under 7.5 in (about 19 cm), describes quiet primary clicks, three devices and USB-C charging. | https://www.protoarc.com/products/em11-nl-vertical-mouse | High for the manufacturer's stated design target and features; not an individual fit or sound measurement. |
+| ProtoArc EM11 NL wheel is stepped, side buttons cannot be programmed and forward/back do not function on macOS; NL lacks the EM11's RGB. | https://www.protoarc.com/pages/faq-em11-nl-em11 | High for official support statements about the named models. |
+| EM11 NL has an underside channel switch and receiver-storage slot; reviewer heard wheel/side buttons more than main clicks. | https://www.yugatech.com/gadget-reviews/protoarc-em11-nl-vertical-ergonomic-mouse-review/ | Medium for controls; low for one reviewer's subjective sound impression, not measured or universal. |
+| EM11 NL switches between two Bluetooth channels and USB receiver from its underside; Mac browser forward/back limitation corroborated. | https://appleinsider.com/articles/25/08/05/protoarc-em11-nl-vertical-mouse-review-a-low-cost-step-to-an-ergonomic-workspace | Medium, one hands-on account consistent with official FAQ; its adaptation story is not generalized. |
+| Trust black 22879 lists 60-degree shape, adjustable 800/1200/1600 DPI, storable USB receiver and on/off switch. | https://www.trust.com/en/product/22879-verto-wireless-vertical-ergonomic-mouse | High for model-specific manufacturer specifications, not comfort outcomes. |
+| Trust 22879 receiver is uniquely paired without an official replacement; no supported button-remap utility; DPI selection has no visual indicator; standby has no stated delay. | https://support.trust.com/en/support/solutions/articles/9000240080-verto-ergonomic-wireless-mouse-22879 | High for official model-specific support policy; avoid third-party remap guarantees and numeric standby claims. |
+| Black Trust model 22879: individual buyers mention wheel/thumb-button reach with small hands. | https://www.ldlc.com/en/product/PB00251115.html | Low: isolated translated purchaser reviews; prompts a fit check, not a size threshold or failure rate. |
+| Trust model 22879 listing and purchaser impression mention size; its power data conflicts internally with the two-AAA requirement. | https://www.coolblue.nl/en/product/816621/trust-verto-wireless-ergonomic-mouse.html | Low for fit; conflicting rechargeable/AAA listing fields are excluded from product claims. |
+
+Excluded from both profiles: disputed ProtoArc Bluetooth version, standby as
+battery life, fixed adaptation time, health relief, broad reliability patterns,
+Trust weight or batteries-in-box assertions, white Trust variants, and any
+current Amazon.es offer/stock inference. Exact-model Reddit posts were not
+available as verifiable evidence.
+
 ## Estado 2026-09-18 — implementado y verificado en local
 
 El usuario aprobó cinco productos e integración completa. Implementación terminada:
