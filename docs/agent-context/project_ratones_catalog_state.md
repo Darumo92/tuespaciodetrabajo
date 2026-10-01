@@ -1,6 +1,6 @@
 # Catálogo de ratones — primer lote
 
-## Ampliación 2026-09-30 — dos fichas ES+EN en revisión
+## Ampliación 2026-09-30 — dos fichas ES+EN con vista previa humana aceptada
 
 ProtoArc EM11 NL y Trust Verto Wireless (modelo 22879) se añaden al catálogo
 existente, hasta siete ratones y catorce fichas localizadas. El selector conserva
@@ -13,8 +13,11 @@ uso por cable: USB-C es para cargar, y los botones laterales no funcionan en mac
 El usuario pidió mantener CTA comercial con los ASINs históricos B0D12PGGKK y
 B07FM2GLNQ, aunque la oferta, la variante y la disponibilidad actuales de
 Amazon.es no pudieron confirmarse. Tampoco se han confirmado precios actuales
-ni si las pilas AAA de Trust están incluidas. Revisar ambas ofertas y el texto
-humano antes de publicar. El registro independiente `product-offers.json` ya
+ni si las pilas AAA de Trust están incluidas. La vista previa humana se revisó
+y el usuario pidió subir los cambios a main; la verificación comercial de ambas
+ofertas sigue pendiente y las fichas advierten de esa incertidumbre junto al
+CTA. El push a main aún no se ha hecho: sigue pendiente de autorización
+explícita de credenciales/sesión remota. El registro independiente `product-offers.json` ya
 estaba vacío y caducado antes de estas dos fichas: `validate:offers` no debe
 considerarse aprobado si sigue fallando.
 
