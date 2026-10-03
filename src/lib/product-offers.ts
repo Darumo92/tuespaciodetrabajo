@@ -19,8 +19,9 @@ export interface MarketOffer {
 }
 
 export interface ProductOffersFile {
+  defaultStatus?: 'unaudited';
   updatedAt: string;
-  products: Record<string, Partial<Record<OfferMarket, MarketOffer>>>;
+  products: Record<string, Partial<Record<OfferMarket, MarketOffer | { status: 'unaudited' }>>>;
 }
 
 export interface GetProductOfferOptions {
@@ -30,6 +31,7 @@ export interface GetProductOfferOptions {
 
 const MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
 const SOURCE_TYPES: OfferSourceType[] = ['amazon', 'official', 'distributor', 'retailer'];
+const OFFER_KEYS = ['status', 'priceAmount', 'currency', 'url', 'evidenceUrl', 'seller', 'sourceType', 'condition', 'checkedAt', 'attempts'];
 const ISO_DATE_TIME = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
 
 function isHttpUrl(value: unknown): value is string {
@@ -71,6 +73,7 @@ export function isUsableProductOffer(
   if (!offer || typeof offer !== 'object' || Array.isArray(offer)) return false;
 
   const value = offer as Record<string, unknown>;
+  if (Object.keys(value).some((key) => !OFFER_KEYS.includes(key))) return false;
   if (value.status !== 'available') return false;
   if (typeof value.priceAmount !== 'number' || !Number.isFinite(value.priceAmount) || value.priceAmount <= 0) return false;
   if (value.currency !== expectedCurrency) return false;

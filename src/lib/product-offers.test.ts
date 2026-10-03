@@ -133,6 +133,17 @@ describe('getProductOffer', () => {
 });
 
 describe('isUsableProductOffer', () => {
+  it('never turns missing or explicit unaudited markets into usable prices', () => {
+    expect(getProductOffer('demo', 'es-ES', { data: registry({ status: 'unaudited' }), now: NOW })).toBeNull();
+    expect(getProductOffer('demo', 'es-ES', { data: registry(undefined), now: NOW })).toBeNull();
+    expect(isUsableProductOffer({ ...availableOffer(), status: 'unaudited' }, 'EUR', NOW)).toBe(false);
+  });
+
+  it('rejects unsupported condition and unknown commercial fields', () => {
+    expect(isUsableProductOffer({ ...availableOffer(), condition: 'used' }, 'EUR', NOW)).toBe(false);
+    expect(isUsableProductOffer({ ...availableOffer(), availability: 'claimed' }, 'EUR', NOW)).toBe(false);
+  });
+
   it('rejects malformed runtime records', () => {
     expect(isUsableProductOffer({ ...availableOffer(), seller: '' }, 'EUR', NOW)).toBe(false);
     expect(isUsableProductOffer({ ...availableOffer(), checkedAt: 'not-a-date' }, 'EUR', NOW)).toBe(false);

@@ -40,6 +40,7 @@ function unavailableOffer(currency: 'EUR' | 'USD', checkedAt: string) {
 }
 
 interface RegistryOverrides {
+  coverage?: boolean;
   updatedAt?: string;
   root?: Record<string, unknown>;
   product?: Record<string, unknown>;
@@ -63,7 +64,7 @@ async function runValidator(esOffer: Record<string, unknown>, overrides: Registr
     ...overrides.root,
   }));
 
-  return spawnSync(process.execPath, [VALIDATOR], {
+  return spawnSync(process.execPath, [VALIDATOR, ...(overrides.coverage ? ['--coverage'] : [])], {
     cwd: root,
     encoding: 'utf8',
     env: { ...process.env, PRODUCT_OFFERS_NOW: NOW },
@@ -92,6 +93,7 @@ describe('validate-product-offers freshness', () => {
 
     expect(result.status).toBe(1);
     expect(result.stderr).toContain('available tiene checkedAt de mas de 30 dias');
+    expect(result.stdout).toContain('ES auditados: 0/1');
   });
 
   it('rejects an available offer checked in the future', async () => {
@@ -128,13 +130,12 @@ describe('validate-product-offers freshness', () => {
     expect(result.status).toBe(0);
   });
 
-  it('rejects registry updatedAt more than 30 days ago', async () => {
+  it('does not treat an old maintenance timestamp as commercial freshness', async () => {
     const result = await runValidator(availableOffer('EUR', NOW), {
       updatedAt: '2026-06-10T11:59:59.999Z',
     });
 
-    expect(result.status).toBe(1);
-    expect(result.stderr).toContain('product-offers.json: updatedAt tiene mas de 30 dias');
+    expect(result.status).toBe(0);
   });
 
   it('rejects registry updatedAt in the future', async () => {
@@ -185,6 +186,79 @@ describe('validate-product-offers exact keys', () => {
 });
 
 describe('validate-product-offers representative schema rules', () => {
+  it('accepts an empty registry with an honest unaudited default and pending counts', async () => {
+    const result = await runValidator({}, {
+      updatedAt: '2026-01-01T00:00:00.000Z',
+      root: { defaultStatus: 'unaudited', products: {} },
+    });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain('ES auditados: 0/1');
+    expect(result.stdout).toContain('US auditados: 0/1');
+    expect(result.stdout).toContain('Pendientes sin auditoria: 2');
+    expect(result.stdout).toContain('estructura valida; no acredita cobertura comercial');
+  });
+
+  it('fails strict coverage for the same missing audits', async () => {
+    const result = await runValidator({}, { coverage: true, root: { products: {} } });
+    expect(result.status).toBe(1);
+    expect(result.stderr).toContain('demo.ES: falta auditoria');
+    expect(result.stderr).toContain('demo.US: falta auditoria');
+  });
+
+  it('counts a partial market as pending, not unavailable or audited', async () => {
+    const result = await runValidator(availableOffer('EUR', NOW), {
+      root: { products: { demo: { ES: availableOffer('EUR', NOW) } } },
+    });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain('ES auditados: 1/1');
+    expect(result.stdout).toContain('US auditados: 0/1');
+    expect(result.stdout).toContain('Pendientes sin auditoria: 1');
+  });
+
+  it('accepts explicit unaudited records but fails their strict coverage', async () => {
+    const result = await runValidator({ status: 'unaudited' });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain('ES auditados: 0/1');
+    const strict = await runValidator({ status: 'unaudited' }, { coverage: true });
+    expect(strict.status).toBe(1);
+    expect(strict.stderr).toContain('demo.ES: falta auditoria');
+  });
+
+  it('accepts complete strict coverage including evidenced unavailability', async () => {
+    const result = await runValidator(unavailableOffer('EUR', NOW), { coverage: true });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain('ES auditados: 1/1');
+    expect(result.stdout).toContain('Pendientes sin auditoria: 0');
+    expect(result.stdout).toContain('cobertura comercial completa');
+  });
+
+  it('rejects a default that pretends missing markets are unavailable', async () => {
+    const result = await runValidator(availableOffer('EUR', NOW), { root: { defaultStatus: 'unavailable' } });
+    expect(result.status).toBe(1);
+    expect(result.stderr).toContain('defaultStatus debe ser unaudited');
+  });
+
+  it.each(['priceAmount', 'currency', 'seller', 'checkedAt', 'evidenceUrl', 'attempts', 'availability'])(
+    'rejects unaudited records carrying %s claims', async (field) => {
+      const claims: Record<string, unknown> = availableOffer('EUR', NOW);
+      const result = await runValidator({ status: 'unaudited', [field]: claims[field] ?? 'claimed' });
+      expect(result.status).toBe(1);
+      expect(result.stderr).toContain(`products.demo.ES.${field}: clave desconocida`);
+    },
+  );
+
+  it('rejects malformed product records rather than counting them as unknown', async () => {
+    const result = await runValidator({}, { root: { products: { demo: null } } });
+    expect(result.status).toBe(1);
+    expect(result.stderr).toContain('demo: registro de producto invalido');
+  });
+
+  it('rejects unsupported conditions even with fresh maintenance dates', async () => {
+    const result = await runValidator({ ...availableOffer('EUR', NOW), condition: 'used' });
+    expect(result.status).toBe(1);
+    expect(result.stderr).toContain('condition new');
+  });
+
   it('rejects the wrong market currency', async () => {
     const result = await runValidator(availableOffer('USD', NOW));
 

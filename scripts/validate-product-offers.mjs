@@ -7,7 +7,8 @@ const registryPath = path.join(root, 'src/data/product-offers.json');
 const markets = ['ES', 'US'];
 const currencies = { ES: 'EUR', US: 'USD' };
 const sourceTypes = ['amazon', 'official', 'distributor', 'retailer'];
-const rootKeys = ['updatedAt', 'products'];
+const rootKeys = ['updatedAt', 'defaultStatus', 'products'];
+const requireCoverage = process.argv.includes('--coverage');
 const marketRecordKeys = [
   'status',
   'priceAmount',
@@ -87,6 +88,11 @@ function validateMarketOffer(record, market, label, pathLabel) {
     errors.push(`${label}: registro de mercado invalido`);
     return;
   }
+  if (record.status === 'unaudited') {
+    // Unknown is not an attempted-unavailable offer, and carries no commercial claims.
+    rejectUnknownKeys(record, ['status'], pathLabel);
+    return;
+  }
   rejectUnknownKeys(record, marketRecordKeys, pathLabel);
   if (record.currency !== currencies[market]) {
     errors.push(`${label}: currency debe ser ${currencies[market]}`);
@@ -120,7 +126,7 @@ function validateMarketOffer(record, market, label, pathLabel) {
     return;
   }
 
-  errors.push(`${label}: status debe ser available o unavailable`);
+  errors.push(`${label}: status debe ser available, unavailable o unaudited`);
 }
 
 const productFiles = (await fs.readdir(productsDir)).filter((file) => /\.(?:ya?ml|json)$/.test(file));
@@ -144,12 +150,13 @@ if (!isObject(registry)) {
   registry = {};
 }
 rejectUnknownKeys(registry, rootKeys, 'product-offers.json');
+if ('defaultStatus' in registry && registry.defaultStatus !== 'unaudited') {
+  errors.push('product-offers.json: defaultStatus debe ser unaudited');
+}
 if (!isIsoDateTime(registry.updatedAt)) {
   errors.push('product-offers.json: updatedAt debe ser fecha ISO valida');
 } else if (Number.isFinite(nowTime) && Date.parse(registry.updatedAt) > nowTime) {
   errors.push('product-offers.json: updatedAt no puede estar en el futuro');
-} else if (Number.isFinite(nowTime) && nowTime - Date.parse(registry.updatedAt) > maxAgeMs) {
-  errors.push('product-offers.json: updatedAt tiene mas de 30 dias');
 }
 if (!isObject(registry.products)) {
   errors.push('product-offers.json: products debe ser un objeto');
@@ -158,15 +165,13 @@ if (!isObject(registry.products)) {
 
 let esAudited = 0;
 let usAudited = 0;
+let pending = 0;
+const audited = new Set();
 
-for (const slug of Object.keys(registry.products)) {
+for (const [slug, product] of Object.entries(registry.products)) {
   if (!slugs.has(slug)) errors.push(`${slug}: slug desconocido`);
-}
-
-for (const slug of slugs) {
-  const product = registry.products[slug];
   if (!isObject(product)) {
-    errors.push(`${slug}: falta registro de ofertas ES/US`);
+    errors.push(`${slug}: registro de producto invalido`);
     continue;
   }
 
@@ -174,20 +179,35 @@ for (const slug of slugs) {
     if (!markets.includes(market)) errors.push(`products.${slug}.${market}: clave desconocida`);
   }
 
+  for (const market of markets.filter((market) => market in product)) {
+    const before = errors.length;
+    validateMarketOffer(product[market], market, `${slug}.${market}`, `products.${slug}.${market}`);
+    if (before === errors.length && product[market].status !== 'unaudited') {
+      audited.add(`${slug}.${market}`);
+    }
+  }
+}
+
+for (const slug of slugs) {
   for (const market of markets) {
-    if (!(market in product)) {
-      errors.push(`${slug}: falta mercado ${market}`);
+    const record = registry.products[slug]?.[market];
+    if (record === undefined || (isObject(record) && record.status === 'unaudited')) {
+      pending += 1;
+      if (requireCoverage) errors.push(`${slug}.${market}: falta auditoria`);
       continue;
     }
-    if (market === 'ES') esAudited += 1;
-    if (market === 'US') usAudited += 1;
-    validateMarketOffer(product[market], market, `${slug}.${market}`, `products.${slug}.${market}`);
+    // Count only structurally valid, fresh audited records, never mere presence.
+    if (audited.has(`${slug}.${market}`)) {
+      if (market === 'ES') esAudited += 1;
+      if (market === 'US') usAudited += 1;
+    }
   }
 }
 
 console.log(`Productos: ${slugs.size}`);
 console.log(`ES auditados: ${esAudited}/${slugs.size}`);
 console.log(`US auditados: ${usAudited}/${slugs.size}`);
+console.log(`Pendientes sin auditoria: ${pending}`);
 
 if (errors.length) {
   console.error(`\nErrores (${errors.length}):`);
@@ -195,4 +215,6 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('OK: registro de ofertas valido y completo');
+console.log(requireCoverage
+  ? 'OK: registro de ofertas valido y cobertura comercial completa'
+  : 'OK: estructura valida; no acredita cobertura comercial');

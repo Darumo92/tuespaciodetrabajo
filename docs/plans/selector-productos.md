@@ -12,6 +12,9 @@
 
 ## Decisiones Aprobadas
 
+- **Contrato vigente (03 oct 2026):** `npm run validate:offers` comprueba integridad estructural y validez de las ofertas registradas, no cobertura comercial. `npm run validate:offers:coverage` exige además auditorías recientes ES/US para cada producto y es obligatorio antes de afirmar cobertura comercial completa. Esta separación está aprobada por el usuario; no elimina la fase de auditoría ni convierte comprobaciones históricas fallidas en PASS.
+- Un producto/mercado ausente significa `unaudited`, nunca `unavailable`. El registro declara `defaultStatus: unaudited`; una entrada explícita solo admite `{ status: 'unaudited' }`, sin fecha, precio, moneda, vendedor, evidencia o intentos inventados. El consumidor no muestra precio ni schema Offer para ese estado.
+- `updatedAt` fecha el mantenimiento del archivo; no acredita frescura comercial. Sigue siendo ISO válida y no futura. Cada `checkedAt` de una oferta auditada conserva su límite de 30 días, sin sustituirse por la fecha de mantenimiento.
 - Se mantiene `output: 'static'`. El `ItemList` de una URL con respuestas se inyecta en el DOM después de validar los params; no estará en el HTML de `View Source`.
 - No se usa `client:load`: los componentes `.astro` no se hidratan y el proyecto no tiene framework cliente. Se usa Astro + módulo TypeScript.
 - El registro de configs se auto-descubre con `import.meta.glob('./config-*.ts', { eager: true })`.
@@ -216,7 +219,7 @@ interface CriterionTrace {
 - `src/data/product-offers.json` — registro volátil ES/US por slug.
 - `src/lib/product-offers.ts` — resolución de oferta por mercado y freshness.
 - `src/lib/product-offers.test.ts` — invariantes del registro y helper.
-- `scripts/validate-product-offers.mjs` — cobertura 114 x 2 y consistencia.
+- `scripts/validate-product-offers.mjs` — integridad; `--coverage` añade cobertura estricta del catálogo real.
 - `src/lib/selector/config.ts` — tipos, factorías, auto-descubrimiento y filtrado por cobertura.
 - `src/lib/selector/config-sillas.ts` — configuración declarativa de silla.
 - `src/lib/selector/config-escritorios.ts` — configuración declarativa de escritorio.
@@ -298,8 +301,9 @@ interface MarketOffer {
 }
 
 interface ProductOffersFile {
+  defaultStatus?: 'unaudited';
   updatedAt: string;
-  products: Record<string, { ES: MarketOffer; US: MarketOffer }>;
+  products: Record<string, Partial<Record<'ES' | 'US', MarketOffer | { status: 'unaudited' }>>>;
 }
 ```
 
@@ -309,8 +313,8 @@ interface ProductOffersFile {
 
 El script debe:
 
-- Leer los 114 slugs desde los nombres de `src/content/productos/*.{yaml,yml,json}`.
-- Exigir exactamente una entrada `ES` y una `US` por slug.
+- Leer todos los slugs actuales desde los nombres de `src/content/productos/*.{yaml,yml,json}` (114 era el inventario inicial; 132 el 03 oct).
+- Validar las entradas existentes y contar mercados ausentes/`unaudited` como pendientes. Solo `--coverage` exige una auditoría válida `ES` y `US` por slug.
 - Exigir precio positivo, URL HTTP(S), seller, sourceType, `condition: new` y fecha ISO para `available`.
 - Exigir `priceAmount: null`, `url: null`, `condition: null` y los cuatro intentos registrados para `unavailable`.
 - Rechazar slugs desconocidos y monedas incorrectas.
@@ -334,9 +338,9 @@ Repetir el flujo con Amazon.com, fabricante US, distribuidor US y retailer US. G
 
 - [ ] **Step 7: Validar cobertura y tests**
 
-Run: `node scripts/validate-product-offers.mjs`
+Run: `npm run validate:offers:coverage`
 
-Expected: `114 products | ES 114 audited | US 114 audited | 0 errors`.
+Expected: catálogo actual completo en ES/US, cero pendientes y errores. Con el registro vacío del 03 oct: 132 productos, 0/132 ES, 0/132 US y 264 auditorías pendientes; FAIL esperado, no aceptación comercial.
 
 Run: `npx vitest run src/lib/product-offers.test.ts`
 
