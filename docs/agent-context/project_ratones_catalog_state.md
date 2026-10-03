@@ -46,14 +46,17 @@ aportaron cuerpos verificables y no sustentan afirmaciones públicas.
 
 ### Integración y cierre local
 
-- Rama `feat/ratones-anker-perixx`, base `92ea30b`; sin commit, push, PR o despliegue.
+- Rama `feat/ratones-anker-perixx`, base `92ea30b`; commits locales `bc69035` (USB, 3 archivos, +14/-3 = 17 líneas) y `d777ca9` (pareja e integración, 15 archivos, +744/-22 = 766 líneas). Total de implementación antes de este cierre documental: +758/-25 = 783 líneas. Sin push, PR, merge ni despliegue.
 - Prerrequisito USB con test-first observado: 2 fallos / 66 pruebas correctas antes; 68 correctas después. No se activó TDD estricto ni RDD (global OFF).
 - Regresiones para nueve ratones, búsqueda exacta, selección por cable de Perixx e incompatibilidad de Anker, pesos desconocidos y ausencia de precios/notas inventados.
 - Comparativa ES+EN enlazada a las fichas, medidas de Anker corregidas y sus dos CTA alineados con búsqueda exacta; sin tocar fechas de publicación o actualización.
 - Baseline de `validate:offers` observado antes de integrar: 132 productos y 133 errores, porque los dos YAML ya existían. Histórico anterior: 130 productos / 131 errores. No ocultar las dos auditorías nuevas pendientes.
-- Verificación final y lectura de cuatro rutas: consultar `odd/tasks/ratones-anker-perixx.md`. Revisión humana, comprobación independiente, evaluación nativa de riesgo y commit local quedan para el padre; no marcar la entrega completa mientras falle una comprobación requerida.
+- Evaluación nativa de solo lectura: riesgo alto/no evaluable por inventario sin seguimiento; se aplicó la vía de comprobación independiente para riesgo alto sin activar RDD (global OFF). Verificador independiente: 402 pruebas focalizadas, 132 productos, validadores de ratones/selector, whitespace y lectura de cuatro rutas correctos; sin bloqueo causado por el candidato. El padre revisó USB y texto de Perixx, añadió la aserción de presencia del aviso al comprador y repitió validator de ratones y diff-check, ambos correctos. Evidencia completa en `odd/tasks/ratones-anker-perixx.md`.
 - QA local: 402 pruebas focalizadas y 479 totales correctas; 132 productos válidos; build de 459 páginas; validadores de ratones (18 fichas) y selector (132 elegibles) correctos. Ofertas sigue fallando con los mismos 133 errores del baseline observado.
 - Preview ES/EN HTTP 200, imágenes y CTA correctos, y Perixx aparece segundo en la selección por cable mientras Anker queda fuera de los tres resultados. Incidencia móvil heredada: ancho de documento 454 px a viewport de 390 px en las cuatro fichas y también en Trust EN; sin desbordamiento a 1440 px. El componente compartido está fuera del alcance autorizado y no se ha modificado. Entrega parcial, no QA completo.
+- USB queda terminado con prueba RED/GREEN, comprobación independiente y commit. La pareja queda parcial por los 133 errores obligatorios de ofertas y la aceptación humana de publicación pendiente; el desbordamiento heredado es un seguimiento separado. El commit local conserva el trabajo, no autoriza publicar ni equivale a aprobar ofertas.
+- Límites de rollback: `d777ca9` retira solo la pareja y su integración/documentación, conservando USB; para retirar `bc69035` deben retirarse primero sus dependencias. El cierre documental posterior se reconcilia aparte. No se ha ejecutado rollback ni se han alterado cambios ajenos de backlinks/recovery, `opencode.json` o `.atl/`.
+- Este último cierre solo modifica los dos documentos de evidencia. No se repiten pruebas funcionales ni build para prosa pasiva; siguen vigentes las 479 pruebas y 459 páginas porque el cambio final del padre fue la aserción del validator y documentación. Se mantiene preview en `127.0.0.1:4321`, sin exposición remota ni nuevas consultas.
 
 ## Ampliación 2026-09-30 — dos fichas ES+EN con vista previa humana aceptada
 
