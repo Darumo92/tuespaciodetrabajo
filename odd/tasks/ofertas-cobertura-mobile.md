@@ -11,7 +11,7 @@
 - Mirror topic: `odd/ofertas-cobertura-mobile/tasks`; locator observation **139**. Parent reconciled initial full document; worker must mirror this updated full document and compare exact readback before return.
 
 ## Tasks and routes
-- [ ] **MOBILE-1:** Fix image, media-grid and fallback intrinsic sizing. Delegated direct: coordinated components, regression test and responsive browser checks. Work-unit commit includes tests and documentation.
+- [x] **MOBILE-1:** Fix image, media-grid and fallback intrinsic sizing. Delegated direct: coordinated components, regression test and responsive browser checks. Observed regression-first and independent browser proof; local commit `a6e18fc` includes coordinated components, test and documentation.
 - [x] **OFFERS-1:** Separate schema/integrity validation from audit coverage with explicit unaudited semantics. Delegated direct: validator, consumer types, tests, CLI command and documentation require coordinated edits. Verified with regression-first tests and independent validation; local commit `140a036`. Strict coverage correctly remains nonzero for 264 missing real audits; evidence and freshness checks are preserved.
 
 ## Acceptance and exact checks
@@ -24,7 +24,7 @@
 
 ## Evidence and next action
 - Diagnosis: registry was created empty in `691d6ad`, currently 132 products with no ES/US audits; 133 errors combined missing entries with stale file timestamp. Runtime prices only consume usable available offers, while YAML CTAs do not use this registry.
-- Mobile min-content is 420px image + 32px media padding + 2px border = 454px. Grid item lacks `min-width: 0`; image prevents flex shrinking; fallback also needs responsive bounds.
+- Inherited mobile baseline: 420px image + 32px media padding + 2px border = 454px. Grid item lacked `min-width: 0`; image prevented flex shrinking; fallback also needed responsive bounds.
 - Implemented unaudited default (empty registry preserved), explicit claim-free unaudited records, separate strict `--coverage`, maintenance-only `updatedAt`, valid fresh audited counts, and runtime unknown-key rejection. Existing audited offer evidence/freshness/currency/condition and four-attempt unavailable rules remain enforced.
 - Implemented media `min-width: 0`, responsive image/fallback bounds and square canvas with contained photos. No document overflow hiding, clipping or typography scaling.
 
@@ -51,16 +51,16 @@
 | `git diff --check` | PASS, exit 0, no whitespace errors; repeated after final evidence edit |
 
 ## Commit boundaries and next action
-- Tasks remain unchecked: parent owns spot check, authorized independent verification and work-unit commits. No staging or commits by worker. Commercial coverage is **PARTIAL**, not complete.
-- Proposed OFFERS unit: `src/data/product-offers.json`, `src/lib/product-offers.ts`, `src/lib/product-offers.test.ts`, `scripts/validate-product-offers.mjs`, `scripts/validate-product-offers.test.ts`, `package.json`, `docs/plans/selector-productos.md`; offers-specific catalog-state/INDEX hunks. Rollback only this new integrity/coverage contract and tests/docs, retaining mobile fix.
-- Proposed MOBILE unit: `src/components/producto/FichaHero.astro`, `src/components/producto/ImagenProducto.astro`, `src/components/producto/FallbackImagen.astro`, `src/components/producto/FichaHero.test.ts`; mobile-specific catalog-state/INDEX hunks and this ODD evidence document. Rollback only responsive hero sizing and matching tests/docs, retaining offers contract.
-- Shared docs: split catalog-state `Integridad de ofertas` and INDEX offers pointer into OFFERS; mobile section, shared verification summary and INDEX catalog pointer into MOBILE. ODD final receipt records both units, then parent supplies actual commit IDs. Follow cached feature-branch-chain if measured budget requires it; never create PRs in this task.
-- One bounded slicing pass: OFFERS then MOBILE; both remain below the advisory 400-line budget. Exact final authored additions/deletions measured at worker handoff; no minifying, dropped tests or unnecessary slice branches/PRs.
-- Remaining: parent verification/commits and mirror reconciliation after parent edits; 264 genuine commercial audits (outside bounded implementation), human publication approval and later separately authorized remote actions.
+- Both implementation tasks are complete, independently verified and committed locally. During the earlier worker handoff both checkboxes were pending and the worker had made no commits; that historical phase is now closed. Commercial coverage remains **PARTIAL**, not complete.
+- Actual OFFERS unit: `140a036` — `fix(offers): separate registry integrity from audit coverage`; **7 paths, +143/-27 = 170 lines**. Boundary: `src/data/product-offers.json`, `src/lib/product-offers.ts`, `src/lib/product-offers.test.ts`, `scripts/validate-product-offers.mjs`, `scripts/validate-product-offers.test.ts`, `package.json`, `docs/plans/selector-productos.md`. Rollback removes only the new integrity/coverage contract and its tests/plan; no mobile source changes belong to this unit.
+- Actual MOBILE unit: `a6e18fc` — `fix(ui): keep product heroes within mobile viewport`; **7 paths, +134/-6 = 140 lines**. Boundary: `src/components/producto/FichaHero.astro`, `src/components/producto/ImagenProducto.astro`, `src/components/producto/FallbackImagen.astro`, `src/components/producto/FichaHero.test.ts`, `docs/agent-context/project_ratones_catalog_state.md`, `docs/agent-context/INDEX.md`, `odd/tasks/ofertas-cobertura-mobile.md`. Rollback removes responsive hero sizing and matching evidence/test while retaining OFFERS; preserve offers documentation when undoing this shared documentary boundary.
+- Final allocation places all shared catalog-state, INDEX and ODD documents in MOBILE; the earlier partial-hunk proposal was not used. One bounded slicing pass: OFFERS then MOBILE, **+277/-33 = 310 lines** before passive closeout. Both units and their combined implementation remain below the advisory 400-line budget; cached feature-branch-chain was not needed. No minifying, dropped tests, new slice branches or PRs.
+- Remaining work is genuine commercial evidence collection: **264 product/market audits**, outside this implementation. No implementation checkbox remains pending for missing commercial data. Human publication approval and separately authorized remote actions are still required; no push, PR or deployment is authorized for this fix branch.
 
 ## Parent verification and delivery
 - Native read-only assessment was high/unassessable because of untracked inventory. RDD stayed OFF; the parent used writer self-verification plus a fresh independent verifier, without starting native review.
 - Independent verifier passed 56 focused tests and 23 additional malformed/complete-coverage CLI probes. Integrity passed with 264 pending; strict coverage correctly failed with 264 missing-audit errors. No candidate blocker was found.
 - Independent browser verification covered Trust EN, Perixx ES and Anker ES at 320/390/760/1440, including after disabling inherited body overflow masking in browser DOM: document and viewport widths matched. Nine catalog thumbnails retained 110px dimensions. DOM changes were restored.
 - Parent reran `npm run validate:offers` and `git diff --check` successfully. Offer unit committed as `140a036` (143 additions, 27 deletions); coverage data remains genuinely unaudited, not claimed complete.
-- Next: preserve the independently verified mobile unit in a local work-unit commit, then synchronize complete task evidence. No push, PR or publication is authorized for this fix branch.
+- Parent committed the independently verified mobile unit as `a6e18fc` (134 additions, 6 deletions). Both implementation units are closed; no source changes remain pending. Unrelated user backlinks/recovery/opencode/.atl changes are preserved. RDD remains globally OFF, without native review or authenticated remote actions.
+- Passive closeout scope: this task document only, full observation-139 mirror/readback and whitespace check, followed by the authorized documentation-only commit. No tests, builds, browser/network activity, extra agents or functional source edits are needed for this evidence update. Closeout skill_resolution: **paths-injected**, `/home/darumo/.agents/skills/work-unit-commits/SKILL.md`.
