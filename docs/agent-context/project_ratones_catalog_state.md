@@ -1,5 +1,41 @@
 # Catálogo de ratones — primer lote
 
+## Seguimiento local 2026-10-03 — ofertas y móvil
+
+### Integridad de ofertas, no cobertura comercial
+
+El usuario aprueba separar la estructura del registro de las auditorías comerciales.
+`npm run validate:offers` ahora valida registros existentes, fechas, claves y
+evidencia sin exigir inventar datos ausentes. El registro permanece vacío, con
+`defaultStatus: unaudited`: no hay precios nuevos, intentos, disponibilidad ni
+fechas de auditoría fabricados. `updatedAt` es mantenimiento, no prueba comercial.
+`npm run validate:offers:coverage` sigue siendo obligatorio para afirmar cobertura:
+observado FAIL con 264 errores, 132 productos, ES 0/132 y US 0/132.
+La integridad observada es PASS con 264 pendientes; los 133 errores de la validación
+anterior siguen siendo evidencia histórica real, no un PASS retroactivo.
+Las consultas de Anker y Perixx anteriores no se convierten en auditorías ES/US.
+
+### Corrección móvil verificada, aún sin commit ni publicación
+
+El componente compartido deja encoger el grid y acota imagen/fallback al contenedor,
+con lienzo cuadrado y `object-fit: contain`, sin esconder overflow del documento.
+RED real en Anker ES: documento de 453 px a viewport 320/390 (la sesión anterior
+midió 454 px). GREEN en Anker/Perixx ES+EN y Trust EN a 320/390/760/1440:
+20 escenarios con imagen cargada, controles dentro del viewport y documento igual
+al ancho cliente (305/375/745/1425 px, descontando scrollbar de 15 px).
+Otros 20 escenarios usan sustitución DOM que reproduce el markup del fallback
+y su CSS compilado real; texto dentro del lienzo, 15,2 px sin escalado y proporción
+1:1. No se afirma fallback automático ante error de red: ese mecanismo no existe.
+La página se restauró al terminar. Preview local `http://127.0.0.1:4321/`.
+
+Pruebas nuevas: RED 16 fallos/38 correctas; primer GREEN 54 correctas y prueba
+final ampliada 56 correctas. Suite completa 499 correctas; catálogo 132 válido;
+build 459 páginas; validadores ratones (18 fichas) y selector (132 elegibles) PASS.
+Optimizador: cero conversiones, sin cambios de archivos tracked fuera del alcance.
+Sin staging, commits, push, PR, despliegue ni revisión RDD (global OFF).
+El padre debe comprobar el candidato y cerrar sus unidades con commits locales;
+la cobertura comercial y la aprobación humana de publicación siguen pendientes.
+
 ## Ampliación local 2026-10-03: Anker y Perixx, revisión humana pendiente
 
 El usuario sustituye el artículo de esta semana por dos fichas completas ES+EN:

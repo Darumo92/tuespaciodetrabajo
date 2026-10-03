@@ -15,7 +15,9 @@ const alt = locale === 'en' ? `${marca} ${nombre} product image` : (imagenAlt ??
 <style>
   .img-prod {
     width: var(--img-box, 200px);
-    height: var(--img-box, 200px);
+    height: auto;
+    aspect-ratio: 1;
+    min-width: 0;
     max-width: 100%;
     object-fit: contain;
     /* Product photos already include a white canvas, so the box stays white
@@ -23,6 +25,6 @@ const alt = locale === 'en' ? `${marca} ${nombre} product image` : (imagenAlt ??
     background: #fff;
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    flex-shrink: 0;
+    flex-shrink: 1;
   }
 </style>
