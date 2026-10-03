@@ -1,5 +1,60 @@
 # Catálogo de ratones — primer lote
 
+## Ampliación local 2026-10-03: Anker y Perixx, revisión humana pendiente
+
+El usuario sustituye el artículo de esta semana por dos fichas completas ES+EN:
+Anker A7852 / AK-98ANWVM-UBA negro con receptor USB-A y Perixx PERIMICE-513N
+negro USB-A, referencia 11168 / PM-513N-11168. El catálogo pasa a nueve ratones
+y dieciocho fichas localizadas. No se generan pares estáticos ni notas numéricas.
+
+El autor editorial ha redactado ambas fichas sin pruebas propias. Se conservan
+las imágenes registradas, contrastadas visualmente con las galerías oficiales.
+Perixx se alimenta por USB y transmite datos por su cable de 1,8 m; el modelo 713
+inalámbrico y la variante 513 USB-C quedan fuera. Las medidas y pesos sin evidencia
+coherente se dejan desconocidos; Anker usa 120 × 62,8 × 74,8 mm corroborados.
+
+El usuario elige búsqueda Amazon del modelo exacto, no CTA con ASIN histórico.
+Tramo 1 económico orientativo, sin cortes numéricos nuevos ni precios permanentes.
+La comprobación comercial del 3 de octubre no es una auditoría de ofertas ES/US:
+no se ha verificado Amazon US ni se han creado registros de ofertas. Se conserva
+el aviso de comprobar modelo, precio y disponibilidad junto al CTA porque una
+consulta fechada no acredita la oferta que encontrará cada comprador después.
+
+### Registro compacto de fuentes y límites (consulta 2026-10-03)
+
+| Afirmación | Fuente exacta | Confianza y alcance |
+|---|---|---|
+| Anker: dos AAA no incluidas, 800/1200/1600 DPI, reposo de ocho minutos y reactivación con clic principal; avance/retroceso no funcionan en Mac OS X. | https://www.anker.com/ca/products/a7852 | Alta, especificaciones oficiales; reposo no equivale a autonomía. |
+| A7852/A7852011 negro, diestro y medidas métricas 120 × 62,8 × 74,8 mm. | https://anker.com.sg/products/anker-2-4g-wireless-vertical-mouse-ergonomic-optical-a7852 | Alta para identidad y valores métricos corroborados; otros campos oficiales en pulgadas discrepan. Peso no confirmado. |
+| AK-98ANWVM-UBA corresponde al Anker inalámbrico A7852. | https://www.hardwarezone.com.sg/pc/accessories/anker-wireless-ergonomic-vertical-mouse-review | Media, identificación de SKU anterior; no extrapolar comodidad a la oferta actual. |
+| Anker inalámbrico, controles y receptor. | https://www.tomsguide.com/computing/peripherals/anker-2-4g-wireless-vertical-ergonomic-mouse-review | Media, análisis independiente del modelo; no prueba propia. |
+| Acabado y apoyo de pulgar; un autor encontró fricción en rueda y acceso difícil al control superior. | https://www.digitalcameraworld.com/tech/anker-wireless-vertical-ergonomic-mouse-review | Baja para comodidad universal; experiencia atribuida que sirve para proponer comprobaciones. |
+| Perixx: cable de 1,8 m, USB y orientación a manos medianas/grandes. | https://eu.perixx.com/products/perimice-513 | Alta para especificaciones declaradas, no talla garantizada. |
+| USB-A negro PM-513N-11168, código 4049571651316, distinto de USB-C PM-513C-12290. | https://eu.perixx.com/products/perimice-513.js | Alta para identidad de variante; la foto principal USB-C no identifica el USB-A. |
+| Modelo 513 con alimentación USB, seis controles y 1000/1600 DPI; pilas y reposo pertenecen al 713. | https://downloads.perixx.com/manuals/PERIMICE-513_E_Manual.pdf | Alta, páginas 4–6 leídas visualmente; dimensiones/peso discrepantes quedan desconocidos. Imagen promocional con tres DPI excluida. |
+| Un propietario documenta desplazamiento irregular y polvo al desmontar su unidad. | https://racedorsey.com/posts/2026/perixx-vertical-mouse-stuttering-scroll-wheel/ | Baja, caso individual; no tasa de fallos ni recomendación de abrir el ratón. |
+| Imagen registrada de Anker coincide con A7852011. | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | Alta para correspondencia visual, no disponibilidad de la oferta. |
+| Imagen Perixx registrada coincide con galería USB-A oficial. | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg y https://cdn.shopify.com/s/files/1/0532/6186/1024/files/perimice-513-wired-ergonomic-vertical-mouse-745503.jpg?width=800 | Alta para correspondencia visual; no usar el hero USB-C ni la gráfica de DPI errónea. |
+| Anker Wireless negro: 15,99 EUR, IVA aplicable incluido, oferta anticipada exclusiva Prime, en stock; AnkerDirect ES, envío Amazon. | https://www.amazon.es/dp/B00BIFNTMC?th=1 | Alta para lo mostrado en navegador el 03 oct a las 11:30 CEST; no precio general sin Prime ni oferta permanente. |
+| Perixx negro Con Cable-Diestros: 17,99 EUR, IVA aplicable incluido, en stock; Perixx ES, envío Amazon. | https://www.amazon.es/dp/B00GZIA2AE?th=1 | Alta para oferta principal mostrada el 03 oct a las 11:30 CEST; identidad USB-A corroborada por el registro y fabricante. No usar los 24,81 EUR del widget anterior. |
+
+El navegador activo fue autorizado por el usuario y mostraba personalización de
+entrega; no se presenta como comprobación anónima aislada ni como disponibilidad
+universal. No se accedió a credenciales, login, cuenta, cesta o compra. La denegación
+de crear otro contexto no impedía usar la conexión MCP real. Reddit y RTINGS no
+aportaron cuerpos verificables y no sustentan afirmaciones públicas.
+
+### Integración y cierre local
+
+- Rama `feat/ratones-anker-perixx`, base `92ea30b`; sin commit, push, PR o despliegue.
+- Prerrequisito USB con test-first observado: 2 fallos / 66 pruebas correctas antes; 68 correctas después. No se activó TDD estricto ni RDD (global OFF).
+- Regresiones para nueve ratones, búsqueda exacta, selección por cable de Perixx e incompatibilidad de Anker, pesos desconocidos y ausencia de precios/notas inventados.
+- Comparativa ES+EN enlazada a las fichas, medidas de Anker corregidas y sus dos CTA alineados con búsqueda exacta; sin tocar fechas de publicación o actualización.
+- Baseline de `validate:offers` observado antes de integrar: 132 productos y 133 errores, porque los dos YAML ya existían. Histórico anterior: 130 productos / 131 errores. No ocultar las dos auditorías nuevas pendientes.
+- Verificación final y lectura de cuatro rutas: consultar `odd/tasks/ratones-anker-perixx.md`. Revisión humana, comprobación independiente, evaluación nativa de riesgo y commit local quedan para el padre; no marcar la entrega completa mientras falle una comprobación requerida.
+- QA local: 402 pruebas focalizadas y 479 totales correctas; 132 productos válidos; build de 459 páginas; validadores de ratones (18 fichas) y selector (132 elegibles) correctos. Ofertas sigue fallando con los mismos 133 errores del baseline observado.
+- Preview ES/EN HTTP 200, imágenes y CTA correctos, y Perixx aparece segundo en la selección por cable mientras Anker queda fuera de los tres resultados. Incidencia móvil heredada: ancho de documento 454 px a viewport de 390 px en las cuatro fichas y también en Trust EN; sin desbordamiento a 1440 px. El componente compartido está fuera del alcance autorizado y no se ha modificado. Entrega parcial, no QA completo.
+
 ## Ampliación 2026-09-30 — dos fichas ES+EN con vista previa humana aceptada
 
 ProtoArc EM11 NL y Trust Verto Wireless (modelo 22879) se añaden al catálogo

@@ -118,8 +118,8 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Logitech Lift | B07W4DGC27 | /dp/B07W4DGC27 | https://m.media-amazon.com/images/I/61IuKPhnVJL._AC_SL300_.jpg | ~50 EUR | verificado 2026-09-17 |
 | ProtoArc EM11 NL | B0D12PGGKK | /dp/B0D12PGGKK | https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg | — | verificado 2026-09-17 |
 | Trust Verto | B07FM2GLNQ | /dp/B07FM2GLNQ | https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg | — | verificado 2026-09-17 |
-| Anker AK-UBA Vertical | B00BIFNTMC | /dp/B00BIFNTMC | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | — | verificado 2026-09-17 |
-| Perixx PERIMICE-513 | B00GZIA2AE | /dp/B00GZIA2AE | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | — | verificado 2026-09-17 |
+| Anker A7852 / AK-98ANWVM-UBA negro | B00BIFNTMC (registro histórico) | Búsqueda Amazon del modelo exacto | https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg | Tramo 1 orientativo | Ficha ES+EN `anker-ak-uba-vertical`; imagen y variante contrastadas 2026-10-03; precio observado exclusivo Prime, no oferta permanente |
+| Perixx PERIMICE-513N negro USB-A / 11168 | B00GZIA2AE (registro histórico) | Búsqueda Amazon del modelo exacto | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | Tramo 1 orientativo | Ficha ES+EN `perixx-perimice-513`; imagen contrastada con galería USB-A 2026-10-03; no confundir con USB-C ni 713 |
 
 ### Catálogo de ratones (src/content/productos/*.yaml)
 Cinco fichas ES+EN añadidas el 2026-09-17 y otras dos preparadas el 2026-09-30. Sin notas editoriales numéricas ni precios fijos en el YAML. Los enlaces de las dos fichas nuevas usan ASINs históricos: no se han confirmado la oferta, la variante ni las existencias actuales en Amazon.es. Revisión humana y comprobación comercial pendientes antes de publicar.

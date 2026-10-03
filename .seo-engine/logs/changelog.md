@@ -1,5 +1,11 @@
 # Changelog — Tu Espacio de Trabajo SEO Engine
 
+## 2026-10-03
+**Action:** Integración local de Anker A7852 y Perixx PERIMICE-513 USB-A, ES+EN
+**Files:** src/content/productos/anker-ak-uba-vertical.yaml, src/content/productos/perixx-perimice-513.yaml, src/content/config.ts, src/lib/productos.ts, pruebas y validator de ratones, listado ES/EN, comparativa vertical ES/EN, PRODUCTOS.md, estado del catálogo, plan editorial, INDEX.md, odd/tasks/ratones-anker-perixx.md
+**Summary:** El usuario sustituye el artículo semanal por dos fichas documentales: nueve ratones / dieciocho fichas localizadas. Alimentación USB diferenciada de pilas, desconocidos conservados y CTA de búsqueda exacta sin ASIN directo ni precios permanentes. Medidas métricas de Anker corregidas en ambas comparativas. Consulta Amazon.es fechada: Anker exclusivo Prime y Perixx por cable, sin auditoría US ni registros de oferta inventados. Contenido del autor preservado; evidencia y verificaciones en el handoff y tarea. Revisión humana pendiente, sin publicación; el baseline de ofertas ya fallaba con 133 errores al incluir los dos YAML redactados.
+**Triggered by:** user (implementación local y feature-branch-chain, sin commit/push/PR)
+
 ## 2026-09-30
 **Action:** Extend the bilingual mouse catalog with two documentary profiles
 **Files:** src/content/productos/protoarc-em11-nl.yaml, src/content/productos/trust-verto-wireless.yaml, src/content/config.ts, src/lib/productos.ts, src/lib/tipos-raton.ts, mouse catalog tests and validator, PRODUCTOS.md, docs/agent-context/project_ratones_catalog_state.md

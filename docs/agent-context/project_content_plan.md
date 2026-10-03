@@ -51,6 +51,14 @@
 
 ## COLA / ROADMAP
 
+### Semana 2026-09-28 a 2026-10-04: sustitución aprobada por dos fichas
+
+- El usuario sustituye expresamente el artículo largo de esta semana por Anker A7852 y Perixx PERIMICE-513 USB-A, cada uno con contenido ES+EN. No cambia la cadencia permanente de un artículo semanal.
+- Entrega local en `feat/ratones-anker-perixx`: nueve ratones y dieciocho fichas localizadas, conexión y alimentación diferenciadas, enlaces desde la comparativa existente. No es un artículo nuevo ni requiere inventar datos SERP o registrar keywords nuevas.
+- CTA aprobado: búsqueda Amazon del modelo exacto, sin ASIN directo. Tramo económico orientativo apoyado en la consulta del 2026-10-03; sin fijar precios, stock o promociones en las fichas.
+- Estado: integración local y revisión humana pendiente; no publicado. `validate:offers` tenía ya 133 errores con los dos YAML redactados presentes (132 productos sin registro ES/US y fecha de registro caducada). No equivale a QA completo ni permite rellenar auditorías.
+- La guía `como-elegir-raton-ergonomico` permanece pendiente y necesitará sus datos SERP reales cuando se retome. Evidencia y límites en [estado del catálogo](project_ratones_catalog_state.md).
+
 Estado: ⬜ pendiente · 🔬 esperando SERP del usuario · ✍️ en redacción · ✅ publicado
 
 ### FASE 1 — Escritorios (cluster autoridad · catálogo con 46 fichas)

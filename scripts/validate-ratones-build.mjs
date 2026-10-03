@@ -3,12 +3,16 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { load } from 'js-yaml';
 
 const site = 'https://tuespaciodetrabajo.com';
-const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless'];
+const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513'];
 const newImages = {
   'protoarc-em11-nl': 'https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg',
   'trust-verto-wireless': 'https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg',
 };
 const newAsins = { 'protoarc-em11-nl': 'B0D12PGGKK', 'trust-verto-wireless': 'B07FM2GLNQ' };
+const searchProfiles = {
+  'anker-ak-uba-vertical': { image: 'https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg', query: 'Anker A7852 AK-98ANWVM-UBA ratón vertical inalámbrico', power: ['Dos pilas AAA', 'Two AAA batteries'] },
+  'perixx-perimice-513': { image: 'https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg', query: 'Perixx PERIMICE-513 USB-A negro', power: ['Alimentación por USB', 'USB powered'] },
+};
 const bases = ['/catalogo/raton/', '/en/catalog/mice/'];
 const sitemap = readFileSync('dist/sitemap-0.xml', 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
@@ -37,6 +41,26 @@ for (const base of bases) {
       assert.ok(hero.includes(base.startsWith('/en/') ? 'check the exact model, price and availability on Amazon Spain' : 'comprueba el modelo, el precio y la disponibilidad en Amazon.es'), route + ' buyer-facing offer notice');
       assert.ok(hero.includes(base.startsWith('/en/') ? 'we have not verified the current offer' : 'no hemos verificado la oferta actual'), route + ' unverified offer disclosure');
       assert.ok(hero.indexOf('ficha-oferta-contexto') < hero.indexOf('data-cta-kind="amazon-product"'), route + ' notice precedes CTA');
+    }
+    if (slug in searchProfiles) {
+      const profile = searchProfiles[slug];
+      const isEn = base.startsWith('/en/');
+      const hero = html.match(/<header class="ficha-hero"[\s\S]*?<\/header>/)?.[0];
+      assert.ok(hero, route + ' hero present');
+      assert.ok(hero.includes('data-cta-kind="amazon-search"'), route + ' search CTA kind');
+      const searchHref = `https://www.amazon.es/s?k=${encodeURIComponent(profile.query)}&tag=tuespaciodet-21`;
+      assert.ok(hero.replaceAll('&amp;', '&').includes(searchHref), route + ' exact-model search href');
+      assert.ok(hero.includes(isEn ? 'Search on Amazon' : 'Buscar en Amazon'), route + ' search CTA label');
+      assert.ok(hero.includes(isEn ? 'Specs checked 2026-10-03' : 'Especificaciones consultadas 2026-10-03'), route + ' specs date');
+      assert.ok(hero.includes(isEn ? 'Indicative historical tier:' : 'Tramo histórico orientativo:'), route + ' indicative tier');
+      assert.ok(hero.includes('ficha-oferta-contexto'), route + ' buyer caveat present');
+      assert.ok(hero.indexOf('ficha-oferta-contexto') < hero.indexOf('data-cta-kind="amazon-search"'), route + ' buyer caveat before search');
+      assert.ok(html.includes(profile.image), route + ' visually matched recorded image');
+      assert.ok(html.includes(profile.power[isEn ? 1 : 0]), route + ' localized power');
+      assert.ok(!/B00BIFNTMC|B00GZIA2AE/.test(html), route + ' no historical direct ASIN');
+      assert.ok(!/15[,.]99|17[,.]99/.test(html), route + ' no permanent observed price');
+      assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|price|priceCurrency|lowPrice|aggregateRating|review)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no current offer or rating schema');
+      if (isEn) assert.ok(html.includes('No US offer is confirmed'), route + ' US offer uncertainty');
     }
     for (const m of html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
       const schema = JSON.parse(m[1]);
@@ -74,4 +98,4 @@ for (const file of ['src/content/articulos/mejor-raton-vertical-ergonomico.mdx',
   }
   console.log(`${file}: ${words} words, ${affiliateCount} affiliate links, ${meta.faqs.length} FAQs`);
 }
-console.log('OK: 14 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');
+console.log('OK: 18 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');
