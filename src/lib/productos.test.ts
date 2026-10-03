@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { describe, it, expect } from 'vitest';
 import {
   mediaEjesPresentes,
@@ -47,6 +48,16 @@ const base = (over: Partial<Producto> = {}): Producto => ({
 });
 
 describe('catálogo de ratones', () => {
+  it('admits USB power in the mouse content schema', () => {
+    const source = readFileSync(new URL('../content/config.ts', import.meta.url), 'utf8');
+    const mouseSchema = source.split('const specsRaton = z.object({')[1].split('\n});')[0];
+    const powerValues = mouseSchema.match(/alimentacion: z\.enum\(\[([^\]]+)\]/)?.[1];
+    expect(powerValues?.match(/'([^']+)'/g)).toContain("'usb'");
+  });
+  it('labels USB power in both locales without implying a battery', () => {
+    expect(etiquetaEnum('alimentacion', 'usb', 'es-ES')).toBe('Alimentación por USB');
+    expect(etiquetaEnum('alimentacion', 'usb', 'en')).toBe('USB powered');
+  });
   it('localiza fichas, listado y comparador con vuelta al tipo original', () => {
     expect(catalogPath('en', 'raton')).toBe('/en/catalog/mice/');
     expect(sourceTipoSlug('mice', 'en')).toBe('raton');

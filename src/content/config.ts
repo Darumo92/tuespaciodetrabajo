@@ -150,7 +150,7 @@ const specsRaton = z.object({
   receptor: z.string().nullable().default(null),
   cableDatos: z.boolean().nullable().default(null),
   multidispositivo: z.boolean().nullable().default(null),
-  alimentacion: z.enum(['aa', 'aaa', 'bateria']).nullable().default(null),
+  alimentacion: z.enum(['aa', 'aaa', 'bateria', 'usb']).nullable().default(null),
   clicSilencioso: z.boolean().nullable().default(null),
 });
 
