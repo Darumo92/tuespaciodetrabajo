@@ -38,7 +38,9 @@ const offersBySlug = Object.fromEntries(eligibleProducts.map((product) => {
   return [product.slug, offer ? {
     priceAmount: offer.priceAmount as number,
     currency: offer.currency,
-    sourceUrl: offer.url ?? undefined,
+    sourceUrl: offer.evidenceUrl ?? undefined,
+    evidenceUrl: offer.evidenceUrl ?? undefined,
+    checkedAt: offer.checkedAt,
     url: offer.url ?? undefined,
     seller: offer.seller ?? undefined,
   } : null];

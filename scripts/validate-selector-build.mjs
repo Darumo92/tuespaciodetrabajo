@@ -195,11 +195,50 @@ function anchorHrefs(html) {
     .map((match) => decodeHtml(match[1] ?? match[2]));
 }
 
+function isHttpUrl(value) {
+  try { return typeof value === 'string' && ['http:', 'https:'].includes(new URL(value).protocol); }
+  catch { return false; }
+}
+
+function validateOfferAttribution(page, products, registry, errors) {
+  const offers = page.payload?.offers;
+  if (!offers || typeof offers !== 'object' || Array.isArray(offers)) {
+    errors.push(`${page.file}: offer attribution payload must be an object`);
+    return;
+  }
+  const market = page.locale === 'en' ? 'US' : 'ES';
+  const currency = page.locale === 'en' ? 'USD' : 'EUR';
+  for (const product of products) {
+    const offer = offers[product.slug];
+    const audit = registry?.products?.[product.slug]?.[market];
+    const checkedTime = Date.parse(audit?.checkedAt);
+    const age = Date.now() - checkedTime;
+    const usable = audit?.status === 'available' && Number.isFinite(checkedTime)
+      && age >= 0 && age <= 30 * 24 * 60 * 60 * 1000;
+    if (!usable) {
+      if (offer !== null) errors.push(`${page.file}: unaudited, unavailable or expired offer ${product.slug} must remain null`);
+      continue;
+    }
+    const fields = ['priceAmount', 'currency', 'seller', 'checkedAt', 'evidenceUrl', 'url'];
+    if (!offer || fields.some((field) => offer[field] !== audit[field])
+      || offer.currency !== currency || !Number.isFinite(offer.priceAmount) || offer.priceAmount <= 0
+      || typeof offer.seller !== 'string' || !offer.seller.trim()
+      || !isHttpUrl(offer.evidenceUrl) || !isHttpUrl(offer.url)
+      || offer.sourceUrl !== audit.evidenceUrl || !Number.isFinite(Date.parse(offer.checkedAt))) {
+      errors.push(`${page.file}: offer attribution for ${product.slug} must preserve the approved ${market} price, currency, seller, evidence URL, purchase URL and checkedAt`);
+    }
+  }
+}
+
 export function validateSelectorBuild(options = {}) {
   const distDir = resolve(options.distDir ?? 'dist');
   const sourceDir = resolve(options.sourceDir ?? 'src');
   const errors = [];
   const inventory = deriveEligibleInventory(sourceDir, errors);
+  const registrySource = readRequired(resolve(sourceDir, 'data/product-offers.json'), errors);
+  let registry;
+  try { registry = JSON.parse(registrySource ?? '{}'); }
+  catch { errors.push(`${sourceDir}: offer attribution registry must be valid JSON`); }
   const expectedCount = inventory?.count ?? null;
   if (inventory && (!Number.isInteger(expectedCount) || expectedCount <= 0)) {
     errors.push(`${sourceDir}: independently derived eligible product count must be positive; got ${expectedCount}`);
@@ -241,6 +280,8 @@ export function validateSelectorBuild(options = {}) {
     if (products.some((product) => product?.locale !== page.locale)) {
       errors.push(`${page.file}: runtime selector payload contains a product from the wrong locale`);
     }
+    if (page.payload?.locale !== page.locale) errors.push(`${page.file}: offer attribution payload locale does not match the route`);
+    validateOfferAttribution(page, products, registry, errors);
     const configTypes = configs.map((config) => config?.tipo).filter((tipo) => typeof tipo === 'string').sort();
     if (configTypes.length !== configs.length || new Set(configTypes).size !== configTypes.length) {
       errors.push(`${page.file}: runtime selector payload config tipos must be complete and unique`);

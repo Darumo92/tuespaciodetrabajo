@@ -1,4 +1,4 @@
-import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
@@ -6,6 +6,15 @@ import { validateSelectorBuild } from './validate-selector-build.mjs';
 
 const site = 'https://tuespaciodetrabajo.com';
 const roots: string[] = [];
+const checkedAt = new Date().toISOString();
+function fixtureOffer(locale: 'es-ES' | 'en') {
+  return {
+    priceAmount: locale === 'en' ? 257.49 : 146.99, currency: locale === 'en' ? 'USD' : 'EUR',
+    seller: locale === 'en' ? 'Provantage' : 'Univers Club - ES', checkedAt,
+    url: 'https://shop.example/buy', evidenceUrl: `https://evidence.example/${locale}`,
+    sourceUrl: `https://evidence.example/${locale}`,
+  };
+}
 const alternateGroups = [
   [['es-ES', `${site}/herramientas/`], ['en', `${site}/en/tools/`], ['x-default', `${site}/herramientas/`]],
   [['es-ES', `${site}/herramientas/calculadora-ergonomia/`], ['en', `${site}/en/tools/ergonomic-calculator/`], ['x-default', `${site}/herramientas/calculadora-ergonomia/`]],
@@ -55,7 +64,7 @@ function pageHtml(locale: 'es-ES' | 'en', counts = { silla: 6, escritorio: 5 }):
   const payload = {
     products,
     configs: Object.entries(counts).map(([tipo, productCount]) => ({ tipo, productCount, questions: [] })),
-    offers: Object.fromEntries(products.map((product) => [product.slug, null])),
+    offers: Object.fromEntries(products.map((product, index) => [product.slug, index === 0 ? fixtureOffer(locale) : null])),
     copy: {}, locale,
   };
   return `<!doctype html><html lang="${en ? 'en' : 'es'}"><head>
@@ -119,6 +128,14 @@ function validFixture(): { root: string; distDir: string; sourceDir: string } {
   mkdirSync(join(distDir, 'en/tools/selector'), { recursive: true });
   mkdirSync(join(sourceDir, 'content/productos'), { recursive: true });
   mkdirSync(join(sourceDir, 'lib/selector'), { recursive: true });
+  mkdirSync(join(sourceDir, 'data'), { recursive: true });
+  writeFileSync(join(sourceDir, 'data/product-offers.json'), JSON.stringify({
+    defaultStatus: 'unaudited', updatedAt: '2026-10-08T00:00:00Z',
+    products: { 'silla-0': Object.fromEntries((['es-ES', 'en'] as const).map((locale) => {
+      const { sourceUrl, ...offer } = fixtureOffer(locale);
+      return [locale === 'en' ? 'US' : 'ES', { ...offer, status: 'available', condition: 'new', sourceType: 'retailer', attempts: ['retailer'] }];
+    })) },
+  }));
   writeFileSync(join(distDir, 'herramientas/selector/index.html'), pageHtml('es-ES'));
   writeFileSync(join(distDir, 'en/tools/selector/index.html'), pageHtml('en'));
   writeFileSync(join(distDir, 'sitemap-0.xml'), sitemapXml());
@@ -137,6 +154,31 @@ function validFixture(): { root: string; distDir: string; sourceDir: string } {
 afterEach(() => roots.splice(0).forEach((root) => rmSync(root, { recursive: true, force: true })));
 
 describe('validateSelectorBuild', () => {
+  it.each([
+    { checkedAt: undefined }, { checkedAt: 'invalid' }, { seller: '' },
+    { evidenceUrl: undefined }, { evidenceUrl: 'javascript:alert(1)' },
+    { evidenceUrl: 'https://wrong.example/proof' }, { currency: 'EUR' },
+    { sourceUrl: 'https://shop.example/buy' }, { checkedAt: '2026-10-08T00:00:00Z' },
+    { seller: 'Wrong seller' }, { url: undefined }, { priceAmount: 1 },
+  ])('rejects missing, unsafe or wrong-market attribution %j', (fields) => {
+    const fixture = validFixture();
+    const file = join(fixture.distDir, 'en/tools/selector/index.html');
+    const html = readFileSync(file, 'utf8');
+    writeFileSync(file, html.replace(JSON.stringify(fixtureOffer('en')), JSON.stringify({ ...fixtureOffer('en'), ...fields })));
+    expect(() => validateSelectorBuild(fixture)).toThrow(/offer attribution/i);
+  });
+  it('rejects a quotation on an unaudited product', () => {
+    const fixture = validFixture();
+    const file = join(fixture.distDir, 'en/tools/selector/index.html');
+    writeFileSync(file, pageHtml('en').replace('"silla-1":null', `"silla-1":${JSON.stringify(fixtureOffer('en'))}`));
+    expect(() => validateSelectorBuild(fixture)).toThrow(/unaudited.*null/i);
+  });
+  it('rejects an approved offer serialized from the other market', () => {
+    const fixture = validFixture();
+    const file = join(fixture.distDir, 'en/tools/selector/index.html');
+    writeFileSync(file, pageHtml('en').replace(JSON.stringify(fixtureOffer('en')), JSON.stringify(fixtureOffer('es-ES'))));
+    expect(() => validateSelectorBuild(fixture)).toThrow(/offer attribution.*approved US/i);
+  });
   it('derives eligible inventory independently and validates payload, schemas and three sitemap groups', () => {
     const fixture = validFixture();
     expect(validateSelectorBuild({ distDir: fixture.distDir, sourceDir: fixture.sourceDir }))

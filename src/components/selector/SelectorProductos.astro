@@ -5,14 +5,9 @@ import type { Locale } from '@/i18n/locales';
 import type { Producto } from '@/lib/productos';
 import type { ReadonlyResolvedSelectorConfig } from '@/lib/selector/config';
 import { projectSelectorProduct, serializeSelectorPayload } from '@/lib/selector/payload';
+import type { AttributionOffer } from '@/lib/selector/offer-attribution';
 
-export interface SelectorOffer {
-  priceAmount: number;
-  currency: string;
-  sourceUrl?: string;
-  url?: string;
-  seller?: string;
-}
+export type SelectorOffer = AttributionOffer;
 
 interface Props {
   products: Producto[];
@@ -35,6 +30,7 @@ const copy = isEn ? {
   recovery: 'We could not read one answer from this link. Please answer it again.',
   copied: 'Link copied', copyError: 'We could not copy the link.',
   rank: 'Choice', fallback: 'No image available', progressLabel: 'Selection progress',
+  seller: 'Seller', source: 'Source', checked: 'Price checked', varies: 'Price may change.',
 } : {
   typeTitle: '¿Qué estás buscando?', typeHelp: 'Elige un tipo de producto para adaptar las preguntas.',
   continue: 'Continuar', back: 'Atrás', step: 'Paso', of: 'de', remaining: 'Quedan',
@@ -42,6 +38,7 @@ const copy = isEn ? {
   recovery: 'No hemos podido leer una respuesta de este enlace. Vuelve a responderla.',
   copied: 'Enlace copiado', copyError: 'No hemos podido copiar el enlace.',
   rank: 'Opción', fallback: 'Sin imagen disponible', progressLabel: 'Progreso de selección',
+  seller: 'Vendedor', source: 'Fuente', checked: 'Precio consultado', varies: 'El precio puede variar.',
 };
 const payloadJson = serializeSelectorPayload({
   products: selectorProducts,
@@ -135,6 +132,7 @@ const payloadJson = serializeSelectorPayload({
   import { previousSelectorState, targetTabIndex } from '@/lib/selector/ui-state';
   import { firstUnansweredQuestionIndex } from '@/lib/selector/ui-state';
   import { copyText } from '@/lib/selector/clipboard';
+  import { formatOfferAttribution, type AttributionOffer } from '@/lib/selector/offer-attribution';
   import type { ClipboardDocumentAdapter } from '@/lib/selector/clipboard';
   import {
     cloneSelectorAnswers,
@@ -150,8 +148,8 @@ const payloadJson = serializeSelectorPayload({
   import type { SelectorProductPayload } from '@/lib/selector/payload';
   import type { SelectorTypeConfig } from '@/lib/selector/config';
 
-  type RuntimeOffer = { priceAmount: number; currency: string; sourceUrl?: string; url?: string; seller?: string };
-  type RuntimeCopy = Record<'typeTitle' | 'typeHelp' | 'continue' | 'back' | 'step' | 'of' | 'remaining' | 'required' | 'invalid' | 'recovery' | 'copied' | 'copyError' | 'rank' | 'fallback', string>;
+  type RuntimeOffer = AttributionOffer;
+  type RuntimeCopy = Record<'typeTitle' | 'typeHelp' | 'continue' | 'back' | 'step' | 'of' | 'remaining' | 'required' | 'invalid' | 'recovery' | 'copied' | 'copyError' | 'rank' | 'fallback' | 'seller' | 'source' | 'checked' | 'varies', string>;
   type RuntimePayload = {
     products: SelectorProductPayload[];
     configs: SelectorTypeConfig[];
@@ -394,10 +392,21 @@ const payloadJson = serializeSelectorPayload({
         image.alt = locale === 'en' ? `${product.marca} ${name} product image` : product.imagenAlt || name;
         image.addEventListener('error', () => showImageFallback(card, product, image), { once: true });
       } else showImageFallback(card, product, image);
-      const offer = offers[product.slug];
-      card.querySelector<HTMLElement>('[data-card-price]')!.textContent = offer && Number.isFinite(offer.priceAmount)
-        ? new Intl.NumberFormat(locale === 'en' ? 'en-US' : 'es-ES', { style: 'currency', currency: offer.currency }).format(offer.priceAmount)
-        : tramoTexto(product.tramoPrecio, locale);
+      const attribution = formatOfferAttribution(offers[product.slug], locale);
+      card.querySelector<HTMLElement>('[data-card-price]')!.textContent = attribution?.priceText ?? tramoTexto(product.tramoPrecio, locale);
+      const sourceBlock = card.querySelector<HTMLElement>('[data-card-attribution]')!;
+      const sourceLink = card.querySelector<HTMLAnchorElement>('[data-card-source]')!;
+      const checkedLabel = card.querySelector<HTMLElement>('[data-card-checked-label]')!;
+      const checkedTime = card.querySelector<HTMLTimeElement>('[data-card-checked-time]')!;
+      const varies = card.querySelector<HTMLElement>('[data-card-price-varies]')!;
+      sourceBlock.hidden = !attribution;
+      sourceLink.textContent = attribution ? `${copy.seller}: ${attribution.seller} · ${copy.source}: ${attribution.sourceHost}` : '';
+      if (attribution) sourceLink.href = attribution.sourceUrl;
+      else sourceLink.removeAttribute('href');
+      checkedLabel.textContent = attribution ? `${copy.checked} ` : '';
+      checkedTime.textContent = attribution?.dateText ?? '';
+      checkedTime.dateTime = attribution?.datetimeISO ?? '';
+      varies.textContent = attribution ? copy.varies : '';
       const reasonItems = Array.from(card.querySelectorAll<HTMLElement>('[data-card-reason]'));
       reasonItems.forEach((item, index) => { item.textContent = explanation.reasons[index] ?? ''; item.hidden = !explanation.reasons[index]; });
       const warning = card.querySelector<HTMLElement>('[data-card-warning]')!;

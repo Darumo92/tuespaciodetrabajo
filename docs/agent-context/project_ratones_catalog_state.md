@@ -1,5 +1,20 @@
 # Catálogo de ratones — primer lote
 
+## Atribución visible MICE-03 — candidato local 2026-10-09
+
+MICE-02 cerrada por el padre en `abc870e`, auditoría independiente 4/4;
+las menciones a commit pendiente de abajo son evidencia histórica anterior.
+MICE-03 añade al selector ES/EN vendedor, enlace público de evidencia y fecha
+de consulta de cada oferta (`checkedAt`, día UTC), junto al precio en su moneda
+original. `url` de compra se conserva separado de `evidenceUrl`; `updatedAt`
+del registro no acredita frescura. Enlaces seguros, foco de teclado y texto
+con wrapping, sin precio garantizado, stock universal ni cambio de ranking/CTA.
+Ofertas null siguen mostrando solo tramo orientativo, sin atribución heredada.
+Checks de este candidato se registran en `odd/tasks/ratones-master3s-anywhere3s.md`.
+Pendientes QA visual ES/EN escritorio/móvil, comprobación independiente y commit
+del padre; MICE-03 no cerrada ni publicada. Solo la feature tiene autorización
+condicional de publicación por el padre, nunca trabajo ajeno/CodeGraph; RDD OFF.
+
 ## Auditoría acotada MICE-02 — 2026-10-09
 
 Solo los dos nuevos ratones, no los otros 132 productos. Se registran cuatro
