@@ -48,8 +48,9 @@ limitaciones:
     Comprueba que el ordenador admite Bluetooth o cuenta con el receptor adecuado.
   - >-
     El enlace Amazon corresponde al modelo estándar identificado, pero no
-    acredita una oferta actual aprobada. Comprueba variante, vendedor, precio y
-    existencias. El tramo de precio es orientativo y no fija un importe.
+    garantiza el precio ni las existencias al comprar. La oferta de Amazon.es
+    consultada se guarda en el registro separado de ofertas. Comprueba variante,
+    vendedor, precio y existencias; el tramo orientativo no fija un importe.
   - >-
     Logitech documenta el cable para carga. No hemos confirmado transmisión de
     datos por USB para esta ficha; no lo elijas suponiendo que podrá funcionar
@@ -111,7 +112,9 @@ fuentes:
     url: https://www.tomshardware.com/reviews/logitech-mx-anywhere-3s
     fechaConsulta: '2026-10-09'
   - tipo: tienda
-    nombre: Amazon.es, identidad y caja del modelo 910-006929, no oferta aprobada
+    nombre: >-
+      Amazon.es, identidad y caja del modelo 910-006929; oferta del 9 de octubre
+      de 2026 auditada por separado, sin garantía de precio o stock permanente
     url: https://www.amazon.es/dp/B07W4DGLY6
     fechaConsulta: '2026-10-09'
 en:
@@ -152,8 +155,10 @@ en:
       cable. Check that your computer supports Bluetooth or has a suitable receiver.
     - >-
       The Amazon link identifies the standard model but does not establish a
-      currently approved offer. Check the variant, seller, price and stock.
-      The price tier is indicative, not a fixed amount. No US offer is verified.
+      price or stock when you buy. Check the variant, seller, price and stock.
+      The price tier is indicative, not a fixed amount. The dated US quote is
+      from Logitech for standard graphite 910-006925 without a receiver, not
+      a verified Amazon US offer. The OneLink destination remains unverified.
     - >-
       Logitech documents the cable for charging. USB data transmission is
       unconfirmed in this profile; do not choose it assuming it will work as

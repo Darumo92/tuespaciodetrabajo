@@ -3,6 +3,8 @@ import { load } from 'js-yaml';
 import { describe, expect, it } from 'vitest';
 import type { Producto } from '../productos';
 import { buildProductCta, etiquetaEnum, productPath } from '../productos';
+import { getProductOffer, type ProductOffersFile } from '../product-offers';
+import productOffers from '../../data/product-offers.json';
 import { getSelectorConfig, resolveEligibleSelectorConfigs, SELECTOR_CONFIGS } from './config';
 import { projectSelectorProduct } from './payload';
 import { scoreProducts } from './scoring';
@@ -56,9 +58,32 @@ describe('selector con el primer lote de ratones', () => {
     expect(Object.values(mouse!.valoraciones).every(value => value == null)).toBe(true);
     expect(mouse!.historicalOfferContext).toBe(true);
     expect(mouse!.oneLinkReady ?? false).toBe(false);
-    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/(?:no|not|unverified|unconfirmed)[^.]*US|US[^.]*not (?:confirmed|verified)/i);
+    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/not a verified Amazon US offer/i);
+    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/OneLink destination remains unverified/i);
+    expect(mouse!.en?.limitaciones?.join(' ')).toContain(slug === 'logitech-mx-master-3s' ? 'Provantage' : 'Logitech');
     expect(mouse!.limitaciones?.length).toBeGreaterThan(0);
     expect(mouse!.en?.limitaciones?.length).toBeGreaterThan(0);
+  });
+  it('keeps the bounded mouse audit separate from permanent prices and affiliate CTAs', () => {
+    const data = productOffers as ProductOffersFile;
+    expect(Object.keys(data.products).sort()).toEqual(['logitech-mx-anywhere-3s', 'logitech-mx-master-3s']);
+    for (const slug of ['logitech-mx-master-3s', 'logitech-mx-anywhere-3s']) {
+      expect(Object.keys(data.products[slug]).sort()).toEqual(['ES', 'US']);
+      for (const [market, locale, currency] of [['ES', 'es-ES', 'EUR'], ['US', 'en', 'USD']] as const) {
+        const record = data.products[slug][market];
+        expect(record?.status).toBe('available');
+        if (!record || record.status === 'unaudited') throw new Error(`Missing audited ${slug}.${market}`);
+        // Verify the captured audit at its real check time, not an evergreen stock assertion.
+        const offer = getProductOffer(slug, locale, { data, now: record.checkedAt });
+        expect(offer).toMatchObject({ currency, condition: 'new' });
+        expect(offer!.priceAmount).toBeGreaterThan(0);
+        expect(getProductOffer(slug, locale, { data, now: Date.parse(record.checkedAt) + 31 * 24 * 60 * 60 * 1000 })).toBeNull();
+      }
+    }
+    expect(data.products['logitech-mx-master-3s'].ES).toMatchObject({ sourceType: 'retailer', seller: 'Univers Club - ES (PcComponentes marketplace)' });
+    expect(data.products['logitech-mx-master-3s'].US).toMatchObject({ sourceType: 'distributor', seller: 'Provantage' });
+    expect(data.products['logitech-mx-anywhere-3s'].ES).toMatchObject({ sourceType: 'amazon', seller: 'Amazon' });
+    expect(data.products['logitech-mx-anywhere-3s'].US).toMatchObject({ sourceType: 'official', seller: 'Logitech' });
   });
   it('no recomienda como Bluetooth el MAYA X y conserva limitaciones EN', () => {
     const cfg = getSelectorConfig('raton');

@@ -1,5 +1,58 @@
 {
   "defaultStatus": "unaudited",
-  "updatedAt": "2026-07-10T00:00:00.000Z",
-  "products": {}
+  "updatedAt": "2026-10-09T19:31:21Z",
+  "products": {
+    "logitech-mx-master-3s": {
+      "ES": {
+        "status": "available",
+        "priceAmount": 146.99,
+        "currency": "EUR",
+        "url": "https://www.pccomponentes.com/logitech-mx-master-3s-performance-raton-inalambrico-funciona-sobre-cristal-clics-silenciosos-usb-c",
+        "evidenceUrl": "https://www.pccomponentes.com/logitech-mx-master-3s-performance-raton-inalambrico-funciona-sobre-cristal-clics-silenciosos-usb-c",
+        "seller": "Univers Club - ES (PcComponentes marketplace)",
+        "sourceType": "retailer",
+        "condition": "new",
+        "checkedAt": "2026-10-09T19:29:28Z",
+        "attempts": ["amazon", "official", "retailer"]
+      },
+      "US": {
+        "status": "available",
+        "priceAmount": 257.49,
+        "currency": "USD",
+        "url": "https://www.provantage.com/logitech-910-006557~7LOG91P9.htm",
+        "evidenceUrl": "https://www.provantage.com/logitech-910-006557~7LOG91P9.htm",
+        "seller": "Provantage",
+        "sourceType": "distributor",
+        "condition": "new",
+        "checkedAt": "2026-10-09T19:31:21Z",
+        "attempts": ["amazon", "official", "distributor"]
+      }
+    },
+    "logitech-mx-anywhere-3s": {
+      "ES": {
+        "status": "available",
+        "priceAmount": 77.95,
+        "currency": "EUR",
+        "url": "https://www.amazon.es/dp/B07W4DGLY6?th=1",
+        "evidenceUrl": "https://www.amazon.es/dp/B07W4DGLY6?th=1",
+        "seller": "Amazon",
+        "sourceType": "amazon",
+        "condition": "new",
+        "checkedAt": "2026-10-09T19:29:01Z",
+        "attempts": ["amazon"]
+      },
+      "US": {
+        "status": "available",
+        "priceAmount": 89.99,
+        "currency": "USD",
+        "url": "https://www.logitech.com/en-us/shop/p/mx-anywhere-3s.910-006925",
+        "evidenceUrl": "https://www.logitech.com/en-us/shop/p/mx-anywhere-3s.910-006925",
+        "seller": "Logitech",
+        "sourceType": "official",
+        "condition": "new",
+        "checkedAt": "2026-10-09T19:30:19Z",
+        "attempts": ["amazon", "official"]
+      }
+    }
+  }
 }

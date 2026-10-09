@@ -29,8 +29,9 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Auditoría paridad contenido EN](project_english_localization_audit.md) — Refactor i18n EN completado 03 jul 2026: 30/30 MDX revisados, ratios EN/ES 90%-116%, calculadora EN limpiada.
 - [Estado catálogo de sillas](../research/sillas/ESTADO.md) — Handoff vivo; leer este archivo para conocer cifras, API y siguiente lote actuales.
 - [Estado catálogo de escritorios](project_escritorios_catalog_state.md) — Handoff vivo del catálogo de escritorios elevables.
-- [Estado catálogo de ratones](project_ratones_catalog_state.md) — 11 ratones / 22 fichas ES+EN en datos locales; ampliación Master 3S / Anywhere 3S redactada, pendiente de verificación del conjunto y revisión humana. No publicada.
+- [Estado catálogo de ratones](project_ratones_catalog_state.md) — 11 ratones / 22 fichas ES+EN; MICE-01 en commit local `24b5221`. MICE-02: cuatro ofertas ES/US verificadas y checks locales correctos; QA visual, verificación independiente y commit del padre pendientes. No publicada.
 - [Demanda y fuentes de ratones, 09 oct](../research/ratones-demanda-2026-10-09.md) — Estimaciones Keyword Surfer España y fuentes de las dos fichas; límites de edición, receptor, ofertas y trazabilidad de consultas.
+- [Ofertas de los dos ratones, 09 oct](../research/ratones-ofertas-2026-10-09.md) — Master y Anywhere ES/US: precio, vendedor, variante, condición, reloj UTC e intentos reales; no aprobación Amazon US/OneLink ni auditoría global.
 - [Contrato vigente de ofertas](../plans/selector-productos.md) — Integridad separada de cobertura estricta por aprobación del usuario. Estructura PASS, 264 auditorías ES/US pendientes; `validate:offers:coverage` FAIL, sin datos fabricados ni aceptación comercial.
 
 ## Histórico — no ejecutar como plan vigente

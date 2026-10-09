@@ -1,5 +1,61 @@
 # Catálogo de ratones — primer lote
 
+## Auditoría acotada MICE-02 — 2026-10-09
+
+Solo los dos nuevos ratones, no los otros 132 productos. Se registran cuatro
+ofertas observadas en navegador público y fechadas con reloj UTC real:
+Master ES 146,99 EUR (Univers Club - ES en PcComponentes, estándar 910-006559
+con receptor), Master US 257.49 USD (Provantage, Graphite 910-006557 con Bolt),
+Anywhere ES 77,95 EUR (Amazon, grafito 910-006929 sin receptor) y Anywhere US
+89.99 USD (Logitech, Graphite 910-006925 sin receptor). Todos nuevos y con stock
+anunciado en la consulta, no garantía futura; referencias regionales distintas.
+Registro completo e intentos: [ofertas 09 oct](../research/ratones-ofertas-2026-10-09.md).
+
+Amazon.es Master mantiene referencias contradictorias; su ASIN sigue null y
+el CTA sigue búsqueda exacta. Logitech Master actual vende Bluetooth Edition
+sin Bolt: excluida de esta auditoría. Las ofertas US de distribuidor/fabricante
+no prueban Amazon US ni OneLink. Precio fijo y ratings YAML siguen null,
+`oneLinkReady: false`, dimensiones Master null y USB data sin cambios.
+El registro volátil se consume en el selector; las fichas conservan avisos de
+afiliación. Auditoría de fuentes corroborada independientemente **4/4** por el
+verificador comunicado por el padre; sin refrescar precio o `checkedAt`.
+En Master ES y Anywhere US, NewCondition está en el contenedor Product; las
+ofertas anidadas prueban importe/moneda/stock y la variante exacta, no incluyen
+por sí mismas ese campo de condición. Detalle en el registro de investigación.
+La matriz visual original de diez rutas/viewports pasó, pero el selector aún
+carece de vendedor, enlace de evidencia y fecha por cotización: **MICE-03 abierto**,
+sin PASS comercial UI. MICE-02 es la unidad de datos para commit local previo
+al arreglo de presentación MICE-03; no modifica ranking ni destinos afiliados.
+
+MICE-01 ya está en el commit local `24b5221`; las notas de «commit pendiente»
+en el handoff anterior son históricas. MICE-02 conserva checkbox abierto:
+checks locales observados debajo, commit del padre pendiente; no stage, commit, push o publicación
+por este trabajador. RDD global OFF. La publicación de solo esta feature está
+condicionada por el padre, excluyendo CodeGraph y todos los cambios ajenos.
+
+### Checks locales de MICE-02 observados
+
+Antes de la corrección mecánica del nombre de fuente de Anywhere: 33 pruebas
+focalizadas correctas; suite completa 504/504 en 14 archivos (no repetida aquí);
+integridad de ofertas PASS con ES 2/134 y US 2/134; cobertura global FAIL con
+264 mercados ausentes de los otros 132 productos. Lectura exacta dos claves ×
+ES/US y helper real: 4/4 utilizables al reloj `2026-10-09T19:34:04.104Z`.
+Build PASS (463 páginas, 0 conversiones, 17 hashes CSP sin diff de `_headers`);
+productos 134 válidos, ratones 22 fichas + 2 catálogos correctos, selector 2
+páginas / 134 elegibles y `git diff --check` correcto. No se hicieron escrituras
+fuera del alcance ni acciones Git de entrega. La corroboración independiente de
+fuentes está completa 4/4; el nombre de fuente se corrige y se repiten checks
+focalizados/build. No se traslada el PASS visual original a atribución comercial
+UI, todavía pendiente de MICE-03, ni se da el commit del padre por hecho.
+
+Tras la última corrección del nombre de fuente: comando focalizado de ofertas y
+ratones 33 PASS; build 463 páginas / cero conversiones / 17 hashes CSP sin diff;
+validator ratones 22 fichas + 2 catálogos PASS; integridad ofertas PASS (ES 2/134,
+US 2/134, 264 pendientes); `git diff --check` PASS. No se repitió la suite completa
+504/504 ni se alteraron importes/fechas. MICE-02 lista para commit local del padre
+como unidad de auditoría independiente 4/4; MICE-03 sigue abierto para atribución
+comercial visible. Solo se sincronizó evidencia pasiva tras estos comandos.
+
 ## Ampliación local 2026-10-09: MX Master 3S y MX Anywhere 3S
 
 El usuario aprueba sustituir el artículo semanal por dos fichas ES+EN, no crear
