@@ -52,7 +52,8 @@ Add two useful, source-supported Spanish/English mouse profiles selected using o
 - Parent spot check: `npx vitest run src/lib/selector/ratones.test.ts` 11 PASS.
 - Writer continuity: serial premium writer exhausted quota after writes; resumed the same writer when the user reported restored quota. No parallel section writers.
 - Engram mirror: maintained under `odd/ratones-master3s-anywhere3s/tasks`, observation 242; final commit evidence is synchronized before delivery.
-- Next step: isolate the five feature commits (`24b5221`, `f9d0a11`, `abc870e`, `b9f4c63`, and this closeout) on main and perform the explicitly authorized non-force push. Publication excludes CodeGraph commits `a40f14b`/`139c22f`, so the main identities of the cherry-picked commits differ from the evidence SHAs recorded here. Production deployment is not proven by push alone. Existing unrelated changes remain preserved outside this delivery.
+- Publication: complete. The five feature commits were cherry-picked onto main (excluding CodeGraph commits `a40f14b`/`139c22f`) as `e7ad0f2` (profiles), `33a1225` (MICE-01 closeout), `30450da` (offer audits), `5ddc322` (price attribution) and `3385344` (MICE-03 closeout), and pushed to `origin/main` as a fast-forward `8585ed6..3385344` with configured Git authentication, without force. Local `main` is synchronized; the feature branch retains the original evidence SHAs and remains local. Unrelated dirty work (backlinks/recovery context, `opencode.json`, `.atl/`) was preserved outside every commit.
+- Remaining follow-ups, out of this feature's authorized scope: 264 unaudited offer markets for the other 132 products, and production deployment is not proven by push alone.
 
 ## MICE-02 worker evidence (2026-10-09, commit pending)
 - Focused exact command `npx vitest run src/lib/product-offers.test.ts src/lib/selector/ratones.test.ts`: 33 PASS; `npm test`: 504 PASS / 14 files. No artificial audit RED.
