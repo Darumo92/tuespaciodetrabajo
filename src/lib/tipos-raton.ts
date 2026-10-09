@@ -13,7 +13,7 @@ export const raton: TipoConfig = {
     compareDescription: 'Compare two to four mice side by side: shape, dimensions, weight, wireless connections and power. Find the differences that matter for your desk.',
     compareH1: 'Compare mice', compareIntro: 'Choose two to four mice and compare their published specifications.',
     comparePairIntro: 'Compare published mouse specifications.',
-    catalogIntro: 'Start with shape and connection type, then check dimensions and power. These nine profiles show where the models differ; unconfirmed data is shown as n/a.',
+    catalogIntro: 'Start with shape and connection type, then check dimensions and power. These eleven profiles show where the models differ; unconfirmed data is shown as n/a.',
     popularHeading: 'Mouse comparisons', comparePairTitleSuffix: 'Mouse Specs',
     comparePairAxes: 'shape, dimensions, connectivity and power', metaDatabaseName: 'Mouse Catalog',
   },

@@ -51,6 +51,13 @@
 
 ## COLA / ROADMAP
 
+### Semana 2026-10-05 a 2026-10-11: sustitución aprobada por dos fichas
+
+- El usuario sustituye el artículo de esta semana por MX Master 3S estándar y MX Anywhere 3S estándar grafito, ambos ES+EN. Fecha de redacción: 2026-10-09. Se conserva la cadencia permanente de un artículo semanal.
+- Selección entre modelos muestreados aún no incluidos, con estimaciones Keyword Surfer España aportadas por la investigación: Master 3S 4400 y Anywhere 3S 480 búsquedas mensuales. No es un ranking exhaustivo ni una medida de dificultad. [Registro de demanda y fuentes](../research/ratones-demanda-2026-10-09.md).
+- Datos locales: once ratones / veintidós fichas. Redacción documental sin pruebas propias, precios o notas inventadas. Master usa búsqueda para evitar mezclar ediciones; Anywhere conserva ASIN identificado, con oferta actual sin aprobar. Ofertas US no verificadas.
+- Estado: borradores locales, verificación del conjunto y revisión humana pendientes; no publicados. La guía `como-elegir-raton-ergonomico` sigue en cola y necesitará su investigación SERP cuando se retome.
+
 ### Semana 2026-09-28 a 2026-10-04: sustitución aprobada por dos fichas
 
 - El usuario sustituye expresamente el artículo largo de esta semana por Anker A7852 y Perixx PERIMICE-513 USB-A, cada uno con contenido ES+EN. No cambia la cadencia permanente de un artículo semanal.

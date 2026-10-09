@@ -122,7 +122,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Perixx PERIMICE-513N negro USB-A / 11168 | B00GZIA2AE (registro histórico) | Búsqueda Amazon del modelo exacto | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | Tramo 1 orientativo | Ficha ES+EN `perixx-perimice-513`; imagen contrastada con galería USB-A 2026-10-03; no confundir con USB-C ni 713 |
 
 ### Catálogo de ratones (src/content/productos/*.yaml)
-Cinco fichas ES+EN añadidas el 2026-09-17 y otras dos preparadas el 2026-09-30. Sin notas editoriales numéricas ni precios fijos en el YAML. Los enlaces de las dos fichas nuevas usan ASINs históricos: no se han confirmado la oferta, la variante ni las existencias actuales en Amazon.es. Revisión humana y comprobación comercial pendientes antes de publicar.
+Once ratones y veintidós fichas ES+EN en los datos locales: cinco iniciales, ProtoArc y Trust (2026-09-30), Anker y Perixx (2026-10-03), y MX Master 3S y MX Anywhere 3S (2026-10-09). Sin notas numéricas ni precios fijos. Los ASINs identifican productos o registros históricos, no ofertas actuales aprobadas. Master 3S, Anker y Perixx usan búsqueda exacta. Verificación de la ampliación, revisión humana y publicación pendientes; no hay aprobación de ofertas US.
 
 | Slug | ASIN | Imagen (300 px) | Variante verificada |
 |------|------|------------------|---------------------|
@@ -133,6 +133,10 @@ Cinco fichas ES+EN añadidas el 2026-09-17 y otras dos preparadas el 2026-09-30.
 | lamzu-maya-x | B0DFGYHVPZ | 61dYQrHhkFL | MAYA X negro |
 | protoarc-em11-nl | B0D12PGGKK | 511qcVCPKbL | Imagen negra contrastada con ProtoArc el 2026-09-30; oferta ES actual no confirmada |
 | trust-verto-wireless | B07FM2GLNQ | 61QNE816-HL | Imagen contrastada con Trust 22879 el 2026-09-30; oferta ES actual no confirmada |
+| anker-ak-uba-vertical | Sin ASIN directo; búsqueda A7852 / AK-98ANWVM-UBA | 51dXoPgdyfL | Negro A7852011; ficha e imagen contrastadas 2026-10-03 |
+| perixx-perimice-513 | Sin ASIN directo; búsqueda PERIMICE-513 USB-A negro | 51N0cWqT93L | Negro USB-A 11168, no USB-C ni 713; contrastado 2026-10-03 |
+| logitech-mx-master-3s | Sin ASIN directo; búsqueda 910-006559 con receptor Bolt | 61jl3Jfcc1L | Estándar, no Bluetooth Edition; comprobar caja. Anuncio histórico con referencias contradictorias, excluido como CTA directo |
+| logitech-mx-anywhere-3s | B07W4DGLY6 | 61dYSaNVRaL | Estándar grafito 910-006929; identidad y caja contrastadas 2026-10-09; Bolt no incluido, oferta actual no aprobada |
 
 ### mejor-teclado-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

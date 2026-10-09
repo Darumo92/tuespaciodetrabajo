@@ -1,0 +1,210 @@
+tipo: raton
+nombre: Logitech MX Master 3S
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/61jl3Jfcc1L._AC_SL300_.jpg
+imagenAlt: Logitech MX Master 3S con apoyo de pulgar y rueda lateral
+tramoPrecio: 4
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: null
+  buscar: Logitech MX Master 3S 910-006559 receptor Logi Bolt
+oneLinkReady: false
+webOficial: https://support.logi.com/hc/en-au/articles/5218056588311-Getting-Started-MX-Master-3S
+idealPara: Un puesto fijo con hojas de cálculo, documentos largos y atajos por aplicación
+veredicto: >-
+  El Logitech MX Master 3S tiene sentido si vas a usar su rueda de pulgar para
+  recorrer hojas de cálculo y configurar atajos. Sus 141 g y su cuerpo voluminoso
+  encajan mejor en una mesa fija que en una bolsa de portátil. Comprueba la
+  edición elegida: esta ficha corresponde al modelo estándar con receptor Bolt.
+resumenCompra:
+  mejorPara: >-
+    Trabajar con la mano derecha en Windows o macOS, alternando documentos
+    largos y tablas anchas, con permiso para instalar Logi Options+.
+  evitarSi: >-
+    Buscas poco peso, usas la mano izquierda o solo necesitas clic y rueda.
+    Tampoco es la opción para quien necesita transmitir datos por cable USB.
+  alternativaDirecta: >-
+    El MX Master 4 añade funciones hápticas; compara si las necesitas, sin dar
+    por hecha una mejora en tu trabajo. El M650 cubre oficina sencilla y el
+    LAMZU MAYA X prioriza ligereza frente a rueda lateral y atajos de oficina.
+  decisionRapida: >-
+    Piensa qué acción asignarías a la rueda lateral y a los botones en tus dos
+    aplicaciones habituales. Si no encuentras un uso concreto, compara primero
+    el M650. Si eliges el 3S, confirma el receptor incluido antes de pagar.
+metodologia:
+  - >-
+    Ficha basada en el soporte oficial de Logitech y el análisis de Tom's
+    Hardware, consultados el 9 de octubre de 2026. No hemos probado este ratón
+    ni medido comodidad, ruido o autonomía.
+  - >-
+    Distinguimos el MX Master 3S estándar de la Bluetooth Edition actual.
+    Las impresiones sobre alcance de controles se atribuyen al análisis,
+    no a una experiencia propia ni a todas las manos.
+limitaciones:
+  - >-
+    El soporte del modelo estándar describe receptor Logi Bolt y cable de carga
+    incluidos. La Bluetooth Edition de la tienda actual no incluye ese receptor.
+    Comprueba el contenido de caja de la versión que compres; el nombre MX
+    Master 3S y una foto parecida no bastan para distinguirlas.
+  - >-
+    La búsqueda de Amazon ayuda a localizar el modelo, pero puede mezclar
+    ediciones. Revisa referencia, receptor, vendedor, precio y disponibilidad.
+    El tramo de precio es orientativo, no un importe fijo ni una oferta aprobada.
+  - >-
+    Options+ permite gestos y perfiles por aplicación en Windows y macOS.
+    Linux y ChromeOS ofrecen uso básico, no esas mismas funciones avanzadas.
+    Comprueba la política de instalación del ordenador de empresa antes de
+    comprarlo por sus atajos.
+  - >-
+    El USB-C sirve para cargar: no transmite los datos del ratón por el cable.
+    Necesitas mantener la conexión inalámbrica, aunque conectes el cable de carga.
+  - >-
+    Logitech anuncia hasta 70 días de batería, con duración dependiente del uso
+    y del entorno. Es una cifra del fabricante, no una medición de esta ficha.
+    Las dimensiones quedan sin confirmar para esta edición estándar.
+paraQuienSi:
+  - Quien recorre tablas anchas y quiere desplazamiento horizontal con una rueda de pulgar dedicada.
+  - >-
+    Quien trabaja en un puesto fijo y puede asignar gestos o botones a acciones
+    concretas de sus aplicaciones con Options+.
+  - Quien alterna hasta tres dispositivos y acepta cambiar de canal desde la base.
+paraQuienNo:
+  - Quien quiere un ratón pequeño y ligero para transportarlo cada día.
+  - Usuarios zurdos o quienes necesitan funcionamiento mediante cable de datos.
+  - Quien no puede instalar Options+ y lo compra principalmente por los perfiles y gestos.
+puntosFuertes:
+  - >-
+    Rueda MagSpeed para desplazamiento por pasos o libre. SmartShift cambia
+    entre ambos modos según la velocidad de giro, útil al pasar de leer unas
+    líneas a recorrer un documento largo.
+  - >-
+    Rueda lateral dedicada para desplazamiento horizontal y botones con gestos
+    y perfiles por aplicación mediante Options+.
+  - >-
+    Bluetooth y Logi Bolt, con hasta tres canales Easy-Switch. El cambio manual
+    está en la base; Flow es otra función y requiere Options+ en ambos ordenadores
+    compatibles y su configuración.
+  - Clics principales silenciosos y batería recargable por USB-C, sin comprar pilas.
+puntosDebiles:
+  - Sus 141 g y el cuerpo voluminoso son una desventaja si priorizas ligereza y transporte.
+  - El botón de gestos puede quedar fuera del alcance cómodo según tu agarre.
+  - Los atajos avanzados dependen del software; el cable de carga no ofrece conexión de datos.
+comunidad: >-
+  El autor del análisis de Tom's Hardware encontró difícil alcanzar el botón de
+  gestos con su agarre. Es una observación individual, no un fallo universal.
+  Comprueba si puedes pulsarlo sin recolocar la mano dentro del plazo de devolución,
+  especialmente si ese botón es una razón para elegir el Master.
+fuenteSpecs: Logitech, soporte del MX Master 3S estándar; peso y carga contrastados con Tom's Hardware
+verificadoEn: '2026-10-09'
+historicalOfferContext: true
+fuentes:
+  - tipo: oficial
+    nombre: Logitech, guía del MX Master 3S estándar, caja y funciones
+    url: https://support.logi.com/hc/en-au/articles/5218056588311-Getting-Started-MX-Master-3S
+    fechaConsulta: '2026-10-09'
+  - tipo: oficial
+    nombre: Logitech, Bluetooth Edition actual, distinta del estándar
+    url: https://www.logitech.com/es-es/shop/p/mx-master-3s
+    fechaConsulta: '2026-10-09'
+  - tipo: review
+    nombre: Tom's Hardware, peso, carga sin datos y alcance del botón de gestos
+    url: https://www.tomshardware.com/reviews/logitech-mx-master-3s-mouse
+    fechaConsulta: '2026-10-09'
+en:
+  nombreComercial: Logitech MX Master 3S
+  idealPara: A fixed desk with spreadsheets, long documents and application shortcuts
+  veredicto: >-
+    The Logitech MX Master 3S makes sense if you will use its thumb wheel for
+    spreadsheets and configure shortcuts. Its 141 g weight and bulky body suit
+    a fixed desk better than a laptop bag. Check the edition you choose: this
+    profile covers the standard model with a Bolt receiver.
+  resumenCompra:
+    mejorPara: >-
+      Right-handed work on Windows or macOS, moving between long documents and
+      wide tables, with permission to install Logi Options+.
+    evitarSi: >-
+      You want low weight, use your left hand or only need clicking and scrolling.
+      It is also unsuitable if you need a USB data connection.
+    alternativaDirecta: >-
+      The MX Master 4 adds haptic features; consider whether you need them rather
+      than assuming better results. The M650 covers simpler office work, while
+      the LAMZU MAYA X prioritizes low weight over a thumb wheel and office shortcuts.
+    decisionRapida: >-
+      Think of an action you would assign to the thumb wheel and buttons in your
+      two main applications. If nothing comes to mind, compare the M650 first.
+      If you choose the 3S, confirm the included receiver before paying.
+  metodologia:
+    - >-
+      Based on Logitech's official support guide and the Tom's Hardware review,
+      consulted on 9 October 2026. We have not tested this mouse or measured
+      comfort, noise or battery life.
+    - >-
+      We distinguish the standard MX Master 3S from the current Bluetooth Edition.
+      Comments about control reach belong to the reviewer, not to our own testing
+      or a claim about every hand.
+  limitaciones:
+    - >-
+      The standard model's support guide lists an included Logi Bolt receiver
+      and charging cable. Logitech's current Bluetooth Edition does not include
+      that receiver. Check the box contents for the version you buy; the MX
+      Master 3S name and a similar picture do not distinguish them.
+    - >-
+      The Amazon search helps locate the model but may mix editions. Check the
+      reference, receiver, seller, price and availability. The price tier is
+      indicative, not a fixed amount or an approved offer. No US offer is verified.
+    - >-
+      Options+ enables gestures and application profiles on Windows and macOS.
+      Linux and ChromeOS support basic use, not the same advanced features.
+      Check your work computer's software policy before buying it for shortcuts.
+    - >-
+      USB-C is for charging, not mouse data. The mouse still needs its wireless
+      connection when you plug in the charging cable.
+    - >-
+      Logitech advertises up to 70 days of battery life, depending on use and
+      environment. This is a manufacturer figure, not our measurement.
+      Dimensions remain unconfirmed for this standard edition.
+  paraQuienSi:
+    - People working with wide tables who want a dedicated horizontal thumb wheel.
+    - People at a fixed desk who can assign gestures or buttons to specific application actions with Options+.
+    - People switching between up to three devices who accept an underside channel button.
+  paraQuienNo:
+    - People wanting a small, lightweight mouse to carry every day.
+    - Left-handed users or anyone needing a wired data connection.
+    - People unable to install Options+ who are buying mainly for profiles and gestures.
+  puntosFuertes:
+    - >-
+      MagSpeed scrolling in stepped or free-spin mode. SmartShift switches
+      between them according to wheel speed, useful when moving from a few
+      lines to scrolling through a long document.
+    - A dedicated horizontal thumb wheel, with gestures and application profiles through Options+.
+    - >-
+      Bluetooth and Logi Bolt with up to three Easy-Switch channels. Manual
+      switching uses the underside button; Flow is a separate feature requiring
+      Options+ on both compatible computers and setup.
+    - Quiet primary clicks and a USB-C rechargeable battery, without disposable batteries.
+  puntosDebiles:
+    - Its 141 g weight and bulky body work against a preference for low weight and portability.
+    - The gesture button may be awkward to reach with your grip.
+    - Advanced shortcuts depend on software; the charging cable cannot carry mouse data.
+  comunidad: >-
+    The Tom's Hardware reviewer found the gesture button difficult to reach with
+    their grip. That is one observation, not a universal fault. Within the return
+    period, check whether you can press it without repositioning your hand,
+    especially if that button is a reason for choosing the Master.
+specs:
+  tipo: raton
+  formato: convencional
+  mano: derecha
+  largoMm: null
+  anchoMm: null
+  altoMm: null
+  pesoG: 141
+  bluetooth: true
+  receptor: Logi Bolt
+  cableDatos: false
+  multidispositivo: true
+  alimentacion: bateria
+  clicSilencioso: true

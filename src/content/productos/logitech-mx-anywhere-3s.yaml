@@ -1,0 +1,215 @@
+tipo: raton
+nombre: Logitech MX Anywhere 3S
+marca: Logitech
+imagen: https://m.media-amazon.com/images/I/61dYSaNVRaL._AC_SL300_.jpg
+imagenAlt: Logitech MX Anywhere 3S grafito compacto con botones laterales
+tramoPrecio: 3
+precioMin: null
+precioMax: null
+valoracion: null
+valoraciones: {}
+amazon:
+  asin: B07W4DGLY6
+oneLinkReady: false
+webOficial: https://www.logitech.com/es-es/shop/p/mx-anywhere-3s
+idealPara: Llevar el portátil entre puestos sin ocupar un puerto con receptor
+veredicto: >-
+  El Logitech MX Anywhere 3S combina un cuerpo de 100,5 mm de largo y 99 g con
+  rueda MagSpeed y atajos configurables. Es una opción para transportar con el
+  portátil si aceptas menos apoyo de palma. Funciona por Bluetooth sin receptor;
+  la compatibilidad con Bolt no significa que venga uno en la caja.
+resumenCompra:
+  mejorPara: >-
+    Alternar entre puestos con un portátil y hasta tres dispositivos, manteniendo
+    rueda rápida y perfiles por aplicación en Windows o macOS.
+  evitarSi: >-
+    Quieres un cuerpo grande para apoyar la palma, una rueda lateral dedicada
+    o un receptor incluido para un ordenador sin Bluetooth.
+  alternativaDirecta: >-
+    El M650 cubre tareas sencillas sin el enfoque de atajos del MX. El MX Master
+    4 tiene rueda de pulgar y un cuerpo mayor; el Lift cambia a formato vertical,
+    sin que esa forma garantice comodidad ni alivio de molestias.
+  decisionRapida: >-
+    Comprueba el Bluetooth del equipo y si un cuerpo de 100,5 x 65 x 34,4 mm
+    encaja con tu agarre. Si trabajas mucho con tablas anchas, decide si prefieres
+    una rueda de pulgar o aceptas mantener un botón lateral mientras giras la rueda.
+metodologia:
+  - >-
+    Basado en la ficha y el soporte oficiales de Logitech y en el análisis de
+    Tom's Hardware, consultados el 9 de octubre de 2026. No hemos probado este
+    ratón ni medido autonomía, comodidad o ruido.
+  - >-
+    La variante documentada es la estándar grafito 910-006929. Usamos las medidas
+    oficiales, no los campos genéricos de dimensiones del anuncio de Amazon.
+limitaciones:
+  - >-
+    No incluye receptor Logi Bolt; se compra por separado si lo necesitas.
+    La caja estándar contiene el ratón y cable USB-A a USB-C para cargarlo.
+    Comprueba que el ordenador admite Bluetooth o cuenta con el receptor adecuado.
+  - >-
+    El enlace Amazon corresponde al modelo estándar identificado, pero no
+    acredita una oferta actual aprobada. Comprueba variante, vendedor, precio y
+    existencias. El tramo de precio es orientativo y no fija un importe.
+  - >-
+    Logitech documenta el cable para carga. No hemos confirmado transmisión de
+    datos por USB para esta ficha; no lo elijas suponiendo que podrá funcionar
+    como ratón por cable.
+  - >-
+    Options+ permite perfiles, gestos y ajustes avanzados en Windows y macOS.
+    El uso básico en Linux o ChromeOS no incluye esas mismas funciones.
+    En un equipo de empresa, comprueba primero si puedes instalar el programa.
+  - >-
+    El cuerpo compacto puede dejar menos apoyo de palma, especialmente con manos
+    grandes. Las medidas no garantizan ajuste: comprueba el agarre y el alcance
+    de los botones, que están en el lado izquierdo para usarlos con la mano derecha.
+paraQuienSi:
+  - Quien lleva el ratón con el portátil y prioriza un cuerpo compacto de 99 g.
+  - Quien tiene Bluetooth y quiere dejar libres los puertos USB sin comprar un receptor.
+  - Quien recorre documentos largos y puede configurar la rueda y sus atajos en Options+.
+paraQuienNo:
+  - Quien busca apoyo amplio de palma o una rueda horizontal independiente.
+  - Quien necesita receptor incluido o conexión de datos por cable confirmada.
+  - Quien usa la mano izquierda y necesita el mismo acceso a los botones laterales.
+puntosFuertes:
+  - >-
+    Cuerpo de 100,5 x 65 x 34,4 mm y 99 g: más ligero y compacto para transportar
+    que el MX Master 3S de 141 g, sin prometer el mismo apoyo de mano.
+  - >-
+    Rueda MagSpeed por pasos o libre, SmartShift y resistencia ajustable desde
+    Options+. Puedes adaptar el tacto y el cambio de modo al recorrer documentos.
+  - >-
+    Desplazamiento horizontal manteniendo un botón lateral y girando la rueda
+    mediante Options+. No tiene rueda de pulgar dedicada, pero sí esa alternativa
+    para moverte por tablas anchas.
+  - >-
+    Bluetooth y hasta tres dispositivos con Easy-Switch en la base. Flow es una
+    función distinta: requiere Options+ en ambos ordenadores compatibles y configuración.
+  - Clics principales silenciosos y batería de 500 mAh recargable por USB-C.
+puntosDebiles:
+  - El tamaño pensado para transporte puede quedarse corto si apoyas toda la palma.
+  - Para usar Bolt hay que añadir un receptor; compatibilidad no equivale a contenido de caja.
+  - Los perfiles, gestos y ajustes avanzados dependen de Options+ y del sistema operativo.
+comunidad: >-
+  Tom's Hardware señala el cuerpo pequeño como una limitación de ajuste y la
+  ausencia de rueda de pulgar dedicada. Son aspectos que conviene comprobar según
+  tu agarre y trabajo: prueba el apoyo de palma y el desplazamiento horizontal
+  con botón lateral antes de decidir si sustituye a un ratón de mesa mayor.
+fuenteSpecs: Logitech MX Anywhere 3S estándar grafito 910-006929, ficha y soporte oficiales
+verificadoEn: '2026-10-09'
+historicalOfferContext: true
+fuentes:
+  - tipo: oficial
+    nombre: Logitech, MX Anywhere 3S, medidas, batería y caja estándar
+    url: https://www.logitech.com/es-es/shop/p/mx-anywhere-3s
+    fechaConsulta: '2026-10-09'
+  - tipo: oficial
+    nombre: Logitech, guía del MX Anywhere 3S, rueda y Options+
+    url: https://support.logi.com/hc/en-us/articles/12895016873495-Getting-Started-MX-Anywhere-3S
+    fechaConsulta: '2026-10-09'
+  - tipo: review
+    nombre: Tom's Hardware, tamaño y ausencia de rueda lateral dedicada
+    url: https://www.tomshardware.com/reviews/logitech-mx-anywhere-3s
+    fechaConsulta: '2026-10-09'
+  - tipo: tienda
+    nombre: Amazon.es, identidad y caja del modelo 910-006929, no oferta aprobada
+    url: https://www.amazon.es/dp/B07W4DGLY6
+    fechaConsulta: '2026-10-09'
+en:
+  nombreComercial: Logitech MX Anywhere 3S
+  idealPara: Moving a laptop between workspaces without occupying a port with a receiver
+  veredicto: >-
+    The Logitech MX Anywhere 3S combines a 100.5 mm long, 99 g body with MagSpeed
+    scrolling and configurable shortcuts. It suits laptop travel if you accept
+    less palm support. Bluetooth works without a receiver; Bolt compatibility
+    does not mean a receiver comes in the box.
+  resumenCompra:
+    mejorPara: >-
+      Moving between workspaces with a laptop and up to three devices, while
+      keeping fast scrolling and application profiles on Windows or macOS.
+    evitarSi: >-
+      You want a large body for palm support, a dedicated thumb wheel or an
+      included receiver for a computer without Bluetooth.
+    alternativaDirecta: >-
+      The M650 covers simpler tasks without the MX shortcut focus. The MX Master
+      4 has a thumb wheel and larger body; the Lift changes to a vertical shape,
+      which does not guarantee comfort or relief from discomfort.
+    decisionRapida: >-
+      Check your computer's Bluetooth and whether a 100.5 x 65 x 34.4 mm body
+      suits your grip. For frequent work with wide tables, decide whether you
+      prefer a thumb wheel or can hold a side button while turning the main wheel.
+  metodologia:
+    - >-
+      Based on Logitech's official product page and support guide and the Tom's
+      Hardware review, consulted on 9 October 2026. We have not tested this mouse
+      or measured battery life, comfort or noise.
+    - >-
+      The documented variant is the standard graphite 910-006929. We use official
+      dimensions rather than generic dimension fields in the Amazon listing.
+  limitaciones:
+    - >-
+      The Logi Bolt receiver is not included and must be bought separately if
+      needed. The standard box contains the mouse and a USB-A to USB-C charging
+      cable. Check that your computer supports Bluetooth or has a suitable receiver.
+    - >-
+      The Amazon link identifies the standard model but does not establish a
+      currently approved offer. Check the variant, seller, price and stock.
+      The price tier is indicative, not a fixed amount. No US offer is verified.
+    - >-
+      Logitech documents the cable for charging. USB data transmission is
+      unconfirmed in this profile; do not choose it assuming it will work as
+      a wired mouse.
+    - >-
+      Options+ enables profiles, gestures and advanced settings on Windows and
+      macOS. Basic use on Linux or ChromeOS does not include the same features.
+      Check whether your work computer allows the software before buying.
+    - >-
+      The compact body can provide less palm support, especially for larger
+      hands. Dimensions do not guarantee fit: check your grip and button reach.
+      Side buttons sit on the left for right-handed use.
+  paraQuienSi:
+    - People carrying a mouse with a laptop who prioritize a compact, 99 g body.
+    - People with Bluetooth who want free USB ports without buying a receiver.
+    - People scrolling through long documents who can configure the wheel and shortcuts in Options+.
+  paraQuienNo:
+    - People wanting broad palm support or a separate horizontal wheel.
+    - Anyone needing an included receiver or confirmed wired data operation.
+    - Left-handed users who need equal access to the side buttons.
+  puntosFuertes:
+    - >-
+      A 100.5 x 65 x 34.4 mm body weighing 99 g: lighter and more compact to carry
+      than the 141 g MX Master 3S, without promising the same hand support.
+    - >-
+      Stepped or free-spin MagSpeed scrolling, SmartShift and adjustable wheel
+      resistance through Options+. You can adjust the feel and mode switching
+      for scrolling through documents.
+    - >-
+      Horizontal scrolling by holding a side button and turning the wheel through
+      Options+. There is no dedicated thumb wheel, but this provides another way
+      to navigate wide tables.
+    - >-
+      Bluetooth and up to three devices with underside Easy-Switch. Flow is a
+      separate function requiring Options+ on both compatible computers and setup.
+    - Quiet primary clicks and a 500 mAh battery rechargeable over USB-C.
+  puntosDebiles:
+    - The portable size may feel too small if you rest your whole palm on the mouse.
+    - Bolt use requires an additional receiver; compatibility does not mean it is included.
+    - Profiles, gestures and advanced settings depend on Options+ and the operating system.
+  comunidad: >-
+    Tom's Hardware notes the small body's fit limitations and lack of a dedicated
+    thumb wheel. Check these against your grip and work: try the palm support and
+    side-button horizontal scrolling before deciding whether it can replace a
+    larger desk mouse.
+specs:
+  tipo: raton
+  formato: convencional
+  mano: derecha
+  largoMm: 100.5
+  anchoMm: 65
+  altoMm: 34.4
+  pesoG: 99
+  bluetooth: true
+  receptor: Logi Bolt
+  cableDatos: null
+  multidispositivo: true
+  alimentacion: bateria
+  clicSilencioso: true

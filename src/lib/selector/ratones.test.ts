@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { load } from 'js-yaml';
 import { describe, expect, it } from 'vitest';
 import type { Producto } from '../productos';
@@ -7,14 +7,58 @@ import { getSelectorConfig, resolveEligibleSelectorConfigs, SELECTOR_CONFIGS } f
 import { projectSelectorProduct } from './payload';
 import { scoreProducts } from './scoring';
 
-const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513'];
-const products = slugs.map(slug => ({ slug, ...load(readFileSync(new URL(`../../content/productos/${slug}.yaml`, import.meta.url), 'utf8')) as object })) as Producto[];
+const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513', 'logitech-mx-master-3s', 'logitech-mx-anywhere-3s'];
+// Missing records fail inventory assertions without preventing the existing mice tests from running.
+const products = slugs.filter(slug => existsSync(new URL(`../../content/productos/${slug}.yaml`, import.meta.url)))
+  .map(slug => ({ slug, ...load(readFileSync(new URL(`../../content/productos/${slug}.yaml`, import.meta.url), 'utf8')) as object })) as Producto[];
 
 describe('selector con el primer lote de ratones', () => {
-  it('loads nine mice and four relevant questions', () => {
+  it('loads eleven mice and four relevant questions', () => {
     const cfg = resolveEligibleSelectorConfigs(SELECTOR_CONFIGS, products).find(c => c.tipo === 'raton');
-    expect(cfg?.products).toHaveLength(9);
+    expect(cfg?.products).toHaveLength(11);
+    expect(products.map(p => p.slug)).toEqual(slugs);
     expect(cfg?.questions.map(q => q.id)).toEqual(['mano', 'formato', 'conexion', 'prioridad']);
+  });
+  it('keeps the standard Master 3S edition behind an exact-model search safeguard', () => {
+    const mouse = products.find(p => p.slug === 'logitech-mx-master-3s');
+    expect(mouse, 'missing standard MX Master 3S profile').toBeDefined();
+    expect(mouse!.amazon.asin).toBeNull();
+    expect(mouse!.amazon.buscar).toBe('Logitech MX Master 3S 910-006559 receptor Logi Bolt');
+    expect(mouse!.specs).toMatchObject({ bluetooth: true, receptor: 'Logi Bolt', cableDatos: false, largoMm: null, anchoMm: null, altoMm: null });
+    // The schema stores receiver compatibility, not box contents or edition identity.
+    expect(mouse!.limitaciones?.join(' ')).toMatch(/Bluetooth Edition/i);
+    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/Bluetooth Edition/i);
+    for (const locale of ['es-ES', 'en'] as const) {
+      const cta = buildProductCta({ amazon: mouse!.amazon, nombre: mouse!.nombre, marca: mouse!.marca, locale });
+      expect(cta.kind).toBe('amazon-search');
+      expect(new URL(cta.href!).searchParams.get('k')).toBe(mouse!.amazon.buscar);
+    }
+  });
+  it('keeps Anywhere 3S Bolt compatibility distinct from an included receiver and USB data', () => {
+    const mouse = products.find(p => p.slug === 'logitech-mx-anywhere-3s');
+    expect(mouse, 'missing MX Anywhere 3S profile').toBeDefined();
+    expect(mouse!.amazon.asin).toBe('B07W4DGLY6');
+    expect(mouse!.specs).toMatchObject({ bluetooth: true, receptor: 'Logi Bolt', cableDatos: null });
+    expect(mouse!.limitaciones?.join(' ')).toMatch(/no incluye[^.]*receptor|receptor[^.]*(?:no [^.]*inclu|por separado)/i);
+    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/receiver[^.]*(?:not included|not include|sold separately)|(?:does not include|no included)[^.]*receiver/i);
+    for (const locale of ['es-ES', 'en'] as const) {
+      expect(buildProductCta({ amazon: mouse!.amazon, nombre: mouse!.nombre, marca: mouse!.marca, locale })).toMatchObject({
+        href: 'https://www.amazon.es/dp/B07W4DGLY6?tag=tuespaciodet-21', kind: 'amazon-product',
+      });
+    }
+  });
+  it.each(['logitech-mx-master-3s', 'logitech-mx-anywhere-3s'])('keeps %s unrated and without fabricated prices or US offer guarantees', slug => {
+    const mouse = products.find(p => p.slug === slug);
+    expect(mouse, `missing ${slug} profile`).toBeDefined();
+    expect(mouse!.precioMin == null).toBe(true);
+    expect(mouse!.precioMax == null).toBe(true);
+    expect(mouse!.valoracion).toBeNull();
+    expect(Object.values(mouse!.valoraciones).every(value => value == null)).toBe(true);
+    expect(mouse!.historicalOfferContext).toBe(true);
+    expect(mouse!.oneLinkReady ?? false).toBe(false);
+    expect(mouse!.en?.limitaciones?.join(' ')).toMatch(/(?:no|not|unverified|unconfirmed)[^.]*US|US[^.]*not (?:confirmed|verified)/i);
+    expect(mouse!.limitaciones?.length).toBeGreaterThan(0);
+    expect(mouse!.en?.limitaciones?.length).toBeGreaterThan(0);
   });
   it('no recomienda como Bluetooth el MAYA X y conserva limitaciones EN', () => {
     const cfg = getSelectorConfig('raton');

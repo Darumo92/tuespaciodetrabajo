@@ -1,5 +1,71 @@
 # Catálogo de ratones — primer lote
 
+## Ampliación local 2026-10-09: MX Master 3S y MX Anywhere 3S
+
+El usuario aprueba sustituir el artículo semanal por dos fichas ES+EN, no crear
+un artículo MDX. Se han redactado ambos YAML: once ratones y veintidós fichas
+localizadas en datos locales. El renderer existente genera los cuatro destinos:
+`/catalogo/raton/logitech-mx-master-3s/`, `/catalogo/raton/logitech-mx-anywhere-3s/`,
+`/en/catalog/mice/logitech-mx-master-3s/` y `/en/catalog/mice/logitech-mx-anywhere-3s/`.
+Son destinos generados y comprobados en el build local, no comprobaciones HTTP
+del sitio público ni publicación.
+
+Las fichas separan rueda de pulgar y puesto fijo del Master (141 g) frente al
+Anywhere compacto (99 g, 100,5 x 65 x 34,4 mm). Ambos incluyen metodología sin
+uso propio, decisiones de compra, límites de Options+ y alternativas existentes.
+Anywhere tiene desplazamiento horizontal con botón lateral y rueda, aunque no
+rueda de pulgar independiente. Easy-Switch en la base no equivale a Flow.
+
+Master corresponde al consumidor estándar con Bolt y cable de carga en la caja
+descrita por soporte, no a la Bluetooth Edition actual sin receptor. Se usa
+búsqueda exacta: el anuncio histórico mezcla 910-006559 y 910-006557. Las medidas
+de otra edición no se trasplantan. Su USB-C carga pero no transmite datos según
+el análisis independiente; `cableDatos: false`. Anywhere grafito 910-006929
+conserva B07W4DGLY6 por identidad corroborada, no por oferta actual aprobada;
+Bolt compatible pero no incluido y `cableDatos: null`, sin negación no demostrada.
+
+Fuentes consultadas el 2026-10-09 por la investigación previa y reutilizadas por
+el autor: [registro compacto](../research/ratones-demanda-2026-10-09.md) y `fuentes`
+de cada YAML. Imágenes 300 px verificadas en el handoff. Sin precios fijos, notas,
+auditorías de ofertas fabricadas ni aprobación US; OneLink no se declara listo.
+
+Estado de esta ampliación: comprobaciones locales de aceptación completas y lista
+para commit local del padre; MICE-01 no se cierra hasta registrar ese commit.
+Revisión humana de publicación y acciones remotas pendientes, no publicada.
+RED original antes de los YAML: seis fallos esperados y 332 pruebas correctas.
+Tras la redacción hubo 337 correctas y un fallo de una aserción errónea que esperaba
+`cableDatos: null` en Master. El padre la corrigió a `false` según la evidencia de
+carga sin datos, sin alterar el perfil, y comprobó las tres dimensiones estándar
+desconocidas. Anywhere conserva `cableDatos: null`. GREEN actual: 338/338 correctas.
+
+### Verificación local observada de MICE-01
+
+- `npx vitest run src/lib/selector/ratones.test.ts src/lib/selector/scoring.test.ts`: 338 pruebas correctas.
+- `npm test`: 503 pruebas correctas en 14 archivos.
+- `npm run build`: 463 páginas; cero conversiones de imágenes; `public/_headers` sin cambios, 17 hashes CSP.
+- `npm run validate:ratones-build`: 22 fichas y 2 catálogos indexables, 2 comparadores noindex, sin pares estáticos.
+- `npm run validate:selector-build`: 2 páginas y 134 productos elegibles.
+- `npm run validate:productos`: 134 productos válidos.
+- `npm run validate:offers`: integridad PASS; ES 0/134 y US 0/134 auditados.
+- `npm run validate:offers:coverage`: FAIL esperado, 268 auditorías pendientes (134 ES + 134 US), frente al baseline de 264/132; no es un fallo de implementación de la unidad ni acredita cobertura comercial.
+- `git diff --check`: correcto. Lectura del HTML generado de las cuatro fichas: textos ES+EN, encabezados, avisos al comprador, enlaces de fuentes y CTA de búsqueda/directo comprobados.
+
+La evaluación nativa fue alta/no evaluable por archivos sin seguimiento. La
+comprobación independiente ordinaria de solo lectura está realizada con RDD
+deshabilitado/no gestionado: 11 pruebas de ratones, validator de 22 fichas y 2
+catálogos y diff-check correctos, sin bloqueo de productos o integración. Corroboró
+la caja estándar de Master frente a Bluetooth Edition y el USB solo de carga.
+Su veredicto parcial se debía únicamente a documentación obsoleta, corregida en
+esta sincronización. El padre repitió `npx vitest run src/lib/selector/ratones.test.ts`:
+11 pruebas correctas. No se repiten pruebas ni build para estos cambios pasivos.
+
+El usuario eligió `feature-branch-chain` antes de commits; el recuento previo a
+esta sincronización fue de unas 667 líneas authored, frente a 380 orientativas.
+Las dos fichas forman una unidad coherente; no se inventan límites de futuras PR.
+Commit local pendiente del padre; publicación y futuras acciones remotas quedan
+bajo autorización humana. El escritor premium trabajó en serie: agotó cuota tras
+escribir y se retomó el mismo escritor cuando el usuario comunicó su restauración.
+
 ## Seguimiento local 2026-10-03 — ofertas y móvil
 
 ### Integridad de ofertas, no cobertura comercial
