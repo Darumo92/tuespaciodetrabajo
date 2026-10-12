@@ -16,20 +16,21 @@ Create this week's two bilingual mouse profiles using measured Spanish demand an
   - Route: delegated direct, combined with the serial integration writer for two context documents. Passive documentation uses structural readback, not artificial RED.
   - Acceptance: typed error `server_overloaded` distinguished from quota, fallback execution metadata verified, fresh-default routing documented for this feature, no provider/tier or global model change.
   - Commit: `c85d788`, capacity reference plus its INDEX entry, +10/-0 authored lines. Parent structural readback complete. Independent verifier and parent confirmed actual integration child model `gpt-6-sol`, effort medium, with no recorded completion error; substantive integration and checks completed. This proves fallback selection/execution, not permanent provider availability.
-- [ ] MICE-01 — Add complete ES/EN profiles, inventory integration, dated evidence and catalog documentation; verify and commit the coherent work unit.
+- [x] MICE-01 — Add complete ES/EN profiles, inventory integration, dated evidence and catalog documentation; verify and commit the coherent work unit.
   - Route: delegated direct. Reading prepares editorial drafting; two product records and inventory integrations require serial bounded writers.
   - Test-first: update meaningful inventory expectations and observe missing-profile RED before adding profiles. Editorial prose has no artificial deterministic RED.
   - Acceptance: thirteen mice, twenty-six localized profiles; correct variants and unknowns, ES/EN parity, working image/source/search links and desktop/mobile layouts.
   - Checks: focused ratones/scoring tests; full npm test; build; productos/ratones-build/selector-build/offer integrity validators; strict coverage separately; diff check; four generated profile routes and image/keyboard checks.
   - Rollback: remove two profiles and revert only their inventory/documentation changes.
+  - Commit: `22ec431`, 15 files, +625/-25 = 650 authored lines, excluding two binary images. Committed paths, bytes and modes exactly matched the checked staged snapshot. Source checks, independent verification and parent visual/test spot checks passed; commercial coverage remains explicitly partial. No push, PR or publication.
 
 ## Delivery and recovery
 - Branch: feat/ratones-m720-keychron-m6, base c226ebf.
 - Forecast: approximately 700 authored changed lines, excluding generated files. Advisory only; keep complete prose and checks.
 - Delivery strategy: auto-chain with previously selected feature-branch-chain; one coherent profile/inventory commit is the initial slice, no remote PR authorized.
 - Review: disabled/unmanaged; ordinary source/functional/visual verification applies.
-- Engram mirror: initial save and full readback observed (observation 502); final verification synchronization pending.
-- Next: parent local profile work-unit commit; human review and publication remain pending authorization.
+- Engram mirror: full document saved and read back as observation 502; final closeout mirrors this local file.
+- Next: human review and explicit publication authorization. Local implementation is complete.
 
 ## Log
 - 2026-10-12: Scope and public research complete. Earlier Sol capacity failure recovered through one explicitly requested same-model probe; quota had not been reached. No configuration change.
@@ -41,3 +42,4 @@ Create this week's two bilingual mouse profiles using measured Spanish demand an
 - 2026-10-12: Integration completed with localized official images (M720 JPEG 544×466, M6 JPEG 300×300), thirteen-mouse inventory and source/context documentation. Focused GREEN 346/346; full suite 543/543 (initial sandbox spawnSync EPERM resolved by approved subprocess access, no source workaround); build PASS 467 pages, 17 CSP hashes and no public/_headers diff; productos 136, ratones-build 26 profiles, selector-build 136 eligible and offer integrity PASS. Strict coverage expected FAIL: 268 unaudited markets, no fabricated offers. Source-mutating work finished before final evidence; later changes only passive status documentation.
 - 2026-10-12: Independent bounded verification found no material blocker. Four routes HTTP 200 at 1440/390, images and exact-search CTAs correct, dated M6 variant caveats in both locales, visible keyboard focus and no overflow at 320. Parent inspected both source assets and repeated focused tests: 346 PASS. Preview http://127.0.0.1:4321, session 84024; screenshots /tmp/codex-weekly-mice-{1440,390}_*.png.
 - 2026-10-12: Native read-only risk assessment was unassessable because of the untracked inventory; treated high for independent ordinary verification. RDD stays disabled/unmanaged; no review lifecycle was started. Minor inherited brand duplication in EN image alt and blocked Clarity analytics are follow-ups, not changed-scope blockers.
+- 2026-10-12: Local delivery complete: capacity context commit `c85d788` (+10/-0) and profile work-unit commit `22ec431` (+625/-25), running authored count 660 before this passive closeout. Slice boundaries are recorded for later feature-branch delivery; no remote PR is created. Unrelated backlinks/recovery/OpenCode/.atl changes preserved outside every commit. Parent inspected desktop M720 ES and mobile M6 EN screenshots as well as both source image assets.
