@@ -1,7 +1,7 @@
 # M720 Triathlon and Keychron M6 weekly profiles
 
 ## Objective and authorization
-Create this week's two bilingual mouse profiles using measured Spanish demand and verified manufacturer sources. User requested weekly creation on 2026-10-12. Local implementation and work-unit commits are authorized; publication, push and PR creation remain separate decisions. Preserve unrelated backlinks/recovery/OpenCode/.atl changes. RDD is explicitly OFF.
+Create this week's two bilingual mouse profiles using measured Spanish demand and verified manufacturer sources. User requested weekly creation on 2026-10-12 and later explicitly authorized publishing these changes to main using the configured origin and existing Git authentication. PR creation remains a separate decision. Preserve unrelated backlinks/recovery/OpenCode/.atl changes. RDD is explicitly OFF.
 
 ## Evidence and constraints
 - On 2026-10-12 the user explicitly authorized temporary GPT-6 Sol at medium effort on the existing ChatGPT account. For this work, launch fresh `default` agents with `fork_turns: none`, `model: gpt-6-sol`, `reasoning_effort: medium`. Do not reuse GPT-6.1 Sol agents or custom roles that pin that model. This exception stays active through this feature unless the user changes it; do not silently return to the failed model. Global defaults, account, service tier and credentials remain unchanged.
@@ -30,7 +30,7 @@ Create this week's two bilingual mouse profiles using measured Spanish demand an
 - Delivery strategy: auto-chain with previously selected feature-branch-chain; one coherent profile/inventory commit is the initial slice, no remote PR authorized.
 - Review: disabled/unmanaged; ordinary source/functional/visual verification applies.
 - Engram mirror: full document saved and read back as observation 502; final closeout mirrors this local file.
-- Next: human review and explicit publication authorization. Local implementation is complete.
+- Next: production deployment verification if requested; Git publication to main is complete.
 
 ## Log
 - 2026-10-12: Scope and public research complete. Earlier Sol capacity failure recovered through one explicitly requested same-model probe; quota had not been reached. No configuration change.
@@ -43,3 +43,4 @@ Create this week's two bilingual mouse profiles using measured Spanish demand an
 - 2026-10-12: Independent bounded verification found no material blocker. Four routes HTTP 200 at 1440/390, images and exact-search CTAs correct, dated M6 variant caveats in both locales, visible keyboard focus and no overflow at 320. Parent inspected both source assets and repeated focused tests: 346 PASS. Preview http://127.0.0.1:4321, session 84024; screenshots /tmp/codex-weekly-mice-{1440,390}_*.png.
 - 2026-10-12: Native read-only risk assessment was unassessable because of the untracked inventory; treated high for independent ordinary verification. RDD stays disabled/unmanaged; no review lifecycle was started. Minor inherited brand duplication in EN image alt and blocked Clarity analytics are follow-ups, not changed-scope blockers.
 - 2026-10-12: Local delivery complete: capacity context commit `c85d788` (+10/-0) and profile work-unit commit `22ec431` (+625/-25), running authored count 660 before this passive closeout. Slice boundaries are recorded for later feature-branch delivery; no remote PR is created. Unrelated backlinks/recovery/OpenCode/.atl changes preserved outside every commit. Parent inspected desktop M720 ES and mobile M6 EN screenshots as well as both source image assets.
+- 2026-10-12: User explicitly authorized publishing this feature to main after the local preview was provided. Fetch showed no remote changes; main advanced by fast-forward `c226ebf..b1e3d9d`, preserving original commit identities `c85d788`, `22ec431`, `b1e3d9d`. Non-force push to configured `https://github.com/Darumo92/tuespaciodetrabajo.git` with existing Git authentication succeeded; local main and origin/main matched. No source changes or new test concern, so existing verification remains applicable. Unrelated dirty files were excluded. Production deployment was not inspected or claimed.
