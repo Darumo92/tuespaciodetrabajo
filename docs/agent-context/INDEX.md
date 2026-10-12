@@ -10,6 +10,7 @@ Contexto persistente del proyecto, versionado en repo. Cargar al inicio de sesi�
 - [Article Checklists](reference_article_checklists.md) — Checklist obligatorio, 12 reglas anti-error, pre-publish checklist, humanización. **Cargar al crear/revisar artículos.**
 - [Amazon Rules](reference_amazon_rules.md) — Afiliación, comandos API, cadencia, reglas estrictas, imágenes. **Cargar al trabajar con productos/comparativas.**
 - [Internationalization Workflow](reference_i18n_workflow.md) — Arquitectura i18n, rutas por locale, slugs localizados, hreflang/canonical/sitemap y reglas Amazon OneLink.
+- [Scoped Codex capacity recovery](reference_codex_capacity_recovery.md) — Typed GPT-6.1 Sol overload evidence and the user-authorized GPT-6 Sol medium fallback for the M720/M6 feature only.
 - [MCP Analytics/GSC/Cloudflare](reference_mcp_analytics_setup.md) — Config para usar MCPs de Cloudflare, GA y GSC.
 - [Recon Reddit / old.reddit](reference_reddit_thread_recon.md) — Método validado para karma, hilos vivos, búsquedas y replies. Preferir old.reddit; RSS como fallback.
 - [Recon Mediavida vía Exa](reference_mediavida_thread_recon.md) — Método validado para listar hilos vivos /foro/*.
