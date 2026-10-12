@@ -1,5 +1,15 @@
 # Catálogo de ratones — primer lote
 
+## Ampliación local 2026-10-12: M720 Triathlon y Keychron M6-A1
+
+QA local completo: 346 pruebas específicas y 543 de la suite completa, build de 467 páginas y validadores estructurales correctos. Verificación independiente y revisión visual de las cuatro rutas ES/EN en escritorio/móvil sin bloqueos; sin desbordamiento a 320 px. Cobertura comercial estricta pendiente: 268 mercados sin auditar, no aprobación comercial global. Revisión humana y publicación pendientes.
+
+Hay trece ratones y veintiséis fichas localizadas ES+EN en los datos locales. Esta semana se añaden Logitech M720 Triathlon negro 910-004791 y Keychron M6-A1 negro Standard Wheel/PixArt 3395/1K/Clicky. Las cuatro rutas nuevas se generan desde los YAML; las imágenes oficiales se conservan localmente para cumplir la CSP de producción. Fuentes, límites y consultas están en [el registro fechado](../research/ratones-demanda-2026-10-12.md).
+
+Ninguna ficha tiene precio fijo, nota numérica ni ASIN verificado; ambas usan búsqueda Amazon del modelo exacto, `oneLinkReady: false` y tramo editorial relativo 2. El M6 español aparecía agotado en la consulta oficial fechada; no se afirma disponibilidad actual. No se ha probado ninguno de los dos ni se han incorporado reseñas independientes. Revisión humana y publicación pendientes. La cobertura estricta de ofertas incluye cuatro mercados nuevos ES/US sin auditar; el estado previo de otros productos no cambia.
+
+Estado de esta ampliación: integración local en curso; checks funcionales y QA visual independientes pendientes al redactar este bloque. El padre registrará resultados y commit en `odd/tasks/ratones-m720-keychron-m6.md`. RDD OFF; sin publicación ni aprobación de OneLink.
+
 ## Atribución visible MICE-03 — candidato local 2026-10-09
 
 MICE-02 cerrada por el padre en `abc870e`, auditoría independiente 4/4;

@@ -9,17 +9,78 @@ import { getSelectorConfig, resolveEligibleSelectorConfigs, SELECTOR_CONFIGS } f
 import { projectSelectorProduct } from './payload';
 import { scoreProducts } from './scoring';
 
-const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513', 'logitech-mx-master-3s', 'logitech-mx-anywhere-3s'];
+const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513', 'logitech-mx-master-3s', 'logitech-mx-anywhere-3s', 'logitech-m720-triathlon', 'keychron-m6'];
 // Missing records fail inventory assertions without preventing the existing mice tests from running.
 const products = slugs.filter(slug => existsSync(new URL(`../../content/productos/${slug}.yaml`, import.meta.url)))
   .map(slug => ({ slug, ...load(readFileSync(new URL(`../../content/productos/${slug}.yaml`, import.meta.url), 'utf8')) as object })) as Producto[];
 
 describe('selector con el primer lote de ratones', () => {
-  it('loads eleven mice and four relevant questions', () => {
+  it('loads thirteen mice and four relevant questions', () => {
     const cfg = resolveEligibleSelectorConfigs(SELECTOR_CONFIGS, products).find(c => c.tipo === 'raton');
-    expect(cfg?.products).toHaveLength(11);
+    expect(cfg?.products).toHaveLength(13);
     expect(products.map(p => p.slug)).toEqual(slugs);
     expect(cfg?.questions.map(q => q.id)).toEqual(['mano', 'formato', 'conexion', 'prioridad']);
+  });
+  it('retains verified M720 measurements and leaves unsupported connectivity and silence unknown', () => {
+    const mouse = products.find(p => p.slug === 'logitech-m720-triathlon');
+    expect(mouse, 'missing M720 Triathlon profile').toBeDefined();
+    expect(mouse!.specs).toMatchObject({
+      formato: 'convencional', mano: 'derecha', largoMm: 115, anchoMm: 74, altoMm: 45,
+      pesoG: 135, bluetooth: true, receptor: 'Unifying', alimentacion: 'aa',
+      multidispositivo: true, cableDatos: null, clicSilencioso: null,
+    });
+  });
+  it('keeps the M6 clicky edition lightweight and wired without borrowing unknown dimensions', () => {
+    const mouse = products.find(p => p.slug === 'keychron-m6');
+    expect(mouse, 'missing Keychron M6 profile').toBeDefined();
+    expect(mouse!.specs).toMatchObject({
+      pesoG: 78, bluetooth: true, cableDatos: true, multidispositivo: true,
+      clicSilencioso: false, largoMm: null, anchoMm: null, altoMm: null,
+    });
+  });
+  it.each(['logitech-m720-triathlon', 'keychron-m6'])('keeps %s commerce unverified and both localized routes usable', slug => {
+    const mouse = products.find(p => p.slug === slug);
+    expect(mouse, `missing ${slug} profile`).toBeDefined();
+    expect(mouse!.amazon.asin).toBeNull();
+    expect(mouse!.amazon.buscar).toBeTruthy();
+    expect(mouse!.precioMin == null).toBe(true);
+    expect(mouse!.precioMax == null).toBe(true);
+    expect(mouse!.valoracion).toBeNull();
+    expect(Object.values(mouse!.valoraciones).every(value => value == null)).toBe(true);
+    expect(mouse!.oneLinkReady ?? false).toBe(false);
+    expect(mouse!.en).toBeDefined();
+    for (const locale of ['es-ES', 'en'] as const) {
+      const cta = buildProductCta({ amazon: mouse!.amazon, nombre: mouse!.nombre, marca: mouse!.marca, locale });
+      expect(cta.kind).toBe('amazon-search');
+      expect(new URL(cta.href!).searchParams.get('k')).toBe(mouse!.amazon.buscar);
+      expect(productPath(mouse!, locale)).toBe(locale === 'en' ? `/en/catalog/mice/${slug}/` : `/catalogo/raton/${slug}/`);
+    }
+  });
+  it.each(['es-ES', 'en'] as const)('scores verified M6 wired use and keeps M720 wired use missing in %s', locale => {
+    const results = scoreProducts(products.map(p => projectSelectorProduct(p, locale)), { conexion: 'cable' }, getSelectorConfig('raton')!, products.length);
+    const m720 = results.find(r => r.producto.slug === 'logitech-m720-triathlon');
+    const m6 = results.find(r => r.producto.slug === 'keychron-m6');
+    expect(m720, 'missing M720 selector result').toBeDefined();
+    expect(m6, 'missing M6 selector result').toBeDefined();
+    expect(m720!.missingFields).toContain('specs.cableDatos');
+    expect(m720!.traces.find(t => t.field === 'specs.cableDatos')?.state).toBe('missing');
+    expect(m6!.traces.find(t => t.field === 'specs.cableDatos')?.state).toBe('match');
+    expect(m6!.violations).toEqual([]);
+    expect(results.indexOf(m6!)).toBeLessThan(results.indexOf(m720!));
+  });
+  it('scores the new pair by published weight, device switching and quiet-click evidence', () => {
+    for (const [priority, expectedStates] of [
+      ['peso', ['partial', 'match']],
+      ['multidispositivo', ['match', 'match']],
+      ['silencio', ['missing', 'miss']],
+    ] as const) {
+      const results = scoreProducts(products.map(p => projectSelectorProduct(p, 'en')), { prioridad: priority }, getSelectorConfig('raton')!, products.length);
+      for (const [index, slug] of ['logitech-m720-triathlon', 'keychron-m6'].entries()) {
+        const result = results.find(r => r.producto.slug === slug);
+        expect(result, `missing ${slug} selector result`).toBeDefined();
+        expect(result!.traces[0]?.state).toBe(expectedStates[index]);
+      }
+    }
   });
   it('keeps the standard Master 3S edition behind an exact-model search safeguard', () => {
     const mouse = products.find(p => p.slug === 'logitech-mx-master-3s');

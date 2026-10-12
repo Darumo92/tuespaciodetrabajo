@@ -3,19 +3,22 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { load } from 'js-yaml';
 
 const site = 'https://tuespaciodetrabajo.com';
-const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513', 'logitech-mx-master-3s', 'logitech-mx-anywhere-3s'];
+const slugs = ['logitech-lift', 'logitech-mx-vertical', 'logitech-mx-master-4', 'logitech-signature-m650', 'lamzu-maya-x', 'protoarc-em11-nl', 'trust-verto-wireless', 'anker-ak-uba-vertical', 'perixx-perimice-513', 'logitech-mx-master-3s', 'logitech-mx-anywhere-3s', 'logitech-m720-triathlon', 'keychron-m6'];
 const newImages = {
   'protoarc-em11-nl': 'https://m.media-amazon.com/images/I/511qcVCPKbL._AC_SL300_.jpg',
   'trust-verto-wireless': 'https://m.media-amazon.com/images/I/61QNE816-HL._AC_SL300_.jpg',
   'logitech-mx-anywhere-3s': 'https://m.media-amazon.com/images/I/61dYSaNVRaL._AC_SL300_.jpg',
 };
 const newAsins = { 'protoarc-em11-nl': 'B0D12PGGKK', 'trust-verto-wireless': 'B07FM2GLNQ', 'logitech-mx-anywhere-3s': 'B07W4DGLY6' };
-const specsDates = { 'protoarc-em11-nl': '2026-09-30', 'trust-verto-wireless': '2026-09-30', 'anker-ak-uba-vertical': '2026-10-03', 'perixx-perimice-513': '2026-10-03', 'logitech-mx-master-3s': '2026-10-09', 'logitech-mx-anywhere-3s': '2026-10-09' };
+const specsDates = { 'protoarc-em11-nl': '2026-09-30', 'trust-verto-wireless': '2026-09-30', 'anker-ak-uba-vertical': '2026-10-03', 'perixx-perimice-513': '2026-10-03', 'logitech-mx-master-3s': '2026-10-09', 'logitech-mx-anywhere-3s': '2026-10-09', 'logitech-m720-triathlon': '2026-10-12', 'keychron-m6': '2026-10-12' };
 const searchProfiles = {
   'anker-ak-uba-vertical': { image: 'https://m.media-amazon.com/images/I/51dXoPgdyfL._AC_SL300_.jpg', query: 'Anker A7852 AK-98ANWVM-UBA ratón vertical inalámbrico', power: ['Dos pilas AAA', 'Two AAA batteries'] },
   'perixx-perimice-513': { image: 'https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg', query: 'Perixx PERIMICE-513 USB-A negro', power: ['Alimentación por USB', 'USB powered'] },
   'logitech-mx-master-3s': { image: 'https://m.media-amazon.com/images/I/61jl3Jfcc1L._AC_SL300_.jpg', query: 'Logitech MX Master 3S 910-006559 receptor Logi Bolt', power: ['Batería recargable', 'Rechargeable battery'] },
+  'logitech-m720-triathlon': { image: '/img/productos/logitech-m720-triathlon.jpg', query: 'Logitech M720 Triathlon 910-004791 negro', power: ['Pila AA', 'AA battery'] },
+  'keychron-m6': { image: '/img/productos/keychron-m6.jpg', query: 'Keychron M6 M6-A1 negro Standard Wheel PixArt 3395 1K Clicky', power: ['Batería recargable', 'Rechargeable battery'] },
 };
+const localProfiles = new Set(['logitech-m720-triathlon', 'keychron-m6']);
 const bases = ['/catalogo/raton/', '/en/catalog/mice/'];
 const sitemap = readFileSync('dist/sitemap-0.xml', 'utf8');
 const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
@@ -54,16 +57,26 @@ for (const base of bases) {
       const searchHref = `https://www.amazon.es/s?k=${encodeURIComponent(profile.query)}&tag=tuespaciodet-21`;
       assert.ok(hero.replaceAll('&amp;', '&').includes(searchHref), route + ' exact-model search href');
       assert.ok(hero.includes(isEn ? 'Search on Amazon' : 'Buscar en Amazon'), route + ' search CTA label');
-      assert.ok(hero.includes(isEn ? `Specs checked ${specsDates[slug]}` : `Especificaciones consultadas ${specsDates[slug]}`), route + ' specs date');
-      assert.ok(hero.includes(isEn ? 'Indicative historical tier:' : 'Tramo histórico orientativo:'), route + ' indicative tier');
-      assert.ok(hero.includes('ficha-oferta-contexto'), route + ' buyer caveat present');
-      assert.ok(hero.indexOf('ficha-oferta-contexto') < hero.indexOf('data-cta-kind="amazon-search"'), route + ' buyer caveat before search');
-      assert.ok(html.includes(profile.image), route + ' visually matched recorded image');
-      assert.ok(html.includes(profile.power[isEn ? 1 : 0]), route + ' localized power');
-      assert.ok(!/B00BIFNTMC|B00GZIA2AE/.test(html), route + ' no historical direct ASIN');
-      assert.ok(!/15[,.]99|17[,.]99/.test(html), route + ' no permanent observed price');
-      assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|price|priceCurrency|lowPrice|aggregateRating|review)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no current offer or rating schema');
-      if (isEn && slug !== 'logitech-mx-master-3s') assert.ok(html.includes('No US offer is confirmed'), route + ' US offer uncertainty');
+      if (localProfiles.has(slug)) {
+        assert.ok(hero.includes(isEn ? `Verified ${specsDates[slug]}` : `Verificado ${specsDates[slug]}`), route + ' specs date');
+        assert.ok(hero.includes(profile.image), route + ' exact local hero image');
+        assert.ok(existsSync('public' + profile.image), route + ' local image exists');
+        assert.ok(html.includes(profile.power[isEn ? 1 : 0]), route + ' localized power');
+        assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|price|priceCurrency|lowPrice|aggregateRating|review)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no current offer or rating schema');
+        if (slug === 'keychron-m6') assert.match(html, isEn ? /sold out|unavailable/i : /agotad[ao]|sin existencias/i, route + ' Spanish variant availability caveat');
+      } else {
+        assert.ok(hero.includes(isEn ? `Specs checked ${specsDates[slug]}` : `Especificaciones consultadas ${specsDates[slug]}`), route + ' specs date');
+        assert.ok(hero.includes(isEn ? 'Indicative historical tier:' : 'Tramo histórico orientativo:'), route + ' indicative tier');
+        assert.ok(hero.includes('ficha-oferta-contexto'), route + ' buyer caveat present');
+        assert.ok(hero.indexOf('ficha-oferta-contexto') < hero.indexOf('data-cta-kind="amazon-search"'), route + ' buyer caveat before search');
+        assert.ok(html.includes(profile.image), route + ' recorded product image');
+        if (profile.image.startsWith('/')) assert.ok(existsSync('public' + profile.image), route + ' local image exists');
+        assert.ok(html.includes(profile.power[isEn ? 1 : 0]), route + ' localized power');
+        assert.ok(!/B00BIFNTMC|B00GZIA2AE/.test(html), route + ' no historical direct ASIN');
+        assert.ok(!/15[,.]99|17[,.]99/.test(html), route + ' no permanent observed price');
+        assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|price|priceCurrency|lowPrice|aggregateRating|review)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no current offer or rating schema');
+        if (isEn && slug !== 'logitech-mx-master-3s') assert.ok(html.includes('No US offer is confirmed'), route + ' US offer uncertainty');
+      }
     }
     if (slug === 'logitech-mx-master-3s' || slug === 'logitech-mx-anywhere-3s') {
       assert.ok(!/https?:\/\/schema\.org\/InStock|["'](?:availability|price|priceCurrency|lowPrice|aggregateRating|review)["']\s*:|itemprop="availability"|property="product:availability"/i.test(html), route + ' no fabricated offers or ratings');
@@ -73,7 +86,10 @@ for (const base of bases) {
     for (const m of html.matchAll(/<script[^>]+type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)) {
       const schema = JSON.parse(m[1]);
       if (schema['@type'] === 'Product') {
-        assert.ok(schema.image?.startsWith('https://m.media-amazon.com/'), route + ' absolute image');
+        const expectedImage = slug in searchProfiles && searchProfiles[slug].image.startsWith('/')
+          ? site + searchProfiles[slug].image : null;
+        if (expectedImage) assert.equal(schema.image, expectedImage, route + ' exact local product image');
+        else assert.ok(schema.image?.startsWith('https://m.media-amazon.com/'), route + ' absolute Amazon image');
         assert.ok(!schema.review && !schema.aggregateRating, route + ' no invented ratings');
       }
       if (schema['@type'] === 'BreadcrumbList') assert.ok(schema.itemListElement.at(-1).item, route + ' final breadcrumb URL');
@@ -106,4 +122,4 @@ for (const file of ['src/content/articulos/mejor-raton-vertical-ergonomico.mdx',
   }
   console.log(`${file}: ${words} words, ${affiliateCount} affiliate links, ${meta.faqs.length} FAQs`);
 }
-console.log('OK: 22 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');
+console.log('OK: 26 mouse profiles + 2 catalogs indexable; 2 interactive comparisons noindex; no mouse pairs; reciprocal alternates and editorial checks valid.');

@@ -122,7 +122,7 @@ Artículo informativo sin productos de afiliación. No requiere tracking de prod
 | Perixx PERIMICE-513N negro USB-A / 11168 | B00GZIA2AE (registro histórico) | Búsqueda Amazon del modelo exacto | https://m.media-amazon.com/images/I/51N0cWqT93L._AC_SL300_.jpg | Tramo 1 orientativo | Ficha ES+EN `perixx-perimice-513`; imagen contrastada con galería USB-A 2026-10-03; no confundir con USB-C ni 713 |
 
 ### Catálogo de ratones (src/content/productos/*.yaml)
-Once ratones y veintidós fichas ES+EN en los datos locales: cinco iniciales, ProtoArc y Trust (2026-09-30), Anker y Perixx (2026-10-03), y MX Master 3S y MX Anywhere 3S (2026-10-09). Sin notas numéricas ni precios fijos. Los ASINs identifican productos o registros históricos, no ofertas actuales aprobadas. Master 3S, Anker y Perixx usan búsqueda exacta. Verificación de la ampliación, revisión humana y publicación pendientes; no hay aprobación de ofertas US.
+Trece ratones y veintiséis fichas ES+EN en los datos locales: cinco iniciales, ProtoArc y Trust (2026-09-30), Anker y Perixx (2026-10-03), MX Master 3S y MX Anywhere 3S (2026-10-09), y M720 y M6 (2026-10-12). Sin notas numéricas ni precios fijos. Los ASINs identifican productos o registros históricos, no ofertas actuales aprobadas. Master 3S, Anker, Perixx, M720 y M6 usan búsqueda exacta. Verificación final, revisión humana y publicación de las dos fichas nuevas pendientes; no hay aprobación de ofertas US.
 
 | Slug | ASIN | Imagen (300 px) | Variante verificada |
 |------|------|------------------|---------------------|
@@ -137,6 +137,8 @@ Once ratones y veintidós fichas ES+EN en los datos locales: cinco iniciales, Pr
 | perixx-perimice-513 | Sin ASIN directo; búsqueda PERIMICE-513 USB-A negro | 51N0cWqT93L | Negro USB-A 11168, no USB-C ni 713; contrastado 2026-10-03 |
 | logitech-mx-master-3s | Sin ASIN directo; búsqueda 910-006559 con receptor Bolt | 61jl3Jfcc1L | Estándar, no Bluetooth Edition; comprobar caja. Anuncio histórico con referencias contradictorias, excluido como CTA directo |
 | logitech-mx-anywhere-3s | B07W4DGLY6 | 61dYSaNVRaL | Estándar grafito 910-006929; identidad y caja contrastadas 2026-10-09; Bolt no incluido, oferta actual no aprobada |
+| logitech-m720-triathlon | Sin ASIN; búsqueda 910-004791 negro | `/img/productos/logitech-m720-triathlon.jpg` | Imagen oficial Logitech 544 × 466 px local; USB de datos, clic silencioso y receptor incluido sin confirmar |
+| keychron-m6 | Sin ASIN; búsqueda M6-A1 negro Standard Wheel/PixArt 3395/1K/Clicky | `/img/productos/keychron-m6.jpg` | Imagen oficial Keychron 300 × 300 px local; variante española agotada en consulta 2026-10-12, oferta vigente sin confirmar |
 
 ### mejor-teclado-ergonomico
 | Producto | ASIN | URL Amazon | Imagen | Precio | Estado |

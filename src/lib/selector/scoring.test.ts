@@ -2184,12 +2184,12 @@ describe('production selector configs', () => {
 });
 
 describe('production catalog selector integration', () => {
-  it('loads the October 2026 inventory including eleven mice', () => {
-    expect(Object.keys(rawCatalogModules)).toHaveLength(134);
-    expect(actualCatalogProducts).toHaveLength(134);
+  it('loads the October 2026 inventory including thirteen mice', () => {
+    expect(Object.keys(rawCatalogModules)).toHaveLength(136);
+    expect(actualCatalogProducts).toHaveLength(136);
     expect(actualCatalogProducts.filter((item) => item.tipo === 'silla')).toHaveLength(77);
     expect(actualCatalogProducts.filter((item) => item.tipo === 'escritorio')).toHaveLength(46);
-    expect(actualCatalogProducts.filter((item) => item.tipo === 'raton')).toHaveLength(11);
+    expect(actualCatalogProducts.filter((item) => item.tipo === 'raton')).toHaveLength(13);
   });
 
   it('resolves the approved question IDs in order from actual catalog coverage', () => {

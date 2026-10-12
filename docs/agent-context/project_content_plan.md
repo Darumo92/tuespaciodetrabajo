@@ -51,6 +51,13 @@
 
 ## COLA / ROADMAP
 
+### Semana 2026-10-12 a 2026-10-18: sustitución aprobada por dos fichas
+
+- El usuario sustituye el artículo semanal por Logitech M720 Triathlon negro 910-004791 y Keychron M6-A1 negro Standard Wheel/PixArt 3395/1K/Clicky, cada uno ES+EN. La cadencia editorial permanente no cambia.
+- Selección entre consultas exactas de Keyword Surfer España del 2026-10-12: `logitech m720` 320 y `keychron m6` 260 estimaciones mensuales. Muestra acotada, sin ranking exhaustivo ni dificultad inferida. [Registro de demanda y fuentes](../research/ratones-demanda-2026-10-12.md).
+- Datos locales tras la integración: trece ratones y veintiséis fichas. Investigación documental, sin prueba propia, precio fijo, nota o ASIN inventado. Ambos CTA usan búsqueda exacta y OneLink queda sin confirmar; la variante española M6 estaba agotada al consultar.
+- Estado: integración local para comprobación funcional y visual, revisión humana y publicación pendientes. La guía `como-elegir-raton-ergonomico` sigue en cola y necesitará su investigación SERP cuando se retome.
+
 ### Semana 2026-10-05 a 2026-10-11: sustitución aprobada por dos fichas
 
 - El usuario sustituye el artículo de esta semana por MX Master 3S estándar y MX Anywhere 3S estándar grafito, ambos ES+EN. Fecha de redacción: 2026-10-09. Se conserva la cadencia permanente de un artículo semanal.
